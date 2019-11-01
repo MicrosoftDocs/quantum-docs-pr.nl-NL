@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.compareusingripplecarry
+name: CompareUsingRippleCarry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Met deze unitary wordt getest of twee gehele getallen `x` en `y` die zijn opgeslagen in Qubit-registers met een gelijke grootte, voldoen aan `x > y`. Als deze waarde True is, wordt 1 XORed in een uitvoer Qubit. Anders wordt 0 XORed in een uitvoer Qubit.
+
+
+  Met andere woorden, deze unitary $U $ voldoet aan: $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+  \end{align} $ $.
+syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+references: '- Een nieuwe Quantum rimpel: Voeg circuit Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
+  types:
+  - name: x
+    summary: Het eerste getal dat moet worden vergeleken dat is opgeslagen in `LittleEndian` indeling in een Qubit-REGI ster.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: y
+    summary: Het tweede getal dat moet worden vergeleken, wordt opgeslagen in `LittleEndian` indeling in een Qubit-REGI ster.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: output
+    summary: Qubit waarin het resultaat van de vergelijking wordt opgeslagen $x > y $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221096"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.sum
+name: Sum
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implementeert een onomkeerbaare Sum-poort. Op basis van een door Voer in Qubit `carryIn` en twee summand bits die zijn gecodeerd in `summand1` en `summand2`, berekent u de Bitsgewijze XOR van `carryIn`, `summand1` en `summand2` in de Qubit-`summand2`.
+remarks: In tegens telling tot de `Carry` bewerking, wordt de verwerkings bit niet berekend.
+syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
+  types:
+  - name: carryIn
+    summary: Qubit uitvoeren.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: Eerste summand Qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: Tweede summand Qubit wordt vervangen door het laagste deel van de som van `summand1` en `summand2`.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218393"

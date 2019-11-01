@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+name: AssertOperationsEqualReferenced
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
+
+
+  Deze bevestiging wordt geïmplementeerd met behulp van de Choi – Jamiłkowski isomorphism om de bewering te beperken tot een van de Qubit-status verklaringen op twee Entangled-registers.
+
+  Deze bewerking heeft dus slechts één aanroep nodig voor elke bewerking die wordt getest, maar vereist twee keer zoveel qubits die moeten worden toegewezen.
+
+  Deze bevestiging kan worden gebruikt om ervoor te zorgen dat een geoptimaliseerde versie van een bewerking identiek is aan de Naïve-implementatie, of dat een bewerking die op een bereik van niet-Quantum gegevens reageert, overeenkomt met de bekende gevallen.
+remarks: >-
+  Voor deze bewerking moet de bewerking worden gemodelleerd om het verwachte gedrag te adjointable, zodat de inverse alleen kan worden uitgevoerd op het doel register.
+
+  Formeel, een kan een getransponeerde-bewerking opgeven, waardoor deze vereiste wordt versoepeld, maar de getransponeerde bewerking is niet in het algemeen fysiek te realiseren voor wille keurige Quantum bewerkingen, en is hier dus niet opgenomen als een optie.
+syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: '(nQubits: int, actual: (Qubit [] = > eenheid), verwacht: (Qubit [] = > eenheid is ADJ))'
+  types:
+  - name: nQubits
+    summary: Aantal qubits dat aan elke bewerking moet worden door gegeven.
+    isPrimitive: true
+    uid: Int
+  - name: effectief
+    summary: Te testen bewerking.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: gebroken
+    summary: Bewerking die het verwachte gedrag voor de bewerking tijdens de test definieert.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Eenheid
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066571"

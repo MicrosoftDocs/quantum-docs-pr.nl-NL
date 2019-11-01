@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+name: AmpAmpPhasesStandard
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Berekent gedeeltelijke reflectie fasen voor standaard amplitude versterking.
+remarks: Alle fasen zijn $ \pi $, met uitzonde ring van de eerste reflectie over de begin status en de laatste reflectie over de doel status, die $0 $ zijn.
+syntax: 'function AmpAmpPhasesStandard (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+input:
+  content: '(nIterations : Int)'
+  types:
+  - name: nIterations
+    summary: Aantal amplitude versterkings herhalingen waarvoor gedeeltelijke reflectie fasen worden gegenereerd.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Een bewerking waarmee fasen worden geïmplementeerd die zijn opgegeven als gedeeltelijke reflecties
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: eeea673baba07c1d36ba15e4dc16268938655f86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215673"

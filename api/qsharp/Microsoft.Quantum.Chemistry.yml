@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry
+name: Microsoft.Quantum.Chemistry
+functions:
+- uid: microsoft.quantum.chemistry.htermstogenidx
+  summary: Hiermee wordt een index geconverteerd naar een Hamiltonian-term in `HTerm[]` gegevens indeling naar een GeneratorIndex.
+- uid: microsoft.quantum.chemistry.htermstogensys
+  summary: Hiermee wordt een Hamiltonian in `HTerm[]` gegevens indeling geconverteerd naar een GeneratorSystem.
+- uid: microsoft.quantum.chemistry.htermtogenidx
+  summary: Hiermee wordt een Hamiltonian-term in `HTerm` gegevens indeling geconverteerd naar een GeneratorIndex.
+- uid: microsoft.quantum.chemistry.isnotzero
+  summary: Hiermee wordt gecontroleerd of een `Double` nummer niet ongeveer nul is.
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: >-
+    De indeling van gegevens die C# worden door gegeven van naar Q # om een term van de Hamiltonian weer te geven.
+
+    De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
+ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210913"

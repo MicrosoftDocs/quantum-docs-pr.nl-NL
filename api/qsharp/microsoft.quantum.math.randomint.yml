@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomint
+name: RandomInt
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Hiermee genereert u een wille keurig geheel getal dat groter is dan of gelijk is aan nul en kleiner dan een gegeven bovengrens.
+remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid ervan afhankelijk is van de implementatie van `Random`.
+syntax: 'operation RandomInt (maxInt : Int) : Int'
+input:
+  content: '(maxInt : Int)'
+  types:
+  - name: maxInt
+    summary: Een geheel getal dat een waarde heeft die groter is dan het grootste gehele getal dat door deze bewerking moet worden geretourneerd.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Een geheel getal $x $ gelijk aan het opgegeven interval. dat wil zeggen, met $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220025"

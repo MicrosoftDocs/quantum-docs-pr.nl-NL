@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addconstantfxp
+name: AddConstantFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Voegt een klassieke constante toe aan een Quantum getal met een vaste komma.
+syntax: 'operation AddConstantFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: constant
+    summary: Constante die moet worden toegevoegd aan het Quantum getal met een vaste komma.
+    isPrimitive: true
+    uid: Double
+  - name: fp
+    summary: Nummer van vaste komma waaraan de constante wordt toegevoegd.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 2707a711150913106dda0876e45a00f19259bdef
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215503"

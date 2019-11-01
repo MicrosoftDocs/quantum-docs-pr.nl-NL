@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Past de Controlled-X (CX)-poort toe op een paar qubits.
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+remarks: >-
+  Gelijk aan:
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  en om:
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(besturings element: Qubit, doel: Qubit)'
+  types:
+  - name: Over
+    summary: Beheer Qubit voor de CX-Gate.
+    isPrimitive: true
+    uid: Qubit
+  - name: stemming
+    summary: Doel-Qubit voor de CX-Gate.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Eenheid
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067863"

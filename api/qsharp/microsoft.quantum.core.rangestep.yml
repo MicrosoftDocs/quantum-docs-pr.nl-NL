@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retourneert het gehele getal dat aangeeft hoe de volgende waarde van een bereik wordt berekend.
+remarks: Het eerste element van een bereik expressie is `start`, het tweede element is `start+step`, het derde element is `start+step+step`enzovoort, totdat `end` is door gegeven.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(bereik: bereik)'
+  types:
+  - name: bereik
+    isPrimitive: true
+    uid: Range
+output:
+  content: integer
+  types:
+  - summary: De gedefinieerde stap waarde van het opgegeven bereik.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066605"

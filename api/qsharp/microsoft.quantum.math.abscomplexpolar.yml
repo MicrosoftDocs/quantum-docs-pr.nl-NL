@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.abscomplexpolar
+name: AbsComplexPolar
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retourneert de absolute waarde van een complex getal van het type `ComplexPolar`.
+syntax: 'function AbsComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
+input:
+  content: '(input: micro soft. Quantum. math. ComplexPolar)'
+  types:
+  - name: input
+    summary: Complex getal $c = r e ^ {i t} $.
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: Dubbelklik
+  types:
+  - summary: Absolute waarde $ | c | = r $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: e25535eab7813295ffac1fac52cbca122a233b7c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067523"

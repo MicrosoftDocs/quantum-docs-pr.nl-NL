@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependentblockencoding
+name: TimeDependentBlockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Vertegenwoordigt een `BlockEncoding` die wordt beheerd door een klok registratie.
+
+
+  Dat wil zeggen dat een `TimeDependentBlockEncoding` een unitary-$U $ is die wordt beheerd door een status $ \ket{k}_d $ in de klok registratie `d` zodanig dat een wille keurige operator $H _k $ van belang die op het systeem register wordt toegepast `s` wordt gecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket @no __t_3_ _a $. Dat wil zeggen,
+
+
+  $ $ \begin{align} (\bra{0}\_a\otimes i_ {DS}) U (\ket{0}\_a\otimes i_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+
+  \end{align} $ $.
+syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211015"

@@ -1,0 +1,944 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.canon
+name: Micro soft. Quantum. Canon
+functions:
+- uid: microsoft.quantum.canon.asqubitarray
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschafte deze functie is verwijderd.
+- uid: microsoft.quantum.canon.assertalmostequal
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.NearEqualityFactD".
+- uid: microsoft.quantum.canon.assertalmostequaltol
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact".
+- uid: microsoft.quantum.canon.assertboolarrayequal
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.AllEqualityFactB".
+- uid: microsoft.quantum.canon.assertboolequal
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.EqualityFactB".
+- uid: microsoft.quantum.canon.assertintequal
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.EqualityFactI".
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.EqualityFactR".
+- uid: microsoft.quantum.canon.bigendiantolittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
+- uid: microsoft.quantum.canon.bind
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.bound".
+- uid: microsoft.quantum.canon.binda
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.bounda".
+- uid: microsoft.quantum.canon.bindc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.boundc".
+- uid: microsoft.quantum.canon.bindca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.boundca".
+- uid: microsoft.quantum.canon.bitsize
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.bitsizei".
+- uid: microsoft.quantum.canon.boolarrfrompositiveint
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.intasboolarray".
+- uid: microsoft.quantum.canon.boolarrfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.resultarrayasboolarray".
+- uid: microsoft.quantum.canon.boolfromresult
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.resultasbool".
+- uid: microsoft.quantum.canon.bound
+  summary: Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
+- uid: microsoft.quantum.canon.bounda
+  summary: >-
+    Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
+
+    De modificator `A` geeft aan dat alle bewerkingen in de matrix adjointable zijn.
+- uid: microsoft.quantum.canon.boundc
+  summary: >-
+    Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
+
+    De modificator `C` geeft aan dat alle bewerkingen in de matrix kunnen worden bestuurd.
+- uid: microsoft.quantum.canon.boundca
+  summary: >-
+    Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
+
+    De modificator `CA` geeft aan dat alle bewerkingen in de matrix adjointable en bewerkbaar zijn.
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: Als er een bewerking op wordt uitgevoerd, wordt er een nieuwe bewerking geretourneerd waarmee de op voor waarde voor klassieke besturings element wordt toegepast. Als `false`, gebeurt er niets.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: >-
+    Als er een bewerking op wordt uitgevoerd, wordt er een nieuwe bewerking geretourneerd waarmee de op voor waarde voor klassieke besturings element wordt toegepast. Als `false`, gebeurt er niets.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: >-
+    Als er een bewerking op wordt uitgevoerd, wordt er een nieuwe bewerking geretourneerd waarmee de op voor waarde voor klassieke besturings element wordt toegepast. Als `false`, gebeurt er niets.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: >-
+    Als er een bewerking op wordt uitgevoerd, wordt er een nieuwe bewerking geretourneerd waarmee de op voor waarde voor klassieke besturings element wordt toegepast. Als `false`, gebeurt er niets.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.compose
+  summary: >-
+    Hiermee wordt de samen stelling van twee functies gegenereerd.
+
+
+    Dit wil zeggen dat twee functies $f $ en $g $ een nieuwe functie retourneert die $f \circ g $ vertegenwoordigt.
+- uid: microsoft.quantum.canon.conjugatedby
+  summary: Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
+- uid: microsoft.quantum.canon.conjugatedbya
+  summary: Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
+- uid: microsoft.quantum.canon.conjugatedbyc
+  summary: Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
+- uid: microsoft.quantum.canon.conjugatedbyca
+  summary: Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
+- uid: microsoft.quantum.canon.continuedfractionconvergent
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.continuedfractionconvergenti".
+- uid: microsoft.quantum.canon.controlledonbitstring
+  summary: Retourneert een unitary-operator die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven bitmasker.
+- uid: microsoft.quantum.canon.controlledonint
+  summary: Retourneert een unitary-operator die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven positief geheel getal.
+- uid: microsoft.quantum.canon.curriedop
+  summary: >-
+    Retourneert een Curried-versie van een bewerking op twee invoer.
+
+
+    Op basis van een bewerking met twee invoer, past deze functie de isomorphism $f van Curry (x, y) \equiv f (x) (y) $ om een bewerking te retour neren van één invoer waarmee een bewerking van één invoer wordt geretourneerd.
+- uid: microsoft.quantum.canon.curryop
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.curriedop".
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: Retourneert een bewerking die de Trotter – Suzuki integrator implementeert voor een bepaalde bewerking.
+- uid: microsoft.quantum.canon.delayed
+  summary: Retourneert een bewerking die een opgegeven bewerking toepast op het opgegeven argument.
+- uid: microsoft.quantum.canon.delayeda
+  summary: Retourneert een bewerking die een opgegeven bewerking toepast op het opgegeven argument.
+- uid: microsoft.quantum.canon.delayedc
+  summary: Retourneert een bewerking die een opgegeven bewerking toepast op het opgegeven argument.
+- uid: microsoft.quantum.canon.delayedca
+  summary: Retourneert een bewerking die een opgegeven bewerking toepast op het opgegeven argument.
+- uid: microsoft.quantum.canon.embedpauli
+  summary: Op basis van een Qubit Pauli-operator en de index van een Qubit retourneert een multi-Qubit Pauli-operator met de opgegeven single-Qubit-operator bij die index en `PauliI` bij elke andere index.
+- uid: microsoft.quantum.canon.expmod
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.expmodi".
+- uid: microsoft.quantum.canon.extendedgcd
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.extendedgreatestcommondivisori".
+- uid: microsoft.quantum.canon.filter
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Filtered".
+- uid: microsoft.quantum.canon.forall
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.All".
+- uid: microsoft.quantum.canon.forany
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Any".
+- uid: microsoft.quantum.canon.fst
+  summary: Het eerste element wordt geretourneerd door een paar.
+- uid: microsoft.quantum.canon.gcd
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.greatestcommondivisori".
+- uid: microsoft.quantum.canon.ignore
+  summary: Hiermee wordt de uitvoer van een bewerking of functie genegeerd.
+- uid: microsoft.quantum.canon.intabs
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschafte deze functie is verwijderd.
+- uid: microsoft.quantum.canon.intarrayfromrange
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.rangeasintarray".
+- uid: microsoft.quantum.canon.intmax
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschafte deze functie is verwijderd.
+- uid: microsoft.quantum.canon.inversemod
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.inversemodi".
+- uid: microsoft.quantum.canon.iscoprime
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.greatestcommondivisori".
+- uid: microsoft.quantum.canon.isresultone
+  summary: Test of een gegeven resultaat waarde gelijk is aan `One`.
+- uid: microsoft.quantum.canon.isresultzero
+  summary: Test of een gegeven resultaat waarde gelijk is aan `Zero`.
+- uid: microsoft.quantum.canon.littleendiantobigendian
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
+- uid: microsoft.quantum.canon.map
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Mapped".
+- uid: microsoft.quantum.canon.mapindex
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.MappedByIndex".
+- uid: microsoft.quantum.canon.modulus
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.modulusi".
+- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  summary: >-
+    Retourneert een met vermenigvuldiging beheerde unitary-bewerking $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status van n-Qubit nummer $ \ket{j} $ wordt bepaald.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexerfromgenerator
+  summary: >-
+    Retourneert een met vermenigvuldiging beheerde unitary-bewerking $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status van n-Qubit nummer $ \ket{j} $ wordt bepaald.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.nearequalityfact
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Diagnostics.NearEqualityFactD".
+- uid: microsoft.quantum.canon.operationpow
+  summary: >-
+    Hiermee wordt een bewerking naar een stroom gegenereerd.
+
+
+    Op basis van een bewerking die een Gate $U $ vertegenwoordigt, retourneert een nieuwe bewerking $U ^ m $ voor een Power $m $.
+- uid: microsoft.quantum.canon.operationpowa
+  summary: >-
+    Hiermee wordt een bewerking naar een stroom gegenereerd.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+
+
+    Op basis van een bewerking die een Gate $U $ vertegenwoordigt, retourneert een nieuwe bewerking $U ^ m $ voor een Power $m $.
+- uid: microsoft.quantum.canon.operationpowc
+  summary: >-
+    Hiermee wordt een bewerking naar een stroom gegenereerd.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+
+
+    Op basis van een bewerking die een Gate $U $ vertegenwoordigt, retourneert een nieuwe bewerking $U ^ m $ voor een Power $m $.
+- uid: microsoft.quantum.canon.operationpowca
+  summary: >-
+    Hiermee wordt een bewerking naar een stroom gegenereerd.
+
+    De modificator `A` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+
+
+    Op basis van een bewerking die een Gate $U $ vertegenwoordigt, retourneert een nieuwe bewerking $U ^ m $ voor een Power $m $.
+- uid: microsoft.quantum.canon.pad
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Padded".
+- uid: microsoft.quantum.canon.paulifrombitstring
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.boolarrayaspauli".
+- uid: microsoft.quantum.canon.pnormalize
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.math.pnormalized".
+- uid: microsoft.quantum.canon.positiveintfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.boolarrayasint".
+- uid: microsoft.quantum.canon.positiveintfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.resultarrayasint".
+- uid: microsoft.quantum.canon.restrictedtosubregister
+  summary: Hiermee wordt een bewerking beperkt tot een matrix van indices van een REGI ster, dat wil zeggen een subregistratie.
+- uid: microsoft.quantum.canon.restrictedtosubregistera
+  summary: >-
+    Hiermee wordt een bewerking beperkt tot een matrix van indices van een REGI ster, dat wil zeggen een subregistratie.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.restrictedtosubregisterc
+  summary: >-
+    Hiermee wordt een bewerking beperkt tot een matrix van indices van een REGI ster, dat wil zeggen een subregistratie.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.restrictedtosubregisterca
+  summary: >-
+    Hiermee wordt een bewerking beperkt tot een matrix van indices van een REGI ster, dat wil zeggen een subregistratie.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.restricttosubregister
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.restrictedtosubregister".
+- uid: microsoft.quantum.canon.restricttosubregistera
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.restrictedtosubregistera".
+- uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.restrictedtosubregisterc".
+- uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.restrictedtosubregisterca".
+- uid: microsoft.quantum.canon.resultarrfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.resultarrayasboolarray".
+- uid: microsoft.quantum.canon.resultasint
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.resultarrayasint".
+- uid: microsoft.quantum.canon.resultfrombool
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.boolasresult".
+- uid: microsoft.quantum.canon.reverse
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Reversed".
+- uid: microsoft.quantum.canon.snd
+  summary: Retourneert het tweede element aan de hand van een paar.
+- uid: microsoft.quantum.canon.splitarray
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik in plaats hiervan @"Microsoft.Quantum.Arrays.Partitioned".
+- uid: microsoft.quantum.canon.stackcapacity
+  summary: Hiermee wordt de capaciteit van een <xref:microsoft.quantum.canon.resultstack>opgehaald.
+- uid: microsoft.quantum.canon.stacklength
+  summary: Hiermee wordt het aantal elementen opgehaald dat is opgeslagen in een <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stacknew
+  summary: Hiermee maakt u een nieuwe lege <xref:microsoft.quantum.canon.resultstack> met de opgegeven capaciteit.
+- uid: microsoft.quantum.canon.stackpeek
+  summary: Hiermee wordt het bovenste element van een <xref:microsoft.quantum.canon.resultstack>opgehaald.
+- uid: microsoft.quantum.canon.stackpop
+  summary: Hiermee verwijdert u het bovenste element van een <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stackpush
+  summary: Duwt een nieuw-element op een <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.tooperation
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.convert.functionasoperation".
+- uid: microsoft.quantum.canon.transformedoperation
+  summary: Met een functie en een bewerking wordt een nieuwe bewerking geretourneerd waarvan de invoer wordt getransformeerd door de opgegeven functie.
+- uid: microsoft.quantum.canon.transformedoperationa
+  summary: Met een functie en een bewerking wordt een nieuwe bewerking geretourneerd waarvan de invoer wordt getransformeerd door de opgegeven functie.
+- uid: microsoft.quantum.canon.transformedoperationc
+  summary: Met een functie en een bewerking wordt een nieuwe bewerking geretourneerd waarvan de invoer wordt getransformeerd door de opgegeven functie.
+- uid: microsoft.quantum.canon.transformedoperationca
+  summary: Met een functie en een bewerking wordt een nieuwe bewerking geretourneerd waarvan de invoer wordt getransformeerd door de opgegeven functie.
+- uid: microsoft.quantum.canon.uncurriedop
+  summary: Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
+- uid: microsoft.quantum.canon.uncurriedopa
+  summary: >-
+    Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
+
+    De modificator `A` geeft aan dat de bewerkingen adjointable zijn.
+- uid: microsoft.quantum.canon.uncurriedopc
+  summary: >-
+    Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
+
+    De modificator `C` geeft aan dat de bewerkingen kunnen worden bestuurd.
+- uid: microsoft.quantum.canon.uncurriedopca
+  summary: >-
+    Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
+
+    De modificator `CA` geeft aan dat de bewerkingen kunnen worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.uncurryop
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.uncurriedop".
+- uid: microsoft.quantum.canon.uncurryopa
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.uncurriedopa".
+- uid: microsoft.quantum.canon.uncurryopc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.uncurriedopc".
+- uid: microsoft.quantum.canon.uncurryopca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.canon.uncurriedopca".
+- uid: microsoft.quantum.canon.weightonepaulis
+  summary: Retourneert een matrix van alle Pauli-Opera tors van het gewicht-1 op een gegeven aantal qubits.
+- uid: microsoft.quantum.canon.xor
+  summary: Hiermee worden de exclusieve of van twee bits berekend.
+operations:
+- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"microsoft.quantum.simuilation.pnormalized".
+- uid: microsoft.quantum.canon.andladder
+  summary: >-
+    Hiermee wordt een beheerde ' en ' ladder ' uitgevoerd op de doel-qubits.
+
+
+    Dit geldt voor een unitary die wordt gegeven door de volgende kaart op reken kundige basis vectoren: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots x\_{n-1}} , \end{align} $ $ waarbij $ \ket{x\_1, \dots, x\_n} $ verwijst naar de reken kundige basis status van `controls`en waarbij $ \ket{y\_1, \dots, y\_{n-1}} $ verwijst naar de reken kundige basis status van `targets`.
+- uid: microsoft.quantum.canon.applydiagonalunitary
+  summary: >-
+    Past een matrix van complexe fasen toe op numerieke basis statussen van een REGI ster van qubits.
+
+
+    Dat wil zeggen dat hiermee de bewerking voor diagonale unitary wordt geïmplementeerd $U $ waarmee een complexe fase wordt toegepast $e ^ {i \theta_j} $ op de $n $-Qubit Number status $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ Ket {j} \ Bra {j} $.
+- uid: microsoft.quantum.canon.applyfermionicswap
+  summary: Hiermee past u de Fermionic-SWAP toe.
+- uid: microsoft.quantum.canon.applyif
+  summary: Past een bewerking toe die is voor een klassieke bit heeft gevoorwaardeeerd.
+- uid: microsoft.quantum.canon.applyifa
+  summary: Hiermee wordt een adjointable bewerking toegepast die is voor bereid op een klassieke bit.
+- uid: microsoft.quantum.canon.applyifc
+  summary: Hiermee wordt een te bewerkte bewerking op een klassieke bit toegepast.
+- uid: microsoft.quantum.canon.applyifca
+  summary: Hiermee wordt een unitary bewerking toegepast die is voor bereid op een klassieke bit.
+- uid: microsoft.quantum.canon.applyifelseb
+  summary: Past een van de twee bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
+- uid: microsoft.quantum.canon.applyifelseba
+  summary: Past een van de twee adjointable-bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
+- uid: microsoft.quantum.canon.applyifelsebc
+  summary: Past een van de twee instel bare bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
+- uid: microsoft.quantum.canon.applyifelsebca
+  summary: Past een van de twee unitary-bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
+- uid: microsoft.quantum.canon.applyifelser
+  summary: Past een van de twee bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
+- uid: microsoft.quantum.canon.applyifelsera
+  summary: Past een van de twee adjointable-bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
+- uid: microsoft.quantum.canon.applyifelserc
+  summary: Past een van de twee instel bare bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
+- uid: microsoft.quantum.canon.applyifelserca
+  summary: Past een van de twee unitary-bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
+- uid: microsoft.quantum.canon.applyifone
+  summary: Hiermee wordt een bewerking toegepast die is ingesteld op een klassieke resultaat waarde die één.
+- uid: microsoft.quantum.canon.applyifonea
+  summary: Hiermee wordt een adjointable-bewerking toegepast op een klassieke resultaat waarde die één.
+- uid: microsoft.quantum.canon.applyifonec
+  summary: Hiermee wordt een instelbaar bewerking toegepast die is ingesteld op een klassieke resultaat waarde die één.
+- uid: microsoft.quantum.canon.applyifoneca
+  summary: Hiermee wordt een unitary-bewerking toegepast op een klassieke resultaat waarde die één.
+- uid: microsoft.quantum.canon.applyifzero
+  summary: Hiermee wordt een bewerking die is ingesteld op een klassieke resultaat waarde, ingesteld op nul.
+- uid: microsoft.quantum.canon.applyifzeroa
+  summary: Past een adjointable-bewerking toe die is ingesteld op een klassieke resultaat waarde is nul.
+- uid: microsoft.quantum.canon.applyifzeroc
+  summary: Past een instelbaar bewerking toe die is voor bereid op een klassieke resultaat waarde is nul.
+- uid: microsoft.quantum.canon.applyifzeroca
+  summary: Past een unitary-bewerking toe die is ingesteld op een klassieke resultaat waarde is nul.
+- uid: microsoft.quantum.canon.applymulticontrolledc
+  summary: >-
+    Past een door vermenigvuldigde versie van een gecontroleerde bewerking toe.
+
+    De modificator `C` geeft aan dat de bewerking met één qubit kan worden bestuurd.
+- uid: microsoft.quantum.canon.applymulticontrolledca
+  summary: >-
+    Past een door vermenigvuldigde versie van een gecontroleerde bewerking toe.
+
+    De modificator `CA` geeft aan dat de bewerking met één qubit kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applypauli
+  summary: Op basis van een multi-Qubit Pauli-operator, wordt de bijbehorende bewerking toegepast op een registratie.
+- uid: microsoft.quantum.canon.applypaulifrombitstring
+  summary: Past een Pauli-operator op elke qubit in een matrix toe als de overeenkomstige bit van een Boole-matrix overeenkomt met een gegeven invoer.
+- uid: microsoft.quantum.canon.applyquantumfouriertransform
+  summary: Voert de Quantum Fourier-trans formatie uit op een Quantum register dat een geheel getal in de indeling van Little Endian bevat.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft deze bewerking is verwijderd.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformle
+  summary: ''
+- uid: microsoft.quantum.canon.applyreversedopbigendian
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE".
+- uid: microsoft.quantum.canon.applyreversedopbigendiana
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
+- uid: microsoft.quantum.canon.applyreversedopbigendianc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+- uid: microsoft.quantum.canon.applyreversedopbigendianca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+- uid: microsoft.quantum.canon.applyreversedoplittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE".
+- uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
+- uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+- uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft deze bewerking is verwijderd.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry".
+- uid: microsoft.quantum.canon.applytoeach
+  summary: Hiermee wordt een bewerking met één Qubit toegepast op elk element in een REGI ster.
+- uid: microsoft.quantum.canon.applytoeacha
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk element in een REGI ster.
+
+    De modificator `A` geeft aan dat de bewerking met één Qubit adjointable is.
+- uid: microsoft.quantum.canon.applytoeachc
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk element in een REGI ster.
+
+    De modificator `C` geeft aan dat de bewerking met één qubit kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytoeachca
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk element in een REGI ster.
+
+    De modificator `CA` geeft aan dat de bewerking met één qubit kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applytoeachindex
+  summary: Hiermee wordt een bewerking met één Qubit toegepast op elk geïndexeerd element in een REGI ster.
+- uid: microsoft.quantum.canon.applytoeachindexa
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk geïndexeerd element in een REGI ster.
+
+    De modificator `A` geeft aan dat de bewerking met één Qubit adjointable is.
+- uid: microsoft.quantum.canon.applytoeachindexc
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk geïndexeerd element in een REGI ster.
+
+    De modificator `C` geeft aan dat de bewerking met één qubit kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytoeachindexca
+  summary: >-
+    Hiermee wordt een bewerking met één Qubit toegepast op elk geïndexeerd element in een REGI ster.
+
+    De aanpassings functie `CA` geeft aan dat de bewerking met één Qubit adjointable en kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytofirstqubit
+  summary: Hiermee wordt een bewerking toegepast op de eerste Qubit in het REGI ster.
+- uid: microsoft.quantum.canon.applytofirstqubita
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste Qubit in het REGI ster.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.applytofirstqubitc
+  summary: >-
+    Hiermee wordt de bewerking toegepast op de eerste Qubit in het REGI ster.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytofirstqubitca
+  summary: >-
+    Hiermee wordt de bewerking toegepast op de eerste Qubit in het REGI ster.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applytofirstthreequbits
+  summary: Hiermee wordt een bewerking toegepast op de eerste drie qubits in het REGI ster.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsa
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste drie qubits in het REGI ster.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsc
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste drie qubits in het REGI ster.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsca
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste drie qubits in het REGI ster.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applytofirsttwoqubits
+  summary: Hiermee wordt een bewerking toegepast op de eerste twee qubits in het REGI ster.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste twee qubits in het REGI ster.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste twee qubits in het REGI ster.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+  summary: >-
+    Hiermee wordt een bewerking toegepast op de eerste twee qubits in het REGI ster.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applytopartition
+  summary: Hiermee wordt een paar bewerkingen toegepast op een bepaalde partitie van een REGI ster in twee delen.
+- uid: microsoft.quantum.canon.applytopartitiona
+  summary: >-
+    Hiermee wordt een paar bewerkingen toegepast op een bepaalde partitie van een REGI ster in twee delen.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.applytopartitionc
+  summary: >-
+    Hiermee wordt een paar bewerkingen toegepast op een bepaalde partitie van een REGI ster in twee delen.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytopartitionca
+  summary: >-
+    Hiermee wordt een paar bewerkingen toegepast op een bepaalde partitie van een REGI ster in twee delen.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applytosubregister
+  summary: Hiermee wordt een bewerking toegepast op een subregister van een REGI ster, waarbij qubits is opgegeven door een matrix met hun indexen.
+- uid: microsoft.quantum.canon.applytosubregistera
+  summary: >-
+    Hiermee wordt een bewerking toegepast op een subregister van een REGI ster, waarbij qubits is opgegeven door een matrix met hun indexen.
+
+    De modificator `A` geeft aan dat de bewerking is adjointable.
+- uid: microsoft.quantum.canon.applytosubregisterc
+  summary: >-
+    Hiermee wordt een bewerking toegepast op een subregister van een REGI ster, waarbij qubits is opgegeven door een matrix met hun indexen.
+
+    De modificator `C` geeft aan dat de bewerking kan worden bestuurd.
+- uid: microsoft.quantum.canon.applytosubregisterca
+  summary: >-
+    Hiermee wordt een bewerking toegepast op een subregister van een REGI ster, waarbij qubits is opgegeven door een matrix met hun indexen.
+
+    De modificator `CA` geeft aan dat de bewerking kan worden bestuurd en adjointable.
+- uid: microsoft.quantum.canon.applywith
+  summary: Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
+- uid: microsoft.quantum.canon.applywitha
+  summary: Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
+- uid: microsoft.quantum.canon.applywithc
+  summary: ''
+- uid: microsoft.quantum.canon.applywithca
+  summary: Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
+- uid: microsoft.quantum.canon.applywithinputtransformation
+  summary: Op basis van een bewerking waarbij een invoer wordt geaccepteerd, wordt met een functie die een uitvoer die compatibel is met die bewerking, en een invoer naar die functie, de bewerking toegepast met behulp van de functie om de invoer te transformeren naar een formulier dat wordt verwacht door de bewerking.
+- uid: microsoft.quantum.canon.applywithinputtransformationa
+  summary: Op basis van een bewerking waarbij een invoer wordt geaccepteerd, wordt met een functie die een uitvoer die compatibel is met die bewerking, en een invoer naar die functie, de bewerking toegepast met behulp van de functie om de invoer te transformeren naar een formulier dat wordt verwacht door de bewerking.
+- uid: microsoft.quantum.canon.applywithinputtransformationc
+  summary: Op basis van een bewerking waarbij een invoer wordt geaccepteerd, wordt met een functie die een uitvoer die compatibel is met die bewerking, en een invoer naar die functie, de bewerking toegepast met behulp van de functie om de invoer te transformeren naar een formulier dat wordt verwacht door de bewerking.
+- uid: microsoft.quantum.canon.applywithinputtransformationca
+  summary: Op basis van een bewerking waarbij een invoer wordt geaccepteerd, wordt met een functie die een uitvoer die compatibel is met die bewerking, en een invoer naar die functie, de bewerking toegepast met behulp van de functie om de invoer te transformeren naar een formulier dat wordt verwacht door de bewerking.
+- uid: microsoft.quantum.canon.approximateqft
+  summary: De benadering van de Quantum Fourier-trans formatie (AQFT) Toep assen op een Quantum register.
+- uid: microsoft.quantum.canon.asserthighestbit
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
+- uid: microsoft.quantum.canon.assertlessthanphasele
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
+- uid: microsoft.quantum.canon.assertphase
+  summary: >-
+    Er wordt bevestigd dat de fase van een gelijke superpositie status de verwachte waarde heeft.
+
+
+    In het bijzonder bevestigen we dat de fase $ \phi $ van een Quantum status die kan worden uitgedrukt als $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ voor een wille keurige echte t de verwachte waarde heeft.
+- uid: microsoft.quantum.canon.assertprobintbe
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft deze bewerking is verwijderd.
+- uid: microsoft.quantum.canon.cnotchain
+  summary: >-
+    Hiermee wordt de pariteit van een matrix van qubits in-place berekend.
+
+
+    Het volgt het patroon $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots $.
+- uid: microsoft.quantum.canon.cnotchaintarget
+  summary: >-
+    Hiermee wordt de pariteit van een matrix met qubits berekend in een doel-Qubit.
+
+
+    Als de matrix in eerste instantie de status $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{target}}} $ heeft, wordt de uiteindelijke status gegeven door $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{target}}} $.
+- uid: microsoft.quantum.canon.copymostsignificantbitle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit".
+- uid: microsoft.quantum.canon.cx
+  summary: >-
+    Past de Controlled-X (CX)-poort toe op een paar qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+- uid: microsoft.quantum.canon.cy
+  summary: >-
+    Hiermee wordt de beheerde Y-poort (CY) toegepast op een paar qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+- uid: microsoft.quantum.canon.cz
+  summary: >-
+    Past de Controlled-Z (CZ)-poort toe aan een paar qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+- uid: microsoft.quantum.canon.delay
+  summary: Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+- uid: microsoft.quantum.canon.delaya
+  summary: Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+- uid: microsoft.quantum.canon.delayc
+  summary: Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+- uid: microsoft.quantum.canon.delayca
+  summary: Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+- uid: microsoft.quantum.canon.hy
+  summary: >-
+    Hiermee wordt de Y-basis analoog toegepast op de Hadamard-trans formatie die de Z-en Y-assen interwijzigt.
+
+
+    De Y Hadamard-trans formatie $H _Y = S H $ op één Qubit is:
+
+
+    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ik &-i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.canon.inplacexorbe
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft deze bewerking is verwijderd.
+- uid: microsoft.quantum.canon.inplacexorle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Measurement.ApplyXorInPlace".
+- uid: microsoft.quantum.canon.integerincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
+- uid: microsoft.quantum.canon.integerincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
+- uid: microsoft.quantum.canon.iteratethroughcartesianpower
+  summary: Hiermee wordt een variabele herhaald, zeggen ARR, met Cartesisch product [0, gebonden-1] x [0, gebonden-1] x [0, gebonden-1] en aanroepen op (arr) voor elk element van het Cartesisch product
+- uid: microsoft.quantum.canon.iteratethroughcartesianproduct
+  summary: Herhaalt een variabele, zegt `arr`via een Cartesisch product [0, grenzen [0]-1] × [0, grenzen [1]-1] x [0, grenzen [lengte (grenzen)-1]-1] en aanroepen op (arr) voor elk element van het Cartesisch product
+- uid: microsoft.quantum.canon.measureintegerbe
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft deze bewerking is verwijderd.
+- uid: microsoft.quantum.canon.modularaddproductle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
+- uid: microsoft.quantum.canon.modularaddproductphasele
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger".
+- uid: microsoft.quantum.canon.modularincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger".
+- uid: microsoft.quantum.canon.modularincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger".
+- uid: microsoft.quantum.canon.modularmultiplybyconstantle
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
+- uid: microsoft.quantum.canon.multiplexoperations
+  summary: >-
+    Past een matrix van bewerkingen toe die worden beheerd door een matrix van aantal statussen.
+
+
+    Dat wil zeggen, een unitary-bewerking met vermenigvuldiging Toep assen $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status van $n $-Qubit Number $ \ket{j} $ wordt bepaald.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+  summary: >-
+    Past unitary-bewerking met vermenigvuldiging toe $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de waarde wordt bepaald door n-Qubit nummer $ \ket{j} $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
+  summary: >-
+    Past een met vermenigvuldiging beheerde unitary-bewerking toe $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status wordt bepaald door n-Qubit nummer $ \ket{j} $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexpauli
+  summary: >-
+    Hiermee wordt een Pauli-rotatie toegepast op een matrix van qubits.
+
+
+    Hiermee past u de unitary-bewerking met vermenigvuldiging toe $U $ waarmee rotaties worden uitgevoerd op basis van hoek $ \theta_j $ over een Pauli-operator van één Qubit $P $ wanneer wordt bepaald door de $n $-Qubit-nummer status $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+- uid: microsoft.quantum.canon.multiplexz
+  summary: >-
+    Hiermee wordt een Pauli Z-rotatie toegepast op een matrix van qubits.
+
+
+    Hiermee past u de unitary-bewerking met vermenigvuldiging toe $U $ waarmee rotaties worden uitgevoerd op basis van hoek $ \theta_j $ over een Pauli-operator van één Qubit $Z $ wanneer wordt bepaald door de $n $-Qubit-nummer status $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+- uid: microsoft.quantum.canon.noop
+  summary: Hiermee wordt de identiteits bewerking (geen-op) uitgevoerd op een argument.
+- uid: microsoft.quantum.canon.qft
+  summary: Voert de Quantum Fourier-trans formatie uit op een Quantum register dat een geheel getal in de weer gave big endian bevat.
+- uid: microsoft.quantum.canon.qftle
+  summary: Voert de Quantum Fourier-trans formatie uit op een Quantum register dat een geheel getal in de indeling van Little Endian bevat.
+- uid: microsoft.quantum.canon.rall0
+  summary: >-
+    Hiermee wordt een bewerking voor fase verschuiving uitgevoerd.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{0\cdots 0} \bra{0\cdots 0} $.
+- uid: microsoft.quantum.canon.rall1
+  summary: >-
+    Hiermee wordt een bewerking voor fase verschuiving uitgevoerd.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.swapreverseregister
+  summary: Maakt gebruik van SWAP Gates om de volg orde van de qubits in een REGI ster terug te draaien.
+- uid: microsoft.quantum.canon.with
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Canon.ApplyWith".
+- uid: microsoft.quantum.canon.witha
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Canon.ApplyWithA".
+- uid: microsoft.quantum.canon.withc
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Canon.ApplyWithC".
+- uid: microsoft.quantum.canon.withca
+  summary: >-
+    > [!WARNING]
+
+    > Afgeschaft, gebruik @"Microsoft.Quantum.Canon.ApplyWithCA".
+newtypes:
+- uid: microsoft.quantum.canon.ccnotop
+  summary: Het handtekening type van de CCNOT-Gate.
+- uid: microsoft.quantum.canon.resultstack
+  summary: >-
+    Een last-in-first-out van `Result` variabelen.
+
+    De stack bestaat uit een gehele capaciteit, een stack-wijzer en een `Result` matrix.
+ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065160"

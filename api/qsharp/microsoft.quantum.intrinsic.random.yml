@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.random
+name: Random
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  De wille keurige bewerking heeft een matrix van dubbele getallen als invoer en retourneert een wille keurig geselecteerde index in de matrix als een `Int`.
+
+  De kans dat een specifieke index wordt geselecteerd, is evenredig met de waarde van het matrix element bij die index.
+
+  Matrix elementen die gelijk zijn aan nul, worden genegeerd en hun indices worden nooit geretourneerd. Als een matrix element kleiner dan nul is, of als er geen matrix element groter is dan nul, mislukt de bewerking.
+syntax: 'operation Random (probs : Double[]) : Int'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: Een matrix met drijvende-komma getallen die in verhouding staan tot de kans dat elke index wordt geselecteerd.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: Een geheel getal $i $ met kans $ \Pr (i) = p_i/\sum_i p_i $, waarbij $p _I $ het $i $ TH-element van `probs`is.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: b2a5f6a0b1d2584e385bfa4de2b2c43fc1cf6509
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233931"

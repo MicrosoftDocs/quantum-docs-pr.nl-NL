@@ -1,0 +1,260 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.math
+name: Micro soft. Quantum. math
+functions:
+- uid: microsoft.quantum.math.abscomplex
+  summary: Retourneert de absolute waarde van een complex getal van het type `Complex`.
+- uid: microsoft.quantum.math.abscomplexpolar
+  summary: Retourneert de absolute waarde van een complex getal van het type `ComplexPolar`.
+- uid: microsoft.quantum.math.absd
+  summary: Retourneert de absolute waarde van een drijvende-komma getal met dubbele precisie.
+- uid: microsoft.quantum.math.absi
+  summary: Retourneert de absolute waarde van een geheel getal.
+- uid: microsoft.quantum.math.absl
+  summary: Retourneert de absolute waarde van een Big geheel getal.
+- uid: microsoft.quantum.math.abssquaredcomplex
+  summary: Retourneert de kwadraat absolute waarde van een complex getal van het type `Complex`.
+- uid: microsoft.quantum.math.abssquaredcomplexpolar
+  summary: Retourneert de kwadraat absolute waarde van een complex getal van het type `ComplexPolar`.
+- uid: microsoft.quantum.math.arccos
+  summary: Retourneert de hoek waarvan de cosinus het opgegeven getal is.
+- uid: microsoft.quantum.math.arccosh
+  summary: Hiermee wordt de inverse hyperbolische cosinus van een getal berekend.
+- uid: microsoft.quantum.math.arcsin
+  summary: Retourneert de hoek waarvan de sinus het opgegeven getal is.
+- uid: microsoft.quantum.math.arcsinh
+  summary: Hiermee berekent u de inverse hyperbolische sinus van een getal.
+- uid: microsoft.quantum.math.arctan
+  summary: Retourneert de hoek waarvan de tangens het opgegeven getal is.
+- uid: microsoft.quantum.math.arctan2
+  summary: Retourneert de hoek waarvan de tangens het quotiënt van twee opgegeven getallen is.
+- uid: microsoft.quantum.math.arctanh
+  summary: Hiermee wordt de inverse hyperbolische tangens van een getal berekend.
+- uid: microsoft.quantum.math.argcomplex
+  summary: Retourneert de fase van een complex getal van het type `Complex`.
+- uid: microsoft.quantum.math.argcomplexpolar
+  summary: Retourneert de fase van een complex getal van het type `ComplexPolar`.
+- uid: microsoft.quantum.math.bitsizei
+  summary: >-
+    Voor een niet-negatief geheel getal `a`retourneert het aantal bits dat is vereist om `a`weer te geven.
+
+
+    Dat wil zeggen, retourneert de kleinste $n $, zodat $a < 2 ^ n $.
+- uid: microsoft.quantum.math.bitsizel
+  summary: >-
+    Voor een niet-negatief geheel getal `a`retourneert het aantal bits dat is vereist om `a`weer te geven.
+
+
+    Dat wil zeggen, retourneert de kleinste $n $, zodat $a < 2 ^ n $.
+- uid: microsoft.quantum.math.ceiling
+  summary: Retourneert het kleinste gehele getal dat groter is dan of gelijk is aan het opgegeven getal.
+- uid: microsoft.quantum.math.complexascomplexpolar
+  summary: Converteert een complex getal van het type `Complex` naar een complex getal van het type `ComplexPolar`.
+- uid: microsoft.quantum.math.complexpolarascomplex
+  summary: Converteert een complex getal van het type `ComplexPolar` naar een complex getal van het type `Complex`.
+- uid: microsoft.quantum.math.complexpolartocomplex
+  summary: ''
+- uid: microsoft.quantum.math.complextocomplexpolar
+  summary: ''
+- uid: microsoft.quantum.math.continuedfractionconvergenti
+  summary: Hiermee wordt gezocht naar de permanente fractie convergent die het dichtst bij `fraction` ligt met de noemer kleiner of gelijk aan `denominatorBound`
+- uid: microsoft.quantum.math.continuedfractionconvergentl
+  summary: Hiermee wordt gezocht naar de permanente fractie convergent die het dichtst bij `fraction` ligt met de noemer kleiner of gelijk aan `denominatorBound`
+- uid: microsoft.quantum.math.cos
+  summary: Retourneert de cosinus van de opgegeven hoek.
+- uid: microsoft.quantum.math.cosh
+  summary: Retourneert de hyperbolische cosinus van de opgegeven hoek.
+- uid: microsoft.quantum.math.dividedbyc
+  summary: Retourneert het quotiënt van twee invoer waarden.
+- uid: microsoft.quantum.math.dividedbycp
+  summary: Retourneert het quotiënt van twee invoer waarden.
+- uid: microsoft.quantum.math.dividedbyd
+  summary: Retourneert het quotiënt van twee invoer waarden.
+- uid: microsoft.quantum.math.dividedbyi
+  summary: Retourneert het quotiënt van twee invoer waarden.
+- uid: microsoft.quantum.math.dividedbyl
+  summary: Retourneert het quotiënt van twee invoer waarden.
+- uid: microsoft.quantum.math.divreml
+  summary: Hiermee wordt een BigInteger-waarde met een andere gedeeld, worden het resultaat en het restant als een tuple geretourneerd.
+- uid: microsoft.quantum.math.e
+  summary: Retourneert de natuurlijke logaritmische basis $e $.
+- uid: microsoft.quantum.math.expd
+  summary: Retourneert $e $ verheven tot de opgegeven macht.
+- uid: microsoft.quantum.math.expmodi
+  summary: Retourneert een geheel getal dat tot een bepaalde macht is verheven, ten opzichte van een bepaalde modulus.
+- uid: microsoft.quantum.math.expmodl
+  summary: Retourneert een geheel getal dat tot een bepaalde macht is verheven, ten opzichte van een bepaalde modulus.
+- uid: microsoft.quantum.math.extendedgreatestcommondivisori
+  summary: Hiermee wordt een tuple $ (u, v) $ zodanig berekend dat $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, waarbij $ \operatorname{GCD} $ $a $ grootste gemene deler van $a $ en $b $ is. De GCD is altijd positief.
+- uid: microsoft.quantum.math.extendedgreatestcommondivisorl
+  summary: Hiermee wordt een tuple $ (u, v) $ zodanig berekend dat $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, waarbij $ \operatorname{GCD} $ $a $ grootste gemene deler van $a $ en $b $ is. De GCD is altijd positief.
+- uid: microsoft.quantum.math.floor
+  summary: Retourneert de grootste integer die kleiner dan of gelijk aan het opgegeven getal is.
+- uid: microsoft.quantum.math.greatestcommondivisori
+  summary: Berekent de grootste gemene deler van $a $ en $b $. De GCD is altijd positief.
+- uid: microsoft.quantum.math.greatestcommondivisorl
+  summary: Berekent de grootste gemene deler van $a $ en $b $. De GCD is altijd positief.
+- uid: microsoft.quantum.math.ieeeremainder
+  summary: Retourneert het restant dat voortkomt uit de deling van een opgegeven getal door een ander opgegeven getal.
+- uid: microsoft.quantum.math.inversemodi
+  summary: Retourneert $b $ zodanig dat $a \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $.
+- uid: microsoft.quantum.math.inversemodl
+  summary: Retourneert $b $ zodanig dat $a \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $.
+- uid: microsoft.quantum.math.iscoprimei
+  summary: Retourneert waar als $a $ en $b $ co-Prime en ONWAAR anders zijn.
+- uid: microsoft.quantum.math.iscoprimel
+  summary: Retourneert waar als $a $ en $b $ co-Prime en ONWAAR anders zijn.
+- uid: microsoft.quantum.math.lg
+  summary: Berekent de logaritme met grondtal 2 van een getal.
+- uid: microsoft.quantum.math.log
+  summary: Retourneert de natuurlijke logaritme (grondtal $e $) van een opgegeven getal.
+- uid: microsoft.quantum.math.log10
+  summary: Retourneert de logaritme met grondtal 10 van een opgegeven getal.
+- uid: microsoft.quantum.math.logof2
+  summary: Retourneert de natuurlijke logaritme van 2.
+- uid: microsoft.quantum.math.max
+  summary: Met een matrix van gehele getallen wordt het grootste element geretourneerd.
+- uid: microsoft.quantum.math.maxd
+  summary: Retourneert de groter van twee opgegeven getallen.
+- uid: microsoft.quantum.math.maxi
+  summary: Retourneert de groter van twee opgegeven getallen.
+- uid: microsoft.quantum.math.maxl
+  summary: Retourneert de groter van twee opgegeven getallen.
+- uid: microsoft.quantum.math.min
+  summary: Retourneert het kleinste element, gezien een matrix van gehele getallen.
+- uid: microsoft.quantum.math.mind
+  summary: Retourneert de kleinste van twee opgegeven getallen.
+- uid: microsoft.quantum.math.mini
+  summary: Retourneert de kleinste van twee opgegeven getallen.
+- uid: microsoft.quantum.math.minl
+  summary: Retourneert de kleinste van twee opgegeven getallen.
+- uid: microsoft.quantum.math.minusc
+  summary: Retourneert het verschil tussen twee invoer waarden.
+- uid: microsoft.quantum.math.minuscp
+  summary: Retourneert het verschil tussen twee invoer waarden.
+- uid: microsoft.quantum.math.minusd
+  summary: Retourneert het verschil tussen twee invoer waarden.
+- uid: microsoft.quantum.math.minusi
+  summary: Retourneert het verschil tussen twee invoer waarden.
+- uid: microsoft.quantum.math.minusl
+  summary: Retourneert het verschil tussen twee invoer waarden.
+- uid: microsoft.quantum.math.modi
+  summary: Retourneert de modulus van een getal ten opzichte van een ander getal.
+- uid: microsoft.quantum.math.modl
+  summary: Retourneert de modulus van een getal ten opzichte van een ander getal.
+- uid: microsoft.quantum.math.modpowl
+  summary: Voert een modulaire deling uit op een getal verheven tot de macht van een ander getal.
+- uid: microsoft.quantum.math.modulusi
+  summary: Hiermee wordt het canonieke residu van `value` modulo-`modulus`berekend.
+- uid: microsoft.quantum.math.modulusl
+  summary: Hiermee wordt het canonieke residu van `value` modulo-`modulus`berekend.
+- uid: microsoft.quantum.math.negationc
+  summary: Retourneert de unaire ontkenning van een invoer.
+- uid: microsoft.quantum.math.negationcp
+  summary: Retourneert de unaire ontkenning van een invoer.
+- uid: microsoft.quantum.math.negationd
+  summary: Retourneert de unaire ontkenning van een invoer.
+- uid: microsoft.quantum.math.negationi
+  summary: Retourneert de unaire ontkenning van een invoer.
+- uid: microsoft.quantum.math.negationl
+  summary: Retourneert de unaire ontkenning van een invoer.
+- uid: microsoft.quantum.math.pi
+  summary: Vertegenwoordigt de verhouding van de omtrek van een cirkel met de diameter, opgegeven door de constante, π.
+- uid: microsoft.quantum.math.plusa
+  summary: Retourneert de som (samen voeging) van twee invoer waarden.
+- uid: microsoft.quantum.math.plusc
+  summary: Retourneert de som van twee invoer waarden.
+- uid: microsoft.quantum.math.pluscp
+  summary: Retourneert de som van twee invoer waarden.
+- uid: microsoft.quantum.math.plusd
+  summary: Retourneert de som van twee invoer waarden.
+- uid: microsoft.quantum.math.plusi
+  summary: Retourneert de som van twee invoer waarden.
+- uid: microsoft.quantum.math.plusl
+  summary: Retourneert de som van twee invoer waarden.
+- uid: microsoft.quantum.math.pnorm
+  summary: >-
+    Retourneert de `L(p)` norm van een vector van `Double`s.
+
+
+    Op basis van een matrix $x $ van het type `Double[]`, wordt hiermee de $p $-norm $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $ geretourneerd.
+- uid: microsoft.quantum.math.pnormalized
+  summary: >-
+    Normaliseert een vector van `Double`s in de `L(p)` norm.
+
+
+    Op basis van een matrix $x $ van het type `Double[]`, wordt hiermee een matrix geretourneerd waarin alle elementen worden gedeeld door de $p $-norm $\|x\|_p $.
+- uid: microsoft.quantum.math.powc
+  summary: Retourneert een getal verheven tot een opgegeven macht.
+- uid: microsoft.quantum.math.powcp
+  summary: Retourneert een getal verheven tot een opgegeven macht.
+- uid: microsoft.quantum.math.powd
+  summary: Retourneert het getal x verheven tot de macht y.
+- uid: microsoft.quantum.math.powi
+  summary: Retourneert een getal verheven tot een opgegeven macht.
+- uid: microsoft.quantum.math.powl
+  summary: Retourneert een getal verheven tot een opgegeven macht.
+- uid: microsoft.quantum.math.realmod
+  summary: Berekent de modulus tussen twee reële getallen.
+- uid: microsoft.quantum.math.round
+  summary: Hiermee wordt een waarde afgerond op het dichtstbijzijnde gehele getal of het opgegeven aantal decimalen.
+- uid: microsoft.quantum.math.signd
+  summary: Retourneert een geheel getal dat het teken van een getal aangeeft.
+- uid: microsoft.quantum.math.signi
+  summary: Retourneert een geheel getal dat het teken van een getal aangeeft.
+- uid: microsoft.quantum.math.signl
+  summary: Retourneert een geheel getal dat het teken van een getal aangeeft.
+- uid: microsoft.quantum.math.sin
+  summary: Retourneert de sinus van de opgegeven hoek.
+- uid: microsoft.quantum.math.sinh
+  summary: Retourneert de hyperbolische sinus van de opgegeven hoek.
+- uid: microsoft.quantum.math.sqrt
+  summary: Retourneert de vierkantswortel van een opgegeven getal.
+- uid: microsoft.quantum.math.tan
+  summary: Retourneert de tangens van de opgegeven hoek.
+- uid: microsoft.quantum.math.tanh
+  summary: Retourneert de hyperbolische tangens van de opgegeven hoek.
+- uid: microsoft.quantum.math.timesc
+  summary: Retourneert het product van twee invoer waarden.
+- uid: microsoft.quantum.math.timescp
+  summary: Retourneert het product van twee invoer waarden.
+- uid: microsoft.quantum.math.timesd
+  summary: Retourneert het product van twee invoer waarden.
+- uid: microsoft.quantum.math.timesi
+  summary: Retourneert het product van twee invoer waarden.
+- uid: microsoft.quantum.math.timesl
+  summary: Retourneert het product van twee invoer waarden.
+- uid: microsoft.quantum.math.truncate
+  summary: Hiermee berekent u het integraal deel van een getal.
+newtypes:
+- uid: microsoft.quantum.math.bigfraction
+  summary: Vertegenwoordigt een rationeel nummer van het formulier `p/q`. Geheel getal `p` is het eerste element van de tuple en `q` is het tweede element van de tuple.
+- uid: microsoft.quantum.math.complex
+  summary: >-
+    Vertegenwoordigt een complex getal door de reële en imaginaire componenten.
+
+    Het eerste element van de tuple is het echte onderdeel, de tweede een-het imaginaire deel.
+- uid: microsoft.quantum.math.complexpolar
+  summary: >-
+    Vertegenwoordigt een complex getal in polaire vorm.
+
+
+    De polaire weer gave van een complex getal is $c = r e ^ {i t} $.
+- uid: microsoft.quantum.math.fraction
+  summary: Vertegenwoordigt een rationeel nummer van het formulier `p/q`. Geheel getal `p` is het eerste element van de tuple en `q` is het tweede element van de tuple.
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat klassieke wiskundige functies en gegevens typen."
+operations:
+- uid: microsoft.quantum.math.randomint
+  summary: Hiermee genereert u een wille keurig geheel getal dat groter is dan of gelijk is aan nul en kleiner dan een gegeven bovengrens.
+- uid: microsoft.quantum.math.randomintpow2
+  summary: Genereert een wille keurig geheel getal dat afsteekt uit alle gehele getallen die kunnen worden weer gegeven in een bepaald aantal bits.
+- uid: microsoft.quantum.math.randomreal
+  summary: Retourneert een wille keurig reëel getal in het interval dat groter is dan of gelijk is aan nul en kleiner dan een.
+- uid: microsoft.quantum.math.randomsinglequbitpauli
+  summary: Retourneert een van de Pauli-Opera tors (single-Qubit) op wille keurige wijze.
+ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056306"

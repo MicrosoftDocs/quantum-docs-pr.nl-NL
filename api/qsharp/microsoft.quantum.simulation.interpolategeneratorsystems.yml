@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.interpolategeneratorsystems
+name: InterpolateGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Retourneert een `TimeDependentGeneratorSystem` die de lineaire interpolatie tussen twee `GeneratorSystem`s weergeeft.
+syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
+input:
+  content: '(generatorSystemStart: micro soft. Quantum. simulatie. GeneratorSystem, generatorSystemEnd: micro soft. Quantum. simulatie. GeneratorSystem)'
+  types:
+  - name: generatorSystemStart
+    summary: De start `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+  - name: generatorSystemEnd
+    summary: De eind `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Micro soft. Quantum. simulatie. TimeDependentGeneratorSystem
+  types:
+  - summary: Een `TimeDependentGeneratorSystem` die een systeem vertegenwoordigt dat de som is van de invoer Generator systemen, met gewicht $ (1-s) $ op `generatorSystemStart` en het gewicht $s $ op `generatorSystemEnd`.
+    uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.canon.timedependentgeneratorsystem
+ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065517"

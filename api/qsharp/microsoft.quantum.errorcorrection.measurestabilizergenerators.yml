@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+name: MeasureStabilizerGenerators
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Meet de opgegeven set met Generators van een stabilisatoren groep.
+remarks: >-
+  Hiermee wordt niet gecontroleerd of de opgegeven set generatoren werkt.
+
+  Als ze niet werken, kan het resultaat van metingen wille keurig zijn.
+syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
+input:
+  content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: stabilizerGroup
+    summary: >-
+      Een matrix met multiqubit Pauli-Opera tors.
+
+      `stabilizerGroup[0]` is bijvoorbeeld een lijst met Pauli-matrices met één Qubit, waarvan het tensor-product een stabilisatorere Generator is.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: logicalRegister
+    summary: Een matrix met qubits waarvan de stabilisatorer code is gedefinieerd.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+  - name: gadget
+    summary: Een bewerking die aangeeft hoe een multiqubit Pauli-operator moet worden gemeten.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Microsoft.Quantum.ErrorCorrection.Syndrome
+  types:
+  - summary: Het resultaat van metingen.
+    uid: microsoft.quantum.errorcorrection.syndrome
+ms.openlocfilehash: 1ebc1613c471e11a3d06878bc9ca48cf2d5be505
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226757"

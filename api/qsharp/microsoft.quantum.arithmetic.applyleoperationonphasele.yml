@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyleoperationonphasele
+name: ApplyLEOperationOnPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.phaselittleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.littleendian>.
+remarks: Het REGI ster wordt getransformeerd naar `LittleEndian` door gebruik te maken van <xref:microsoft.quantum.canon.qftle> en wordt vervolgens teruggekeerd naar de oorspronkelijke weer gave na de toepassing van `op`.
+syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+input:
+  content: '(op: (micro soft. Quantum. aritmetische. LittleEndian = >-eenheid), doel: micro soft. Quantum. aritmetische. PhaseLittleEndian)'
+  types:
+  - name: BTW
+    summary: De bewerking die moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: stemming
+    summary: Het REGI ster waarop de bewerking wordt toegepast.
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Eenheid
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.applyleoperationonphaselea
+- microsoft.quantum.canon.applyleoperationonphaselea
+- microsoft.quantum.canon.applyleoperationonphaseleca
+ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056725"

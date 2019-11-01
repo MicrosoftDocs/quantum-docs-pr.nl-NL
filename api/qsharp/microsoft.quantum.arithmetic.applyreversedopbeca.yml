@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedopbeca
+name: ApplyReversedOpBECA
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Past een bewerking die invoer van big endian in een REGI ster versleutelt, een niet-ondertekend geheel getal met de indeling little endian.
+syntax: 'operation ApplyReversedOpBECA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: op
+    summary: Bewerking die op een big endian-REGI ster werkt.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: Een little-endian-registratie die moet worden getransformeerd.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- applyreversedopbe
+- applyreversedopbea
+- applyreversedopbec
+ms.openlocfilehash: b905b37ebd68c3eedd4d7d6e2d0a5a4dc15abf1d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215061"

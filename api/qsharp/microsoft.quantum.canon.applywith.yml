@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywith
+name: ApplyWith
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
+
+
+  Als er twee bewerkingen worden uitgevoerd, die respectievelijk worden beschreven door unitary Opera tors $U $ en $V $, worden deze toegepast in de volg orde $U ^ {\dagger} V U $. Dat wil zeggen dat met deze bewerking de unitary-operator wordt geïmplementeerd die is opgegeven door $V $ geconjugeerde met $U $.
+remarks: Er wordt altijd aangenomen dat de buitenste bewerking adjointable is, maar deze hoeft niet te worden bestuurd om de gecombineerde bewerking te kunnen bewerkbaar te maken.
+syntax: "operation ApplyWith (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T) : Unit"
+input:
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T)"
+  types:
+  - name: outerOperation
+    summary: De bewerking $U $ die moet worden gebruikt voor geconjugeerde $V $. Houd er rekening mee dat de buitenste bewerking $U $ moet worden adjointable, maar niet hoeft te worden bestuurd.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: De bewerking $V $ wordt geconjugeerd.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: De invoer die moet worden opgegeven voor de buiten-en de binnenste bewerkingen.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het doel waarop elk van de interne en externe bewerkingen handelen.
+seeAlso:
+- applywitha
+- applywithc
+- applywithca
+ms.openlocfilehash: 910ecee6febcea39c82b02a21ab9231a681a0a4a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212936"

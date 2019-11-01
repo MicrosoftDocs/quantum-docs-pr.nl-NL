@@ -1,0 +1,82 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Micro soft. Quantum. Diagnostics
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: Hierbij wordt bevestigd dat twee matrices van Boole-waarden gelijk zijn.
+- uid: microsoft.quantum.diagnostics.dumpmachine
+  summary: De huidige status van de doel computer dumpen.
+- uid: microsoft.quantum.diagnostics.dumpregister
+  summary: De huidige status van de doel computer die aan de opgegeven qubits is gekoppeld, wordt gedumpt.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Bevestiging dat een klassieke Boole-variabele de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Er wordt bevestigd dat een complex getal de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Er wordt bevestigd dat een complex getal de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Beweringen dat een klassieke int-variabele de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalityfactl
+  summary: Bevestiging dat een klassieke BigInt-variabele de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Bevestiging dat een klassieke resultaat variabele de verwachte waarde heeft.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: Vertegenwoordigt de claim die een klassieke drijvende-komma waarde de verwachte waarde heeft tot een gegeven absolute tolerantie.
+- uid: microsoft.quantum.diagnostics.fact
+  summary: Declareert dat een klassieke voor waarde waar is.
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
+  summary: Beweringen dat een klassiek complex getal de verwachte waarde heeft tot een geringe tolerantie van 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: Beweringen dat een klassiek complex getal de verwachte waarde heeft tot een geringe tolerantie van 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: Hierbij wordt bevestigd dat een klassieke drijvende-komma waarde de verwachte waarde heeft tot een kleine tolerantie van 1e-10.
+operations:
+- uid: microsoft.quantum.diagnostics.assertallzero
+  summary: De bevestiging dat de opgegeven qubits zich in $ \ket{0}$ State bevindt.
+- uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  summary: Bevestiging dat de opgegeven qubits zich in $ \ket{0}$ status tot een bepaalde tolerantie bevindt.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  summary: >-
+    Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
+
+
+    Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ (+ 1 eigenstate van Pauli Y-operator).
+
+
+    Deze verklaring maakt gebruik van $n $ qubits en vereist dat meerdere aanroepen van de bewerkingen worden vergeleken.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  summary: >-
+    Hiermee wordt gecontroleerd of de bewerking `givenU` gelijk is aan de bewerking `expectedU` de opgegeven invoer grootte door de bewerking van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
+
+    Dit is een vereiste, maar niet voldoende, voor waarde voor de gelijkheid van twee unitaries.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  summary: >-
+    Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
+
+
+    Deze bevestiging wordt geïmplementeerd met behulp van de Choi – Jamiłkowski isomorphism om de bewering te beperken tot een van de Qubit-status verklaringen op twee Entangled-registers.
+
+    Deze bewerking heeft dus slechts één aanroep nodig voor elke bewerking die wordt getest, maar vereist twee keer zoveel qubits die moeten worden toegewezen.
+
+    Deze bevestiging kan worden gebruikt om ervoor te zorgen dat een geoptimaliseerde versie van een bewerking identiek is aan de Naïve-implementatie, of dat een bewerking die op een bereik van niet-Quantum gegevens reageert, overeenkomt met de bekende gevallen.
+- uid: microsoft.quantum.diagnostics.assertqubit
+  summary: Beweringen dat de Qubit-`q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
+- uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  summary: >-
+    Beweringen dat een Qubit de verwachte status heeft.
+
+
+    `expected` vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+
+    Het eerste element van de Tuples die elk van $a $ vertegenwoordigen, $b $ het reële deel van het complexe getal is, terwijl de tweede het meest imaginaire deel uitmaakt.
+
+    Met het laatste argument wordt de tolerantie gedefinieerd waarmee de bevestiging wordt gemaakt.
+- uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  summary: Beweringen dat de Qubit-`q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
+ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056859"

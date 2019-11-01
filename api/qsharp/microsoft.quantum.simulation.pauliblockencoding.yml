@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Hiermee maakt u een Block-encoding-unitary voor een Hamiltonian.
+
+
+  De Hamiltonian $H = \sum_{j}\alpha_j P_j $ wordt beschreven door een som van Pauli-voor waarden $P _J $, elk met een real-factor $ \alpha_j $.
+remarks: Dit wordt verkregen door de status $ \ sum_ {j} \ SQRT {\ alpha_j/\ Alfa} \ Ket {j} $ voor te bereiden en te ontzeggen en een met vermenigvuldiging beheerde unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> en <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>te maken.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: Een `GeneratorSystem` dat $H $ als som van Pauli-voor waarden beschrijft
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Eerste para meter
+
+
+      De One-norm van coëfficiënten $ \alpha = \sum_{j} | \alpha_j | $.
+
+
+      ## <a name="second-parameter"></a>Tweede para meter
+
+
+      Een `BlockEncodingReflection` unitary $U $ van de Hamiltonian $H $. Omdat deze unitary voldoet aan $U ^ 2 = I $, is het ook een reflectie.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216132"

@@ -1,0 +1,106 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.preparation
+name: Microsoft.Quantum.Preparation
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen voor het voorbereiden van qubits in wille keurige begin waarden."
+functions:
+- uid: microsoft.quantum.preparation.blochspherecoordinates
+  summary: >-
+    Berekent de Bloch Sphere-coördinaten voor een status met één Qubit.
+
+
+    Met twee complexe getallen $a 0, a1 $ die de status Qubit vertegenwoordigen, worden de coördinaten van de Bloch-bol berekend, zodat $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ theta/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\ theta/2)} \ket{1}) $.
+- uid: microsoft.quantum.preparation.quantumrom
+  summary: >-
+    Maakt gebruik van de Quantum ROM-techniek om een opgegeven dichtheids matrix weer te geven.
+
+
+    Op basis van een lijst met $N $ \alpha_j $, retourneert dit een unitary $U $ die gebruikmaakt van de Quantum-ROM-techniek voor het voorbereiden van een benadering $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ van de zuivering van de dichtheids matrix $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. In deze benadering is de fout $ \epsilon $ dusdanig dat $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ en $\|\tilde\rho-\rho\| \le \epsilon $. Met andere woorden, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ Ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage}_J}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.quantumromqubitcount
+  summary: Retourneert het totale aantal qubits dat moet worden toegewezen aan de bewerking die wordt geretourneerd door `QuantumROM`.
+- uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
+  summary: >-
+    Retourneert een bewerking die een specifieke Quantum status voorbereidt.
+
+
+    De geretourneerde bewerking $U $ een wille keurige Quantum status $ \ket{\psi} $ voorbereidt met complexe coëfficiënten $r _J e ^ {i t_j} $ van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+
+
+    De actie van U op een nieuw toegewezen REGI ster wordt gegeven door $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+  summary: >-
+    Retourneert een bewerking die de opgegeven Quantum status voorbereidt.
+
+
+    Met de geretourneerde bewerking $U $ wordt een wille keurige Quantum status $ \ket{\psi} $ voor bereid met positieve coëfficiënten $ \alpha_j\ge $0 van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+
+
+    De actie van U op een pas toegewezen REGI ster wordt gegeven door $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}.
+
+    \end{align} $ $
+operations:
+- uid: microsoft.quantum.preparation.preparearbitrarystate
+  summary: >-
+    Retourneert een bewerking die een opgegeven Quantum status voorbereidt.
+
+
+    De geretourneerde bewerking $U $ een wille keurige Quantum status $ \ket{\psi} $ voorbereidt met complexe coëfficiënten $r _J e ^ {i t_j} $ van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+
+
+    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.preparechoistate
+  summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voor de opgegeven referentie-en doel registers voor bereid.
+- uid: microsoft.quantum.preparation.preparechoistatea
+  summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voor een adjoint-variant voor de opgegeven referentie-en doel registers voor bereid.
+- uid: microsoft.quantum.preparation.preparechoistatec
+  summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking gereedgemaakt met een gecontroleerde variant op de opgegeven referentie-en doel registers.
+- uid: microsoft.quantum.preparation.preparechoistateca
+  summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voorbereidt met zowel beheerde als adjoint varianten op gegeven referentie-en doel registers.
+- uid: microsoft.quantum.preparation.prepareentangledstate
+  summary: >-
+    Pairwise entangles twee Qubit-registers.
+
+
+    Dat wil zeggen: Hiermee wordt de maximally Entangled-status $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ voor elk paar qubits op de respectieve kassa's voor bereid, ervan uitgaande dat elke registratie begint in de $ \ket{0\ cdots 0} $ status.
+- uid: microsoft.quantum.preparation.prepareidentity
+  summary: >-
+    Op basis van een REGI ster, bereidt dat registratie voor op de gemengde status maximally.
+
+
+    De kassa wordt voor bereid in de status $ \boldone/2 ^ N $ door het volledige depolarizing-kanaal toe te passen op elke qubit, waarbij $N $ de lengte van het REGI ster is.
+- uid: microsoft.quantum.preparation.preparequbit
+  summary: >-
+    Bereidt een Qubit voor in de + 1 (`Zero`) eigenstate van de gegeven Pauli-operator.
+
+    Als de identiteits operator wordt opgegeven, wordt de Qubit voor bereid in de gemengde status maximally.
+
+
+    Als de Qubit in eerste instantie de $ \ket{0}$-status had, bereidt deze bewerking de Qubit `PauliI`voor in de $ + $1-eigenstate van een bepaalde Pauli-operator of in plaats daarvan in de gemengde status maximally (Zie <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+
+
+    Als de Qubit een andere status heeft dan $ \ket{0}$, worden met deze bewerking de volgende poorten toegepast: $H $ voor `PauliX`$HS $ voor `PauliY`, $I $ voor `PauliZ` en <xref:microsoft.quantum.preparation.preparesinglequbitidentity> voor `PauliI`.
+- uid: microsoft.quantum.preparation.preparesinglequbitidentity
+  summary: >-
+    Bereidt een Qubit voor in de gemengde status maximally.
+
+
+    De opgegeven Qubit wordt voor bereid met de status $ \boldone/$2 door het depolarizing-kanaal $ $ \begin{align} \Omega (\rho) \mathrel{toe te passen: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{align} $ $ waarbij $ \sigma\_i $ de operator $i $ Pauli is en waarbij $ \rho $ een dichtheids operator is die een gemengde staat vertegenwoordigt.
+- uid: microsoft.quantum.preparation.prepareuniformsuperposition
+  summary: >-
+    Hiermee maakt u een uniforme superpositie op status die 0 door `nIndices`versleutelen.
+
+
+    Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+
+    \end{align} $ $.
+ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216013"

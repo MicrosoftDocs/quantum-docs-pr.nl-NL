@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delay
+name: Delay
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+
+
+  Op basis van een bewerking en een invoer voor die bewerking, wordt de bewerking toegepast wanneer er extra invoer is opgegeven.
+
+  Met name de expressie `Delay(op, arg, _)` is een bewerking waarbij `op` wordt toegepast op `arg` wanneer deze wordt aangeroepen.
+
+  Met expressie `Delay(op,arg,_)` kan de toepassing van `op`worden uitgesteld.
+syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
+input:
+  content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Een bewerking die moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: De invoer waarop de bewerking wordt toegepast.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: Argument dat wordt gebruikt om de toepassing van de bewerking uit te stellen met behulp van een gedeeltelijke toepassing.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: "'U"
+  types:
+  - uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die moet worden uitgesteld.
+- uid: "'U"
+  summary: Het retour type van de bewerking die moet worden uitgesteld.
+seeAlso:
+- microsoft.quantum.canon.delayc
+- microsoft.quantum.canon.delaya
+- microsoft.quantum.canon.delayca
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226111"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.noop
+name: NoOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt de identiteits bewerking (geen-op) uitgevoerd op een argument.
+
+
+  Met deze bewerking wordt een waarde van elk type gebruikt en gebeurt er niets.
+
+  Dit kan handig zijn wanneer een invoer van een bewerkings type wordt verwacht, maar er geen actie moet worden ondernomen.
+
+  Als bijvoorbeeld een bepaalde fout correctie Syndrome aangeeft dat er geen fout is opgetreden, is `NoOp<Qubit[]>` mogelijk de juiste herstel procedure.
+
+  Als een bewerking een status voorbereidings procedure als invoer verwacht, kan `NoOp<Qubit[]>` worden gebruikt voor het voorbereiden van de status $ \ket{0 \cdots 0} $.
+remarks: In bijna alle gevallen moet de type parameter voor `NoOp` expliciet worden opgegeven. `NoOp<Qubit>` is bijvoorbeeld gelijk aan <xref:microsoft.quantum.intrinsic.i>.
+syntax: "operation NoOp (input : 'T) : Unit"
+input:
+  content: "(input : 'T)"
+  types:
+  - name: input
+    summary: Een waarde die moet worden genegeerd.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.i
+ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222677"

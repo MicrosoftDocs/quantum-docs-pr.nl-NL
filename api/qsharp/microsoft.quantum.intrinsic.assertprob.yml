@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.assertprob
+name: AssertProb
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Bevestigingen die de opgegeven qubits in het gegeven Pauli meten, hebben het gegeven resultaat met de opgegeven kans, binnen een bepaalde tolerantie.
+remarks: Houd er rekening mee dat de adjoint en de gecontroleerde versies van deze bewerking de voor waarde niet controleren.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: Een meet effect om de kans van, uitgedrukt in een multi-Qubit Pauli-operator, te bevestigen.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Een registratie voor het maken van de bevestiging.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Een verwacht resultaat van `Measure(bases, qubits)`.
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: De kans dat het gegeven resultaat wordt verwacht.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: Een bericht dat moet worden gerapporteerd als de bevestiging mislukt.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assert
+ms.openlocfilehash: 74260a7e80199049e2854a5cdb7988e5321adf83
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216642"

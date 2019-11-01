@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequency
+name: EstimateFrequency
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Op basis van een voor bereiding en meting, schat de frequentie waarmee deze meting slaagt (retourneert `Zero`) door een bepaald aantal experimenten uit te voeren.
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Een bewerking $P $ die een bepaalde status $ \rho $ voorbereidt op de invoer register.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: measurement
+    summary: Een bewerking $M $ die de afmeting van de interesse vertegenwoordigt.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: Het aantal qubits waarop de voor bereiding en meting elke handeling uitvoeren.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: Het aantal keren dat de meting moet worden uitgevoerd om de frequentie van de interesse te schatten.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: >-
+      Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de onzuivere binomiale Estimator $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, waarbij $n\_{\ pijl-omhoog} $ is het aantal `Zero` resultaten dat is waargenomen.
+
+
+      Dit is met name belang rijk voor doel computers die fysieke beperkingen eerbiedigen, zodat er waarschijnlijk niet kan worden gemeten.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229188"

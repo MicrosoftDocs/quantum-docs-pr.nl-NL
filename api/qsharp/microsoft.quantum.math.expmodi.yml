@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.expmodi
+name: ExpModI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Retourneert een geheel getal dat tot een bepaalde macht is verheven, ten opzichte van een bepaalde modulus.
+
+
+  Laat ons expBase van $x $, kracht door $p $ en modulus door $N $.
+
+  De functie retourneert $x ^ p \operatorname{mod} N $.
+
+
+  We gaan ervan uit dat $N $, $x $ positief is en de stroom niet negatief is.
+remarks: Neemt de tijd in verhouding tot het aantal bits in `power`, niet de `power` zelf.
+syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
+input:
+  content: '(expBase : Int, power : Int, modulus : Int)'
+  types:
+  - name: expBase
+    isPrimitive: true
+    uid: Int
+  - name: power
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: cd98e60dab928d1cbb5055a762c8ffa31c460009
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229494"

@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+name: AssertOperationsEqualInPlace
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
+
+
+  Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ (+ 1 eigenstate van Pauli Y-operator).
+
+
+  Deze verklaring maakt gebruik van $n $ qubits en vereist dat meerdere aanroepen van de bewerkingen worden vergeleken.
+syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+references: De basis van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ is de Chuang-Nielsen, die wordt beschreven in [ *i. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).
+input:
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
+  types:
+  - name: nQubits
+    summary: Het aantal qubits-$n $ waarmee de bewerkingen `givenU` en `expectedU` worden uitgevoerd.
+    isPrimitive: true
+    uid: Int
+  - name: givenU
+    summary: Bewerking op $n $ qubits moet worden gecontroleerd.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expectedU
+    summary: Verwijzings bewerking op $n $ qubits dat `givenU` moet worden vergeleken.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertoperationsequalreferenced
+ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225754"

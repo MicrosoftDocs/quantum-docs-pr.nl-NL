@@ -1,0 +1,60 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry.jordanwigner
+name: Microsoft.Quantum.Chemistry.JordanWigner
+functions:
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
+  summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms`, geconverteerd naar een `GeneratorSystem` uitgedrukt in termen van de Pauli `GeneratorIndex`.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
+  summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
+  summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms`, geconverteerd naar een `GeneratorSystem` uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
+  summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
+  summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
+  summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms`, geconverteerd naar een `GeneratorSystem` uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
+  summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms`, geconverteerd naar een `GeneratorSystem` uitgedrukt in termen van de Pauli `GeneratorIndex`.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
+  summary: Retourneert een geoptimaliseerde T-Qubitization bewerking en de para meters die nodig zijn om deze uit te voeren.
+- uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
+  summary: Retourneert de Qubitization-bewerking en de para meters die nodig zijn om deze uit te voeren.
+- uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
+  summary: Retourneert Trotter-stap bewerking en de para meters die nodig zijn om deze uit te voeren.
+operations:
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+  summary: Een unitary $U $ die de teken reeks Pauli toepast op $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ op qubits $0.. p $ voor een index $z \in\{0, 1\}$ en $p $. Dat wil zeggen, $ $ \begin{align} U\ket {z} \ Ket {p} \ Ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ psi} \end{align} $ $
+- uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
+  summary: Eenvoudige status voorbereiding van de evaluatie status door spin-banen te nemen
+- uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
+  summary: Sparse status van de proef versie van de evaluatie periode voor meerdere configuraties door aanstellingen toe te voegen aan de status van de eerste proef versie.
+- uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
+  summary: ''
+- uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
+  summary: Unitary gekoppeld-cluster status voor bereiding van de proef status
+- uid: microsoft.quantum.chemistry.jordanwigner.selectz
+  summary: Een unitary $U $ waarmee de Pauli $Z $-Gate wordt toegepast op een qubits $p $, voorwaarded op een index status $ \ket{p} $. Dat wil zeggen, $ $ \begin{align} U\ket {p} \ Ket {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+newtypes:
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  summary: >-
+    De indeling van gegevens die C# worden door gegeven van naar Q # om alle informatie voor Hamiltonian simulatie weer te geven.
+
+    De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
+  summary: 'De indeling van de gegevens C# die worden door gegeven van naar Q # om de voor bereiding van de begin toestand aan te duiden, wordt bepaald door de algoritme die de gegevens ontvangt.'
+- uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+  summary: >-
+    De indeling van gegevens die C# worden door gegeven van naar Q # om de voor waarden van de Hamiltonian weer te geven.
+
+    De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
+  summary: Functie die `OptimizedBETermIndex` gegevens voor de term `n` retourneert, met een geheel getal `n`, samen met het aantal voor waarden in de eerste `Int` en de som van absolute waarden van alle term coëfficiënten in de `Double`.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
+  summary: Term gegevens in het geoptimaliseerde blok-coderings algoritme.
+ms.openlocfilehash: d84c4f8bf74f902cdffc19dc7e489f80c63d7949
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210930"

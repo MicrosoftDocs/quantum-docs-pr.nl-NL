@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+name: AmpAmpRUSByOracle
+type: operation
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Algoritme voor amplitude versterking van een vaste komma
+remarks: De startQubits moet de status $ \ket{0 \cdots 0} $ hebben. Met deze bewerking wordt een aantal query's herhaald in bevoegdheden van $2 $ totdat een maximum aantal query's is bereikt of de doel status is gevonden.
+syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
+input:
+  content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
+  types:
+  - name: statePrepOracle
+    summary: Unitary Oracle waarmee de start status wordt voor bereid.
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: startQubits
+    summary: Qubit registreren
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: a652d0fc94986552946a438a21bf9bfcba193eea
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215571"

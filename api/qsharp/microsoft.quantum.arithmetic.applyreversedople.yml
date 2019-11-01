@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedople
+name: ApplyReversedOpLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Hiermee wordt een bewerking toegepast waarbij invoer van een geringe endian wordt gebruikt voor een registratie die een niet-ondertekend geheel getal versleutelt met de indeling big endian.
+syntax: 'operation ApplyReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(op: (micro soft. Quantum. aritmetische. LittleEndian = > Unit), registreren: micro soft. Quantum. aritmetische. BigEndian)'
+  types:
+  - name: BTW
+    summary: Bewerking die wordt uitgevoerd op een little-endian-registratie.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: inschrijving
+    summary: Een big-endian-registratie die moet worden getransformeerd.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Eenheid
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- applyreversedoplea
+- applyreversedoplec
+- applyreversedopleca
+ms.openlocfilehash: a48900eba6a7afce3cb57c0514dbfd58bf11633c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057270"

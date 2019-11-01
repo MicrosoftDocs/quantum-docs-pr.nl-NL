@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifca
+name: ApplyIfCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een unitary bewerking toegepast die is voor bereid op een klassieke bit.
+
+
+  Op basis van een bewerking `op` en een bits waarde `bit`, wordt `op` toegepast op de `target` als `bit` `true`is. Als `false`, gebeurt er niets met de `target`.
+
+  Het achtervoegsel `CA` geeft aan dat de bewerking die moet worden toegepast, unitary is (adjointable).
+examples: >-
+  Het volgende is een voor bereiding van een REGI ster van qubits in een verwerkings status die wordt vertegenwoordigd door een klassieke-bits teken reeks, gegeven als een matrix met `Bool` waarden:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Een bewerking die voorwaardelijk moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: bit
+    summary: een Booleaanse waarde die bepaalt of op wordt toegepast of niet.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: De invoer waarop de bewerking wordt toegepast.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die voorwaardelijk moet worden toegepast.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213752"

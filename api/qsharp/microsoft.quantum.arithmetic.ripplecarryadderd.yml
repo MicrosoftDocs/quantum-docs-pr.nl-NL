@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryadderd
+name: RippleCarryAdderD
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
+
+  Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen, waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit `carry`.
+remarks: De opgegeven bewaakte bewerking maakt gebruik van symmetrie en wederzijdse annulering van bewerkingen voor het verbeteren van de standaard implementatie waarmee een besturings element wordt toegevoegd aan elke bewerking.
+syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Thomas G. Draper: "toevoegen op een quantum computer", 2000.
+    https://arxiv.org/abs/quant-ph/0008033
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian Qubit registreert de eerste integer summand.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian Qubit registreren code ring de tweede integer summand is gewijzigd in de $n $ minst significante bits van de som.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Qubit, is xored met de meest significante bit van de som.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ef8f5ec89d0a1bf32e401385f21a6dcf1ec24db7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214568"

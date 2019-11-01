@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Past de exponentiële waarde toe van een multi-Qubit Pauli-operator met een argument dat door een dyadic-fractie wordt gegeven.
+
+
+  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} waarbij $P _I $ het $i $ TH-element van `paulis`is en waar $N = $`Length(paulis)`.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: paulis
+    summary: Matrix van Pauli-waarden met één Qubit die de tensor-product factoren op elke qubit aangeven.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: Teller ($k $) in de dyadic-weer gave van de hoek waarmee het Qubit-REGI ster moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Kracht van twee ($n $) waarmee de noemer wordt aangegeven van de hoek waarmee het Qubit-REGI ster moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Meld u aan om de gegeven draaiing toe te passen op.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223765"

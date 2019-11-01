@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Berekent gedeeltelijke reflectie fasen voor een amplitude versterking met een vaste komma.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  We gebruiken de fasen in ' amplitude versterking met een optimaal aantal Query's '
+
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Zie ook ' methodologie van samengestelde Quantum Gates '
+
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) voor fasen in de `RotationPhases` indeling.
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Aantal query's naar de status voorbereiding Oracle. Moet een oneven geheel getal zijn.
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: Doel minimale succes volle kans.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Matrix van fasen die kunnen worden gebruikt in de implementatie van een Quantum ring-algoritme met een vaste punt.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215690"

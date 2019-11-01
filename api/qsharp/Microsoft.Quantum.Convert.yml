@@ -1,0 +1,65 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor de conversie tussen verschillende Q #-gegevens typen."
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: >-
+    Converteert een gegeven groot geheel getal naar een matrix met Booleaanse waarden.
+
+    Het element 0 van de matrix is de minst significante bit van het grote geheel getal.
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: >-
+    Hiermee wordt een opgegeven matrix met Boole-waarden geconverteerd naar een equivalent Big-geheel getal.
+
+    Het element 0 van de matrix is de minst significante bit van het grote geheel getal.
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: Produceert een positief geheel getal uit een reeks bits in little endian-indeling.
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: Op basis van een bit string retourneert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli-Opera tors met één Qubit.
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: Hiermee wordt een `Bool[]` type geconverteerd naar een `Result[]` type, waarbij `true` wordt toegewezen aan `One` en `false` aan `Zero`is toegewezen.
+- uid: microsoft.quantum.convert.boolasresult
+  summary: Hiermee wordt een `Bool` type geconverteerd naar een `Result` type, waarbij `true` wordt toegewezen aan `One` en `false` aan `Zero`is toegewezen.
+- uid: microsoft.quantum.convert.boolasstring
+  summary: Zet een gegeven Booleaanse waarde om in een equivalente teken reeks representatie.
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: Converteert een gegeven drijvende-komma getal met dubbele precisie naar een equivalente teken reeks weergave.
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: Converteert een gegeven drijvende-komma getal met dubbele precisie naar een equivalente teken reeks weergave met de opgegeven notatie.
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: Hiermee worden functies geconverteerd naar bewerkingen.
+- uid: microsoft.quantum.convert.intasbigint
+  summary: Converteert een opgegeven geheel getal naar een equivalent Big-geheel getal.
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: Produceert een binaire weer gave van een positief geheel getal, met behulp van de weer gave van de little-endian voor de geretourneerde matrix.
+- uid: microsoft.quantum.convert.intasdouble
+  summary: Converteert een opgegeven geheel getal naar een equivalent drijvende-komma getal met dubbele precisie.
+- uid: microsoft.quantum.convert.intasstring
+  summary: Converteert een opgegeven geheel getal naar een overeenkomende teken reeks weergave.
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: Converteert een opgegeven geheel getal naar een overeenkomende teken reeks weergave met de opgegeven notatie.
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: >-
+    Converteert een gegeven groot geheel getal naar een gelijkwaardig geheel getal, indien mogelijk.
+
+    De functie retourneert een paar van het resulterende geheel getal en een Booleaanse vlag die waar en alleen als de conversie mogelijk was.
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: Codeert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli Opera tors met één Qubit in een geheel getal.
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: Hiermee maakt u een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: Hiermee wordt een `Result[]` type geconverteerd naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` aan `false`is toegewezen.
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: Produceert een positief geheel getal uit een teken reeks met resultaten in little endian indeling.
+- uid: microsoft.quantum.convert.resultasbool
+  summary: Hiermee wordt een `Result` type geconverteerd naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` aan `false`is toegewezen.
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: Roept een functie aan met een opgegeven invoer.
+ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210964"

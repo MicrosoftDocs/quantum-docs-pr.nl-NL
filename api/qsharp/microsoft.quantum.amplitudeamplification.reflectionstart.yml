@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionstart
+name: ReflectionStart
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Hiermee maakt u een reflectie over de teken reeks all-nul | 0... 0 〉. Dit is de typische invoer status voor amplitude versterking.
+syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: Een `ReflectionOracle` die overeenkomt met de status $ \ket{0\cdots 0} $.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: 6598a01c19f25ee444f785a6688738f382fc94e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215486"
