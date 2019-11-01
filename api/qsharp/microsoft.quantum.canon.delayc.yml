@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayc
+name: DelayC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een bepaalde bewerking toegepast met een vertraging.
+
+
+  Op basis van een bewerking en een invoer voor die bewerking, wordt de bewerking toegepast wanneer er extra invoer is opgegeven.
+
+  Met name de expressie `Delay(op, arg, _)` is een bewerking waarbij `op` wordt toegepast op `arg` wanneer deze wordt aangeroepen.
+
+  Met expressie `Delay(op,arg,_)` kan de toepassing van `op`worden uitgesteld.
+syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Een bewerking die moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: arg
+    summary: De invoer waarop de bewerking wordt toegepast.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: Argument dat wordt gebruikt om de toepassing van de bewerking uit te stellen met behulp van een gedeeltelijke toepassing.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die moet worden uitgesteld.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.delay
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219668"

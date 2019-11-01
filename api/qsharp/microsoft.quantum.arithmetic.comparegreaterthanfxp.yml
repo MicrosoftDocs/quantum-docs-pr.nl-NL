@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+name: CompareGreaterThanFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Vergelijkt twee vaste-komma nummers die zijn opgeslagen in de Quantum registers en beheert een flip op het resultaat.
+remarks: De huidige implementatie vereist dat de twee vaste-komma nummers dezelfde punt positie en hetzelfde aantal qubits hebben.
+syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
+  types:
+  - name: fp1
+    summary: Eerste getal voor de vaste komma dat moet worden vergeleken.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: Tweede getal met vaste komma dat moet worden vergeleken.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Resultaat van de vergelijking. Wordt gespiegeld als `fp1 > fp2`.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6a7e87a53d91c928d45719dea8d7179ac347ec70
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221283"

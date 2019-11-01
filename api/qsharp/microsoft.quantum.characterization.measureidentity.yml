@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.measureidentity
+name: MeasureIdentity
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Hiermee wordt de identiteits operator in een REGI ster van qubits gemeten.
+remarks: >-
+  Aangezien $ \boldone $ alleen de eigenvalue $1 $ heeft en geen negatieve eigenvalue heeft, retourneert deze bewerking altijd `Zero`, die overeenkomt met de eigenvalue $ + 1 = (-1) ^ 0 $, waardoor de status van `register`niet wordt samengevouwen.
+
+
+  Op zichzelf is deze bewerking niet nuttig, maar is handig in de context van Process tomography, omdat deze informatie bevat over het behoud van de bewaring van een quantum proces.
+
+  Met name een doel computer met verlies van metingen moet deze bewerking vervangen door een werkelijke meting van $ \boldone $.
+syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Het REGI ster dat moet worden gemeten.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: De resultaat waarde `Zero`.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229120"

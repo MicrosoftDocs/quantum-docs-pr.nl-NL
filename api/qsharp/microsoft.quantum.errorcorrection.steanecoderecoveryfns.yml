@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
+name: SteaneCodeRecoveryFns
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Decoder voor gecombineerde X-en Z-onderdelen van de stabilisatoren groep van de ⟦-⟧ Steane Quantum-code.
+syntax: 'function SteaneCodeRecoveryFns () : (Microsoft.Quantum.ErrorCorrection.RecoveryFn, Microsoft.Quantum.ErrorCorrection.RecoveryFn)'
+input:
+  content: ()
+  types: []
+output:
+  content: (Microsoft.Quantum.ErrorCorrection.RecoveryFn, Microsoft.Quantum.ErrorCorrection.RecoveryFn)
+  types:
+  - summary: De tuple van de functies van het type `RecoveryFn` die een Syndrome meet `Result[]` en retourneert de `Pauli[]` bewerkingen die de gedetecteerde fout corrigeert.
+    types:
+    - uid: microsoft.quantum.errorcorrection.recoveryfn
+    - uid: microsoft.quantum.errorcorrection.recoveryfn
+seeAlso:
+- steanecoderecoveryx
+- steanecoderecoveryz
+ms.openlocfilehash: 9dd537688434c4729e6121b4ba230415504eb309
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228423"

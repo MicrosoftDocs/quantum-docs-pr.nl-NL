@@ -1,0 +1,21 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.core
+name: Micro soft. Quantum. core
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat Q # kern functies en bewerkingen.\n\n # <a name=\"remarks\"></a>Opmerkingen\n Deze naam ruimte wordt automatisch geopend door de compiler Q #, zodat alle elementen van deze naam ruimte altijd beschikbaar zijn."
+functions:
+- uid: microsoft.quantum.core.length
+  summary: Retourneert het aantal elementen in een matrix.
+- uid: microsoft.quantum.core.rangeend
+  summary: Retourneert de gedefinieerde eind waarde van het opgegeven bereik. Dit is niet noodzakelijkerwijs het laatste element in de reeks.
+- uid: microsoft.quantum.core.rangereverse
+  summary: Retourneert een nieuw bereik dat het omgekeerde is van het invoer bereik.
+- uid: microsoft.quantum.core.rangestart
+  summary: Retourneert de gedefinieerde begin waarde van het opgegeven bereik.
+- uid: microsoft.quantum.core.rangestep
+  summary: Retourneert het gehele getal dat aangeeft hoe de volgende waarde van een bereik wordt berekend.
+ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056894"

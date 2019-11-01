@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bitsizel
+name: BitSizeL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Voor een niet-negatief geheel getal `a`retourneert het aantal bits dat is vereist om `a`weer te geven.
+
+
+  Dat wil zeggen, retourneert de kleinste $n $, zodat $a < 2 ^ n $.
+syntax: 'function BitSizeL (a : BigInt) : Int'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    summary: Het gehele getal waarvan de bitlengte moet worden berekend.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Int
+  types:
+  - summary: De bits-grootte van `a`.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 09d5cfb994584bc2f411ea70dc57acf0338b93c3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230157"

@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rfrac
+name: RFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Past een rotatie over de opgegeven Pauli-as toe met een hoek die is opgegeven als een dyadic Fractie.
+
+
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} waarbij $ \mu \in \{I, X, Y, Z\}$.
+
+
+  > [!WARNING]
+
+  > Deze bewerking maakt gebruik van de **tegengestelde** teken conventie van @"microsoft.quantum.intrinsic.r".
+remarks: >-
+  Gelijk aan:
+
+
+  ```qsharp
+
+  // PI() is a Q# function that returns an approximation of π.
+
+  R(pauli, -PI() * IntAsDouble(numerator) / IntAsDouble(2 ^ (power - 1)), qubit);
+
+  ```
+syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: Pauli-operator die moet worden exponentiated om de draaiing te vormen.
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: De teller in de dyadic-weer gave van de hoek waarmee de Qubit moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Kracht van twee opgeven van de noemer van de hoek waarmee de Qubit moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Qubit waarop de Gate moet worden toegepast.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216489"

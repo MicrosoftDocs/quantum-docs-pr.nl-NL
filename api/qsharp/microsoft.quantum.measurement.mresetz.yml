@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Hiermee wordt één Qubit in de `Z` gemeten en teruggezet naar de standaard status | 0 〉 na de meting.
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: Eén Qubit die moet worden gemeten.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Het resultaat van het meten van `target` in de Pauli $Z $ soort_jaar.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231177"

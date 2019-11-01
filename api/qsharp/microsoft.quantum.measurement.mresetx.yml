@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetx
+name: MResetX
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Hiermee wordt één Qubit in de X-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+syntax: 'operation MResetX (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: Eén Qubit die moet worden gemeten.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Het resultaat van het meten van `target` in de Pauli $X $ soort_jaar.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 48c819595cf492588fd5d4b08e1315cfb092fcd1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231228"

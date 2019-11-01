@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: Gezien een matrix met multi-Qubit Pauli-Opera Tors, meet elk met een opgegeven meet gadget en retourneert vervolgens de matrix met resultaten.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: Meet de opgegeven Pauli-operator met behulp van een expliciete Scratch Qubit om de meting uit te voeren.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: Hiermee wordt één Qubit in de X-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+- uid: microsoft.quantum.measurement.mresety
+  summary: Hiermee wordt één Qubit in de Y-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: Hiermee wordt één Qubit in de `Z` gemeten en teruggezet naar de standaard status | 0 〉 na de meting.
+- uid: microsoft.quantum.measurement.multim
+  summary: Meet elk Qubit in een bepaalde matrix in de standaard basis.
+ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210981"

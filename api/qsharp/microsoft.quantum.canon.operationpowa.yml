@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowa
+name: OperationPowA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een bewerking naar een stroom gegenereerd.
+
+  De modificator `A` geeft aan dat de bewerking is adjointable.
+
+
+  Op basis van een bewerking die een Gate $U $ vertegenwoordigt, retourneert een nieuwe bewerking $U ^ m $ voor een Power $m $.
+syntax: "function OperationPowA (oracle : ('T => Unit is Adj), power : Int) : ('T => Unit is Adj)"
+input:
+  content: "(oracle : ('T => Unit is Adj), power : Int)"
+  types:
+  - name: oracle
+    summary: Een bewerking $U $ die aangeeft dat de poort moet worden herhaald.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: power
+    summary: Het aantal keren dat $U $ moet worden herhaald.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: Een nieuwe bewerking die $U ^ m $ vertegenwoordigt, waarbij $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: Het type van de bewerking die moet worden ingeschakeld.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 59f7ea68a9b6528e0f3dd116c98961280edd3229
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230837"

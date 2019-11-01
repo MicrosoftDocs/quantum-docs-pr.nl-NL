@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Neemt een matrix en een lijst met locaties en produceert een nieuwe matrix die is samengesteld op basis van de elementen van de oorspronkelijke matrix die overeenkomen met de opgegeven locaties.
+remarks: >-
+  De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` hebben en een lijst met locaties `Int[]` de submatrix te definiëren.
+
+  De constructie van de submatrix is een gebaseerd op het genereren van een nieuwe, diep gaande kopie van de opgegeven matrix in plaats van verwijzingen te onderhouden.
+
+
+  Als `Length(indices) < Length(array)`, wordt met deze functie een subset van `array`geretourneerd. Als `indices` daarentegen herhaalde elementen bevat, worden ook de bijbehorende elementen van `array` herhaald.
+
+  Als `indices` en `array` dezelfde lengte hebben, biedt deze functie permutaties van `array`.
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: indices
+    summary: Een lijst met gehele getallen die wordt gebruikt voor het definiëren van de submatrix.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Een matrix met elementen ten opzichte van `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Een matrix `out` van elementen waarvan de indices overeenkomen met de submatrix, zoals die `out[idx] == array[indices[idx]]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het type `array` elementen.
+ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217849"

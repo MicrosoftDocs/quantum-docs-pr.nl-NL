@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+name: JWOptimizedHTerms
+type: newtype
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: >-
+  De indeling van gegevens die C# worden door gegeven van naar Q # om de voor waarden van de Hamiltonian weer te geven.
+
+  De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
+syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
+ms.openlocfilehash: 24db6a67c0450606bf43388bb460dfd4018bb580
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228491"

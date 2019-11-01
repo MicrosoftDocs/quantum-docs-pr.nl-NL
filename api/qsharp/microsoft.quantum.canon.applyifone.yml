@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifone
+name: ApplyIfOne
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een bewerking toegepast die is ingesteld op een klassieke resultaat waarde die één.
+
+
+  Op basis van een bewerking `op` en een resultaat waarde `result`, wordt `op` toegepast op de `target` als `result` `One`is. Als `Zero`, gebeurt er niets met de `target`.
+syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit), target : 'T))"
+  types:
+  - name: result
+    summary: Een meet resultaat dat bepaalt of op wordt toegepast of niet.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Een bewerking die voorwaardelijk moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: De invoer waarop de bewerking wordt toegepast.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die voorwaardelijk moet worden toegepast.
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 5609226c113fd6b9660fdad2f05d154a7abde5a3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220909"

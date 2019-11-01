@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.greatestcommondivisorl
+name: GreatestCommonDivisorL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Berekent de grootste gemene deler van $a $ en $b $. De GCD is altijd positief.
+syntax: 'function GreatestCommonDivisorL (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: het eerste getal waarvan de uitgebreide grootste algemene deler wordt berekend
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: het tweede getal waarvan de uitgebreide grootste algemene deler wordt berekend
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: Grootste gemene deler van $a $ en $b $
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 54808793900a2a4878c91a5b4f8810a9e289f945
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232809"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+name: SingleQubitProcessTomographyMeasurement
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Hiermee wordt een Qubit-proces tomography meting uitgevoerd in de Pauli, op basis van een bepaald kanaal van belang.
+remarks: De verdeling over de resultaten die door deze bewerking worden geretourneerd, is een speciaal geval van een tomography-status van twee Qubit. Laat $ \rho = J (\Lambda)/$2 de status Choi-Jamiłkowski voor $ \Lambda $ zijn. De bovenstaande distributie is dan identiek aan $ $ \begin{align} \Pr (\texttt{Zero} | \rho; M) = \operatorname{Tr} (M \rho), \end{align} $ $ waarbij $M = 2 (\boldone + P) ^ \mathrm{T}/2 \cdot (\boldone + Q)/$2 de daad werkelijke meting is die overeenkomt met $P $ en $Q $.
+syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
+input:
+  content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
+  types:
+  - name: preparation
+    summary: Het Pauli basis element $P $ waarin een Qubit moet worden voor bereid.
+    isPrimitive: true
+    uid: Pauli
+  - name: measurement
+    summary: Het Pauli basis element $Q $ waarin een Qubit moet worden gemeten.
+    isPrimitive: true
+    uid: Pauli
+  - name: channel
+    summary: Eén Qubit-kanaal $ \Lambda $ waarvan het gedrag wordt geschat met Process tomography.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: Result
+  types:
+  - summary: >-
+      Het resultaat `Zero` met kans $ $ \begin{align} \Pr (\texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left (\frac{\boldone + Q}{2} \Lambda\left [\frac{\boldone + P}{2} \right] \right).
+
+      \end{align} $ $
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229018"
