@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Herhaalt een functie `f` via een matrix `array`, waarmee `f(f(f(initialState, array[0]), array[1]), ...)`wordt geretourneerd.
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: Een functie die over de matrix moet worden gevouwen.
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: De oorspronkelijke status van de map.
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Een matrix met waarden die moeten worden gevouwen.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: De uiteindelijke status die is geretourneerd door de map na het herhalen van alle elementen van `array`.
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: Het type statussen waarop de `folder` functie wordt uitgevoerd, dat wil zeggen, accepteert als eerste argument en retourneert.
+- uid: "'T"
+  summary: Het type `array` elementen.
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214347"

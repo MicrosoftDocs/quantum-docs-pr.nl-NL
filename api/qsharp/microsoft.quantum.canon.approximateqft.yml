@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.approximateqft
+name: ApproximateQFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: De benadering van de Quantum Fourier-trans formatie (AQFT) Toep assen op een Quantum register.
+remarks: >-
+  AQFT vereist Z-rotatie poorten van de vorm 2π/2.000 en Hadamard-Gates.
+
+
+  Er wordt van uitgegaan dat de invoer en uitvoer worden gecodeerd in big endian-code ring.
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+references: >-
+  - [*M. Roetteler, th. Beth*, Vereffeningsnr. algebra eng. commun. Comput. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+
+  - [*D. Coppersmith* arXiv: Quant-pH/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+input:
+  content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: a
+    summary: >-
+      een benaderingen-para meter waarmee wordt bepaald op welk niveau de bewaakte Z-rotaties die zich in het QFT-circuit bevinden, worden verwijderd.
+
+
+      Met de benaderings parameter a wordt het Pruning-niveau van de Z-rotaties bepaald, d.w.z. een ∈ {0.. n} en alle Z-rotaties 2π/2.000 waarbij k > a worden verwijderd uit het QFT-circuit. Het is bekend dat voor k > = log ₂ (n) en log ₂ (1/ε) + 3 een kan worden gebonden | | QFT-AQFT | | < ε.
+    isPrimitive: true
+    uid: Int
+  - name: qs
+    summary: Quantum register van n qubits waarmee de benadering van de Quantum Fourier-trans formatie wordt toegepast.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212528"

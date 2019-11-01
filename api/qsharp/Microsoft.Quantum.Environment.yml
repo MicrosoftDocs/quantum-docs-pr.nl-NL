@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.environment
+name: Micro soft. Quantum. Environment
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze functies bieden informatie over de omgeving waarin de Quantum berekening wordt uitgevoerd."
+operations:
+- uid: microsoft.quantum.environment.getqubitsavailabletoborrow
+  summary: >-
+    Retourneert het aantal qubits dat momenteel beschikbaar is om te lenen.
+
+    Dit omvat niet-gebruikte qubits; dat wil zeggen de qubits die wordt geretourneerd door `GetQubitsAvailableToUse`.
+- uid: microsoft.quantum.environment.getqubitsavailabletouse
+  summary: Retourneert het aantal qubits dat momenteel beschikbaar is voor gebruik.
+ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056818"

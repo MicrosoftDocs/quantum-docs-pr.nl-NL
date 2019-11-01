@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+name: EvaluateOddPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Evalueert een oneven polynoom in een vaste-komma weergave.
+syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Coëfficiënten van de oneven polynoom als een dubbele matrix, dat wil zeggen de matrix $ [a_0, a_1,..., a_k] $ voor de oneven polynoom $P (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2.000 + 1} $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Invoer nummer van vaste komma waarvoor de polynoom moet worden geëvalueerd.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Uitvoer met een vast punt dat P (x) zal bevatten. Moeten in eerste instantie de status $ \ket{0}$ hebben.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219107"

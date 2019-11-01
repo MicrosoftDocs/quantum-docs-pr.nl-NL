@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.powc
+name: PowC
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retourneert een getal verheven tot een opgegeven macht.
+syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+input:
+  content: '(base_: micro soft. Quantum. math. complex, Power: micro soft. Quantum. math. complex)'
+  types:
+  - name: Baseer
+    uid: microsoft.quantum.math.complex
+  - name: /Uitschakelaar
+    summary: De Power $b $ waarop $a $ moet worden gegenereerd.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Micro soft. Quantum. math. complex
+  types:
+  - summary: De Power $a ^ b $
+    uid: microsoft.quantum.math.complex
+ms.openlocfilehash: 77a3f8fdc769947e50b35b31547a98017e6e2529
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067251"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retourneert de gedefinieerde eind waarde van het opgegeven bereik. Dit is niet noodzakelijkerwijs het laatste element in de reeks.
+remarks: >-
+  Het eerste element van een bereik expressie is `start`, het tweede element is `start+step`, het derde element is `start+step+step`enzovoort, totdat `end` is door gegeven.
+
+
+  Houd er rekening mee dat de gedefinieerde eind waarde van een bereik kan verschillen van het laatste element in de reeks die is opgegeven door het bereik. bijvoorbeeld in een bereik van 0.. 2.. 5 het laatste element is 4, maar de eind waarde is 5.
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(bereik: bereik)'
+  types:
+  - name: bereik
+    isPrimitive: true
+    uid: Range
+output:
+  content: integer
+  types:
+  - summary: De gedefinieerde eind waarde van het opgegeven bereik.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066639"

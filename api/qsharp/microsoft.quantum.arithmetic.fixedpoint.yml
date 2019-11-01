@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.fixedpoint
+name: FixedPoint
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: Hiermee wordt een REGI ster van qubits-code ring voor een getal met vaste komma aangeduid. Bestaat uit een geheel getal dat gelijk is aan het aantal qubits links van het binaire punt, d.w.z. qubits van gewicht groter dan of gelijk aan 1, en een Quantum register.
+syntax: newtype FixedPoint = (Int, Qubit[]);
+ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219073"

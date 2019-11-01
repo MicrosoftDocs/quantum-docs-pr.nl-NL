@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cnotchaintarget
+name: CNOTChainTarget
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt de pariteit van een matrix met qubits berekend in een doel-Qubit.
+
+
+  Als de matrix in eerste instantie de status $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{target}}} $ heeft, wordt de uiteindelijke status gegeven door $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{target}}} $.
+remarks: >-
+  De volgende zijn gelijkwaardig:
+
+
+  ```qsharp
+
+  CNOTChainTarget(Most(qs), Last(qs));
+
+  ```
+
+
+  en de
+
+
+  ```qsharp
+
+  CNOTChain(qs);
+
+  ```
+syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
+input:
+  content: '(qubits : Qubit[], targetQubit : Qubit)'
+  types:
+  - name: qubits
+    summary: Matrix van qubits waarop de pariteit wordt berekend.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetQubit
+    summary: Eind Qubit waarin de pariteit van qubits is XORed.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Eenheid
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068033"

@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Hiermee wordt bevestigd dat de kans op een specifieke status van een Quantum register de verwachte waarde heeft.
+
+
+  Gezien een $n $-Qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, bevestiging dat de kans $ | \alpha_j | ^ 2 $ van de status $ \ket{j} $ geïndexeerd door $j $ de verwachte waarde heeft.
+examples: >-
+  Stel dat met de `qubits`-registratie een Qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ Ket{0}+ \ SQRT {7/8} \ Ket{6}$ in de indeling little endian wordt gecodeerd.
+
+  Dit betekent dat het aantal statussen $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ en $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Daarna slagen de volgende verklaringen:
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: De index $j $ van de status $ \ket{j} $ vertegenwoordigd door een `LittleEndian` registratie.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: De verwachte waarde van $ | \alpha_j | ^ 2 $.
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: Het Qubit-REGI ster waarin $ \ket{\psi} $ wordt opgeslagen in de indeling little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: Absolute tolerantie voor het verschil tussen werkelijk en verwacht.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221436"

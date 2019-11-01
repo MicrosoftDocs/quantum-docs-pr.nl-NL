@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.resultasbool
+name: ResultAsBool
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Hiermee wordt een `Result` type geconverteerd naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` aan `false`is toegewezen.
+syntax: 'function ResultAsBool (input : Result) : Bool'
+input:
+  content: '(invoer: resultaat)'
+  types:
+  - name: input
+    summary: '`Result` moet worden geconverteerd.'
+    isPrimitive: true
+    uid: Result
+output:
+  content: BOOL
+  types:
+  - summary: Een `Bool` die de `input`vertegenwoordigt.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 2e6db6cf91e3ded2ec3a1ad73d0d6f7203058d03
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067591"

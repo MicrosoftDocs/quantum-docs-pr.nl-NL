@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+name: AmpAmpByReflectionsPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Amplitude versterking door gedeeltelijke reflecties.
+remarks: >-
+  Amplitude versterking is een speciaal geval van een obliviouse amplitude versterking waarbij er geen systeem qubits is en de Oblivious Oracle is ingesteld op identiteit.
+
+  In de meeste gevallen wordt `startQubits` geïnitialiseerd in de status $ \ket{\Text{start}}\_$1, de $-$1-eigenstate van `startStateReflection`.
+syntax: 'function AmpAmpByReflectionsPhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
+  types:
+  - name: phases
+    summary: Fasen van gedeeltelijke reflecties
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: startStateReflection
+    summary: Reflectie operator over begin status
+    uid: microsoft.quantum.oracles.reflectionoracle
+  - name: targetStateReflection
+    summary: Reflectie operator over doel status
+    uid: microsoft.quantum.oracles.reflectionoracle
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: Een bewerking waarbij amplitude versterking door gedeeltelijke reflecties wordt geïmplementeerd.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 90305f330669aa4e9570e56b26744cdb7efd98bc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215809"

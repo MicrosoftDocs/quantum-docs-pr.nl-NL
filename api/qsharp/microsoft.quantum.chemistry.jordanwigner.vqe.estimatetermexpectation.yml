@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Berekent de energie die is gekoppeld aan een bepaalde Hamiltonian-term van Jordanië-Wigner
+
+
+  Met deze bewerking wordt de verwachte waarde voor elke meet operator geschat en wordt deze vermenigvuldigd met de overeenkomstige coëfficiënt, met behulp van steek proeven.
+
+  De resultaten worden geaggregeerd in een variabele die de energie van de Wigner term bevat.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: De unitary die wordt gebruikt voor het voorbereiden van de status.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: De meet operatoren van de term Jordanië-Wigner.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: De coëfficiënten van de Wigner term.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: Het aantal qubits dat nodig is voor het simuleren van het molecuul systeem.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: Het aantal steek proeven dat moet worden gebruikt voor de schatting van de verwachting van de term.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: De energie die is gekoppeld aan de term Jordanië-Wigner.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228440"

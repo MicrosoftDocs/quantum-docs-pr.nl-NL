@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Micro soft. Quantum. arrays
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor het maken en bewerken van gegevens reeksen."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Gegeven een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix en controleert of alle elementen van de matrix voldoen aan het predicaat.
+- uid: microsoft.quantum.arrays.any
+  summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, wordt gecontroleerd of ten minste één element van de matrix voldoet aan het predicaat.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Maakt een matrix met de opgegeven lengte en alle elementen die gelijk zijn aan de opgegeven waarde.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: Op basis van een matrix retourneert een nieuwe matrix met elementen van de oorspronkelijke matrix, samen met de indices van elk element.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Retourneert een matrix met de elementen van een andere matrix, met uitzonde ring van elementen in een bepaalde lijst met indices.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, retourneert een matrix die bestaat uit die elementen die voldoen aan het predicaat.
+- uid: microsoft.quantum.arrays.fold
+  summary: Herhaalt een functie `f` via een matrix `array`, waarmee `f(f(f(initialState, array[0]), array[1]), ...)`wordt geretourneerd.
+- uid: microsoft.quantum.arrays.head
+  summary: Retourneert het eerste element van de matrix.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Retourneert de eerste index van het eerste element in een matrix die voldoet aan een bepaald predicaat. Als dit element niet bestaat, retourneert-1.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Op basis van een matrix, retourneert een bereik over de indices van die matrix, die geschikt is voor gebruik in een for-lus.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: Retourneert een functie die elementen van die matrix retourneert, uitgedrukt in een matrix.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Op basis van een matrix en een functie die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de functie.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Op basis van een matrix en een functie die is gedefinieerd voor de geïndexeerde elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de functie.
+- uid: microsoft.quantum.arrays.most
+  summary: Maakt een matrix die gelijk is aan een invoer matrix, behalve dat het laatste matrix element is verwijderd.
+- uid: microsoft.quantum.arrays.padded
+  summary: Retourneert een matrix met de opgegeven waarden tot een opgegeven lengte.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Hiermee splitst u een matrix in meerdere delen.
+- uid: microsoft.quantum.arrays.rest
+  summary: Maakt een matrix die gelijk is aan een invoer matrix, behalve dat het eerste matrix element wordt verwijderd.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Maak een matrix die dezelfde elementen bevat als een invoer matrix, maar in omgekeerde volg orde.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Een matrix van gehele getallen ophalen binnen een bepaalde interval.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Een matrix van gehele getallen ophalen binnen een bepaalde interval.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Neemt een matrix en een lijst met locaties en produceert een nieuwe matrix die is samengesteld op basis van de elementen van de oorspronkelijke matrix die overeenkomen met de opgegeven locaties.
+- uid: microsoft.quantum.arrays.tail
+  summary: Retourneert het laatste element van de matrix.
+- uid: microsoft.quantum.arrays.zip
+  summary: Als er twee matrices worden opgegeven, wordt er een nieuwe matrix van paren geretourneerd, zodat elk paar een element uit elke oorspronkelijke matrix bevat.
+- uid: microsoft.quantum.arrays.zip3
+  summary: Als er drie matrices zijn opgegeven, wordt een nieuwe matrix van 3-Tuples geretourneerd, zodat elke 3-tuple een element uit elke oorspronkelijke matrix bevat.
+- uid: microsoft.quantum.arrays.zip4
+  summary: Gegeven vier matrices retourneert een nieuwe matrix van 4 Tuples, zodat elke 4-tuple een element uit elke oorspronkelijke matrix bevat.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057111"

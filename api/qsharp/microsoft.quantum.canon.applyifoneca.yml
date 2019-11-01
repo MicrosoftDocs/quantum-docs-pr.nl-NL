@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifoneca
+name: ApplyIfOneCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een unitary-bewerking toegepast op een klassieke resultaat waarde die één.
+
+
+  Op basis van een bewerking `op` en een resultaat waarde `result`, wordt `op` toegepast op de `target` als `result` `One`is. Als `Zero`, gebeurt er niets met de `target`.
+
+  Het achtervoegsel `CA` geeft aan dat de bewerking die moet worden toegepast, unitary is (adjointable).
+syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Een meet resultaat dat bepaalt of op wordt toegepast of niet.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Een bewerking die voorwaardelijk moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: target
+    summary: De invoer waarop de bewerking wordt toegepast.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die voorwaardelijk moet worden toegepast.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217390"

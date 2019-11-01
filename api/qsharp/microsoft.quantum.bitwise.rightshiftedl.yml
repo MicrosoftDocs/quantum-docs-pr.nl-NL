@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.rightshiftedl
+name: RightShiftedL
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Hiermee wordt de bitsgewijze weer gave van een getal naar rechts verplaatst met een opgegeven aantal bits.
+remarks: >-
+  De volgende zijn gelijkwaardig:
+
+
+  ```Q#
+
+  let c = a >>> b;
+
+  let c = RightShiftedL(a, b);
+
+  ```
+syntax: 'function RightShiftedL (value : BigInt, amount : Int) : BigInt'
+input:
+  content: '(value : BigInt, amount : Int)'
+  types:
+  - name: value
+    summary: Het getal waarvan de bitsgewijze weer gave naar rechts wordt geschoven (minder significant).
+    isPrimitive: true
+    uid: BigInt
+  - name: amount
+    summary: Het aantal bits waarmee `value` naar rechts wordt geschoven.
+    isPrimitive: true
+    uid: Int
+output:
+  content: BigInt
+  types:
+  - summary: De waarde van `value`, naar `amount` bits geschoven.
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 4c370d859eefdcff5fc844cf55e17adad7b5df86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213854"

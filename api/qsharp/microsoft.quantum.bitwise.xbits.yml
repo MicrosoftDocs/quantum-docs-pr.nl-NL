@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.xbits
+name: XBits
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Retourneert een geheel getal dat de X-bits van een matrix van Pauli-Opera tors vertegenwoordigt.
+remarks: De functie wordt gegenereerd als de lengte van `paulis` matrix groter is dan 63.
+syntax: 'function XBits (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Een matrix met Pauli-Opera tors die moeten worden weer gegeven als een geheel getal.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: Een geheel getal $x $ met binaire weer gave $ (p_{62}\,p_{61}\,\dots\,p_0) $, waarbij $p _I = $0 als `paulis[i]` `PauliI` of `PauliZ` en waar $p _I = $1 als `paulis[i]` `PauliX` of `PauliY`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- zbits
+ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217730"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Vermenigvuldigt de coëfficiënt van alle termen in een `GeneratorSystem`.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(vermenigvuldiger: Double, generatorSystem: micro soft. Quantum. simulatie. GeneratorSystem)'
+  types:
+  - name: Vermenigvuldig
+    summary: De vermenigvuldiger op de coëfficiënt.
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: Het `GeneratorSystem` dat moet worden vermenigvuldigd.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Micro soft. Quantum. simulatie. GeneratorSystem
+  types:
+  - summary: Een `GeneratorSystem` een systeem met coëfficiënten die een factor `multiplier` groter zijn.
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065449"

@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Retourneert een matrix met de opgegeven waarden tot een opgegeven lengte.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: De lengte van de opgevulde matrix. Als dit positief is, wordt `inputArray` aan het hoofd opgevuld. Als dit negatief is, wordt `inputArray` aan de staart opgevuld.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: Standaard waarde voor het gebruik van opvullings elementen.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: Matrix waarvan de waarden zich op het hoofd van de uitvoer matrix bevinden.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Een matrix `output` die de `inputArray` aan het hoofd met `defaultElement`s opgevuld tot `output` een lengte heeft `nElementsTotal`
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het type van de matrix elementen.
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218053"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Retourneert een wille keurig reëel getal in het interval dat groter is dan of gelijk is aan nul en kleiner dan een.
+remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid ervan afhankelijk is van de implementatie van `Random`.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      Het aantal bits nauw keurig waarmee het wille keurig getal moet worden steek proef.
+
+          # Output
+
+      Een reëel getal $x = k/2 ^ {\texttt{bitsRandom}} $ voor een geheel getal $k $ als steek proef van het interval $ [0, 2 ^ {\texttt{bitsRandom}}) $ met kans $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219957"

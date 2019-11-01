@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.measureinteger
+name: MeasureInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Hiermee wordt de inhoud van een Quantum register gemeten en omgezet in een geheel getal. De meting wordt uitgevoerd met betrekking tot de standaard berekening, d.w.z. de eigenbasis van `PauliZ`.
+remarks: Met deze bewerking wordt de invoer register opnieuw ingesteld op de status $ \ket{00\cdots 0} $, die geschikt is om terug te gaan naar een doel machine.
+syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
+input:
+  content: '(target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: target
+    summary: Een Quantum register in de code ring met little endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Int
+  types:
+  - summary: Een niet-ondertekend geheel getal dat de gemeten waarde van `target`bevat.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.canon.measureintegerbe
+ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214874"

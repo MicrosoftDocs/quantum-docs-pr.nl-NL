@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.extendedgreatestcommondivisori
+name: ExtendedGreatestCommonDivisorI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Hiermee wordt een tuple $ (u, v) $ zodanig berekend dat $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, waarbij $ \operatorname{GCD} $ $a $ grootste gemene deler van $a $ en $b $ is. De GCD is altijd positief.
+syntax: 'function ExtendedGreatestCommonDivisorI (a : Int, b : Int) : (Int, Int)'
+references: '- Deze implementatie is gebaseerd op https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: het eerste getal waarvan de uitgebreide grootste algemene deler wordt berekend
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: het tweede getal waarvan de uitgebreide grootste algemene deler wordt berekend
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, Int)
+  types:
+  - summary: Tuple $ (u, v) $ met de eigenschap $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isPrimitive: true
+      uid: Int
+ms.openlocfilehash: 7bcafd5d62bb6daf9a17e12c06d0d01214a724b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233030"

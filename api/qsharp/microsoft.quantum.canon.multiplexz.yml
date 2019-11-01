@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een Pauli Z-rotatie toegepast op een matrix van qubits.
+
+
+  Hiermee past u de unitary-bewerking met vermenigvuldiging toe $U $ waarmee rotaties worden uitgevoerd op basis van hoek $ \theta_j $ over een Pauli-operator van één Qubit $Z $ wanneer wordt bepaald door de $n $-Qubit-nummer status $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+remarks: '`coefficients` wordt aangevuld met elementen $ \theta_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.'
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- Synthese van Quantum Logic-circuits Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Matrix van Maxi maal $2 ^ n $ coëfficiënten $ \theta_j $. De $j $ th indexeert de nummer status $ \ket{j} $ gecodeerd in de indeling little endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n $-Qubit-controle register dat nummer Staten $ \ket{j} $ codeert in de indeling little endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Eén Qubit-REGI ster dat wordt geroteerd door $e ^ {i P \theta_j} $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222694"

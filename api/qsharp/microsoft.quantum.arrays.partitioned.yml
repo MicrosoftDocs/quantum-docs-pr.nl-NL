@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.partitioned
+name: Partitioned
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Hiermee splitst u een matrix in meerdere delen.
+examples: >-
+  ```qsharp
+
+  // The following returns [[1,5],[3],[7]];
+
+  let split = Partitioned([2,1], [1,5,3,7]);
+
+  ```
+syntax: "function Partitioned (nElements : Int[], arr : 'T[]) : 'T[][]"
+input:
+  content: "(nElements : Int[], arr : 'T[])"
+  types:
+  - name: nElements
+    summary: Aantal elementen in elk deel van de matrix
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: arr
+    summary: De invoer matrix die moet worden gesplitst.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: Meerdere matrices waarbij de eerste matrix de eerste `nElements[0]` van `arr` is en de tweede matrix de volgende `nElements[1]` van `arr`, enzovoort. De laatste matrix bevat alle resterende elementen.
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+ms.openlocfilehash: 6e26d4d49f50c8e9ee4c18681f88272a45d2ef20
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218087"

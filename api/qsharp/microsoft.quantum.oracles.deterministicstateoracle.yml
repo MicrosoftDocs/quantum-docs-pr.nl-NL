@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoracle
+name: DeterministicStateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Vertegenwoordigt een Oracle voor deterministische status voorbereiding.
+
+
+  De invoer voor de Oracle-$O $ is:
+
+
+  - Het REGI ster waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
+remarks: >-
+  Deze Oracle die is gedefinieerd door $O \ket{0}= \ket{\psi} $ treedt op bij de berekening op basis van de status $ \ket{0}$ om de status $ \ket{\psi} $ te maken.
+
+  De eerste para meter is het Qubit-REGI ster van $ \ket{\psi} $.
+syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
+ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231126"
