@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.dividedbyl
+name: DividedByL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retourneert het quotiënt van twee invoer waarden.
+syntax: 'function DividedByL (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: De eerste invoer $a $ die moet worden verdeeld.
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: De tweede invoer $b $ die moet worden verdeeld.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: Het quotiënt $a/b $.
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: c0aec98a7d68be8d6d4de9a42f5e1bd6f8bc3ca1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229698"

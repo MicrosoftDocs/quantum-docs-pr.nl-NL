@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.greaterthand
+name: GreaterThanD
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retourneert waar als en alleen als een getal groter is dan een ander getal.
+remarks: >-
+  De volgende zijn gelijkwaardig:
+
+
+  ```Q#
+
+  let cond = a > b;
+
+  let cond = GreaterThanD(a, b);
+
+  ```
+syntax: 'function GreaterThanD (a : Double, b : Double) : Bool'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: De eerste waarde die moet worden vergeleken.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: De tweede waarde die moet worden vergeleken.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Bool
+  types:
+  - summary: '`true` als en alleen als `a` strikt groter is dan `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 9dbb502eb6e54b93bb7cb24c2efefe5aa4906222
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225703"

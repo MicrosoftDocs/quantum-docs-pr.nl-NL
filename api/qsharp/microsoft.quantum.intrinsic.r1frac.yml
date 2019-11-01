@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Past een rotatie over de $ \ket{1}$-status toe met een hoek die is opgegeven als een dyadic Fractie.
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > Deze bewerking maakt gebruik van de **tegengestelde** teken conventie van @"microsoft.quantum.intrinsic.r"en bevat niet de factor $1/2 $, opgenomen in @"microsoft.quantum.intrinsic.r1".
+remarks: >-
+  Gelijk aan:
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: De teller in de dyadic-weer gave van de hoek waarmee de Qubit moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Kracht van twee opgeven van de noemer van de hoek waarmee de Qubit moet worden gedraaid.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Qubit waarop de Gate moet worden toegepast.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233982"

@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Vertegenwoordigt een Oracle voor Oblivious-amplitude versterking.
+
+
+  De invoer voor de Oracle-$O $ zijn:
+
+
+  - Het ancilla-REGI ster $a $ waarvoor $ wordt $O.
+
+  - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $ \ket{t}\_een $.
+remarks: >-
+  Deze Oracle gedefinieerd door $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ reageert op de ancilla-status $ \ket{s}\_een $ to Implementeer de unitary $U $ op een systeem status $ \ket{\psi}\_s $ met amplitude $ \lambda $ in de basis die is gemarkeerd door $ \ket{t}\_a $.
+
+  De eerste para meter is het Qubit-REGI ster van $ \ket{s}\_a $. De tweede para meter is het Qubit-REGI ster van $ \ket{\psi}\_s $.
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231058"
