@@ -1,0 +1,12 @@
+- name: Naslaginformatie
+  items:
+    - name: 'Q#-bibliotheken'
+      href: qsharp/toc.yml
+    - name: .NET-bibliotheken
+      items:
+        - name: Traceringssimulator
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Kwantumchemie
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python-bibliotheken
+      href: 'https://docs.microsoft.com/python/qsharp'

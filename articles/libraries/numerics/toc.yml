@@ -1,0 +1,4 @@
+- name: Installatie en validatie
+  href: installation.md
+- name: Gebruik van de bibliotheek voor berekeningen
+  href: numerics.md

@@ -1,0 +1,9 @@
+- name: Standaardbibliotheken
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: Bibliotheek voor kwantumchemie
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: Bibliotheek voor kwantumberekeningen
+  topicHref: numerics/index.md
+  href: numerics/toc.yml

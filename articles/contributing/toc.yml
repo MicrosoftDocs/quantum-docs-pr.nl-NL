@@ -1,0 +1,10 @@
+- name: Fouten rapporteren
+  href: reporting-bugs.md
+- name: Documentatie bijdragen
+  href: docs.md
+- name: Pull-aanvragen openen
+  href: pull-requests.md
+- name: Code bijdragen
+  href: code.md
+- name: Stijlgids
+  href: style-guide.md

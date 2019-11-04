@@ -1,0 +1,40 @@
+- name: Documentatie over Microsoft Quantum
+  href: index.yml
+- name: Overzicht
+  href: welcome.md
+- name: Snelstartgidsen
+  items:
+    - name: De QDK installeren
+      href: install-guide/index.md
+    - name: De QDK bijwerken
+      href: install-guide/update.md
+    - name: Schrijf uw eerste kwantumprogramma
+      href: quickstart.md
+- name: Concepten
+  items:
+    - name: Kwantumontwikkelingstechnieken
+      topicHref: techniques/index.md
+      href: techniques/toc.yml
+    - name: 'Q#-programmeertaal'
+      topicHref: language/index.md
+      href: language/toc.yml
+    - name: 'Q#-bibliotheken'
+      href: libraries/toc.yml
+    - name: Concepten van kwantumcomputing
+      href: concepts/toc.yml
+    - name: Een kwantummachine hosten
+      href: machines/toc.yml
+- name: Resources
+  items:
+    - name: Releaseopmerkingen voor QDK
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Bijdragen aan de QDK
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Woordenlijst
+      href: Glossary.md
+    - name: Voor meer informatie
+      href: for-more-info.md
+    - name: Licentie
+      href: license.md

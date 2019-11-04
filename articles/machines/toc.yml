@@ -1,0 +1,11 @@
+- name: Klassieke machines en stuurprogramma's
+  href: index.md
+- name: Kwantumsimulator
+  href: full-state-simulator.md
+- name: Schatting resources
+  href: resources-estimator.md
+- name: Trajectsimulator kwantumcomputer
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Toffoli-simulator
+  href: toffoli-simulator.md
