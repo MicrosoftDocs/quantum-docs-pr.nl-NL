@@ -6,16 +6,16 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184080"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442452"
 ---
-## <a name="obtaining-resource-counts"></a>Resource aantallen verkrijgen
+# <a name="obtaining-resource-counts"></a>Resourcetellingen uitvoeren
 
-De kosten voor het simuleren van $n $ qubits op een klassieke computer worden exponentieel geschaald met $n $. Hiermee wordt de grootte van een quantum chemie-simulatie aanzienlijk beperkt, kunnen we met de volledige status Simulator worden uitgevoerd. Voor grote situaties van schei kunde kunnen we echter nuttige informatie verkrijgen. Hier onderzoeken we hoe resource kosten, zoals het aantal T-poorten of CNOT-poorten, voor het simuleren van schei kunde kunnen worden verkregen op een geautomatiseerde manier met behulp van de [traceer Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Dergelijke informatie informeert ons wanneer quantum computers mogelijk groot genoeg zijn om deze quantum chemie-algoritmen uit te voeren. Zie het gegeven `GetGateCount` voor beeld voor naslag informatie.
+De kosten voor het simuleren van $n $ qubits op klassieke computers worden exponentieel geschaald met $n $. Hiermee wordt de grootte van een quantum chemie-simulatie aanzienlijk beperkt, kunnen we met de volledige status Simulator worden uitgevoerd. Voor grote situaties van schei kunde kunnen we echter nuttige informatie verkrijgen. Hier onderzoeken we hoe resource kosten, zoals het aantal T-poorten of CNOT-poorten, voor het simuleren van schei kunde kunnen worden verkregen op een geautomatiseerde manier met behulp van de [traceer Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Dergelijke informatie informeert ons wanneer quantum computers mogelijk groot genoeg zijn om deze quantum chemie-algoritmen uit te voeren. Zie het gegeven `GetGateCount` voor beeld voor naslag informatie.
 
 We gaan ervan uit dat we al een `FermionHamiltonian` exemplaar hebben ontvangen, zoals wordt beschreven in het voor beeld van het [laden van het bestand](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) . 
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-We configureren nu de trace Simulator voor het bijhouden van de resources waar we geïnteresseerd zijn. In dit geval tellen we primitieve Quantum bewerkingen door de `usePrimitiveOperationsCounter` vlag in te stellen op `true`. Een technisch detail `throwOnUnconstraintMeasurement` wordt ingesteld op `false` om uitzonde ringen te voor komen in gevallen waarin de Q #-code niet correct wordt bevestigd bij probabiltiy van meet resultaten, indien aanwezig.
+We configureren nu de trace Simulator voor het bijhouden van de resources waar we geïnteresseerd zijn. In dit geval tellen we primitieve Quantum bewerkingen door de `usePrimitiveOperationsCounter` vlag in te stellen op `true`. Een technisch detail `throwOnUnconstraintMeasurement` wordt ingesteld op `false` om uitzonde ringen te voor komen in gevallen waarbij de Q #-code niet goed is bewering over de waarschijnlijkheid van meting resultaten, indien van toepassing.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

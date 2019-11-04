@@ -1,4 +1,4 @@
-- name: Klassieke machines en stuurprogramma's
+- name: Overzicht
   href: index.md
 - name: Kwantumsimulator
   href: full-state-simulator.md

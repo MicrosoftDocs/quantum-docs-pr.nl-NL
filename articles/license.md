@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit licentie | Microsoft Docs
+title: Microsoft Quantum Development Kit licentie
 description: Microsoft Quantum Development Kit licentie
-services: service-name-with-dashes-AZURE-ONLY
-keywords: Voeg geen sleutelwoorden toe en bewerk ze niet zonder overleg met uw SEO-expert.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184930"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463361"
 ---
 # <a name="microsoft-software-license-terms"></a>LICENTIEBEPALINGEN VOOR MICROSOFT-SOFTWARE 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICRO SOFT QUANTUM DEVELOPMENT KIT (PREVIEW-VERSIE)
+## <a name="microsoft-quantum-development-kit-preview"></a>MICRO SOFT QUANTUM DEVELOPMENT KIT (PREVIEW-VERSIE)
 
 
 * * *
@@ -61,13 +58,13 @@ ALS U VOLDOET AAN DEZE LICENTIE VOORWAARDEN, HEBT U ONDERSTAANDE RECHTEN. DOOR D
     
     e. u kunt de software delen, publiceren, distribueren of uitlenen, de software voorzien van een zelfstandige gehoste oplossing voor anderen, of de software of deze overeenkomst overdragen aan derden.
 
-1. **export beperkingen**. U moet voldoen aan alle nationale en internationale Export wetten en-voor Schriften die van toepassing zijn op de software, waaronder beperkingen op bestemmingen, eind gebruikers en eind gebruik. Ga naar http://aka.ms/exporting voor meer informatie over export beperkingen.
+1. **export beperkingen**. U moet voldoen aan alle nationale en internationale Export wetten en-voor Schriften die van toepassing zijn op de software, waaronder beperkingen op bestemmingen, eind gebruikers en eind gebruik. Ga naar https://aka.ms/exporting voor meer informatie over export beperkingen.
 
 1. **ondersteunings services**. Micro soft is niet verplicht in het kader van deze overeenkomst om ondersteunings services voor de software te leveren. De geboden ondersteuning is ' as is ', met alle fouten en zonder enige vorm van garantie.
 
 1. **Updates**. De software kan regel matig controleren op updates en deze voor u downloaden en installeren. U kunt alleen updates verkrijgen van micro soft of geautoriseerde bronnen. Micro soft moet mogelijk uw systeem bijwerken om u te voorzien van updates. U gaat ermee akkoord deze automatische updates zonder enige voorafgaande kennisgeving te ontvangen. Updates kunnen niet alle bestaande software functies, services of rand apparatuur bevatten of ondersteunen.
 
-1. **binding van arbitrage en ONTheffing van klasse-actie. Deze sectie is van toepassing als u in (of, als er een bedrijf, uw hoofd vestiging is in) de Verenigde Staten**.  Als u en micro soft een geschil hebben, stemt u en micro soft ermee in om 60 dagen te proberen om het probleem te verhelpen. Als u en micro soft niet, kan u en micro soft akkoord gaan met **het binden van afzonderlijke arbitrage vóór de American arbitrage Association** onder de Federal arbitrage Act ("FAA"), en **niet aan Suzan in de rechter van een rechtbank of jury**. In plaats daarvan wordt een neutrale arbiter beslist. **Klasse-acties zijn rechts zaken, arbitrage van de branche, persoonlijke juristen-algemene acties**en andere door Voer, waarbij iemand in een Representative-capaciteit zou handelen, **niet is toegestaan**; ook wordt de afzonderlijke procedure zonder toestemming van alle partijen gecombineerd. De volledige arbitrage overeenkomst bevat meer voor waarden en is te http://aka.ms/arb-agreement-1. U en micro soft gaan akkoord met deze voor waarden.
+1. **binding van arbitrage en ONTheffing van klasse-actie. Deze sectie is van toepassing als u in (of, als er een bedrijf, uw hoofd vestiging is in) de Verenigde Staten**.  Als u en micro soft een geschil hebben, stemt u en micro soft ermee in om 60 dagen te proberen om het probleem te verhelpen. Als u en micro soft niet, kan u en micro soft akkoord gaan met **het binden van afzonderlijke arbitrage vóór de American arbitrage Association** onder de Federal arbitrage Act ("FAA"), en **niet aan Suzan in de rechter van een rechtbank of jury**. In plaats daarvan wordt een neutrale arbiter beslist. **Klasse-acties zijn rechts zaken, arbitrage van de branche, persoonlijke juristen-algemene acties**en andere door Voer, waarbij iemand in een Representative-capaciteit zou handelen, **niet is toegestaan**; ook wordt de afzonderlijke procedure zonder toestemming van alle partijen gecombineerd. De volledige arbitrage overeenkomst bevat meer voor waarden en is te https://aka.ms/arb-agreement-1. U en micro soft gaan akkoord met deze voor waarden.
 
 1. **volledige overeenkomst**. Deze overeenkomst en alle andere voor waarden die micro soft kan bieden voor aanvullingen, updates of toepassingen van derden, is de volledige overeenkomst voor de software.
 

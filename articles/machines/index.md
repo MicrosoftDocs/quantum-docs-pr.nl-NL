@@ -1,19 +1,19 @@
 ---
-title: Kwantumsimulatoren en klassieke stuurprogramma's | Microsoft Docs
+title: Kwantumsimulatoren en hosttoepassingen | Microsoft Docs
 description: Hierin wordt beschreven hoe u kwantumsimulatoren kunt aansturen met een klassieke .NET-programmeertaal, zoals C# of Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035119"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442227"
 ---
-# <a name="classical-drivers-and-machines"></a>Klassieke stuurprogramma's en computers
+# <a name="quantum-simulators-and-host-applications"></a>Kwantumsimulatoren en hosttoepassingen
 
 ## <a name="what-youll-learn"></a>U leert het volgende
 
@@ -52,7 +52,7 @@ Deze zijn allemaal gedefinieerd in de naamruimte `Microsoft.Quantum.Simulation.S
 * Een [op tracering gebaseerde resource-estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), de klasse `QCTraceSimulator`, waarmee u een geavanceerde analyse kunt maken van de verbruikte resources voor de hele call-graph (aanroepgrafiek) van het algoritme.
 * Een [Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator), de klasse `ToffoliSimulator`.
 
-## <a name="writing-a-classical-driver-program"></a>Een klassiek stuurprogramma schrijven
+## <a name="writing-a-host-application"></a>Een hosttoepassing schrijven
 
 In [Een kwantumprogramma schrijven](xref:microsoft.quantum.write-program) hebben we een eenvoudig C#-stuurprogramma voor ons teleporteeralgoritme geschreven. Een C#-stuurprogramma heeft 4 hoofddoelen:
 
@@ -94,7 +94,7 @@ Er zijn wel enkele subtiliteiten om rekening mee te houden bij het doorgeven van
 * Matrices moeten worden verpakt in een `Microsoft.Quantum.Simulation.Core.QArray<T>`-object.
     Een `QArray`-klasse heeft een constructor waarin u een geordende verzameling (`IEnumerable<T>`) van de juiste objecten kunt opgeven.
 * De lege tuple, `()` in Q#, wordt opgegeven met `QVoid.Instance` in C#.
-* Niet-lege tuples worden opgegeven als .NET `ValueType`-exemplaren.
+* Niet-lege tuples worden opgegeven als .NET `ValueTuple`-exemplaren.
 * Door de gebruiker gedefinieerde typen in Q# worden doorgegeven als het bijbehorende basistype.
 * Als u een bewerking of functie wilt doorgeven aan een `Run`-methode, moet u een exemplaar van de klasse van de bewerking of functie verkrijgen met behulp van de methode `Get<>` van de simulator.
 

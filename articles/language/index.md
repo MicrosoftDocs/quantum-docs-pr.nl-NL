@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035260"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442476"
 ---
 # <a name="the-q-programming-language"></a>De programmeertaal Q#
 
-# <a name="introduction"></a>Inleiding
+## <a name="introduction"></a>Inleiding
 
 Een natuurlijk model voor kwantumberekening is de kwantumcomputer te behandelen als een coprocessor, vergelijkbaar met coprocessoren voor GPU's, FPGA's en andere adjunct-processoren.
 De primaire besturingslogica voert klassieke code uit op een klassieke hostcomputer.
@@ -36,7 +36,7 @@ In de volgende secties vindt u gedetailleerde informatie over het volgende:
 - [Instructies](xref:microsoft.quantum.language.statements)
 - [Bestandsstructuur](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>Conventies
+## <a name="conventions"></a>Conventies
 
 We streven naar een consistent gebruik van gangbare interpunctietekens in alle situaties.
 Hierdoor is Q# makkelijker te leren en te lezen omdat deze tekens altijd hetzelfde betekenen, en hetzelfde begrip altijd op dezelfde manier wordt weergegeven.

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035281"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462867"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum development kit (QDK) installeren
 
@@ -26,11 +26,13 @@ De installatiestappen kunnen verschillen, afhankelijk van de gekozen ontwikkelom
 
 ## <a name="develop-with-python"></a>Ontwikkelen met Python
 
+Met het qsharp-pakket voor Python simuleert u eenvoudig Q#-bewerkingen en -functies vanuit Python. IQ# (spreek uit als 'i-q-sharp') is een extensie die hoofdzakelijk wordt gebruikt door Jupyter en Python, en die de kernfunctionaliteit biedt voor het compileren en simuleren van Q#-bewerkingen.
+
 1. Vereisten
 
     - [Python](https://www.python.org/downloads/) 3.6 of hoger
     - Python-pakketbeheer voor [PIP](https://pip.pypa.io/en/stable/installing)
-    - [.NET Core SDK 2.1 of hoger](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 of hoger](https://www.microsoft.com/net/download)
 
 1. Installeer het pakket `iqsharp`
 
@@ -87,11 +89,16 @@ De installatiestappen kunnen verschillen, afhankelijk van de gekozen ontwikkelom
 
 ## <a name="develop-with-jupyter-notebooks"></a>Ontwikkelen met Jupyter-notebooks
 
+Jupyter-notebooks worden veel gebruikt binnen academische instellingen, in wetenschappelijke laboratoria en voor gezamenlijk programmeerprojecten online. Met een Jupyter-notebook kunt u direct code uitvoeren, waaronder nu ook Q#-code, en gebruikmaken van instructies, notities en andere inhoud.  Hier leest u hoe u aan de slag gaat om uw eigen Q#-notebooks te maken.
+
+IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofdzakelijk wordt gebruikt door Jupyter en Python, en die de kernfunctionaliteit biedt voor het compileren en simuleren van Q#-bewerkingen.
+
+
 1. Vereisten
 
     - [Python](https://www.python.org/downloads/) 3.6 of hoger
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 of hoger](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 of hoger](https://www.microsoft.com/net/download)
 
 1. Installeer het pakket `iqsharp`
 
@@ -120,11 +127,22 @@ De installatiestappen kunnen verschillen, afhankelijk van de gekozen ontwikkelom
 
     - Voer deze cel van het Notebook uit:
 
-        ![Jupyter Notebook-cel](~/media/install-guide-jupyter.png)
+        ![Cel met Q#-code in een Jupyter-notebook](~/media/install-guide-jupyter.png)
 
         U ziet `SayHello` in de uitvoer van de cel. Wanneer u werkt met Jupyter Notebook, wordt de Q#-code gecompileerd en wordt de naam van de gevonden bewerking(en) geretourneerd in de uitvoer.
 
+
+    - Simuleer in een nieuwe cel de uitvoering in een kwantumcomputer van de bewerking die u zojuist hebt gemaakt met behulp van de `%simulate`-magic:
+
+        ![Cel met %simulate magic in een Jupyter-notebook](~/media/install-guide-jupyter-simulate.png)
+
+        Het bericht wordt nu op het scherm weergegeven, samen met het resultaat van de bewerking die u hebt aangeroepen (in dit geval leeg).
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Ontwikkelen met C# in Windows, met behulp van Visual Studio
+
+Visual Studio biedt een uitgebreide omgeving voor het ontwikkelen van Q#-programma's en beschikt over handige functies die ontwikkelaars helpen bij het bouwen van hun toepassingen, zoals het aanvullen van code en het markeren van de syntaxis.  De Visual Studio-extensie voor Q# bevat sjablonen voor Q#-bestanden en -projecten, evenals syntaxismarkering en IntelliSense-ondersteuning.
+
 
 1. Vereisten
 
@@ -158,12 +176,14 @@ De installatiestappen kunnen verschillen, afhankelijk van de gekozen ontwikkelom
 > [!NOTE]
 > * Als u meerdere projecten in één Visual Studio-oplossing hebt, moeten alle projecten in de oplossing zich in dezelfde map bevinden als de oplossing, of in een van de submappen.  
 
-## <a name="develop-with-c-using-vs-code"></a>Ontwikkelen met C#, met behulp van VS Code
+## <a name="develop-with-c-using-visual-studio-code"></a>Ontwikkelen met C# met behulp van Visual Studio Code
+
+Visual Studio Code (VS Code) biedt een uitgebreide omgeving voor het ontwikkelen van Q#-programma's in talloze computeromgevingen, waaronder Windows, Linux en Mac, en beschikt over handige functies die ontwikkelaars helpen bij het bouwen van hun toepassingen, zoals het aanvullen van code en het markeren van de syntaxis.  De VS Code-extensie voor Q# bevat syntaxismarkering en Q#-codefragmenten.
 
 1. Vereisten
 
    - [VS-code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 of hoger](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 of hoger](https://www.microsoft.com/net/download)
 
 1. Installeer de Quantum VS Code-extensie
 
@@ -195,9 +215,11 @@ De installatiestappen kunnen verschillen, afhankelijk van de gekozen ontwikkelom
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>Ontwikkelen met C#, met behulp van het opdrachtregelprogramma `dotnet`
 
+Natuurlijk kunt u ook Q#-programma's schrijven en uitvoeren vanaf de opdrachtregel. U hoeft hiervoor alleen de .NET Core SDK en de QDK-projectsjablonen te installeren. 
+
 1. Vereisten
 
-    - [.NET Core SDK 2.1 of hoger](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 of hoger](https://www.microsoft.com/net/download)
 
 1. Installeer de Quantum-projectsjablonen voor .NET
 

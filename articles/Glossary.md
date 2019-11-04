@@ -1,18 +1,20 @@
 ---
-title: Woorden lijst | Microsoft Docs
+title: Woorden lijst voor Quantum Computing | Microsoft Docs
 description: Woorden lijst voor Quantum waarden
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183621"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442546"
 ---
+# <a name="quantum-computing-glossary"></a>Woorden lijst voor Quantum Computing
+
 |Termijn|Definitie|
 |-------------|----------|
 |Adjoint|De complex geconjugeerde omzetting van de bewerking. Voor bewerkingen waarbij een unitary-operator wordt geïmplementeerd, is de adjoint de inverse van de bewerking.|
@@ -29,7 +31,7 @@ ms.locfileid: "73183621"
 |Meting|Een klassieke bit verkrijgen van een Qubit (of set van qubits). Zie de sectie met [Qubit-concepten](xref:microsoft.quantum.concepts.qubit) voor meer informatie.|
 |Veranderlijk|Een variabele waarvan de waarde kan worden gewijzigd nadat deze is gemaakt.|
 |Naamruimte|Een label voor een verzameling verwante namen (doorgaans bewerkingen, functies en typen). Bijvoorbeeld, de naam ruimte [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) labels alle symbolen die in de standaard bibliotheek zijn gedefinieerd en die helpen bij het voorbereiden van initiële statussen.|
-|Bewerking|De basis eenheid voor het uitvoeren van quantums in Q #. Het is ongeveer gelijk aan een functie in C of C++ python, of een statische methode in C# of Java.|
+|Bewerking|De basis eenheid voor het uitvoeren van quantums in Q #. Het is te vergelijken met een functie in C, C++ of Python, of een statische methode in C# of Java.|
 |Operator toepassing|Een Quantum bewerking wordt uitgevoerd. Dit past doorgaans een unitary-matrix toe op de huidige status vector. Zie [Inleiding tot Quantum concepten](xref:microsoft.quantum.concepts.intro) voor meer informatie.|
 |Oracle|Een subroutine die gegevens afhankelijke informatie levert aan een Quantum algoritme tijdens runtime. Normaal gesp roken is het doel om een superpositie van uitvoer te bieden die overeenkomt met de invoer die zich in superpositie bevindt.   |
 |Gedeeltelijke toepassing|Het aanroepen van een functie of bewerking zonder alle vereiste para meters. Het retourneert een nieuwe aanroep die alleen de ontbrekende para meters vereist tijdens een toekomstige toepassing.|

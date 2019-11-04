@@ -1,21 +1,21 @@
 ---
-title: Concepten van kwantumcomputing
-description: Wat is kwantumcomputing?
+title: Geschiedenis en achtergrond van kwantumcomputing
+description: In dit artikel leest u informatie over de geschiedenis van kwantumcomputing, vertellen we u in het kort hoe deze technologie werkt en maakt u kennis met de Microsoft Quantum Development Kit.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978952"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442303"
 ---
-# <a name="what-is-quantum-computing"></a>Wat is kwantumcomputing?
+# <a name="quantum-computing-history-and-background"></a>Geschiedenis en achtergrond van kwantumcomputing
 
-In de afgelopen jaren zijn er talloze nieuwe computertechnologieën ontwikkeld en daarvan vereist kwantumcomputing misschien wel de grootste paradigmaverschuiving van ontwikkelaars.  Kwantumcomputers werden in de jaren '80 voorgesteld door [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) en [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  De idee achter kwantumcomputing is afgeleid van wat vaak werd gezien als een van de grootste belemmeringen in de natuurkunde: opmerkelijke wetenschappelijke vooruitgang die stuit op het onvermogen om zelfs eenvoudige systemen te modelleren. Kwantummechanica is namelijk al ontwikkeld tussen 1900 en 1925 en is nog steeds de hoeksteen waarop scheikunde, fysica van de gecondenseerde materie en technologieën variërend van computerchips tot LED-verlichting rusten.  Ondanks deze successen leken zelfs sommige van de eenvoudigste systemen niet meer door de mens te kunnen worden gemodelleerd met kwantummechanica.  Dit komt doordat zelfs voor het simuleren van systemen met maar enkele tientallen deeltjes die op elkaar reageren, meer rekenkracht nodig is dan een conventionele computer in duizenden jaren kan leveren.
+De afgelopen jaren zijn er talloze nieuwe computertechnologieën ontwikkeld en daarvan vereist kwantumcomputing misschien wel de grootste paradigmaverschuiving van ontwikkelaars.  Kwantumcomputers werden in de jaren '80 voorgesteld door [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) en [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  De idee achter kwantumcomputing is afgeleid van wat vaak werd gezien als een van de grootste belemmeringen in de natuurkunde: opmerkelijke wetenschappelijke vooruitgang die stuit op het onvermogen om zelfs eenvoudige systemen te modelleren. Kwantummechanica is namelijk al ontwikkeld tussen 1900 en 1925 en is nog steeds de hoeksteen waarop scheikunde, fysica van de gecondenseerde materie en technologieën variërend van computerchips tot LED-verlichting rusten.  Ondanks deze successen leken zelfs sommige van de eenvoudigste systemen niet meer door de mens te kunnen worden gemodelleerd met kwantummechanica.  Dit komt doordat zelfs voor het simuleren van systemen met maar enkele tientallen deeltjes die op elkaar reageren, meer rekenkracht nodig is dan een conventionele computer in duizenden jaren kan leveren.
 
 Er zijn veel redenen waarom kwantummechanica zo moeilijk te simuleren is.  De eenvoudigste manier om kwantumtheorie te begrijpen, is misschien wel te zeggen dat materie, op kwantumniveau, kan bestaan in allerlei verschillende mogelijke configuraties (ook wel bekend als *toestanden*) tegelijk.  In tegenstelling tot klassieke waarschijnlijkheidsrekening, kunnen de vele configuraties van de kwantumtoestand, die potentieel waargenomen kunnen worden, met elkaar interfereren zoals golven in een getijdenpoel.  Door deze interferentie is het niet mogelijk de configuraties van kwantumtoestanden te verkrijgen met statistische steekproeven.  In plaats daarvan moeten we *elke mogelijke* configuratie berekenen waarin een kwantumsysteem zich kan bevinden, als we de kwantumevolutie willen begrijpen.  
 
@@ -27,4 +27,4 @@ Het hoofddoel bij kwantumcomputing is om gegevens op te slaan in kwantumtoestand
 
 Het ontwerpen van een kwantumprogramma om gebruik te maken interferentie, klinkt als een bijna onmogelijke uitdaging. Desondanks zijn er veel technieken en hulpprogramma's, waaronder onze Microsoft Quantum development kit, geïntroduceerd om kwantumprogrammering en algoritme-ontwikkeling toegankelijker te maken. Er zijn enkele basisstrategieën die kunnen worden gebruikt voor het manipuleren van kwantuminterferentie op een manier die nuttig is voor computing, zonder dat de oplossing in de knoop raakt door een wirwar aan kwantummogelijkheden. Kwantumprogrammering is een kunst op zich vergeleken met klassieke programmering. Om kwantumalgoritmen te kunnen begrijpen en uitdrukken, zijn hele andere middelen vereist. Zonder algemene hulpprogramma's voor ontwikkelaars waarmee ze kwantumprogrammering kunnen aanpakken, is het ontwikkelen van kwantumalgoritmen niet zo eenvoudig.
 
-Gelukkig is er nu de Microsoft Quantum development kit. Deze voorziet een groeiende community van de middelen om het kwantumpotentieel voor hun taken, problemen en oplossingen te ontgrendelen. Onze high-level programmeertaal, Q#, is speciaal ontworpen voor de uitdagingen van kwantumgegevensverwerking; de taal is geïntegreerd in een software-stack die het mogelijk maakt om een kwantumalgoritme uit te compileren tot de primitieve bewerkingen van een kwantumcomputer.  Voordat we ingaan op de programmeertaal, is het handig om de basisprincipes te bekijken waarop kwantumcomputing is gebaseerd. We gaan uit van de basisregels van kwantumcomputing als axioma's in plaats van hun oorsprong in kwantummechanica te beschrijven. Daarnaast veronderstellen we basiskennis van lineaire algebra (vectoren, matrices, enzovoort). Als u meer wilt weten over de basisbeginselen en geschiedenis van kwantumcomputing, raadpleegt u de [sectie met verwijzingen](xref:microsoft.quantum.more-information) voor meer informatie.
+Gelukkig is er nu de Microsoft Quantum development kit. Deze voorziet een groeiende community van de middelen om het kwantumpotentieel voor hun taken, problemen en oplossingen te ontgrendelen. Onze high-level programmeertaal, Q#, is speciaal ontworpen voor de uitdagingen van kwantumgegevensverwerking; de taal is geïntegreerd in een software-stack die het mogelijk maakt om een kwantumalgoritme uit te compileren tot de primitieve bewerkingen van een kwantumcomputer.  Voordat we ingaan op de programmeertaal, is het handig om de basisprincipes te bekijken waarop kwantumcomputing is gebaseerd. We gaan uit van de basisregels van kwantumcomputing als axioma's in plaats van hun oorsprong in kwantummechanica te beschrijven. Daarnaast veronderstellen we basiskennis van lineaire algebra (vectoren, matrices enz.). Als u meer wilt weten over de basisbeginselen en geschiedenis van kwantumcomputing, raadpleegt u de [sectie met verwijzingen](xref:microsoft.quantum.more-information) voor meer informatie.

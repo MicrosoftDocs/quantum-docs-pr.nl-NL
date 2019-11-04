@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183842"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463318"
 ---
 # <a name="q-style-guide"></a>Q #-stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
 
 De conventies die in deze hand leiding worden voorgesteld, zijn bedoeld om Program ma's en bibliotheken die zijn geschreven in Q # gemakkelijker te kunnen lezen en begrijpen.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+## <a name="guidance"></a>Hulp
 
 Suggesties voor:
 
 - Negeer nooit een Conventie, tenzij u dit opzettelijk doet om meer Lees bare en begrijpelijke code voor uw gebruikers te bieden.
-
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Naamgevings regels ##
 
@@ -69,7 +65,7 @@ Andere woorden kunnen in dit geval ook nuttig zijn, zoals in `IterateThroughCart
 | Aanvragen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
 | Assert | Een hypo these over het resultaat van een mogelijke quantum meting wordt gecontroleerd door een simulator |
 | Bestek | Er wordt een klassieke waarde geretourneerd die een schatting vertegenwoordigt die uit een of meer metingen is getrokken |
-| Maateenheidfilters | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
+| Measure | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
 | Voorbereiden | Een bepaald REGI ster van qubits wordt geïnitialiseerd in een bepaalde status |
 | Voorbeeld | Er wordt een klassieke waarde geretourneerd op wille keurige wijze van distributie |
 
