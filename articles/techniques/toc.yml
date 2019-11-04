@@ -1,0 +1,14 @@
+- name: 'Q# en bestandsstructuren'
+  href: file-structure.md
+- name: Bewerkingen en functies
+  href: operations-and-functions.md
+- name: Lokale variabelen
+  href: local-variables.md
+- name: Werken met qubits
+  href: working-with-qubits.md
+- name: Alles samenvoegen
+  href: putting-it-all-together.md
+- name: Verdergaan
+  href: going-further.md
+- name: Testen en foutopsporing
+  href: testing-and-debugging.md

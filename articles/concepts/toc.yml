@@ -1,0 +1,20 @@
+- name: Wat is kwantumcomputing?
+  href: index.md
+- name: Vectoren en matrices
+  href: vectors-and-matrices.md
+- name: Geavanceerde matrixconcepten
+  href: advanced-matrices.md
+- name: De qubit
+  href: the-qubit.md
+- name: Meerdere qubits
+  href: multiple-qubits.md
+- name: Dirac-notatie
+  href: dirac-notation.md
+- name: Pauli-metingen
+  href: pauli-measurements.md
+- name: Kwantumcircuits
+  href: circuits.md
+- name: Kwantum-oracles
+  href: oracles.md
+- name: Software-stack
+  href: software-stack.md
