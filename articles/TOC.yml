@@ -1,15 +1,39 @@
 - name: Documentatie over Microsoft Quantum
   href: index.yml
 - name: Overzicht
-  href: welcome.md
+  items:
+    - name: Aan de slag
+      href: welcome.md
+    - name: Vijf vragen over kwantumcomputing
+      items:
+        - name: Wat is kwantumcomputing?
+          href: overview/what-is-quantum-computing.md
+        - name: Wat kan een kwantumcomputer doen?
+          href: overview/quantum-computers.md
+        - name: Waarom zou ik kwantumcomputing leren gebruiken?
+          href: overview/why-learn-quantum-computing.md
+        - name: 'Wat is Q#?'
+          href: overview/what-is-qsharp.md
+        - name: Hoe leer ik kwantumrekenen?
+          href: overview/how-to-learn-quantum-computing.md
+    - name: Leren met de Quantum Katas
+      href: intro-to-katas.md
 - name: Snelstartgidsen
+  items:
+    - name: Kwantumgenerator voor willekeurige nummers
+      href: quickstarts/qrng.md
+    - name: 'Basisprincipes van het schrijven van kwantumprogramma''s in Q#'
+      href: quickstart.md
+    - name: Zoekalgoritme van Grover implementeren
+      href: quickstarts/search.md
+- name: Handleidingen
   items:
     - name: De QDK installeren
       href: install-guide/index.md
     - name: De QDK bijwerken
       href: install-guide/update.md
-    - name: Schrijf uw eerste kwantumprogramma
-      href: quickstart.md
+    - name: 'Een Q#-project maken'
+      href: how-to-guides/create-qsharp-project.md
 - name: Concepten
   items:
     - name: Kwantumontwikkelingstechnieken
@@ -22,7 +46,7 @@
       href: libraries/toc.yml
     - name: Concepten van kwantumcomputing
       href: concepts/toc.yml
-    - name: Een kwantummachine hosten
+    - name: Kwantumsimulators en resourceschattingen
       href: machines/toc.yml
 - name: Resources
   items:
