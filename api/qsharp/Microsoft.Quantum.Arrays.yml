@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
-name: Micro soft. Quantum. arrays
+name: Microsoft.Quantum.Arrays
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor het maken en bewerken van gegevens reeksen."
 functions:
 - uid: microsoft.quantum.arrays.all
@@ -56,9 +56,10 @@ functions:
 operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
-ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057111"
+metadata:
+  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057111"
