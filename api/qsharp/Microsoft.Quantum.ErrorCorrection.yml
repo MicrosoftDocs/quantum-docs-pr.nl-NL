@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.errorcorrection
-name: Micro soft. Quantum. ErrorCorrection
+name: Microsoft.Quantum.ErrorCorrection
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies, bewerkingen en door de gebruiker gedefinieerde typen voor de Quantum fout correctie."
 functions:
 - uid: microsoft.quantum.errorcorrection.bitflipcode
@@ -109,9 +109,10 @@ newtypes:
   summary: Type voor de meet resultaten `Result[]` die een fout Syndrome van een Quantum code opgeven.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Hiermee wordt een bewerking aangeduid die wordt gebruikt om de Syndrome van een fout-correct code blok te meten.
-ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056787"
+metadata:
+  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056787"

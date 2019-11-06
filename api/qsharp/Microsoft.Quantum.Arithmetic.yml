@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
-name: Micro soft. Quantum. aritmetische
+name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die worden gebruikt voor coherente reken kundige berekeningen."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
@@ -215,9 +215,10 @@ newtypes:
     Als $ \ket{x} $ bijvoorbeeld de code ring little-endian van het gehele getal $x $ in de berekening is, dan is $ \operatorname{QFTLE} \ket{x} $ de code ring van $x $ in de QFT basis.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Type van een ondertekend geheel getal dat is opgeslagen in little endian (Zie LittleEndian).
-ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065143"
+metadata:
+  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065143"
