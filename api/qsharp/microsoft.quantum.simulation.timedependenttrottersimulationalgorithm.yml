@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Simulation
 summary: '`TimeDependentSimulationAlgorithm` functie die gebruikmaakt van een Trotter-Suzuki-ontleding om een unitary-operator te benaderen waarmee de tijdgebonden Schrodinger vergelijking wordt opgelost.'
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
 input:
-  content: '(trotterStepSize: Double, trotterOrder: int)'
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: trotterStepSize
     summary: Duur van gesimuleerde tijd-ontwikkeling in één Trotter stap.
@@ -17,13 +17,14 @@ input:
     isPrimitive: true
     uid: Int
 output:
-  content: Micro soft. Quantum. simulatie. TimeDependentSimulationAlgorithm
+  content: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
   types:
   - summary: Een `TimeDependentSimulationAlgorithm` type.
     uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
-ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065245"
+metadata:
+  ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065245"
