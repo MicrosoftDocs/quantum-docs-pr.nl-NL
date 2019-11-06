@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443831"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529955"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Wat kan een kwantumcomputer doen?
 
 Wat kunnen we doen met een kwantumcomputer wat niet kan met een klassieke computer?
 
-Stel dat we een aantal problemen willen oplossen waar de hele wereld al jaren mee worstelt. Bestaande computers zouden daar miljarden jaren voor nodig hebben, terwijl een kwantumcomputer hier in dagen, uren of zelfs minuten klaar mee is. Kwantumcomputing stelt onderzoekers in staat om nieuwe katalysatoren en materialen te ontwikkelen, geneesmiddelen te verbeteren, de ontwikkeling van kunstmatige intelligentie te versnellen en essentiële vragen over de oorsprong van ons universum te beantwoorden.
+Stel dat we een aantal problemen willen oplossen waar de hele wereld al jaren mee worstelt. Bestaande computers zouden daar miljarden jaren voor nodig hebben, terwijl een kwantumcomputer hier in dagen, uren of zelfs minuten klaar mee is.
+
+Kwantumcomputing stelt onderzoekers in staat om nieuwe katalysatoren en materialen te ontwikkelen, geneesmiddelen te verbeteren, de ontwikkeling van kunstmatige intelligentie te versnellen en essentiële vragen over de oorsprong van ons universum te beantwoorden.
 
 ## <a name="quantum-simulation"></a>Kwantumsimulatie
 
@@ -29,19 +31,25 @@ Chemische moleculen zijn kwantumsystemen en kunnen daarom op deze manier worden 
 
 ## <a name="cryptography"></a>Cryptografie
 
-Misschien wel de bekendste toepassing van kwantumcomputers vinden we in de cryptografie, waar Peter Shor in 1994 liet zien dat een schaalbare kwantumcomputer elke veelgebruikte versleutelingstechniek kan achterhalen.  Klassieke cryptografie is afhankelijk van de complexiteit van bewerkingen op grote getallen, zoals het ontbinden van grote getallen in twee priemgetallen.  Kwantumcomputing maakt deze bewerkingen theoretisch mogelijk (via het algoritme van Shor). Hoewel de implementatie van dit algoritme fysiek niet mogelijk is met de huidige schaal van kwantumhardware, heeft het algoritme de ontwikkeling gestimuleerd van kwantumbestendige algoritmen voor future-proof gegevensbeveiliging, met inbegrip van nieuwe kwantumalgoritmen voor versleuteling en distributie van cryptografische sleutels.  Hier bij Microsoft beschikken we over een team dat wereldwijd toonaangevend is als het gaat om post-kwantum cryptografie en beveiliging en dat zich exclusief bezighoudt met het ontwikkelen van kwantumbestendige algoritmen. 
+Misschien wel de bekendste toepassing van kwantumcomputers vinden we in de cryptografie, waar Peter Shor in 1994 liet zien dat een schaalbare kwantumcomputer elke veelgebruikte versleutelingstechniek kan achterhalen.  Klassieke cryptografie is afhankelijk van de complexiteit van bewerkingen op grote getallen, zoals het ontbinden van grote getallen in twee priemgetallen.
+
+Kwantumcomputing maakt deze bewerkingen theoretisch mogelijk (via het algoritme van Shor). Hoewel de implementatie van dit algoritme fysiek niet mogelijk is met de huidige schaal van kwantumhardware, heeft het algoritme de ontwikkeling gestimuleerd van kwantumbestendige algoritmen voor future-proof gegevensbeveiliging, met inbegrip van nieuwe kwantumalgoritmen voor versleuteling en distributie van cryptografische sleutels.
+
+Hier bij Microsoft beschikken we over een team dat wereldwijd toonaangevend is als het gaat om post-kwantum cryptografie en beveiliging en dat zich exclusief bezighoudt met het ontwikkelen van kwantumbestendige algoritmen.
 
 ## <a name="optimization"></a>Optimalisatie
 
-Optimalisatie is de taak van het zoeken binnen een hoog-dimensionale ruimte naar een echt goede oplossing die een bepaalde kostenfunctie minimaliseert.   Op een kwantumcomputer kunnen we optimalisatiealgoritmen versnellen, zodat er oplossingen kunnen worden gevonden die anders niet mogelijk waren. Toepassingen variëren van transport en logistiek tot gezondheidszorg, diagnostiek en materiaalwetenschappen. Er kan sprake zijn van een aanzienlijke impact op de manier waarop deze branches efficiënter kunnen werken. 
+Optimalisatie is de taak van het zoeken binnen een hoog-dimensionale ruimte naar een oplossing die een bepaalde kostenfunctie minimaliseert.   Op een kwantumcomputer kunnen we optimalisatiealgoritmen versnellen, zodat er oplossingen kunnen worden gevonden die anders niet mogelijk waren. Toepassingen variëren van transport en logistiek tot gezondheidszorg, diagnostiek en materiaalwetenschappen. Er kan sprake zijn van een aanzienlijke impact op de manier waarop deze branches efficiënter kunnen werken.
 
-Optimalisatie met kwantumcomputing biedt ons de mogelijkheid om transport en logistiek te innoveren op een manier die niet mogelijk is met de klassieke systemen van dit moment. Het optimaliseren van de verkeersstroom kan opstoppingen verminderen.  Naast het plannen van routes, zijn er kansen voor de toewijzing van gates voor vliegtuigen, pakketbezorging, taakplanning en meer.  Met baanbrekende ontwikkelingen in materiaalwetenschappen krijgen we de beschikking over nieuwe vormen van energie, accu's met een grotere capaciteit, lichter en sterker materiaal. 
+Optimalisatie met kwantumcomputing biedt ons de mogelijkheid om transport en logistiek te innoveren op een manier die niet mogelijk is met de klassieke systemen van dit moment.
+
+Het optimaliseren van de verkeersstroom kan opstoppingen verminderen.  Naast het plannen van routes, zijn er kansen voor de toewijzing van gates voor vliegtuigen, pakketbezorging, taakplanning en meer. Met baanbrekende ontwikkelingen in materiaalwetenschappen krijgen we de beschikking over nieuwe vormen van energie, accu's met een grotere capaciteit, lichter en sterker materiaal.
 
 ## <a name="machine-learning"></a>Machine learning
 
-Een groot aantal numerieke berekeningen in klassieke computing bestaat voornamelijk uit het oplossen van stelsels of systemen van lineaire vergelijkingen. Dit geldt met name voor machine learning, waarbij het overgrote deel van de rekenkracht wordt gebruikt voor het berekenen van de inverse van enorme matrices.
+Een groot aantal numerieke berekeningen bij klassieke computing bestaat voornamelijk uit het oplossen van stelsels van lineaire vergelijkingen. Dit is met name zo op het gebied van machine learning, waarbij de meeste rekenkosten voortvloeien uit het berekenen van de inverse van enorme matrices.
 
-Gelukkig bestaat er een kwantumalgoritme waarmee we het stelsel bij benadering exponentieel sneller kunnen oplossen dan met een klassieke computer. Hiermee wordt het mogelijk om problemen die de oplossing van een stelsel van lineaire vergelijkingen vereisen, veel sneller te verhelpen.
+Gelukkig bestaat er een kwantumalgoritme waarmee we het stelsel bij benadering kunnen oplossen op een manier die exponentieel sneller is dan met een klassieke computer. Dit algoritme maakt het mogelijk om problemen die de oplossing van een stelsel van lineaire vergelijkingen vereisen, veel sneller te verwerken.
 
 Oplossingen voor problemen op deze gebieden helpen bij het vinden van een oplossing voor de energiecrisis, klimaatverandering, voedselschaarste, en persoonlijke en nauwkeurige medische diagnose.
 

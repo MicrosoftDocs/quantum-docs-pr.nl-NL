@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443916"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462832"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Quickstart: Een kwantumgenerator voor willekeurige getallen implementeren in Q#
 Een eenvoudig voorbeeld van een kwantumalgoritme dat is geschreven in Q# is een kwantumgenerator voor willekeurige getallen. Dit algoritme maakt gebruik van de aard van kwantummechanismen om een willekeurig getal te produceren. 
@@ -69,4 +69,4 @@ We kunnen deze voorstelling gebruiken om te visualiseren wat de code doet:
 
 <img src="./Measurement2.svg" width="450">
 
-Aangezien het resultaat van de meting volledig willekeurig is, hebben we een willekeurige bit verkregen. We kunnen deze functie meerdere keren aanroepen om gehele getallen te maken. Als we de functie bijvoorbeeld drie keer aanroepen om drie willekeurige bits te verkrijgen, kunnen we willekeurige 3-bits getallen maken (dat wil zeggen, een willekeurig getal tussen 0 en 7).
+Aangezien het resultaat van de meting volledig willekeurig is, hebben we een willekeurige bit verkregen. We kunnen deze bewerking meerdere keren aanroepen om gehele getallen te maken. Als we de bewerking bijvoorbeeld drie keer aanroepen om drie willekeurige bits te verkrijgen, kunnen we willekeurige 3-bits getallen maken (dat wil zeggen, een willekeurig getal tussen 0 en 7).

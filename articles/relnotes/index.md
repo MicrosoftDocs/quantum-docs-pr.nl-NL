@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958876"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463335"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-0101911307"></a>Versie 0.10.1911.307
+
+*Releasedatum: 1 november 2019*
+
+Deze release omvat het volgende:
+
+- Updates voor Visual Studio Code en Visual Studio-extensies die het mogelijk maken de taalserver als zelfstandig uitvoerbaar bestand te implementeren, waardoor de versieafhankelijkheid van de .NET Core SDK wordt geëlimineerd  
+- Migratie naar .NET Core 3.0
+- Wijziging aan Microsoft.Quantum.Simulation.Core.IOperationFactory die fouten veroorzaakt met de introductie van een nieuwe `Fail`-methode. Dit heeft alleen betrekking op aangepaste simulatoren die SimulatorBase niet uitbreiden. [Bekijk de pull-aanvraag op GitHub](https://github.com/microsoft/qsharp-runtime/pull/59) voor meer informatie.
+- Nieuwe ondersteuning voor afgeschafte kenmerken
+
+Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0919093002"></a>Versie 0.9.1909.3002
 
@@ -448,7 +461,7 @@ In deze release is een aantal fouten opgelost die zijn gemeld door de community.
 #### <a name="hardware-and-software-requirements"></a>Hardware-en software vereisten
 
 - Om de simulator in de Quantum Development Kit uit te voeren, is een 64-bits installatie van Microsoft Windows vereist.
-- De kwantumsimulator van Microsoft, geïnstalleerd met de Quantum Development Kit, maakt gebruik van Advance Vector Extensions (AVX) en vereist een CPU-met AVX-functionaliteit. Intel-processors die zijn verzonden in Q1 van 2011 (Sandy Bridge) of later ondersteunen AVX. We evalueren ondersteuning voor eerdere CPU's en kondigen mogelijk later details aan.
+- De kwantumsimulator van Microsoft, geïnstalleerd met de Quantum Development Kit, maakt gebruik van Advanced Vector Extensions (AVX) en vereist een CPU met AVX-functionaliteit. Intel-processors die zijn verzonden in Q1 van 2011 (Sandy Bridge) of later ondersteunen AVX. We evalueren ondersteuning voor eerdere CPU's en kondigen mogelijk later details aan.
 
 #### <a name="project-creation"></a>Een project maken
 

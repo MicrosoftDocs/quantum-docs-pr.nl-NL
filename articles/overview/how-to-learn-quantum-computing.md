@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444103"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529958"
 ---
 # <a name="how-to-learn-quantum-computing"></a>Hoe leer ik kwantumcomputing?
 
@@ -29,7 +29,7 @@ Deze concepten geven u een goede inleiding tot de fundamentele kennis die u nodi
 
 * [Eenvoudige kwantummechanica](xref:microsoft.quantum.concepts.intro): Zonet hebben we gezegd dat u geen kwantumfysica hoeft te kennen om met coderen te beginnen (en dat is waar!). Sommige basisconcepten van de kwantummechanica en haar wiskundige notatie zijn echter handig om kwantumprogrammeren te kunnen begrijpen.
 
-* **Lineaire algebra (vectoren en matrices)** : Bij het kwantumrekenen worden kwantumtoestanden voorgesteld door vectoren, waarbij kwantumbewerkingen als lineaire transformaties op deze vectoren worden toegepast.  Dit is een [zelfstudie over een Jupyter-notebook over lineaire algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  In de concepthandleiding over [vectoren en matrices](xref:microsoft.quantum.concepts.vectors) kunt u hier meer over lezen.
+* **Lineaire algebra (vectoren en matrices)** : Bij het kwantumrekenen worden kwantumtoestanden voorgesteld door vectoren, waarbij kwantumbewerkingen als lineaire transformaties op deze vectoren worden toegepast.  Dit is een [zelfstudie over een Jupyter-notebook over lineaire algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  In de concepthandleiding over [vectoren en matrices](xref:microsoft.quantum.concepts.vectors) kunt u meer lezen over lineaire algebra.
 
 * **Complexe wiskundige berekeningen**: De coëfficiënten van de vectoren van kwantumtoestanden zijn complexe getallen. Een aantal standaardconcepten van het kwantumrekenen is zonder complexe getallen te begrijpen, maar u komt niet ver als u ze niet in uw kwantumgereedschapskist opneemt.  Dit is een [zelfstudie over een Jupyter-notebook over complexe wiskundige berekeningen](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic) waarin u wat algemene informatie krijgt die vereist is voor het werken met kwantumcomputing. 
 
@@ -45,8 +45,8 @@ Misschien wilt u meer weten over de theorie van de kwantummechanica en kwantumre
 
 * Begin met de handleiding over [concepten van het kwantumrekenen](xref:microsoft.quantum.concepts.intro) (Engelstalig), een verzameling basisconcepten voor kwantumrekenen.
 * _Learn Quantum Computing with Python and Q#_ (Sarah C. Kaiser en Christopher E. Granade (Engelstalig)) biedt een uitstekende inleiding voor mensen met geen of weinig kennis van kwantummechanica maar wel enige programmeerervaring.
-* _Quantum Computation and Quantum Information_ (Michael A. Nielsen, Isaac L. Chuang (Engelstalig)) is de meest geciteerde tekst op het gebied van kwantumrekenen. Het wordt beschouwd als de standaardtekst over dit onderwerp. Voor dit boek is een minimale voorkennis van kwantummechanica en informatica vereist. Het is een zeer goede keuze voor lezers die op zoek zijn naar een rigoureuze inleiding tot het onderwerp en voor diegenen die referenties naar geavanceerde concepten zoeken.
-* MIT OpenCourseWare heeft een uitstekende [online cursus](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) (Engelstalig), verzorgd door Allan Adams, om de basisbeginselen van de kwantummechanica te leren. Perfect voor diegenen die meer willen weten over de onderliggende natuurkunde.
+* _Quantum Computation and Quantum Information_ (Michael A. Nielsen, Isaac L. Chuang (Engelstalig)) is de meest geciteerde tekst op het gebied van kwantumrekenen en wordt gezien als het standaardwerk over dit onderwerp. Voor dit boek is een minimale voorkennis van kwantummechanica en informatica vereist. Het is een zeer goede keuze voor lezers die op zoek zijn naar een rigoureuze inleiding tot het onderwerp en voor lezers die referenties naar geavanceerde concepten zoeken.
+* MIT OpenCourseWare heeft een uitstekende [online cursus](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) (Engelstalig), verzorgd door Allan Adams, om de basisbeginselen van de kwantummechanica te leren. Perfect voor ontwikkelaars die meer willen weten over de onderliggende natuurkunde.
 
 ## <a name="join-the-quantum-community"></a>Neem deel aan de kwantumcommunity
 
