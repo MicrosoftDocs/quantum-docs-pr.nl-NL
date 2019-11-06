@@ -30,9 +30,10 @@ output:
   - summary: Als `true`, de procedure is geslaagd en de kopie van de hogere kwaliteit moet worden geaccepteerd. Als `false`, kan de procedure niet worden uitgevoerd en moet de status van het REGI ster worden beschouwd als niet-gedefinieerd.
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226723"
+metadata:
+  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226723"
