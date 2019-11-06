@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.intrinsic.exp
-name: Geldig
+name: Exp
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
@@ -10,14 +10,14 @@ summary: >-
   \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} waarbij $P _I $ het $i $ TH-element van `paulis`is en waar $N = $`Length(paulis)`.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
-  content: '(PAULIS: Pauli [], theta: Double, qubits: Qubit [])'
+  content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
   types:
-  - name: PAULIS
+  - name: paulis
     summary: Matrix van Pauli-waarden met één Qubit die de tensor-product factoren op elke qubit aangeven.
     isArray: true
     isPrimitive: true
     uid: Pauli
-  - name: letter
+  - name: theta
     summary: Hoek over de opgegeven multi-Qubit Pauli-operator waarmee het doel register moet worden gedraaid.
     isPrimitive: true
     uid: Double
@@ -27,16 +27,17 @@ input:
     isPrimitive: true
     uid: Qubit
 output:
-  content: Eenheid
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067319"
+metadata:
+  ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067319"
