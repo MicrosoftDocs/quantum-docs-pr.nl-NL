@@ -10,18 +10,18 @@ summary: >-
   Op basis van een matrix $x $ van het type `Double[]`, wordt hiermee een matrix geretourneerd waarin alle elementen worden gedeeld door de $p $-norm $\|x\|_p $.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
-  content: '(p: Double, matrix: Double [])'
+  content: '(p : Double, array : Double[])'
   types:
-  - name: L
+  - name: p
     summary: De exponent $p $ in de $p $-norm.
     isPrimitive: true
     uid: Double
-  - name: matrix
+  - name: array
     isArray: true
     isPrimitive: true
     uid: Double
 output:
-  content: Dubbele []
+  content: Double[]
   types:
   - summary: De matrix $x $ genormaliseerd door de $p $-norm $\|x\|_p $.
     isArray: true
@@ -29,9 +29,10 @@ output:
     uid: Double
 seeAlso:
 - pnorm
-ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067285"
+metadata:
+  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067285"
