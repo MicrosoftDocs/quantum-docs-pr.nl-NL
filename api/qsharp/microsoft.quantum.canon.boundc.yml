@@ -8,7 +8,7 @@ summary: >-
 
   De modificator `C` geeft aan dat alle bewerkingen in de matrix kunnen worden bestuurd.
 examples: >-
-  The following are equivalent:
+  De volgende zijn gelijkwaardig:
 
 
   ```qsharp
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  and
+  en de
 
 
   ```qsharp
@@ -30,9 +30,9 @@ examples: >-
   ```
 syntax: "function BoundC (operations : ('T => Unit is Ctl)[]) : ('T => Unit is Ctl)"
 input:
-  content: "(bewerkingen: ('T = > unit is CTL) [])"
+  content: "(operations : ('T => Unit is Ctl)[])"
   types:
-  - name: bewerkingen
+  - name: operations
     summary: Een reeks bewerkingen die moeten worden uitgevoerd op een gegeven invoer.
     isArray: true
     isOperation: true
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
 output:
-  content: ('T = > unit is CTL)
+  content: ('T => Unit is Ctl)
   types:
   - summary: Een nieuwe bewerking waarbij elke opgegeven bewerking wordt uitgevoerd in de volg orde van de invoer.
     isOperation: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: Het doel waarop elk van de bewerkingen in de matrix Act.
 seeAlso:
 - microsoft.quantum.canon.bound
-ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068169"
+metadata:
+  ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068169"

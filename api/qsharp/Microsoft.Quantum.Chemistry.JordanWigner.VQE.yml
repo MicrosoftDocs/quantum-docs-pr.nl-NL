@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.chemistry.jordanwigner.vqe
-name: Micro soft. Quantum. chemie. JordanWigner. VQE
+name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
   summary: Breidt de compacte weer gave van de Wigner coëfficiënten uit om een een-op-een-toewijzing te verkrijgen tussen deze en Pauli-voor waarden.
@@ -11,9 +11,10 @@ operations:
   summary: Maakt een schatting van de energie van het molecuul door het opsommen van de energie die door de individuele Jordanië-Wigner-voor waarden is bijgedragen.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
   summary: Berekent de energie die is gekoppeld aan een bepaalde Hamiltonian-term van Jordanië-Wigner
-ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057254"
+metadata:
+  ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057254"
