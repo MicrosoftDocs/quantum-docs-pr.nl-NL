@@ -1,27 +1,28 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.math.max
-name: Max.
+name: Max
 type: function
 namespace: Microsoft.Quantum.Math
 summary: Met een matrix van gehele getallen wordt het grootste element geretourneerd.
 syntax: 'function Max (values : Int[]) : Int'
 input:
-  content: '(waarden: int [])'
+  content: '(values : Int[])'
   types:
-  - name: gegevens
+  - name: values
     summary: Een matrix waarvan het maximum moet worden ingesteld.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
-  content: integer
+  content: Int
   types:
   - summary: Het grootste element van `values`.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 2e5a33b9b476e0428d5afc80957bb2524cc3dd6a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066503"
+metadata:
+  ms.openlocfilehash: 2e5a33b9b476e0428d5afc80957bb2524cc3dd6a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066503"
