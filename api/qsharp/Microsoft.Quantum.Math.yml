@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.math
-name: Micro soft. Quantum. math
+name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
   summary: Retourneert de absolute waarde van een complex getal van het type `Complex`.
@@ -252,9 +252,10 @@ operations:
   summary: Retourneert een wille keurig reëel getal in het interval dat groter is dan of gelijk is aan nul en kleiner dan een.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Retourneert een van de Pauli-Opera tors (single-Qubit) op wille keurige wijze.
-ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056306"
+metadata:
+  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056306"

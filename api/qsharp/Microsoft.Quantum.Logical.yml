@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
-name: Micro soft. Quantum. Logical
+name: Microsoft.Quantum.Logical
 summary: " # <a name=\"summary\"></a>Samenvatting\n Bevat functies voor het werken met logische expressies en Booleaanse logica."
 functions:
 - uid: microsoft.quantum.logical.and
@@ -65,9 +65,10 @@ functions:
   summary: Retourneert de Booleaanse schei ding van twee waarden.
 - uid: microsoft.quantum.logical.xor
   summary: Retourneert de enige Booleaanse schei ding van twee waarden.
-ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056279"
+metadata:
+  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056279"
