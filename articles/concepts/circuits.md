@@ -1,6 +1,6 @@
 ---
 title: Quantum circuits | Microsoft Docs
-description: Quantum circuits
+description: Kwantumcircuits
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
@@ -72,7 +72,7 @@ Dit betekent dat u een Intuition voor de gegevens stroom kunt verkrijgen voor ee
 
 ## <a name="controlled-gates"></a>Bewaakte poorten
 De andere constructie die is ingebouwd in multi-Qubit Quantum circuit diagrammen is Control.
-De actie van een Quantum die is geïsoleerd als poort, heeft $ \Lambda (G) $, waarbij de waarde van één Qubit de toepassing van $G $, kan worden geïnterpreteerd door het volgende voor beeld van een product status invoer $ \Lambda (G) (\alpha \ket{0} + \beta \ket @no__t_ te bekijken. 1_) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
+De actie van een Quantum die wordt geïsoleerd als poort, heeft $ \Lambda (G) $, waarbij de waarde van één Qubit de toepassing van $G $, kan worden begrepen door te kijken naar het volgende voor beeld van een product status invoer $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
 Dat wil zeggen dat de bewaakte Gate $G $ toepast op het REGI ster met $ \psi $ als en alleen als het besturings element Qubit de waarde $1 $ heeft.
 Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diagrammen als
 
