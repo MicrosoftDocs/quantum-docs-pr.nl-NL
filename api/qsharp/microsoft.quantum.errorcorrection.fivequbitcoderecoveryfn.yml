@@ -7,7 +7,7 @@ summary: 'Retourneert een functie die fout Syndrome-metingen toewijst aan de jui
 remarks: >-
   Door alle fouten van gewicht $1 $ te herhalen, krijgen we $3 \ Times 5 = 15 $ mogelijk niet-trivial Syndromes.
 
-  Samen met de identiteit wordt een tabel met fouten en bijbehorende Syndrome gebouwd. Voor de 5 Qubit-code wordt deze tabel gegeven door: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ met $Y _I $ verkregen door de $X _I $ en $Z _I $ Syndromes toe te voegen. Houd er rekening mee dat de volg orde in het herstel van de tabel zoek opdracht wordt gegeven door de bitvectors te converteren naar gehele getallen (met behulp van little endian).
+  Samen met de identiteit wordt een tabel met fouten en bijbehorende Syndrome gebouwd. Voor de 5 Qubit-code wordt deze tabel gegeven door: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ met $Y _i $ verkregen door de $X _i $ en $Z _i $ Syndromes toe te voegen. Houd er rekening mee dat de volg orde in het herstel van de tabel zoek opdracht wordt gegeven door de bitvectors te converteren naar gehele getallen (met behulp van little endian).
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()

@@ -7,17 +7,17 @@ summary: >-
   Hiermee wordt een Pauli-rotatie toegepast op een matrix van qubits.
 
 
-  Hiermee past u de unitary-bewerking met vermenigvuldiging toe $U $ waarmee rotaties worden uitgevoerd op basis van hoek $ \theta_j $ over een Pauli-operator van één Qubit $P $ wanneer wordt bepaald door de $n $-Qubit-nummer status $ \ket{j} $.
+  Hiermee past u de unitary-bewerking met vermenigvuldiging toe $U $ waarmee rotaties worden uitgevoerd op basis van hoek $ \ theta_j $ over een Pauli-$P operator van één Qubit als deze wordt bepaald door de $n $-Qubit-nummer status $ \ket{j} $.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
-remarks: '`coefficients` wordt aangevuld met elementen $ \theta_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.'
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+remarks: '`coefficients` wordt aangevuld met elementen $ \ theta_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Matrix van Maxi maal $2 ^ n $ coëfficiënten $ \theta_j $. De $j $ th indexeert de nummer status $ \ket{j} $ gecodeerd in de indeling little endian.
+    summary: Matrix van Maxi maal $2 ^ n $ coëfficiënten $ \ theta_j $. De $j $ th indexeert de nummer status $ \ket{j} $ gecodeerd in de indeling little endian.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -29,7 +29,7 @@ input:
     summary: $n $-Qubit-controle register dat nummer Staten $ \ket{j} $ codeert in de indeling little endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Eén Qubit-REGI ster dat wordt geroteerd door $e ^ {i P \theta_j} $.
+    summary: Een single Qubit-REGI ster dat wordt geroteerd door $e ^ {i P \ theta_j} $.
     isPrimitive: true
     uid: Qubit
 output:

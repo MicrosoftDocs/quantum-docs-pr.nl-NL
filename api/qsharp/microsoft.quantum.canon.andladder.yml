@@ -7,7 +7,7 @@ summary: >-
   Hiermee wordt een beheerde ' en ' ladder ' uitgevoerd op de doel-qubits.
 
 
-  Dit geldt voor een unitary die wordt gegeven door de volgende kaart op reken kundige basis vectoren: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots x\_{n-1}} , \end{align} $ $ waarbij $ \ket{x\_1, \dots, x\_n} $ verwijst naar de reken kundige basis status van `controls`en waarbij $ \ket{y\_1, \dots, y\_{n-1}} $ verwijst naar de reken kundige basis status van `targets`.
+  Hiermee wordt een unitary toegepast die wordt gegeven door de volgende kaart op reken kundige basis vectoren: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots x\_{n-1}} , \end{align} $ $ waarbij $ \ket{x\_1, \dots, x\_n} $ verwijst naar de reken kundige basis status van `controls`en waarbij $ \ket{y\_1, \dots, y\_{n-1}} $ verwijst naar de reken kundige basis status van `targets`.
 remarks: >-
   - Wordt gebruikt als onderdeel van <xref:microsoft.quantum.canon.applymulticontrolledc> en <xref:microsoft.quantum.canon.applymulticontrolledca>.
 

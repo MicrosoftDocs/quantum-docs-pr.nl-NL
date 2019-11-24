@@ -7,13 +7,13 @@ summary: >-
   Retourneert een bewerking die de opgegeven Quantum status voorbereidt.
 
 
-  Met de geretourneerde bewerking $U $ wordt een wille keurige Quantum status $ \ket{\psi} $ voor bereid met positieve coëfficiënten $ \alpha_j\ge $0 van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+  De geretourneerde bewerking $U $ een wille keurige Quantum status $ \ket{\psi} $ voorbereidt met positieve coëfficiënten $ \ alpha_j \ge $0 van de $n $-Qubit reken kundige status $ \ket{0...0} $.
 
 
-  De actie van U op een pas toegewezen REGI ster wordt gegeven door $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}.
+  De actie van U op een nieuw toegewezen REGI ster wordt gegeven door $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Negatieve invoer coëfficiënten $ \alpha_j < $0 worden behandeld als positief met waarde $ | \alpha_j | $. `coefficients` wordt aangevuld met elementen $ \alpha_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.
+remarks: Negatieve invoer coëfficiënten $ \ alpha_j < $0 worden beschouwd als positief met de waarde $ | \ alpha_j | $. `coefficients` wordt aangevuld met elementen $ \ alpha_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.
 examples: >-
   In het volgende code fragment wordt de Quantum status $ \ket{\psi} = \ wortel {1/8} \ Ket{0}+ \ SQRT {7/8} \ Ket{2}$ in de Qubit `qubitsLE`registreren.
 
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: Matrix van Maxi maal $2 ^ n $ coëfficiënten $ \alpha_j $. De $j $ th indexeert de nummer status $ \ket{j} $ gecodeerd in de indeling little endian.
+    summary: Matrix van Maxi maal $2 ^ n $ coëfficiënten $ \ alpha_j $. De $j $ th indexeert de nummer status $ \ket{j} $ gecodeerd in de indeling little endian.
     isArray: true
     isPrimitive: true
     uid: Double

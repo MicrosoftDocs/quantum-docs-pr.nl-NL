@@ -17,7 +17,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ met binaire weer gave $ (p_{62}\,p_{61}\,\dots\,p_0) $, waarbij $p _I = $0 als `paulis[i]` `PauliI` of `PauliZ` en waar $p _I = $1 als `paulis[i]` `PauliX` of `PauliY`.
+  - summary: Een geheel getal $x $ met binaire weer gave $ (p_{62}\,p_{61}\,\dots\,p_0) $, waarbij $p _i = $0 als `paulis[i]` `PauliI` of `PauliZ` en waar $p _i = $1 als `paulis[i]` `PauliX` of `PauliY`is.
     isPrimitive: true
     uid: Int
 seeAlso:

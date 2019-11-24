@@ -7,7 +7,7 @@ summary: >-
   Past een matrix van bewerkingen toe die worden beheerd door een matrix van aantal statussen.
 
 
-  Dat wil zeggen, een unitary-bewerking met vermenigvuldiging Toep assen $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status van $n $-Qubit Number $ \ket{j} $ wordt bepaald.
+  Dat wil zeggen, een unitary-bewerking met vermenigvuldiging Toep assen $U $ waarmee een unitary $V _j $ wordt toegepast wanneer wordt bepaald door $n $-Qubit Number status $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -36,7 +36,7 @@ input:
     summary: $n $-Qubit-controle register dat nummer Staten $ \ket{j} $ codeert in de indeling little endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Generic Qubit-REGI ster dat $V _J $ treedt op.
+    summary: Generic Qubit-REGI ster dat $V _j $ treedt op.
     uid: "'T"
     isLocal: true
 output:

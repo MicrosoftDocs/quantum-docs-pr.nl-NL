@@ -7,7 +7,7 @@ summary: >-
   Hiermee wordt bevestigd dat de kans op een specifieke status van een Quantum register de verwachte waarde heeft.
 
 
-  Gezien een $n $-Qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, bevestiging dat de kans $ | \alpha_j | ^ 2 $ van de status $ \ket{j} $ geïndexeerd door $j $ de verwachte waarde heeft.
+  Gezien een $n $-Qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, bevestigt u dat de kans $ | \ alpha_j | ^ 2 $ van de status $ \ket{j} $ geïndexeerd door $j $ de verwachte waarde heeft.
 examples: >-
   Stel dat met de `qubits`-registratie een Qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ Ket{0}+ \ SQRT {7/8} \ Ket{6}$ in de indeling little endian wordt gecodeerd.
 
@@ -26,7 +26,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: De verwachte waarde van $ | \alpha_j | ^ 2 $.
+    summary: De verwachte waarde van $ | \ alpha_j | ^ 2 $.
     isPrimitive: true
     uid: Double
   - name: qubits

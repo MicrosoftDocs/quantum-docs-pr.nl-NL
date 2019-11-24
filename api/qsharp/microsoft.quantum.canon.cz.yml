@@ -7,7 +7,7 @@ summary: >-
   Past de Controlled-Z (CZ)-poort toe aan een paar qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $ waar rijen en kolommen zijn ingedeeld als in de Quantum begrippen-hand leiding.
 remarks: >-
   Gelijk aan:
 
