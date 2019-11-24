@@ -7,7 +7,7 @@ summary: >-
   Hiermee wordt de pariteit van een matrix met qubits berekend in een doel-Qubit.
 
 
-  Als de matrix in eerste instantie de status $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{target}}} $ heeft, wordt de uiteindelijke status gegeven door $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{target}}} $.
+  Als de matrix in eerste instantie de status $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\Text{target}}} $ heeft, wordt de uiteindelijke status gegeven door $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{target}}} $.
 remarks: >-
   De volgende zijn gelijkwaardig:
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  en de
+  and
 
 
   ```qsharp

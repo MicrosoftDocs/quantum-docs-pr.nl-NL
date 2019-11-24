@@ -7,7 +7,7 @@ summary: >-
   Bereidt een Qubit voor in de gemengde status maximally.
 
 
-  De opgegeven Qubit wordt voor bereid met de status $ \boldone/$2 door het depolarizing-kanaal $ $ \begin{align} \Omega (\rho) \mathrel{toe te passen: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{align} $ $ waarbij $ \sigma\_i $ de operator $i $ Pauli is en waarbij $ \rho $ een dichtheids operator is die een gemengde staat vertegenwoordigt.
+  De opgegeven Qubit wordt voor bereid in de status $ \boldone/$2 door het depolarizing-kanaal $ $ \begin{align} \Omega (\rho) \mathrel{toe te passen: =} \frac{1}{4} \ sum_ {\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{align} $ $ waarbij $ \sigma\_i $ de $i $ th Pauli-operator is, waarbij $ \rho $ een dichtheids operator is die een gemengde staat vertegenwoordigt.
 remarks: >-
   De gemengde status $ \boldone/$2, waarmee het resultaat van het Toep assen van deze bewerking wordt impliciet beschreven in een status, beschrijft een verwachte waarde voor wille keurige keuzes die zijn gemaakt in deze bewerking.
 

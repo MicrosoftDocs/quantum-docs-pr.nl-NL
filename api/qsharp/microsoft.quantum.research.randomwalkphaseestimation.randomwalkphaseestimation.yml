@@ -8,7 +8,7 @@ remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Schatting van iteratieve fase en Eigenstates
 
 
-  Over het algemeen hoeft het invoer register `eigenstate` geen eigenstate $ \ket{\phi} $ van $U $ zijn, maar dit kan een superpositie zijn dan eigenstates. Stel dat de invoer status wordt gegeven door \begin{align} \ket{\psi} & = \sum\_{j} \alpha\_j \ket{\phi\_j}, \end{align} waarbij $\{\alpha\_j\}$ complexe coëfficiënten is, zoals $ \sum\_j | \alpha @no__ t_7_ j | ^ 2 = $1 en waarbij $U \ket{\phi\_j} = \phi\_j\ket {\ Phi\_j} $.
+  Over het algemeen hoeft het invoer register `eigenstate` geen eigenstate $ \ket{\phi} $ van $U $ zijn, maar dit kan een superpositie zijn dan eigenstates. Stel dat de invoer status wordt gegeven door \begin{align} \ket{\psi} & = \sum\_{j} \alpha\_j \ket{\phi\_j}, \end{align} waarbij $\{\alpha\_j\}$ complexe coëfficiënten is, zoals $ \sum\_j | \alpha\_j | ^ 2 = $1 en waar $U \ket{\phi\_j} = \phi\_j\ket {\ Phi\_j} $.
 
 
   Vervolgens wordt de schatting van de iteratieve fase geconvergeerd naar één eigenstate, zoals beschreven in de [ontwikkel handleiding](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).

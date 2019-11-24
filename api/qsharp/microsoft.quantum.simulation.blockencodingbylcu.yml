@@ -7,7 +7,7 @@ summary: >-
   Codeert een operator van belang in een `BlockEncoding`.
 
 
-  Hiermee wordt een `BlockEncoding` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een bepaalde operator wordt gecodeerd $H = \sum_{j} | \alpha_j | U_j $ of interest is een lineaire combi natie van unitaries. $P $ is doorgaans een status voorbereiding unitary, zodat $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ en $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+  Hiermee wordt een `BlockEncoding` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een deel van de operator $H wordt gecodeerd = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. $P $ is doorgaans een status voorbereiding unitary, zodat $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ en $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 remarks: Deze `BlockEncoding`-implementatie geeft de eigenschappen van een `BlockEncodingReflection`.
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:

@@ -46,7 +46,7 @@ input:
 output:
   content: Double
   types:
-  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de onzuivere binomiale Estimator $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, waarbij $n\_{\ pijl-omhoog} $ is het aantal `Zero` resultaten dat is waargenomen.
+  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de niet-verwerkte binomiale Estimator $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, waarbij $n\_{\uparrow} $ is het aantal `Zero` resultaten dat is waargenomen.
     isPrimitive: true
     uid: Double
 metadata:

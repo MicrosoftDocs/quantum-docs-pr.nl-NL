@@ -7,7 +7,7 @@ summary: >-
   Past de Controlled-X (CX)-poort toe op een paar qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $ waar rijen en kolommen zijn ingedeeld als in de hand leiding over de Quantum begrippen.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}, $ $ waar rijen en kolommen zijn ingedeeld als in de Quantum begrippen-hand leiding.
 remarks: >-
   Gelijk aan:
 

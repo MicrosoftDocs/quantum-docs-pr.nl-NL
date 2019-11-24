@@ -14,7 +14,7 @@ summary: >-
 
   - De systeem register $s $ waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
 remarks: >-
-  Deze Oracle gedefinieerd door $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots $ $ reageert op de status op basis van de berekening $ \ket{0}\_{f} \ket{0}\_s $ om de doel status $ \ket{\psi}\_s $ met amplitude $ \lambda $ te maken in de basis die is gemarkeerd door $ \ket{1}\_f $.
+  Deze Oracle gedefinieerd door $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ reageert op de status op basis van de berekening $ \ket{0}\_{f} \ket{0}\_s $ om de doel status $ \ket{\psi}\_s $ met amplitude $ \lambda $ te maken in de basis die is gemarkeerd door $ \ket{1}\_f $.
 
   De eerste para meter is een index voor het Qubit-REGI ster van $ \ket{0}\_f $. De tweede para meter omvat beide registers.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);

@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
 
-  Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen, waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit `carry`.
+  Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit-`carry`.
 remarks: Deze bewerking heeft dezelfde functionaliteit als RippleCarryAdderD, maar gebruikt slechts één ancilla Qubit in plaats van $n $.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-

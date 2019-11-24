@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coëfficiënten van de zelfs polynoom als een dubbele matrix, dat wil zeggen de matrix $ [a_0, a_1,..., a_k] $ voor de even polynoom $P (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2.000} $.
+    summary: 'Coëfficiënten van de zelfs polynoom als een dubbele matrix, dat wil zeggen: de matrix $ [a_0, a_1,..., a_k] $ voor de even polynomiale $P (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2.000} $.'
     isArray: true
     isPrimitive: true
     uid: Double

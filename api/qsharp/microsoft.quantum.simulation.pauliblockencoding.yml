@@ -7,8 +7,8 @@ summary: >-
   Hiermee maakt u een Block-encoding-unitary voor een Hamiltonian.
 
 
-  De Hamiltonian $H = \sum_{j}\alpha_j P_j $ wordt beschreven door een som van Pauli-voor waarden $P _J $, elk met een real-factor $ \alpha_j $.
-remarks: Dit wordt verkregen door de status $ \ sum_ {j} \ SQRT {\ alpha_j/\ Alfa} \ Ket {j} $ voor te bereiden en te ontzeggen en een met vermenigvuldiging beheerde unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> en <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>te maken.
+  De Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ wordt beschreven door een som van Pauli-voor waarden $P _j $, elk met een real-efficient $ \ alpha_j $.
+remarks: Dit wordt verkregen door de status van $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ voor te bereiden en ontoegankelijk te maken en een met vermenigvuldiging unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> en <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>te bouwen.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Eerste para meter
 
 
-      De One-norm van coëfficiënten $ \alpha = \sum_{j} | \alpha_j | $.
+      De enige norm van coëfficiënten $ \alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Tweede para meter

@@ -7,7 +7,7 @@ summary: >-
   Hiermee wordt de SWAP-Gate toegepast op een paar qubits.
 
 
-  \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+  \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
   waar rijen en kolommen worden besteld als in de Quantum begrippen-hand leiding.

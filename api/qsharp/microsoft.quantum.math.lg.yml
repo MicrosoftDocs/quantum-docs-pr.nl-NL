@@ -15,7 +15,7 @@ input:
 output:
   content: Double
   types:
-  - summary: De logaritme met grondtal 2 $y = \log_2 (x) $ zodanig dat $x = 2 ^ y $.
+  - summary: De logaritme met grondtal 2 $y = \ log_2 (x) $ zodanig dat $x = 2 ^ y $.
     isPrimitive: true
     uid: Double
 metadata:

@@ -4,7 +4,7 @@ name: MultiplexOperationsFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Past een met vermenigvuldiging beheerde unitary-bewerking toe $U $ waarmee een unitary $V _J $ wordt toegepast wanneer de status wordt bepaald door n-Qubit nummer $ \ket{j} $.
+  Past een met vermenigvuldiging beheerde unitary-bewerking toe $U $ waarmee een unitary $V _j $ wordt toegepast wanneer de waarde wordt bepaald door n-Qubit Number status $ \ket{j} $.
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -15,7 +15,7 @@ input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: Een tuple waarbij het eerste element `Int` het aantal unitaries $N $ is en het tweede element `(Int -> ('T => () is Adj + Ctl))` een functie is waarbij een geheel getal wordt gebruikt $j $ in $ [0, N-1] $ en de unitary-bewerking wordt uitgevoerd $V _J $.
+    summary: Een tuple waarbij het eerste element `Int` het aantal unitaries $N $ is en het tweede element `(Int -> ('T => () is Adj + Ctl))` een functie is waarbij een geheel getal wordt gebruikt $j $ in $ [0, N-1] $ en de unitary-bewerking wordt uitgevoerd $V _j $.
     types:
     - isPrimitive: true
       uid: Int
@@ -42,7 +42,7 @@ input:
     summary: $n $-Qubit-controle register dat nummer Staten $ \ket{j} $ codeert in de indeling little endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Generic Qubit-REGI ster dat $V _J $ treedt op.
+    summary: Generic Qubit-REGI ster dat $V _j $ treedt op.
     uid: "'T"
     isLocal: true
 output:

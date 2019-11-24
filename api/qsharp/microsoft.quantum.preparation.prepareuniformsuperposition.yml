@@ -7,11 +7,11 @@ summary: >-
   Hiermee maakt u een uniforme superpositie op status die 0 door `nIndices`versleutelen.
 
 
-  Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  In het volgende voor beeld wordt de status $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ op $3 $ qubits voor bereid.
+  In het volgende voor beeld wordt de status $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ op $3 $ qubits voor bereid.
 
 
   ```Q#
