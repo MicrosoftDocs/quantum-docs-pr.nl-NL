@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153318"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863160"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -20,6 +20,18 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-01019120501"></a>Versie 0.10.1912.0501
+
+*Releasedatum: 5 december 2019*
+
+Deze release omvat het volgende:
+
+- Nieuwe kenmerk Test voor Q#-eenheidstest. Raadpleeg [hier](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) bijgewerkte API-documentatie en [hier](xref:microsoft.quantum.techniques.testing-and-debugging) bijgewerkte handleiding voor tests en foutopsporing
+- Stack-trace toegevoegd in het geval van een fout in een Q#-programmabewerking
+- Ondersteuning voor onderbrekingspunten in Visual Studio Code door een update in de [OmniSharp C# Visual Studio Code-extensie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+
+Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01019111607"></a>Versie 0.10.1911.1607
 
@@ -205,7 +217,7 @@ Deze release omvat het volgende:
 
 - Ondersteuning toegevoegd voor Jupyter Notebook, een geweldige manier om meer te leren over Q#.  [Bekijk nieuwe Jupyter Notebook-voorbeelden en leer hoe u uw eigen Notebooks schrijft](xref:microsoft.quantum.install). 
 
-- Aritmetische toevoeging van hele getallen toegevoegd aan de Quantum Canon-bibliotheek.  Raadpleeg ook een Jupyter Notebook die [beschrijft hoe u de nieuwe toevoegingen van hele getallen gebruikt](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
+- Aritmetische toevoeging van hele getallen toegevoegd aan de Quantum Canon-bibliotheek.  Raadpleeg ook een Jupyter Notebook die [beschrijft hoe u de nieuwe toevoegingen van hele getallen gebruikt](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
 
 - Foutoplossing voor DumpRegister-probleem die door de community is gerapporteerd ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
