@@ -45,8 +45,12 @@ functions:
   summary: Een matrix van gehele getallen ophalen binnen een bepaalde interval.
 - uid: microsoft.quantum.arrays.subarray
   summary: Neemt een matrix en een lijst met locaties en produceert een nieuwe matrix die is samengesteld op basis van de elementen van de oorspronkelijke matrix die overeenkomen met de opgegeven locaties.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Past een swap van twee elementen in een matrix toe.
 - uid: microsoft.quantum.arrays.tail
   summary: Retourneert het laatste element van de matrix.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Hiermee wordt een lijst met 2-Tuples omgezet in een geneste matrix.
 - uid: microsoft.quantum.arrays.zip
   summary: Als er twee matrices worden opgegeven, wordt er een nieuwe matrix van paren geretourneerd, zodat elk paar een element uit elke oorspronkelijke matrix bevat.
 - uid: microsoft.quantum.arrays.zip3
@@ -57,9 +61,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
 metadata:
-  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057111"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858867"

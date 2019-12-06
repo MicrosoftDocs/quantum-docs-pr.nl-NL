@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Converteert een complex getal van het type `ComplexPolar` naar een complex getal van het type `Complex`.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: ''
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nComplexPolarToComplex is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.complexpolarascomplex\"."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: ''
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nComplexToComplexPolar is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.complexascomplexpolar\"."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Hiermee wordt gezocht naar de permanente fractie convergent die het dichtst bij `fraction` ligt met de noemer kleiner of gelijk aan `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -177,7 +177,7 @@ functions:
     Retourneert de `L(p)` norm van een vector van `Double`s.
 
 
-    Op basis van een matrix $x $ van het type `Double[]`, wordt hiermee de $p $-norm $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $ geretourneerd.
+    Op basis van een matrix $x $ van het type `Double[]`retourneert dit de $p $-norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
     Normaliseert een vector van `Double`s in de `L(p)` norm.
@@ -253,9 +253,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Retourneert een van de Pauli-Opera tors (single-Qubit) op wille keurige wijze.
 metadata:
-  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056306"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858255"

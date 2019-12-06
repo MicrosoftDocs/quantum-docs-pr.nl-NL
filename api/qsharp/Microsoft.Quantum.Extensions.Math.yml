@@ -3,189 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.absl".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAbsB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.absl\".\nGebruik @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.absd".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAbsD is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.absd\".\nGebruik @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.absi".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAbsI is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.absi\".\nGebruik @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.arccos".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nArcCos is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.arccos\".\nGebruik @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.arcsin".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nArcSin is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.arcsin\".\nGebruik @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.arctan".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nArcTan is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.arctan\".\nGebruik @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.arctan2".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nArcTan2 is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.arctan2\".\nGebruik @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.ceiling".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nPlafond is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.ceiling\".\nGebruik @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.cos".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nCo's is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.cos\".\nGebruik @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.cosh".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nCosh is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.cosh\".\nGebruik @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.divreml".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nDivRemB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.divreml\".\nGebruik @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.e".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nE is afgeschaft. Gebruik @\"microsoft.quantum.math.e\" .\nGebruik @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.expd".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nExpD is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.expd\".\nGebruik @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.floor".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nDe vloer is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.floor\".\nGebruik @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.ieeeremainder".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nIEEERemainder is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.ieeeremainder\".\nGebruik @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.log".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nHet logboek is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.log\".\nGebruik @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.log10".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nLog10 is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.log10\".\nGebruik @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.maxl".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMaxB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.maxl\".\nGebruik @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.maxd".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMaxD is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.maxd\".\nGebruik @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.maxi".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMaxI maal is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.maxi\".\nGebruik @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.minl".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMinB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.minl\".\nGebruik @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.mind".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nDenk eraan dat deze is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.mind\".\nGebruik @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.mini".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMinI is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.mini\".\nGebruik @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.modpowl".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nModPowB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.modpowl\".\nGebruik @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.pi".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nPI is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.pi\".\nGebruik @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.powd".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nPowD is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.powd\".\nGebruik @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.round".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAfronding is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.round\".\nGebruik @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.signl".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSignB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.signl\".\nGebruik @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.signd".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nOndertekend is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.signd\".\nGebruik @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.signi".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSignI is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.signi\".\nGebruik @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.sin".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSin is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.sin\".\nGebruik @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.sinh".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSINH is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.sinh\".\nGebruik @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.sqrt".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSQRT is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.sqrt\".\nGebruik @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.tan".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nTan is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.tan\".\nGebruik @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.tanh".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nTANH is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.tanh\".\nGebruik @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.math.truncate".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nTruncate is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.math.truncate\".\nGebruik @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056334"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858833"

@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat Q # kern functies en bewerkingen.\n\n # <a name=\"remarks\"></a>Opmerkingen\n Deze naam ruimte wordt automatisch geopend door de compiler Q #, zodat alle elementen van deze naam ruimte altijd beschikbaar zijn."
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Retourneert een standaard exemplaar van het opgegeven type.
 - uid: microsoft.quantum.core.length
   summary: Retourneert het aantal elementen in een matrix.
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: Retourneert de gedefinieerde begin waarde van het opgegeven bereik.
 - uid: microsoft.quantum.core.rangestep
   summary: Retourneert het gehele getal dat aangeeft hoe de volgende waarde van een bereik wordt berekend.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: Door de compiler herkend kenmerk dat door de gebruiker gedefinieerde typen markeert als kenmerken.
+- uid: microsoft.quantum.core.deprecated
+  summary: Door het compiler herkend kenmerk dat wordt gebruikt om een type of aanroepable te markeren als afgeschaft.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Een door het compiler herkend kenmerk dat wordt gebruikt om het ingangs punt van een uitvoerbaar bestand te markeren.
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056894"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858578"
