@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: b4bec5e7a174b7e2d588331dd2093c7b23a728b0
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444171"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864403"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Een Q #-project maken in uw ontwikkel omgeving
 
@@ -99,15 +99,15 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum programma.
 
 1. Selecteer **cel** > **Voer cellen uit** om het notitie blok uit te voeren. `SayHello` wordt binnenkort weer gegeven in de cel-uitvoer:
 
-    ![Jupyter-notebook-cel met Q #-code](~/media/install-guide-jupyter.png)
+    ![Cel met Q#-code in een Jupyter-notebook](~/media/install-guide-jupyter.png)
 
     Bij het uitvoeren van Jupyter-notebooks wordt de Q #-code gecompileerd en de notitie blok voert de naam van de bewerkte (en) bewerkingen uit die worden gevonden.
 
-1. Simuleer in een nieuwe cel de uitvoering in een quantum computer van de bewerking die u zojuist hebt gemaakt met behulp van de `%simulate` Magic:
+1. Simuleer in een nieuwe cel de uitvoering in een kwantumcomputer van de bewerking die u zojuist hebt gemaakt met behulp van de `%simulate`-magic:
 
-    ![Jupyter-notebook-cel met% simulatie Magic](~/media/install-guide-jupyter-simulate.png)
+    ![Cel met %simulate magic in een Jupyter-notebook](~/media/install-guide-jupyter-simulate.png)
 
-    Het bericht wordt afgedrukt op het scherm samen met het resultaat van de bewerking die u hebt aangeroepen (in dit geval leeg).
+    Het bericht wordt nu op het scherm weergegeven, samen met het resultaat van de bewerking die u hebt aangeroepen (in dit geval leeg).
 
 U kunt nu andere Q #-bewerkingen toevoegen om uw Quantum ontwikkeling voort te zetten.
 
@@ -150,12 +150,14 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio
 
     * Ga naar **Weergave** -> **Opdrachtpalet**
     * Selecteer **Q #: nieuw project maken**
+    * **Zelfstandige console toepassing** selecteren
     * Ga naar de locatie in het bestandssysteem waar u de toepassing wilt maken
     * Klik op de knop **Nieuw project openen...** zodra het project is gemaakt
 
 1. Voer de toepassing uit:
 
-    * Ga naar **Fouten opsporen** -> **Starten zonder foutopsporing**
+    * Ga naar **terminal** -> **nieuwe terminal**
+    * Voer `dotnet run` in
     * Als het goed is, ziet u de volgende tekst in het uitvoervenster: `Hello quantum world!`
 
 U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio code.

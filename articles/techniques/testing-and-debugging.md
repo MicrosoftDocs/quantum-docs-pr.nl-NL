@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 25679331f1bed9f98b86c6eb20f511c891bac1af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183485"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864267"
 ---
 # <a name="testing-and-debugging"></a>Testen en fout opsporing
 
@@ -30,9 +30,9 @@ Q # ondersteunt het maken van eenheids tests voor Quantum-Program ma's en die ku
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Open Visual Studio 2019. Ga naar het menu `File` en selecteer `New` > `Project...`.
-Selecteer in de project-sjabloon Verkenner onder `Installed` > `Visual C#`de sjabloon `Q# Test Project`.
+Zoek in de rechter bovenhoek naar `Q#`en selecteer de sjabloon `Q# Test Project`.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdracht regel/Visual Studio code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-vscode)
 
 Voer vanuit uw favoriete opdracht regel de volgende opdracht uit:
 ```bash
@@ -43,12 +43,13 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-In beide gevallen heeft het nieuwe project twee bestanden geopend.
-Het eerste bestand, `Tests.qs`, biedt een handige plaats om nieuwe Q #-eenheids tests te definiëren.
-In eerste instantie bevat dit bestand een test voor een voorbeeld eenheid `AllocateQubitTest` die controleert of een nieuw toegewezen Qubit zich in de $ \ket{0}$ status bevindt en een bericht afdrukt:
+Het nieuwe project heeft één bestand `Tests.qs`, dat een handige plaats biedt om nieuwe Q #-eenheids tests te definiëren.
+In eerste instantie bevat dit bestand een test voor een voorbeeld eenheid `AllocateQubit` die controleert of een nieuw toegewezen Qubit zich in de $ \ket{0}$ status bevindt en een bericht afdrukt:
 
 ```qsharp
-    operation AllocateQubitTest () : Unit {
+    @Test("QuantumSimulator")
+    operation AllocateQubit () : Unit {
+
         using (q = Qubit()) {
             Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
@@ -57,28 +58,16 @@ In eerste instantie bevat dit bestand een test voor een voorbeeld eenheid `Alloc
     }
 ```
 
-Een Q #-bewerking die compatibel is met het type `(Unit => Unit)` of functie die compatibel is met `(Unit -> Unit)` kan worden uitgevoerd als een eenheids test. 
-
-Het tweede bestand `TestSuiteRunner.cs` bevat een methode die Q #-eenheids tests detecteert en uitvoert. Dit is de methode `TestTarget` voorzien van een `OperationDriver` kenmerk.
-Het kenmerk `OperationDriver` maakt deel uit van de xUnit extension library micro soft. Quantum. simulatie. xUnit.
-Het Framework voor het testen van de eenheid roept `TestTarget` methode voor elke Q #-eenheids test op.
-In het raam werk wordt de beschrijving van de eenheids test door gegeven aan de methode via `op` argument. De volgende regel code:
-```csharp
-op.TestOperationRunner(sim);
+: Nieuw: elke Q #-bewerking of-functie die een argument van het type `Unit` gebruikt en retourneert `Unit` als een eenheids test kan worden gemarkeerd via het `@Test("...")` kenmerk. Het argument voor dat kenmerk, `"QuantumSimulator"` hierboven, geeft het doel aan waarop de test wordt uitgevoerd. Eén test kan op meerdere doelen worden uitgevoerd. Voeg bijvoorbeeld een kenmerk `@Test("ResourcesEstimator")` toe boven `AllocateQubit`. 
+```qsharp
+    @Test("QuantumSimulator")
+    @Test("ResourcesEstimator")
+    operation AllocateQubit () : Unit {
+        ...
 ```
-Hiermee wordt de eenheids test uitgevoerd op `QuantumSimulator`.
+Sla het bestand op en voer alle tests uit. Er moeten nu twee eenheids tests worden uitgevoerd, één waarbij AllocateQubit op de QuantumSimulator-server wordt verwerkt en een waar deze wordt uitgevoerd in de ResourceEstimator. 
 
-Het test detectie mechanisme van de eenheid zoekt standaard naar alle Q #-functies of-bewerkingen van compatibele typen die voldoen aan de volgende eigenschappen:
-* Deze bevindt zich in dezelfde assembly als de methode die is gekoppeld aan het kenmerk `OperationDriver`.
-* Bevindt zich in dezelfde naam ruimte als de methode die is gekoppeld aan het kenmerk `OperationDriver`.
-* Heeft een naam die eindigt op `Test`.
-
-Een assembly, een naam ruimte en een achtervoegsel voor de functies en bewerkingen voor de eenheids test kunnen worden ingesteld met behulp van optionele para meters van het kenmerk `OperationDriver`:
-* `AssemblyName` para meter wordt de naam van de assembly ingesteld waarnaar wordt gezocht op tests.
-* `TestNamespace` para meter wordt de naam van de naam ruimte die wordt doorzocht op tests ingesteld.
-* `Suffix` stelt het achtervoegsel in van de bewerkings-of functie namen die als eenheids testen worden beschouwd.
-
-Daarnaast kunt u met de optionele para meter `TestCasePrefix` een voor voegsel instellen voor de naam van de test case. Het voor voegsel voor de naam van de bewerking wordt weer gegeven in de lijst met test cases. `TestCasePrefix = "QSim:"` zal er bijvoorbeeld voor zorgen dat `AllocateQubitTest` als `QSim:AllocateQubitTest` worden weer gegeven in de lijst met gevonden tests. Dit kan handig zijn om te bepalen welke Simulator wordt gebruikt om een test uit te voeren.
+De Q #-compiler herkent de ingebouwde doelen "QuantumSimulator", "ToffoliSimulator" en "ResourcesEstimator" als geldige uitvoerings doelen voor eenheids testen. Het is ook mogelijk om een volledig gekwalificeerde naam op te geven voor het definiëren van een aangepast uitvoerings doel. 
 
 ### <a name="running-q-unit-tests"></a>Er worden Q #-eenheids tests uitgevoerd
 
@@ -90,9 +79,9 @@ Als eenmalige installatie per oplossing, gaat u naar `Test` menu en selecteert u
 > De standaard instelling voor de architectuur van de processor voor Visual Studio wordt opgeslagen in het bestand met oplossings opties (`.suo`) voor elke oplossing.
 > Als u dit bestand verwijdert, moet u opnieuw `X64` selecteren als uw processor architectuur.
 
-Bouw het project, ga naar het menu `Test` en selecteer `Windows` > `Test Explorer`. `AllocateQubitTest` wordt weer gegeven in de lijst met tests in de `Not Run Tests` groep. Selecteer `Run All` of voer deze afzonderlijke test uit en probeer het opnieuw.
+Bouw het project, ga naar het menu `Test` en selecteer `Windows` > `Test Explorer`. `AllocateQubit` wordt weer gegeven in de lijst met tests in de `Not Run Tests` groep. Selecteer `Run All` of voer deze afzonderlijke test uit en probeer het opnieuw.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdracht regel/Visual Studio code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-vscode)
 
 Als u tests wilt uitvoeren, gaat u naar de projectmap (de map die `Tests.csproj`bevat) en voert u de volgende opdracht uit:
 
@@ -122,30 +111,17 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+Eenheids tests kunnen worden gefilterd op basis van hun naam en/of het uitvoerings doel:
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
 
-## <a name="logging-and-assertions"></a>Logboek registratie en bevestigingen
-
-Een belang rijk gevolg van het feit dat functies in Q # geen neven effecten hebben, is dat alle gevolgen van het uitvoeren van een functie waarvan het uitvoer type de lege tuple `()`, nooit in acht kunnen worden genomen vanuit een Q #-programma.
-Dat wil zeggen dat een doel computer ervoor kiest geen functie uit te voeren die `()` retourneert met de garantie dat dit weglatings gedrag van de volgende Q #-code niet wordt gewijzigd.
-Hiermee kunnen functies `()` een nuttig hulp programma voor het insluiten van beweringen en fout opsporing in Q #-Program ma's worden geretourneerd. 
-
-### <a name="logging"></a>Logboekregistratie
-
 De intrinsieke functie <xref:microsoft.quantum.intrinsic.message> is van het type `(String -> Unit)` en maakt het mogelijk diagnostische berichten te maken.
-
-De `onLog` actie van `QuantumSimulator` kan worden gebruikt om acties te definiëren die worden uitgevoerd wanneer Q #-code aanroepen `Message`. Standaard worden logboek berichten afgedrukt op standaard uitvoer.
-
-Bij het definiëren van een eenheids test suite kunnen de geregistreerde berichten worden omgeleid naar de test uitvoer. Wanneer een project wordt gemaakt op basis van Q # test project sjabloon, wordt deze omleiding vooraf geconfigureerd voor de suite en als volgt gemaakt:
-
-```qsharp
-using (var sim = new QuantumSimulator())
-{
-    // OnLog defines action(s) performed when Q# test calls operation Message
-    sim.OnLog += (msg) => { output.WriteLine(msg); };
-    op.TestOperationRunner(sim);
-}
-```
 
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -153,14 +129,18 @@ Nadat u een test in test Explorer hebt uitgevoerd en op de test hebt geklikt, wo
 
 ![test uitvoer](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdracht regel/Visual Studio code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-vscode)
 
 De status pass/fail voor elke test wordt op de-console afgedrukt door `dotnet test`.
-Voor mislukte tests worden de uitvoer die is geregistreerd als resultaat van de `output.WriteLine(msg)` bovenstaande aanroep ook naar de console afgedrukt om de fout te kunnen vaststellen.
+Voor mislukte tests worden ook de uitvoer naar de console afgedrukt om de fout te kunnen vaststellen.
 
 ***
 
-### <a name="assertions"></a>Asserties
+## <a name="assertions"></a>Asserties
+
+Omdat functies in Q # geen _logische_ neven effecten hebben, kunnen _andere soorten_ effecten van het uitvoeren van een functie waarvan het uitvoer type de lege tuple `()`, nooit worden waargenomen vanuit een Q #-programma.
+Dat wil zeggen dat een doel computer ervoor kiest geen functie uit te voeren die `()` retourneert met de garantie dat dit weglatings gedrag van de volgende Q #-code niet wordt gewijzigd.
+Hiermee kunnen functies `()` een nuttig hulp programma voor het insluiten van beweringen en fout opsporing in Q #-Program ma's worden geretourneerd. 
 
 Dezelfde logica kan worden toegepast voor het implementeren van bevestigingen. Laten we eens een eenvoudig voor beeld bekijken:
 
@@ -203,7 +183,7 @@ Voor het oplossen van problemen met Quantum Program ma's biedt de <xref:microsof
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-De Full-State Quantum Simulator gedistribueerd als onderdeel van de Quantum Development Kit schrijft in het bestand de [functie Wave](https://en.wikipedia.org/wiki/Wave_function) van het hele Quantum systeem, als een eendimensionale matrix van complexe getallen, waarbij elk element de amplitude van de de waarschijnlijkheid van het meten van de berekenings basis status $ \ket{n} $, waarbij $ \ket{n} = \ket{b_{n-1}... b_1b_0} $ voor bits $\{b_i\}$. Bijvoorbeeld op een machine met slechts twee qubits toegewezen en in de Quantum status $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ aanroepen <xref:microsoft.quantum.diagnostics.dumpmachine> deze uitvoer genereert :
+De Full-State Quantum Simulator gedistribueerd als onderdeel van de Quantum Development Kit schrijft in het bestand de [functie Wave](https://en.wikipedia.org/wiki/Wave_function) van het hele Quantum systeem, als een eendimensionale matrix met complexe getallen, waarbij elk element de amplitude vormt van de kans op het meten van de berekenings basis status $ \ket{n} $, waarbij $ \ket{n} = \ket{b_ {n-1}... b_1b_0} $ voor bits $\{b_i\}$. Bijvoorbeeld op een machine met slechts twee qubits toegewezen en in de Quantum status $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ aanroepen <xref:microsoft.quantum.diagnostics.dumpmachine> genereert deze uitvoer:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -294,7 +274,7 @@ In de volgende voor beelden ziet u `DumpMachine` voor een aantal algemene status
   >
   > de Qubit met index `0` op `register2` heeft id =`3`. de Qubit met index `1` heeft id =`2`.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdracht regel/Visual Studio code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > U kunt een Qubit-id berekenen met behulp van de functie <xref:microsoft.quantum.intrinsic.message> en de variabele Qubit in het bericht door geven, bijvoorbeeld:
@@ -333,7 +313,7 @@ namespace Samples {
 
 <xref:microsoft.quantum.diagnostics.dumpregister> werkt als <xref:microsoft.quantum.diagnostics.dumpmachine>, maar er wordt ook een matrix van qubits gebruikt om de hoeveelheid gegevens te beperken tot alleen die relevant voor de bijbehorende qubits.
 
-Net als bij <xref:microsoft.quantum.diagnostics.dumpmachine>is de informatie die door <xref:microsoft.quantum.diagnostics.dumpregister> wordt gegenereerd, afhankelijk van de doel computer. Voor de volle Quantum Simulator schrijft het naar het bestand met de functie Wave tot een globale fase van het Quantum subsysteem dat wordt gegenereerd door de geleverde qubits in dezelfde indeling als <xref:microsoft.quantum.diagnostics.dumpmachine>.  Neem bijvoorbeeld opnieuw een machine met slechts twee qubits toegewezen en in de Quantum status $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ Pi/4} ((\frac{1}{\sqrt{2}} \ Ket{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ die <xref:microsoft.quantum.diagnostics.dumpregister> aanroept voor `qubit[0]`, wordt deze uitvoer gegenereerd:
+Net als bij <xref:microsoft.quantum.diagnostics.dumpmachine>is de informatie die door <xref:microsoft.quantum.diagnostics.dumpregister> wordt gegenereerd, afhankelijk van de doel computer. Voor de volle Quantum Simulator schrijft het naar het bestand met de functie Wave tot een globale fase van het Quantum subsysteem dat wordt gegenereerd door de geleverde qubits in dezelfde indeling als <xref:microsoft.quantum.diagnostics.dumpmachine>.  Neem bijvoorbeeld opnieuw een machine met slechts twee qubits toegewezen en in de Quantum status $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ Pi/4} ((\frac{1}{\sqrt{2}} \ket{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ aanroepende <xref:microsoft.quantum.diagnostics.dumpregister> voor `qubit[0]` deze uitvoer genereert :
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -382,7 +362,6 @@ namespace app
 
 ## <a name="debugging"></a>Foutopsporing
 
-Op de `Assert`-en `Dump` functies en-bewerkingen ondersteunt Q # een subset van de standaard mogelijkheden voor Visual Studio-fout opsporing: [regel onderbrekingen instellen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), de [code door lopen met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) en [waarden van klassieke variabelen controleren ](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)zijn allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
+Op de `Assert`-en `Dump` functies en-bewerkingen ondersteunt Q # een subset van de standaard mogelijkheden voor Visual Studio-fout opsporing: [regel onderbrekingen instellen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [door code te bladeren met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) en de [waarden van klassieke variabelen te controleren](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) , zijn allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
 
-Fout opsporing in Visual Studio code wordt nog niet ondersteund.
-
+Fout opsporing in Visual Studio code maakt gebruik van de mogelijkheden voor fout C# opsporing van de Visual Studio code-extensie die wordt ondersteund door OmniSharp en vereist de installatie van de [nieuwste versie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

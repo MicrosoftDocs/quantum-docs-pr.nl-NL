@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185899"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864420"
 ---
-# <a name="contributing-code"></a>Bijdragende code #
+# <a name="contributing-code"></a>Code bijdragen #
 
 Naast het melden van problemen en het verbeteren van documentatie, kan bijdragen aan code in de Quantum Development Kit een zeer directe manier zijn om uw collega's in de Quantum-programmeer community te helpen.
 Door code te leveren, kunt u problemen oplossen, nieuwe voor beelden bieden, bestaande bibliotheken eenvoudiger te gebruiken of zelfs volledig nieuwe functies toevoegen.
@@ -30,13 +30,14 @@ Het is dus handig wanneer de functionaliteit die door een bijdrage wordt toegevo
 
 De Q #-functies,-bewerkingen en door de gebruiker gedefinieerde typen waaruit bibliotheken bestaan, zoals de Canon, worden automatisch getest als onderdeel van de ontwikkeling van de [**micro soft/QuantumLibraries-** ](https://github.com/Microsoft/QuantumLibraries/) opslag plaats.
 Wanneer er een nieuwe pull-aanvraag wordt geopend, bijvoorbeeld de configuratie van [Azure-pijp lijnen](https://azure.microsoft.com/services/devops/pipelines/) , wordt gecontroleerd of de wijzigingen in de pull-aanvraag geen invloed hebben op de bestaande functionaliteit waarvan de Quantum-programmeer Community afhankelijk is.
-Deze tests worden geschreven met behulp van het pakket [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , waarmee u de functies en bewerkingen van Q # kunt gebruiken als tests voor het [xUnit](https://xunit.github.io/) -Framework.
 
-De [`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) maakt gebruik van deze xUnit-integratie om functies of bewerkingen uit te voeren die eindigen op `Test`.
-Bijvoorbeeld, de volgende functie wordt gebruikt om ervoor te zorgen dat de functies <xref:microsoft.quantum.canon.fst> en <xref:microsoft.quantum.canon.snd> beide de juiste uitvoer in een representatief voor beeld retour neren.
+Met de meest recente Q #-versie wordt de eenheids test gedefinieerd met behulp van het kenmerk `@Test("QuantumSimulator")`. Het argument kan "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" of een volledig gekwalificeerde naam zijn die het uitvoerings doel opgeeft. Verschillende kenmerken die verschillende uitvoerings doelen definiëren, kunnen worden gekoppeld aan dezelfde aanroepable. Sommige van onze tests maken nog steeds gebruik van het afgeschafte [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -pakket dat alle Q #-functies en-bewerkingen bevat die eindigen op `Test` naar het [xUnit](https://xunit.github.io/) -Framework. Dit pakket is niet meer nodig om de eenheids tests te definiëren. 
+
+De volgende functie wordt gebruikt om ervoor te zorgen dat de functies <xref:microsoft.quantum.canon.fst> en <xref:microsoft.quantum.canon.snd> beide de juiste uitvoer in een representatief voor beeld retour neren.
 Als de uitvoer van `Fst` of `Snd` onjuist is, wordt de instructie `fail` gebruikt om te zorgen dat de test mislukt.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ Complexere voor waarden kunnen worden gecontroleerd met behulp van de technieken
 Zo controleert de volgende test of `H(q); X(q); H(q);` zoals aangeroepen door <xref:microsoft.quantum.canon.applywith> hetzelfde is als `Z(q)`.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;

@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183468"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864250"
 ---
 # <a name="working-with-qubits"></a>Werken met qubits #
 
@@ -43,7 +43,7 @@ Deze bewerkingen worden in meer detail weer gegeven in [intrinsieke bewerkingen 
 
 Eerst worden de Pauli-Opera tors met één Qubit $X $, $Y $ en $Z $ weer gegeven in Q # door de intrinsieke bewerkingen `X`, `Y`en `Z`, die elk het type `(Qubit => Unit is Adj + Ctl)`hebben.
 Zoals beschreven in [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude), kunnen we $X $ en dus `X` als een bits-Flip-bewerking of niet-poort.
-Op deze manier kunnen we statussen voor de indeling $ \ket{s_0 s_1 \dots s_n} $ voorbereiden voor een klassieke-bits teken reeks $s $:
+Hiermee kunnen we statussen voor de indeling $ \ket{s_0 s_1 \dots s_n} $ voorbereiden voor sommige klassieke-bits teken reeks $s $:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Later worden er meer compacte manieren weer gegeven voor het schrijven van deze bewerking waarvoor hand matige Datatransport besturing niet is vereist.
 
-We kunnen ook staten voorbereiden zoals $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ en $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ door gebruik te maken van de Hadamard Transform $H $ , dat wordt weer gegeven in Q # door de intrinsieke bewerking `H : (Qubit => Unit is Adj + Ctl)`:
+We kunnen ook staten voorbereiden zoals $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ en $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ door gebruik te maken van de Hadamard Transform $H $, die wordt weer gegeven in Q # door de intrinsieke bewerking `H : (Qubit => Unit is Adj + Ctl)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Metingen ##
 
-Door gebruik te maken van de `Measure` bewerking, een ingebouwde, niet-unitary bewerking, kunnen we klassieke informatie uit een object van het type `Qubit` ophalen en een klassieke waarde als resultaat toewijzen, die een gereserveerd type heeft `Result`, waarmee wordt aangegeven dat het resultaat Nee is meer een Quantum status. De invoer voor `Measure` is een Pauli-as op de Bloch-bol, vertegenwoordigd door een object van het type `Pauli` (bijvoorbeeld voor instantie `PauliX`) en een object van het type `Qubit`. 
+Met behulp van de `Measure` bewerking, een ingebouwde, niet-unitary bewerking, kunnen we klassieke informatie uit een object van het type `Qubit` ophalen en een klassieke waarde als resultaat toewijzen, die een gereserveerd type heeft `Result`, waarmee wordt aangegeven dat het resultaat geen Quantum status meer is. De invoer voor `Measure` is een Pauli-as op de Bloch-bol, vertegenwoordigd door een object van het type `Pauli` (bijvoorbeeld voor instantie `PauliX`) en een object van het type `Qubit`. 
 
 Een eenvoudig voor beeld is de volgende bewerking waarbij een Qubit wordt gemaakt in de $ \ket-status{0}$ en vervolgens een Hadamard-Gate ``H`` wordt toegepast en het resultaat vervolgens wordt gemeten in de `PauliZ` basis. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-De Q #-taal maakt afhankelijkheden van de klassieke controle stroom op meet resultaten van qubits mogelijk. Op die manier kunt u krachtige Probabilistic-gadgets implementeren waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd. Een voor beeld is het eenvoudig te implementeren, waarbij *herhalen-tot-succes* wordt uitgevoerd in Q #. Dit zijn Probabilistic-circuits die een *verwachte* lage kosten in termen van elementaire poorten hebben, maar waarvoor de werkelijke kosten afhankelijk zijn van een werkelijk uitgevoerde uitvoering en een werkelijke waarde interleaving van verschillende mogelijke vertakkingen. 
+De Q #-taal maakt afhankelijkheden van de klassieke controle stroom op meet resultaten van qubits mogelijk. Op die manier kunt u krachtige Probabilistic-gadgets implementeren waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd. Een voor beeld is het eenvoudig te implementeren, waarbij *herhalen-tot-succes* wordt uitgevoerd in Q #. Dit zijn Probabilistic-circuits die een *verwachte* lage kosten in termen van elementaire poorten hebben, maar waarvoor de werkelijke kosten afhankelijk zijn van een feitelijke uitvoering en een daad werkelijke interleaving van verschillende mogelijke vertakkingen. 
 
 Q # ondersteunt de construct om herhaalde tot geslaagd (RUS) patronen te vergemakkelijken.
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 In dit voor beeld ziet u het gebruik van een onveranderlijke variabele `finished` die binnen het bereik van de volledige herhalings-tot-reparatie-lus ligt en die wordt geïnitialiseerd vóór de lus en wordt bijgewerkt in de reparatie stap.
 
-Tot slot wordt een voor beeld van een RUS-patroon weer gegeven om een Quantum status te bereiden $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, te beginnen bij de status $ \ket{+} $. Zie ook het [voor beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Tot slot wordt een voor beeld van een RUS-patroon weer gegeven om een Quantum status te bereiden $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, te beginnen bij de status $ \ket{+} $. Zie ook het [voor beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Opvallende programmatische functies die in deze bewerking worden weer gegeven, zijn een complexere `fixup` deel van de lus waarbij Quantum bewerkingen worden uitgevoerd, en het gebruik van `AssertProb`-instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in de gekopieerd. Zie ook [testen en fout opsporing](xref:microsoft.quantum.techniques.testing-and-debugging) voor meer informatie over `Assert` en `AssertProb`-instructies. 
+Opvallende programmatische functies die in deze bewerking worden weer gegeven, zijn een complexere `fixup` deel van de lus waarbij Quantum bewerkingen worden uitgevoerd, en het gebruik van `AssertProb`-instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten. Zie ook [testen en fout opsporing](xref:microsoft.quantum.techniques.testing-and-debugging) voor meer informatie over `Assert` en `AssertProb`-instructies. 

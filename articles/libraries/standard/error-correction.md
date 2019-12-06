@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184437"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863194"
 ---
 # <a name="error-correction"></a>Fout correctie #
 
@@ -28,7 +28,7 @@ In de Quantum instelling zien we dat de meting problemen heeft. De bovenstaande 
 Het is handig om dit te doen om te zien hoe de fout correctie voor de Quantum case kan worden gegeneraliseerd.
 Laat bijvoorbeeld $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$, en laat $ \ket{\overline{1}} = \ket{111}$.
 Op basis van lineariteit hebben we de herhalings code voor alle invoer gedefinieerd. bijvoorbeeld: $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-Met name laten we een fout omdraaien $X _1 $ Act op de middelste Qubit. we zien dat de benodigde correctie in beide vertakkingen precies $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+Met name als u een bit spiegel fout $X _1 $ Act op de middelste Qubit, zien we dat de benodigde correctie in beide filialen precies $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
 \end{align} $ $
 
 Om te zien hoe we kunnen vaststellen dat dit het geval is, zonder dat u de enige status die we proberen te bemeten, is het handig om te schrijven wat elke andere bit voor het spie gelen van fouten aan de logische status heeft:
@@ -42,10 +42,10 @@ Om te zien hoe we kunnen vaststellen dat dit het geval is, zonder dat u de enige
 
 Ter bescherming van de status die we coderen, moeten we de drie fouten van elkaar en uit de identiteit $ \boldone $ onderscheiden, zonder onderscheid te maken tussen $ \ket{\overline{0}} $ en $ \ket{\overline{1}} $.
 Als we bijvoorbeeld $Z _0 $ meten, krijgen we een ander resultaat voor $ \ket{\overline{0}} $ en $ \ket{\overline{1}} $ in het geval geen fout, waardoor de gecodeerde status wordt samengevouwen.
-Aan de andere kant kunt u overwegen om $Z _0 Z_1 $ te meten, de pariteit van de eerste twee bits in elke reken status.
-U kunt er ook voor zorgen dat elke meting van een Pauli-operator controleert welke eigenvalue de status wordt gemeten overeenkomt met, dus voor elke staat $ \ket{\psi} $ in de bovenstaande tabel, kunnen we $Z _0 Z_1 \ket{\psi} $ berekenen om te zien of er $ \pm\ket{\psi} $ is.
-Houd er rekening mee dat $Z _0 Z_1 \ket{000} = \ket{000}$ en $Z _0 Z_1 \ket{111} = \ket{111}$, zodat we kunnen concluderen dat deze meting hetzelfde is voor beide gecodeerde statussen.
-Aan de andere kant, $Z _0 Z_1 \ket{100} =-\ket{100}$ en $Z _0 Z_1 \ket{011} =-\ket{011}$, dus het resultaat van het meten van $Z _0 Z_1 $ toont nuttige informatie over welke fout is opgetreden.
+In het andere geval kunt u overwegen om $Z _0 Z_1 $ te meten, de pariteit van de eerste twee bits in elke reken status.
+U kunt er ook voor zorgen dat elke meting van een Pauli-operator controleert welke eigenvalue de status wordt gemeten overeenkomt met, dus voor elke staat $ \ket{\psi} $ in de bovenstaande tabel, kunnen we $Z _0 Z_1 \ket{\psi} $ berekenen om te zien of $ \pm\ket{\psi} $ wordt ontvangen.
+Houd er rekening mee dat $Z _0 Z_1 \ket{000} = \ket{000}$ en dat $Z _0 Z_1 \ket{111} = \ket{111}$, zodat we kunnen concluderen dat deze meting hetzelfde is voor beide gecodeerde statussen.
+Aan de andere kant, $Z _0 Z_1 \ket{100} =-\ket{100}$ en $Z _0 Z_1 \ket{011} =-\ket{011}$, dus het resultaat van de meting $Z _0 Z_1 $ onthult nuttige informatie over welke fout is opgetreden.
 
 Als u dit wilt benadrukken, herhaalt u de bovenstaande tabel, maar voegt u de resultaten van meting $Z _0 Z_1 $ en $Z _1 Z_2 $ toe aan elke rij.
 De resultaten van elke meting worden aangegeven door het teken van de eigenvalue die wordt waargenomen, ofwel $ + $ of $-$, die overeenkomt met de Q # `Result` waarden van `Zero` en `One`respectievelijk.
@@ -67,7 +67,7 @@ In het bijzonder benadrukken we dat herstel een *klassieke* methode voor het afw
 > Op dezelfde manier wordt bij het Toep assen van een Phase-`Z` bewerking voor het spie gelen van een fase $ \ket{\overline{1}} $ aan $-\ket{\overline{1}} $ toegewezen, en wordt dus $ \ket{\overline{+}} $ toegewezen aan $ \ket{\overline{-}} $.
 > Meer in het algemeen kunnen codes worden gemaakt voor het verwerken van een groter aantal fouten en voor het afhandelen van $Z $-fouten, evenals $X $-fouten.
 
-Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de Essense van de *stabilisatie formaliteit*.
+Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de essentie van de *stabilisatie formaliteit*.
 De Q # Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisator-codes, en voor het beschrijven van het herstel van fouten.
 In deze sectie beschrijven we dit kader en de toepassing ervan tot een paar eenvoudige Quantum fout codes.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Afgezien van de code voor het spie gelen van bits, wordt Q # Canon gegeven met implementaties van de code van [vijf Qubit perfect](https://arxiv.org/abs/1305.08)en de [code van zeven Qubit](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige fout met één qubit kan oplossen.
+Afgezien van de code voor het spie gelen van bits, wordt Q # Canon gegeven met implementaties van de code van [vijf Qubit perfect](https://arxiv.org/abs/quant-ph/9602019)en de [code van zeven Qubit](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige fout met één qubit kan oplossen.

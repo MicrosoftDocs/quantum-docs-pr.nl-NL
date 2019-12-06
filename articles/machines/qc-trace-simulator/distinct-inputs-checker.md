@@ -1,17 +1,17 @@
 ---
 title: Afzonderlijke invoer controle | Quantum computer Trace Simulator | Microsoft Docs
-description: Overzicht van quantum computer Trace Simulator
+description: Overzicht van kwantumcomputer-traceersimulator
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184692"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864301"
 ---
 # <a name="distinct-inputs-checker"></a>Afzonderlijke invoer controle
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Wanneer de gebruiker dit programma bekijkt, wordt ervan uitgegaan dat de volg orde waarin `op1` en `op2` worden genoemd, niet van belang is omdat `q1` en `q2` verschillende qubits en bewerkingen op verschillende qubits werken. We gaan nu een voor beeld bekijken waarin deze bewerking wordt gebruikt:
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

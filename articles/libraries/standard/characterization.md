@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d77085aa8aa83c18858056bab1858d990efdb36e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185559"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864369"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -30,7 +30,7 @@ Deze bibliotheken moeten daarom zowel de klassieke als de Quantum gegevens verwe
 ## <a name="iterative-phase-estimation"></a>Schatting van iteratieve fase ##
 
 Het weer geven van Quantum-Program ma's in termen van de Quantum karakte Rise ring stelt een nuttig alternatief voor de Quantum-fase schatting voor.
-Dat wil zeggen, in plaats van een $n $-Qubit-REGI ster te maken dat een binaire weer gave van de fase bevat zoals in de Quantum Phase-schatting, kunnen we de fase schatting bekijken als het proces waarmee een *klassieke* agent de eigenschappen van een Quantum systeem leert door meten.
+Dat wil zeggen dat in plaats van een $n $-Qubit-REGI ster een binaire weer gave van de fase kan bevatten, zoals in de Quantum Phase-schatting, kunnen we de fase schatting bekijken als het proces waarmee een *klassieke* agent eigenschappen van een Quantum systeem via metingen leert.
 We gaan in de Quantum case door gebruik te maken van Phase kickback om toepassingen van een Black Box-bewerking te scha kelen in draaiingen met een onbekende hoek, maar de ancilla Qubit te meten die we tijdens elke stap direct na de draaiing draaien.
 Dit heeft het voor deel dat er slechts één extra Qubit is vereist voor het uitvoeren van de fase kickback die wordt beschreven in de Quantum case, aangezien we de fase van de meet resultaten tijdens elke stap op een iteratieve manier leren.  
 Elk van de hieronder voorgestelde methoden gebruikt een andere strategie voor het ontwerpen van experimenten en verschillende methoden voor gegevens verwerking om de fase te leren.  Ze hebben allemaal een uniek voor deel, variërend van het gebruik van strikte fout grenzen, de mogelijkheden voor het opnemen van eerdere informatie, het verdragen van fouten of het uitvoeren van geheugen limitted klassieke computers.
@@ -39,7 +39,7 @@ In het bespreken van iteratieve fase-schattingen wordt een unitary-$U $ gegeven 
 Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), kan de Q # Canon dergelijke bewerkingen door het door de <xref:microsoft.quantum.oracles.discreteoracle> door de gebruiker gedefinieerde type gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Als `U : DiscreteOracle`, dan implementeert `U(m)` $U ^ m $ voor `m : Int`.
 
-Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een auxillary-Qubit in de status $ \ket{+} $ voor te bereiden, samen met de aanvankelijke status $ \ket{\phi} $, wordt ervan uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) is van $U (m) $, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ket{\phi} $.  
+Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een auxillary-Qubit in de status $ \ket{+} $ voor te bereiden, samen met de begin status $ \ket{\phi} $. er wordt van uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) van $U (m) $ is, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
 Er wordt vervolgens een beheerde toepassing van `U(m)` gebruikt waarbij de status $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $ wordt voor bereid.
 Net als in het Quantum geval is het effect van een beheerde toepassing van de Oracle-`U(m)` precies hetzelfde als het effect van het Toep assen van $R _1 $ voor de onbekende fase op $ \ket{+} $, zodat we de effecten van $U $ op deze eenvoudigere manier kunnen beschrijven.
 Zo kunt u met het algoritme het besturings element Qubit draaien door $R _1 (-m\theta) $ toe te passen om een status te verkrijgen $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
@@ -47,17 +47,17 @@ De auxillary-Qubit die als besturings element voor `U(m)` wordt gebruikt, wordt 
 
 Op dit moment is het opnieuw samen stellen van de fase van de `Result` waarden die zijn verkregen via een iteratieve fase schatting een klassiek statistisch probleem.
 Het vinden van de waarde van $m $ waarmee de opgedane informatie wordt gemaximaliseerd op basis van een vaste methode voor het afwijzen van een afwijzen, is gewoon een probleem met statistieken.
-We benadrukken dit door een korte beschrijving te geven van de iteratieve fase schatting op theoretisch niveau in de Bayesiaanse para meter schatting formeelheid voordat u doorgaat met het beschrijven van de statistische algoritmen die zijn opgenomen in de Q # Canon voor het oplossen van deze klassieke interferentie fout.
+We benadrukken dit door een korte beschrijving te geven van de iteratieve fase schatting op theoretisch niveau in de Bayesiaanse para meter schatting formeelheid voordat u doorgaat met het beschrijven van de statistische algoritmen die zijn opgenomen in het Q # Canon voor het oplossen van dit probleem met de klassieke interferentie.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Schatting van iteratieve fase zonder Eigenstates ###
 
 Als er een invoer status wordt opgegeven die geen eigenstate is, dat wil zeggen dat als $U (m) \ket{\phi\_j} = e ^ {im\phi\_j} $, wordt de Quantum status door het proces van de fase niet-deterministisch omgeleid naar een enkele energie eigenstate.  De eigenstate waarmee deze uiteindelijk wordt geconvergeerd, is de eigenstate die de waargenomen `Result`waarschijnlijk produceert.
 
-In het bijzonder voert één stap van PE de volgende niet-unitary-trans formatie uit voor een status \begin{align} \sum_j \sqrt{\Pr (\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac {\ SQRT {\ PR (\phi\_j)} \sqrt{\Pr (\text{Result} | \ Phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}}.
-\end{align} omdat dit proces wordt herhaald over meerdere `Result` waarden, eigenstates die geen maximale waarden hebben van $ \prod_k\Pr (\text{Result}\_k | \phi\_j) $ wordt exponentieel onderdrukt.
+In het bijzonder voert één stap van PE de volgende niet-unitary-trans formatie uit voor een status \begin{align} \ sum_j \sqrt{\Pr (\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac {\ SQRT {\ PR (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}}.
+\end{align} omdat dit proces wordt herhaald met meerdere `Result` waarden, eigenstates die geen maximale waarden hebben van $ \ prod_k \Pr (\text{Result}\_k | \phi\_j) $ wordt exponentieel onderdrukt.
 Als gevolg hiervan wordt het debehandelings proces meestal geconvergeerd aan statussen met één eigenvalue als de experimenten goed worden gekozen.
 
-Bayes ' theorema heeft verder gesuggereerd dat de status van de fase schatting wordt geschreven in de vorm \begin{align} \frac{\sqrt{\Pr (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}} = \sum_j \sqrt{\Pr (\phi\_j | \text{Result})} \ket{\phi\_j}.
+Bayes ' theorema heeft verder gesuggereerd dat de status van de fase schatting wordt geschreven in de vorm \begin{align} \frac{\sqrt{\Pr (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\Text{result} | \phi\_j)}} = \ sum_j \sqrt{\Pr (\phi\_j | \text{Result})} \ket{\phi\_j}.
 \end{align} hier $ \Pr (\phi\_j | \text{Result}) $ kan interpretted zijn als de waarschijnlijkheid dat de kans op elke hypo these over de eigenstates wordt gegeven:
 
 1. kennis van de Quantum status voordat deze wordt gemeten;
@@ -71,7 +71,7 @@ De fase-schatting voor deze reden wordt weer gegeven in een aantal Quantum algor
 ### <a name="bayesian-phase-estimation"></a>Schatting van de Bayesiaanse-fase ###
 
 > [!TIP]
-> Zie het [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) -voor beeld voor meer informatie over de Bayesiaanse-fase schatting in de praktijk.
+> Zie het [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) -voor beeld voor meer informatie over de Bayesiaanse-fase schatting in de praktijk.
 
 Het idee van een schatting van de Bayesiaanse-fase is eenvoudig.
 U verzamelt meting statistieken vanuit het fase-schattings protocol en vervolgens verwerkt u de resultaten met behulp van Bayesiaanse deinterferentie en geeft u een schatting van de para meter op.
@@ -82,15 +82,15 @@ Het nadeel van de methoden is dat deze reken kracht zwaarder wordt.
 Als u wilt weten hoe dit Bayesiaanse wordt gebruikt, kunt u het beste een enkel `Zero` resultaat verwerken.
 Houd er rekening mee dat $X = \ket{+} \bra{+}-\ket{-}\bra{-}$, waardoor $ \ket{+} $ de enige positieve eigenstate is van $X $ die overeenkomt met `Zero`.
 De waarschijnlijkheid van het observeren van `Zero` voor een [`PauliX` meting](xref:microsoft.quantum.concepts.pauli) op de eerste Qubit op basis van een invoer status $ \ket{\psi}\ket{\phi} $ is \begin{Equation} \Pr (\texttt{Zero} | \psi) = \left | \braket{+ | \psi} \right | ^ 2.
-\end{equation} in het geval van een iteratie fase-schatting hebben we dat $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $, waardoor \begin{align} \Pr (\texttt{Zero} | \phi; m, \theta) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \left | \frac12 \left (\bra{0} + \bra{1} \right) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \right) \right | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}}{2} \right | ^ 2 \\\\ & = \cos ^ 2 (m [\phi-\theta]/2) \tag{★} \label{EQ: fase-est-kans}.
+\end{equation} in het geval van een iteratie fase-schatting hebben we dat $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $, dat wil zeggen \begin{align} \Pr (\texttt{Zero} | \phi; m, \theta) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \left | \frac12 \left (\bra{0} + \bra{1} \right) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \right) \right | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}}{2} \right | ^ 2 \\\\ & = \cos ^ 2 (m [\phi-\theta]/2) \tag{★} \label{EQ: fase-est-kans}.
 \end{align} dat wil zeggen de schatting van de iteratie fase bestaat uit het leren van de trillings frequentie van een sinusoidal-functie, gezien de mogelijkheid om een munt te spie gelen met een afwijking van die sinusoid.
 De volgende traditionele klassieke terminologie noemen we $ \eqref{EQ: phase-est-kans.} $ de *waarschijnlijke functie* voor schatting van iteratieve fase.
 
 Nadat u een `Result` hebt waargenomen van de waarschijnlijke functie schatting van iteratieve fase, kunnen we Bayes-regel gebruiken om te bepalen wat de fase ervan moet zijn om deze waarneming te volgen.
-Betonief, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} waarbij $d \in \\{\texttt{Zero}, \texttt{One}\\} $ een `Result`is en waarbij $ \Pr (\phi) $ Hierin wordt onze eerdere opvattingen over $ \phi $ beschreven.
+Betonief, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} waarbij $d \in \\{\texttt{Zero}, \texttt{One}\\} $ een `Result`is, en waarbij $ \Pr (\phi) $ de eerdere opvattingen over $ \phi $ beschrijft.
 Vervolgens wordt de herhaalde aard van de iteratieve fase schatting expliciet gemaakt, omdat de posterior-distributie $ \Pr (\phi | d) $ de opvattingen onmiddellijk benadert om onze waarneming van de volgende `Result`.
 
-Op elk gewenst moment tijdens deze procedure kunnen we de fase $ \hat{\phi} $, zoals \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \Text{data}] = \int \phi \Pr (\phi | \Text{data}) {\mathrm d} \phi, \end{Equation}, waarbij $ \ de tekst {data} $ staat voor de gehele record van alle `Result` waarden die zijn verkregen.
+Op elk gewenst moment tijdens deze procedure kunnen we de fase $ \hat{\phi} $, zoals \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \Text{data}] = \int \phi \Pr (\phi | \Text{data}) {\mathrm d} \phi, \end{Equation}, waarbij $ \Text{data} $ staat voor de gehele record van alle verkregen `Result` waarden.
 
 De exacte Bayesiaanse-deinterferentie is in de praktijk onbepaald.
 Om dit voor stel te zien, willen we een $n $-bit-variabele $x $ leren.
@@ -104,12 +104,12 @@ Een Bayesiaanse-reconstructie van een fase in het ergste geval is een periode va
 
 Een voor beeld van een efficiënte, klassieke, verwerkings stap is het algoritme voor het schatten van de [robuuste fase](https://arxiv.org/abs/1502.02677), met de hand tekening en de invoer hierboven beschreven. Hierbij wordt ervan uitgegaan dat de invoer unitary Black-vakken $U $ worden verpakt als `DiscreteOracle` type en daarom alleen query's op gehele getallen van het bestuurd-$U $ worden uitgevoerd. Als de invoer status in het `Qubit[]` REGI ster een eigenstate is $U \ket{\psi} = e ^ {i\phi} \ Ket {\ psi} $, retourneert het algoritme voor het schatten van de robuuste fase een schatting $ \hat{\phi}\in [-\pi, \pi) $ van $ \phi $ als `Double`.
 
-De belangrijkste functie van een robuuste fase schatting, die wordt gedeeld met de meeste andere nuttige varianten, is dat de reconstructie kwaliteit van $ \hat{\phi} $ in een bepaalde zin Heisenberg-Limited is. Dit betekent dat als de afwijking van $ \hat{\phi} $ van de werkelijke waarde $ \sigma $ is, $ \sigma $ inversisch wordt geschaald in verhouding tot het totale aantal query's $Q $ is gemaakt naar Controlled-$U $, d.w.z. $ \sigma = \mathcal{O} (1/Q) $. Nu is de definitie van afwijking afhankelijk van verschillende schattings algoritmen. In sommige gevallen kan het betekenen dat er ten minste $ \mathcal{O} (1) $ waarschijnlijk is, de schattings fout $ | \hat{\phi}-\phi |\_\circ\le \sigma $ op een van de ronde maat eenheden $ \circ $. Voor een Robust Phase-schatting is de afwijking gelijk aan de variantie $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ als de periodieke fasen worden uitgepakt op een enkel eindig interval $ (-\pi, \pi] $. Nauw keuriger is de standaard afwijking in de robuuste fase schatting van de ongelijke waarde $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ Pi/Q, \end{align} $ $ waarbij de ondergrens is bereikt in de grens van de Maxi maal asymptotische grootte $Q $ en de bovenste gebonden is zelfs gegarandeerd voor kleine steek proeven.  Houd er rekening mee dat $n $ geselecteerd door de `bitsPrecision`-invoer, die impliciet $Q $ definieert.
+De belangrijkste functie van een robuuste fase schatting, die wordt gedeeld met de meeste andere nuttige varianten, is dat de reconstructie kwaliteit van $ \hat{\phi} $ in een bepaalde zin Heisenberg-Limited is. Dit betekent dat als de afwijking van $ \hat{\phi} $ van de werkelijke waarde $ \sigma $ is, $ \sigma $ inversisch wordt geschaald in verhouding tot het totale aantal query's $Q $ is gemaakt naar Controlled-$U $, d.w.z. $ \sigma = \mathcal{O} (1/Q) $. Nu is de definitie van afwijking afhankelijk van verschillende schattings algoritmen. In sommige gevallen kan het betekenen dat er ten minste $ \mathcal{O} (1) $ waarschijnlijk is, de schattings fout $ | \hat{\phi}-\phi |\_\circ\le \sigma $ op een van de ronde maat eenheden $ \circ $. Voor een Robust Phase-schatting is de afwijking gelijk aan de variantie $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ als de periodieke fasen worden uitgepakt op een enkel eindig interval $ (-\pi, \pi] $. Nauw keuriger is de standaard afwijking in de robuuste fase schatting van de ongelijke waarde $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ Pi/Q, \end{align} $ $, waarbij de ondergrens wordt bereikt in de grens van asymptot large $Q $, en de bovengrens gegarandeerd zelfs voor kleine steek proeven.  Houd er rekening mee dat $n $ geselecteerd door de `bitsPrecision`-invoer, die impliciet $Q $ definieert.
 
 Andere relevante gegevens zijn onder meer de geringe overhead van $1 $ ancilla Qubit, of de procedure is niet-adaptief, wat inhoudt dat de vereiste reeks Quantum experimenten onafhankelijk is van de tussenliggende meet resultaten. In deze en komende voor beelden, waarbij de keuze van het algoritme voor fase schatting belang rijk is, moet één van beide verwijzen naar de documentatie, zoals @"microsoft.quantum.canon.robustphaseestimation", en naar de publicaties waarnaar wordt verwezen voor meer informatie en voor de implementatie ervan.
 
 > [!TIP]
-> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), het [ **SimpleIsing** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)-voor beeld en het [ **Hubbard model** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
+> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
 
 
 ### <a name="continuous-oracles"></a>Continue Oracle ###
@@ -121,7 +121,7 @@ De [theorema van stenen](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-
 Een eigenstate $ \ket{\phi} $ van $H $ zodanig dat $H \ket{\phi} = \phi \ket{\phi} $ is dan ook een eigenstate van $U (t) $ voor alle $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
 
-De nauw keurige analyse die wordt besproken voor de schatting van de [Bayesiaanse fase](#bayesian-phase-estimation) kan worden toegepast en de waarschijnlijke functie is precies hetzelfde als voor dit algemenere Oracle-model: $ $ \Pr (\texttt{Zero} | \phi; t, \theta) = \cos ^ 2 \ Left (\frac{t [\phi-\theta]} @no__ t_1_ \right).
+De nauw keurige analyse die wordt besproken voor de schatting van de [Bayesiaanse-fase](#bayesian-phase-estimation) kan worden toegepast. de waarschijnlijke functie is precies hetzelfde als voor dit algemenere Oracle-model: $ $ \Pr (\texttt{Zero} | \phi; t, \theta) = \cos ^ 2 \ Left (\frac{t [\phi-\theta]}{2}\right).
 $ $ Bovendien, als $U $ een simulatie is van een dynamische generator, zoals het geval is voor [Hamiltonian-simulatie](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation), interpreteert $ \phi $ als energie.
 Met het gebruik van een fase-schatting met doorlopende query's kunnen we het gesimuleerde [Energy-spectrum van moleculen](https://arxiv.org/abs/quant-ph/0604193), [materialen](https://arxiv.org/abs/1510.03859) of [veld theoriesen](https://arxiv.org/abs/1111.3633v2) , zonder dat we de keuze van experimenten moeten doen, omdat $t $ een geheel getal moet zijn.
 

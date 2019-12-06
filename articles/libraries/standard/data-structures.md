@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184505"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864352"
 ---
 # <a name="data-structures-and-modeling"></a>Gegevens structuren en model lering #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184505"
 Naast door de gebruiker gedefinieerde typen voor het weer geven van Quantum concepten, biedt Canon ook bewerkingen, functies en typen voor het werken met klassieke gegevens die worden gebruikt in het beheer van Quantum systemen.
 Zo gebruikt de functie <xref:microsoft.quantum.arrays.reversed> een matrix als invoer en retourneert dezelfde matrix in omgekeerde volg orde.
 Dit kan vervolgens worden gebruikt voor een matrix van het type `Qubit[]` om te voor komen dat er onnodige $ \operatorname{SWAP} $ Gates moeten worden toegepast bij de conversie tussen Quantum representaties van gehele getallen.
-We hebben in de vorige sectie gezien dat typen van het formulier `(Int, Int -> T)` nuttig kunnen zijn voor het weer geven van wille keurige toegangs verzamelingen, zodat de <xref:microsoft.quantum.arrays.lookupfunction> functie een convienent manier biedt om dergelijke typen van matrix typen te bouwen.
+We hebben in de vorige sectie gezien dat typen van het formulier `(Int, Int -> T)` nuttig kunnen zijn voor het weer geven van wille keurige toegangs verzamelingen. de functie <xref:microsoft.quantum.arrays.lookupfunction> biedt daarom een handige manier om dergelijke typen van matrix typen samen te stellen.
 
 ### <a name="pairs"></a>Paarsgewijs ###
 
@@ -31,7 +31,7 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### <a name="arrays"></a>matrices ###
+### <a name="arrays"></a>Matrixen ###
 
 De Canon biedt verschillende functies voor het bewerken van matrices.
 Deze functies zijn van het type para meters en kunnen dus worden gebruikt met matrices van elk Q #-type.
@@ -73,11 +73,11 @@ Hier verwijst de term Oracle naar een blackbox-Quantum-subroutine die wordt toeg
 Deze subroutine kan vaak worden beschouwd als een invoer voor een Quantum algoritme die de Oracle accepteert, naast enkele andere para meters, en past een reeks Quantum bewerkingen toe en behandelt een aanroep naar deze Quantum subroutine alsof het een fundamenteel poort is.
 Uiteraard moet, om het grotere algoritme te implementeren, een concreet ontbinding van de Oracle in fundamentele Gates worden gegeven, maar een dergelijke ontbinding is niet nodig om inzicht te krijgen in het algoritme dat de Oracle aanroept.
 In Q # wordt deze abstractie vertegenwoordigd door gebruik te maken van de waarden van de eerste klasse, zodat bewerkingen kunnen worden door gegeven aan implementaties van Quantum algoritmen in een Black Box-manier.
-Daarnaast worden door de gebruiker gedefinieerde typen gebruikt voor het labelen van de verschillende Oracle-representaties op een type veilige manier, waardoor het moeilijk is om per ongeluk verschillende soorten Black Box-bewerkingen te verkleinen.
+Daarnaast worden door de gebruiker gedefinieerde typen gebruikt voor het labelen van de verschillende Oracle-representaties op een type veilige manier, waardoor het moeilijk is om verschillende soorten Black Box-bewerkingen per ongeluk te verkleinen.
 
 Dergelijke Oracle worden weer gegeven in een aantal verschillende contexten, waaronder beroemde-voor beelden zoals de zoek-en Quantum-simulatie algoritmen [van Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
 Hier richten we ons op de Oracle die nodig zijn voor slechts twee toepassingen: amplitude versterking en fase schatting.
-We bespreken eerst amplitude versterking van Oracle, voordat proceding wordt geschat.
+We bespreken eerst amplitude versterking van Oracle, voordat u verdergaat met de fase schatting.
 
 ### <a name="amplitude-amplification-oracles"></a>Met amplitude verhogen Oracle ###
 
@@ -94,7 +94,7 @@ De eerste Oracle die we nodig hebben om een amplitude versterking te maken, word
 De Oracle die de doel-subruimte markeert, $P _1 $ heeft precies hetzelfde formulier.
 Voor alle statussen $ \ket{x} $ in de doel-subruimte (bijvoorbeeld voor alle statussen die u wilt laten uitvoeren), $P _1 \ Ket {x} =-\ket{x} $.
 Op dezelfde manier geldt dat voor alle staten $ \ket{y} $ die zich niet in de doel ruimte bevinden $P _1 \ Ket {y} = \ket{y} $.
-Deze twee reflecties worden vervolgens gecombineerd tot een operator die één stap van de amplitude versterking informeert, $Q =-P_0 P_1 $, waarbij het totale minteken alleen belang rijk is om te overwegen in gecontroleerde toepassingen.
+Deze twee reflecties worden vervolgens gecombineerd om een operator te vormen die één stap van de amplitude versterking aanneemt, $Q =-P_0 P_1 $, waarbij het totale minteken alleen belang rijk is om te overwegen in beheerde toepassingen.
 De versterkings versterking van de amplitude gaat vervolgens door een initiële status, $ \ket{\psi} $, die zich in de eerste subruimte bevindt en voert vervolgens $ \ket{\psi} \mapsto Q ^ m \ket{\psi} $ uit.
 Het uitvoeren van een dergelijke iteratie garandeert dat als er een begin status is die overlap $ \sin ^ 2 (\theta) $ met de gemarkeerde ruimte bevat en na $m $ iteraties deze overlap ping wordt $ \sin ^ 2 ([2 min. + 1] \theta) $.
 Daarom wilt u $m $ kiezen als een gratis para meter, zodat $ [2 min. + 1] \theta = \ pi/2 $; dergelijke stijve keuzes zijn echter niet zo belang rijk voor sommige vormen van amplitude versterking, zoals het verhogen van een amplitude van het vaste punt.
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-We kunnen deze twee Oracle vervolgens samen combi neren om te roteren tussen de twee staten en een deterministische trans formatie $ \ket{+} ^ {\otimes n} $ tot $ \ket{0}$ met behulp van een aantal lagen Hadamard-Gates dat proportioneel is aan $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) ten opzichte van de ongeveer $2 ^ n $ lagen die nodig zouden zijn om niet-deterministisch de $ \ket-{0}$-status voor te bereiden door de eerste toestand voor te bereiden en te meten, totdat de uitkomst $0 $ wordt waargenomen.
+We kunnen deze twee Oracle vervolgens samen combi neren om te roteren tussen de twee staten en deterministischly transformeren $ \ket{+} ^ {\otimes n} $ tot $ \ket{0}$ met behulp van een aantal lagen Hadamard-Gates dat proportioneel is aan $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) ten opzichte van de ongeveer $2 ^ n $ lagen die nodig zouden zijn om de $ \ket{0}$-status niet-deterministisch voor te bereiden door de eerste toestand voor te bereiden en te meten tot het resultaat $0 $ wordt waargenomen.
 
 ### <a name="phase-estimation-oracles"></a>Fase schatting Oracle ###
 
 Voor een gefaseerde schatting zijn de Oracle enigszins natuurlijk iets meer.
 De beoogde fase schatting is het ontwerpen van een subroutine die kan worden gesampling van de eigenvalues van een unitary-matrix.
-Deze methode is indispensible in de Quantum simulatie omdat voor veel fysieke problemen in schei-en materiaal wetenschappen deze eigenvalues de grond staat Energies van Quantum systemen, die ons waardevolle informatie biedt over de fase diagrammen van materialen en reactie dynamiek voor moleculen.
+Deze methode is onmisbaar in de Quantum simulatie omdat voor veel fysieke problemen in schei kunde en materiaal wetenschappen deze eigenvalues de bodem status Energies van Quantum systemen bieden die ons waardevolle informatie over de fase diagrammen van materialen en reactie dynamiek voor moleculen.
 Elk soort fase schatting heeft een invoer unitary nodig.
 Deze unitary wordt standaard beschreven door een van de twee typen Oracle.
 
 > [!TIP]
 > Beide Oracle-typen die hieronder worden beschreven, zijn opgenomen in de voor beelden.
-> Zie het [ **PhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)-voor beeld voor meer informatie over continue query Oracle.
-> Zie het [ **IsingPhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)-voor beeld voor meer informatie over discrete query-Oracle.
+> Zie het [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)-voor beeld voor meer informatie over continue query Oracle.
+> Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)-voor beeld voor meer informatie over discrete query-Oracle.
 
 Het eerste type Oracle, waarmee we een discrete query Oracle aanroepen en vertegenwoordigen met het door de gebruiker gedefinieerde type <xref:microsoft.quantum.oracles.discreteoracle>, is alleen een unitary-matrix vereist.
 Als $U $ de unitary is waarvan de eigenvalues een schatting wil maken, is de Oracle voor $U $ gewoon een standaard voor een subroutine waarmee $U $ wordt geïmplementeerd.
@@ -167,7 +167,7 @@ De eigenvalues van deze matrix kan worden gebruikt om de overlap ping te ramen t
 Dit verdient de toepassing van de fase schatting met behulp van de Grover Oracle $Q $ als invoer van de moniker van de amplitude schatting.
 Een andere algemene toepassing, veel gebruikt in Quantum-metrologies, is een schatting van een kleine draai hoek.
 Met andere woorden, we willen $ \theta $ schatten voor een onbekende rotatie poort van het formulier $R _z (\theta) $.
-In dergelijke gevallen zou de subroutine waarmee we werken om deze vaste waarde van $ \theta $ voor de poort te leren kennen, $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ Theta/2} \end{bmatrix}.
+In dergelijke gevallen zou de subroutine waarmee we werken om deze vaste waarde van $ \theta $ voor de poort te leren kennen, $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ theta/2} \end{bmatrix}.
 \end{align} $ $
 
 Het tweede type Oracle dat in fase schatting wordt gebruikt, is de continue query Oracle, vertegenwoordigd door het <xref:microsoft.quantum.oracles.continuousoracle> type.
@@ -186,7 +186,7 @@ Dit is belang rijk voor het samen voegen van elke laatste ounce van efficiëntie
 
 Als concreet voor beeld moet u rekening houden met het probleem bij het schatten van de draai hoek van een Gate, maar de verwerkings frequentie van een Roteer Quantum systeem.
 De unitary die een dergelijke Quantum dynamiek beschrijft, is $U (t) = R_z (2 \ Omega t) $ voor ontwikkelings tijd $t $ en onbekende frequentie $ \omega $.
-In deze context kunnen we $U (t) $ voor elke $t $ simuleren met behulp van een enkele $R _z $-Gate. zo hoeft u zelf niet te beperken tot afzonderlijke query's voor de unitary.
+In deze context kunnen we $U (t) $ voor elke $t $ simuleren met behulp van één $R _z-Gate en zo dat zelf niet hoeft te worden beperkt tot afzonderlijke query's voor de unitary.
 Een dergelijk doorlopende model heeft ook de eigenschap die de frequenties groter dan $2 \ PI $ kan worden geleerd van fase schattings processen die doorlopende query's gebruiken omdat de fase-informatie die anders zou worden gemaskeerd door de vertakking van de functie logaritme kan worden aangetoond uit de resultaten van experimenten die worden uitgevoerd op niet-proportionele waarden van $t $.
 Daarom zijn problemen zoals deze continue query modellen voor de fase schatting Oracle niet alleen geschikt, maar ook de voor keur voor het discrete query model.
 Daarom heeft Q # functionaliteit voor beide vormen van query's en laten ze aan de gebruiker weten dat ze een fase schattings algoritme moeten afstemmen op hun behoeften en het type Oracle dat beschikbaar is.
@@ -199,17 +199,17 @@ Een primair doel van dynamische simulatie is het implementeren van de operator v
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-Wanneer tijd-ontwikkeling per term eenvoudig is om op een quantum computer te implementeren. Als $H _J $ bijvoorbeeld is een Pauli $X _1X_2 $-operator die wordt uitgevoerd op de eerste en 2e elementen van het REGI ster van de Qubit-`qubits`, kan de tijd voor elke periode $t $ worden geïmplementeerd door de bewerkings `Exp([PauliX,PauliX], t, qubits[1..2])`, die hand tekening heeft `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`, aan te roepen. Zoals verderop in Hamiltonian simulatie wordt beschreven, is één oplossing een benadering van de tijd evolutie van $H $ met een reeks eenvoudige bewerkingen
+Wanneer tijd-ontwikkeling per term eenvoudig is om op een quantum computer te implementeren. Als $H _j $ bijvoorbeeld een Pauli is $X _1X_2 $-operator die op de eerste en 2e elementen van de Qubit registreert `qubits`, kan de tijd voor elke periode $t $ worden geïmplementeerd door de bewerkings `Exp([PauliX,PauliX], t, qubits[1..2])`, die hand tekening heeft `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`, aan te roepen. Zoals verderop in Hamiltonian simulatie wordt beschreven, is één oplossing een benadering van de tijd evolutie van $H $ met een reeks eenvoudige bewerkingen
 
-$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 waarbij het gehele getal $r > $0 de aanpassings fout bepaalt.
 
 De model bibliotheek voor dynamische Generator biedt een framework voor het systematisch coderen van gecompliceerde generators in termen van eenvoudigere Generators. Een dergelijke beschrijving kan vervolgens worden door gegeven aan de simulatie bibliotheek voor het implementeren van tijd evolutie door een simulatie algoritme van keuze, waarbij veel details automatisch worden verwerkt.
 
 > [!TIP]
-> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators)-voor beeld.
-> Voor een voor beeld op basis van moleculaire water stof raadpleegt u de voor beelden van [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) en [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) .
+> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)-voor beeld.
+> Voor een voor beeld op basis van moleculaire water stof raadpleegt u de voor beelden van [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) en [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Volledige beschrijving van een generator ###
 
@@ -225,7 +225,7 @@ Het `GeneratorSystem` door de gebruiker gedefinieerde type is een klassieke besc
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-Het eerste element `Int` van de tuple slaat het aantal termen $d $ op in de Hamiltonian, en het tweede element `(Int -> GeneratorIndex)` is een functie die een integer-index in $\{0, 1,..., d-1\}heeft toegewezen aan een `GeneratorIndex` door de gebruiker gedefinieerd type waarmee elke primitieve term in de Hamiltonian. Houd er rekening mee dat door het verzamelen van voor waarden in de Hamiltonian als een functie in plaats van een matrix `GeneratorIndex[]`, dit het mogelijk maakt om de `GeneratorIndex` te berekenen die vooral nuttig is bij het beschrijven van Hamiltonians met een groot aantal voor waarden.
+Het eerste element `Int` van de tuple slaat het aantal termen $d $ op in de Hamiltonian, en het tweede element `(Int -> GeneratorIndex)` is een functie die een integer-index in $\{0, 1,..., d-1\}heeft toegewezen aan een `GeneratorIndex` door de gebruiker gedefinieerd type waarmee elke primitieve term in de Hamiltonian uniek wordt geïdentificeerd. Houd er rekening mee dat door het verzamelen van voor waarden in de Hamiltonian als een functie in plaats van een matrix `GeneratorIndex[]`, dit het mogelijk maakt om de `GeneratorIndex` te berekenen die vooral nuttig is bij het beschrijven van Hamiltonians met een groot aantal voor waarden.
 
 Het is van cruciaal belang dat we geen conventies opleggen voor de primitieve termen die zijn geïdentificeerd door de `GeneratorIndex` zijn gemakkelijk te simuleren. Primitieve termen kunnen bijvoorbeeld worden Pauli Opera tors zoals hierboven beschreven, maar ze kunnen ook Fermionic Annihilation zijn en Opera tors maken die vaak worden gebruikt in de vorm van quantum chemie. Op dit moment is een `GeneratorIndex` niet zo ongewijzigd, omdat er niet wordt beschreven hoe tijd-evolutie door de term waar deze naar wijst, kan worden geïmplementeerd als een Quantum circuit.
 
@@ -238,13 +238,13 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 ### <a name="pauli-operator-generators"></a>Pauli operator Generators ###
 
 Een concreet en nuttig voor beeld van generatoren zijn Hamiltonians die een som zijn van Pauli-Opera Tors, elk mogelijk met een andere coëfficiënt.
-$ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $ waarbij elke $ \hat H_j $ nu wordt getrokken van de Pauli-groep. Voor dergelijke systemen bieden we de `PauliEvolutionSet()` van het type `EvolutionSet` dat een conventie definieert voor de manier waarop een element van de groep Pauli en een coëfficiënt kunnen worden geïdentificeerd door een `GeneratorIndex`, dat de volgende hand tekening heeft.
+$ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $ waarbij elke $ \hat-H_j $ nu wordt getrokken van de Pauli groep. Voor dergelijke systemen bieden we de `PauliEvolutionSet()` van het type `EvolutionSet` dat een conventie definieert voor de manier waarop een element van de groep Pauli en een coëfficiënt kunnen worden geïdentificeerd door een `GeneratorIndex`, dat de volgende hand tekening heeft.
 
 ```qsharp
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-In onze code ring wordt met de eerste para meter `Int[]` een Pauli teken reeks opgegeven, waarbij $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2, en $ \hat Z\rightarrow $3. Met de tweede para meter `Double[]` wordt de coëfficiënt van de Pauli-teken reeks opgeslagen in de Hamiltonian. Houd er rekening mee dat alleen het eerste element van deze matrix wordt gebruikt. De derde para meter `Int[]` indexeert de qubits die door deze Pauli teken reeks wordt toegepast en mag geen dubbele elementen bevatten. De Hamiltonian term $0,4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ kan dus worden weer gegeven als
+In onze code ring wordt met de eerste para meter `Int[]` een Pauli teken reeks opgegeven, waarbij $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2, en $ \hat Z\rightarrow $3. Met de tweede para meter `Double[]` wordt de coëfficiënt van de Pauli-teken reeks opgeslagen in de Hamiltonian. Houd er rekening mee dat alleen het eerste element van deze matrix wordt gebruikt. De derde para meter `Int[]` indexeert de qubits die door deze Pauli teken reeks wordt toegepast en mag geen dubbele elementen bevatten. Daarom kan de Hamiltonian term $0,4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ worden weer gegeven als
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

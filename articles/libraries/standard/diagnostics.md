@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184488"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864335"
 ---
 # <a name="diagnostics"></a>Diagnostics #
 
@@ -42,7 +42,7 @@ Ter vergelijking: de doel computer van de [Toffoli Simulator](xref:microsoft.qua
 
 ## <a name="facts-and-assertions"></a>Feiten en verklaringen ##
 
-Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.techniques.testing-and-debugging), een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit`, kan worden aangeroepen als een *eenheids test*.
+Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.techniques.testing-and-debugging), kan een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit`, respectievelijk als een *eenheids test*worden gemarkeerd.
 Elke eenheids test bestaat doorgaans uit een klein Quantum programma, samen met een of meer voor waarden die de juistheid van het programma controleren.
 Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_, die de waarden van hun invoer (of _beweringen_) controleren, die de statussen controleren van een of meer qubits die worden door gegeven als invoer.
 
@@ -109,7 +109,7 @@ Als gevolg van de globale fase kunnen we echter kiezen $a\_i = $0, zodat we slec
 Daarom moeten we drie beweringen opgeven die onafhankelijk van elkaar zijn, om de status te bevestigen die we verwachten.
 We doen dit door de kans te vinden dat `Zero` wordt geobserveerd voor elke Pauli meting op $ \alpha $ en $ \beta $, en elk afzonderlijk te bevestigen.
 Laat $x $, $y $, en $z $ `Result` waarden voor Pauli $X $, $Y $ en $Z $-metingen.
-Vervolgens gebruikt u de functie kans voor Quantum metingen, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_ik \\\\ \Pr (y = \texttt{Zero} | \alpha , \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
+Vervolgens gebruikt u de functie kans voor Quantum metingen, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_ik \\\\ \Pr (y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
 \end{align}
 
 Met de <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>-bewerking worden deze verklaringen geïmplementeerd met de representaties van $ \alpha $ en $ \beta $ als waarden van het type <xref:microsoft.quantum.math.complex>.
@@ -129,7 +129,7 @@ Deze strategieën worden respectievelijk geïmplementeerd door de Canon Operatio
 
 > [!NOTE]
 > De benaderende bevestigingen die hierboven worden beschreven, zijn gebaseerd op de [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), een wiskundig Framework waarmee de bewerkingen op $n $ qubits worden gekoppeld aan Entangled Staten op $2n $ qubits.
-> Met name de identiteits bewerking op $n $ qubits wordt vertegenwoordigd door $n $ copies van de Entangled-status $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
+> Met name de identiteits bewerking op $n $ qubits wordt vertegenwoordigd door $n $ copies van de Entangled-status $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
 > Met de bewerking <xref:microsoft.quantum.preparation.preparechoistate> deze isomorphism geïmplementeerd, waarbij een status wordt voor bereid die een bepaalde bewerking vertegenwoordigt.
 
 Deze strategieën worden ongeveer onderscheiden door een tijd-spatie balans.

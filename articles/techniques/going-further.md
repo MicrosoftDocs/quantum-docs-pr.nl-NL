@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183298"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863143"
 ---
 # <a name="going-further"></a>Verder gaan #
 
 Nu u hebt gezien hoe u interessante Quantum Programma's schrijft in Q #, gaat u naar deze sectie voor meer informatie over een aantal geavanceerde onderwerpen die nuttig moeten worden behandeld.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Algemene bewerkingen en functies ##
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 Hier moeten we precies opgeven wat `A`, `B`en `C` zijn, waardoor het hulp programma van onze nieuwe `Compose` functie aanzienlijk wordt beperkt.
 Na alle is `Compose` alleen afhankelijk van `A`, `B`en `C` *via* `innerFn` en `outerFn`.
-Als alternatief kunnen we type parameters toevoegen aan `Compose` die aangeven dat het werkt voor *alle* `A`, `B`en `C`, zolang deze para meters overeenkomen met die van `innerFn` en `outerFn`:
+Als alternatief kunnen we type parameters toevoegen aan `Compose` die aangeven dat het werkt voor *alle* `A`, `B`en `C`, zolang deze para meters overeenkomen met de verwachte `innerFn` en `outerFn`:
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Houd er rekening mee dat uitgebreid gebruik van de `With` Combinator---in het formulier dat van toepassing is op bewerkingen die ondersteuning bieden voor adjoint, dat wil zeggen, `WithA`---is gemaakt in dit voor `With` beeld. het besturings element wordt door gegeven aan de binnenste bewerking. Naast de `body` van de bewerking is een implementatie van de `controlled` hoofd tekst van de bewerking expliciet gegeven, in plaats van een `controlled auto`-instructie te gebruiken. De reden hiervoor is dat we van de structuur van het circuit weten hoe u gemakkelijk verdere controles kunt toevoegen die nuttig zijn voor het toevoegen van controle aan elke afzonderlijke poort in de `body`. 
+Houd er rekening mee dat uitgebreid gebruik van de `With` Combinator---in het formulier dat van toepassing is op bewerkingen die ondersteuning bieden voor adjoint, dat wil zeggen `WithA`---is gemaakt in dit voor beeld. Dit is een goede programmeer stijl als het toevoegen van besturings elementen aan structuren die `With` alleen besturings elementen door geven aan de binnenste bewerking. Naast de `body` van de bewerking is een implementatie van de `controlled` hoofd tekst van de bewerking expliciet gegeven, in plaats van een `controlled auto`-instructie te gebruiken. De reden hiervoor is dat we van de structuur van het circuit weten hoe u gemakkelijk verdere controles kunt toevoegen die nuttig zijn voor het toevoegen van controle aan elke afzonderlijke poort in de `body`. 
 
 Het is een goed proces om deze code te vergelijken met een andere Canon-functie `MultiControlledXClean` die hetzelfde doel heeft als het implementeren van een met vermenigvuldiging beheerde `X`-bewerking, die gebruikmaakt van verschillende schone qubits met behulp van het `using`-mechanisme. 
