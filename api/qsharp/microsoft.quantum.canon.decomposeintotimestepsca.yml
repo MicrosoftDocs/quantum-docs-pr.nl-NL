@@ -37,7 +37,7 @@ input:
     summary: >-
       Hiermee selecteert u de volg orde van de Trotter – Suzuki integrator die moet worden gebruikt.
 
-      De volg orde 1 en 2 worden momenteel ondersteund.
+      Order 1 en zelfs orders 2, 4, 6,... worden momenteel ondersteund.
     isPrimitive: true
     uid: Int
 output:
@@ -62,9 +62,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type waarvoor elke stap moet worden uitgevoerd; normaal gesp roken wordt `Qubit[]` of `Qubit`.
 metadata:
-  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ac9e4b4359c77205b7a823c334222a049ff49c10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067829"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74863961"

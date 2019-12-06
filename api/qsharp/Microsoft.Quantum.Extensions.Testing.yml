@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertallzero".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertAllZero is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertallzero\".\nGebruik @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertAllZeroTol is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\".\nGebruik @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
-
-    Houd er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertOperationsEqualInPlace is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nGebruik @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nHoud er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
-
-    Houd er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertOperationsEqualInPlaceCompBasis is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\".\nGebruik @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nHoud er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
-
-    Houd er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertOperationsEqualReferenced is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nGebruik @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nHoud er rekening mee dat de volg orde van de argumenten voor deze bewerking is gewijzigd."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertqubit".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertQubit is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertqubit\".\nGebruik @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertQubitState is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\".\nGebruik @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertQubitTol is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\".\nGebruik @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210357"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858411"

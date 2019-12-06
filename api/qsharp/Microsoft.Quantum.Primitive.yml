@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.message".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nHet bericht is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.message\".\nGebruik @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.assert".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssert is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.assert\".\nGebruik @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.assertprob".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertProb is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.assertprob\".\nGebruik @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.ccnot".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nCCNOT is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.ccnot\".\nGebruik @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.cnot".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nCNOT is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.cnot\".\nGebruik @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.exp".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nEXP is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.exp\".\nGebruik @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.expfrac".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nExpFrac is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.expfrac\".\nGebruik @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.h".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nH is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.h\".\nGebruik @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.i".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nIk is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.i\".\nGebruik @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.m".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nM is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.m\".\nGebruik @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.measure".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMeting is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.measure\".\nGebruik @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.canon.applytoeachca".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMultix is afgeschaft. Gebruik in plaats daarvan @ \"applytoeachca (x, _)\".\nGebruik @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.r".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nR is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.r\".\nGebruik @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.r1".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nR1 is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.r1\".\nGebruik @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.r1frac".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nR1Frac is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.r1frac\".\nGebruik @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.random".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nWille keurig is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.random\".\nGebruik @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.reset".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nOpnieuw instellen is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.reset\".\nGebruik @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.resetall".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nResetAll is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.resetall\".\nGebruik @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.rfrac".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRFrac is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.rfrac\".\nGebruik @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.rx".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRX is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.rx\".\nGebruik @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.ry".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRK is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.ry\".\nGebruik @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.rz".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRZ is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.rz\".\nGebruik @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.s".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nS is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.s\".\nGebruik @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.swap".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSWAP is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.swap\".\nGebruik @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.t".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nT is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.t\".\nGebruik @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.x".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nX is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.x\".\nGebruik @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.y".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nY is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.y\".\nGebruik @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > Afgeschaft, gebruik @"microsoft.quantum.intrinsic.z".
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nZ is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.intrinsic.z\".\nGebruik @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216030"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858238"
