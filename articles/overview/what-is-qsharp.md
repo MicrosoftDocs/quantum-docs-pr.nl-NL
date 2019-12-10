@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529977"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864284"
 ---
 # <a name="what-is-q"></a>Wat is Q#?
 
@@ -25,12 +25,11 @@ De programmeertaal Q# biedt een intuïtieve set met typen, bewerkingen en logisc
 
 In het begintijdperk van de kwantumcomputing werden algoritmen gevisualiseerd als schema's, vergelijkbaar met circuitschema's in klassieke computing.  Hoewel het circuitmodel jarenlang nuttig is geweest in het onderzoek naar kwantumcomputing, zijn we bij Microsoft van mening dat kwantumcircuits nog maar het begin zijn voor ontwikkelaars en dat ze kwantumalgoritmen en -toepassingen kunnen ontwikkelen met Q#. Bij het ontwikkelen van de Q#-taal hebben we rekening gehouden met wat we hebben geleerd in tientallen jaren ontwikkeling van klassieke software om kwantumontwikkelaars te voorzien van een high-level taal die specifiek is gericht op kwantumcomputing.
 
-
 ## <a name="how-does-q-work"></a>Hoe werkt Q#?
 
 Een van de fundamentele bouwstenen van Q# is het `Qubit`-type, dat niet kan worden gekopieerd en ook niet rechtstreeks toegankelijk is, net als een echte qubit. In plaats daarvan kunnen we deze meten en het resultaat van de meting opslaan in een `Result`-variabele; een Q#-type dat twee mogelijke waarden kan aannemen: `Zero` en `One`. Constructies zoals deze garanderen dat algoritmen altijd de wetten van de kwantumfysica respecteren en correct kunnen worden uitgevoerd op kwantumcomputers of simulators.
 
-Q# bevat ook functies van klassieke logica zoals voorwaarden of lussen, met een aantal nuanceringen om ervoor te zorgen dat alle kwantumregels worden nageleefd. U kunt bijvoorbeeld beperken hoe lussen worden uitgevoerd om ervoor te zorgen dat kwantumbewerkingen correct worden beperkt.
+Q# bevat ook functies van klassieke logica zoals voorwaarden en lussen, met een aantal nuanceringen om ervoor te zorgen dat alle kwantumregels worden nageleefd. U kunt bijvoorbeeld de manier beperken waarop lussen worden uitgevoerd om ervoor te zorgen dat quantumbewerkingen niet worden aangeroepen binnen functies die alleen deterministische klassieke subroutines kunnen bevatten.
 
 Programma's geschreven in Q# zijn vaak gekoppeld aan een hostprogramma dat is geschreven in C# of Python, waarmee klassieke code en kwantumcode op een handige manier kunnen worden geordend. Naast de ondersteuning van talen zoals C# en Python biedt de QDK ondersteuning voor Jupyter-notebooks met de Jupyter-kernel IQ#.
 
