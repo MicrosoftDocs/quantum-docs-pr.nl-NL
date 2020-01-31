@@ -43,19 +43,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
   summary: "\n> [!WARNING]\n> Afgeschaft\n\nFiveQubitCodeEncoder is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nGebruik @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
-  summary: >-
-    Hiermee wordt een π/4-rotatie over `Y`uitgevoerd.
-
-
-    De rotatie wordt uitgevoerd door een magische status te gebruiken; dat wil zeggen, een kopie van de status $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
-
-    \end{align} $ $
+  summary: Hiermee roteert u één Qubit door π/4 over de Y-as.
 - uid: microsoft.quantum.errorcorrection.knilldistill
-  summary: >-
-    Implementeert het distillatie algoritme Knill Magic State.
-
-
-    Gegeven op 15 geschatte kopieën van een magische status $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ levert een kopie van een hogere kwaliteit.
+  summary: Implementeert het distillatie algoritme Knill Magic State.
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Meet de opgegeven set met Generators van een stabilisatoren groep.
 - uid: microsoft.quantum.errorcorrection.recover
@@ -92,9 +82,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Hiermee wordt een bewerking aangeduid die wordt gebruikt om de Syndrome van een fout-correct code blok te meten.
 metadata:
-  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858358"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870785"

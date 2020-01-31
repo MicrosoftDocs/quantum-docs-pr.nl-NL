@@ -3,32 +3,22 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Een amplitude versterking van Oracle voor gedeeltelijke reflecties.
-remarks: >-
-  Dit legt striktere voor waarden aan de vorm van de begin-en doel status dan in `AmpAmpByReflectionPhases`.
-
-  Er wordt van uitgegaan dat de doel status is gemarkeerd door $ \ket{1}\_f $.
-
-  Ervan wordt uitgegaan dat \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} in de meeste gevallen `flagQubit` en `ancillaRegister` worden geïnitialiseerd in de status $ \ket{0}\_{f} \ket{0}\_s $.
+summary: AmpAmpByOraclePhases is afgeschaft. Gebruik in plaats daarvan @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: Fasen van gedeeltelijke reflecties
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: Unitary Oracle $A $ waarmee begin status wordt voor bereid
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Index om Qubit te markeren
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Een bewerking waarbij amplitude versterking wordt geïmplementeerd door Oracle die worden geïmplementeerd door gedeeltelijke reflecties.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -42,9 +32,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a20dbb207841bf5dd9e46746814b4d7560cc67
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215826"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869225"

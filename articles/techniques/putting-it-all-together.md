@@ -1,23 +1,23 @@
 ---
-title: 'Q # technieken: alles op elkaar plaatsen | Microsoft Docs'
-description: 'Q # technieken: alles samen zetten'
+title: 'Alles op elkaar afzetten-Q # technieken | Microsoft Docs'
+description: 'Alles op elkaar afzetten: Q # technieken'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183264"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820161"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Alles combi neren: teleportie #
 We gaan terug naar het voor beeld van het telepoorts circuit dat is gedefinieerd in [Quantum circuits](xref:microsoft.quantum.concepts.circuits). We gaan deze gebruiken om de concepten te illustreren die we tot nu toe hebben geleerd. Hieronder vindt u een uitleg van Quantum teleportie voor degenen die niet bekend zijn met de theorie, gevolgd door een overzicht van de code-implementatie in Q #. 
 
 ## <a name="quantum-teleportation-theory"></a>Quantum-teleportie: theorie
-Quantum teleportal is een techniek voor het verzenden van een onbekende Quantum status (waarnaar we verwijzen als '__bericht__') van een Qubit op een locatie naar een Qubit op een andere locatie (deze worden naar deze qubits verwezen als '__hier__' en '__daar__', respectievelijk). We kunnen ons __bericht__ als een vector weer geven met behulp van de Dirac-notatie: 
+Quantum teleportal is een techniek voor het verzenden van een onbekende Quantum status (waarnaar we verwijzen als '__bericht__') van een Qubit op de ene locatie naar een Qubit op een andere locatie (hier verwijzen we naar deze qubits als '__hier__' en '__daar__'). We kunnen ons __bericht__ als een vector weer geven met behulp van de Dirac-notatie: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Als we de Hadamard-poort Toep assen op de eerste Qubit van elke periode van onze uitvoer hierboven, krijgen we het volgende resultaat:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Houd er rekening mee dat elke term $2 \frac{1}{\sqrt{2}} $-factoren heeft. We kunnen deze uitvermenigvuldigen met het volgende resultaat:
 
@@ -125,7 +125,7 @@ We moeten ook een Qubit toewijzen `here` die wordt gerealiseerd met een `using` 
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Stap 1: een Entangled-status maken
-Vervolgens kunnen we het Entangled-paar maken tussen `here` en `there` met behulp van de @"microsoft.quantum.primitive.h"-en @"microsoft.quantum.primitive.cnot"-bewerkingen:
+Vervolgens kunnen we het Entangled-paar maken tussen `here` en `there` met behulp van de @"microsoft.quantum.intrinsic.h"-en @"microsoft.quantum.intrinsic.cnot"-bewerkingen:
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Vervolgens gebruiken we de volgende $ \operatorname{CNOT} $ en $H $ Gates om onz
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Stap 3 & 4: het resultaat meten en interpreteren
-Ten slotte gebruiken we @"microsoft.quantum.primitive.m" om de metingen uit te voeren en de benodigde poort bewerkingen uit te voeren om de gewenste status te krijgen, zoals aangegeven door `if`-instructies:
+Ten slotte gebruiken we @"microsoft.quantum.intrinsic.m" om de metingen uit te voeren en de benodigde poort bewerkingen uit te voeren om de gewenste status te krijgen, zoals aangegeven door `if`-instructies:
 
 ```qsharp
         // Measure out the entanglement

@@ -1,0 +1,79 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+name: EstimateImagOverlapBetweenStates
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Op basis van twee bewerkingen die elk een kopie van een staat voorbereiden, wordt het imaginaire deel van de overlap ping tussen de staten die door elke bewerking zijn voor bereid.
+remarks: Deze bewerking maakt gebruik van de Hadamard-test om het imaginaire deel van $ $ \begin{align} \braket{\psi | te vinden. V ^ {\dagger} U | \psi} \end{align} $ $ waarbij $ \ket{\psi} $ de status is die is voor bereid door `commonPreparation`, $U $ de weer gave van de actie van `preparation1`is en waar $V $ overeenkomt met `preparation2`.
+syntax: 'operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
+references: '- Aharonov *et al.* [quantity-pH/0511096](https://arxiv.org/abs/quant-ph/0511096).'
+input:
+  content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: commonPreparation
+    summary: Een bewerking waarbij een vaste invoer status wordt voor bereid.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: preparation1
+    summary: De eerste van de twee status voorbereidings bewerkingen die moeten worden vergeleken.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: preparation2
+    summary: De tweede van de twee status voorbereidings bewerkingen die moeten worden vergeleken.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: nQubits
+    summary: Het aantal qubits waarvoor `commonPreparation`, `preparation1`en `preparation2` alle Act.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: Het aantal metingen dat moet worden gebruikt bij het schatten van de overlap ping.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+seeAlso:
+- microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+- microsoft.quantum.characterization.estimateoverlapbetweenstates
+metadata:
+  ms.openlocfilehash: 8d15c55627cc3cdf9167c7834fe8a1f1e0864fc1
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872849"

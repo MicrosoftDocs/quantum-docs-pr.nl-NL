@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210640"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820790"
 ---
 # <a name="quantum-circuits"></a>Quantum circuits
 Denk eens na over een ogen blik dat de unitary-trans formatie $ \Text{CNOT} _{01}(H\otimes 1) $.
@@ -39,7 +39,7 @@ Bijvoorbeeld het symbool
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-is de [Hadamard](xref:microsoft.quantum.primitive.h) -poort die fungeert als een Qubit-REGI ster.
+is de [Hadamard](xref:microsoft.quantum.intrinsic.h) -poort die fungeert als een Qubit-REGI ster.
 
 Quantum-Gates worden in chronologische volg orde gerangschikt met de meest linkse poort als de poort die voor het eerst op de qubits is toegepast.
 Met andere woorden, als u de draden bijhoudt als het gaat om de Quantum status, halen de draden de Quantum status door elk van de poorten in het diagram van links naar rechts.
@@ -81,7 +81,7 @@ Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diag
 ![](~/media/concepts_5.png)
 
 Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $1 $ heeft.
-Voor de speciale gevallen waarin $G = X $ en $G = Z $, introduceren we de volgende notatie om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)) is:
+Voor de speciale gevallen waarin $G = X $ en $G = Z $, introduceren we de volgende notatie om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) is:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Met name een dergelijk subcircuit ziet er als volgt uit:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![meet circuit](~/media/concepts_7.png)
 
-Q # implementeert een [meet operator](xref:microsoft.quantum.primitive.measure) voor dit doel.
+Q # implementeert een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
 Zie de [sectie over metingen](xref:microsoft.quantum.libraries.standard.prelude#measurements) voor meer informatie.
 
 Op dezelfde manier wordt het subcircuit

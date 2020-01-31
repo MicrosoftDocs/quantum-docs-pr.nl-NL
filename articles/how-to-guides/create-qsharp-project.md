@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864403"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819889"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Een Q #-project maken in uw ontwikkel omgeving
 
@@ -23,7 +23,7 @@ Een Q #-project bevat Q # bestanden met een Quantum code en een hostprogramma vo
 Kies uw ontwikkel omgeving en taal in de volgende secties:
 
 * [Python](#create-a-python-project)
-* [Jupyter-notebooks](#create-a-jupyter-notebook-project)
+* [Q # Jupyter-notebooks](#create-a-q-jupyter-notebook-project)
 * [C#met Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#met VS code](#create-a-c-project-using-vs-code)
 * [C#met de opdracht regel](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -32,7 +32,7 @@ Kies uw ontwikkel omgeving en taal in de volgende secties:
 
 1. Vereisten
 
-     * De [Quantum Development Kit voor python](xref:microsoft.quantum.install#develop-with-python)
+     * De [Quantum Development Kit voor python](xref:microsoft.quantum.install.python) installeren
 
 1. Maak een map voor uw project en navigeer naar die map
 
@@ -75,11 +75,11 @@ Kies uw ontwikkel omgeving en taal in de volgende secties:
 
 U kunt nu door gaan met het ontwikkelen van uw Quantum programma.
 
-## <a name="create-a-jupyter-notebook-project"></a>Een Jupyter Notebook project maken
+## <a name="create-a-q-jupyter-notebook-project"></a>Een Q # Jupyter Notebook-project maken
 
 1. Vereisten
 
-    * De [Quantum Development Kit voor Jupyter-notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * De [Quantum Development Kit voor Jupyter-notebooks](xref:microsoft.quantum.install.jupyter) installeren
 
 1. Voer de volgende opdracht uit om de Notebook-server te starten:
 
@@ -115,7 +115,7 @@ U kunt nu andere Q #-bewerkingen toevoegen om uw Quantum ontwikkeling voort te z
 
 1. Vereisten
 
-    * De [Quantum Development Kit voor Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * De [Quantum Development Kit-extensie voor Visual Studio](xref:microsoft.quantum.install.cs) installeren
 
 1. Maak een nieuwe Q#-toepassing
 
@@ -144,7 +144,7 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio
 
 1. Vereisten
 
-    * De [Quantum Development Kit voor VS code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * De [Quantum Development Kit-uitbrei ding voor VS code](xref:microsoft.quantum.install.cs) installeren
 
 1. Maak een nieuw project:
 
@@ -169,7 +169,7 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio code.
 
 1. Vereisten
 
-    * De [Quantum Development Kit voor de opdracht regel](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * De [Quantum Development Kit installeren voor de opdracht regel](xref:microsoft.quantum.install.cs)
 
 1. Een nieuwe toepassing maken
 

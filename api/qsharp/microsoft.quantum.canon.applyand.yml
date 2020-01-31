@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hiermee wordt een bepaalde doel-Qubit als en alleen als beide besturings qubits de status 1 hebben, met behulp van meting om de adjoint-bewerking uit te voeren.
+
+
+  Keer `target` alleen als beide besturings elementen 1 zijn, maar er wordt van uitgegaan dat `target` de status 0 heeft.  De bewerking heeft T-Count 4, T-diepte 2 en vereist geen helper-Qubit en kan daarom de voor keur geven aan een CCNOT-bewerking, als `target` bekend is als 0.  De adjoint van deze bewerking is gebaseerd op metingen en vereist geen T-poorten.
+
+
+  De beheerde toepassing van deze bewerking vereist geen helper Qubit, `2^c` `Rz` Gates en is niet geoptimaliseerd voor diepte, waarbij `c` het aantal algemene controle qubits is, inclusief de twee besturings elementen van de `ApplyAnd` bewerking.  Voor de door adjoint beheerde toepassing zijn `2^c - 1` `Rz` Gates vereist (met een hoek die twee maal zo groot is als de niet-adjoint bewerking), geen helper Qubit en is niet geoptimaliseerd voor diepte.
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: ' nieuwe constructies voor de fout tolerante Toffoli-Gate ', fysiek. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
+
+  - Craig Gidney: "de kosten van een Quantum toevoeging", Quantum 2, pagina 74, 2018 [arXiv: 1709.06648](https://arxiv.org/abs/1709.06648) DOI: 10.1103/PhysRevA. 85.044302
+
+  - Mathias soeken: "Quantum Oracle-circuits en het patroon kerst boom", [blog artikel van Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Opmerking: uitleg over de meerdere bewaakte constructie)
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Eerste besturings element Qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Qubit voor het tweede besturings element
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Doel-auxillary Qubit; moet de status 0 hebben
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872985"

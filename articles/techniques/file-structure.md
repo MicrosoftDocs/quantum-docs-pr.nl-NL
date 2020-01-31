@@ -1,18 +1,19 @@
 ---
-title: Inleiding tot het ontwikkelen van Quantum technieken | Microsoft Docs
-description: Inleiding tot het ontwikkelen van Quantum technieken
+title: 'Q # programma overzicht-Q # technieken | Microsoft Docs'
+description: 'Q # programma overzicht-Q # technieken'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442558"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820824"
 ---
-# <a name="q-program-overview"></a>Q # programma overzicht
+# <a name="q-program-overview"></a>Programmaoverzicht voor Q#
 
 Q # is een schaal bare, op domeinen gebaseerde programmeer taal die specifiek is voor het gebruik van Quantum Computing. Q # is een Quantum-programmeer taal in die IT kan worden gebruikt om te beschrijven hoe instructies op Quantum machines worden uitgevoerd. De computers waarop het bereik kan worden toegepast, kunnen variëren van simulatoren tot echte kwantum-hardware. Q # is schaalbaar: het kan worden gebruikt voor het schrijven van eenvoudige demonstratie Programma's, zoals het teleporteren die worden uitgevoerd op een paar qubits, maar biedt ook ondersteuning voor het schrijven van grote, geavanceerde Program ma's, zoals simulaties van complexe moleculen die grote machines met miljoenen qubits nodig hebben. Hoewel grote fysieke machines zich nog steeds in de toekomst bevinden, staat Q # toe dat een programmeur nu complexe Quantum algoritmen kan Program meren. Wat meer is, Q # ondersteunt diverse taken zoals fout opsporing, profile ring, resource schatting en bepaalde speciale simulaties op een schaal bare manier. 
 

@@ -6,20 +6,24 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864301"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820960"
 ---
 # <a name="distinct-inputs-checker"></a>Afzonderlijke invoer controle
 
 De `Distinct Inputs Checker` maakt deel uit van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het is ontworpen voor het detecteren van mogelijke fouten in de code. Houd rekening met de volgende Q #-code om de problemen te illustreren die door dit pakket worden gedetecteerd:
 
 ```qsharp
-operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
-
+operation ApplyBoth(
+    q1 : Qubit,
+    q2 : Qubit,
+    op1 : (Qubit => Unit),
+    op2 : (Qubit => Unit))
+: Unit {
     op1(q1);
     op2(q2);
 }
@@ -28,17 +32,16 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Wanneer de gebruiker dit programma bekijkt, wordt ervan uitgegaan dat de volg orde waarin `op1` en `op2` worden genoemd, niet van belang is omdat `q1` en `q2` verschillende qubits en bewerkingen op verschillende qubits werken. We gaan nu een voor beeld bekijken waarin deze bewerking wordt gebruikt:
 
 ```qsharp
-operation CapturedQubits () : Unit {
-
-    using (q = Qubit[3]) {
-        let op1 = CNOT(_, q[1]);
-        let op2 = CNOT(q[1], _);
-        DoBoth(q[0], q[2], op1, op2);
+operation ApplyWithNonDistinctInputs() : Unit {
+    using (qubits = Qubit[3]) {
+        let op1 = CNOT(_, qubits[1]);
+        let op2 = CNOT(qubits[1], _);
+        ApplyBoth(qubits[0], qubits[2], op1, op2);
     }
 }
 ```
 
-Nu `op1` en `op2` beide zijn verkregen met behulp van gedeeltelijke toepassing en een Qubit delen. Wanneer de gebruiker `DoBoth` in het bovenstaande voor beeld aanroept, is de volg orde van `op1` en `op2` binnen `DoBoth`afhankelijk van het resultaat van de bewerking. Dit is zeker niet wat de gebruiker zou verwachten te doen. De `Distinct Inputs Checker` detecteert dergelijke situaties wanneer deze zijn ingeschakeld en genereren `DistinctInputsCheckerException`. Zie de API-documentatie op [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) voor meer informatie.
+Nu `op1` en `op2` beide zijn verkregen met behulp van gedeeltelijke toepassing en een Qubit delen. Wanneer de gebruiker `ApplyBoth` in het bovenstaande voor beeld aanroept, is de volg orde van `op1` en `op2` binnen `ApplyBoth`afhankelijk van het resultaat van de bewerking. Dit is zeker niet wat de gebruiker zou verwachten te doen. De `Distinct Inputs Checker` detecteert dergelijke situaties wanneer deze zijn ingeschakeld en genereren `DistinctInputsCheckerException`. Zie de API-documentatie op [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) voor meer informatie.
 
 ## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>De afzonderlijke invoer controle gebruiken in uw C# programma
 

@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Met deze unitary wordt getest of twee gehele getallen `x` en `y` die zijn opgeslagen in Qubit-registers met een gelijke grootte, voldoen aan `x > y`. Als deze waarde True is, wordt 1 XORed in een uitvoer Qubit. Anders wordt 0 XORed in een uitvoer Qubit.
+  Met deze bewerking wordt getest of een geheel getal dat wordt vertegenwoordigd door een REGI ster van qubits groter is dan een ander geheel getal, waarbij een XOR van het resultaat wordt toegepast op een uitvoer Qubit.
 
 
-  Met andere woorden, deze unitary $U $ voldoet aan: $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+  Als er twee gehele getallen `x` en `y` zijn opgeslagen in de Qubit-registers met een gelijke grootte, controleert deze bewerking of ze voldoen aan `x > y`. Als deze waarde True is, wordt 1 XORed in een uitvoer Qubit. Anders wordt 0 XORed in een uitvoer Qubit.
 
-  \end{align} $ $.
+  Met andere woorden, deze bewerking kan worden weer gegeven door de unitary $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+  \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- Een nieuwe Quantum rimpel: Voeg circuit Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221096"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871121"

@@ -1,17 +1,17 @@
 ---
-title: 'Q # technieken-bewerkingen en functies | Microsoft Docs'
-description: 'Q # technieken-bewerkingen en functies'
+title: 'Bewerkingen en functies-Q # technieken | Microsoft Docs'
+description: 'Bewerkingen en functies-Q # technieken'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183451"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820773"
 ---
 # <a name="q-operations-and-functions"></a>Q # bewerkingen en functies
 
@@ -66,7 +66,7 @@ Als een bewerking een unitary-trans formatie implementeert, is het mogelijk om t
 Het bestaan van deze specials kan worden gedeclareerd als onderdeel van de hand tekening van de bewerking: `is Adj + Ctl` in het volgende voor beeld. De bijbehorende implementatie voor elke impliciet gedeclareerde specialisatie wordt vervolgens door de compiler gegenereerd. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-In het bovenstaande voor beeld geeft `adjoint invert;` aan dat de adjoint specialisatie moet worden gegenereerd door de implementatie van de hoofd tekst te omkeren en `controlled adjoint invert;` geeft aan dat de beheerde adjoint-specialisatie moet worden gegenereerd door de opgegeven implementatie van de beheerde specialisatie.
+In het bovenstaande voor beeld geeft `adjoint invert;` aan dat de adjoint-specialisatie moet worden gegenereerd door de implementatie van de hoofd tekst te omkeren en `controlled adjoint invert;` geeft aan dat de beheerde adjoint-specialisatie moet worden gegenereerd door de opgegeven implementatie van de beheerde specialisatie te omkeren.
 
 Er worden meer voor beelden weer gegeven in een [hogere controle stroom](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Elke keer dat `U` wordt aangeroepen, heeft het een andere actie op `target`.
 Met name kan de compiler niet garanderen dat als we een `adjoint auto` specialisatie-declaratie aan `U`hebben toegevoegd, vervolgens `U(target); Adjoint U(target);` als identiteit fungeert (dat wil zeggen, als niet op).
-Dit schendt de definitie van de adjoint die we hebben gezien in [vectoren en matrices](xref:microsoft.quantum.concepts.vectors), waardoor het automatisch genereren van een adjoint-specialisatie in een bewerking waarbij we de <xref:microsoft.quantum.math.randomreal> bewerking hebben aangeroepen, de door de compiler geboden garanties kan verstoren. ; <xref:microsoft.quantum.math.randomreal> is een bewerking waarvoor geen adjoint of gecontroleerde versie bestaat.
+Dit schendt de definitie van de adjoint die we hebben gezien in [vectoren en matrices](xref:microsoft.quantum.concepts.vectors), waardoor het automatisch genereren van een adjoint-specialisatie in een bewerking waarbij we de <xref:microsoft.quantum.math.randomreal> bewerking hebben aangeroepen, de door de compiler geboden garanties kan verstoren. <xref:microsoft.quantum.math.randomreal> is een bewerking waarvoor geen adjoint of gecontroleerde versie bestaat.
 
 Daarentegen is het mogelijk om functie aanroepen zoals `Square` veilig te maken, omdat de compiler er zeker van kan zijn dat de invoer alleen moet worden behouden voor `Square` om de uitvoer stabiel te houden.
 Door zo veel mogelijk klassieke logica in functies te isoleren, is het eenvoudig om die logica in andere functies en bewerkingen hetzelfde te hergebruiken.

@@ -1,25 +1,25 @@
 ---
 title: Primitieve bewerkingen teller | Quantum computer Trace Simulator | Microsoft Docs
-description: Overzicht van quantum computer Trace Simulator
+description: Overzicht van kwantumcomputer-traceersimulator
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: b7ec8b0d7a713051e36cb778c087050f0257710f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1f554c0a1b92c8f6b59be3a9d9965e0e25bd074f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184879"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820416"
 ---
 # <a name="primitive-operations-counter"></a>Teller voor primitieve bewerkingen  
 
-De `Primitive Operations Counter` maakt deel uit van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het telt het aantal primitieve uitvoeringen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. Alle bewerkingen van `Microsoft.Quantum.Primitive` worden uitgedrukt in termen van één Qubit rotatie, T-poorten, enkelvoudige Qubit Clifford-poorten, CNOT poorten en metingen van multi-Qubit Pauli observables. Verzamelde statistieken worden geaggregeerd over de randen van de operations call-grafiek. We tellen nu hoeveel `T` Gates nodig zijn voor het implementeren van de `CCNOT` bewerking. 
+De `Primitive Operations Counter` maakt deel uit van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het telt het aantal primitieve uitvoeringen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. Alle bewerkingen van `Microsoft.Quantum.Intrinsic` worden uitgedrukt in termen van één Qubit rotatie, T-poorten, enkelvoudige Qubit Clifford-poorten, CNOT poorten en metingen van multi-Qubit Pauli observables. Verzamelde statistieken worden geaggregeerd over de randen van de operations call-grafiek. We tellen nu hoeveel `T` Gates nodig zijn voor het implementeren van de `CCNOT` bewerking. 
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
-operation CCNOTDriver() : Unit {
+open Microsoft.Quantum.Intrinsic;
+operation ApplySampleWithCCNOT() : Unit {
 
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
@@ -30,7 +30,7 @@ operation CCNOTDriver() : Unit {
 
 ## <a name="using-the-primitive-operations-counter-within-a-c-program"></a>Het item primitieve bewerkingen in een C# programma gebruiken
 
-Ga als volgt te werk om te controleren of `CCNOT` enige 7 `T` poorten vereist en dat `CCNOTDriver` acht `T` poorten worden C# uitgevoerd, kunnen we de volgende code gebruiken:
+Ga als volgt te werk om te controleren of `CCNOT` enige 7 `T` poorten vereist en dat `ApplySampleWithCCNOT` acht `T` poorten worden C# uitgevoerd, kunnen we de volgende code gebruiken:
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
@@ -38,24 +38,24 @@ Ga als volgt te werk om te controleren of `CCNOT` enige 7 `T` poorten vereist en
 var config = new QCTraceSimulatorConfiguration();
 config.usePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
-var res = CCNOTDriver.Run(sim).Result;
+var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tCountAll = sim.GetMetric<CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
-double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
+double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
+double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-Het eerste deel van het programma voert `CCNOTDriver`uit. In het tweede deel gebruiken we de methode `QCTraceSimulator.GetMetric` om het aantal T-poorten te verkrijgen dat door `CCNOTDriver`wordt uitgevoerd: 
+Het eerste deel van het programma voert `ApplySampleWithCCNOT`uit. In het tweede deel gebruiken we de methode `QCTraceSimulator.GetMetric` om het aantal T-poorten te verkrijgen dat door `ApplySampleWithCCNOT`wordt uitgevoerd: 
 
 ```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
+double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
+double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-Als `GetMetric` wordt aangeroepen met twee type parameters, wordt de waarde van de metriek geretourneerd die is gekoppeld aan een bepaalde rand van de oproep grafiek. In de voorbeeld bewerking `Primitive.CCNOT` wordt aangeroepen in `CCNOTDriver`, waardoor de oproep grafiek de rand `<Primitive.CCNOT,CCNOTDriver>`bevat. 
+Als `GetMetric` wordt aangeroepen met twee type parameters, wordt de waarde van de metriek geretourneerd die is gekoppeld aan een bepaalde rand van de oproep grafiek. In de voorbeeld bewerking `Primitive.CCNOT` wordt aangeroepen in `ApplySampleWithCCNOT`, waardoor de oproep grafiek de rand `<Primitive.CCNOT, ApplySampleWithCCNOT>`bevat. 
 
 Om het aantal `CNOT` gebruikte poorten te verkrijgen, kunnen we de volgende regel toevoegen:
 ```csharp
-double cxCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.CX);
+double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
 Ten slotte kunnen we het volgende gebruiken voor het uitvoeren van alle statistieken die worden verzameld door de poort teller in CSV-indeling:

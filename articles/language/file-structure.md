@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185185"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821079"
 ---
 # <a name="file-structure"></a>Bestandsstructuur
 
@@ -84,7 +84,7 @@ Elk Q #-bron bestand kan een wille keurig aantal bewerkingen definiëren.
 
 Bewerkings namen moeten uniek zijn binnen een naam ruimte en kunnen niet conflicteren met type-en functie namen.
 
-Een bewerkings declaratie bestaat uit het tref woord `operation`, gevolgd door het symbool dat de naam van de bewerking is, een getypte id-tuple waarmee de argumenten voor de bewerking worden gedefinieerd, een dubbele punt `:`, een type aantekening die het resultaat type van de bewerking beschrijft, optioneel een aantekening met de bewerkings kenmerken, een open accolade `{`, de hoofd tekst van de bewerkings declaratie en een uiteindelijke sluitings accolade `}`.
+Een bewerkings declaratie bestaat uit het tref woord `operation`, gevolgd door het symbool dat de naam van de bewerking is, een getypte id-tuple waarmee de argumenten voor de bewerking worden gedefinieerd, een dubbele punt `:`, een type aantekening waarmee het resultaat type van de bewerking wordt beschreven, optioneel een aantekening met de bewerkings kenmerken, een open accolade `{`, de hoofd `}`tekst
 
 De hoofd tekst van de bewerkings declaratie bestaat uit de standaard implementatie of van een lijst met specials.
 De standaard implementatie kan rechtstreeks in de declaratie worden opgegeven als alleen de implementatie van de standaard hoofd code specialize expliciet moet worden opgegeven.
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-In het bovenstaande voor beeld geeft `adjoint invert;` aan dat de adjoint specialisatie moet worden gegenereerd door de implementatie van de hoofd tekst te omkeren en `controlled adjoint invert;` geeft aan dat de beheerde adjoint-specialisatie moet worden gegenereerd door de opgegeven implementatie van de beheerde specialisatie.
+In het bovenstaande voor beeld geeft `adjoint invert;` aan dat de adjoint-specialisatie moet worden gegenereerd door de implementatie van de hoofd tekst te omkeren en `controlled adjoint invert;` geeft aan dat de beheerde adjoint-specialisatie moet worden gegenereerd door de opgegeven implementatie van de beheerde specialisatie te omkeren.
 
 Voor een bewerking ter ondersteuning van de toepassing van de `Adjoint` en/of `Controlled` functor moet het retour type per se worden `Unit`. 
 
@@ -187,12 +187,12 @@ Voor `body` en `adjoint`moet de lijst met argumenten altijd worden `(...)`; voor
 Als een of meer specialisaties naast de standaard hoofd tekst expliciet moeten worden gedeclareerd, moet de implementatie voor de standaard hoofd tekst ook worden ingepakt in een geschikte specialisatie declaratie.
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Het is wettelijk om een bewerking zonder adjoint op te geven. meting bewerkingen
 Een bewerking ondersteunt de `Adjoint` functor als de bijbehorende declaratie een impliciete of expliciete declaratie van een adjoint specialize bevat.
 Een expliciet gedeclareerde beheerde adjoint specialisatie impliceert dat er een adjoint-specialisatie bestaat. 
 
-Voor een bewerking waarvan de hoofd tekst herhalen-tot-succes-lussen bevat, stelt u instructies, metingen, retour overzichten of aanroepen naar andere bewerkingen die de `Adjoint` functor niet ondersteunen, het automatisch genereren van een adjoint-specialisatie na de `invert` of @no__ de instructie t_2_ is niet mogelijk.
+Voor een bewerking waarvan de hoofd tekst herhalen-tot-succes-lussen bevat, stelt u instructies, metingen, retour overzichten of aanroepen naar andere bewerkingen die de `Adjoint` functor niet ondersteunen, het automatisch genereren van een adjoint-specialisatie volgens de `invert` of `auto`-instructie is niet mogelijk.
 
 ### <a name="controlled"></a>Gelijkrichter
 
@@ -236,7 +236,7 @@ Voor een bewerking waarvan de hoofd tekst aanroepen naar andere bewerkingen beva
 Een bewerkings declaratie kan zo eenvoudig zijn als het volgende, wat de primitieve Pauli X-bewerking definieert:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 Functions zijn louter klassieke routines in Q #.
 Elk Q #-bron bestand kan een wille keurig aantal functies definiëren.
 
-Een functie declaratie bestaat uit het tref woord `function`, gevolgd door het symbool dat de naam van de functie, een getypeerde id-tuple, een type aantekening is die het retour type van de functie beschrijft, en een instructie blok waarmee de implementatie van de functieassembly.
+Een functie declaratie bestaat uit het tref woord `function`, gevolgd door het symbool dat de naam van de functie, een getypeerde id-tupel, een type aantekening is die het retour type van de functie beschrijft, en een instructie blok waarmee de implementatie van de functie wordt beschreven.
 
 Het instructie blok dat een functie definieert, moet zijn Inge sloten in `{` en `}` als een ander instructie blok.
 

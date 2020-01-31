@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864386"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868965"
 ---
 # <a name="applications"></a>Applicaties #
 
@@ -69,15 +69,16 @@ Als voor beeld kan de ontleding van de Trotter-Suzuki worden aangeroepen met beh
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ We definiëren daarom de handige functie
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Hiermee wordt een unitary-bewerking geretourneerd waarmee alle stappen van de vo
 We definiëren ook een nuttige bewerking die automatisch alle stappen van een typische quantum chemie-experiment uitvoert. We hebben bijvoorbeeld het volgende, waarmee een energie schatting wordt geretourneerd van de status die is geproduceerd door de voor bereiding van de Adiabatic-status:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ De Controlled-$U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \Text{mod} N} $ als h
 Om $ (a ^ NX) \Text{mod} N $ toe te passen, kunnen we een beheerde $U _ {a ^ N} $ Toep assen, waar we $a ^ N \Text{mod} N $ op klassieke wijze berekenen om in het Quantum circuit aan te sluiten.  
 De circuits om dergelijke modulaire reken kundige berekeningen te realiseren, zijn beschreven in de [Quantum reken kundige documentatie](./algorithms.md#arithmetic). er is met name een modulair exponent circuit nodig om de beheerde $U\_{a ^ i} $ bewerkingen te implementeren.
 
-Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:microsoft.quantum.characterization.quantumphaseestimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. Canon. Een voor beeld van een [Robust Phase-schatting](xref:microsoft.quantum.characterization.robustphaseestimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
+Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:microsoft.quantum.characterization.quantumphaseestimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. karakte Rise ring. Een voor beeld van een [Robust Phase-schatting](xref:microsoft.quantum.characterization.robustphaseestimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
  
 ### <a name="factoring"></a>Waarbij ###
 Het doel van factoren is het bepalen van de twee Prime factoren van het gehele getal $N $, waarbij $N $ een $n $-bit-nummer is.  

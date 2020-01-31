@@ -37,11 +37,13 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.phaselittleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: ''
+  summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.phaselittleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: ''
+  summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.phaselittleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: ''
+  summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.phaselittleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.littleendian>.
+- uid: microsoft.quantum.arithmetic.applymajorityinplace
+  summary: Hiermee wordt de Qubit-hoofd bewerking in-place toegepast op een REGI ster van qubits.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
   summary: Past een bewerking toe die een <xref:microsoft.quantum.arithmetic.littleendian> registreert als invoer voor een doel register van het type <xref:microsoft.quantum.arithmetic.phaselittleendian>.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
@@ -67,11 +69,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyreversedopleca
   summary: Hiermee wordt een bewerking toegepast waarbij invoer van een geringe endian wordt gebruikt voor een registratie die een niet-ondertekend geheel getal versleutelt met de indeling big endian.
 - uid: microsoft.quantum.arithmetic.applyxorinplace
-  summary: >-
-    Hiermee worden `X` bewerkingen toegepast op qubits in een little-endian-REGI ster op basis van 1 bits in een geheel getal.
-
-
-    Laat ons `value` door a en laat y een niet-ondertekend geheel getal zijn dat is gecodeerd in `target`. vervolgens voert `InPlaceXorLE` een bewerking uit die is opgegeven door de volgende kaart: $ \ket{y}\rightarrow \ket{y\oplus a} $, waarbij $ \oplus $ de bitsgewijze exclusieve OR-operator is.
+  summary: Past een Bitsgewijze-XOR-bewerking toe tussen een klassiek geheel getal en een geheel getal dat wordt vertegenwoordigd door een REGI ster van qubits.
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
   summary: Hulp functie om te bevestigen dat een Quantum getal met een vaste komma wordt geïnitialiseerd op nul, dat wil zeggen dat alle qubits de status $ \ket{0}$ hebben.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
@@ -79,20 +77,14 @@ operations:
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
   summary: Hierbij wordt bevestigd dat de `number` gecodeerd in PhaseLittleEndian kleiner is dan `value`.
 - uid: microsoft.quantum.arithmetic.assertprobint
-  summary: >-
-    Hiermee wordt bevestigd dat de kans op een specifieke status van een Quantum register de verwachte waarde heeft.
-
-
-    Gezien een $n $-Qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, bevestiging dat de kans $ | \alpha_j | ^ 2 $ van de status $ \ket{j} $ geïndexeerd door $j $ de verwachte waarde heeft.
+  summary: Hiermee wordt bevestigd dat de kans op een specifieke status van een Quantum register de verwachte waarde heeft.
 - uid: microsoft.quantum.arithmetic.carry
   summary: Implementeert een geomkeerbaare transport poort. Op basis van een in-Qubit `carryIn` en twee summand bits die in `summand1` en `summand2`worden gecodeerd, wordt de Bitsgewijze XOR van `carryIn`, `summand1` en `summand2` in de Qubit `summand2` en de uitwerkings xored naar de Qubit `carryOut`berekend.
 - uid: microsoft.quantum.arithmetic.cascadeccnot
   summary: >-
     Hiermee wordt een trapsgewijs aantal CCNOT-poorten geïmplementeerd dat wordt beheerd op overeenkomstige bits van twee Qubit-registers, op de volgende Qubit van een van de registers.
 
-    Vanaf de qubits op positie 0 in beide registers als besturings elementen, wordt CCNOT toegepast op de Qubit op positie 1 van het doel register en vervolgens beheerd door de qubits op positie 1 op de Qubit op positie 2 in het doel register, enzovoort., eindigend met een actie op de doel-Qubit in positie `Length(nQubits)-1`.
-- uid: microsoft.quantum.arithmetic.cascadecnot
-  summary: Hiermee wordt een trapsgewijs aantal CNOT-poorten op naburige qubits geïmplementeerd in een opgegeven Qubit-REGI ster, vanaf de Qubit op positie 0 als controle aan de Qubit op positie 1 als doel, vanaf de Qubit op positie 1 als de controle van de Qubit op positie 2 als doel etc., eindigend met de Qubit in positie `Length(register)-1` als doel.
+    Vanaf de qubits op positie 0 in beide registers als besturings elementen, wordt CCNOT toegepast op de Qubit op positie 1 van het doel register en vervolgens beheerd door de qubits op positie 1 op de Qubit op positie 2 in het doel register, enz., eindigend met een actie op de doel-Qubit op positie `Length(nQubits)-1`.
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: Vergelijkt twee vaste-komma nummers die zijn opgeslagen in de Quantum registers en beheert een flip op het resultaat.
 - uid: microsoft.quantum.arithmetic.comparegti
@@ -100,13 +92,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.comparegtsi
   summary: 'Wrapper voor ondertekende integer-vergelijking: `result = xs > ys`.'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  summary: >-
-    Met deze unitary wordt getest of twee gehele getallen `x` en `y` die zijn opgeslagen in Qubit-registers met een gelijke grootte, voldoen aan `x > y`. Als deze waarde True is, wordt 1 XORed in een uitvoer Qubit. Anders wordt 0 XORed in een uitvoer Qubit.
-
-
-    Met andere woorden, deze unitary $U $ voldoet aan: $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
-
-    \end{align} $ $.
+  summary: Met deze bewerking wordt getest of een geheel getal dat wordt vertegenwoordigd door een REGI ster van qubits groter is dan een ander geheel getal, waarbij een XOR van het resultaat wordt toegepast op een uitvoer Qubit.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
   summary: Berekent $1/x $ voor een getal met vaste komma $x $.
 - uid: microsoft.quantum.arithmetic.computereciprocali
@@ -122,29 +108,15 @@ operations:
 - uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
   summary: Evalueert een polynoom in een vaste-komma weergave.
 - uid: microsoft.quantum.arithmetic.greaterthan
-  summary: Voert een strikt groter dan vergelijking van twee gehele getallen uit $x $ en $y $, gecodeerd in Qubit registreert XS en kalenderda. Als $x > y $, wordt het resultaat Qubit gespiegeld, anders de status behouden.
+  summary: Past een groter-dan-vergelijking toe tussen twee gehele getallen die zijn gecodeerd in Qubit-journalen, waarbij een doel-Qubit wordt gespiegeld op basis van het resultaat van de vergelijking.
 - uid: microsoft.quantum.arithmetic.incrementbyinteger
   summary: Verhoogt een niet-ondertekend Quantum register met een klassiek geheel getal, met behulp van fase rotaties.
 - uid: microsoft.quantum.arithmetic.incrementbymodularinteger
-  summary: >-
-    Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
-
-
-    Laat ons `increment` door een, `modulus` door N en een geheel getal dat is gecodeerd in `target` door y, de bewerking voert de volgende trans formatie uit: \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} gehele getallen worden gecodeerd in de indeling little-endian.
+  summary: Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
 - uid: microsoft.quantum.arithmetic.incrementphasebyinteger
   summary: Verhoogt een niet-ondertekend Quantum register met een klassiek geheel getal, met behulp van fase rotaties.
 - uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
-  summary: >-
-    Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
-
-
-    Laat ons `increment` door een, `modulus` door N en een geheel getal dat is gecodeerd in `target` op y, met de bewerking wordt de volgende trans formatie uitgevoerd: | y ⟩ ↦ | y + a (mod N) ⟩ gehele getallen worden gecodeerd in de indeling little endian in QFT basis
-- uid: microsoft.quantum.arithmetic.inplacemajority
-  summary: >-
-    Hiermee wordt de functie voor meerderheid in-place berekend op 3 qubits.
-
-
-    Als we output Qubit als $z $ en invoer qubits als $x $ en $y $ aanduiden, voert de bewerking de volgende trans formatie uit: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $.
+  summary: Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
 - uid: microsoft.quantum.arithmetic.invert2ssi
   summary: Hiermee wordt de complement van een gegeven integer modulo 2 omgekeerd.
 - uid: microsoft.quantum.arithmetic.maj
@@ -154,19 +126,11 @@ operations:
 - uid: microsoft.quantum.arithmetic.measureinteger
   summary: Hiermee wordt de inhoud van een Quantum register gemeten en omgezet in een geheel getal. De meting wordt uitgevoerd met betrekking tot de standaard berekening, d.w.z. de eigenbasis van `PauliZ`.
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
-  summary: >-
-    Voert een modulaire vermenigvuldiging en toevoegen door gehele getallen in een Qubit-REGI ster.
-
-
-    Implementeert de kaart $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N} \end{align} $ $ voor een bepaalde modulus $N $, constante multiplier $a $ en summand $y $.
+  summary: Voert een modulaire vermenigvuldiging en toevoegen door gehele getallen in een Qubit-REGI ster.
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
-  summary: Hetzelfde als ModularAddProductLE, maar er wordt van uitgegaan dat summand integers codeert in QFT-basis
+  summary: Hetzelfde als MultiplyAndAddByModularInteger, maar er wordt van uitgegaan dat de summand integers codeert in QFT.
 - uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  summary: >-
-    Voert modulaire vermenigvuldiging uit met een gehele constante in een Qubit-REGI ster.
-
-
-    Laat ons de modulus door N en constMultiplier door deze bewerking implementeert een unitary die is gedefinieerd door de volgende kaart op reken basis: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, voor alle y tussen 0 en N-1
+  summary: Voert modulaire vermenigvuldiging uit met een gehele constante in een Qubit-REGI ster.
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: Vermenigvuldigt twee vaste-komma getallen in Quantum registers.
 - uid: microsoft.quantum.arithmetic.multiplyi
@@ -176,22 +140,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Initialiseer een Quantum getal met een vaste komma naar een klassieke constante.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
-  summary: >-
-    Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
-
-    Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen, waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit `carry`.
+  summary: Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
     Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
 
-    Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen, waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit `carry`.
+    Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit-`carry`.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: Omkeerbaar, in-place rimpels, waarbij twee gehele getallen worden toegevoegd zonder dat ze worden uitgevoerd. Als twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian worden `xs` en `ys`, de bewerking de som van de twee gehele getallen modulo $2 ^ n $ berekent, waarbij $n $ de bitlengte is van de invoer `xs` en `ys`. De verwerkings bit wordt niet berekend.
+  summary: Omkeerbaar, in-place rimpels, waarbij twee gehele getallen worden toegevoegd zonder dat ze worden uitgevoerd.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Omkeerbaar, in-place rimpels, toevoeging van twee gehele getallen.
 
-    Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen, waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit `carry`.
+    Als er twee $n $-bitsinteger-waarden die zijn gecodeerd in LittleEndian, worden `xs` en `ys`en een Qubit-hand. de bewerking berekent de som van de twee gehele getallen waarbij de $n $ minst significante bits van het resultaat in `ys` worden gehouden en de verwerkings-bit is xored aan de Qubit-`carry`.
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Kwadraten van een nummer met vaste komma.
 - uid: microsoft.quantum.arithmetic.squarei
@@ -216,9 +177,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Type van een ondertekend geheel getal dat is opgeslagen in little endian (Zie LittleEndian).
 metadata:
-  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065143"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870439"

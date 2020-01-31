@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864369"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870346"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -39,11 +39,11 @@ In het bespreken van iteratieve fase-schattingen wordt een unitary-$U $ gegeven 
 Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), kan de Q # Canon dergelijke bewerkingen door het door de <xref:microsoft.quantum.oracles.discreteoracle> door de gebruiker gedefinieerde type gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Als `U : DiscreteOracle`, dan implementeert `U(m)` $U ^ m $ voor `m : Int`.
 
-Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een auxillary-Qubit in de status $ \ket{+} $ voor te bereiden, samen met de begin status $ \ket{\phi} $. er wordt van uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) van $U (m) $ is, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
+Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een hulp Qubit in de $ \ket{+} $-status voor te bereiden, samen met de aanvankelijke status $ \ket{\phi} $, wordt ervan uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) van $U is (m) $, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
 Er wordt vervolgens een beheerde toepassing van `U(m)` gebruikt waarbij de status $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $ wordt voor bereid.
 Net als in het Quantum geval is het effect van een beheerde toepassing van de Oracle-`U(m)` precies hetzelfde als het effect van het Toep assen van $R _1 $ voor de onbekende fase op $ \ket{+} $, zodat we de effecten van $U $ op deze eenvoudigere manier kunnen beschrijven.
 Zo kunt u met het algoritme het besturings element Qubit draaien door $R _1 (-m\theta) $ toe te passen om een status te verkrijgen $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
-De auxillary-Qubit die als besturings element voor `U(m)` wordt gebruikt, wordt vervolgens in de $X $-basis gemeten om één klassieke `Result`te verkrijgen.
+De hulp Qubit die wordt gebruikt als besturings element voor `U(m)`, wordt vervolgens in de $X $-basis gemeten om één klassieke `Result`te verkrijgen.
 
 Op dit moment is het opnieuw samen stellen van de fase van de `Result` waarden die zijn verkregen via een iteratieve fase schatting een klassiek statistisch probleem.
 Het vinden van de waarde van $m $ waarmee de opgedane informatie wordt gemaximaliseerd op basis van een vaste methode voor het afwijzen van een afwijzen, is gewoon een probleem met statistieken.
@@ -106,7 +106,7 @@ Een voor beeld van een efficiënte, klassieke, verwerkings stap is het algoritme
 
 De belangrijkste functie van een robuuste fase schatting, die wordt gedeeld met de meeste andere nuttige varianten, is dat de reconstructie kwaliteit van $ \hat{\phi} $ in een bepaalde zin Heisenberg-Limited is. Dit betekent dat als de afwijking van $ \hat{\phi} $ van de werkelijke waarde $ \sigma $ is, $ \sigma $ inversisch wordt geschaald in verhouding tot het totale aantal query's $Q $ is gemaakt naar Controlled-$U $, d.w.z. $ \sigma = \mathcal{O} (1/Q) $. Nu is de definitie van afwijking afhankelijk van verschillende schattings algoritmen. In sommige gevallen kan het betekenen dat er ten minste $ \mathcal{O} (1) $ waarschijnlijk is, de schattings fout $ | \hat{\phi}-\phi |\_\circ\le \sigma $ op een van de ronde maat eenheden $ \circ $. Voor een Robust Phase-schatting is de afwijking gelijk aan de variantie $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ als de periodieke fasen worden uitgepakt op een enkel eindig interval $ (-\pi, \pi] $. Nauw keuriger is de standaard afwijking in de robuuste fase schatting van de ongelijke waarde $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ Pi/Q, \end{align} $ $, waarbij de ondergrens wordt bereikt in de grens van asymptot large $Q $, en de bovengrens gegarandeerd zelfs voor kleine steek proeven.  Houd er rekening mee dat $n $ geselecteerd door de `bitsPrecision`-invoer, die impliciet $Q $ definieert.
 
-Andere relevante gegevens zijn onder meer de geringe overhead van $1 $ ancilla Qubit, of de procedure is niet-adaptief, wat inhoudt dat de vereiste reeks Quantum experimenten onafhankelijk is van de tussenliggende meet resultaten. In deze en komende voor beelden, waarbij de keuze van het algoritme voor fase schatting belang rijk is, moet één van beide verwijzen naar de documentatie, zoals @"microsoft.quantum.canon.robustphaseestimation", en naar de publicaties waarnaar wordt verwezen voor meer informatie en voor de implementatie ervan.
+Andere relevante gegevens zijn onder meer de geringe overhead van $1 $ ancilla Qubit, of de procedure is niet-adaptief, wat inhoudt dat de vereiste reeks Quantum experimenten onafhankelijk is van de tussenliggende meet resultaten. In deze en komende voor beelden, waarbij de keuze van het algoritme voor fase schatting belang rijk is, moet één van beide verwijzen naar de documentatie, zoals @"microsoft.quantum.characterization.robustphaseestimation", en naar de publicaties waarnaar wordt verwezen voor meer informatie en voor de implementatie ervan.
 
 > [!TIP]
 > Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
@@ -154,25 +154,27 @@ Zo kan een bewerking, zoals gezien in **H2Sample**, een iteratieve fase schattin
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Deze talloze fase schattings algoritmen zijn geoptimaliseerd voor verschillende eigenschappen en invoer parameters, die moeten worden begrepen om de beste keuze voor de doel toepassing te maken. Zo zijn sommige fase schattings algoritmen adaptief, wat betekent dat toekomstige stappen klassiek worden beheerd door de meet resultaten van de vorige stappen. In sommige gevallen is het de mogelijkheid om de exponentiate van de Black Box unitary Oracle door wille keurige echte bevoegdheden te laten opdoen, en andere hebben alleen geheeltallige bevoegdheden nodig, maar kunnen alleen een fase schatting modulo $2 \ Pi $ omzetten. Enkele vereisen veel auxillary-qubits en andere vereisen er slechts één.
+Deze talloze fase schattings algoritmen zijn geoptimaliseerd voor verschillende eigenschappen en invoer parameters, die moeten worden begrepen om de beste keuze voor de doel toepassing te maken. Zo zijn sommige fase schattings algoritmen adaptief, wat betekent dat toekomstige stappen klassiek worden beheerd door de meet resultaten van de vorige stappen. In sommige gevallen is het de mogelijkheid om de exponentiate van de Black Box unitary Oracle door wille keurige echte bevoegdheden te laten opdoen, en andere hebben alleen geheeltallige bevoegdheden nodig, maar kunnen alleen een fase schatting modulo $2 \ Pi $ omzetten. Er zijn veel hulp qubits vereist en anderen hebben er slechts één nodig.
 
 Op dezelfde manier wordt de schatting van de wille keurige Walk-fase op ongeveer dezelfde wijze uitgevoerd als voor andere algoritmen die bij de Canon worden gebruikt:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

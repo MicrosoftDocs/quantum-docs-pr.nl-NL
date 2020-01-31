@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+name: ApplyObliviousAmplitudeAmplification
+type: operation
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Oblivious-amplitude versterking door gedeeltelijke reflecties op te geven.
+remarks: >-
+  Een bepaalde hulp begin status $ \ket{\Text{start}}\_een $, een bepaalde hulp doel status $ \ket{\Text{target}}\_a $, en alle systeem status $ \ket{\psi}\_s $, stel dat \begin{align} O\ket {\ text {start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{target} ^ \perp}\_a\cdots \end{align} voor sommige unitary $U $.
+
+  Door een opeenvolging van reflecties over de begin-en doel statussen van het hulp REGI ster door toepassingen van `signalOracle` en de adjoint, is het mogelijk dat U de kans op het Toep assen van de toepassing kunt wijzigen.
+
+
+  In de meeste gevallen wordt `auxiliaryRegister` geïnitialiseerd in de status $ \ket{\Text{start}}\_een $.
+syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
+references: >-
+  Raadpleeg
+
+
+  - [ *D.W. Berry, A.M. Childs, r. Cleve, R. Kothari, R.D. Somma* ](https://arxiv.org/abs/1312.1414) voor de standaard versie.
+    Raadpleeg
+  - [ *G.H. laag, I.L. Chuang* ](https://arxiv.org/abs/1610.06546) voor een generalisatie tot gedeeltelijke reflecties.
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[])'
+  types:
+  - name: phases
+    summary: Fasen van gedeeltelijke reflecties
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: startStateReflection
+    summary: Reflectie operator over de begin status van de hulp registratie
+    uid: microsoft.quantum.oracles.reflectionoracle
+  - name: targetStateReflection
+    summary: Reflectie operator over de doel status van de hulp registratie
+    uid: microsoft.quantum.oracles.reflectionoracle
+  - name: signalOracle
+    summary: Unitary Oracle $O $ van het type `ObliviousOracle` dat gezamenlijk op de hulp-en systeem registers werkt.
+    uid: microsoft.quantum.oracles.obliviousoracle
+  - name: auxiliaryRegister
+    summary: Hulp registratie
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: systemRegister
+    summary: Systeem register
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872543"

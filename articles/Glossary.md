@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442546"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820756"
 ---
 # <a name="quantum-computing-glossary"></a>Woorden lijst voor Quantum Computing
 
@@ -39,9 +39,8 @@ ms.locfileid: "73442546"
 |Prelude|De set primitieve en klassieke bewerkingen en functies die zijn gedefinieerd door elke afzonderlijke doel machine, in plaats van op het niveau Q #.|
 |Quantum circuit|De representatie van een programma voor een quantum computer. Zie de sectie <xref:microsoft.quantum.concepts.circuits> voor meer informatie.|
 |Quantum status|Een weer gave van de qubits in het systeem. Dit wordt meestal aangeduid als een complexe kolom vector. Zie <xref:microsoft.quantum.concepts.vectors>voor meer informatie. |
-|qubit|Eenheid van Quantum opslag. Zie de sectie <xref:microsoft.quantum.concepts.qubit> voor meer informatie.|
+|Qubit|Eenheid van Quantum opslag. Zie de sectie <xref:microsoft.quantum.concepts.qubit> voor meer informatie.|
 |Herhalen-tot-geslaagd|Een Quantum algoritme dat probabilistically slaagt. Als het probleem is opgetreden, wordt de routine opnieuw geprobeerd tot geslaagd (of is er een limiet bereikt). |
-|Software stack|De volledige set klassieke en Quantum software, evenals de compilers, simulatoren en runtime die nodig zijn voor het uitvoeren van een quantum computer. Zie de sectie <xref:microsoft.quantum.concepts.software-stack> voor meer informatie. |
 |Doel computer|Een compilatie doel dat een abstract Quantum programma verlaagt naar hardware of simulatie. Dit omvat doorgaans herschrijf bewerkingen voor veel doelen, waaronder het vervangen van een Gate, code ring voor fout correctie, geometrische indeling en andere.|
 |Kaart|Door komma's gescheiden typen, gegroepeerd per haakje. |
 |Door de gebruiker gedefinieerd type|Verzameling van ingebouwde of eerder gedefinieerde typen die als één eenheid kunnen worden aangeduid.|

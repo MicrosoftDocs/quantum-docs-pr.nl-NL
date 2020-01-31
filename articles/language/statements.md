@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184862"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821062"
 ---
 # <a name="statements-and-other-constructs"></a>Instructies en andere constructs
 
@@ -54,8 +54,7 @@ Bijvoorbeeld:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Als er een korte naam `Z` voor `X.Y` is gedefinieerd in die naam ruimte en het b
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Soort gelijke instructies zijn beschikbaar voor alle binaire Opera tors waarin het type van de linkerkant van het expressie type overeenkomt. Dit biedt bijvoorbeeld een handige manier om waarden op te tellen:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Er bestaat een soort gelijke samen voeging voor expressies voor kopiëren en bij
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 In het geval van matrices bevatten onze standaard bibliotheken de benodigde hulpprogram ma's voor veel algemene matrix initialisatie en bewerkings behoeften. zo voor komt u dat u matrix items in de eerste plaats hoeft bij te werken. Instructies update-en-reassign bieden een alternatief als dat nodig is:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 De functie
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,8 +244,8 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 u kunt bijvoorbeeld eenvoudig eenvoudiger met de functie `ConstantArray` in `Microsoft.Quantum.Arrays`en een Kopieer-en-update-expressie retour neren:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
@@ -330,8 +325,8 @@ Bijvoorbeeld:
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ De hoofd tekst van de lus, de voor waarde en de reparatie worden beschouwd als �
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Als de voor waarde waar is, wordt de instructie voltooid. anders wordt de repara
 Houd er rekening mee dat het volt ooien van de uitvoering van de reparatie het bereik voor de instructie beëindigt, zodat symbool bindingen die zijn gemaakt tijdens de hoofd tekst of reparatie, niet beschikbaar zijn in volgende herhalingen.
 
 De volgende code is bijvoorbeeld een Probabilistic-circuit waarmee een belang rijke rotatie poort wordt geïmplementeerd $V _3 = (\boldone + 2 i Z)/\sqrt{5}$ met behulp van de Hadamard en T-poorten.
-De lus eindigt in 8/5 herhalingen op gemiddeld.
+De lus eindigt in $ \frac{8}{5}$ herhalingen op gemiddeld.
 Zie [*herhalen-tot-geslaagd: niet-deterministische ontleding van single-Qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick en Svore, 2014) voor meer informatie.
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -450,7 +445,7 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>opvragen
+### <a name="return"></a>Opvragen
 
 De instructie return beëindigt de uitvoering van een bewerking of functie en retourneert een waarde naar de aanroeper.
 Het bestaat uit het tref woord `return`, gevolgd door een expressie van het juiste type en een punt komma als scheidings tekens.
@@ -480,7 +475,7 @@ of
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Daarvan
+### <a name="fail"></a>Mislukt
 
 De instructie Fail beëindigt de uitvoering van een bewerking en retourneert een fout waarde naar de aanroeper.
 Het bestaat uit het tref woord `fail`, gevolgd door een teken reeks en een punt komma.
@@ -519,15 +514,15 @@ Initialisatie functies zijn beschikbaar voor één Qubit, aangeduid als `Qubit()
 Bijvoorbeeld:
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Dirty qubits
+### <a name="borrowed-qubits"></a>Geleed qubits
 
 De instructie `borrowing` wordt gebruikt om qubits te verkrijgen voor tijdelijk gebruik. De instructie bestaat uit het tref woord `borrowing`, gevolgd door een haakje openen `(`, een binding, een haakje sluiten `)`en het instructie blok waarbinnen de qubits beschikbaar is.
 De binding volgt hetzelfde patroon en dezelfde regels als in een `using`-instructie.
@@ -535,10 +530,10 @@ De binding volgt hetzelfde patroon en dezelfde regels als in een `using`-instruc
 Bijvoorbeeld:
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ De geleende qubits bevinden zich in een onbekende status en het vervalt buiten h
 De lenende door Voer om de qubits te verlaten in dezelfde staat waarin ze zich bevonden toen ze werden uitgeleend, d.w.z. hun status aan het begin en aan het einde van het blok van de verklaring, wordt naar verwachting hetzelfde.
 Deze status is in het bijzonder niet noodzakelijkerwijs een klassieke staat, zoals in de meeste gevallen, het lenen van scopes mag geen metingen bevatten. 
 
-Dergelijke qubits zijn vaak bekend als ' Dirty ancilla '.
-Bekijk [*factoring met behulp van 2n + 2 qubits met modulaire vermenigvuldiging op basis van Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een voor beeld van een vuil ancilla-gebruik.
+Bekijk [*factoring met behulp van 2n + 2 qubits met modulaire vermenigvuldiging op basis van Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een voor beeld van een geleend Qubit-gebruik.
 
 Wanneer qubits wordt uitgeleend, probeert het systeem eerst de aanvraag in te vullen vanuit qubits die in gebruik zijn, maar niet worden geopend tijdens de hoofd tekst van de `borrowing`-instructie.
 Als er onvoldoende qubits zijn, wordt er nieuwe qubits toegewezen om de aanvraag te volt ooien.

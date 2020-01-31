@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035126"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820433"
 ---
 # <a name="quantum-trace-simulator"></a>Kwantumtraceersimulator
 
@@ -24,29 +24,26 @@ De traceersimulator is afhankelijk van aanvullende gegevens die door de gebruike
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metingsresultaten opgeven
 
-Er zijn twee soorten metingen die voorkomen in kwantumalgoritmen. De eerste soort speelt een ondersteunende rol waarbij de gebruiker de waarschijnlijkheid van de resultaten doorgaans kent. In dit geval kan de gebruiker <xref:microsoft.quantum.primitive.assertprob> schrijven vanuit de naamruimte <xref:microsoft.quantum.primitive> om deze kennis uit te drukken. Het volgende voorbeeld illustreert dit:
+Er zijn twee soorten metingen die voorkomen in kwantumalgoritmen. De eerste soort speelt een ondersteunende rol waarbij de gebruiker de waarschijnlijkheid van de resultaten doorgaans kent. In dit geval kan de gebruiker <xref:microsoft.quantum.intrinsic.assertprob> schrijven vanuit de naamruimte <xref:microsoft.quantum.intrinsic> om deze kennis uit te drukken. Het volgende voorbeeld illustreert dit:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-Wanneer `AssertProb` wordt uitgevoerd met de traceersimulator, wordt vastgelegd dat aan meting `PauliZ` op `source` en `ancilla` een resultaat van `Zero` met een waarschijnlijkheid van 0,5 moet worden toegekend. Wanneer later `M` wordt uitgevoerd, worden de vastgelegde waarden van de waarschijnlijkheid van de resultaten gevonden en wordt voor `M` een resultaat van `Zero` of `One` geretourneerd met een waarschijnlijkheid van 0,5. Wanneer dezelfde code wordt uitgevoerd in een simulator die de kwantumtoestand bijhoudt, wordt in die simulator gecontroleerd of de in `AssertProb` opgegeven waarschijnlijkheden juist zijn.
+Wanneer `AssertProb` wordt uitgevoerd met de traceersimulator, wordt vastgelegd dat aan meting `PauliZ` op `source` en `q` een resultaat van `Zero` met een waarschijnlijkheid van 0,5 moet worden toegekend. Wanneer later `M` wordt uitgevoerd, worden de vastgelegde waarden van de waarschijnlijkheid van de resultaten gevonden en wordt voor `M` een resultaat van `Zero` of `One` geretourneerd met een waarschijnlijkheid van 0,5. Wanneer dezelfde code wordt uitgevoerd in een simulator die de kwantumtoestand bijhoudt, wordt in die simulator gecontroleerd of de in `AssertProb` opgegeven waarschijnlijkheden juist zijn.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Uw programma uitvoeren met de kwantumcomputertraceersimulator 
 

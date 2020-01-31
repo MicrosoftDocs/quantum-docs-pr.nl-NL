@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184607"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821028"
 ---
 # <a name="using-the-numerics-library"></a>De numerieke bibliotheek gebruiken
 
@@ -28,7 +28,7 @@ Al deze onderdelen kunnen worden geopend met behulp van een enkele `open`-instru
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Dergelijke
+## <a name="types"></a>Typen
 
 De numerieke bibliotheek ondersteunt de volgende typen
 
@@ -64,7 +64,7 @@ Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaa
     - Reciproque (1/x)
     - Meting (klassiek dubbel)
 
-Zie voor meer informatie en gedetailleerde documentatie voor elk van deze bewerkingen de Q # Library Reference docs op [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum)
+Zie voor meer informatie en gedetailleerde documentatie voor elk van deze bewerkingen de Q # Library Reference docs op [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Voor beeld: geheel getal toevoegen
 
@@ -72,15 +72,14 @@ Als basis voorbeeld moet u rekening houden met de bewerking $ $ \ket x\ket y\map
 
 Met de Quantum Development Kit kan deze bewerking als volgt worden toegepast:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -95,18 +94,18 @@ Als u vloeiende functies, zoals $ \sin (x) $ op een quantum computer, wilt evalu
 
 Met de eerste, `EvaluatePolynomialFxP`, kunt u een polynoom van de notatie $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, waarbij $d $ de *mate*aangeeft. Om dit te doen, zijn alle benodigde `[a_0,..., a_d]` de polynomiale coëfficiënten (van het type `Double[]`), de invoer `x : FixedPoint` en de uitvoer `y : FixedPoint` (aanvankelijk nul):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Het resultaat, $P (x) = 1 + 2x $, wordt opgeslagen in `yFxP`.
 
-De tweede, `EvaluateEvenPolynomialFxP`en de derde, `EvaluateOddPolynomialFxP`, zijn specialisaties voor de gevallen van respectievelijk zelfs en oneven functies. Dat wil zeggen, voor een functie $f (x) $ en $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ is goed geraamd op $P _ {ook} (x) $ of $P _ {oneven} (x): = x\cdot P_ {even} (x) $ respectievelijk.
+De tweede, `EvaluateEvenPolynomialFxP`en de derde, `EvaluateOddPolynomialFxP`, zijn specialisaties voor de gevallen van respectievelijk zelfs en oneven functies. Dat wil zeggen dat voor een even/oneven-functie $f (x) $ en $ $ P_ {ook} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ is goed geraamd op $P _ {ook} (x) $ of $P _ {oneven} (x): = x\cdot {even} (x) $. P_
 In Q # kunnen deze twee cases als volgt worden verwerkt:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 Hiermee wordt geëvalueerd $P _ {even} (x) = 1 + 2x ^ 2 $, en
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 Hiermee wordt geëvalueerd $P _ {oneven} (x) = x + 2x ^ 3 $.
 
