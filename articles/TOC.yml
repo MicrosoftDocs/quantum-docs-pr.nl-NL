@@ -26,10 +26,18 @@
       href: quickstart.md
     - name: Zoekalgoritme van Grover implementeren
       href: quickstarts/search.md
-- name: Handleidingen
+- name: Instructiegidsen
   items:
     - name: De QDK installeren
-      href: install-guide/index.md
+      items:
+        - name: Overzicht van de installatie
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q#-Jupyter-notebooks'
+          href: install-guide/qjupyter.md
     - name: De QDK bijwerken
       href: install-guide/update.md
     - name: 'Een Q#-project maken'

@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: Documentatie over Microsoft Quantum
-summary: Lees meer over het gebruik van de Microsoft Quantum Developer Kit en Q#, een taal voor kwantumalgoritmen. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma.
+title: Microsoft Quantum Development Kit
+summary: Lees meer over het gebruik van de Microsoft Quantum Development Kit en Q#, een taal om kwantumalgoritmen te programmeren.
 metadata:
-  title: Microsoft Quantum-documentatie - naslag-API voor Q#
-  description: Lees meer over het gebruik van de Microsoft Quantum Developer Kit en Q#, een taal voor kwantumprogrammeren. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma.  Verken de uitgebreide hulpprogramma's en bibliotheken van de Quantum Developer Kit.
+  title: Microsoft Quantum Development Kit - Q#-API-verwijzing
+  description: Lees meer over het gebruik van de Microsoft Quantum Development Kit en Q#, een taal om kwantumalgoritmen te programmeren. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma.  Verken de uitgebreide hulpprogramma's en bibliotheken van de Quantum Developer Kit.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
-  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
+  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/02/2019
-  ms.locfileid: "73442502"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76820722"
 landingContent:
 - title: Aan de slag met Microsoft Quantum
   linkLists:
@@ -39,14 +39,14 @@ landingContent:
       url: intro-to-katas.md
     - text: Bladeren door Q#-voorbeelden
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Ontwikkelen met Q#- en Python of Jupyter-notebooks
+- title: Ontwikkelen met Q#-en Python of Jupyter-notebooks
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Python installeren
-      url: install-guide/index.md#develop-with-python
+      url: install-guide/pyinstall.md
     - text: Jupyter installeren
-      url: install-guide/index.md#develop-with-jupyter-notebooks
+      url: install-guide/qjupyter.md
   - linkListType: how-to-guide
     links:
     - text: Q#-voorbeelden met Python
@@ -60,9 +60,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Visual Studio installeren
-      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      url: install-guide/csinstall.md
     - text: Visual Studio Code installeren
-      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+      url: install-guide/csinstall.md
 - title: Q#-voorbeelden
   linkLists:
   - linkListType: how-to-guide
@@ -83,7 +83,7 @@ landingContent:
       url: language/index.md
   - linkListType: how-to-guide
     links:
-    - text: Kwantumsimulatoren en hosttoepassingen
+    - text: Kwantumsimulators en hosttoepassingen
       url: machines/index.md
   - linkListType: how-to-guide
     links:
