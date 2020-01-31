@@ -7,26 +7,26 @@ summary: >-
   Maakt reflectie over een bepaalde status vanuit een Oracle.
 
 
-  Op basis van de Oracle-$O $ van het type <xref:microsoft.quantum.oracles.deterministicstateoracle>, is het resultaat van deze functie een reflectie rond de status $ \ket{\psi} $ waarin $O \ket{0} = \ket{\psi} $.
+  Gezien een determinstic-status voorbereidings-Oracle die wordt vertegenwoordigd door een unitary matrix $O $, is het resultaat van deze functie een Oracle dat een reflectie rond de status $ \ket{\psi} $ die is voor bereid door de Oracle-$O $; dat wil zeggen de status $ \ket{\psi} $, $O \ket{0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: Oracle van het type ' DeterministicStateOracle '
+    summary: Een Oracle die kopieën van de status $ \ket{\psi} $ voorbereidt.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: Een `ReflectionOracle` die overeenkomt met de status $ \ket{\psi} $.
+  - summary: Een Oracle die overeenkomt met de status $ \ket{\psi} $.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050323"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868931"

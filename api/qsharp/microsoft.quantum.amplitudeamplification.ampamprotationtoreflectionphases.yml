@@ -3,28 +3,21 @@ uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
 name: AmpAmpRotationToReflectionPhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Hiermee worden fasen die zijn opgegeven als Qubit rotaties geconverteerd naar fasen die zijn opgegeven als gedeeltelijke reflecties.
+summary: AmpAmpRotationToReflectionPhases is afgeschaft. Gebruik in plaats daarvan @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
 syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
-references: >-
-  We gebruiken de Conventie in
-
-
-  - [ *G.H. laag, I. L. Chuang* ](https://arxiv.org/abs/1707.05391) voor de andere rotatie fasen met één Qubit om de fasen van de operator te reflecties.
 input:
   content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
   types:
   - name: rotPhases
-    summary: Matrix van rotaties met één Qubit die moeten worden geconverteerd naar gedeeltelijke reflecties.
     uid: microsoft.quantum.amplitudeamplification.rotationphases
 output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
-  - summary: Een bewerking waarmee fasen worden geïmplementeerd die zijn opgegeven als gedeeltelijke reflecties.
-    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 2e4e447fd7ceef02249aa6577ff0274db046b9f2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 37dc7b7b0590ae4eaf04b2187898668de9163a37
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215605"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870815"

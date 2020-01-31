@@ -3,16 +3,54 @@ uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Herhaalt een variabele, zegt `arr`via een Cartesisch product [0, grenzen [0]-1] × [0, grenzen [1]-1] x [0, grenzen [lengte (grenzen)-1]-1] en aanroepen op (arr) voor elk element van het Cartesisch product
+summary: >-
+  Past een bewerking toe voor elke index in het Cartesisch product van verschillende bereiken.
+
+
+  Hiermee wordt een bewerking uitgevoerd voor elk element van het Cartesisch product van `0..(bounds[0] - 1)`, `0..(bounds[1] - 1)`,..., `0..(bounds[Length(bounds) - 1] - 1)`
+examples: >-
+  Op basis van een bewerking `op`zijn de volgende twee fragmenten gelijk:
+
+
+  ```Q#
+
+  IterateThroughCartesianProduct([3, 4, 5], op);
+
+  ```
+
+
+  ```Q#
+
+  op([0, 0, 0]);
+
+  op([1, 0, 0]);
+
+  op([2, 0, 0]);
+
+  op([0, 1, 0]);
+
+  // ...
+
+  op([0, 3, 0]);
+
+  op([0, 0, 1]);
+
+  //
+
+  op([2, 3, 4]);
+
+  ```
 syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] => Unit)) : Unit'
 input:
   content: '(bounds : Int[], op : (Int[] => Unit))'
   types:
   - name: bounds
+    summary: Een matrix die de bereiken specificeert die moeten worden herhaald, waarbij elk bereik wordt opgegeven als een integer lengte.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: op
+    summary: Een bewerking die moet worden aangeroepen voor elk element van het opgegeven Cartesisch product.
     isOperation: true
     input:
       types:
@@ -28,10 +66,12 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+seeAlso:
+- microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 273364aab3edd85c1cfeefe226e4ba5a29da4ad7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 440c120daf8a316dec1fbbab758f4f46a929d6a0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223000"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871240"

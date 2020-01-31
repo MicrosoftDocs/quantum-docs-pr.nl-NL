@@ -7,11 +7,13 @@ summary: >-
   Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
 
 
-  Laat ons `increment` door een, `modulus` door N en een geheel getal dat is gecodeerd in `target` op y, met de bewerking wordt de volgende trans formatie uitgevoerd: | y ⟩ ↦ | y + a (mod N) ⟩ gehele getallen worden gecodeerd in de indeling little endian in QFT basis
+  Laat ons `increment` door $a $ `modulus` door $N $ en een geheel getal dat is gecodeerd in `target` door $y $.
+
+  De bewerking voert vervolgens de volgende trans formatie uit: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} gehele getallen worden in QFT gebaseerd in de indeling little endian.
 remarks: >-
   Er wordt van uitgegaan dat `target` de hoogste bit heeft ingesteld op 0.
 
-  Er wordt ook van uitgegaan dat de waarde van target kleiner is dan N.
+  Er wordt ook van uitgegaan dat de waarde van target kleiner is dan $N $.
 
 
   Zie afbeelding 5 op [pagina 5 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5)voor het circuit diagram en de uitleg.
@@ -20,12 +22,15 @@ input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
+    summary: Geheel getal $a $ dat moet worden toegevoegd aan $y $.
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: Geheel getal $N $ dat modules $y + a $.
     isPrimitive: true
     uid: Int
   - name: target
+    summary: Geheel getal $y $ in een indeling met een little-endian met een fase die `increment` $a $ wordt toegevoegd aan.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -36,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularincrementle
+- microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 897e46cca640e714e1f000548ffd3226e8e27fa4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219022"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871410"

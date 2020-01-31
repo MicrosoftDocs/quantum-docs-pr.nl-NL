@@ -3,7 +3,11 @@ uid: microsoft.quantum.canon.applywithc
 name: ApplyWithC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Als er twee bewerkingen worden uitgevoerd, die respectievelijk worden beschreven door unitary Opera tors $U $ en $V $, worden deze toegepast in de volg orde $U ^ {\dagger} V U $. Dat wil zeggen dat met deze bewerking de unitary-operator wordt geïmplementeerd die is opgegeven door $V $ geconjugeerde met $U $.
+summary: >-
+  Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
+
+
+  Als er twee bewerkingen worden uitgevoerd, die respectievelijk worden beschreven door unitary Opera tors $U $ en $V $, worden deze toegepast in de volg orde $U ^ {\dagger} V U $. Dat wil zeggen dat met deze bewerking de unitary-operator wordt geïmplementeerd die is opgegeven door $V $ geconjugeerde met $U $.
 remarks: Er wordt altijd aangenomen dat de buitenste bewerking adjointable is, maar deze hoeft niet te worden bestuurd om de gecombineerde bewerking te kunnen bewerkbaar te maken.
 syntax: "operation ApplyWithC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit"
 input:
@@ -54,9 +58,9 @@ seeAlso:
 - applywitha
 - applywithca
 metadata:
-  ms.openlocfilehash: 583ac4b57df9f2585308dea549bc3730fac7bdae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c8ef86ff567e612fa9a49b981435e800a4b80ffb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212783"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871308"
