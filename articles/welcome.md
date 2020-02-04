@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530021"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819924"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 
-Welkom bij de Microsoft Quantum Development Kit.  Hier vindt u alle hulpprogramma's die u nodig hebt om meer te weten te komen over kwantumprogrammering met Q#.  We hebben een introductiehandleiding ontwikkeld om u op weg te helpen met kwantumcomputing met Q#. Dit is een handleiding voor zowel degenen die willen beginnen met het coderen van kwantumprogramma's als degenen die nog niet klaar zijn om te beginnen met coderen maar op zoek zijn naar meer informatie over Q# en kwantumprogrammering.
+Welkom bij de Microsoft Quantum Development Kit.  Hier vindt u alle hulpprogramma's die u nodig hebt om meer te weten te komen over kwantumprogrammering met Q#.  We hebben een introductiehandleiding ontwikkeld om u op weg te helpen met kwantumcomputing met Q#. Dit is een handleiding voor degenen die willen beginnen met het coderen van kwantumprogramma's en degenen die nog niet klaar zijn om te beginnen met coderen maar op zoek zijn naar meer informatie over Q# en kwantumprogrammering. 
+
+Als u klaar bent om te beginnen met coderen, [installeert u nu de QDK](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>Vijf vragen over kwantumcomputing
 
@@ -54,9 +56,8 @@ De Aan de slag-handleidingen en artikelen hierboven zijn bedoeld om zowel progra
 * Bekijk onze [Q#-voorbeelden](https://docs.microsoft.com/samples/browse/?languages=qsharp) en ontdek welke problemen u met kwantumcomputing kunt oplossen.
 
 * Ontwikkel op uw eigen computer met de hostprogrammeertaal en ontwikkelomgeving van uw keuze:
-  * Ontwikkelen met [Python](xref:microsoft.quantum.install#develop-with-python)
-  * Ontwikkelen met [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Ontwikkelen met [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
-  * Ontwikkelen met [Jupyter-notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+  * Ontwikkelen met [Q# + Python](xref:microsoft.quantum.install.python)
+  * Ontwikkelen met [Q# + C#](xref:microsoft.quantum.install.cs)
+  * Ontwikkelen met [Q#-Jupyter-notebooks](xref:microsoft.quantum.install.jupyter)
 
 * Word lid van de Microsoft Quantum-community en lever een bijdrage aan het [QDK](xref:microsoft.quantum.contributing) open source-project

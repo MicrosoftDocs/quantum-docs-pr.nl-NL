@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444137"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821096"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kwantumcomputing leren met de Quantum Katas
 
@@ -19,7 +19,7 @@ De [Quantum Katas](https://github.com/Microsoft/QuantumKatas/) bestaan uit een o
 
 ## <a name="learning-by-doing"></a>Leren door te doen
 
-De zelfstudies en katas in dit project benadrukken het leren door te doen: ze bevatten programmeertaken die betrekking hebben op bepaalde onderwerpen en die variëren van zeer eenvoudig tot moeilijk. Voor elke taak moet u bepaalde code invullen. Voor de eerste taken is dat misschien maar één regel, terwijl u voor de daaropvolgende taken mogelijk een aanzienlijk codefragment moet maken.
+De zelfstudies en oefeningen in dit project benadrukken het leren door te doen: ze bevatten programmeertaken die betrekking hebben op bepaalde onderwerpen en die variëren van zeer eenvoudig tot moeilijk. Voor elke taak moet u bepaalde code invullen. Voor de eerste taken is dat misschien maar één regel, terwijl u voor de daaropvolgende taken mogelijk een aanzienlijk codefragment moet maken.
 
 Het allerbelangrijkste is echter dat de katas testomgevingen bevatten waarmee de oplossingen voor de taken worden ingesteld, uitgevoerd en gevalideerd. Hierdoor kunt u onmiddellijk feedback krijgen over uw oplossing en kunt u uw aanpak indien nodig wijzigen als deze onjuist blijkt te zijn.
 
@@ -36,10 +36,12 @@ Hier volgt een overzicht van de belangrijkste onderwerpen die worden behandeld i
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Concepten van kwantumcomputing
 
-* [Complexe wiskundige bewerkingen](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [Lineaire algebra](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [Het concept van een qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Kwantumpoorten met één qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Complexe wiskundige bewerkingen](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [Lineaire algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [Het concept van een qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Kwantumpoorten met één qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Systemen met meerdere qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Poorten met meerdere qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>Basisprincipes van kwantumcomputing
 
@@ -52,10 +54,10 @@ Hier volgt een overzicht van de belangrijkste onderwerpen die worden behandeld i
 
 * [Kwantumteleportatie](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Superdense codering](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Deutsch–Jozsa-algoritme](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Deutsch–Jozsa-algoritme](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Zoekalgoritme van Grover implementeren](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Algemene eigenschappen van zoekalgoritme van Grover ontdekken](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Echte problemen oplossen met behulp van het algoritme van Grover: [SAT-problemen](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) en [problemen met graafkleuren](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Algemene eigenschappen van zoekalgoritme van Grover ontdekken](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Echte problemen oplossen met behulp van het algoritme van Grover: [SAT-problemen](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) en [problemen met graafkleuren](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>Protocollen en bibliotheken
 
@@ -66,8 +68,8 @@ Hier volgt een overzicht van de belangrijkste onderwerpen die worden behandeld i
 
 ### <a name="entanglement-games"></a>Verstrengelingsgames
 
-* [CHSH-game](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [GHZ-game](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [CHSH-game](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [GHZ-game](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [Mermin-Peres Magic Square-game](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>Resources
