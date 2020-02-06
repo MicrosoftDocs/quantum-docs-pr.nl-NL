@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819889"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036437"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Een Q #-project maken in uw ontwikkel omgeving
 
@@ -87,7 +87,7 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum programma.
     jupyter notebook
     ```
 
-1. Blader naar de URL die wordt weergegeven op de opdrachtregel. Bijvoorbeeld: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. Blader naar de URL die wordt weergegeven op de opdrachtregel. Bijvoorbeeld: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. Er wordt een Jupyter-pagina weer gegeven in de browser. Op het tabblad **bestanden** selecteert u **Nieuw** > **Q #** om een Jupyter-notebook met een Q #-kernel te maken. Voeg de volgende code toe aan de eerste notebook-cel:
 
@@ -173,7 +173,7 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio code.
 
 1. Een nieuwe toepassing maken
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio code.
 
 1. De toepassing uitvoeren
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -195,6 +195,6 @@ U kunt nu door gaan met het ontwikkelen van uw Quantum met Visual Studio code.
 
 U kunt nu door gaan met de Quantum ontwikkeling met behulp van opdracht regel Programma's.
 
-## <a name="whats-next"></a>En verder?
+## <a name="whats-next"></a>Volgende stappen
 
 Nu u een project in uw voorkeurs omgeving hebt gemaakt, kunt u uw Quantum ontwikkeling voortzetten.

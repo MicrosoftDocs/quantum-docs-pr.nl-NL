@@ -6,23 +6,23 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185202"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036307"
 ---
 # <a name="expressions"></a>Expressies
 
-## <a name="grouping"></a>Shapes
+## <a name="grouping"></a>shapes
 
 Op basis van een expressie is dezelfde expressie die tussen haakjes staat, een expressie van hetzelfde type.
 `(7)` is bijvoorbeeld een `Int` expressie, `([1,2,3])` een expressie van het type matrix van `Int`s en `((1,2))` is een expressie van het type `(Int, Int)`.
 
 De equivalentie tussen eenvoudige waarden en enkele Tuples die in [het type model](xref:microsoft.quantum.language.type-model#tuple-types) worden beschreven, verwijdert de dubbel zinnigheid tussen `(6)` als een groep en `(6)` als een tuple met één element.
 
-## <a name="symbols"></a>Mogen
+## <a name="symbols"></a>Symbolen
 
 De naam van een symbool dat is gekoppeld aan of is toegewezen aan een waarde van het type `'T` is een expressie van het type `'T`.
 Als het symbool `count` bijvoorbeeld is gebonden aan de gehele waarde `5`, is `count` een expressie voor gehele getallen.
@@ -61,7 +61,7 @@ In dit geval moet de tweede para meter in 32 bits passen; Als dat niet het geval
 
 Als er twee integere of Big Integer-expressies zijn opgegeven, kan een nieuwe integer of Big Integer-expressie worden gevormd met behulp van de `%` (modulus), `&&&` (bitsgewijze AND), `|||` (bitsgewijze OR) of `^^^` (Bitsgewijze XOR)-opera tors.
 
-Geef een geheel getal of een Big Integer-expressie aan de linkerkant en een expressie met gehele getallen aan de rechter kant, de `<<<` (reken kundige verschuiving links) of `>>>` (reken kundige rechter verschuiving) opera tors kunnen worden gebruikt voor het maken van een nieuwe expressie met hetzelfde type als de linkerhand expressie.
+Als er een geheel getal of een Big Integer-expressie aan de linkerkant wordt gegeven en een expressie met gehele getallen aan de rechter kant, kunnen de `<<<` (reken kundige Shift-toets links) of `>>>` (reken kundige rechter verschuiving) worden gebruikt voor het maken van een nieuwe expressie met hetzelfde type als de linker expressie.
 
 De tweede para meter (de waarde van de ploeg) naar een Shift-bewerking moet groter dan of gelijk aan nul zijn. het gedrag voor negatieve verschuivings bedragen is niet gedefinieerd.
 Het aantal ploegen voor een Shift-bewerking moet ook in 32 bits passen. Als dat niet het geval is, wordt er een runtime-fout gegenereerd.
@@ -94,9 +94,9 @@ Als een geheel getal of een Big Integer-expressie is opgegeven, kan een nieuwe e
 De twee `Bool` letterlijke waarden zijn `true` en `false`.
 
 Als u twee expressies van hetzelfde primitieve type hebt opgegeven, kunnen de binaire Opera tors `==` en `!=` worden gebruikt om een `Bool` expressie te maken.
-De expressie is waar als de twee expressies (niet) gelijk zijn.
+De expressie is waar als de twee expressies gelijk zijn en ONWAAR als dat niet het geval is.
 
-Waarden van door de gebruiker gedefinieerde typen mogen niet worden vergeleken, alleen de waarden ervan kunnen worden vergeleken. Bijvoorbeeld:
+Waarden van door de gebruiker gedefinieerde typen mogen niet worden vergeleken; alleen de waarden die worden teruggestuurd, kunnen worden vergeleken. Als u bijvoorbeeld de operator ' teruglopend ' gebruikt `!` (Zie de [pagina Q # type model](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ De status van de twee qubits wordt niet vergeleken, geopend, gemeten of gewijzig
 Gelijkheids vergelijking voor `Double` waarden kan misleiden door Afrondings effecten.
 Bijvoorbeeld `49.0 * (1.0/49.0) != 1.0`.
 
-Met een wille keurige combi natie van twee numerieke expressies kunnen de binaire Opera tors `>`, `<`, `>=`en `<=` worden gebruikt voor het maken van een nieuwe booleaanse expressie die waar is als de eerste expressie respectievelijk groter is dan, kleiner dan, groter dan of gelijk aan of kleiner dan of gelijk aan de tweede expressie.
+Met een wille keurige combi natie van twee numerieke expressies kunnen de binaire Opera tors `>`, `<`, `>=`en `<=` worden gebruikt voor het maken van een nieuwe booleaanse expressie die waar is als de eerste expressie respectievelijk groter is dan, kleiner dan, groter dan of gelijk aan, of kleiner dan of gelijk aan de tweede expressie.
 
 Op basis van twee Booleaanse expressies kunnen de binaire Opera tors `and` en `or` worden gebruikt voor het maken van een nieuwe Boole-expressie die waar is als beide expressies beide zijn ingesteld op True.
 
@@ -229,7 +229,7 @@ Dit is doorgaans onnodig omdat de compiler Q # de daad werkelijke typen afleidt.
 Het is vereist voor een gedeeltelijke toepassing (zie hieronder) als een argument van het type para meters niet-opgegeven is.
 Het is ook soms handig bij het door geven van bewerkingen met verschillende functor-ondersteuning voor een aanroepable.
 
-Als `Func` hand tekening heeft `('T1, 'T2, 'T1) -> 'T2`, `Op1` en `Op2` hand tekening `(Qubit[] => Unit is Adj)`heeft en `Op3` hand tekening heeft `(Qubit[] => Unit)`, om `Func` met `Op1` als eerste argument te openen, `Op2` als de tweede en `Op3` als derde:
+Als `Func` hand tekening heeft `('T1, 'T2, 'T1) -> 'T2`, `Op1` en `Op2` hand tekening `(Qubit[] => Unit is Adj)`heeft en `Op3` hand tekening heeft `(Qubit[] => Unit)`, om `Func` met `Op1` aan te roepen als eerste argument, `Op2` als het tweede en `Op3` als derde:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -492,17 +492,17 @@ Operator | Ariteit | Beschrijving | Typen operand
 ---------|----------|---------|---------------
  afsluitende `!` | Monadische | Uitpakken | Een door de gebruiker gedefinieerd type
  `-`, `~~~`, `not` | Monadische | Numerieke, negatieve, bitsgewijze complement, logische negatie | `Int`, `BigInt` of `Double` voor `-`, `Int` of `BigInt` voor `~~~`, `Bool` voor `not`
- `^` | waarde | Geheel getal energie | `Int` of `BigInt` voor de basis, `Int` voor de exponent
- `/`, `*`, `%` | waarde | Deling, vermenigvuldiging, integer modulus | `Int`, `BigInt` of `Double` voor `/` en `*`, `Int` of `BigInt` voor `%`
- `+`, `-` | waarde | Toevoeging of teken reeks-en matrix samenvoeging, aftrekken | `Int`, `BigInt` of `Double`, ook `String` of een wille keurig type matrix voor `+`
- `<<<`, `>>>` | waarde | Shift-links, Shift-rechts | `Int` of `BigInt`
- `<`, `<=`, `>`, `>=` | waarde | Kleiner dan, kleiner dan of gelijk aan, groter dan, groter dan-of-gelijk aan vergelijkingen | `Int`, `BigInt` of `Double`
- `==`, `!=` | waarde | gelijk, niet-gelijk-vergelijkingen | een primitief type
- `&&&` | waarde | Bitsgewijze AND | `Int` of `BigInt`
- `^^^` | waarde | Bitsgewijze XOR | `Int` of `BigInt`
- <code>\|\|\|</code> | waarde | Bitsgewijze OR | `Int` of `BigInt`
- `and` | waarde | Logische en | `Bool`
- `or` | waarde | Logische of | `Bool`
+ `^` | Binair bestand | Geheel getal energie | `Int` of `BigInt` voor de basis, `Int` voor de exponent
+ `/`, `*`, `%` | Binair bestand | Deling, vermenigvuldiging, integer modulus | `Int`, `BigInt` of `Double` voor `/` en `*`, `Int` of `BigInt` voor `%`
+ `+`, `-` | Binair bestand | Toevoeging of teken reeks-en matrix samenvoeging, aftrekken | `Int`, `BigInt` of `Double`, ook `String` of een wille keurig type matrix voor `+`
+ `<<<`, `>>>` | Binair bestand | Shift-links, Shift-rechts | `Int` of `BigInt`
+ `<`, `<=`, `>`, `>=` | Binair bestand | Kleiner dan, kleiner dan of gelijk aan, groter dan, groter dan-of-gelijk aan vergelijkingen | `Int`, `BigInt` of `Double`
+ `==`, `!=` | Binair bestand | gelijk, niet-gelijk-vergelijkingen | een primitief type
+ `&&&` | Binair bestand | Bitsgewijze AND | `Int` of `BigInt`
+ `^^^` | Binair bestand | Bitsgewijze XOR | `Int` of `BigInt`
+ <code>\|\|\|</code> | Binair bestand | Bitsgewijze OR | `Int` of `BigInt`
+ `and` | Binair bestand | Logische en | `Bool`
+ `or` | Binair bestand | Logische of | `Bool`
  `..` | Binair/Ternair | De operator Range | `Int`
  `?` `|` | Ternair | Voorwaardelijk | `Bool` voor de linkerkant
 `w/` `<-` | Ternair | Kopiëren en bijwerken | Zie [expressies voor kopiëren en bijwerken](#copy-and-update-expressions)

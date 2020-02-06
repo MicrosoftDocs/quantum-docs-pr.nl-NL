@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821011"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036352"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmen #
 
@@ -48,7 +48,8 @@ Daarnaast overschrijdt de efficiency van de *Quantum Fourier trans formatie* (QF
 
 Als een geschatte generalisatie van de QFT bieden we de <xref:microsoft.quantum.canon.approximateqft> bewerking die verdere optimalisaties mogelijk maakt door rotaties te verwijderen die niet strikt nood zakelijk zijn voor de gewenste nauw keurigheid van de algoritmen.
 De geschatte QFT vereist de dyadic $Z $-rotation-bewerking <xref:microsoft.quantum.intrinsic.rfrac> en de <xref:microsoft.quantum.intrinsic.h> bewerking.
-Er wordt van uitgegaan dat de invoer en uitvoer worden gecodeerd in big endian-code ring (de laagste bit-Qubit is aan de linkerkant, hetzelfde als [Ket-notatie](xref:microsoft.quantum.concepts.dirac)).
+Er wordt van uitgegaan dat de invoer en uitvoer worden gecodeerd in big endian encoding---dat wil zeggen dat de Qubit met index `0` wordt gecodeerd in de meest linkse (hoogste) bit van de weer gave van een binair geheel getal.
+Dit wordt afgestemd op de [Ket-notatie](xref:microsoft.quantum.concepts.dirac), omdat het REGI ster van drie qubits in de status $ \ket{100}$ overeenkomt met $q _0 $ in de status $ \ket{1}$, terwijl $q _1 $ en $q _2 $ beide de status $ \ket{0}$ hebben.
 De benaderings parameter $a $ bepaalt het Pruning-niveau van de $Z $-rotations, dat wil zeggen $a \in [0.. n] $.
 In dit geval worden alle $Z $-rotations $2 \ pi/2 ^ k $, waarbij $k > a $ worden verwijderd uit het QFT-circuit.
 Het is bekend dat voor $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. een kan $\\binden | \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Hier $\\| \cdot\\| $ is de operator norm die in dit geval de vierkantswortel van
 
 ## <a name="arithmetic"></a>Rekenkundig ##
 
-Net zoals reken kundig een centrale rol speelt in de klassieke computing, is het ook indispensible bij Quantum Computing.  Algoritmen, zoals het factor algoritme voor Shor, Quantum simulatie methoden en veel oracular-algoritmen zijn afhankelijk van samenhangende reken kundige bewerkingen.  De meeste benaderingen van reken kundige builds op Quantum adder-circuits.  De eenvoudigste adder neemt een klassieke invoer $b $ en voegt de waarde toe aan een Quantum status met een geheel getal $ \ket{a} $.  Wiskundig, de adder (die we $ \operatorname{Add} (b) $ voor klassieke invoer $b $) heeft de eigenschap die
+Net zoals reken kundig een centrale rol speelt in de klassieke computing, is het ook onmisbaar voor Quantum Computing.  Algoritmen, zoals het factor algoritme voor Shor, Quantum simulatie methoden en veel oracular-algoritmen zijn afhankelijk van samenhangende reken kundige bewerkingen.  De meeste benaderingen van reken kundige builds op Quantum adder-circuits.  De eenvoudigste adder neemt een klassieke invoer $b $ en voegt de waarde toe aan een Quantum status met een geheel getal $ \ket{a} $.  Wiskundig, de adder (die we $ \operatorname{Add} (b) $ voor klassieke invoer $b $) heeft de eigenschap die
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Dit Basic adder-circuit is meer dan een incrementer dan een adder.

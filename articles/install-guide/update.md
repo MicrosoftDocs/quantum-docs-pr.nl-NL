@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: ed2a90749bbe245dde97424fc3191682f995d85b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819736"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036304"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Het Microsoft Quantum Development Kit bijwerken (QDK)
 
@@ -28,10 +28,12 @@ We raden u aan om de nieuwste versie van QDK up-to-date te houden. Volg deze upd
 Ongeacht of u of python gebruikt C# om q #-bewerkingen te hosten, volgt u deze instructies om uw q #-projecten bij te werken.
 
 1. Controleer eerst of u de meest recente versie van de [.NET Core SDK 3,1](https://dotnet.microsoft.com/download)hebt. Voer de volgende opdracht uit in de opdracht prompt:
-    ```bash
+
+    ```dotnetcli
     dotnet --version
     ```
-Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, installeert u de [nieuwste versie](https://dotnet.microsoft.com/download) en controleert u opnieuw. Volg de onderstaande instructies, afhankelijk van uw installatie (Visual Studio, Visual Studio code of rechtstreeks de opdracht regel).
+
+    Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, installeert u de [nieuwste versie](https://dotnet.microsoft.com/download) en controleert u opnieuw. Volg de onderstaande instructies, afhankelijk van uw installatie (Visual Studio, Visual Studio code of rechtstreeks de opdracht regel).
 
 ### <a name="update-q-projects-in-visual-studio"></a>Update Q #-projecten in Visual Studio
  
@@ -40,18 +42,22 @@ Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, insta
 3. Selecteer in het menu de optie **bouwen** -> **nieuwe oplossing**
 4. Werk in elk van uw. csproj-bestanden het doel raamwerk bij naar `netcoreapp3.0` (of `netstandard2.1` als het een bibliotheek project is).
     Dat wil zeggen, regels van het formulier bewerken:
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     [Hier](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)vindt u meer informatie over het opgeven van doel raamwerken.
 5. Sla alle bestanden in uw oplossing op en sluit deze af
 6. Selecteer **extra** -> **opdracht regel** -> **opdracht prompt voor ontwikkel aars**
 7. Voer voor elk project in de oplossing de volgende opdracht uit:
-    ```bash
+
+    ```dotnetcli
     dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
-    Als uw projecten andere micro soft. Quantum-pakketten gebruiken (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht ook uit.
-8. Sluit de opdracht prompt en selecteer **build** -> **Build-oplossing** (Selecteer *geen* oplossing voor opnieuw samen stellen.
+
+   Als uw projecten andere micro soft. Quantum-pakketten gebruiken (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht ook uit.
+8. Sluit de opdracht prompt en selecteer **build** -> **Build Solution** (Selecteer *geen* oplossing voor opnieuw samen stellen)
 
 U kunt nu door gaan om [uw Visual Studio QDK-extensie](#update-visual-studio-qdk-extension)bij te werken.
 
@@ -66,24 +72,30 @@ U kunt nu door gaan om [uw Visual Studio QDK-extensie](#update-visual-studio-qdk
 
 1. Ga naar de map die het project bestand bevat
 2. Voer de volgende opdracht uit:
-    ```bash
+
+    ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
 3. Werk in elk van uw. csproj-bestanden het doel raamwerk bij naar `netcoreapp3.0` (of `netstandard2.1` als het een bibliotheek project is).
     Dat wil zeggen, regels van het formulier bewerken:
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     [Hier](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)vindt u meer informatie over het opgeven van doel raamwerken.
 4. Voer de volgende opdracht uit:
-    ```bash
+
+    ```dotnetcli
     dotnet add package Microsoft.Quantum.Development.Kit
     ```
+
     Als uw project gebruikmaakt van andere micro soft. Quantum-pakketten (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht ook uit.
 5. Sla alle bestanden op en sluit deze.
 6. Herhaal 1-4 voor elke project afhankelijkheid en ga vervolgens terug naar de map met het hoofd project en voer het volgende uit:
-    ```bash
+
+    ```dotnetcli
     dotnet build [project_name].csproj
     ```
 
@@ -105,14 +117,14 @@ Selecteer hieronder uw ontwikkel omgeving.
 
 1. De `iqsharp`-kernel bijwerken 
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. De `iqsharp` versie controleren
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -122,6 +134,7 @@ Selecteer hieronder uw ontwikkel omgeving.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     U hoeft zich geen zorgen te maken als uw `iqsharp`-versie hoger is. deze moet overeenkomen met de [nieuwste versie](xref:microsoft.quantum.relnotes).
 
 3. Het `qsharp`-pakket bijwerken
@@ -144,7 +157,9 @@ Selecteer hieronder uw ontwikkel omgeving.
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
+
 5. Voer de volgende opdracht uit vanaf de locatie van uw `.qs`-bestanden
+
     ```bash
     python -c "import qsharp; qsharp.reload()"
     ```
@@ -155,14 +170,14 @@ Selecteer hieronder uw ontwikkel omgeving.
 
 1. De `iqsharp`-kernel bijwerken
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. De `iqsharp` versie controleren
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -172,9 +187,11 @@ Selecteer hieronder uw ontwikkel omgeving.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     U hoeft zich geen zorgen te maken als uw `iqsharp`-versie hoger is. deze moet overeenkomen met de [nieuwste versie](xref:microsoft.quantum.relnotes).
 
 3. Voer de volgende opdracht uit vanuit een cel in uw Jupyter Notebook:
+
     ```
     %workspace reload
     ```
@@ -210,10 +227,10 @@ Selecteer hieronder uw ontwikkel omgeving.
 
 1. De Quantum project sjablonen voor .NET bijwerken
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-## <a name="whats-next"></a>En verder?
+## <a name="whats-next"></a>Volgende stappen
 
 Nu u de Quantum Development Kit hebt bijgewerkt in uw voorkeurs omgeving, kunt u uw Quantum Programma's blijven ontwikkelen en uitvoeren. Als u nog geen programma hebt geschreven, kunt u aan de slag met [uw eerste Quantum programma](xref:microsoft.quantum.write-program).

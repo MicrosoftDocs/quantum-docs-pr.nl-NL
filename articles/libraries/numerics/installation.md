@@ -3,15 +3,15 @@ title: Installatie en validatie van de Nummerings bibliotheek | Microsoft Docs
 description: Installatie en validatie van de numerieke bibliotheek
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: 8369a6f342ee8e6f56b69bd1f2ce3df40e4093aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184624"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036454"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Installatie en validatie van de numerieke bibliotheek
 
@@ -33,7 +33,7 @@ Zie de [gebruikers interface voor pakket beheer](https://docs.microsoft.com/nuge
 
 U kunt ook de Package Manager-console gebruiken om de numerieke bibliotheek toe te voegen aan uw project via de opdracht regel interface.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![](../../media/vs2017-nuget-console-menu.png)
 
 Voer de volgende handelingen uit vanuit de Package Manager-console:
 
@@ -45,7 +45,7 @@ Zie de [console handleiding voor pakket beheer](https://docs.microsoft.com/nuget
 
 **Opdracht regel of Visual Studio code:** Met de opdracht regel zelf of vanuit Visual Studio code kunt u de `dotnet` opdracht gebruiken om de NuGet-pakket verwijzing toe te voegen aan uw project:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
@@ -55,10 +55,10 @@ dotnet add package Microsoft.Quantum.Numerics
 Net als de rest van de Quantum Development Kit, wordt de bibliotheek met getallen geleverd met voor beelden die u zo snel mogelijk aan de slag kunnen.
 Als u de installatie met behulp van deze voor beelden wilt testen, kloont u de [opslag plaats met belangrijkste voor beelden](https://github.com/Microsoft/Quantum) en voert u een van de voor beelden uit
 
-Het [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd) -voor beeld uitvoeren:
+Het [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd) -voor beeld uitvoeren:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```

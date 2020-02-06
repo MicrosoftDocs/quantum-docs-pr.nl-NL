@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184199"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036471"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Schei kunde van de bibliotheek installatie en validatie
 
@@ -51,18 +51,18 @@ Zie de [console handleiding voor pakket beheer](https://docs.microsoft.com/nuget
 
 **Opdracht regel of Visual Studio code:** Met de opdracht regel zelf of vanuit Visual Studio code kunt u de `dotnet` opdracht gebruiken om de NuGet-pakket verwijzing toe te voegen aan uw project:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>De installatie controleren 
 
 Net als de rest van de Quantum Development Kit wordt de quantum chemie-bibliotheek geleverd met een aantal volledig gedocumenteerde voor beelden om snel aan de slag te kunnen.
-Als u de installatie met behulp van deze voor beelden wilt testen, kloont u de [opslag plaats](https://github.com/Microsoft/Quantum)voor de belangrijkste voor beelden en voert u een van de voor beelden  Als u bijvoorbeeld het [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) -voor beeld wilt uitvoeren:
+Als u de installatie met behulp van deze voor beelden wilt testen, kloont u de [opslag plaats](https://github.com/Microsoft/Quantum)voor de belangrijkste voor beelden en voert u een van de voor beelden  Als u bijvoorbeeld het [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) -voor beeld wilt uitvoeren:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ Zie [schattingen voor het energie niveau verkrijgen](xref:microsoft.quantum.chem
 
 Het MolecularHydrogen-voor beeld maakt gebruik van moleculaire invoer gegevens die hand matig worden geconfigureerd.  Hoewel dit een kleine voor beeld is, is voor Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden voor waarden vereist. Dergelijke Hamiltonians, die zijn gegenereerd door schaal bare reken kunde-pakketten, zijn te groot om hand matig te importeren. 
 
-De quantum chemie-bibliotheek voor de Quantum Development Kit is ontworpen om goed te werken met reken kundige chemie-pakketten, met name het [**NWChem**](http://www.nwchem-sw.org/) computing computing-platform dat is ontwikkeld door het Environmental wetenschappen Laboratory ( EMSL) op het nationale laboratorium van Pacific Noordwest.
+De quantum chemie-bibliotheek voor de Quantum Development Kit is ontworpen voor gebruik met reken kundige chemie-pakketten, met name het [**NWChem**](http://www.nwchem-sw.org/) computing computing-platform dat is ontwikkeld door het Environmental wetenschappen LABORATORY (EMSL) op Pacific Noordwest National Laboratory.
 Met name het `Microsoft.Quantum.Chemistry`-pakket biedt hulpprogram ma's voor het laden van exemplaren van de simulatie problemen die in het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)worden weer gegeven, ook ondersteund voor export door recente versies van NWChem.
 
 Als u NWChem wilt gebruiken in combi natie met de Quantum Development Kit, wordt een van de volgende methoden voorgesteld:
-- Ga aan de slag met bestaande Broombridge-bestanden die zijn meegeleverd met de voor beelden op [IntegralData/yaml](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
+- Ga aan de slag met bestaande Broombridge-bestanden die zijn meegeleverd met de voor beelden op [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Gebruik de [opbouw functie voor EMSL-pijlen voor de Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) die een web-front-end is voor NWChem, voor het genereren van nieuwe Broombridge-geformatteerde moleculaire invoer bestanden.  
 - Gebruik de [docker-installatie kopie](https://hub.docker.com/r/nwchemorg/nwchem-qc/) van PNNL om NWChem uit te voeren, of
 - [Compileer NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) voor uw platform.
@@ -90,9 +90,10 @@ Als u NWChem wilt gebruiken in combi natie met de Quantum Development Kit, wordt
 Zie [end-to-end met NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) voor meer informatie over het werken met NWChem en chemische modellen om te analyseren met de Quantum werknem Kit chemie-bibliotheek.
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Aan de slag met Broombridge-bestanden die worden meegeleverd met de voor beelden
-De map [IntegralData/yaml](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) in de Quantum Development Kit samples-opslag bevat Broombridge-indeling gelabelde gegevens bestanden.  
 
-Gebruik bijvoorbeeld het voor beeld van chemie Library, [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) om de Hamiltonian te laden vanuit een van Broombridge-bestanden en poort schattingen van Quantum simulatie algorigthms uit te voeren:
+De map [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) in de Quantum Development Kit samples-opslag bevat Broombridge-indeling gelabelde gegevens bestanden.  
+
+Gebruik bijvoorbeeld het voor beeld van chemie Library, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) om de Hamiltonian te laden vanuit een van Broombridge-bestanden en poort schattingen van Quantum simulatie algorigthms uit te voeren:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ Meer informatie kan worden verkregen met behulp van de ingebouwde Help-functiona
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

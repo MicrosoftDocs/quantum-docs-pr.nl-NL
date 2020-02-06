@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870346"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036250"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -88,7 +88,7 @@ De volgende traditionele klassieke terminologie noemen we $ \eqref{EQ: phase-est
 
 Nadat u een `Result` hebt waargenomen van de waarschijnlijke functie schatting van iteratieve fase, kunnen we Bayes-regel gebruiken om te bepalen wat de fase ervan moet zijn om deze waarneming te volgen.
 Betonief, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} waarbij $d \in \\{\texttt{Zero}, \texttt{One}\\} $ een `Result`is, en waarbij $ \Pr (\phi) $ de eerdere opvattingen over $ \phi $ beschrijft.
-Vervolgens wordt de herhaalde aard van de iteratieve fase schatting expliciet gemaakt, omdat de posterior-distributie $ \Pr (\phi | d) $ de opvattingen onmiddellijk benadert om onze waarneming van de volgende `Result`.
+Vervolgens wordt de herhaalde aard van de iteratieve fase schatting expliciet gemaakt, omdat de posterior-distributie $ \Pr (\phi | d) $ een beschrijving heeft van onze opvattingen, direct vóór onze observatie van de volgende `Result`.
 
 Op elk gewenst moment tijdens deze procedure kunnen we de fase $ \hat{\phi} $, zoals \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \Text{data}] = \int \phi \Pr (\phi | \Text{data}) {\mathrm d} \phi, \end{Equation}, waarbij $ \Text{data} $ staat voor de gehele record van alle verkregen `Result` waarden.
 
