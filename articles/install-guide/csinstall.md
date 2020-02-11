@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831015"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036284"
 ---
 # <a name="develop-with-q--c"></a>Ontwikkelen met Q # +C#
 
@@ -23,7 +23,7 @@ Q # is gebouwd om goed te kunnen spelen met .NET-talen C#, met name. U kunt in v
 - [Q # + C# met Visual Studio code (Windows, Linux en Mac)](#VSC)
 - [Q # + C# met behulp van het `dotnet` opdracht regel programma](#command)
 
-## Ontwikkelen met Q # + C# met Visual Studio<a name="VS"></a>
+## Ontwikkelen met Q # + C# met Visual Studio <a name="VS"></a>
 
 Visual Studio biedt een uitgebreide omgeving voor het ontwikkelen van Q #-Program ma's. De Q # Visual Studio-extensie bevat sjablonen voor Q # bestanden en projecten, evenals syntaxis markeringen, het volt ooien van code en IntelliSense-ondersteuning.
 
@@ -59,7 +59,7 @@ Visual Studio biedt een uitgebreide omgeving voor het ontwikkelen van Q #-Progra
 > [!NOTE]
 > * Als u meerdere projecten in één Visual Studio-oplossing hebt, moeten alle projecten in de oplossing zich in dezelfde map bevinden als de oplossing, of in een van de submappen.  
 
-## Ontwikkelen met Q # + C# met Visual Studio code<a name="VSC"></a>
+## Ontwikkelen met Q # + C# met Visual Studio code <a name="VSC"></a>
 
 Visual Studio code (VS code) biedt een uitgebreide omgeving voor het ontwikkelen van Q #-Program ma's in Windows, Linux en Mac.  De code-uitbrei ding Q # versus bevat ondersteuning voor Q #-syntaxis markering, code voltooiing en Q #-code fragmenten.
 
@@ -111,7 +111,7 @@ Natuurlijk kunt u ook Q#-programma's schrijven en uitvoeren vanaf de opdrachtreg
 
 1. Installeer de Quantum-projectsjablonen voor .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Natuurlijk kunt u ook Q#-programma's schrijven en uitvoeren vanaf de opdrachtreg
 
     - Een nieuwe toepassing maken
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Navigeer naar de nieuwe toepassingsmap
@@ -135,13 +135,13 @@ Natuurlijk kunt u ook Q#-programma's schrijven en uitvoeren vanaf de opdrachtreg
 
     - De toepassing uitvoeren
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         U ziet de volgende uitvoer: `Hello quantum world!`
 
     
-## <a name="whats-next"></a>En verder?
+## <a name="whats-next"></a>Volgende stappen
 
 Nu u de Quantum development kit hebt geïnstalleerd in de omgeving van uw voorkeur, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.write-program) schrijven en uitvoeren.
