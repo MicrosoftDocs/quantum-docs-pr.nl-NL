@@ -6,58 +6,77 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 066981e3e2fb468c1ff2a4cf4d3e7cff057772ab
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819924"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036335"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 
-Welkom bij de Microsoft Quantum Development Kit.  Hier vindt u alle hulpprogramma's die u nodig hebt om meer te weten te komen over kwantumprogrammering met Q#.  We hebben een introductiehandleiding ontwikkeld om u op weg te helpen met kwantumcomputing met Q#. Dit is een handleiding voor degenen die willen beginnen met het coderen van kwantumprogramma's en degenen die nog niet klaar zijn om te beginnen met coderen maar op zoek zijn naar meer informatie over Q# en kwantumprogrammering. 
+Welkom bij de Microsoft Quantum Development Kit.  
+De QDK bevat alle hulpmiddelen die u nodig hebt om uw eigen kwantumprogramma's en -experimenten te bouwen met Q#, een programmeertaal die speciaal is ontworpen voor de ontwikkeling van kwamtumtoepassingen. 
 
-Als u klaar bent om te beginnen met coderen, [installeert u nu de QDK](xref:microsoft.quantum.install).
+Als u meteen aan de slag wilt gaan, gaat u naar de [QDK-installatiehandleiding](xref:microsoft.quantum.install).
+U wordt dan geleid door de installatie van de Quantum Development Kit op Windows-, Linux-of MacOS-computers, zodat u uw eigen kwantumprogramma's kunt schrijven.
 
-## <a name="questions-about-quantum-computing"></a>Vijf vragen over kwantumcomputing
+Als u het nog niet aandurft gelijk code te gaan schrijven, maar eerst graag meer wilt weten over kwantumcomputing en Q#, raden we u aan dit artikel alsnog te lezen om inzicht te krijgen in de resources die u kunt gebruiken. In de sectie [Vijf vragen over kwantumcomputing](#five-questions-about-quantum-computing) vindt u koppelingen naar precies wat u zoekt.
 
-We beginnen met een reeks korte artikelen die meer informatie geven over de _vijf dingen die u moet weten over kwantumcomputing_. Deze korte artikelen bieden een overzicht van kwantumcomputing voor beginners.
+## <a name="get-started-programming"></a>Aan de slag met programmeren
 
-[Wat is kwantumcomputing?](xref:microsoft.quantum.overview.what)
+De Quantum Development Kit biedt veel manieren om een kwantumprogramma te leren ontwikkelen met Q#.
+Om zelf de kracht van kwantum te gaan gebruiken, kunt u een van onze *quickstarts* proberen:
 
-[Wat kunnen kwantumcomputers doen?](xref:microsoft.quantum.overview.computers)
+* De [Kwantumgenerator voor willekeurige nummers](xref:microsoft.quantum.quickstarts.qrng) is een Q#-toepassing in 'Hello World'-stijl. Hiermee maakt u kennis met kwamtumconcepten en leert u binnen enkele minuten een kwantumtoepassing bouwen en uitvoeren.
+* Handleidingen over de [basisprincipes van kwantumprogramma's in Q#](xref:microsoft.quantum.write-program) begeleiden u bij het schrijven van een Q#-programma dat enkele van de basisconcepten van kwantumprogrammering laat zien. 
+    Als u nog niet zo ver bent om code te gaan schrijven, kunt u de zelfstudie volgen zonder de QDK te installeren om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
+* Het [zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search) bevat een voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt. 
+    Deze quickstart helpt u bij het ontwikkelen van het programma met behulp van verschillende programmeeromgevingen (met een Python-host of met .NET en Visual Studio of Visual Studio Code).
 
-[Waarom zou ik kwantumcomputing leren gebruiken?](xref:microsoft.quantum.overview.why)
+### <a name="learning-further"></a>Verder leren
+* Als u meer wilt weten over programmeren in Q#, raadpleegt u de [Quantum Katas](https://github.com/Microsoft/QuantumKatas): een verzameling oefeningen waarmee u op uw eigen tempo kennismaakt met kwantumcomputing aan de hand van programmeeroefeningen in Q#.
+    Veel van deze kata's zijn ook beschikbaar als Q#-notebooks. 
+* Onze [opslagplaats met voorbeelden](https://github.com/Microsoft/Quantum) laat meerdere voorbeelden zien van hoe u kwantumprogramma's kunt schrijven met behulp van Q#. De meeste van deze voorbeelden zijn geschreven met behulp van onze opensource [kwantumbibliotheken](https://github.com/Microsoft/QuantumLibraries), waaronder onze [standaard](xref:microsoft.quantum.libraries.standard.intro)- en [chemie](xref:microsoft.quantum.chemistry.concepts.intro)bibliotheken (hierover leest u hieronder meer).
 
-[Wat is Q#?](xref:microsoft.quantum.overview.qsharp)
+## <a name="five-questions-about-quantum-computing"></a>Vijf vragen over kwantumcomputing
 
-## <a name="how-to-learn-quantum-computing-with-q"></a>Hoe leer ik kwantumcomputing met Q#?
+Als u nog geen ervaring hebt met kwantumontwikkeling, kan dit er allemaal een beetje spannend uitzien. We hebben resources verzameld die het makkelijker maken om te leren werken met kwantumcomputing. We weten zeker dat u met de hulp van deze korte artikelen snel aan de slag kunt met programmeren.
+* [Wat is kwantumcomputing?](xref:microsoft.quantum.overview.what)
+* [Wat kunnen kwantumcomputers doen?](xref:microsoft.quantum.overview.computers)
+* [Waarom zou ik kwantumcomputing leren gebruiken?](xref:microsoft.quantum.overview.why)
+* [Wat is Q#?](xref:microsoft.quantum.overview.qsharp)
+* [Hoe leer ik kwantumcomputing met Q#?](xref:microsoft.quantum.overview.learn)
 
-Q# en de Quantum Development Kit bieden u de hulpmiddelen die u nodig hebt voor het ontwikkelen van programma's voor kwantumcomputing waarmee we onze lastigste problemen in computing kunnen oplossen.
+## <a name="quantum-development-kit-documentation"></a>Documentatie voor Quantum Development Kit
 
-Voor de vijfde vraag:  '_Hoe leer ik kwantumcomputing met Q#?_ ', beginnen we met de volgende overzichten:
+De huidige documentatie bevat de volgende aanvullende onderwerpen.
 
-* een Aan de slag-handleiding over het bouwen van een [kwantumgenerator voor willekeurige getallen](xref:microsoft.quantum.quickstarts.qrng) begeleidt u bij het installeren van de QDK en het schrijven van uw eerste Q#-programma, samen met een korte inleiding van enkele kwantumconcepten. De generator voor willekeurig getallen is een Q#-toepassing in 'Hello World'-stijl, zodat u binnen enkele minuten een kwantumtoepassing kunt bouwen en uitvoeren.
+### <a name="using-q"></a>Q# gebruiken
+* [De kwantumontwikkelingstechnieken](xref:microsoft.quantum.techniques.intro) beschrijven de belangrijkste concepten die worden gebruikt voor het maken van kwantumprogrammama's in Q#. Hier komen onder andere onderwerpen aan bod als bestandsstructuren, bewerkingen en functies, werken met qubits en enkele geavanceerde onderwerpen.
+* [De naslaginformatie voor de Q#-taal](xref:microsoft.quantum.language.intro) geeft informatie over de Q#-taal, waaronder het type model, expressies, instructies en het gebruik van de compiler.
+* [Kwantumsimulators en hosttoepassingen](xref:microsoft.quantum.machines) beschrijft hoe kwantumalgoritmen worden uitgevoerd, welke kwantumcomputers beschikbaar zijn en hoe u een niet-Q#-stuurprogramma schrijft voor uw kwantumprogramma.
 
-* een Aan de slag-handleiding over de [basisprincipes van het schrijven van kwantumprogramma's in Q#](xref:microsoft.quantum.write-program) begeleidt u bij het schrijven van een Q#-programma dat enkele van de basisconcepten van kwantumprogrammering laat zien. Als u nog niet zo ver bent om code te gaan schrijven, kunt u de zelfstudie volgen zonder de QDK te installeren om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
+### <a name="q-libraries"></a>Q#-bibliotheken
+* [Q#-standaardbibliotheken](xref:microsoft.quantum.libraries.standard.intro) beschrijft de bewerkingen en functies die ondersteuning bieden voor zowel het besturingselement in een klassieke taal als de Q#-kwantumalgoritmen. 
+    Besproken onderwerpen omvatten controlestromen, gegevensstructuren, foutcorrectie, testen en foutopsporing. 
+* [De Q#-chemiebibliotheek](xref:microsoft.quantum.chemistry.concepts.intro) beschrijft de bewerkingen en functies die kwantumsimulaties mogelijk maken voor chemie, een belangrijke toepassing van kwantumcomputing. Onderwerpen zijn onder andere het simuleren van Hamiltoniaanse dynamica en kwantumfaseschatting.
+* [De Q#-wiskundebibliotheek](xref:microsoft.quantum.numerics.intro) beschrijft de bewerkingen en functies die het uitdrukken van ingewikkelde wiskundige functies mogelijk maken in systeemeigen bewerkingen voor de doelcomputers.
+* [De naslaginformatie voor de Q#-bibliotheek](xref:microsoft.quantum.standardlibsintro) bevat naslaginformatie over bibliotheekentiteiten per naamruimte.
 
-* een Aan de slag-handleiding over het [zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search) bevat een voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt.  Quickstart over het zoekalgoritme van Grover helpt u bij het ontwikkelen van het programma met behulp van verschillende programmeeromgevingen (met een Python-host of met .NET en met Visual Studio of Visual Studio Code).
+### <a name="general-quantum-computing"></a>Algemene kwantumcomputing
+* [De concepten van kwantumcomputing](xref:microsoft.quantum.concepts.intro) bieden onder andere informatie over de relevantie van lineaire algebra voor kwantumcomputing, de aard en het gebruik van een qubit, het lezen van een kwantumcircuit en nog veel meer.
+* [De woordenlijst voor kwantumcomputing](xref:microsoft.quantum.glossary) is een woordenlijst met een aantal essentiële termen die specifiek zijn voor kwantumcomputing en -programmaontwikkeling. 
+    Als u nog geen ervaring hebt met dit veld, kan het handig zijn om deze tijdens het lezen van onze documentatie bij de hand te houden.
+* [De sectie Meer informatie](xref:microsoft.quantum.more-information) omvat speciaal geselecteerde verwijzingen voor een gedetailleerde verkenning van de onderwerpen rondom kwantumcomputing.
 
-* een [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) met meer informatie over het bouwen van kwantumprogramma's met de Q#-bibliotheken.  De QDK wordt standaard geleverd met Q# en numerieke bibliotheken die krachtige rekenkundige abstracties bieden waarmee u deze oplossingen kunt ontwikkelen. We bieden ook de Quantum Chemistry Library, een Q#-bibliotheek voor het modelleren van chemische processen op kwantumniveau.
+### <a name="additional-info"></a>Aanvullende informatie
+* [Opmerkingen bij de release van de Microsoft Quantum Development Kit](xref:microsoft.quantum.relnotes).
 
-## <a name="next-steps"></a>Volgende stappen
 
-De Aan de slag-handleidingen en artikelen hierboven zijn bedoeld om zowel programmeurs als gewone gebruikers een inleiding te geven in kwantumcomputing en Q#.  Als u meer wilt weten over het programmeren van kwantumcomputers met Q#:
+## <a name="be-a-part-of-the-q-open-source-community"></a>Deel uitmaken van de opensource-community voor Q#
+De Quantum Development Kit is een open-source Development Kit waarmee ontwikkelaars kwantumcomputing toegankelijker maken, zodat we enkele van de meest uitdagende problemen ter wereld kunnen oplossen.  Academische instellingen die opensource-software nodig hebben, kunnen Q# implementeren voor hun kwantumonderwijs- en ontwikkeling. Door de Development Kit opensource te maken, krijgen ontwikkelaars en domeinexperts ook de kans om via hun code verbeteringen en ideeën bij te dragen.
 
-* [Hoe leer ik kwantumcomputing met Q#?](xref:microsoft.quantum.overview.learn) bevat informatie over de basisbegrippen van kwantumcomputing met Q#.
+Uw feedback, deelname en bijdragen aan de Quantum Development Kit zijn belangrijk.  Zie [Bijdragen aan de Quantum Development Kit](xref:microsoft.quantum.contributing) voor meer informatie over de Quantum Development Kit-bronnen, om feedback te geven en om informatie te vinden over hoe u deel kunt uitmaken van de beslissingen en bijdragen aan dit groeiende kwantumontwikkelplatform.
 
-* Lees meer over kwantumprogrammering met onze [Quantum Katas](https://aka.ms/try-quantum-katas) die u in uw eigen tempo kunt uitvoeren. In deze reeks korte trainingen leert u hoe u programmeert in Q# en wat kwantumcomputing inhoudt.
-
-* Bekijk onze [Q#-voorbeelden](https://docs.microsoft.com/samples/browse/?languages=qsharp) en ontdek welke problemen u met kwantumcomputing kunt oplossen.
-
-* Ontwikkel op uw eigen computer met de hostprogrammeertaal en ontwikkelomgeving van uw keuze:
-  * Ontwikkelen met [Q# + Python](xref:microsoft.quantum.install.python)
-  * Ontwikkelen met [Q# + C#](xref:microsoft.quantum.install.cs)
-  * Ontwikkelen met [Q#-Jupyter-notebooks](xref:microsoft.quantum.install.jupyter)
-
-* Word lid van de Microsoft Quantum-community en lever een bijdrage aan het [QDK](xref:microsoft.quantum.contributing) open source-project
+Zie [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/) als u meer algemene informatie wilt over het Microsoft-initiatief voor kwantumcomputing.
