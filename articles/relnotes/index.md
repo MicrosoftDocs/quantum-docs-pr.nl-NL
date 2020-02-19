@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871614"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441038"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -21,13 +21,14 @@ Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instr
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
 
+
 ## <a name="version-01020012831"></a>Versie 0.10.2001.2831
 
 *Releasedatum: 29 januari 2020*
 
 Deze release omvat het volgende:
 
-- Nieuw NuGet-pakket Microsoft.Quantum.SDK, raadpleeg [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) voor meer informatie
+- Nieuwe NuGet-pakket Microsoft.Quantum.SDK
 - Ondersteuning toegevoegd voor .NET Core 3.1. Het wordt zeer aanbevolen om versie 3.1.100 geïnstalleerd te hebben, omdat bouwen met oudere .NET Core SDK-versies mogelijk problemen veroorzaakt
 - Nieuwe compilatietransformaties beschikbaar onder Microsoft.Quantum.QsCompiler.Experimental
 - Nieuwe functionaliteit om uitvoerstatusvectors beschikbaar te maken als HTML in IQ#
