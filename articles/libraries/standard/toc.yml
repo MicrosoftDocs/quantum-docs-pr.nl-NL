@@ -1,5 +1,3 @@
-- name: OSS-licentieverlening
-  href: licensing.md
 - name: De prelude
   href: prelude.md
 - name: Klassieke wiskunde
@@ -20,3 +18,5 @@
   href: error-correction.md
 - name: Toepassingen
   href: applications.md
+- name: OSS-licentieverlening
+  href: licensing.md
