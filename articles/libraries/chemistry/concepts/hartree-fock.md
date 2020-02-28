@@ -1,17 +1,17 @@
 ---
-title: Hartree-Fock theorie | Microsoft Docs
-description: Hartree-Fock theorie docs
+title: Hartree-Fock theorie
+description: Meer informatie over de Hartree – Fock theorie, een eenvoudige manier om de initiële status voor Quantum systemen samen te stellen.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184097"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904448"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock theorie
 
@@ -22,10 +22,10 @@ Hoeveel heden, zoals grond energie, kunnen worden geleerd.
 Als $ \ket{\psi} $ bijvoorbeeld een zuivere Quantum status is, dan \begin{Equation} E = \bra{\psi} \hat{H} \ket{\psi} \end{Equation} de gemiddelde energie die het systeem in die staat heeft.
 De grond staat vervolgens de status die de kleinste waarde geeft. Als gevolg hiervan is het kiezen van een staat die zo dicht mogelijk bij de werkelijke toestand ligt, van cruciaal belang voor het rechtstreeks schatten van de energie (zoals uitgevoerd in variatie eigensolvers) of door de fase schatting.
 
-Hartree – Fock theorie biedt een eenvoudige manier om de initiële status voor Quantum systemen samen te stellen. Het levert een enkele Slater-determinant benadering van de bodem status van een Quantum systeem. In dat geval vindt een rotatie plaats in de Fock-ruimte die het energie verbruik van de grond toestand minimaliseert. Met name voor een systeem van $N $ electrons de methode het draaiende \begin{Equation} \prod_{j = 0} ^ {N-1} a ^ \dagger_j \ket{0} \mapsto \prod_{j = 0} ^ {N-1} e ^ {u} a ^ \dagger_j e ^ {-u} \ket{0}\defeq\prod_{j = 0} ^ {N-1} \widetilde{a} ^ \dagger _J \ket{0}, \end{Equation} met een anti-Hermitian (dat wil zeggen $u =-u ^ \dagger $) matrix $u = \sum_{pq} u_ {pq} a ^ \dagger_p a_q $. U moet erop gewezen dat de matrix $u $ de Orbital-rotaties en $ \widetilde{a} ^ \dagger_j $ en $ \widetilde{a}_J $ vertegenwoordigen voor het maken en Annihilation Opera tors voor electrons, die Hartree – Fock molecuul spin-banen beslaan.
+Hartree – Fock theorie biedt een eenvoudige manier om de initiële status voor Quantum systemen samen te stellen. Het levert een enkele Slater-determinant benadering van de bodem status van een Quantum systeem. In dat geval vindt een rotatie plaats in de Fock-ruimte die het energie verbruik van de grond toestand minimaliseert. Met name voor een systeem van $N $ electrons heeft de methode de draai \begin{Equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \mapsto \ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \ket{0}, \end{Equation} met een anti-Hermitian (dat wil zeggen $u =-u ^ \dagger $) matrix $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $. U moet erop gewezen dat de matrix $u $ de Orbital-rotaties en $ \widetilde{a} ^ \ dagger_j $ en $ \widetilde{a} _j $ representeert en Annihilation Opera tors voor electrons die in Hartree worden gehouden.
 
 
-De matrix $u $ wordt vervolgens geoptimaliseerd om de verwachte energie $ \bra{0} \prod_{j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \dagger_k\ket{0}$ te minimaliseren. Hoewel dergelijke optimalisatie problemen algemeen moeilijk zijn, is het Hartree-Fock-algoritme in de praktijk doorgaans snel te convergeren naar een nabije optimale oplossing voor het optimaliserings probleem, met name voor moleculen van gesloten-shells in de evenwichts geometrie. We kunnen deze statussen opgeven als een exemplaar van het `FermionWavefunction`-object. De status $a ^ \dagger_{1}een ^ \dagger_{2}een ^ \dagger_{6}\ket{0}$ wordt als volgt geïnstantieerd in de Library chemie.
+De matrix $u $ wordt vervolgens geoptimaliseerd om de verwachte energie $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$ te minimaliseren. Hoewel dergelijke optimalisatie problemen algemeen moeilijk zijn, is het Hartree-Fock-algoritme in de praktijk doorgaans snel te convergeren naar een nabije optimale oplossing voor het optimaliserings probleem, met name voor moleculen van gesloten-shells in de evenwichts geometrie. We kunnen deze statussen opgeven als een exemplaar van het `FermionWavefunction`-object. De status $a ^ \ dagger_{1}een ^ \ dagger_{2}een ^ \ dagger_{6}\ket{0}$ wordt als volgt in de Library voor schei kunde geïnstantieerd.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

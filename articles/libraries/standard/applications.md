@@ -1,19 +1,19 @@
 ---
-title: 'V # standaard bibliotheken-toepassingen | Microsoft Docs'
-description: Q#-standaardbibliotheken
+title: 'Toepassingen in de standaard bibliotheken van Q #'
+description: Meer informatie over twee fundamentele toepassingen in de Quantum Computing-Hamiltonian simulatie en het zoek algoritme van Shor.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868965"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907219"
 ---
-# <a name="applications"></a>Applicaties #
+# <a name="applications"></a>Toepassingen #
 
 ## <a name="hamiltonian-simulation"></a>Hamiltoniaanse simulatie ##
 
@@ -159,7 +159,7 @@ In de fase-schatting wordt de eigenvalues $e ^ {2 \ Pi i s/r} uitgevoerd, waarbi
 
 Het circuit diagram voor het zoeken naar een Quantum periode is:
 
-![](./../../media/QPE.svg)
+![Circuit diagram voor het zoeken naar Quantum dagen](./../../media/QPE.svg)
 
 Hier $2n $ qubits worden geïnitialiseerd op $ \ket{0}$ en $n $ qubits worden geïnitialiseerd op $ \ket{1}$.
 De lezer kan u opnieuw vragen waarom het Quantum REGI ster voor de eigenstates wordt geïnitialiseerd op $ \ket{1}$.

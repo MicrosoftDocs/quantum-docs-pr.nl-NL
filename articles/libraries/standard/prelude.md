@@ -1,17 +1,17 @@
 ---
-title: 'Q # standaard-bibliotheken-prelude | Microsoft Docs'
-description: 'Q # standaard-bibliotheken-prelude'
+title: Intrinsieke bewerkingen en functies in de QDK
+description: Meer informatie over de intrinsieke bewerkingen en functies in de QDK, waaronder klassieke functies en unitary, rotatie-en meet bewerkingen.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183230"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907202"
 ---
 # <a name="the-prelude"></a>De prelude #
 
@@ -101,12 +101,12 @@ Het bevat hand tekeningen `(Qubit => Unit is Adj + Ctl)`en komt overeen met de s
 Naast de bovenstaande Pauli-en Clifford-bewerkingen biedt Q # prelude diverse manieren om draaiingen uit te drukken.
 Zoals beschreven in [Single-Qubit bewerkingen](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), is de mogelijkheid om te draaien essentieel voor Quantum algoritmen.
 
-We beginnen met het opnieuw aanroepen van een bewerking met één Qubit met de $H $ en $T $ Gates, waarbij $H $ de Hadamard-bewerking is en waar \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% controle: dit maakt momenteel gebruik van de Quad-back Swagger hack.
+We beginnen met het aanroepen van een bewerking met één Qubit met de $H $ en $T $ Gates, waarbij $H $ de Hadamard-bewerking is, en waarbij \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% controle: dit maakt momenteel gebruik van de Quad back Swagger hack.
 0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} dit is de vierkantswortel van de <xref:microsoft.quantum.intrinsic.s> bewerking, zoals $T ^ 2 = S $.
 De $T $ Gate wordt geïmplementeerd door de <xref:microsoft.quantum.intrinsic.t> bewerking en heeft hand tekening `(Qubit => Unit is Adj + Ctl)`, waarmee wordt aangegeven dat het een unitary-bewerking is op één Qubit.
 
 Hoewel dit in principe voldoende is om een wille keurige bewerking met één Qubit te beschrijven, hebben verschillende doel machines mogelijk een efficiëntere weer gave voor rotaties over Pauli-Opera Tors, zodat de prelude een aantal manieren heeft om te convienently deze draaiing uitdrukken.
-De meeste basis hiervan is de <xref:microsoft.quantum.intrinsic.r> bewerking, die een rotatie rond een opgegeven Pauli-as implementeert, \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} waarbij $ \sigma $ een Pauli-operator is, $ \phi $ is een hoek en waarbij $ \exp $ vertegenwoordigt de matrix exponentiële waarde.
+De meeste basis hiervan is de <xref:microsoft.quantum.intrinsic.r> bewerking, die een rotatie rond een opgegeven Pauli-as implementeert, \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} waarbij $ \sigma $ een Pauli-operator is, $ \phi $ is een hoek en waarbij $ \exp $ de matrix exponentieel aangeeft.
 Er zijn hand tekeningen `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`, waarbij de eerste twee delen van de invoer de klassieke argumenten $ \sigma $ en $ \phi $ bevatten die nodig zijn om de unitary-operator $R (\sigma, \phi) $ op te geven.
 We kunnen $ \sigma $ en $ \phi $ deels Toep assen om een bewerking te verkrijgen waarvan het type van een single-Qubit unitary is.
 `R(PauliZ, PI() / 4, _)` heeft bijvoorbeeld het type `(Qubit => Unit is Adj + Ctl)`.
@@ -176,7 +176,7 @@ Dat wil zeggen, implementeert de unitary-matrix \begin{Equation} \operatorname{S
 > De Controlled-SWAP-Gate, ook wel bekend als de Fredkin-poort, is krachtig genoeg om alle klassieke berekeningen uit te sluiten.
 
 Ten slotte biedt de prelude twee bewerkingen voor het weer geven van exponenten van de Pauli Opera tors van meerdere Qubit.
-De <xref:microsoft.quantum.intrinsic.exp> bewerking voert een rotatie uit op basis van een tensor-product van Pauli-matrices, zoals wordt weer gegeven door de multi-Qubit unitary \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \sigma_0 \otimes \sigma_1 \otimes \ cdots \otimes \sigma_n \right), \end{Equation} waarbij $ \vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n) $ is een opeenvolging van single-Qubit Pauli-Opera tors en waarbij $ \phi $ een hoek is.
+De <xref:microsoft.quantum.intrinsic.exp> bewerking voert een rotatie uit op basis van een tensor product van Pauli-matrices, zoals vertegenwoordigd door de multi-Qubit unitary \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation} waarbij $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ is een opeenvolging van single-Qubit Pauli-Opera tors en, waarbij $ \phi $ een hoek is.
 De `Exp` rotatie vertegenwoordigt $ \vec{\sigma} $ als een matrix met `Pauli` elementen, zodat de hand tekening `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`heeft.
 
 De <xref:microsoft.quantum.intrinsic.expfrac>-bewerking voert dezelfde draaiing uit met behulp van de dyadic-fractie notatie die hierboven wordt beschreven.
@@ -204,8 +204,8 @@ Als de matrix Pauli en Qubit verschillende lengten hebben, mislukt de bewerking.
 Houd er rekening mee dat een gezamenlijke meting niet hetzelfde is als het meten van elk Qubit afzonderlijk.
 Bekijk bijvoorbeeld de status $ \ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$.
 Voor het meten van $Z _0 $ en $Z _1 $ elke afzonderlijke, krijgen we de resultaten $r _0 = $1 en $r _1 = $1.
-Meten $Z _0 Z_1 $, krijgen we echter het enige resultaat $r _ {\textrm{joint}} = $0, die aangeeft dat de koppeling van $ \ket{11}$ positief is.
-Plaats anders $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $.
+Meten $Z _0 Z_1 $, krijgen we echter het enige resultaat $r _ {\textrm{joint}} = $0, die aangeeft dat de paren van $ \ket{11}$ positief is.
+Plaats een andere $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $.
 Omdat we de pariteit van deze meting *alleen* kunnen zien, worden alle gegevens van de Quantum die worden weer gegeven in de superpositie tussen de 2 2-Qubit-statussen van positieve pariteit, $ \ket{00}$ en $ \ket{11}$, bewaard.
 Deze eigenschap is op een later tijdstip essentieel, omdat de fout correctie wordt besproken.
 

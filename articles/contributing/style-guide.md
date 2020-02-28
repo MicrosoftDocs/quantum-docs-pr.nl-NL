@@ -1,24 +1,24 @@
 ---
-title: 'Q # stijl gids | Microsoft Docs'
-description: 'Q #-stijl gids'
+title: 'Micro soft Q #-stijl gids'
+description: "Meer informatie over de naamgeving, invoer, documentatie en opmaak conventies voor Q # Program ma's en bibliotheken."
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463318"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907440"
 ---
 # <a name="q-style-guide"></a>Q #-stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
 
 De conventies die in deze hand leiding worden voorgesteld, zijn bedoeld om Program ma's en bibliotheken die zijn geschreven in Q # gemakkelijker te kunnen lezen en begrijpen.
 
-## <a name="guidance"></a>Hulp
+## <a name="guidance"></a>Richtlijnen
 
 Suggesties voor:
 
@@ -60,9 +60,9 @@ In dergelijke gevallen is de actie die door de invoer bewerking wordt uitgevoerd
 We raden u aan om de term `Apply`, zoals in `ApplyIf`, `ApplyToEach`en `ApplyToFirst`.
 Andere woorden kunnen in dit geval ook nuttig zijn, zoals in `IterateThroughCartesianPower`.
 
-| Term | Verwacht effect |
+| Verb | Verwacht effect |
 | ---- | ------ |
-| Aanvragen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
+| Toepassen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
 | Assert | Een hypo these over het resultaat van een mogelijke quantum meting wordt gecontroleerd door een simulator |
 | Bestek | Er wordt een klassieke waarde geretourneerd die een schatting vertegenwoordigt die uit een of meer metingen is getrokken |
 | Measure | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
@@ -80,7 +80,7 @@ In nagenoeg alle gevallen raden we u aan om eerdere participles te gebruiken, wa
 Deze naam heeft een extra voor deel van het afstemmen van de semantiek van de ingebouwde `Controlled` functor, zoals hieronder wordt besproken.
 Op dezelfde manier kunnen zelfstandige naam van _agents_ worden gebruikt om functie-en UDT-namen te maken op basis van bewerkings namen, zoals in het geval van de name `Encoder` voor een UDT die sterk is gekoppeld aan `Encode`.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -91,9 +91,9 @@ Suggesties voor:
 - Gebruik voor alle lokale variabelen `pascalCase` in een sterke voor keur om `CamelCase`, `snake_case`of `ANGRY_CASE`te gebruiken. Zorg er met name voor dat lokale variabelen beginnen met kleine letters.
 - Vermijd het gebruik van onderstrepings `_` in functie-en bewerkings namen. gebruik naam ruimten en naam ruimte aliassen wanneer er extra hiërarchie niveaus nodig zijn.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+|   | Name | Beschrijving |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Het gebruik van een term (' reflectie ') wissen om het effect van de bewerking aan te geven. |
 | ☒ | <s>`operation XRotation`</s> | Het gebruik van de woord groep frase suggesties voor de functie, in plaats van de bewerking. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -141,9 +141,9 @@ Suggesties voor:
 - Gebruik hoofd letters voor korte (twee letters) acroniemen en initialisms.
 - Gebruik `CamelCase` langer (drie of meer letter) acroniemen en initialisms.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+|   | Name | Beschrijving |
 |---|------|-------------|
 | ☑ | `X` | Goed te begrijpen steno voor ' een $X $ Transformation ' toep assen ' |
 | ☑ | `CNOT` | Goed te begrijpen steno voor "Controlled-NOT" |
@@ -168,17 +168,17 @@ Daarom is het raadzaam om, waar mogelijk, veelvoorkomende algemene naam woorden 
 Een voor beeld hiervan is dat de afzonderlijk beheerde SWAPs en dubbele controle niet worden uitgevoerd, ook wel de "Fredkin"-en "Toffoli"-bewerkingen worden genoemd in academische literatuur, maar worden aangeduid met Q #, voornamelijk als `CSWAP` en `CCNOT`.
 In beide gevallen bieden de API-documentatie opmerkingen synoniemen op basis van de juiste naam woorden, samen met alle relevante bron vermeldingen.
 
-Deze voor keur is vooral belang rijk, omdat het gebruik van de juiste zelfstandige naam woorden altijd nood zakelijk is. Q # volgt de traditie die is ingesteld door veel klassieke talen, bijvoorbeeld, en verwijst naar `Bool` typen in verwijzingen naar Booleaanse logica, die op zijn beurt de naam in acht neemt van George Boole.
+Deze voor keur is met name belang rijk, omdat het gebruik van de juiste zelfstandige naam woorden altijd nood zakelijk is. Q # volgt de traditie die is ingesteld door veel klassieke talen, bijvoorbeeld, en verwijst naar `Bool` typen in verwijzingen naar Boole-logica, die op zijn beurt de naam hebben van George Boole.
 Enkele Quantum concepten worden op een vergelijk bare manier genoemd, met inbegrip van het `Pauli` type ingebouwd in de Q #-taal.
 Door het gebruik van de juiste zelfstandige naam woorden, waarbij dit gebruik niet essentieel is, te minimaliseren, kunnen we de impact verminderen waarbij de juiste zelfstandige naam woorden niet redelijkerwijs worden vermeden.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance) 
+# <a name="guidance"></a>[Hulp](#tab/guidance) 
 
 Suggesties voor:
 
 - Vermijd het gebruik van de juiste zelfstandige naam woorden in namen.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -188,19 +188,19 @@ Aangezien Q # een sterk en statisch getypte taal is, kan een waarde van één ty
 Dit is in tegens telling tot talen waarmee waarden typen impliciet kunnen worden gewijzigd (bijvoorbeeld: type promotie) of via casting.
 Als gevolg hiervan spelen functies van het type conversie een belang rijke rol bij het ontwikkelen van Q #-bibliotheken en vormen ze een van de vaak voorkomende beslissingen over de naamgeving.
 Maar omdat type conversies altijd _deterministisch_zijn, kunnen ze worden geschreven als functies en dus onder de bovenstaande aanbeveling vallen.
-In het bijzonder raden we aan dat type conversie functies nooit moeten worden benoemd als woorden (bijvoorbeeld: `ConvertToX`) of woord voorstandlijke voor keuren (`ToX`), maar moeten worden benoemd als voor zetsels van bijvoeglijke woord groepen die de bron-en doel typen aangeven (`XAsY`).
+In het bijzonder raden we aan dat type conversie functies nooit moeten worden benoemd als woorden (bijvoorbeeld: `ConvertToX`) of woord voorstandlijke voor keuren (`ToX`), maar moeten worden benoemd als voor zetsels van bijvoeglijke woord groepen die de bron-en doel typen (`XAsY`) aangeven.
 Bij het weer geven van matrix typen in functie namen van type conversie wordt aangeraden de steno `Arr`.
 Als buitengewone omstandigheden worden geblokkeerd, wordt aangeraden alle type conversie functies te gebruiken met `As` zodat ze snel kunnen worden geïdentificeerd.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
 - Als een functie een waarde van het type `X` converteert naar een waarde van het type `Y`, gebruikt u de naam `AsY` of `XAsY`.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+|   | Name | Beschrijving |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | De voor positie ' to ' resulteert in een verbale woord groep, wat een bewerking aangeeft en niet een functie. |
 | ☒ | <s>`AsDouble`</s> | Het invoer type is niet duidelijk uit de functie naam. |
@@ -215,15 +215,15 @@ In veel gevallen is een naam uitsluitend bedoeld voor intern gebruik in een bibl
 Het is handig om duidelijk aan te geven dat dit het geval is bij het benoemen van functies en bewerkingen, zodat onbedoelde afhankelijkheden op interne code duidelijk worden gemaakt.
 Als een bewerking of functie niet bedoeld is voor direct gebruik, maar moet worden gebruikt door een overeenkomende aanroep die door een gedeeltelijke toepassing wordt uitgevoerd, kunt u overwegen een naam te gebruiken die begint met `_` voor de aanroep bare die gedeeltelijk is toegepast.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
 - Wanneer een functie, bewerking of door de gebruiker gedefinieerd type geen deel uitmaakt van de open bare API voor een Q #-bibliotheek of-programma, moet u ervoor zorgen dat de naam begint met een onderstrepings teken (`_`).
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+|   | Name | Beschrijving |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Het onderstrepings teken `_` mag niet aan het einde van de naam worden weer gegeven. |
 | ☑ | `_ApplyDecomposedOperation` | Het onderstrepings teken `_` op het begin duidelijk aangeeft dat deze bewerking alleen voor intern gebruik is. |
@@ -244,14 +244,14 @@ Deze groepen kunnen worden onderscheiden met dezelfde hoofd naam, gevolgd door e
 | `D` | Invoer-of invoer gegevens zijn van het type `Double` |
 | `L` | Invoer-of invoer gegevens zijn van het type `BigInt` |
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
 - Als een functie of bewerking niet is gerelateerd aan vergelijk bare functies of bewerkingen door de typen en functor-ondersteuning van de invoer, mag u geen achtervoegsel gebruiken.
 - Als een functie of bewerking is gerelateerd aan vergelijk bare functies of bewerkingen door de typen en functor-ondersteuning van de invoer, gebruikt u achtervoegsels zoals in de bovenstaande tabel om varianten te onderscheiden.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Een belang rijk doel van de Q #-code voor een functie of bewerking is dat deze e
 Op dezelfde manier moeten de namen van invoer-en type argumenten communiceren hoe een functie of argument wordt gebruikt wanneer dit wordt gegeven.
 
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -276,7 +276,7 @@ Suggesties voor:
   In het bijzonder Vermijd het gebruik van variabelen namen met één letter als indices. Overweeg het gebruik van `idx` mini maal.
 - Variabelen die worden gebruikt om de lengte van matrices te bewaren, moeten beginnen met `n` en moeten worden gemeervoudt (bijvoorbeeld: `nThings`).
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Suggesties voor:
 Benoemde items in door de gebruiker gedefinieerde typen moeten worden aangeduid als `CamelCase`, zelfs invoer voor UDT-constructors.
 Dit helpt om benoemde items duidelijk te scheiden van verwijzingen naar variabelen met een lokaal bereik bij gebruik van een accessor-notatie (bijvoorbeeld: `callable::Apply`) of Copy-and-update-notatie (`set arr w/= Data <- newData`).
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -294,7 +294,7 @@ Suggesties voor:
 - Benoemde items die niet naar bewerkingen worden omgezet, moeten een naam hebben als woord groepen.
 - Voor UDTs moet er een enkel benoemd item met de naam `Apply` worden gedefinieerd.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Fragment | Beschrijving |
 |---|---------|-------------|
@@ -342,7 +342,7 @@ Als een speciaal geval van het minimaliseren van de verrassingen, simuleren somm
 `ControlledOnInt<'T>` is bijvoorbeeld van het type `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`, zodanig dat `ControlledOnInt<Qubit[]>(5, _)` fungeert als de `Controlled` functor, maar op de voor waarde dat het controle register de status $ \ket{5} = \ket{101}$ vertegenwoordigt.
 Daarom verwacht een ontwikkelaar dat de invoer van `ControlledOnInt` de aanroepable te zetten die het laatst is getransformeerd en dat de resulterende bewerking de invoer `(Qubit[], 'T)`---dezelfde volg orde gebruikt, gevolgd door de uitvoer van de `Controlled` functor.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -350,15 +350,15 @@ Suggesties voor:
 - Gebruik invoer volgorden die consistent zijn met ingebouwde functors.
 - Plaats alle klassieke invoer vóór een Quantum invoer.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
-## <a name="documentation-conventions"></a>Documentatie conventies ##
+## <a name="documentation-conventions"></a>Documentatieconventies ##
 
 De Q #-taal maakt het mogelijk om documentatie toe te voegen aan bewerkingen, functies en door de gebruiker gedefinieerde typen door het gebruik van speciaal opgemaakte documentatie opmerkingen.
 Deze documentatie opmerkingen worden aangeduid met drievoudige slashes (`///`) en zijn kleine [GeDocFXeerde](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) documenten die kunnen worden gebruikt voor het beschrijven van het doel van elke bewerking, functie en door de gebruiker gedefinieerd type, welke invoer elk verwacht, enzovoort.
-De compiler die wordt geleverd met de Quantum Development Kit, haalt deze opmerkingen op en gebruikt deze om documentatie van de typeset te helpen typen die op https://docs.microsoft.com/quantum lijkt.
+De compiler die wordt geleverd met de Quantum Development Kit, haalt deze opmerkingen op en gebruikt deze om documentatie van de typeset te helpen typen die op https://docs.microsoft.com/quantumlijkt.
 Op dezelfde manier gebruikt de taal server van de Quantum Development Kit deze opmerkingen om gebruikers te helpen bij het aanwijzen van de muis aanwijzer over symbolen in hun Q #-code.
 Het gebruik van documentatie opmerkingen kan gebruikers helpen om code te maken met behulp van een nuttige referentie voor informatie die niet eenvoudig kan worden weer gegeven met de andere conventies in dit document.
 
@@ -368,7 +368,7 @@ Het gebruik van documentatie opmerkingen kan gebruikers helpen om code te maken 
 
 Als u deze functionaliteit effectief wilt gebruiken om gebruikers te helpen, raden we u aan om een aantal zaken te houden wanneer u documentatie opmerkingen schrijft.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance)
+# <a name="guidance"></a>[Hulp](#tab/guidance)
 
 Suggesties voor:
 
@@ -388,7 +388,7 @@ Suggesties voor:
 - Wanneer een bewerking of functie is gerelateerd aan andere bewerkingen of functies van functor varianten, vermeldt u andere varianten als opsommings tekens in het gedeelte `# See Also`.
 - Laat een lege opmerkings regel staan tussen de secties van niveau 1 (`/// #`), maar laat geen lege regel staan tussen de secties van niveau 2 (`/// ##`).
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ Dergelijke opmaak regels worden op een wille keurige manier en in het algemeen o
 Het is echter raadzaam een consistente set opmaak conventies binnen een groep mede werkers te onderhouden, met name voor grote Q #-projecten, zoals de Quantum Development Kit zelf.
 Deze regels kunnen automatisch worden toegepast met behulp van het opmaak programma dat is geïntegreerd met de compiler Q #.
 
-# <a name="guidancetabguidance"></a>[Hulp](#tab/guidance) 
+# <a name="guidance"></a>[Hulp](#tab/guidance) 
 
 Suggesties voor:
 
@@ -451,7 +451,7 @@ Suggesties voor:
 - Gebruik geen spaties na een functie, bewerking of UDT-naam, of na de `@` in kenmerk declaraties.
 - Elke kenmerk declaratie moet op een eigen regel staan.
 
-# <a name="examplestabexamples"></a>[Voorbeelden](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Fragment | Beschrijving |
 |---|---------|-------------|

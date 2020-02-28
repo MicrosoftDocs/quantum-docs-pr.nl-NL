@@ -1,17 +1,17 @@
 ---
-title: Installatie en validatie van de Nummerings bibliotheek | Microsoft Docs
-description: Installatie en validatie van de numerieke bibliotheek
+title: Micro soft Quantum numeriek-bibliotheek-installatie en validatie
+description: Meer informatie over hoe u de micro soft Quantum numeriek-bibliotheek kunt toevoegen aan uw installatie van Visual Studio 2019 of hoger.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036454"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906335"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Installatie en validatie van de numerieke bibliotheek
 
@@ -33,7 +33,7 @@ Zie de [gebruikers interface voor pakket beheer](https://docs.microsoft.com/nuge
 
 U kunt ook de Package Manager-console gebruiken om de numerieke bibliotheek toe te voegen aan uw project via de opdracht regel interface.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![De Package Manager-console gebruiken vanaf de opdracht regel](../../media/vs2017-nuget-console-menu.png)
 
 Voer de volgende handelingen uit vanuit de Package Manager-console:
 

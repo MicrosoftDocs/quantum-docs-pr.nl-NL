@@ -1,16 +1,17 @@
 ---
 title: Broombridge-Quantum-schei kunde-schema
+description: Overzicht van het Broombridge quantum chemie-schema, dat wordt gebruikt om praktijk problemen met de Microsoft Quantum Development Kit te model leren.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185321"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907814"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge quantum chemie-schema # 
 
@@ -23,9 +24,8 @@ Broombridge is een gestructureerde, door de mens lees bare en YAML bare manier o
 - U kunt de status van de grond en de opgewonden gebruiken met het maken van reeksen.
 - De boven-en ondergrenzen van de energie niveaus kunnen worden opgegeven.
 
-De gegevens indeling kan worden gegenereerd op basis van NWChem met moeiteloos gemak: er is een groot aantal methoden beschikbaar die variëren van een volledige installatie van NWChem om schei kunde uit te voeren, zoals die [hier](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) en uitvoer Broombridge als onderdeel van de uitvoering, via een docker afbeelding van NWchem, die ook kan worden gebruikt voor het genereren van Broombridge van schei-dekken. Ten slotte wordt een visuele methode gebruikt om snel aan de slag te gaan met berekeningen zonder enige schei kunde te hoeven installeren door de [EMSL-pijlen](https://arrows.emsl.pnnl.gov/api/qsharp_chem) interface naar NWChem. 
+De gegevens indeling kan worden gegenereerd op basis van NWChem met moeiteloos gemak: er is een groot aantal methoden beschikbaar die variëren van een volledige installatie van NWChem om schei kunde uit te voeren, zoals [hier](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) en uitvoer Broombridge als onderdeel van de uitvoering, via een docker-installatie kopie van NWChem die ook kan worden gebruikt voor het genereren van Broombridge van chemie-dekken. Ten slotte wordt een visuele methode gebruikt om snel aan de slag te gaan met berekeningen zonder enige schei kunde te hoeven installeren door de [EMSL-pijlen](https://arrows.emsl.pnnl.gov/api/qsharp_chem) interface naar NWChem. 
 
-Op hoog niveau kunnen de Interplay tussen NWChem en de Microsoft Quantum Development Kit als volgt worden gevisualiseerd: ![chemie stack](~/media/broombridge.png) het blauwe grijze vak het Broombridge-schema vertegenwoordigt, de diverse grijze grijze vakken vertegenwoordigen andere interne gegevens representaties die zijn gekozen voor het weer geven en verwerken van Quantum algoritmen voor reken kundige schei kunde op basis van problemen met de praktijk. 
+Op hoog niveau kunnen de Interplay tussen NWChem en de Microsoft Quantum Development Kit als volgt worden gevisualiseerd: ![chemie stack](~/media/broombridge.png) het blauwe grijze vak het Broombridge-schema vertegenwoordigt, de verschillende grijze gearceerde vakken vertegenwoordigen andere interne gegevens representaties die zijn gekozen voor het weer geven en verwerken van Quantum algoritmen voor reken kundige schei kunde op basis van problemen met de praktijk. 
 
 [Hier](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)vindt u meerdere chemische representaties die zijn gedefinieerd met behulp van het Broombridge-schema.
-

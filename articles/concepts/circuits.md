@@ -1,17 +1,17 @@
 ---
-title: Quantum circuits | Microsoft Docs
-description: Kwantumcircuits
+title: Kwantumcircuits
+description: Meer informatie over het visueel weer geven van eenvoudige en complexe Quantum bewerkingen met Quantum circuit diagrammen.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820790"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905145"
 ---
 # <a name="quantum-circuits"></a>Quantum circuits
 Denk eens na over een ogen blik dat de unitary-trans formatie $ \Text{CNOT} _{01}(H\otimes 1) $.
@@ -24,7 +24,7 @@ Het circuit diagram voor het voorbereiden van de Quantum status van deze maximal
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+![-circuit diagram voor een maximally Entangled-status van twee Qubit](~/media/Concepts1.png)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Conventies van Quantum circuit diagram
 Deze visuele taal voor Quantum bewerkingen kan beter digestible zijn dan het schrijven van de equivalente matrix wanneer u de conventies voor het uitdrukken van een Quantum circuit begrijpt.
@@ -37,9 +37,9 @@ Bijvoorbeeld het symbool
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+![symbool voor een Hadamard-bewerking die wordt uitgevoerd op een single-Qubit-REGI ster](~/media/concepts_2.png)
 
-is de [Hadamard](xref:microsoft.quantum.intrinsic.h) -poort die fungeert als een Qubit-REGI ster.
+is een [Hadamard](xref:microsoft.quantum.intrinsic.h) -bewerking die fungeert als een single-Qubit-REGI ster.
 
 Quantum-Gates worden in chronologische volg orde gerangschikt met de meest linkse poort als de poort die voor het eerst op de qubits is toegepast.
 Met andere woorden, als u de draden bijhoudt als het gaat om de Quantum status, halen de draden de Quantum status door elk van de poorten in het diagram van links naar rechts.
@@ -47,7 +47,7 @@ Dat wil zeggen
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+![diagram van Quantum-Gates dat van links naar rechts wordt toegepast](~/media/concepts_3.png)
 
 is de unitary matrix $CBA $.
 Matrix vermenigvuldiging voldoet aan de tegenovergestelde Conventie: de meest rechtse matrix wordt eerst toegepast. In Quantum-circuit diagrammen wordt echter de meest linkse poort toegepast eerst.
@@ -65,7 +65,7 @@ Een voor beeld hiervan is dat we een unitary-bewerking met twee Qubit definiëre
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+![circuit diagram van een unitary bewerking met twee qubits](~/media/concepts_4.png)
 
 We kunnen ook $B $ weer geven als een actie voor een enkele twee Qubit-registratie in plaats van 2 1-Qubit registreert, afhankelijk van de context waarin het circuit wordt gebruikt. Misschien is de meest nuttige eigenschap van dergelijke abstracte circuit diagrammen dat ze gecompliceerde Quantum algoritmen op een hoog niveau mogen worden beschreven, zonder dat ze hoeven te compileren op basis poorten.
 Dit betekent dat u een Intuition voor de gegevens stroom kunt verkrijgen voor een grote Quantum algoritme zonder dat u alle details hoeft te begrijpen van de manier waarop elk van de subroutines binnen het algoritme werkt.
@@ -78,14 +78,14 @@ Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diag
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+![circuit diagram van een poort die afzonderlijk wordt gecontroleerd](~/media/concepts_5.png)
 
 Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $1 $ heeft.
 Voor de speciale gevallen waarin $G = X $ en $G = Z $, introduceren we de volgende notatie om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) is:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+![-circuit diagram voor speciale gevallen van gecontroleerde poorten](~/media/concepts_6.png)
 
 Q # biedt methoden voor het automatisch genereren van de bewaakte versie van een bewerking, waardoor de programmeur van de hand om deze bewerkingen te hoeven coderen. Hieronder ziet u een voor beeld van dit:
 
@@ -104,7 +104,7 @@ Met name een dergelijk subcircuit ziet er als volgt uit:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![meet circuit](~/media/concepts_7.png)
+![-symbool dat een meting bewerking vertegenwoordigt](~/media/concepts_7.png)
 
 Q # implementeert een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
 Zie de [sectie over metingen](xref:microsoft.quantum.libraries.standard.prelude#measurements) voor meer informatie.
@@ -113,7 +113,7 @@ Op dezelfde manier wordt het subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+![circuit diagram dat een gecontroleerde bewerking vertegenwoordigt](~/media/concepts_8.png)
 
 geeft een klassieke, gecontroleerde poort, waarbij $G $ wordt toegepast op de waarde van het klassieke besturings element bit $1 $.
 
@@ -125,4 +125,4 @@ Dit is nodig om het protocol te laten werken volgens de wetten van Quantum-garag
 Het Quantum teleportal-circuit wordt hieronder gegeven. We bieden ook een geannoteerde versie van het circuit om te laten zien hoe het Quantum circuit kan worden gelezen.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![Quantum Teleportation-circuit](~/media/concepts_tp2.png)

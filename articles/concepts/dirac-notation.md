@@ -1,17 +1,17 @@
 ---
-title: Dirac notatie | Microsoft Docs
-description: Dirac-notatie
+title: Dirac-notatie
+description: Meer informatie over het gebruik van de Dirac-notatie voor Quantum statussen en voor het simuleren van Quantum bewerkingen.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184760"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907559"
 ---
 # <a name="dirac-notation"></a>Dirac-notatie
 
@@ -36,7 +36,7 @@ $$
 
 De volgende notatie wordt vaak gebruikt voor het beschrijven van de statussen die het gevolg zijn van het Toep assen van de Hadamard-poort op $ \ket{0}$ en $ \ket{1}$ (die overeenkomt met de eenheids vectoren in de richtingen $ + x $ en $-x $ op de Bloch-bol):
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
 $$
 
 Deze statussen kunnen ook worden uitgebreid met behulp van de Dirac-notatie als som van $ \ket{0}$ en $ \ket{1}$:
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Tensor-product notatie
 De notatie Dirac bevat ook een impliciete tensor-product structuur.  Dit is belang rijk omdat in de quantum computing de status vector die wordt beschreven door twee niet-gecorreleerde Quantum registers, de tensor-producten van de twee status vectoren zijn.  Een beknoptere beschrijving van de tensor-product structuur of het ontbreken daarvan is essentieel als u een Quantum berekening wilt uitleggen.  De tensor-product structuur impliceert dat we $ \psi \otimes \phi $ kunnen schrijven voor een twee Quantum status vectoren $ \phi $ en $ \psi $ als $ \ket{\psi} \ket{\phi} $, soms expliciet geschreven als $ \ket{\psi} \otimes \ket{\phi} $, maar niet op conventies voor het schrijven van $ \otimes $ tussen de vectoren is niet nodig.  De status waarbij bijvoorbeeld twee qubits is geïnitialiseerd op de status nul, wordt gegeven door
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ otimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 Op dezelfde manier is de status $ \ket{p} $ voor geheel getal $p $ een Quantum status die in binaire weer gave het gehele getal $p $ aangeeft.  Als we bijvoorbeeld het getal $5 $ willen uitdrukken met behulp van een niet-ondertekende binaire code ring, kunnen we het op dezelfde manier uitdrukken als
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Voor beeld: de superpositie beschrijven met de Dirac-notatie
 Als een ander voor beeld van hoe u Dirac-notatie kunt gebruiken om een Quantum status te beschrijven, moet u rekening houden met de volgende gelijkwaardige manieren om een Quantum status te schrijven die een gelijke superpositie is boven elke mogelijke bit-reeks van lengte $n $
 
-$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 U vraagt zich misschien af waarom de som van $0 $ tot $2 ^ {n}-$1 voor $n $ bits.  Eerst moet u er rekening mee houden dat er $2 ^ {n} verschillende configuraties zijn die $n $ bits kunnen uitvoeren.  U kunt dit zien door aan te geven dat één bit $2 $-waarden kan hebben, maar dat twee bits $4 $ waarden kunnen hebben, enzovoort. In het algemeen betekent dit dat er $2 ^ n $ verschillende mogelijke bits teken reeksen zijn, maar de grootste waarde die is gecodeerd in een van deze $1 \ cdots 1 = 2 ^ n-$1 en daarom de bovengrens voor de som.
@@ -93,7 +93,7 @@ Dat wil zeggen dat u de tensor-product notatie kunt distribueren in de Dirac-not
 
 Bra-vectoren volgen een vergelijk bare Conventie voor ket-vectoren.  De vector $ \bra{\psi}\bra{\phi} $ is bijvoorbeeld gelijk aan de status vector $ \psi ^ \dagger \otimes \phi ^ \dagger = (\psi\otimes \phi) ^ \dagger $. Als de ket vector $ \ket{\psi} $ $ \alpha \ket{0} + \beta \ket{1}$, is de Bra vector versie van de vector $ \bra{\psi} = \ket{\psi} ^ \dagger = (\bra{0}\alpha ^ * + \bra{1}\beta ^ *) $.
 
-Stel dat we de kans willen berekenen dat de status $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ wordt gebruikt om de status te meten van $ \ket{+} $ of $ \ket{-}$. Vervolgens wordt de kans dat het apparaat zou worden uitgevoerd als de status $ \ket{-}$ 
+Voor beeld: Stel dat we de kans willen berekenen dat de status wordt gemeten: $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ met behulp van een Quantum programma voor het meten van de statussen $ \ket{+} $ of $ \ket{-}$. Vervolgens wordt de kans dat het apparaat zou worden uitgevoerd als de status $ \ket{-}$ 
 
 $ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right | ^ 2 = \left |-\frac{3}{5 \ SQRT{2}} + \frac{4}{5 \ SQRT{2}} \right | ^ 2 = \frac{1}{50}. $ $
 
@@ -132,7 +132,7 @@ $$
 
 Vervolgens kunnen we zien dat dit consistent is met de discussie over mogelijke meet kansen voor multiqubit-statussen met behulp van de kolom vector notatie:
 
-$ $ P (\Text{First Qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \ Dagger \psi | ^ 2, $ $
+$ $ P (\Text{First Qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \dagger \psi | ^ 2, $ $
 
 die overeenkomt met de multi-Qubit-meting discussie.  De generalisatie van dit resultaat op de multi-Qubit-case is echter iets gecompliceerder voor Express met Dirac-notatie dan de kolom vector notatie en is volledig gelijk aan de vorige behandeling.
 
@@ -146,4 +146,3 @@ Voor de belanghebbende lezer raden we u aan een van de referentie boeken te leze
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>V # poort reeksen die gelijk zijn aan Quantum statussen
 Een eind punt voor het verhogen van de Quantum-notatie en de Q #-programmeer taal: bij het begin van dit document hebben we vermeld dat de Quantum status het fundamentele object van informatie in quantum computing is.  Het kan dan als een verrassing zijn dat er bij Q # geen begrip van een Quantum staat is.  In plaats daarvan worden alle statussen alleen beschreven door de bewerkingen die worden gebruikt om ze voor te bereiden.  Het vorige voor beeld is dit een uitstekende illustratie.  In plaats van een uniforme superpositie te geven voor elke Quantum-bits teken reeks in een REGI ster, kunnen we het resultaat vertegenwoordigen als $H ^ {\otimes n} \ket{0}$.  Deze exponentiële korte beschrijving van de status heeft niet alleen het voor deel dat we er in de klassieke reden voor kunnen hebben, maar ook een beknopt overzicht van de bewerkingen die nodig zijn om door de software stack te worden door gegeven om de algoritme te implementeren.  Daarom is Q # ontworpen voor het verzenden van poort reeksen in plaats van Quantum Staten; op theoretisch niveau zijn de twee perspectieven echter gelijkwaardig.
-

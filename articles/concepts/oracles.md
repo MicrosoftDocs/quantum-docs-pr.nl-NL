@@ -1,24 +1,24 @@
 ---
-title: Quantum Oracle | Microsoft Docs
-description: Quantum Oracle
+title: Kwantum-oracles
+description: Informatie over het werken met en het definiëren van Quantum Oracle, Black Box-bewerkingen die worden gebruikt als invoer voor een ander algoritme.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184709"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904924"
 ---
 # <a name="quantum-oracles"></a>Quantum Oracle
 
 Een Oracle-$O $ is een "Black Box"-bewerking die als invoer wordt gebruikt voor een ander algoritme.
 Dergelijke bewerkingen worden vaak gedefinieerd met behulp van een klassieke functie $f: \\{0, 1\\} ^ n \to \\{0, 1\\} ^ m $, die een $n $-bit binaire invoer maakt en een $m $-bits binaire uitvoer produceert.
 Als u dit wilt doen, moet u een bepaalde binaire invoer $x = (x_{0}, x_{1}, \dots, x_ {n-1}) $.
-We kunnen Qubit Staten labelen als $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}} $.
+We kunnen Qubit Staten labelen als $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_ {n-1}} $.
 
 We kunnen eerst proberen om $O $ te definiëren, zodat $O \ket{x} = \ket{f (x)} $, maar dit heeft een aantal problemen.
 Ten eerste kan $f $ een andere grootte van invoer en uitvoer hebben ($n \ne m $), zodat $O $ het aantal qubits in de kassa wijzigt.
@@ -43,16 +43,16 @@ Dit volgt onmiddellijk van het feit dat $O $, zoals alle Quantum bewerkingen, li
 Houd rekening met de Hadamard-bewerking, bijvoorbeeld die is gedefinieerd door $H \ket{0} = \ket{+} $ en $H \ket{1} = \ket{-}$.
 Als we willen weten hoe $H $ op $ \ket{+} $ reageert, kunnen we gebruiken dat $H $ lineair is,
 
-$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ Ket {+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
+$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
 \end{align} $ $
 
 In het geval van het definiëren van onze Oracle-$O $, kunnen we ook gebruiken dat elke status $ \ket{\psi} $ op $n + m $ qubits kan worden geschreven als
 
-$ $ \begin{align} \ket{\psi} & = \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
+$ $ \begin{align} \ket{\psi} & = \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
 
 waar $ \alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ m \to \mathbb{C} $ staat voor de coëfficiënten van de status $ \ket{\psi} $. Zeep
 
-$ $ \begin{align} O \ket{\psi} & = O \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0 , 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0 , 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
+$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n , y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>Fase Oracle
@@ -60,8 +60,8 @@ Het is ook mogelijk om $f $ te coderen in een Oracle-$O $ door een _fase_ toe te
 We kunnen bijvoorbeeld $O $ zodanig definiëren dat $ $ \begin{align} O \ket{x} = (-1) ^ {f (x)} \ket{x}.
 \end{align} $ $ als een Phase Oracle in eerste instantie een registratie op basis van een reken status $ \ket{x} $ uitvoert, is deze fase een globale fase en daarom niet waarneembaar.
 Maar zo'n Oracle kan een zeer krachtige bron zijn als deze wordt toegepast op een superpositie of als een beheerde bewerking.
-Denk bijvoorbeeld aan een fase orcale $O _f $ voor een functie met één Qubit $f $.
-Then, $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
+Denk bijvoorbeeld aan een fase orcale $O _f $ voor een Qubit-functie $f $.
+Then, $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
 \end{align} $ $
 
 In het algemeen kunnen beide weer gaven van Oracle worden uitgebreid met klassieke functies die echte aantallen retour neren in plaats van slechts één bit.

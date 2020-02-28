@@ -1,24 +1,24 @@
 ---
-title: Symmetries van moleculaire integralen | Microsoft Docs
-description: Symmetries van de conceptuele Integraals documenten
+title: Symmetries van moleculaire integralen
+description: 'Meer informatie over het gebruik van het type Q # OrbitalIntegral voor het opsommen van moleculaire Symmetries.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442397"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904465"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries van moleculaire integralen
 
-De inherente symmetrie van de Coulomb Hamiltonian, dat wil zeggen de Hamiltonian in [Quantum modellen voor elektronische systemen](xref:microsoft.quantum.chemistry.concepts.quantummodels), waarin electrons interacties met elkaar en met de nuclei wordt beschreven, leidt tot een aantal Symmetries dat kan worden misbruikt om de voor waarden in de Hamiltonian te comprimeren.
-Over het algemeen als er geen verdere veronderstellingen worden gedaan over de basis functies $ \psi_j $, hebben we alleen dat \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} die direct kan worden gezien van de integralen in [Quantum modellen voor Bij elektronische systemen](xref:microsoft.quantum.chemistry.concepts.quantummodels) moet u er rekening mee houden dat de waarden identiek blijven als $p, q $ en $r, s $ worden verwisseld van anti-werk.
+De inherente symmetrie van de Coulomb-Hamiltonian, dat wil zeggen de Hamiltonian in [Quantum modellen voor elektronische systemen](xref:microsoft.quantum.chemistry.concepts.quantummodels), waarin electrons interacties met elkaar en de nuclei wordt beschreven, leidt tot een aantal Symmetries dat kan worden misbruikt om de voor waarden in de Hamiltonian te comprimeren.
+Over het algemeen als er geen verdere veronderstellingen worden gemaakt over de basis functies $ \ psi_j $, hebben we alleen die \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} die direct kan worden gezien in de integralen in [Quantum modellen voor elektronische systemen](xref:microsoft.quantum.chemistry.concepts.quantummodels) , waarbij de waarden identiek blijven als $p, q $ en $r, s $ worden verwisseld van anti-werk.
 
-Als we ervan uitgaan dat de spin-banen een echte waarde hebben (zoals voor de Orbital bases van Gaussiaans), hebben we nog verder de volgende \begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ vergelijking} aan de hand van deze veronderstellingen kunnen we de bovenstaande Symmetries gebruiken om de gegevens te reduceren die nodig zijn voor het opslaan van de matrix elementen van de Hamiltonian met een factor van $8 $; Hoewel het importeren van gegevens op een consistente manier iets moeilijker wordt.
+Als we ervan uitgaan dat de spin-banen een echte waarde hebben (zoals voor de Orbital bases van Gaussiaans), hebben we nog verder \begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ vergelijking} aan de hand van deze veronderstellingen kunnen we de bovenstaande Symmetries gebruiken om de gegevens te reduceren die nodig zijn voor het opslaan van de matrix elementen van de Hamiltonian met een factor van $8 $; Hoewel het importeren van gegevens op een consistente manier iets moeilijker wordt.
 Gelukkig heeft de Hamiltonian simulatie bibliotheek subroutines die kunnen worden gebruikt voor het importeren van integrale bestanden uit [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) of rechtstreeks vanuit [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 Moleculaire Orbital integralen (de $h\_{pq} $ en $h\_{pqrs} $ termen), zoals deze worden weer gegeven met behulp van het `OrbitalIntegral` type, dat een aantal handige functies biedt om deze symmetrie af te drukken.

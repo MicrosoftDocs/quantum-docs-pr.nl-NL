@@ -1,17 +1,17 @@
 ---
-title: Pull-aanvragen openen | Microsoft Docs
-description: Pull-aanvragen openen
+title: Pull-aanvragen openen
+description: Meer informatie over hoe u een GitHub pull-aanvraag indient, wanneer u klaar bent voor het bijdragen aan code of documentatie voor de Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183723"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907457"
 ---
 # <a name="opening-pull-requests"></a>Pull-aanvragen openen #
 
@@ -42,19 +42,19 @@ We tekenen vaak diagrammen waarin de door voeringen worden getekend als cirkels 
 Stel dat u een bijdrage in een _vertakking_ met de naam `feature`hebt gestart.
 Uw Fork van **micro soft/Quantum** kan er ongeveer als volgt uitzien:
 
-![](~/media/git-workflow-step0.png)
+![Een werk vertakking in GitHub](~/media/git-workflow-step0.png)
 
 Als u uw wijzigingen in uw lokale opslag plaats aanbrengt, _kunt u_ wijzigingen aanbrengen van een andere opslag plaats in uw bedrijf om alle wijzigingen te ondervangen die zijn doorgevoerd.
 
-![](~/media/git-workflow-step1.png)
+![Het ophalen en samen voegen van wijzigingen vanuit een upstream-opslag plaats](~/media/git-workflow-step1.png)
 
 Pull-aanvragen werken op dezelfde manier, maar in omgekeerde volg orde: wanneer u een pull-aanvraag opent, vraagt u de upstream-opslag plaats om uw bijdrage te halen in.
 
-![](~/media/git-workflow-step2.png)
+![Er wordt gevraagd om uw wijzigingen terug te halen naar de oorspronkelijke opslag plaats](~/media/git-workflow-step2.png)
 
 Wanneer u een pull-aanvraag opent in een van onze opslag plaatsen, biedt GitHub een kans voor anderen in de community om een samen vatting van uw wijzigingen te bekijken, een opmerking hierover te nemen en suggesties te doen voor het maken van een nog betere bijdrage.
 
-![](~/media/pull-request-header.png)
+![Scherm opname van een pull-aanvraag in GitHub](~/media/pull-request-header.png)
 
 Met dit proces kunnen we de GitHub-functionaliteit gebruiken om bijdragen te verbeteren en een product van hoge kwaliteit te onderhouden voor de Quantum-programmeer community.
 

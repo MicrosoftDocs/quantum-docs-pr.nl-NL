@@ -1,17 +1,17 @@
 ---
-title: Meerdere qubits | Microsoft Docs
-description: Meerdere qubits
+title: Meerdere qubits
+description: Meer informatie over het uitvoeren van bewerkingen op twee of meer qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863213"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907542"
 ---
 # <a name="multiple-qubits"></a>Meerdere qubits
 
@@ -27,7 +27,7 @@ Deze hulpprogram ma's zijn absoluut nood zakelijk om inzicht te krijgen in de po
 
 ## <a name="representing-two-qubits"></a>Die twee qubits vertegenwoordigen
 Het belangrijkste verschil tussen de een-en twee Qubit Staten is dat twee Qubit-Staten vier driedimensionaal zijn in plaats van twee dimensies.
-Dit komt doordat de reken kundige basis voor twee Qubit Staten wordt gevormd door de tensor-producten van een Qubit-status.  We hebben bijvoorbeeld \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+Dit komt doordat de reken kundige basis voor twee Qubit Staten wordt gevormd door de tensor-producten van een Qubit-status.  We hebben bijvoorbeeld \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 Het is eenvoudig om te zien dat de Quantum status van $n $ qubits wordt vertegenwoordigd door een eenheids vector van dimensie $2 ^ n $ met behulp van deze constructie.  De vector
@@ -103,7 +103,7 @@ We kunnen ook twee Qubit-poorten vormen door enkelvoudige Qubit-poorten op beide
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-en de
+en
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 

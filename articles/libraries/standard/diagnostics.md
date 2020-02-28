@@ -1,18 +1,18 @@
 ---
-title: 'Q # standaard bibliotheken-diagnostische gegevens | Microsoft Docs'
-description: 'Q # standaard bibliotheken-diagnostische gegevens'
+title: 'Diagnostische gegevens in de standaard bibliotheken van Q #'
+description: "Meer informatie over de diagnostische functies en bewerkingen in de standaard bibliotheken van Q # die worden gebruikt om fouten of fouten in Quantum Program ma's te ondervangen."
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820977"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906233"
 ---
-# <a name="diagnostics"></a>Diagnostics #
+# <a name="diagnostics"></a>Diagnostiek #
 
 Net als bij de klassieke ontwikkeling is het belang rijk om fouten en fouten in Quantum Program ma's te kunnen onderzoeken.
 De standaard bibliotheken van Q # bieden verschillende manieren om de juistheid van Quantum Program ma's, zoals beschreven in <xref:microsoft.quantum.techniques.testing-and-debugging>, te garanderen.

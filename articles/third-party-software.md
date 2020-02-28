@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft Docs
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: Kennisgevingen en informatie over software van derden Microsoft Quantum Development Kit.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Voeg geen sleutelwoorden toe en bewerk ze niet zonder overleg met uw SEO-expert.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184369"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906811"
 ---
 # <a name="third-party-software-notices-and-information"></a>KENNISGEVINGEN EN INFORMATIE OVER SOFTWARE VAN DERDEN
 
@@ -20,7 +20,7 @@ Dit bestand is gebaseerd op of opgenomen in de projecten die hieronder worden we
 
 1. YamlDotNet. ondertekende versie 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. loper. Visual Studio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. loper. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. loper. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Dit bestand is gebaseerd op of opgenomen in de projecten die hieronder worden we
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry en inzenders
 
-Er wordt gratis toestemming verleend voor elke persoon die een kopie van deze software en bijbehorende documentatie bestanden (de "software") verkrijgt om de software zonder enige beperking te kunnen behandelen, met inbegrip van de rechten voor gebruik, het kopiëren, wijzigen, samen voegen, Publiceer, distribueer, sublicentie en/of verkoop kopieën van de software, en om personen aan wie de software wordt geleverd, toe te staan, onder de volgende voor waarden:
+Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 
@@ -180,7 +180,7 @@ Een ' Inzender ' is een persoon die de bijdrage onder deze licentie distribueert
 
 (A) auteurs rechten verleend op basis van de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3, verleent elke bijdrager u een niet-exclusieve, wereld wijd royalty gratis auteursrecht licentie om haar bijdrage te reproduceren, afgeleide voor bereiding werkt met de bijdrage en distribueert haar bijdrage of afgeleide werken die u maakt.
 
-(B) Patent toekenning: onderhevig aan de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3, verleent elke bijdrager u een niet-exclusieve, wereld wijd royalty vrije licentie onder de gelicentieerde patenten om, te maken, gebruiken, verkopen, aanbieden voor de bijdrage van de software of derivaten van de bijdrage in de software kan worden verkocht, geïmporteerd en/of anderszins afgestoten.
+(B) Patent toekenning: onderhevig aan de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3 verleent elke bijdrager u een niet-exclusieve, wereld wijd royalty vrije licentie onder de gelicentieerde patenten om te voorzien in, het gebruik, de verkoop, de verkoop, het importeren en/of anderszins afstoten van de bijdrage in de software of derivaten van de bijdrage in de software.
 
 3. Voor waarden en beperkingen
 
@@ -192,7 +192,7 @@ Een ' Inzender ' is een persoon die de bijdrage onder deze licentie distribueert
 
 (D) als u een deel van de software in broncode vorm distribueert, kunt u dit alleen doen onder deze licentie door een volledige kopie van deze licentie met uw distributie op te nemen. Als u een deel van de software in gecompileerde of object code vorm distribueert, kunt u dit alleen doen onder een licentie die voldoet aan deze licentie.
 
-(E) de software wordt ' in de praktijk ' in licentie gegeven. U draagt het risico van het gebruik ervan. De mede werkers geven geen expliciete garanties, garanties of voor waarden. Het is mogelijk dat u aanvullende consumenten rechten hebt onder uw lokale wetgeving die deze licentie niet kan wijzigen. Voor zover is toegestaan onder uw lokale wetgeving, nemen de mede werkers de impliciete garanties van verkoop baarheid, geschiktheid voor een bepaald doel en niet-INBREUKMAKENDHEID.
+(E) de software wordt ' in de praktijk ' in licentie gegeven. Gebruik van deze informatie is voor eigen risico. De mede werkers geven geen expliciete garanties, garanties of voor waarden. Het is mogelijk dat u aanvullende consumenten rechten hebt onder uw lokale wetgeving die deze licentie niet kan wijzigen. Voor zover is toegestaan onder uw lokale wetgeving, nemen de mede werkers de impliciete garanties van verkoop baarheid, geschiktheid voor een bepaald doel en niet-INBREUKMAKENDHEID.
 
 ## <a name="fsharpcore-notices-and-information"></a>KENNISGEVINGen en informatie over FSharp. core
 ---------------------------------------
@@ -201,7 +201,7 @@ De MIT-licentie (MIT)
 Copyright (c) micro soft Corporation.
 Alle rechten voorbehouden.
 
-Er wordt gratis toestemming verleend voor elke persoon die een kopie van deze software en bijbehorende documentatie bestanden (de "software") verkrijgt om de software zonder enige beperking te kunnen behandelen, met inbegrip van de rechten voor gebruik, het kopiëren, wijzigen, samen voegen, Publiceer, distribueer, sublicentie en/of verkoop kopieën van de software, en om personen aan wie de software wordt geleverd, toe te staan, onder de volgende voor waarden:
+Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 
@@ -213,7 +213,7 @@ De MIT-licentie (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-Er wordt gratis toestemming verleend voor elke persoon die een kopie van deze software en bijbehorende documentatie bestanden (de "software") verkrijgt om de software zonder enige beperking te kunnen behandelen, met inbegrip van de rechten voor gebruik, het kopiëren, wijzigen, samen voegen, Publiceer, distribueer, sublicentie en/of verkoop kopieën van de software, en om personen aan wie de software wordt geleverd, toe te staan, onder de volgende voor waarden:
+Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 
@@ -226,7 +226,7 @@ De MIT-licentie (MIT)
 
 Copyright (c) 2012 Oystein Bjorke
 
-Er wordt gratis toestemming verleend voor elke persoon die een kopie van deze software en bijbehorende documentatie bestanden (de "software") verkrijgt om de software zonder enige beperking te kunnen behandelen, met inbegrip van de rechten voor gebruik, het kopiëren, wijzigen, samen voegen, Publiceer, distribueer, sublicentie en/of verkoop kopieën van de software, en om personen aan wie de software wordt geleverd, toe te staan, onder de volgende voor waarden:
+Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 
@@ -252,7 +252,7 @@ De MIT-licentie (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-Er wordt gratis toestemming verleend voor elke persoon die een kopie van deze software en bijbehorende documentatie bestanden (de "software") verkrijgt om de software zonder enige beperking te kunnen behandelen, met inbegrip van de rechten voor gebruik, het kopiëren, wijzigen, samen voegen, Publiceer, distribueer, sublicentie en/of verkoop kopieën van de software, en om personen aan wie de software wordt geleverd, toe te staan, onder de volgende voor waarden:
+Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 

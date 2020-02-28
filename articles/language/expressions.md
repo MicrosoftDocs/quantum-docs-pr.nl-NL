@@ -1,21 +1,21 @@
 ---
-title: Expressies | Microsoft Docs
-description: Expressies
+title: 'Q #-expressies'
+description: 'Meer informatie over het opgeven, verwijzen en combi neren van constanten, variabelen, Opera Tors, bewerkingen en functies als expressies in Q #.'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fbde873f220d737db17f889d00be33541e3eb59b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036307"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907406"
 ---
 # <a name="expressions"></a>Expressies
 
-## <a name="grouping"></a>shapes
+## <a name="grouping"></a>Shapes
 
 Op basis van een expressie is dezelfde expressie die tussen haakjes staat, een expressie van hetzelfde type.
 `(7)` is bijvoorbeeld een `Int` expressie, `([1,2,3])` een expressie van het type matrix van `Int`s en `((1,2))` is een expressie van het type `(Int, Int)`.

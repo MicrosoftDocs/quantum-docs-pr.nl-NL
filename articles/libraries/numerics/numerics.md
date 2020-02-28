@@ -1,17 +1,17 @@
 ---
-title: De numerieke bibliotheek gebruiken | Microsoft Docs
-description: De numerieke bibliotheek gebruiken
+title: 'De micro soft Q # Nummerings bibliotheek gebruiken'
+description: Meer informatie over de typen en bewerkingen die beschikbaar zijn in de micro soft Quantum Nummerings bibliotheek.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821028"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907253"
 ---
 # <a name="using-the-numerics-library"></a>De numerieke bibliotheek gebruiken
 
@@ -36,7 +36,7 @@ De numerieke bibliotheek ondersteunt de volgende typen
 1. **`SignedLittleEndian`** : hetzelfde als `LittleEndian`, behalve dat het een geheel getal met teken vertegenwoordigt dat is opgeslagen in twee aanvullingen.
 1. **`FixedPoint`** : vertegenwoordigt een reëel getal dat bestaat uit een Qubit-matrix `qArr2 : Qubit[]` en een binaire punt positie `pos`, waarmee het aantal binaire cijfers links van het binaire punt wordt geteld. `qArr2` wordt op dezelfde manier opgeslagen als `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Bewerkingen
 
 Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaar:
 

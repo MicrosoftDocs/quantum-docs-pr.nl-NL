@@ -1,17 +1,17 @@
 ---
-title: Geavanceerde matrix concepten | Microsoft Docs
-description: Geavanceerde matrix concepten
+title: Geavanceerde matrixconcepten
+description: Meer informatie over eigenvectors, eigenvalues en matrix exponentiëles, de belangrijkste hulpprogram ma's voor het beschrijven en simuleren van Quantum algoritmen.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183757"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907576"
 ---
 # <a name="advanced-matrix-concepts"></a>Geavanceerde matrix concepten #
 
@@ -27,19 +27,19 @@ Voor de ID-matrix is bijvoorbeeld elke vector $v $ een eigenvector met eigenvalu
 
 Een ander voor beeld is het overwegen van een [*diagonale matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $D $ die alleen niet-nul vermeldingen bevat op de diagonaal:
 
-$ $ \begin{bmatrix} d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & D_3 \end{bmatrix}.
+$ $ \begin{bmatrix} d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3 \end{bmatrix}.
 $$
 
 De vectoren
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} en \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ einde {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} en \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ end {bmatrix} $ $
 
 zijn eigenvectors van deze matrix met respectievelijk eigenvalues $d _1 $, $d _2 $ en $d _3 $. Als $d _1 $, $d _2 $ en $d _3 $ verschillende getallen zijn, zijn deze vectoren (en hun veelvouden) de enige eigenvectors van de matrix $D $. Over het algemeen kunt u voor een diagonale matrix eenvoudig de eigenvalues en eigenvectors lezen. De eigenvalues zijn alle getallen die op de diagonaal worden weer gegeven en hun respectieve eigenvectors zijn de eenheids vectoren met één vermelding gelijk aan $1 $ en de resterende vermeldingen gelijk zijn aan $0 $.
 
 In het bovenstaande voor beeld ziet u dat de eigenvectors van $D $ een basis vormt voor $3 $-dimensionale vectoren. Een basis is een set vectoren waarmee elke vector als een lineaire combi natie ervan kan worden geschreven. Meer expliciet, $v _1 $, $v _2 $ en $v _3 $ vormen een basis als een vector $v $ kan worden geschreven als $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ voor sommige cijfers $a _1 $, $a _2 $ en $a _3 $.
 
 Terughalen dat een Hermitian-matrix (ook wel Self-adjoint genoemd) een complexe vier Kante matrix is die gelijk is aan zijn eigen complexe geconjugeerde, terwijl een unitary-matrix een complexe vier Kante matrix is waarvan de inverse is gelijk aan de complex geconjugeerde.
-Voor Hermitian-en unitary-matrices, die in feite de enige matrices zijn die zich voordoen bij Quantum Computing, is er een algemeen resultaat bekend als de [*Spectral theorema*](https://en.wikipedia.org/wiki/Spectral_theorem), waarbij het volgende wordt bevestigd: voor elke Hermitian-of unitary matrix $M $, bestaat er een unitary $U $ zodanig dat $M = U ^ \dagger D U $ voor sommige diagonale matrix $D $. Bovendien is de diagonale invoer van $D $ de eigenvalues van $M $.
+Voor Hermitian-en unitary-matrices, die in feite de enige matrices opleveren die worden aangetroffen in de Quantum Computing, is er een algemeen resultaat bekend als de [*Spectral theorema*](https://en.wikipedia.org/wiki/Spectral_theorem), waarbij het volgende wordt door berekend: voor elke Hermitian-of unitary matrix $M $, bestaat er een unitary $U $ zodat $M = U ^ \Dagger D U $ voor sommige diagonale matrix $D $. Bovendien is de diagonale invoer van $D $ de eigenvalues van $M $.
 
 U weet al hoe u de eigenvalues en eigenvectors van een diagonale matrix kunt berekenen $D $. Met deze theorema weten we dat als $v $ een eigenvector is van $D $ met eigenvalue $c $, d.w.z. $Dv = AVK $ en $U ^ \dagger v $ een eigenvector is van $M $ met eigenvalue $c $. Dit komt doordat
 

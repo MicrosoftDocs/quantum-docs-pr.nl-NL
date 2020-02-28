@@ -1,17 +1,17 @@
 ---
-title: 'Alles op elkaar afzetten-Q # technieken | Microsoft Docs'
-description: 'Alles op elkaar afzetten: Q # technieken'
+title: 'Q # technieken: alles samen zetten'
+description: 'Door lopen van een Basic Q #-programma dat quantum Teleporting laat zien.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820161"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906828"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Alles combi neren: teleportie #
 We gaan terug naar het voor beeld van het telepoorts circuit dat is gedefinieerd in [Quantum circuits](xref:microsoft.quantum.concepts.circuits). We gaan deze gebruiken om de concepten te illustreren die we tot nu toe hebben geleerd. Hieronder vindt u een uitleg van Quantum teleportie voor degenen die niet bekend zijn met de theorie, gevolgd door een overzicht van de code-implementatie in Q #. 

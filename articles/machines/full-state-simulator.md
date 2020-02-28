@@ -1,17 +1,17 @@
 ---
-title: Volledige status Simulator van Quantum Development Kit | Microsoft Docs
-description: Overzicht van de volledige status Simulator van de Quantum Development Kit van micro soft
+title: Volledige status Simulator
+description: "Meer informatie over het uitvoeren van uw Q #-Program ma's op de Microsoft Quantum Development Kit Full State Simulator."
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 12/7/2017
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: ab0e65765d27e301a59948d7c02105a523022e68
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184675"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906114"
 ---
 # <a name="quantum-development-kit-full-state-simulator"></a>Volledige status Simulator van Quantum Development Kit
 
@@ -32,7 +32,7 @@ Deze Quantum Simulator wordt weer gegeven via de `QuantumSimulator` klasse. Als 
 
 De klasse `QuantumSimulator` implementeert <xref:System.IDisposable>, dus de methode `Dispose` moet worden aangeroepen wanneer het exemplaar van de Simulator niet meer wordt gebruikt. De beste manier om dit te doen is om de Simulator binnen een `using`-instructie te laten teruglopen, zoals in het bovenstaande voor beeld.
 
-## <a name="seed"></a>Meerder
+## <a name="seed"></a>meerder
 
 De `QuantumSimulator` gebruikt een generator voor wille keurige getallen om de wille keurige Quantum te simuleren. Voor test doeleinden is het soms nuttig om deterministische resultaten te hebben. Dit kan worden bereikt door een Seed te geven voor de generator voor wille keurige getallen in de constructor van de `QuantumSimulator`via de para meter `randomNumberGeneratorSeed`:
 
@@ -46,5 +46,5 @@ De `QuantumSimulator` gebruikt een generator voor wille keurige getallen om de w
 
 ## <a name="threads"></a>Lijnen
 
-De `QuantumSimulator` maakt gebruik van [OpenMP](http://www.openmp.org/) om de vereiste lineaire algebra te parallelliseren. Standaard gebruikt OpenMP alle beschik bare hardware-threads, wat betekent dat Program ma's met een klein aantal qubits vaak langzaam worden uitgevoerd omdat de coördinatie vereist dat de werkelijke hoeveelheid werk wordt Dwarf. Dit kan worden opgelost door de omgevings variabele `OMP_NUM_THREADS` in te stellen op een klein getal. Als vuist regel is één thread geschikt voor Maxi maal 4 qubits, en dan is een extra thread per Qubit goed, hoewel dit zeer afhankelijk is van uw algoritme.
+De `QuantumSimulator` maakt gebruik van [OpenMP](http://www.openmp.org/) om de vereiste lineaire algebra te parallelliseren. OpenMP gebruikt standaard alle beschikbare hardware-threads, wat wil zeggen dat programma's met kleine aantallen qubits vaak langzaam worden uitgevoerd door de coördinatie die nodig is om het werkelijke werk te klein te laten lijken. Dit kan worden opgelost door de omgevings variabele `OMP_NUM_THREADS` in te stellen op een klein getal. Als brede richtlijn is één thread goed voor ongeveer vier qubits en is vervolgens een aanvullende thread per qubit goed, hoewel dit zeer afhankelijk is van uw algoritme.
 

@@ -1,19 +1,19 @@
 ---
-title: Gecorreleerde wavefunctions | Microsoft Docs
-description: Quantum Dynamics conceptuele docs
+title: Gecorreleerde golffuncties
+description: Meer informatie over dynamische en niet-dynamische correlaties in wavefunctions met behulp van de micro soft quantum chemie-bibliotheek.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184029"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904431"
 ---
-# <a name="correlated-wavefunctions"></a>Gecorreleerde wavefunctions
+# <a name="correlated-wavefunctions"></a>Gecorreleerde golffuncties
 
 Voor veel systemen, met name die in de buurt van de evenwichts geometrie, biedt [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) theorie een kwalitatieve beschrijving van de moleculaire eigenschappen via een verwijzings status met één determinant. Om een kwantitatieve nauw keurigheid te bereiken, moet u echter ook correlatie-effecten overwegen. 
 
@@ -24,9 +24,9 @@ Dit vereist een superpositie van determinanten en is een voor beeld van een Wave
 De Library chemie biedt een manier om een zeroth-Wavefunction op te geven voor het probleem met meer verwijzingen als een superpositie van determinanten. Deze methode, waarmee we sparse Multireference wavefunctions aanroepen, is effectief wanneer slechts enkele onderdelen voldoende zijn om de superpositie op te geven. De bibliotheek biedt ook een methode voor het toevoegen van dynamische correlaties boven op een verwijzing naar één determinant via de gegeneraliseerde unitary gekoppelde-cluster Ansatz. Daarnaast bouwt het ook Quantum circuits die deze statussen op een quantum computer genereren. Deze statussen kunnen worden opgegeven in het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)en we bieden ook de functionaliteit om deze statussen hand matig op te geven via de Library chemie.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Sparse multi-Reference Wavefunction
-Een status met meerdere verwijzingen $ \ket{\psi_{\rm {MCSCF}} $ kan expliciet worden opgegeven als een lineaire combi natie van $N $-elektroas Slater determininants.
-\begin{align} \ket{\psi_{\rm {MCSCF}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1, i_2, \cdots, i_N} a ^ \dagger_{i_1}a ^ \dagger_{i_2}\cdots a ^ \dagger_{i_N}\ket{0}.
-\end{align} bijvoorbeeld de status $ \propto (0.1 a ^ \dagger_1a ^ \dagger_2a ^ \dagger_6-0,2 a ^ \dagger_2a ^ \dagger_1a ^ \dagger_5) \ket{0}$ kan als volgt worden opgegeven in de Library chemie.
+Een status met meerdere verwijzingen $ \ket{\ psi_ {\rm {MCSCF}}} $ kan expliciet worden opgegeven als een lineaire combi natie van $N $-elektroon Slater determininants.
+\begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1, i_2, \cdots, i_N} a ^ \ dagger_ {i_1} a ^ \ dagger_ {i_2} \cdots a ^ \ dagger_ {i_N} \ket{0}.
+\end{align} bijvoorbeeld de status $ \propto (0.1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0,2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket{0}$ kan als volgt worden opgegeven in de Library chemie.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Deze expliciete weer gave van de superpositie onderdelen is effectief wanneer er slechts enkele onderdelen moeten worden opgegeven. Een voor beeld hiervan is het gebruik van deze representatie als er veel onderdelen nodig zijn om de gewenste status nauw keurig vast te leggen. De reden hiervoor is de degelijkings kosten van het Quantum circuit waarmee deze status wordt voor bereid op een quantum computer, waarmee ten minste lineair wordt geschaald met het aantal superpositie onderdelen, en Maxi maal quadratically met de één norm van de amplitudes van de Super positie.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Unitary gekoppeld-cluster Wavefunction
-Het is ook mogelijk om een unitary gekoppelde-cluster Wavefunction $ \ket{\psi_{\rm {UCC}}} $ op te geven met behulp van de chemistery-bibliotheek. In dit geval hebben we een verwijzings status met één determinant, zegt $ \ket{\psi_{\rm{SCF}}} $. De onderdelen van de unitary gekoppelde cluster Wavefunction worden vervolgens impliciet opgegeven via een unitary-operator die wordt uitgevoerd op een referentie status.
-Deze unitary-operator wordt meestal geschreven als $e ^ {T-T ^ \dagger} $, waarbij $T-T ^ \dagger $ de anti-Hermitian-cluster operator is. Daarom \begin{align} \ket{\psi_{\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\psi_{\rm{SCF}}}.
+Het is ook mogelijk om een unitary gekoppelde-cluster Wavefunction $ \ket{\ psi_ {\rm {UCC}}} $ op te geven met behulp van de chemistery-bibliotheek. In dit geval hebben we een verwijzings status met één determinant, zegt $ \ket{\ psi_ {\rm{SCF}}} $. De onderdelen van de unitary gekoppelde cluster Wavefunction worden vervolgens impliciet opgegeven via een unitary-operator die wordt uitgevoerd op een referentie status.
+Deze unitary-operator wordt meestal geschreven als $e ^ {T-T ^ \dagger} $, waarbij $T-T ^ \dagger $ de anti-Hermitian-cluster operator is. Daarom \begin{align} \ket{\ psi_ {\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rm{SCF}}}.
 \end{align}
 
-Het is ook gebruikelijk om de cluster operator $T = T_1 + T_2 + \cdots $ te splitsen in delen, waarbij elk deel $T _J $ $j $-Body-termen bevat. In gegeneraliseerde gekoppelde cluster theorie heeft de cluster operator met één hoofd tekst (singles) de vorm \begin{align} T_1 = \sum_{pq}t ^ {p} _ {q} a ^ \dagger_p a_q, \end{align}
+Het is ook gebruikelijk om de cluster operator $T = T_1 + T_2 + \cdots $ te splitsen in delen, waarbij elk deel $T _j $ $j $-Body-termen bevat. In gegeneraliseerde gekoppelde cluster theorie is de cluster operator met één hoofd tekst (singles) van het formulier \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{align}
 
-de cluster operator met twee hoofd tekst (dubbele) heeft de vorm \begin{align} T_2 = \sum_{pqrs}t ^ {pq} _ {RS} a ^ \dagger_p a ^ \dagger_q a_r a_s.
+de cluster operator met twee hoofd tekst (dubbels) is van het formulier \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {RS} a ^ \ dagger_p een ^ \ dagger_q a_r a_s.
 \end{align}
 
 De voor waarden voor een hogere volg orde (drieën, 4, enzovoort) zijn mogelijk, maar worden momenteel niet ondersteund door de Library chemie.
 
-Laat bijvoorbeeld $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_1 a ^ \dagger_2\ket{0}$ staan en laat $T = 0,123 a ^ \dagger_0 a_1 + 0,456 a ^ \dagger_0a ^ \dagger_3 a_1 a_2-0,789 a ^ \dagger_3a ^ \dagger_2 a_1 a_0 $. Vervolgens wordt deze status als volgt in de Library chemie geïnstantieerd.
+Laat bijvoorbeeld $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 een ^ \ dagger_2 \ket{0}$, en laat $T = 0,123 a ^ \ dagger_0 a_1 + 0,456 a ^ \ dagger_0a ^ \ dagger_3 a_1 a_2-0,789 a ^ \ dagger_3a ^ \ dagger_2 a_1 a_0 $. Vervolgens wordt deze status als volgt in de Library chemie geïnstantieerd.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-Kring convervation kunnen expliciet worden gemaakt door `SpinOrbital` indices op te geven in plaats van een geheel getal. Laat bijvoorbeeld $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_{1, \uparrow} a ^ \dagger_{2, \downarrow}\ket{0}$, en laat $T = 0,123 a ^ \dagger_{0, \uparrow} a_ {1, \uparrow} + 0,456 a ^ \dagger_{0, \uparrow} a ^ \dagger_{3, \downarrow} a_ {1, \uparrow} a_ {2, \ downarrow}-0,789 a ^ \dagger_{3, \uparrow} a ^ \dagger_{2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $. Vervolgens wordt deze status als volgt in de Library chemie geïnstantieerd.
+Kring convervation kunnen expliciet worden gemaakt door `SpinOrbital` indices op te geven in plaats van een geheel getal. Laat bijvoorbeeld $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1, \uparrow} a ^ \ dagger_ {2, \downarrow}\ket{0}$, en laat $T = 0,123 a ^ \ dagger_ {0, \uparrow} a_ {1, \uparrow} + 0,456 a ^ \ dagger_ {0, \uparrow} a ^ \ dagger_ {3, \downarrow} a_ {1, \uparrow} a_ {2, \downarrow}-0,789 a ^ \ dagger_ {3, \uparrow} a ^ \ dagger_ {2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ convserving. Vervolgens wordt deze status als volgt in de Library chemie geïnstantieerd.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

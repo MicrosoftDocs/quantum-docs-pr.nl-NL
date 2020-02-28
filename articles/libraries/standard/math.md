@@ -1,16 +1,16 @@
 ---
-title: 'Q # standaard-bibliotheken-wiskunde hulp | Microsoft Docs'
-description: 'Q # standaard bibliotheken-wiskunde'
+title: 'Wiskunde in de standaard bibliotheken Q #'
+description: 'Meer informatie over de klassieke wiskundige functies in de Q # standaard-bibliotheken die worden gebruikt met de ingebouwde gegevens typen.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184454"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906148"
 ---
 # <a name="classical-mathematical-functions"></a>Klassieke wiskundige functies #
 

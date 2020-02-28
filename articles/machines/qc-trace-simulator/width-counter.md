@@ -1,17 +1,17 @@
 ---
-title: Teller voor breedte | Quantum computer Trace Simulator | Microsoft Docs
-description: Overzicht van kwantumcomputer-traceersimulator
+title: Teller voor breedte
+description: Meer informatie over de micro soft QDK width Counter, waarmee het aantal qubits wordt geteld dat is toegewezen aan en uitgeleend door elke bewerking in een Quantum programma.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820365"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907083"
 ---
 # <a name="width-counter"></a>Teller voor breedte
 

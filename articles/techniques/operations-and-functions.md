@@ -1,17 +1,17 @@
 ---
-title: 'Bewerkingen en functies-Q # technieken | Microsoft Docs'
-description: 'Bewerkingen en functies-Q # technieken'
+title: 'Q # bewerkingen en functies'
+description: 'Meer informatie over de bewerkingen en functies van Q # en hoe deze worden toegepast in een Quantum programma.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820773"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907661"
 ---
 # <a name="q-operations-and-functions"></a>Q # bewerkingen en functies
 
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 In dit voor beeld wordt met de pijl `=>` die wordt weer gegeven in het type `(Qubit => Unit)` aangegeven dat het invoer veld `op` een bewerking is die als invoer wordt gebruikt voor het type `Qubit` en wordt er een lege tuple gegenereerd als uitvoer.
 Daarnaast geven we de kenmerken van het betreffende bewerkings type op, die de informatie bevatten over welke functors worden ondersteund.
-Een bewerking van het type `(Qubit => Unit)` ondersteunt noch de `Adjoint` noch de `Controlled` functor. Als we willen aangeven dat een bewerking van dit type moet worden ondersteund, bijvoorbeeld het `Adjoint` functor, moeten we het declareren als adjointable. Dit wordt gedaan met behulp van de aantekening `is Adj` voor het type. Op dezelfde manier geeft `(Qubit => Unit is Ctl)` aan dat een bewerking van dat type de `Controlled` functor ondersteunt. We zullen dit verder verkennen wanneer we [types in Q #] (XREF: micro soft. Quantum. language. type-model) in het algemeen bespreken.
+Een bewerking van het type `(Qubit => Unit)` ondersteunt noch de `Adjoint` noch de `Controlled` functor. Als we willen aangeven dat een bewerking van dit type moet worden ondersteund, bijvoorbeeld het `Adjoint` functor, moeten we het declareren als adjointable. Dit wordt gedaan met behulp van de aantekening `is Adj` voor het type. Op dezelfde manier geeft `(Qubit => Unit is Ctl)` aan dat een bewerking van dat type de `Controlled` functor ondersteunt. We zullen dit verder verkennen wanneer we [typen in Q # meer in](xref:microsoft.quantum.language.type-model) het algemeen bespreken.
 
 We benadrukken nu dat we ook bewerkingen kunnen retour neren als onderdeel van uitvoer, zodat we een aantal van de klassieke voorwaardelijke logica kunnen isoleren als een klassieke functie waarmee een beschrijving van een Quantum programma wordt geretourneerd in de vorm van een bewerking.
 Als eenvoudig voor beeld kunt u het voor beeld van teleportie overwegen, waarbij de partij die een twee-bits klassiek bericht ontvangt, het bericht moet gebruiken om hun Qubit te decoderen naar de juiste teleportal-status.

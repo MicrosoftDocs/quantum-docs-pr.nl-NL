@@ -1,17 +1,17 @@
 ---
-title: Schei kunde-bibliotheek installatie en-validatie | Microsoft Docs
-description: Schei kunde van de bibliotheek installatie en validatie
+title: 'Micro soft Q # library-installatie en-validatie'
+description: Meer informatie over het installeren van de micro soft quantum chemie-bibliotheek en het gebruik ervan met het NWChem Computation-chemische platform.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036471"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907355"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Schei kunde van de bibliotheek installatie en validatie
 
@@ -21,25 +21,25 @@ Net als bij andere NuGet-pakketten is het eenvoudig om de Library chemie toe te 
 **Visual Studio 2019:** Als u Visual Studio 2019 gebruikt, kunt u de quantum chemie-pakketten toevoegen met behulp van de NuGet-pakket Manager.
 Als u pakket beheer wilt openen, klikt u met de rechter muisknop op het project waaraan u de bibliotheek voor schei kunde wilt toevoegen en selecteert u ' NuGet-pakketten beheren... ', zoals in de onderstaande scherm afbeelding.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![NuGet Package Manager gebruiken in Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
 
 Zoek op het tabblad Bladeren naar de pakket naam ' micro soft. Quantum. chemie '.
 
 > [!NOTE]
 > Zorg ervoor dat u ' include Prerelease ' opgeeft.
 
-![](~/media/vs2017-nuget-package-search.png)
+![Selectie vakje voor voorlopige versie toevoegen](~/media/vs2017-nuget-package-search.png)
 
 Hiermee worden de pakketten weer geven die kunnen worden gedownload.
 Klik op ' micro soft. Quantum. chemie ' in het linkerdeel venster, selecteer de nieuwste voorlopige versie in het rechterdeel venster en klik op installeren:
 
-![](~/media/vs2017-nuget-select-chem.png)
+![Installeer het nieuwste pakket micro soft. Quantum. chemie](~/media/vs2017-nuget-select-chem.png)
 
 Zie de [gebruikers interface voor pakket beheer](https://docs.microsoft.com/nuget/tools/package-manager-ui)voor meer informatie.
 
 U kunt ook de Package Manager-console gebruiken om de quantum chemie-bibliotheek toe te voegen aan uw project met een opdracht regel interface.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![De Package Manager-console gebruiken vanaf de opdracht regel](~/media/vs2017-nuget-console-menu.png)
 
 Voer de volgende handelingen uit vanuit de Package Manager-console:
 

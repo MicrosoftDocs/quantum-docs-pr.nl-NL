@@ -1,22 +1,22 @@
 ---
-title: OSS-licentie verlening
-description: 'Q # standaard bibliotheken: licentie verlening en bijdragen'
+title: Open source-licentie verlening voor de QDK
+description: Meer informatie over de licentie verlening voor het gebruik van en bijdragen aan de standaard bibliotheken van micro soft Q-licenties en bijdragen.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 35e55f6741e5dcc79724f80f31d89937696d8554
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184386"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906199"
 ---
 # <a name="licensing"></a>Licentieverlening #
 
 De Quantum Development Kit wordt geleverd met een uitgebreide verzameling open-source functies en-bewerkingen, waarvoor een licentie is verleend onder de [MIT-licentie](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
-De gedeelten van de standaard bibliotheek die kunnen worden overgebracht via doel machines, kunt u ophalen uit de [micro soft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) -opslag plaats op github, samen met andere bibliotheken, zoals en andere bibliotheken, zoals de [quantum chemie Library ](xref:microsoft.quantum.chemistry.concepts.intro).
+De gedeelten van de standaard bibliotheek die kunnen worden overgebracht via doel machines, kunt u ophalen uit de [micro soft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) -opslag plaats op github, samen met andere bibliotheken, zoals en andere bibliotheken, zoals de [quantum chemie-bibliotheek](xref:microsoft.quantum.chemistry.concepts.intro).
 
 De Quantum Development Kit van micro soft biedt ook gespecialiseerde bibliotheek functies en-bewerkingen waarvoor een licentie is verleend onder een [micro soft Research-licentie](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
 Deze kunnen worden opgehaald uit de opslag plaats [micro soft/Quantum-NC](https://github.com/microsoft/quantum-nc) op github.

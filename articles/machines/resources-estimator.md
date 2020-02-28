@@ -1,17 +1,17 @@
 ---
-title: Bronnen over de Quantum Development Kit estimator | Microsoft Docs
-description: Overzicht van de resources van de Quantum Development Kit van micro soft estimator
+title: Bronnen Estimator van de Quantum Development Kit
+description: 'Meer informatie over de bronnen Estimator, die de resources schat die nodig zijn om een bepaald exemplaar van een Q #-bewerking uit te voeren op een quantum computer.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820858"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907049"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>De doel computer van de ResourcesEstimator
 
