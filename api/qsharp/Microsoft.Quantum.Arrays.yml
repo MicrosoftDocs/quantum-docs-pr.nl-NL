@@ -7,6 +7,8 @@ functions:
   summary: Gegeven een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix en controleert of alle elementen van de matrix voldoen aan het predicaat.
 - uid: microsoft.quantum.arrays.any
   summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, wordt gecontroleerd of ten minste één element van de matrix voldoet aan het predicaat.
+- uid: microsoft.quantum.arrays.chunks
+  summary: Splitst een matrix in meerdere delen van gelijke lengte.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Maakt een matrix met de opgegeven lengte en alle elementen die gelijk zijn aan de opgegeven waarde.
 - uid: microsoft.quantum.arrays.enumerated
@@ -23,6 +25,8 @@ functions:
   summary: Retourneert de eerste index van het eerste element in een matrix die voldoet aan een bepaald predicaat. Als dit element niet bestaat, retourneert-1.
 - uid: microsoft.quantum.arrays.indexrange
   summary: Op basis van een matrix, retourneert een bereik over de indices van die matrix, die geschikt is voor gebruik in een for-lus.
+- uid: microsoft.quantum.arrays.isempty
+  summary: Retourneert waar als en alleen als een matrix leeg is.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Retourneert een functie die elementen van die matrix retourneert, uitgedrukt in een matrix.
 - uid: microsoft.quantum.arrays.mapped
@@ -51,6 +55,8 @@ functions:
   summary: Retourneert het laatste element van de matrix.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Hiermee wordt een lijst met 2-Tuples omgezet in een geneste matrix.
+- uid: microsoft.quantum.arrays.where
+  summary: Op basis van een predikaat en een matrix, worden de indexen van die matrix geretourneerd waarbij het predicaat True is.
 - uid: microsoft.quantum.arrays.zip
   summary: Als er twee matrices worden opgegeven, wordt er een nieuwe matrix van paren geretourneerd, zodat elk paar een element uit elke oorspronkelijke matrix bevat.
 - uid: microsoft.quantum.arrays.zip3
@@ -61,9 +67,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
 metadata:
-  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858867"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905587"

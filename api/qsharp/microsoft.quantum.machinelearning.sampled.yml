@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.sampled
+name: Sampled
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Voor beelden van een bepaalde matrix, met behulp van het opgegeven schema.
+syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[]) : 'T[]"
+input:
+  content: "(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[])"
+  types:
+  - name: schedule
+    summary: Een schema dat moet worden gebruikt in sampling waarden.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: values
+    summary: Een matrix met waarden waarvan u een steek proef wilt maken.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Een matrix met elementen van waarden, volgens het opgegeven schema.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+metadata:
+  ms.openlocfilehash: 6b6693f43e2684f3195c2f7ddbeb0268759020db
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908596"

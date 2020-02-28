@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.localrotationslayer
+name: LocalRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Retourneert een matrix met onbeheerde rotaties op een bepaalde as, met één rotatie voor elke qubit in een REGI ster, para meters door afzonderlijke model parameters.
+syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli)'
+  types:
+  - name: nQubits
+    summary: Het aantal qubits dat wordt verwerkt door de opgegeven laag.
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: De rotatieas voor elke draaiing in de opgegeven laag.
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Een matrix met beheerde rotaties over de opgegeven as, één op elk van `nQubits` qubits.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 51883447aedaf43b5134d9adec6a6fafbe1bf399
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909276"

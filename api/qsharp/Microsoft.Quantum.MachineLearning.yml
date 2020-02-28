@@ -1,0 +1,72 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning
+name: Microsoft.Quantum.MachineLearning
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte biedt functies en bewerkingen die worden gebruikt in Quantum machine learning toepassingen.\n\n # <a name=\"references\"></a>Verwijzingen\n - Maria schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"circuit-georiënteerde Quantum classificaties\", https://arxiv.org/abs/1804.00633."
+functions:
+- uid: microsoft.quantum.machinelearning.approximateinputencoder
+  summary: Op basis van een set coëfficiënten en een tolerantie, wordt een status voorbereidings bewerking geretourneerd die elke coëfficiënt voorbereidt als de overeenkomstige amplitude van een reken kundige status, tot aan de opgegeven tolerantie.
+- uid: microsoft.quantum.machinelearning.combinedstructure
+  summary: Als er een of meer lagen van beheerde rotaties zijn, wordt er een enkele laag met de index van de model parameter geretourneerd, zodat de afzonderlijke lagen door afzonderlijke model parameters worden para meters.
+- uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  summary: Retourneert een matrix met op zichzelf staande rotaties langs een bepaalde as, geordend op cyclische basis in een REGI ster van qubits en para meters door afzonderlijke model parameters.
+- uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  summary: Retourneert een standaardset opties voor opleidings classificaties.
+- uid: microsoft.quantum.machinelearning.featureregistersize
+  summary: Retourneert het aantal qubits dat nodig is voor het coderen van een bepaalde functie Vector.
+- uid: microsoft.quantum.machinelearning.inferredlabel
+  summary: Als gevolg van een classificatie waarschijnlijkheid en een bias, retourneert het label afgeleid van die kans.
+- uid: microsoft.quantum.machinelearning.inferredlabels
+  summary: Op basis van een matrix met classificatie kansen en een bias, retourneert het label dat wordt afgeleid van elke waarschijnlijkheid.
+- uid: microsoft.quantum.machinelearning.inputencoder
+  summary: Op basis van een set coëfficiënten en een tolerantie wordt een status voorbereidings bewerking geretourneerd die elke coëfficiënt voorbereidt als de bijbehorende amplitude van een reken kundige status.
+- uid: microsoft.quantum.machinelearning.localrotationslayer
+  summary: Retourneert een matrix met onbeheerde rotaties op een bepaalde as, met één rotatie voor elke qubit in een REGI ster, para meters door afzonderlijke model parameters.
+- uid: microsoft.quantum.machinelearning.misclassifications
+  summary: Op basis van een set van uitgestelde labels en een reeks juiste labels retourneert de indices voor waar elke set labels verschilt.
+- uid: microsoft.quantum.machinelearning.nmisclassifications
+  summary: Op basis van een set van uitgestelde labels en een reeks juiste labels retourneert het aantal indexen waarbij elke set labels verschilt.
+- uid: microsoft.quantum.machinelearning.nqubitsrequired
+  summary: Retourneert het aantal qubits dat vereist is om een bepaalde sequentiële classificatie toe te passen.
+- uid: microsoft.quantum.machinelearning.partialrotationslayer
+  summary: Retourneert een matrix met enkelvoudige draaiing langs een bepaalde as, para meters door afzonderlijke model parameters.
+- uid: microsoft.quantum.machinelearning.sampled
+  summary: Voor beelden van een bepaalde matrix, met behulp van het opgegeven schema.
+- uid: microsoft.quantum.machinelearning.schedulelength
+  summary: Retourneert het aantal elementen in een opgegeven sampling-schema.
+operations:
+- uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  summary: Op basis van de structuur en het parameterisering van een sequentiële classificatie wordt de classificatie toegepast op een REGI ster van qubits.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  summary: Op basis van een reeks voor beelden en een sequentiële classificatie schat de classificatie waarschijnlijkheid van deze voor beelden door herhaaldelijk de uitvoer van de classificatie voor elk voor beeld te meten.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  summary: Op basis van een voor beeld en een sequentiële classificatie schat de classificatie waarschijnlijkheid van het voor beeld door de uitvoer van de classificatie op basis van het opgegeven voor beeld herhaaldelijk te meten.
+- uid: microsoft.quantum.machinelearning.estimategradient
+  summary: Maakt een schatting van de cursus verloop voor een sequentiële classificatie in een bepaald model en voor een gegeven gecodeerde invoer.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  summary: Gezien de structuur van een sequentiële classificatie, traint de classificatie op een bepaald gelabelde opleidingsset.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  summary: Gezien de structuur van een sequentiële classificatie, traint de classificatie op een bepaald gelabelde Trainingsset, beginnend bij een bepaald model.
+- uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  summary: Hiermee wordt een bepaalde sequentiële classificatie gevalideerd op basis van een bepaalde set vooraf gelabelde voor beelden.
+newtypes:
+- uid: microsoft.quantum.machinelearning.controlledrotation
+  summary: Beschrijft een beheerde rotatie in termen van de doel-en besturings indexen, rotatieas en index in een model parameter vector.
+- uid: microsoft.quantum.machinelearning.labeledsample
+  summary: Een voor beeld, voorzien van een klasse waarvan het voor beeld deel uitmaakt.
+- uid: microsoft.quantum.machinelearning.samplingschedule
+  summary: Een planning voor het tekenen van batches vanuit een reeks voor beelden.
+- uid: microsoft.quantum.machinelearning.sequentialmodel
+  summary: Beschrijft een Quantum classificatie model dat bestaat uit een reeks geparametriseerde en beheerde rotaties, een toewijzing van rotatie hoeken en een afwijking tussen de twee klassen die door het model worden herkend.
+- uid: microsoft.quantum.machinelearning.stategenerator
+  summary: Hierin wordt een bewerking beschreven waarmee een gegeven invoer wordt voor bereid op een sequentiële classificatie.
+- uid: microsoft.quantum.machinelearning.trainingoptions
+  summary: Een verzameling opties die moeten worden gebruikt in de Quantum-classificaties voor de training.
+- uid: microsoft.quantum.machinelearning.validationresults
+  summary: De resultaten van het valideren van een classificatie op basis van een reeks voor beelden.
+metadata:
+  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908307"

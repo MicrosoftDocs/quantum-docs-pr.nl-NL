@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Retourneert een unitary-operator die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven bitmasker.
+  Retourneert een unitary-bewerking die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven bitmasker.
 
 
-  De uitvoer van deze functie kan worden weer gegeven met een unitary-trans formatie $U $ zodanig dat \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} waarbij $V $ een unitary-trans formatie is die de actie vertegenwoordigt van de `oracle` bewerking.
+  De uitvoer van deze functie is een bewerking die kan worden weer gegeven met een unitary-trans formatie $U $, waarmee \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} waarbij $V $ een unitary-trans formatie is die de actie vertegenwoordigt van de `oracle` bewerking.
 remarks: >-
   De lengte van `bits` en `controlRegister` moet gelijk zijn.
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: De bit-teken reeks voor het beheren van de opgegeven unitary-operator in.
+    summary: De bit-teken reeks voor het beheren van de opgegeven unitary-bewerking op.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: De unitary-operator die moet worden toegepast op de doel register.
+    summary: De unitary-bewerking die moet worden toegepast op het doel register.
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Een unitary-operator waarmee `oracle` wordt toegepast op het doel register als de register status van het besturings element overeenkomt met het bitmasker `bits`.
+  - summary: Een unitary-bewerking die `oracle` op het doel register toepast als de register status van het besturings element overeenkomt met het bitmasker `bits`.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441060"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906522"
