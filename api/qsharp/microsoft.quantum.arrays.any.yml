@@ -5,6 +5,26 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, wordt gecontroleerd of ten minste één element van de matrix voldoet aan het predicaat.
 remarks: "De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` hebben en een functie `predicate: 'T -> Bool` kunnen we een `Bool` waarde maken die aangeeft of sommige elementen voldoen aan `predicate`."
+examples: >-
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function IsThreePresent() : Bool {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = IsNumberPresentInArray(3, arrayOfInts);
+      return is3Present;
+  }
+
+
+  function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {
+      return Any(EqualI(_, n), array);
+  }
+
+  ```
 syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -35,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type `array` elementen.
 metadata:
-  ms.openlocfilehash: 11e76d2b0b26d2dfcfed36d126e6ebb6ce76cef8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218376"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905553"

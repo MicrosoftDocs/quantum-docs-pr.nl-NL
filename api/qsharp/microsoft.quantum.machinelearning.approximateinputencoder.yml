@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.approximateinputencoder
+name: ApproximateInputEncoder
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Op basis van een set coëfficiënten en een tolerantie, wordt een status voorbereidings bewerking geretourneerd die elke coëfficiënt voorbereidt als de overeenkomstige amplitude van een reken kundige status, tot aan de opgegeven tolerantie.
+syntax: 'function ApproximateInputEncoder (tolerance : Double, coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
+input:
+  content: '(tolerance : Double, coefficients : Double[])'
+  types:
+  - name: tolerance
+    summary: De aanpassings tolerantie die moet worden gebruikt bij het coderen van de gegeven coëfficiënten in een invoer status.
+    isPrimitive: true
+    uid: Double
+  - name: coefficients
+    summary: De coëfficiënten die moeten worden gecodeerd in een invoer status.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.MachineLearning.StateGenerator
+  types:
+  - summary: Een status voorbereidings bewerking waarbij de gegeven coëfficiënten als een invoer status voor een bepaald REGI ster worden voor bereid.
+    uid: microsoft.quantum.machinelearning.stategenerator
+metadata:
+  ms.openlocfilehash: 903986266773b2e5fc80b685ac3fb6f91bf18721
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909548"
