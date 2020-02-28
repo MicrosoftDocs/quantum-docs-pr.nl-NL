@@ -1,4 +1,4 @@
-- name: Naslaginformatie
+- name: API-verwijzing
   items:
     - name: 'Q#-bibliotheken'
       href: qsharp/toc.yml
