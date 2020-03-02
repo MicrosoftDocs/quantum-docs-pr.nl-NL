@@ -1,17 +1,17 @@
 ---
-title: Basisprincipes van schrijven van kwantumprogramma's in Q#
+title: Basisprincipes van het schrijven van kwantumprogramma's in Q#
 description: Meer informatie over het schrijven van een kwantumprogramma in Q#. Een toepassing voor een Bell-toestand ontwikkelen met behulp van de Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442199"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906726"
 ---
 # <a name="quantum-basics-with-q"></a>Basisprincipes van schrijven van kwantumprogramma's in Q#
 
@@ -30,7 +30,7 @@ U kunt de instructies ook volgen zonder de QDK te installeren, om een beeld te k
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Gedrag van qubits demonstreren met Q#
 
-Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.what#the-qubit).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een qubit in een **superpositie** zijn van gelijktijdig 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.what#the-qubit).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een qubit in een **superpositie** zijn van gelijktijdig 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 De handeling van het meten produceert een binair resultaat en verandert de toestand van een qubit. Meting resulteert in een binaire waarde, 0 of 1.  De qubit gaat over van de toestand van superpositie (willekeurige richting) in een van de klassieke toestanden.  Daarna levert herhaling van dezelfde meting zonder tussenliggende bewerkingen hetzelfde binaire resultaat op.  
@@ -46,7 +46,7 @@ Toepassingen die zijn ontwikkeld met de Quantum Development Kit van Microsoft be
 1. Een of meer kwantumalgoritmen, geïmplementeerd met behulp van de kwantumprogrammeertaal Q#.
 1. Een hostprogramma, geïmplementeerd in een programmeertaal als Python of C#, die als het belangrijkste toegangspunt fungeert en Q#-bewerkingen aanroept om een kwantumalgoritme uit te voeren.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Een locatie kiezen voor uw toepassing
 
@@ -54,7 +54,7 @@ Toepassingen die zijn ontwikkeld met de Quantum Development Kit van Microsoft be
 
 1. Maak een bestand met de naam `host.py`. Dit bestand bevat uw Python-hostcode.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C#-opdrachtregel](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C#-opdrachtregel](#tab/tabid-csharp)
 
 1. Een nieuw Q#-project maken:
 
@@ -71,7 +71,7 @@ Toepassingen die zijn ontwikkeld met de Quantum Development Kit van Microsoft be
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Een nieuw project maken
 
@@ -177,7 +177,7 @@ De instructie `using` is ook speciaal in Q#. Deze wordt gebruikt om qubits toe t
 
 ## <a name="create-the-host-application-code"></a>De code van de hosttoepassing maken
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Open bestand `host.py` en voeg de volgende code toe:
 
@@ -195,7 +195,7 @@ De instructie `using` is ook speciaal in Q#. Deze wordt gebruikt om qubits toe t
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. Vervang de inhoud van bestand `Driver.cs` door de volgende code:
 
@@ -237,7 +237,7 @@ De instructie `using` is ook speciaal in Q#. Deze wordt gebruikt om qubits toe t
 
 ### <a name="about-the-host-application-code"></a>De code van de hosttoepassing
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 De Python-hosttoepassing kent drie onderdelen:
 
@@ -245,7 +245,7 @@ De Python-hosttoepassing kent drie onderdelen:
 * Voer het kwantumalgoritme uit door methode `simulate()` van de geïmporteerde Q#-bewerking aan te roepen.
 * Verwerk het resultaat van de bewerking. In het voorbeeld ontvangt `res` het resultaat van de bewerking. Hier is het resultaat een tupel van het aantal nullen (`num_zeros`) en het aantal enen (`num_ones`) dat door de simulator wordt gemeten. De tupel wordt gedeconstrueerd om de twee velden te krijgen en de resultaten worden afgedrukt.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 De C#-hosttoepassing bestaat uit vier delen:
 
@@ -260,7 +260,7 @@ De C#-hosttoepassing bestaat uit vier delen:
 
 ## <a name="build-and-run"></a>Bouwen en uitvoeren
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Voer de volgende opdracht uit via de terminal:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-csharp)
 
 1. Voer het volgende uit op de terminal:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Druk op `F5` om het programma te bouwen en uit te voeren.
 
@@ -445,7 +445,7 @@ Als we deze uitvoeren, krijgen we precies hetzelfde 50-50-resultaat dat we eerde
 
 In de nieuwe retourwaarde (`agree`) wordt telkens bijgehouden als de meting van de eerste qubit overeenkomt met de meting van de tweede qubit. We moeten ook de hosttoepassing dienovereenkomstig bijwerken:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
