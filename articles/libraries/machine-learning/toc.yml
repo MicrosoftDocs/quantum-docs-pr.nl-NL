@@ -1,0 +1,10 @@
+- name: Inleiding tot kwantum-machine learning
+  href: introduction.md
+- name: Eenvoudige classificatie
+  href: basic-classification.md
+- name: Uw eigen classificatie ontwerpen
+  href: design.md
+- name: Uw eigen gegevenssets laden
+  href: load.md
+- name: Woordenlijst (QML)
+  href: glossary-qml.md
