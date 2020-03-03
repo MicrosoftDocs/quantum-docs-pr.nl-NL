@@ -1,23 +1,21 @@
 - name: Documentatie over Microsoft Quantum
   href: index.yml
-- name: Overzicht
+- name: Aan de slag met kwantumcomputing
   items:
-    - name: Aan de slag
+    - name: Wat is kwantumcomputing?
+      href: overview/what-is-quantum-computing.md
+    - name: Wat kan een kwantumcomputer doen?
+      href: overview/quantum-computers.md
+    - name: Waarom zou ik kwantumcomputing leren gebruiken?
+      href: overview/why-learn-quantum-computing.md
+    - name: 'Wat zijn Q# en de QDK?'
+      href: overview/what-is-qsharp.md
+    - name: Waar vind ik meer informatie?
+      href: overview/how-to-learn-quantum-computing.md
+- name: De Quantum Development Kit downloaden
+  items:
+    - name: Aan de slag met de QDK
       href: welcome.md
-    - name: Vijf vragen over kwantumcomputing
-      items:
-        - name: Wat is kwantumcomputing?
-          href: overview/what-is-quantum-computing.md
-        - name: Wat kan een kwantumcomputer doen?
-          href: overview/quantum-computers.md
-        - name: Waarom zou ik kwantumcomputing leren gebruiken?
-          href: overview/why-learn-quantum-computing.md
-        - name: 'Wat is Q#?'
-          href: overview/what-is-qsharp.md
-        - name: Hoe leer ik kwantumrekenen?
-          href: overview/how-to-learn-quantum-computing.md
-- name: Installeren en bijwerken
-  items:
     - name: De QDK installeren
       items:
         - name: Overzicht van de installatie
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: De QDK bijwerken
       href: install-guide/update.md
-- name: Snelstartgidsen
+    - name: 'Een Q#-project maken'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q#-trainingsmateriaal'
   items:
-    - name: Kwantumgenerator voor willekeurige nummers
-      href: quickstarts/qrng.md
-    - name: 'Basisprincipes van het schrijven van kwantumprogramma''s in Q#'
-      href: quickstart.md
-    - name: Zoekalgoritme van Grover implementeren
-      href: quickstarts/search.md
-- name: Concepten
+    - name: Snelstartgidsen
+      items:
+        - name: Kwantumgenerator voor willekeurige nummers
+          href: quickstarts/qrng.md
+        - name: 'Kennismaken met verstrengeling met Q#'
+          href: quickstart.md
+        - name: Zoekalgoritme van Grover implementeren
+          href: quickstarts/search.md
+    - name: 'Q# leren met de Quantum Katas'
+      href: intro-to-katas.md
+    - name: 'Q#-codevoorbeelden'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: Uitgebreide blik op de QDK
   items:
     - name: Kwantumontwikkelingstechnieken
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Q#-programmeertaal'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Q#-bibliotheken'
-      href: libraries/toc.yml
     - name: Kwantumsimulators en resourceschattingen
       href: machines/toc.yml
-    - name: Concepten van kwantumcomputing
-      href: concepts/toc.yml
-- name: Instructiegidsen
-  items:
-    - name: 'Een Q#-project maken'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Q#-trainingsmateriaal'
-  items:
-    - name: Leren met de Quantum Katas
-      href: intro-to-katas.md
-    - name: 'Q#-voorbeelden'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Resources
-  items:
-    - name: Woordenlijst
-      href: Glossary.md
-    - name: Meer informatie
-      href: for-more-info.md
-    - name: Releaseopmerkingen voor QDK
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: Bijdragen aan de QDK
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: Licentie
-      href: license.md
+- name: 'Q#-bibliotheken'
+  href: libraries/toc.yml
+- name: Concepten van kwantumcomputing
+  href: concepts/toc.yml
+- name: Meer informatie
+  href: for-more-info.md
+- name: Bijdragen aan de QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Releaseopmerkingen voor QDK
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml

@@ -1,17 +1,17 @@
 ---
-title: Kwantumcomputer-traceersimulator | Microsoft Docs
-description: Overzicht van kwantumcomputer-traceersimulator
+title: Trajectsimulator kwantumcomputer
+description: Meer informatie over hoe u de Microsoft Quantum-computertracesimulator kunt gebruiken om fouten in klassieke code op te sporen en om resourcevereisten van een kwantumprogramma in te schatten.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 72c259933d2df8f79319e6c0c65ae181a9f9cff3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820433"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906080"
 ---
 # <a name="quantum-trace-simulator"></a>Kwantumtraceersimulator
 

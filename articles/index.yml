@@ -1,28 +1,24 @@
 ### YamlMime:Landing
 title: Documentatie over Microsoft Quantum
-summary: Lees meer over het gebruik van de Microsoft Quantum Developer Kit en Q#, een taal voor kwantumalgoritmen. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma.
+summary: Lees meer over het gebruik van de Microsoft Quantum Development Kit en Q#, een taal voor kwantumprogrammeren. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma. Verken de uitgebreide hulpprogramma's en bibliotheken van de Quantum Developer Kit.
 metadata:
-  title: Microsoft Quantum-documentatie - naslag-API voor Q#
-  description: Lees meer over het gebruik van de Microsoft Quantum Development Kit en Q#, een taal voor kwantumprogrammeren. Maak kennis met belangrijke concepten en schrijf uw eerste kwantumprogramma.  Verken de uitgebreide hulpprogramma's en bibliotheken van de Quantum Developer Kit.
+  title: Microsoft Quantum-documentatie en API-naslaginformatie voor Q#
+  description: Ontdek de concepten van kwantumcomputing en hoe u aan de slag kunt met de Microsoft Quantum Development Kit (QDK) en Q#, een open source kwantumprogrammeertaal.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
-  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+  ms.openlocfilehash: 27f7ca535ddd846e7bae01baee3fbbb4713e0433
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/06/2020
-  ms.locfileid: "77036573"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77907423"
 landingContent:
-- title: Aan de slag met Microsoft Quantum
+- title: Kwantumcomputing
   linkLists:
-  - linkListType: overview
-    links:
-    - text: De Quantum Development Kit
-      url: welcome.md
   - linkListType: learn
     links:
     - text: Wat is kwantumcomputing?
@@ -31,66 +27,58 @@ landingContent:
       url: overview/quantum-computers.md
     - text: Waarom zou ik kwantumcomputing leren gebruiken?
       url: overview/why-learn-quantum-computing.md
-    - text: Wat is Q#?
+    - text: Wat zijn Q# en de QDK?
       url: overview/what-is-qsharp.md
-    - text: Waar leer ik meer over kwantumcomputing?
+    - text: Waar vind ik meer informatie?
       url: overview/how-to-learn-quantum-computing.md
+  - linkListType: concept
+    links:
+    - text: Concepten van kwantumcomputing
+      url: concepts/index.md
 - title: De Quantum Development Kit downloaden
   linkLists:
+  - linkListType: overview
+    links:
+    - text: De Quantum Development Kit
+      url: welcome.md
   - linkListType: download
     links:
     - text: De QDK installeren
       url: install-guide/index.md
     - text: De QDK bijwerken
       url: install-guide/update.md
-- title: Snelstartgidsen
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Een kwantumgenerator voor willekeurige nummers bouwen
-      url: quickstarts/qrng.md
-    - text: Basisprincipes van het schrijven van kwantumprogramma's in Q#
-      url: quickstart.md
-    - text: 'Kwantum versnellen: Het zoekalgoritme van Grover'
-      url: quickstarts/search.md
-- title: Concepten van kwantumcomputing
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Concepten van kwantumcomputing
-      url: concepts/index.md
 - title: Q#-programmeertaal
   linkLists:
-  - linkListType: learn
+  - linkListType: overview
     links:
     - text: Algemene informatie over de taal Q#
       url: language/index.md
     - text: Q#-ontwikkelingstechnieken
       url: techniques/index.md
-- title: Doelcomputers
-  linkLists:
-  - linkListType: overview
-    links:
     - text: Kwantumsimulators en hosttoepassingen
       url: machines/index.md
-  - linkListType: architecture
+  - linkListType: quickstart
     links:
-    - text: Simulator van volledige status
-      url: machines/full-state-simulator.md
-    - text: Schatting resources
-      url: machines/resources-estimator.md
-    - text: Traceringssimulator
-      url: machines/qc-trace-simulator/index.md
-    - text: Toffoli-simulator
-      url: machines/toffoli-simulator.md
-- title: Q#-trainingsmateriaal
-  linkLists:
+    - text: Een kwantumgenerator voor willekeurige nummers bouwen
+      url: quickstarts/qrng.md
+    - text: Kennismaken met verstrengeling met Q#
+      url: quickstart.md
+    - text: 'Kwantum versnellen: Het zoekalgoritme van Grover'
+      url: quickstarts/search.md
   - linkListType: learn
     links:
     - text: Leren met de Quantum Katas
       url: intro-to-katas.md
     - text: Bladeren door Q#-codevoorbeelden
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Community en bijdrage
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bijdragen aan de QDK
+      url: contributing/index.md
+    - text: Lees het Microsoft Quantum-blog
+      url: https://cloudblogs.microsoft.com/quantum
 - title: Q#-bibliotheken
   linkLists:
   - linkListType: reference
@@ -101,25 +89,3 @@ landingContent:
       url: libraries/numerics/index.md
     - text: Chemiebibliotheek
       url: libraries/chemistry/index.md
-    - text: Chemische concepten
-      url: libraries/chemistry/concepts/quantum-dynamics.md
-- title: Q#-algoritmen en -toepassingen (van de standaardbibliotheken)
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Amplitudeversterking
-      url: libraries/standard/algorithms.md
-    - text: Kwantumalgoritme voor faseschatting
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Algoritme van Shor
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Hamiltoniaanse simulatie
-      url: libraries/standard/applications.md
-- title: Community en bijdrage
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Bijdragen aan de QDK
-      url: contributing/index.md
-    - text: Lees het Microsoft Quantum-blog
-      url: https://cloudblogs.microsoft.com/quantum
