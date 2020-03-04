@@ -1,17 +1,17 @@
 ---
 uid: microsoft.quantum.welcome
 title: Aan de slag met de Quantum Development Kit (QDK)
-description: Lees hier hoe u aan de slag kunt met de QDK.
+description: Lees meer over het programmeren van kwantumprojecten in Q# met de Microsoft Quantum Development Kit (QDK).
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 066981e3e2fb468c1ff2a4cf4d3e7cff057772ab
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036335"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907627"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 

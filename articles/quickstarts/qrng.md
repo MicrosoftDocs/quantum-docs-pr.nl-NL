@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441075"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906981"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Quickstart: Een kwantumgenerator voor willekeurige getallen implementeren in Q#
 Een eenvoudig voorbeeld van een kwantumalgoritme dat is geschreven in Q# is een kwantumgenerator voor willekeurige getallen. Dit algoritme maakt gebruik van de aard van kwantummechanismen om een willekeurig getal te produceren. 
@@ -44,17 +44,18 @@ Wanneer de toewijzing van een `Qubit` ongedaan wordt gemaakt, moet deze explicie
 
 In de Blochbol vertegenwoordigt de noordpool de klassieke waarde **0** en de zuidpool de klassieke waarde **1**. Elke superpositie kan worden weergegeven met een punt op de bol (aangeduid met een pijl). Hoe dichter het einde van de pijl bij een pool is, hoe groter de kans is dat de qubit bij meting uiteenvalt in de klassieke waarde die aan die pool is toegewezen. De toestand van de qubit die wordt weergegeven door de rode pijl hieronder heeft bijvoorbeeld een hogere kans om de waarde **0** te retourneren als deze wordt gemeten.
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 We kunnen deze voorstelling gebruiken om te visualiseren wat de code doet:
 
 * We beginnen met een qubit die is geïnitialiseerd in de toestand **0** en passen `H` toe om een superpositie te maken waarin de waarschijnlijkheid van **0** en **1** hetzelfde is.
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
+
 
 * Vervolgens meten we de qubit en slaan we de uitvoer op:
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 Aangezien het resultaat van de meting volledig willekeurig is, hebben we een willekeurige bit verkregen. We kunnen deze bewerking meerdere keren aanroepen om gehele getallen te maken. Als we de bewerking bijvoorbeeld drie keer aanroepen om drie willekeurige bits te verkrijgen, kunnen we willekeurige 3-bits getallen maken (dat wil zeggen, een willekeurig getal tussen 0 en 7).
 

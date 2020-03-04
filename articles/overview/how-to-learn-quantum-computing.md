@@ -1,19 +1,19 @@
 ---
 title: Hoe leer ik kwantumcomputing met Q#?
-description: ''
+description: Resources voor basiskennis over wiskunde en natuurkunde, om u op gang te helpen met kwantumcomputing.
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529958"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907746"
 ---
-# <a name="how-to-learn-quantum-computing"></a>Hoe leer ik kwantumcomputing?
+# <a name="how-to-learn-about-quantum-computing"></a>Waar leer ik meer over kwantumcomputing?
 
 Tips voor het leren kwantumrekenen en het schrijven van uw eerste programma's. Dit is geen uitgebreide handleiding, maar het is een goede plek om te beginnen.
 
