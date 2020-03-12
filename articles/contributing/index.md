@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904873"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022484"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Bijdragen aan de Quantum development kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>Bijdragen aan de Quantum development kit
 
 De Quantum development kit is meer dan een verzameling hulpprogramma's voor het schrijven van kwantumprogramma's.
 Het is onderdeel van een brede community van mensen die kwantumcomputing ontdekken, kwantumalgoritmen onderzoeken, nieuwe toepassingen voor kwantumapparaten ontwikkelen en/of op andere wijze samenwerken om optimaal gebruik te maken van de kwantumprogramma's.
@@ -23,7 +23,7 @@ We zijn u zeer dankbaar voor uw bijdragen en de gelegenheid om er samen voor te 
 
 In deze handleiding geven we enkele adviezen over hoe u een zo nuttig mogelijke bijdrage kunt leveren voor een breed publiek in de kwantum-programmeercommunity.
 
-## <a name="building-community"></a>Bouwen aan de community ##
+## <a name="building-community"></a>Bouwen aan de community
 
 Allereerst dient u altijd de community in gedachten te houden waaraan u een bijdrage wilt leveren.
 Door uw collega's en iedereen binnen en buiten de kwantumprogrammeercommunity met respect te behandelen en u professioneel te gedragen, kunt u meehelpen ervoor te zorgen dat deze community zo nuttig en gastvrij mogelijk blijft.
@@ -31,7 +31,7 @@ Door uw collega's en iedereen binnen en buiten de kwantumprogrammeercommunity me
 Als onderdeel van die inspanningen, geldt voor alle Quantum development kit-projecten de [gedragscode voor opensourcecode van Microsoft](https://opensource.microsoft.com/codeofconduct/) (Engelstalig).
 Raadpleeg voor meer informatie de [veelgestelde vragen over de gedragscode](https://opensource.microsoft.com/codeofconduct/faq/) of neem contact op met [opencode@microsoft.com](mailto:opencode@microsoft.com) als u aanvullende vragen of opmerkingen hebt.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Wat voor soort bijdragen zijn nuttig voor de community? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Wat voor soort bijdragen zijn nuttig voor de community?
 
 Er zijn veel verschillende manieren om de kwantumprogrammeercommunity te helpen met uw bijdragen.
 In deze handleiding richten we ons op drie manieren die met name relevant zijn voor de Quantum development kit.
@@ -45,7 +45,7 @@ Ondanks dat is dit beslist geen uitputtende lijst: u wordt aangeraden ook andere
 Deze verschillende soorten bijdragen zijn allemaal zeer waardevol en worden zeer gewaardeerd.
 In de rest van de handleiding vindt u per soort bijdrage advies over de manier waarop u die het beste kunt leveren.
 
-## <a name="where-do-contributions-go"></a>Wat gebeurt er met bijdragen? ##
+## <a name="where-do-contributions-go"></a>Wat gebeurt er met bijdragen?
 
 De Quantum development kit bevat een aantal verschillende onderdelen die samen een compleet platform vormen voor het schrijven van kwantumprogramma's.
 Elk onderdeel hoort bij een andere opslagplaats, dus een van de eerste dingen die gedaan moet worden, is uitzoeken waar elke bijdrage thuishoort.
@@ -66,7 +66,7 @@ Er zijn ook enkele andere, meer gespecialiseerde opslagplaatsen die gericht zijn
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Ondersteuning voor LaTeX-opmaak voor Q#-syntaxis.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch – Jozsa-zelfstudie die is gegeven in de interne workshop in 2019.
 
-## <a name="next-steps"></a>Volgende stappen ##
+## <a name="next-steps"></a>Volgende stappen
 
 Hartelijk dank voor uw deelname aan de Quantum development kit-community. We verheugen ons op uw bijdragen.
 Ga verder met een van de volgende handleidingen als u meer wilt weten over het leveren van bijdragen.

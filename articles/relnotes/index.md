@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906930"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022844"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -57,7 +57,7 @@ Deze release omvat het volgende:
 
 - Nieuwe kenmerk Test voor Q#-eenheidstest. Raadpleeg [hier](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) bijgewerkte API-documentatie en [hier](xref:microsoft.quantum.techniques.testing-and-debugging) bijgewerkte handleiding voor tests en foutopsporing
 - Stack-trace toegevoegd in het geval van een fout in een Q#-programmabewerking
-- Ondersteuning voor onderbrekingspunten in Visual Studio Code door een update in de [OmniSharp C# Visual Studio Code-extensie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- Ondersteuning voor onderbrekingspunten in Visual Studio Code door een update in de [OmniSharp C# Visual Studio Code-extensie](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
