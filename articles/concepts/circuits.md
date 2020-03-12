@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77905145"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022797"
 ---
 # <a name="quantum-circuits"></a>Quantum circuits
 Denk eens na over een ogen blik dat de unitary-trans formatie $ \Text{CNOT} _{01}(H\otimes 1) $.
@@ -24,7 +24,7 @@ Het circuit diagram voor het voorbereiden van de Quantum status van deze maximal
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![-circuit diagram voor een maximally Entangled-status van twee Qubit](~/media/Concepts1.png)
+![-circuit diagram voor een maximally Entangled-status van twee Qubit](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Conventies van Quantum circuit diagram
 Deze visuele taal voor Quantum bewerkingen kan beter digestible zijn dan het schrijven van de equivalente matrix wanneer u de conventies voor het uitdrukken van een Quantum circuit begrijpt.
@@ -37,7 +37,7 @@ Bijvoorbeeld het symbool
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![symbool voor een Hadamard-bewerking die wordt uitgevoerd op een single-Qubit-REGI ster](~/media/concepts_2.png)
+![symbool voor een Hadamard-bewerking die wordt uitgevoerd op een single-Qubit-REGI ster](~/media/2.svg)
 
 is een [Hadamard](xref:microsoft.quantum.intrinsic.h) -bewerking die fungeert als een single-Qubit-REGI ster.
 
@@ -47,7 +47,7 @@ Dat wil zeggen
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagram van Quantum-Gates dat van links naar rechts wordt toegepast](~/media/concepts_3.png)
+![diagram van Quantum-Gates dat van links naar rechts wordt toegepast](~/media/3.svg)
 
 is de unitary matrix $CBA $.
 Matrix vermenigvuldiging voldoet aan de tegenovergestelde Conventie: de meest rechtse matrix wordt eerst toegepast. In Quantum-circuit diagrammen wordt echter de meest linkse poort toegepast eerst.
@@ -65,7 +65,7 @@ Een voor beeld hiervan is dat we een unitary-bewerking met twee Qubit definiëre
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![circuit diagram van een unitary bewerking met twee qubits](~/media/concepts_4.png)
+![circuit diagram van een unitary bewerking met twee qubits](~/media/4.svg)
 
 We kunnen ook $B $ weer geven als een actie voor een enkele twee Qubit-registratie in plaats van 2 1-Qubit registreert, afhankelijk van de context waarin het circuit wordt gebruikt. Misschien is de meest nuttige eigenschap van dergelijke abstracte circuit diagrammen dat ze gecompliceerde Quantum algoritmen op een hoog niveau mogen worden beschreven, zonder dat ze hoeven te compileren op basis poorten.
 Dit betekent dat u een Intuition voor de gegevens stroom kunt verkrijgen voor een grote Quantum algoritme zonder dat u alle details hoeft te begrijpen van de manier waarop elk van de subroutines binnen het algoritme werkt.
@@ -78,14 +78,14 @@ Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diag
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![circuit diagram van een poort die afzonderlijk wordt gecontroleerd](~/media/concepts_5.png)
+![circuit diagram van een poort die afzonderlijk wordt gecontroleerd](~/media/5.svg)
 
 Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $1 $ heeft.
 Voor de speciale gevallen waarin $G = X $ en $G = Z $, introduceren we de volgende notatie om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) is:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![-circuit diagram voor speciale gevallen van gecontroleerde poorten](~/media/concepts_6.png)
+![-circuit diagram voor speciale gevallen van gecontroleerde poorten](~/media/6.svg)
 
 Q # biedt methoden voor het automatisch genereren van de bewaakte versie van een bewerking, waardoor de programmeur van de hand om deze bewerkingen te hoeven coderen. Hieronder ziet u een voor beeld van dit:
 
@@ -104,7 +104,7 @@ Met name een dergelijk subcircuit ziet er als volgt uit:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![-symbool dat een meting bewerking vertegenwoordigt](~/media/concepts_7.png)
+![-symbool dat een meting bewerking vertegenwoordigt](~/media/7.svg)
 
 Q # implementeert een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
 Zie de [sectie over metingen](xref:microsoft.quantum.libraries.standard.prelude#measurements) voor meer informatie.
@@ -113,7 +113,7 @@ Op dezelfde manier wordt het subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![circuit diagram dat een gecontroleerde bewerking vertegenwoordigt](~/media/concepts_8.png)
+![circuit diagram dat een gecontroleerde bewerking vertegenwoordigt](~/media/8.svg)
 
 geeft een klassieke, gecontroleerde poort, waarbij $G $ wordt toegepast op de waarde van het klassieke besturings element bit $1 $.
 
@@ -125,4 +125,4 @@ Dit is nodig om het protocol te laten werken volgens de wetten van Quantum-garag
 Het Quantum teleportal-circuit wordt hieronder gegeven. We bieden ook een geannoteerde versie van het circuit om te laten zien hoe het Quantum circuit kan worden gelezen.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![Quantum Teleportation-circuit](~/media/concepts_tp2.png)
+![Quantum Teleportation-circuit](~/media/tp2.svg)

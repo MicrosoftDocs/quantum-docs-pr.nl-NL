@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906505"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022498"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-end met NWChem #
 
-Op deze pagina wordt een voor beeld van het ophalen van poort aantallen voor de simulatie van de quantum chemie door lopen vanaf een [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) -invoer deck.
+In dit artikel vindt u een voor beeld van het ophalen van poort aantallen voor de simulatie van quantum chemie, beginnend bij een [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) -invoer deck.
 Controleer voordat u doorgaat met dit voor beeld of u docker hebt geïnstalleerd volgens de installatie- [en validatie handleiding](xref:microsoft.quantum.chemistry.concepts.installation).
 
 Voor meer informatie:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Vervolgens importeren we de `Get-GateCount`-opdracht die is opgenomen in het **GetGateCount** -voor beeld.
-Zie de instructies van het voor [beeld](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)voor meer informatie.
+Zie de instructies van het voor [beeld](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)voor meer informatie.
 Voer vervolgens de volgende handelingen uit en vervang `<runtime>` door `win10-x64`, `osx-x64`of `linux-x64`, afhankelijk van uw besturings systeem:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Produceren en gebruiken van Broombridge-uitvoer van NWChem ##
 
-We hebben nu alles wat we nodig hebben om Broombridge-documenten te maken en te gebruiken.
+U hebt nu alles wat u nodig hebt om Broombridge-documenten te maken en te gebruiken.
 Als u NWChem wilt uitvoeren en een Broombridge-document wilt maken voor het `h4_sto6g_0.000.nw`-invoer deck, voert u `Convert-NWChemToBroombridge`uit:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Als u NWChem wilt uitvoeren en een Broombridge-document wilt maken voor het `h4_
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Dit leidt tot een Broombridge document met de naam `h4_sto6g_0.000.yaml` dat kan worden gebruikt met `Get-GateCount`:
+Hiermee wordt een Broombridge-document gemaakt met de naam `h4_sto6g_0.000.yaml` die u met `Get-GateCount`kunt gebruiken:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ U kunt op de volgende manieren te werk gaan:
 - Probeer verschillende vooraf gedefinieerde invoer dekken, bijvoorbeeld door de para meter `alpha` in `h4_sto6g_alpha.nw`te variëren. 
 - Wijzig de dekken door de NWChem-dekken rechtstreeks te bewerken, bijvoorbeeld om `STO-nG` modellen te verkennen voor verschillende keuzes van n, 
 - Probeer andere vooraf gedefinieerde NWChem-invoer dekken die beschikbaar zijn op `nwchem/qa/chem_library_tests`,
-- Probeer een reeks vooraf gedefinieerde Broombridge YAML-benchmarks die zijn gegenereerd op basis van NWChem en die beschikbaar zijn als onderdeel van de [micro soft/Quantum-opslag plaats](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML). Deze benchmarks zijn onder andere: 
+- Probeer een reeks vooraf gedefinieerde Broombridge YAML-benchmarks die zijn gegenereerd op basis van NWChem en die beschikbaar zijn als onderdeel van de [micro soft/Quantum-opslag plaats](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Deze benchmarks zijn onder andere: 
     - kleine moleculen zoals moleculaire water stof (H2), beryllium (as), lithium hydride (LiH),
     - grotere moleculen, zoals ozon (O3), bèta-carotene, cytosine en nog veel meer. 
 - Probeer de grafische front-end [EMSL-pijlen](https://arrows.emsl.pnnl.gov/api/qsharp_chem) uit die een interface aan de Microsoft Quantum Development Kit. 

@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907474"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022459"
 ---
-# <a name="contributing-code"></a>Code bijdragen #
+# <a name="contributing-code"></a>Code bijdragen
 
 Naast het melden van problemen en het verbeteren van documentatie, kan bijdragen aan code in de Quantum Development Kit een zeer directe manier zijn om uw collega's in de Quantum-programmeer community te helpen.
 Door code te leveren, kunt u problemen oplossen, nieuwe voor beelden bieden, bestaande bibliotheken eenvoudiger te gebruiken of zelfs volledig nieuwe functies toevoegen.
 
 In deze hand leiding wordt een overzicht gegeven van wat er wordt gezocht wanneer we pull-aanvragen bekijken om uw bijdrage te helpen het meest geschikt te maken.
 
-## <a name="what-we-look-for"></a>Wat we zoeken ##
+## <a name="what-we-look-for"></a>Wat we zoeken
 
 Een ideale code bijdrage bouwt voort op de bestaande werkzaamheden in een Quantum Development Kit-opslag plaats om problemen op te lossen, bestaande functies uit te breiden of nieuwe functies toe te voegen die binnen het bereik van een opslag plaats vallen.
 Wanneer we een code bijdrage accepteren, wordt het een deel van de Quantum Development Kit zelf, zodat nieuwe functies worden vrijgegeven, onderhouden en ontwikkeld op dezelfde manier als de rest van de Quantum Development Kit.
 Het is dus handig wanneer de functionaliteit die door een bijdrage wordt toegevoegd, goed is getest en is gedocumenteerd.
 
-### <a name="unit-tests"></a>Eenheids tests ###
+### <a name="unit-tests"></a>Eenheids tests
 
 De Q #-functies,-bewerkingen en door de gebruiker gedefinieerde typen waaruit bibliotheken bestaan, zoals de Canon, worden automatisch getest als onderdeel van de ontwikkeling van de [**micro soft/QuantumLibraries-** ](https://github.com/Microsoft/QuantumLibraries/) opslag plaats.
 Wanneer er een nieuwe pull-aanvraag wordt geopend, bijvoorbeeld de configuratie van [Azure-pijp lijnen](https://azure.microsoft.com/services/devops/pipelines/) , wordt gecontroleerd of de wijzigingen in de pull-aanvraag geen invloed hebben op de bestaande functionaliteit waarvan de Quantum-programmeer Community afhankelijk is.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Complexere voor waarden kunnen worden gecontroleerd met behulp van de technieken in het [gedeelte testen](xref:microsoft.quantum.libraries.diagnostics) van de hand leiding standaard bibliotheken.
 Zo controleert de volgende test of `H(q); X(q); H(q);` zoals aangeroepen door <xref:microsoft.quantum.canon.applywith> hetzelfde is als `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ Lokale tests kunnen worden uitgevoerd met behulp van Visual Studio test Explorer
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Wanneer we een pull-aanvraag afwijzen ##
+
+## <a name="when-well-reject-a-pull-request"></a>Wanneer we een pull-aanvraag afwijzen
 
 Soms wordt de pull-aanvraag voor een bijdrage geweigerd.
 Als dit het geval is, betekent dit niet dat het defect is, omdat er een aantal redenen zijn waarom we een bepaalde bijdrage mogelijk niet kunnen accepteren.
@@ -98,10 +99,15 @@ Ten slotte kunnen we geen bijdragen accepteren die schade aanrichten aan de quan
 We willen er zeker van zijn dat de bijdragen van toepassing zijn op de volledige quantum computer-Community, zowel in de huidige fantastische diversiteit als in de toekomst, naarmate deze nog steeds groter wordt.
 Bedankt voor uw hulp bij het realiseren van dit doel.
 
-## <a name="next-steps"></a>Volgende stappen ##
+## <a name="next-steps"></a>Volgende stappen
 
 Hartelijk dank dat u de Quantum Development Kit een fantastische resource wilt maken voor de hele Quantum-programmeer community.
 Ga voor meer informatie naar de volgende hand leiding over Q # style.
 
 > [!div class="nextstepaction"]
 > [Meer informatie over Q # Style-richt lijnen](xref:microsoft.quantum.contributing.style)
+
+Afhankelijk van wat voor soort code u bijdraagt, zijn er mogelijk extra zaken die u kunnen helpen om uw bijdrage zo goed mogelijk voor de community te laten doen.
+
+> [!div class="nextstepaction"]
+> [Meer informatie over bijdragende voor beelden](xref:microsoft.quantum.contributing.samples)

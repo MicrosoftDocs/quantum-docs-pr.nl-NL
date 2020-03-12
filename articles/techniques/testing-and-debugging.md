@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8131c2ec9320b5075c37370e12ad39a4df5bd3d5
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907678"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022848"
 ---
 # <a name="testing-and-debugging"></a>Testen en fout opsporing
 
@@ -384,4 +384,4 @@ namespace app
 
 Op de `Assert`-en `Dump` functies en-bewerkingen ondersteunt Q # een subset van de standaard mogelijkheden voor Visual Studio-fout opsporing: [regel onderbrekingen instellen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [door code te bladeren met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) en de [waarden van klassieke variabelen te controleren](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) , zijn allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
 
-Fout opsporing in Visual Studio code maakt gebruik van de mogelijkheden voor fout C# opsporing van de Visual Studio code-extensie die wordt ondersteund door OmniSharp en vereist de installatie van de [nieuwste versie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 
+Fout opsporing in Visual Studio code maakt gebruik van de mogelijkheden voor fout C# opsporing van de Visual Studio code-extensie die wordt ondersteund door OmniSharp en vereist de installatie van de [nieuwste versie](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). 

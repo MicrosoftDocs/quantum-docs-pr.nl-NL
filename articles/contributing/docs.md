@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904890"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022638"
 ---
-# <a name="improving-documentation"></a>Documentatie verbeteren #
+# <a name="improving-documentation"></a>Documentatie verbeteren
 
 De documentatie voor de Quantum Development Kit gaat over verschillende formulieren, waardoor de informatie gemakkelijk beschikbaar is voor Quantum ontwikkelaars.
 
@@ -28,7 +28,7 @@ Dit betekent dat elke vorm van documentatie enigszins in de details kan verschil
 - De **API-verwijzing** is een set pagina's voor elke Q #-functie,-bewerking en door de gebruiker gedefinieerd type, gepubliceerd op https://docs.microsoft.com/qsharp/api/. Deze pagina's documenteren de invoer en bewerkingen van elke aanroep, samen met voor beelden en koppelingen naar meer informatie. De API-verwijzing wordt automatisch geëxtraheerd uit kleine DFM-documenten in Q #-bron code als onderdeel van elke release.
 - De **Leesmij-bestanden<!---->. MD** die zijn opgenomen in elk voor beeld en Kata beschrijven hoe u dit voor beeld of Kata gebruikt, wat het dekt en hoe het werkt met de rest van de Quantum Development Kit. Deze bestanden worden geschreven met behulp van github geringte [prijs verlaging (GFM)](https://github.github.com/gfm/), een licht gewicht alternatief voor dfm dat populair is voor het rechtstreeks koppelen van documentatie aan code opslagplaatsen.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>Bijdragen aan de conceptuele documentatie ##
+## <a name="contributing-to-the-conceptual-documentation"></a>Bijdragen aan de conceptuele documentatie
 
 Voor een verbetering van de conceptuele of leesmij-documentatie, begint met een pull-aanvraag op [**MicrosoftDocs/Quantum-docs-PR**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ), [**micro soft/Quantum**](https://github.com/Microsoft/Quantum)of [**micro soft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas), zoals van toepassing.
@@ -41,7 +41,18 @@ Hieronder vindt u meer informatie over pull-aanvragen. er is nu een paar dingen 
 - Veel leden van de Quantum-programmeer Community zijn academische onderzoekers en worden voornamelijk door middel van citaten voor hun bijdragen aan de Community herkend. U kunt niet alleen lezers helpen om aanvullende materialen te vinden, maar ook om academische uitvoer, zoals papers, besprekingen, blog berichten en software tools te vermelden, kunnen academische mede werkers helpen om de beste werkzaamheden te blijven uitvoeren om de community te verbeteren.
 - De Quantum-programmeer Community is een brede en veelzijdige community. Het gebruik van geslachte promaakte in voor beelden van derden (bijvoorbeeld: "als een gebruiker..., hij...) kan worden gebruikt om uit te sluiten in plaats van op te nemen. Het Cognizant van de namen van mensen in citaten en koppelingen, en van de juiste insluiting van niet-ASCII-tekens, kan de diversiteit van de Community opleveren door de leden van de Gemeenschap te laten zien. Evenzo worden veel woorden in de Engelse taal vaak op een hatefule manier gebruikt, zodat het gebruik ervan in technische documentatie kan leiden tot beschadiging van zowel individuele lezers als de community.
 
-## <a name="contributing-to-the-api-references"></a>Bijdragen aan de API-verwijzingen ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>Verwijzen naar voorbeeld code van conceptuele artikelen
+
+Als u code wilt toevoegen uit de [opslag plaats voor beelden](https://github.com/Microsoft/Quantum), kunt u dit doen met behulp van een speciale DocFX-opdracht voor korting:
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+Met deze opdracht worden regels 4 tot en met 8 van het [`Game.qs` bestand geïmporteerd uit het `chsh-game`](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)-voor beeld, waarbij ze worden gemarkeerd als Q #-code voor het markeren van syntaxis.
+Met deze opdracht kunt u voor komen dat code wordt gedupliceerd tussen conceptuele artikelen en de opslag plaats voor beelden, zodat voorbeeld code in de documentatie altijd zo actueel mogelijk is.
+
+## <a name="contributing-to-the-api-references"></a>Bijdragen aan de API-verwijzingen
 
 Om een verbetering van de API-verwijzingen bij te dragen, is het handig om een pull-aanvraag rechtstreeks te openen in de code die wordt gedocumenteerd.
 Elke functie, bewerking of door de gebruiker gedefinieerd type ondersteunt een documentatie opmerking (aangeduid met `///` in plaats van `//`).
@@ -123,6 +134,7 @@ Voor het voor beeld van `ControlledOnBitString`kunnen we een van de volgende zak
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 U kunt de gerenderde versie van de bovenstaande code bekijken in de [API-documentatie voor de functie `ControlledOnBitString`](xref:microsoft.quantum.canon.controlledonbitstring).
 
 Naast de algemene procedures voor het schrijven van documentatie, in het schrijven van API-documentatie opmerkingen, is het handig om een aantal zaken in acht te nemen:
