@@ -1,9 +1,14 @@
 - name: API-verwijzing
   items:
+    - name: API-verwijzing
+      href: index.md
     - name: 'Q#-bibliotheken'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET-bibliotheken
       items:
+        - name: .NET-bibliotheken
+          href: dot-net-libraries.md
         - name: Traceringssimulator
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Kwantumchemie
