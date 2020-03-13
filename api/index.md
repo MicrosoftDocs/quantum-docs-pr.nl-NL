@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056970"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022516"
 ---
-# <a name="q-standard-libraries"></a>Q#-standaardbibliotheken #
+# <a name="q-api-reference"></a>Q#-API-naslaginformatie #
 
-Q# wordt ondersteund door allerlei verschillende nuttige bewerkingen, functies en door de gebruiker gedefinieerde typen waaruit de Q#-*standaardbibliotheek* bestaat.
-De Q#-standaardbibliotheek is onderverdeeld in twee hoofdonderdelen:
+Deze API-naslaginformatie omvat de Q#-standaardbibliotheek en de drie bibliotheken die daar op zijn gebouwd: de chemische, numerieke en machine learning-bibliotheken. Er zijn ook .NET- en Python-bibliotheken beschikbaar voor Q#.
 
-- **De prelude**: bewerkingen en functies die zijn gedefinieerd als onderdeel van de doelcomputer en compiler, doorgaans in klassieke systeemeigen .NET-code.
-  Over het algemeen kan de prelude op verschillende doelcomputers verschillend zijn geïmplementeerd zodat deze geschikt is het betreffende systeem.
-- **De canon**: bewerkingen en functies die zijn gedefinieerd in Q# en voortbouwen op de logica die is gedefinieerd in de prelude.
-  De implementatie van de canon is agnostisch met betrekking tot doelcomputers.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Q#-bibliotheken](xref:microsoft.quantum.qsharplibintro)
+- [.NET-bibliotheken](xref:microsoft.quantum.dotnetlibsintro)
+- [Python-bibliotheken](https://docs.microsoft.com/python/qsharp)
+
+Raadpleeg <xref:microsoft.quantum.libraries> voor meer informatie over de Q#-bibliotheken.
