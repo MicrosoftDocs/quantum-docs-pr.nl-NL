@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Code bijdragen
   href: code.md
+- name: Voorbeelden bijdragen
+  href: samples.md
 - name: Stijlgids
   href: style-guide.md
+- name: API-ontwerpprincipes
+  href: api-design-principles.md
