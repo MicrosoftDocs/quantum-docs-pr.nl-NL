@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907236"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402847"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmen #
 
@@ -77,9 +77,9 @@ $ $ Als we $ $ \ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\p
 $ $ Het pad naar het uitvoeren van een adder wordt vervolgens gewist nadat u hebt gezien dat de som van de invoer kan worden geschreven als $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cdots \otimes \ket{\phi\_n (a + b)}.
 $ $ De gehele getallen $b $ en $a $ kunnen vervolgens worden toegevoegd door de controle van de gecontroleerde fase voor elk van de qubits in de ontleding uit te voeren met de bits van $b $ as-besturings elementen.
 
-Deze uitbrei ding kan verder worden vereenvoudigd door te voor komen dat een geheel getal $j $ en reëel getal $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Dit komt doordat als u $360 ^ {\circ} $ graden ($ 2 \ pi $ radialen) in een cirkel roteert, u uiteindelijk precies op de slag gaat.  Het enige belang rijk deel van $x $ voor $e ^ {i2\pi x} $ is daarom het gedeelte van $x $.  In het bijzonder, als we een binaire uitbrei ding hebben van het formulier $x = y +0. x\_0x\_2 \ ldots x\_n $ dan $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ en daarom $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Dit betekent dat als we het aantal toevoegingen door lopen van de tensor factoren in de uitbrei ding van de Fourier-trans formatie van $ \ket{a} $ dan wordt het aantal rotaties kleiner naarmate $k $ afneemt.  Hierdoor wordt het aantal Quantum-Gates dat nodig is in de adder aanzienlijk verminderd.  We vermelden de Fourier-trans formatie, de toevoeging van de fase en de inverse Fourier-transformatie stappen die bestaan uit de Draper adder als $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Hieronder vindt u een Quantum circuit dat deze vereenvoudiging gebruikt om het hele proces te implementeren.
+Deze uitbrei ding kan verder worden vereenvoudigd door te voor komen dat een geheel getal $j $ en reëel getal $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Dit komt doordat als u $360 ^ {\circ} $ graden ($ 2 \ pi $ radialen) in een cirkel roteert, u uiteindelijk precies op de slag gaat.  Het enige belang rijk deel van $x $ voor $e ^ {i2\pi x} $ is daarom het gedeelte van $x $.  In het bijzonder, als we een binaire uitbrei ding hebben van het formulier $x = y +0. x\_0x\_2 \ ldots x\_n $ dan $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ en daarom $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Dit betekent dat als we een aanvulling hebben op elk van de tensor-factoren in de uitbrei ding van de Fourier-trans formatie van $ \ket{a} $, de het aantal rotaties wordt verkleind als $k $ vermindert.  Hierdoor wordt het aantal Quantum-Gates dat nodig is in de adder aanzienlijk verminderd.  We vermelden de Fourier-trans formatie, de toevoeging van de fase en de inverse Fourier-transformatie stappen die bestaan uit de Draper adder als $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Hieronder vindt u een Quantum circuit dat deze vereenvoudiging gebruikt om het hele proces te implementeren.
 
-![Draper adder weer gegeven als circuit diagram](~/media/draper.png)
+![Draper adder weer gegeven als circuit diagram](~/media/draper.svg)
 
 Elke beheerde $e ^ {I2 \ Pi/k} in het circuit verwijst naar een poort met gecontroleerde fasen.  Dergelijke Gates hebben de eigenschap op het paar qubits waarop ze handelen, $ \ket{00}\mapsto \ket{00}$, \ket{11}\mapsto e ^ {I2 \ Pi/k} \ Ket{11}$.  Met dit circuit kunnen we toevoegingen uitvoeren met behulp van geen extra qubits die nodig zijn om de invoer en de uitvoer op te slaan.
 
@@ -92,7 +92,7 @@ $$
 
 De Beauregard adder maakt gebruik van de Draper adder of meer specifiek $ \phi\\\!\operatorname{ADD} $, om $a $ en $b $ in te voegen.  Vervolgens wordt dezelfde bewerking gebruikt om te bepalen of $a + b < N $ wordt afgetrokken van $N $ en te testen als $a + b-N < 0 $.  Het circuit slaat deze informatie op in een bijkomende Qubit en voegt $N $ terug het REGI ster toe als $a + b < N $.  Vervolgens wordt het systeem afgesloten door de computer te ontlasten (deze stap is nodig om ervoor te zorgen dat de ancilla na het aanroepen van de adder niet meer kunnen worden toegewezen).  Het circuit voor de Beauregard adder wordt hieronder gegeven.
 
-![Beauregard adder weer gegeven als circuit diagram](~/media/beau.png)
+![Beauregard adder weer gegeven als circuit diagram](~/media/beau.svg)
 
 Hier heeft de poort $ \Phi\\\!\operatorname{ADD} $ hetzelfde als $ \Phi\\\!\operatorname{ADD} $, met uitzonde ring van de invoer in deze context, in plaats van Quantum.  Hierdoor kunnen de bewaakte fasen in $ \Phi\\\!\operatorname{ADD} $ worden vervangen door Phase Gates die vervolgens samen worden gecompileerd in minder bewerkingen om zowel het aantal qubits als het aantal poorten dat nodig is voor de adder te verminderen.
 
@@ -111,7 +111,7 @@ Anders is het effect van het Toep assen van $V $ precies hetzelfde als het Toep 
 Voor de rest van deze bespreking bespreken we bijvoorbeeld de fase schatting in termen van $R _1 (\phi) $, die we implementeren met behulp van de zogenaamde *fase kickback*.
 
 Omdat het besturings element en het doel register untangled na dit proces blijven, kunnen we $ \ket{\phi} $ opnieuw gebruiken als het doel van een beheerde toepassing van $U ^ $2 om een tweede besturings element voor een Qubit in de status $R _1 (2 \phi) \ket{+} $ voor te bereiden.
-Op deze manier kunnen we een REGI ster ontvangen van de vorm \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, waarbij $n $ het aantal bits nauw keurig is dat nodig is, en waar we ${} \propto {}$ hebben gebruikt om aan te geven dat de normalisatie factor $ is onderdrukt 1/\sqrt{2 ^ n} $.
+Op deze manier kunnen we een REGI ster ontvangen van de vorm \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, waarbij $n $ het aantal bits nauw keurig is dat nodig is, en waar we ${} \propto {}$ hebben gebruikt om aan te geven dat we de normalisatie factor $1/\sqrt hebben onderdrukt {2 ^ n} $.
 
 Als we ervan uitgaan dat $ \phi = 2 \pi p/2 ^ k $ voor een geheel getal $p $, herkennen we dit als $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, waarbij $p _j $ de $j ^ {\textrm{th}} $ bit $2 \pi \phi $ is.
 Wanneer de adjoint van de Quantum Fourier-trans formatie wordt toegepast, krijgen we daarom de binaire weer gave van de fase die is gecodeerd als een Quantum status.
