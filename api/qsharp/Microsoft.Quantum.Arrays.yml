@@ -13,6 +13,8 @@ functions:
   summary: Maakt een matrix met de opgegeven lengte en alle elementen die gelijk zijn aan de opgegeven waarde.
 - uid: microsoft.quantum.arrays.enumerated
   summary: Op basis van een matrix retourneert een nieuwe matrix met elementen van de oorspronkelijke matrix, samen met de indices van elk element.
+- uid: microsoft.quantum.arrays.equala
+  summary: Op basis van twee matrices van hetzelfde type en een predikaat dat is gedefinieerd voor paren van elementen van de matrices, wordt gecontroleerd of de matrices gelijk zijn.
 - uid: microsoft.quantum.arrays.exclude
   summary: Retourneert een matrix met de elementen van een andere matrix, met uitzonde ring van elementen in een bepaalde lijst met indices.
 - uid: microsoft.quantum.arrays.filtered
@@ -67,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
 metadata:
-  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905587"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320725"
