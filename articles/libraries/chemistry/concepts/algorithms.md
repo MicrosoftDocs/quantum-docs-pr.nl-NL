@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904635"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320713"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics simuleren
 
@@ -28,14 +28,14 @@ Als $e ^ {-i H t} $ een normale exponentiële waarde was, zou de fout in deze be
 Deze fout treedt op omdat $e ^ {-iHt} $ een operator exponentiële is. als gevolg hiervan is er een fout opgetreden bij het gebruik van deze formule als gevolg van het feit dat de $H _j $-voor waarden niet werken (*dat wil zeggen*$H _J H_k \ne H_k H_j $ in het algemeen).
 
 Als $t $ groot is, kunnen er nog steeds Trotter-Suzuki formules worden gebruikt om de dynamiek nauw keurig te simuleren door deze op te splitsen in een reeks korte fases.
-Laat $r $ het aantal stappen dat wordt uitgevoerd in de tijd evolutie.
-Vervolgens hebben we dat $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $, wat impliceert dat als $r $ wordt geschaald als $m ^ 2 t ^ 2/\ Epsilon $, de fout kan worden gemaakt Maxi maal $ \epsilon $ voor $ \epsilon > 0 $.
+Laat $r $ het aantal stappen dat is uitgevoerd in de tijd evolutie, dus elke keer dat de stap wordt uitgevoerd voor tijd $t/r $. Vervolgens hebben we dat $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $, wat impliceert dat als $r $ wordt geschaald als $m ^ 2 t ^ 2/\ Epsilon $, de fout kan worden gemaakt Maxi maal $ \epsilon $ voor $ \epsilon > 0 $.
 
 Nauw keurigere benaderingen kunnen worden gemaakt door een reeks operator exponentiëlen te maken, zodat de fout voorwaarden worden geannuleerd.
-De eenvoudigste van deze formule, de symmetrische Trotter formule of Strang splitsen, heeft de notatie $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3), $ $ die minder dan $ \epsilon $ kan worden gemaakt voor $ \epsilon > 0 $ door $r $ te schalen als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
+De eenvoudigste formule, de tweede order Trotter-Suzuki-formule, neemt de notatie $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ de fout die kan worden gemaakt van minder dan $ \epsilon $ voor $ \epsilon > 0 $ door $r $ te schalen als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
 
-Zelfs Trotter formules met een hogere volg orde kunnen worden samengesteld op basis van $U _1 $.
-Het eenvoudigste is de volgende formule in de vierde volg orde, oorspronkelijk geïntroduceerd door Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5T ^ 5), $ $ waar $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Zelfs hogere formules, met name ($ 2.000 $) volg orde voor $k > 0 $, kunnen recursief worden samengesteld: $ $ U_ {2.000} (t) = [U_ {t-2} (s_k\~a)] ^ 2 U_ {t-2} ([1-4s_k] t) [U_ {mijn-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2.000 + 1}/r ^ {2.000}), $ $ waar $s _k = (4-4 ^ {1/(2-1)}) ^{-1}$.
+
+Het eenvoudigste is de volgende vierde volg orde ($k = $2) formule, die oorspronkelijk is geïntroduceerd door Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5T ^ 5/r ^ 4). $ $ waar $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 In het algemeen kunnen wille keurige formules met een hoge volg orde worden geconstrueerd. de kosten voor het gebruik van complexere integrators zijn echter vaak zwaarder dan de voor delen van de meeste praktische problemen.
 
 Om de bovenstaande strategieën te laten werken, moeten we een methode hebben voor het simuleren van een brede klasse van $e ^ {-iH_j t} $.

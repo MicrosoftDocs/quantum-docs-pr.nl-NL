@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907542"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320876"
 ---
 # <a name="multiple-qubits"></a>Meerdere qubits
 
@@ -27,7 +27,7 @@ Deze hulpprogram ma's zijn absoluut nood zakelijk om inzicht te krijgen in de po
 
 ## <a name="representing-two-qubits"></a>Die twee qubits vertegenwoordigen
 Het belangrijkste verschil tussen de een-en twee Qubit Staten is dat twee Qubit-Staten vier driedimensionaal zijn in plaats van twee dimensies.
-Dit komt doordat de reken kundige basis voor twee Qubit Staten wordt gevormd door de tensor-producten van een Qubit-status.  We hebben bijvoorbeeld \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+Dit komt doordat de reken kundige basis voor twee Qubit Staten wordt gevormd door de tensor-producten van een Qubit-status.  We hebben bijvoorbeeld \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix} ,\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{align}
 
 Het is eenvoudig om te zien dat de Quantum status van $n $ qubits wordt vertegenwoordigd door een eenheids vector van dimensie $2 ^ n $ met behulp van deze constructie.  De vector
@@ -59,13 +59,16 @@ $$
 
 Het is ook mogelijk slechts één Qubit van een Quantum-status van twee Qubit te meten. In gevallen waarbij u slechts één van de qubits meet, is de impact van de meting subtiel verschillend, omdat de gehele status niet wordt samengevouwen in een reken kundige status, en niet wordt samengevouwen tot slechts één subsysteem.  Met andere woorden, in dergelijke gevallen waarbij slechts één Qubit wordt gewerkt, wordt slechts een van de subsystemen, maar niet alle, samengevouwen.  
 
-Om dit te zien, moet u de eerste Qubit van de volgende status meten, die wordt gevormd door het Toep assen van de Hadamard Transform $H $ op twee qubits in eerste instantie ingesteld op de status "0": $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ end {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\Text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
+Om dit te zien, moet u de eerste Qubit van de volgende status meten, die wordt gevormd door het Toep assen van de Hadamard Transform $H $ op twee qubits in eerste instantie ingesteld op de status "0": $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \ end {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ end {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\Text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
 $ $ Beide resultaten hebben een waarschijnlijkheid van 50%.  Het resultaat van 50% waarschijnlijk voor beide kunnen worden afgeleid van het feit dat de initiële Quantum State-vector is invariant onder swaping $0 $ met $1 $ op de eerste Qubit.
 
-De wiskundige regel voor het meten van de eerste of tweede Qubit is eenvoudig.  Als we $e _k $ de $k ^ {\rm do} $ reken kundige basis vector hebben en $S $ de set van alle $e _k $, zodat de Qubit in kwestie de waarde $1 $ voor die waarde van $k $ heeft.  Als we bijvoorbeeld de eerste Qubit willen meten, zou $S $ bestaan uit $e _2 \ equiv $10 en $e _3 \ equiv $11.  En als we geïnteresseerd zijn in het tweede Qubit $S $ bestaat uit $e _1 \ equiv $1 en $e _3 \equiv $11.  De waarschijnlijkheid om de gekozen Qubit te meten als $1 $ is voor status vector $ \psi $
+De wiskundige regel voor het meten van de eerste of tweede Qubit is eenvoudig.  Als we $e _k $ de $k ^ {\rm do} $ reken kundige basis vector hebben en $S $ de set van alle $e _k $, zodat de Qubit in kwestie de waarde $1 $ voor die waarde van $k $ heeft.  Als we bijvoorbeeld de eerste Qubit willen meten, zou $S $ bestaan uit $e _1 \ equiv $10 en $e _3 \ equiv $11.  En als we geïnteresseerd zijn in het tweede Qubit $S $ bestaat uit $e _2 \ equiv $1 en $e _3 \equiv $11.  De waarschijnlijkheid om de gekozen Qubit te meten als $1 $ is voor status vector $ \psi $
 
 $ $ P (\Text{outcome} = 1) = \ sum_ {e_k \Text{in de set} S} \psi ^ \dagger e_k e_k ^ \dagger \psi.
 $$
+
+> [!NOTE]
+> In dit document gebruiken we de indeling little-endian voor het labelen van de reken kundige basis. In little endian indeling zijn de minst significante bits het eerst. Bijvoorbeeld, het getal vier in de indeling little-endian wordt vertegenwoordigd door de teken reeks van bits 001.
 
 Aangezien elke qubit-meting alleen $0 $ of $1 $ kan leveren, is de kans op het meten van $0 $, simpelweg $1-P (\Text{outcome} = 1) $.  Daarom geven we alleen expliciet een formule voor de waarschijnlijkheid van het meten van $1 $.
 
@@ -79,7 +82,7 @@ De voorzichtigste lezer kan zich zorgen maken over wat er gebeurt wanneer de kan
 
 Als we $ \psi $ de uniform State vector hebben die hierboven is gegeven en die de eerste Qubit graag moeten meten 
 
-$ $ P (\Text{Measurement van First Qubit} = 1) = (\psi ^ \dagger e_2) (e_2 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_2 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
+$ $ P (\Text{Measurement van First Qubit} = 1) = (\psi ^ \dagger e_1) (e_1 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_1 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
 $$
 
 Houd er rekening mee dat dit slechts de som is van de twee waarschijnlijkheden die worden verwacht voor het meten van de resultaten $10 $ en $11 $ waren alle qubits die moeten worden gemeten.
@@ -90,12 +93,13 @@ $$
 
 wat precies overeenkomt met wat onze Intuition vertelt, zou ons moeten zijn.  Op dezelfde manier kan de status worden geschreven als
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
 
 opnieuw in overeenstemming met onze intuition.
 
 ## <a name="two-qubit-operations"></a>Twee Qubit bewerkingen
-Net als bij een single-Qubit-trans formatie is elke unitary-Transform een geldige bewerking op qubits. Over het algemeen is een unitary-trans formatie op $n $ qubits een matrix $U $ van grootte $2 ^ n \times 2 ^ n $ (zodat deze wordt toegepast op vectoren met een grootte van $2 ^ n $), zoals $U ^{-1} = U ^ \dagger $. De poort CNOT (Controlled-NOT) is bijvoorbeeld een gang bare twee Qubit-poort en wordt vertegenwoordigd door de volgende unitary-matrix:
+Net als bij een single-Qubit-trans formatie is elke unitary-Transform een geldige bewerking op qubits. Over het algemeen is een unitary-trans formatie op $n $ qubits een matrix $U $ van grootte $2 ^ n \times 2 ^ n $ (zodat deze wordt toegepast op vectoren met een grootte van $2 ^ n $), zoals $U ^{-1} = U ^ \dagger $.
+De poort CNOT (Controlled-NOT) is bijvoorbeeld een gang bare twee Qubit-poort en wordt vertegenwoordigd door de volgende unitary-matrix:
 
 $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 

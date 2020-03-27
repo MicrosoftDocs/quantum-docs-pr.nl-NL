@@ -6,17 +6,17 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907049"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320811"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>De doel computer van de ResourcesEstimator
 
 Zoals de naam al aangeeft, schat het `ResourcesEstimator` de resources die nodig zijn om een bepaald exemplaar van een Q #-bewerking uit te voeren op een quantum computer.
-Dit wordt bereikt door de Quantum bewerking uit te voeren zonder dat de status van een quantum computer werkelijk wordt gesimuleerd. Daarom kunnen er resources worden geschat voor Q #-bewerkingen die gebruikmaken van duizenden qubits.
+Dit wordt bereikt door de Quantum bewerking uit te voeren zonder dat de status van een quantum computer werkelijk wordt gesimuleerd. Daarom kunnen er resources worden geschat voor Q #-bewerkingen die gebruikmaken van duizenden qubits als het klassieke deel van de code in een redelijke tijd kan worden uitgevoerd.
 
 ## <a name="usage"></a>Gebruik
 
