@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529955"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Wat kan een kwantumcomputer doen?
@@ -62,4 +62,4 @@ Door kwantum geïnspireerde algoritmen worden toegepast in medisch onderzoek, bi
 ## <a name="next-steps"></a>Volgende stappen
 
 * [Waarom zou ik kwantumcomputing gebruiken?](xref:microsoft.quantum.overview.why)
-* [Aan de slag met de Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) (Aan de slag met de Microsoft Quantum Development Kit)

@@ -7,10 +7,10 @@ ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
 ms.openlocfilehash: abf8804dc772a82126d432348cc6d2bc1c77f1f7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906964"
 ---
 # <a name="why-learn-quantum-computing"></a>Waarom zou ik kwantumcomputing leren gebruiken?
@@ -38,4 +38,4 @@ Naast de hierboven besproken impact in de praktijk, zijn we van mening dat kwant
 ## <a name="next-steps"></a>Volgende stappen
 
 * [Wat is Q#?](xref:microsoft.quantum.overview.qsharp)
-* [Aan de slag met de Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) (Aan de slag met de Microsoft Quantum Development Kit)
