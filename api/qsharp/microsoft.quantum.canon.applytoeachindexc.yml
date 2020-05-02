@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Hiermee wordt een bewerking met één Qubit toegepast op elk geïndexeerd element in een REGI ster.
 
-  De modificator `C` geeft aan dat de bewerking met één qubit kan worden bestuurd.
+  De aanpassings `C` functie geeft aan dat de bewerking met één qubit kan worden bestuurd.
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975cefaacf1e8f4fb6e80daf94ad4caecd7adb8d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068441"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674832"
