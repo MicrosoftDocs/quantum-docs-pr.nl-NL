@@ -9,9 +9,9 @@ summary: >-
 
   Op basis van een bewerking en een invoer voor die bewerking, wordt de bewerking toegepast wanneer er extra invoer is opgegeven.
 
-  Met name de expressie `Delay(op, arg, _)` is een bewerking waarbij `op` wordt toegepast op `arg` wanneer deze wordt aangeroepen.
+  Met name de expressie `Delay(op, arg, _)` is een bewerking die van toepassing `op` is `arg` op wanneer aangeroepen.
 
-  Met expressie `Delay(op,arg,_)` kan de toepassing van `op`worden uitgesteld.
+  Met `Delay(op,arg,_)` expressie kan de toepassing van `op`worden uitgesteld.
 syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
 input:
   content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delayca
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6e9c821bdb21714ee914bc908f6f93222b5c3b6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226111"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680200"

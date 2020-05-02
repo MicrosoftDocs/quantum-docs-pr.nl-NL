@@ -6,8 +6,8 @@ namespace: Microsoft.Quantum.Bitwise
 summary: >-
   Retourneert de Bitsgewijze NOT van een geheel getal.
 
-  Dit voert dezelfde berekening uit als de ingebouwde `~~~` operator.
-remarks: Zie de [ C# operator ~](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) voor meer informatie.
+  Dit voert dezelfde berekening uit `~~~` als de ingebouwde operator.
+remarks: Raadpleeg de [C# ~-operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) voor meer informatie.
 examples: >-
   ```qsharp
 
@@ -29,9 +29,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f06b4d6b5cd7e030936ac4f6018665bc5636f04a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3de6cbe072ab770fba893c41112df3bb686c3e79
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213990"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680655"

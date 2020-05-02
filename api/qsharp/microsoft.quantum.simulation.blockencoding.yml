@@ -7,15 +7,15 @@ summary: >-
   Hiermee wordt een unitary aangeduid waarbij een wille keurige operator van belang wordt gecodeerd in het blok linksboven.
 
 
-  Dat wil zeggen een `BlockEncoding` is een unitary $U $ waarbij een wille keurige operator $H $ van belang die op de systeem register `s`, wordt gecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket{0}_a $. Dat wil zeggen,
+  Dat wil zeggen, `BlockEncoding` een is een unitary $U $ waarbij een wille keurige operator $H $ of interest die op `s` het systeem register reageert, wordt gecodeerd in het blok linksboven dat overeenkomt met{0}de hulp status $ \ket _a $. Dat wil zeggen,
 
 
-  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a \ otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066027"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681103"

@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Retourneert een functie die elementen van die matrix retourneert, uitgedrukt in een matrix.
-remarks: Deze functie is vooral nuttig voor samen werking met functies en bewerkingen die `Int -> 'T` functies als argumenten nemen. Dit is bijvoorbeeld gebruikelijk in de representatieve generator, waarbij functies worden gebruikt om te voor komen dat een volledige matrix in het geheugen hoeft te worden geregistreerd.
+remarks: Deze functie is vooral nuttig voor het samen werken met functies en bewerkingen die `Int -> 'T` functies als argumenten hebben. Dit is bijvoorbeeld gebruikelijk in de representatieve generator, waarbij functies worden gebruikt om te voor komen dat een volledige matrix in het geheugen hoeft te worden geregistreerd.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: Een functie `f` dat `f(idx) == f[idx]`.
+  - summary: Een functie `f` `f(idx) == f[idx]`.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type van de elementen van de matrix die wordt weer gegeven als een opzoek functie.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218104"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680958"

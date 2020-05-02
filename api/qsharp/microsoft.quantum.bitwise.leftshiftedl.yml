@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Het aantal bits waarmee `value` naar links moet worden verplaatst.
+    summary: Het aantal bits `value` dat naar links moet worden verplaatst.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: De waarde van `value`, naar `amount` bits geschoven.
+  - summary: De waarde van `value`, naar links geschoven `amount` op bits.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: cffab4695cc4bef50975206d2f1eb81554e14ffb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 61ae04f5085513742058c0208e8add0af8fd463b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217798"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680680"

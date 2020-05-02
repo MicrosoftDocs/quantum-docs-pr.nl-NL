@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Retourneert een geheel getal dat de X-bits van een matrix van Pauli-Opera tors vertegenwoordigt.
-remarks: De functie wordt gegenereerd als de lengte van `paulis` matrix groter is dan 63.
+remarks: De functie wordt gegenereerd als de lengte van `paulis` de matrix groter is dan 63.
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ met binaire weer gave $ (p_{62}\,p_{61}\,\dots\,p_0) $, waarbij $p _i = $0 als `paulis[i]` `PauliI` of `PauliZ` en waar $p _i = $1 als `paulis[i]` `PauliX` of `PauliY`is.
+  - summary: Een geheel getal $x $ met binaire weer gave ${62}\,({61}\,p_\,p_ \dots p_0) $, waarbij $p _I = `paulis[i]` $0 `PauliI` als `PauliZ` is of en de $p _I = `paulis[i]` $1 `PauliX` als `PauliY`dat zo is of.
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217730"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680567"
