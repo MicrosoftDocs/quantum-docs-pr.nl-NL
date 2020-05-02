@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
 
-  De modificator `C` geeft aan dat alle bewerkingen in de matrix kunnen worden bestuurd.
+  De wijzigings `C` functie geeft aan dat alle bewerkingen in de matrix kunnen worden bestuurd.
 examples: >-
   De volgende zijn gelijkwaardig:
 
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  and
+  en
 
 
   ```qsharp
@@ -67,9 +67,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 50129f54048e9b6b9e50970d581a0b72935a697e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068169"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675969"
