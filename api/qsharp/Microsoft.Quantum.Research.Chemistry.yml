@@ -1,13 +1,14 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.research.chemistry
 name: Microsoft.Quantum.Research.Chemistry
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte biedt geavanceerde onderzoek methoden voor het simuleren van quantum chemie.\n\n # <a name=\"references\"></a>Verwijzingen\n - Het verbeteren van Quantum algoritmen voor quantum chemie, M. B. Hastings, D. Wecker, B. Bauer, M. Troyer,https://arxiv.org/abs/1403.1539"
 functions:
 - uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
   summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de Pauli basis.
 - uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
   summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JWOptimized basis.
 - uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
-  summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms`, geconverteerd naar een `GeneratorSystem` uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+  summary: Hiermee wordt een Hamiltonian die `JWOptimizedHTerms` wordt beschreven `GeneratorSystem` door omgezet in een uitgedrukt `GeneratorIndex` in termen van de Conventie die in dit bestand is gedefinieerd.
 - uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
   summary: Retourneert een geoptimaliseerde Trotter-stap bewerking en de para meters die nodig zijn om deze uit te voeren.
 operations:
@@ -16,9 +17,9 @@ operations:
 - uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
   summary: Eenvoudige status voorbereiding van de evaluatie status door spin-banen te nemen
 metadata:
-  ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa1aa58d6e2dcee6f650714073b9a1386f0ed679
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215945"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675479"

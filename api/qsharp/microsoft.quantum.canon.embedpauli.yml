@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Op basis van een Qubit Pauli-operator en de index van een Qubit retourneert een multi-Qubit Pauli-operator met de opgegeven single-Qubit-operator bij die index en `PauliI` bij elke andere index.
+summary: Op basis van een Qubit Pauli-operator en de index van een Qubit retourneert een multi-Qubit Pauli-operator met de opgegeven single-Qubit-operator in die `PauliI` index en op elke andere index.
 examples: >-
-  De matrix `[PauliI, PauliI, PauliX, PauliI]`ophalen:
+  De matrix `[PauliI, PauliI, PauliX, PauliI]`verkrijgen:
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: Een index zodanig dat `output[location] == pauli`, waarbij `output` de uitvoer van deze functie is.
+    summary: Een dergelijke index `output[location] == pauli`, waarbij `output` de uitvoer van deze functie is.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219379"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675591"

@@ -9,9 +9,9 @@ summary: >-
 
   Gezien een $n $-Qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, bevestigt u dat de kans $ | \ alpha_j | ^ 2 $ van de status $ \ket{j} $ geïndexeerd door $j $ de verwachte waarde heeft.
 examples: >-
-  Stel dat met de `qubits`-registratie een Qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ Ket{0}+ \ SQRT {7/8} \ Ket{6}$ in de indeling little endian wordt gecodeerd.
+  Stel dat het `qubits` REGI ster een 3-Qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ Ket{0}+ \ SQRT {7/8} \ Ket{6}$ in de indeling little endian codeert.
 
-  Dit betekent dat het aantal statussen $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ en $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Daarna slagen de volgende verklaringen:
+  Dit betekent dat het aantal statussen ${0}\ket{0}\equiv\ket{0}\ket{0}\ket $ en ${6}\ket{0}\equiv\ket{1}\ket{1}\ket $. Daarna slagen de volgende verklaringen:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -22,7 +22,7 @@ input:
   content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
   types:
   - name: stateIndex
-    summary: De index $j $ van de status $ \ket{j} $ vertegenwoordigd door een `LittleEndian` registratie.
+    summary: De index $j $ van de status $ \ket{j} $ vertegenwoordigd door een `LittleEndian` REGI ster.
     isPrimitive: true
     uid: Int
   - name: expected
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221436"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675255"

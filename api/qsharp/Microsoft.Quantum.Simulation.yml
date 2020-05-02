@@ -10,35 +10,35 @@ functions:
     Codeert een operator van belang in een `BlockEncoding`.
 
 
-    Hiermee wordt een `BlockEncoding` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een deel van de operator $H wordt gecodeerd = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. $P $ is doorgaans een status voorbereiding unitary, zodat $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ en $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
+    Hiermee wordt een `BlockEncoding` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een bepaalde operator wordt gecodeerd $H = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. Normaal gesp roken is $P $ een status voorbereiding unitary, zodat $P{0}\_\ket a = \ sum_j \sqrt{\ alpha_j\|/\|\_\vec\alpha 2}\_\ket{j} a $ en $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Codeert een operator van belang in een `BlockEncodingReflection`.
 
 
-    Hiermee wordt een `BlockEncodingReflection` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een deel van de operator $H wordt gecodeerd = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. $P $ is doorgaans een status voorbereiding unitary, zodat $P \ket{0}\_een \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ en $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
+    Hiermee wordt een `BlockEncodingReflection` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een bepaalde operator wordt gecodeerd $H = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. Normaal gesp roken is $P $ een status voorbereidings unitary,{0}\_zodanig dat $P \ket een \\|sum_j\|\_\sqrt{\ alpha_j/\_\vec\alpha 2} \ket{j} a $ en $V = \ sum_ {\_j} \ket{j}\bra{j} a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
-    Hiermee wordt een `BlockEncoding` geconverteerd naar een gelijkwaardig `BLockEncodingReflection`.
+    Converteert een `BlockEncoding` in een gelijkwaardige `BLockEncodingReflection`waarde.
 
 
-    Dat wil zeggen, op basis van een `BlockEncoding` unitary $U $ waarmee een bepaalde operator $H $ van belang wordt gecodeerd, wordt deze geconverteerd naar een `BlockEncodingReflection` $U $ waarmee dezelfde operator wordt gecodeerd, maar ook voldoet aan $U ^ \dagger = U $.
+    Op basis van een `BlockEncoding` unitary $U $ die een bepaalde operator $H $ van de rente codeert, wordt deze omgezet `BlockEncodingReflection` in een $U $ die dezelfde operator codeert, maar ook voldoet aan $U ^ \dagger = U ' $ '.
 
     Dit verhoogt de grootte van het hulp register van $U $ door één Qubit.
 - uid: microsoft.quantum.simulation.getgeneratorsystemfunction
-  summary: Hiermee haalt u de `GeneratorIndex` functie op in een `GeneratorSystem`.
+  summary: Haalt de `GeneratorIndex` functie op in `GeneratorSystem`een.
 - uid: microsoft.quantum.simulation.getgeneratorsystemnterms
-  summary: Hiermee wordt het aantal voor waarden in een `GeneratorSystem`opgehaald.
+  summary: Hiermee haalt u het aantal voor waarden `GeneratorSystem`in een.
 - uid: microsoft.quantum.simulation.identitygeneratorindex
-  summary: Retourneert een generator index die consistent is met de Hamiltonian nul, `H = 0`, die overeenkomt met de bewerking voor identiteits ontwikkeling.
+  summary: Retourneert een generator index die consistent is met de Hamiltonian `H = 0`nul,, die overeenkomt met de bewerking voor identiteits ontwikkeling.
 - uid: microsoft.quantum.simulation.identitygeneratorsystem
-  summary: Retourneert een generator systeem dat consistent is met de Hamiltonian `H = 0`nul, dat overeenkomt met de bewerking voor identiteits ontwikkeling.
+  summary: Retourneert een generator systeem dat consistent is met de `H = 0`Hamiltonian nul, wat overeenkomt met de bewerking voor identiteits ontwikkeling.
 - uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
-  summary: Retourneert een tijd afhankelijke Generator systeem consistent met de Hamiltonian-`H(s) = 0`.
+  summary: Retourneert een tijd afhankelijke Generator systeem consistent met de Hamiltonian `H(s) = 0`.
 - uid: microsoft.quantum.simulation.interpolatedevolution
   summary: Interpoleert twee generatoren met een uniform schema, waarbij een bewerking wordt geretourneerd waarmee gesimuleerde evoluties worden toegepast onder de resulterende tijd afhankelijke Generator naar een Qubit-REGI ster.
 - uid: microsoft.quantum.simulation.interpolategeneratorsystems
-  summary: Retourneert een `TimeDependentGeneratorSystem` die de lineaire interpolatie tussen twee `GeneratorSystem`s weergeeft.
+  summary: Retourneert een `TimeDependentGeneratorSystem` waarde die de lineaire interpolatie tussen twee `GeneratorSystem`s aangeeft.
 - uid: microsoft.quantum.simulation.intstopaulis
   summary: Converteert een matrix met gehele getallen naar een matrix van Pauli-Opera tors met één Qubit.
 - uid: microsoft.quantum.simulation.inttopauli
@@ -54,40 +54,40 @@ functions:
 
     De Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ wordt beschreven door een som van Pauli-voor waarden $P _j $, elk met een real-efficient $ \ alpha_j $.
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
-  summary: Hiermee wordt de coëfficiënt geëxtraheerd van een Pauli-term die wordt beschreven door een `GeneratorIndex`.
+  summary: Hiermee wordt de coëfficiënt geëxtraheerd van een Pauli-term die wordt `GeneratorIndex`beschreven door een.
 - uid: microsoft.quantum.simulation.paulievolutionfunction
   summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de Pauli basis.
 - uid: microsoft.quantum.simulation.paulievolutionset
   summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de Pauli basis.
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
-  summary: Extraheert de Pauli-teken reeks en de Qubit indices van een Pauli-term die wordt beschreven door een `GeneratorIndex`.
+  summary: Extraheert de Pauli-teken reeks en de Qubit indices van een Pauli-term die `GeneratorIndex`wordt beschreven door een.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
   summary: Hiermee wordt een weer spiegeling van blok-encoding omgezet in een Quantum Walk.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Voegt meerdere `GeneratorSystem`s toe om een nieuwe GeneratorSystem te maken.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
-  summary: '`TimeDependentSimulationAlgorithm` functie die gebruikmaakt van een Trotter-Suzuki-ontleding om een unitary-operator te benaderen waarmee de tijdgebonden Schrodinger vergelijking wordt opgelost.'
+  summary: '`TimeDependentSimulationAlgorithm`functie die gebruikmaakt van een Trotter-Suzuki-ontleding om een unitary-operator te benaderen waarmee de tijdgebonden Schrodinger vergelijking wordt opgelost.'
 - uid: microsoft.quantum.simulation.trottersimulationalgorithm
-  summary: '`SimulationAlgorithm` functie die gebruikmaakt van een ontleding van het Trotter – Suzuki om de tijd-ontwikkelings operator _exp (-iHt)_ te benaderen.'
+  summary: '`SimulationAlgorithm`functie waarbij gebruik wordt gemaakt van een Trotter-Suzuki-ontleding om de time-evolutie operator _exp (-iHt)_ te benaderen.'
 - uid: microsoft.quantum.simulation.trotterstep
-  summary: Implementeert een eenmalige stap van tijd-ontwikkeling door het systeem dat wordt beschreven in een `EvolutionGenerator` met behulp van een Trotter-Suzuki-ontleding.
+  summary: Implementeert een eenmalige stap van tijd-ontwikkeling door het systeem dat wordt beschreven in `EvolutionGenerator` een Trotter – Suzuki-ontleding.
 operations:
 - uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
-  summary: Voert de voor bereiding van de status uit door een `statePrepUnitary` toe te passen op de invoer status, gevolgd door de voor bereiding van de Adiabatic-status met behulp van een `adiabaticUnitary`en een schatting van de laatste fase met betrekking tot `qpeUnitary`de resulterende status met een `phaseEstAlgorithm`.
+  summary: Voert de voor bereiding van `statePrepUnitary` de status uit door een op de invoer status toe te passen `adiabaticUnitary`, gevolgd door de Adiabatic-status voorbereiding `qpeUnitary`met behulp van een- `phaseEstAlgorithm`en de laatste fase schatting met betrekking tot de resulterende status met behulp van een.
 - uid: microsoft.quantum.simulation.estimateenergy
-  summary: De voor bereiding van de status wordt uitgevoerd door een `statePrepUnitary` toe te passen op een automatisch toegewezen schatting van de invoer status fase met betrekking tot het `qpeUnitary`van de resulterende status met behulp van een `phaseEstAlgorithm`.
+  summary: Voert de voor bereiding van `statePrepUnitary` de status uit door een in een automatisch toegewezen schatting van `qpeUnitary`de invoer status fase toe te `phaseEstAlgorithm`passen met betrekking tot de resulterende status met behulp van een.
 - uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
-  summary: Voert de voor bereiding van de status uit door een `statePrepUnitary` toe te passen op een automatisch toegewezen invoer status, gevolgd door de voor bereiding van de Adiabatic-status met behulp van een `adiabaticUnitary`en een schatting van de laatste fase ten opzichte van `qpeUnitary`met een `phaseEstAlgorithm`.
+  summary: Voert de voor bereiding van `statePrepUnitary` de status uit door een ' automatisch toegewezen invoer status ' toe te passen `adiabaticUnitary`, gevolgd door de Adiabatic-status voorbereiding `qpeUnitary`met behulp van een- `phaseEstAlgorithm`en de laatste fase schatting met betrekking tot de resulterende status met behulp van een.
 newtypes:
 - uid: microsoft.quantum.simulation.blockencoding
   summary: >-
     Hiermee wordt een unitary aangeduid waarbij een wille keurige operator van belang wordt gecodeerd in het blok linksboven.
 
 
-    Dat wil zeggen een `BlockEncoding` is een unitary $U $ waarbij een wille keurige operator $H $ van belang die op de systeem register `s`, wordt gecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket{0}_a $. Dat wil zeggen,
+    Dat wil zeggen, `BlockEncoding` een is een unitary $U $ waarbij een wille keurige operator $H $ of interest die op `s` het systeem register reageert, wordt gecodeerd in het blok linksboven dat overeenkomt met{0}de hulp status $ \ket _a $. Dat wil zeggen,
 
 
-    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Vertegenwoordigt een `BlockEncoding` dat ook een reflectie is.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -101,13 +101,13 @@ newtypes:
     Vertegenwoordigt een tijd afhankelijke dynamische generator.
 
 
-    De para meter `Double` is een schema in $ [0, 1] $.
+    De `Double` para meter is een schema in $ [0, 1] $.
 - uid: microsoft.quantum.simulation.evolutionset
   summary: >-
     Vertegenwoordigt een set poorten die eenvoudig kunnen worden geïmplementeerd en gebruikt voor het implementeren van simulatie algoritmen.
 
 
-    Elementen in de set worden geïndexeerd door een <xref:microsoft.quantum.simulation.generatorindex>en elke set wordt beschreven door een functie van `GeneratorIndex` naar <xref:microsoft.quantum.simulation.evolutionunitary>. Dit zijn bewerkingen para meters met een reëel getal dat de tijd vertegenwoordigt
+    Elementen in de set worden geïndexeerd door een <xref:microsoft.quantum.simulation.generatorindex>, en elke set wordt beschreven door een functie van `GeneratorIndex` naar <xref:microsoft.quantum.simulation.evolutionunitary>, die para meters voor bewerkingen zijn met een reëel getal dat tijd vertegenwoordigt
 - uid: microsoft.quantum.simulation.evolutionunitary
   summary: >-
     Vertegenwoordigt een unitary tijd-ontwikkelings operator.
@@ -116,7 +116,7 @@ newtypes:
     De eerste para meter is duur van tijd-ontwikkeling en de tweede para meter is het Qubit-REGI ster dat door de unitary wordt verwerkt.
 - uid: microsoft.quantum.simulation.generatorindex
   summary: >-
-    Dit object vertegenwoordigt een enkele primitieve term in de set met alle dynamische generatoren, zoals Hermitian-Opera Tors, waarvoor er een kaart van die generator bestaat, tot tijd evolutie van die generator, via `EvolutionSet`.
+    Dit object vertegenwoordigt een enkele primitieve term in de set met alle dynamische generatoren, zoals Hermitian-Opera Tors, waarvoor er een kaart van die generator bestaat en dat deze door de generator kan worden gepasseerd, tot en met `EvolutionSet`.
 
 
     Het eerste element (int [], double []) is indices met één term. de Pauli teken reeks XXY met coëfficiënt 0,5 zou worden geïndexeerd door ([1, 1, 2], [0,5]). Het is ook mogelijk dat Hamiltonians para meters door een continue variabele, zoals X cos φ + Y Sin φ, worden vertegenwoordigd door ([], [φ]). Het tweede element indexeert het subsysteem waarop de generator werkt.
@@ -131,7 +131,7 @@ newtypes:
     Vertegenwoordigt een tijd onafhankelijk simulatie algoritme.
 
 
-    Met een tijd onafhankelijke simulatie techniek wordt een <xref:microsoft.quantum.simulation.evolutiongenerator> geconverteerd
+    Met een tijd onafhankelijke simulatie methode wordt een<xref:microsoft.quantum.simulation.evolutiongenerator>
 
     unitary tijd-ontwikkeling voor enige tijd interval.
 - uid: microsoft.quantum.simulation.timedependentblockencoding
@@ -139,10 +139,10 @@ newtypes:
     Vertegenwoordigt een `BlockEncoding` die wordt beheerd door een klok registratie.
 
 
-    Dat wil zeggen, een `TimeDependentBlockEncoding` is een unitary-$U $ die wordt beheerd door een status $ \ket{k} _d $ in Clock-REGI ster `d` zodanig dat een wille keurige operator $H _k $ van belang dat er op het systeem register wordt gedecodeerd, die overeenkomt met de hulp status $ \ket `s`{0}$. Dat wil zeggen,
+    Dat wil zeggen, `TimeDependentBlockEncoding` a is een unitary-$U $, beheerd door een status $ \ket{k} _d $ `d` in een klok registratie, zodat een wille keurige operator $H _k $ van `s` belang dat er op het systeem register wordt gedecodeerd in het blok linksboven{0}dat overeenkomt met de hulp status $ \ket _a $. Dat wil zeggen,
 
 
-    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
+    $ $ \begin{align} (\bra{0}\_a\otimes i_ {DS}) U (\ket{0}\_a\otimes i_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
     \end{align} $ $.
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem
@@ -152,15 +152,15 @@ newtypes:
     Vertegenwoordigt een tijd afhankelijke simulatie algoritme.
 
 
-    Een tijdgebonden simulatie techniek converteert een <xref:microsoft.quantum.simulation.evolutionschedule>
+    Een tijdgebonden simulatie techniek converteert een<xref:microsoft.quantum.simulation.evolutionschedule>
 
     unitary tijd-ontwikkeling voor enige tijd interval.
 - uid: microsoft.quantum.simulation.unitary
   summary: Hiermee wordt de evolutie van een unitary-operator aangeduid.
 metadata:
-  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cdcfc7e688b576d0e7941695ad0a63b030bb5692
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76869824"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675453"
