@@ -7,8 +7,8 @@ summary: >-
   Past een rotatie over de opgegeven Pauli-as toe.
 
 
-  \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} waarbij $ \mu \in \{I, X, Y, Z\}$.
-remarks: Wanneer met `pauli = PauliI`aangeroepen, wordt met deze bewerking een *globale fase*toegepast. Deze fase kan aanzienlijk zijn wanneer deze wordt gebruikt in combi natie met de `Controlled` functor.
+  \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} waarbij $ \mu \in \{i, X, Y, Z\}$.
+remarks: Als deze bewerking `pauli = PauliI`wordt aangeroepen met, wordt een *globale fase*toegepast. Deze fase kan aanzienlijk zijn wanneer deze wordt gebruikt `Controlled` in combi natie met de functor.
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:
   content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6655f674d7bd6b92cfb0e81e588bdcd48380bf4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234016"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681787"

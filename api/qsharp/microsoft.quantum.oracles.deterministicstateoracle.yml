@@ -12,14 +12,14 @@ summary: >-
 
   - Het REGI ster waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
 remarks: >-
-  Deze Oracle die is gedefinieerd door $O \ket{0}= \ket{\psi} $ treedt op bij de berekening op basis van de status $ \ket{0}$ om de status $ \ket{\psi} $ te maken.
+  Deze Oracle die is gedefinieerd door{0}$O \ket = \ket{\psi} $, treedt op in de status op basis{0}van de berekening $ \ket $ om de status $ \ket{\psi} $ te maken.
 
   De eerste para meter is het Qubit-REGI ster van $ \ket{\psi} $.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231126"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681310"

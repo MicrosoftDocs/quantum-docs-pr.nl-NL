@@ -4,13 +4,13 @@ name: PrepareChoiState
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voor de opgegeven referentie-en doel registers voor bereid.
-remarks: 'De Choi – Jamiłkowski State $J (\Lambda) $ van een quantum proces wordt gedefinieerd als $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \Lambda) (| \boldone\rangle\!\rangle\langle\!\langle\boldone |), \end{align} $ $ waarbij $ | X\rangle\!\rangle $ is de *vectorization* van een matrix $X $ in de kolom-stacking-Conventie. Het leren van een klassieke beschrijving van deze status biedt volledige informatie over het effect van $ \Lambda $ op wille keurige invoer status en vormt de basis van de tomography van het *Quantum proces*.'
+remarks: 'De Choi – Jamiłkowski State $J (\Lambda) $ van een quantum proces is gedefinieerd als $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \Lambda) (| \boldone\rangle\!\rangle\langle\!\langle\boldone |), \end{align} $ $ waarbij $ | X\rangle\!\rangle $ is de *vectorization* van een matrix $X $ in de kolom-stacking-Conventie. Het leren van een klassieke beschrijving van deze status biedt volledige informatie over het effect van $ \Lambda $ op wille keurige invoer status en vormt de basis van de tomography van het *Quantum proces*.'
 syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
-    summary: Bewerking $ \Lambda $ waarvan Choi-Jamiłkowski-status $J (\Lambda)/2 ^ N $ moet worden voor bereid, waarbij $N $ het aantal qubits is waarop `op` optreedt.
+    summary: Bewerking $ \Lambda $ waarvan de Choi-Jamiłkowski-status $J (\Lambda)/2 ^ N $ moet worden voor bereid, waarbij $N $ het aantal qubits is waarop `op` wordt gehandeld.
     isOperation: true
     input:
       types:
@@ -22,12 +22,12 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: reference
-    summary: Een REGI ster van qubits, te beginnen met de status $ \ket{00\cdots 0} $ die moet worden gebruikt als referentie voor de actie van `op`.
+    summary: Een REGI ster van qubits, te beginnen met de status $ \ket{00\cdots 0} $ die moet worden gebruikt als referentie voor `op`de actie van.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Een REGI ster van qubits in eerste instantie in de status $ \ket{00\cdots 0} $ waarop `op` moet worden toegepast.
+    summary: Een REGI ster van qubits in eerste instantie in de $ \ket{00\cdots 0} $ `op` -status waarop moet worden toegepast.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -41,9 +41,9 @@ seeAlso:
 - preparechoistatec
 - preparechoistateca
 metadata:
-  ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c23954131c9ef7c609089e3f58b3577151409993
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228117"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681174"

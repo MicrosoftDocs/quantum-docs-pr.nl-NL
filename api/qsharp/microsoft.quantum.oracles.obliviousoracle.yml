@@ -12,16 +12,16 @@ summary: >-
 
   - Het ancilla-REGI ster $a $ waarvoor $ wordt $O.
 
-  - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $ \ket{t}\_een $.
+  - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $\_\ket{t} a $.
 remarks: >-
-  Deze Oracle gedefinieerd door $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ reageert op de ancilla-status $ \ket{s}\_een $ to Implementeer de unitary $U $ op een systeem status $ \ket{\psi}\_s $ met amplitude $ \lambda $ in de basis die is gemarkeerd door $ \ket{t}\_a $.
+  Deze Oracle gedefinieerd door $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ handelt op de ancilla-status\_$ \ket{s} a $ om de unitary $U $ te implementeren op een systeem\_status $ \ket{\psi} s $ met amplitude $ \lambda $ in de basis die is\_gemarkeerd met $ \ket{t} a $.
 
-  De eerste para meter is het Qubit-REGI ster van $ \ket{s}\_a $. De tweede para meter is het Qubit-REGI ster van $ \ket{\psi}\_s $.
+  De eerste para meter is het Qubit-REGI ster\_van $ \ket{s} a $. De tweede para meter is het Qubit-REGI ster\_van $ \ket{\psi} s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231058"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681262"
