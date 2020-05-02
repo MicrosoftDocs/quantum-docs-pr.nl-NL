@@ -4,7 +4,7 @@ name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Past een rotatie over de $ \ket{1}$-status toe met een hoek die is opgegeven als een dyadic Fractie.
+  Past een rotatie over de $ \ket{1}$-status toe met een hoek die is opgegeven als een dyadic-Fractie.
 
 
   \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -14,7 +14,7 @@ summary: >-
 
   > [!WARNING]
 
-  > Deze bewerking maakt gebruik van de **tegengestelde** teken conventie van @"microsoft.quantum.intrinsic.r"en bevat niet de factor $1/2 $, opgenomen in @"microsoft.quantum.intrinsic.r1".
+  > Deze bewerking maakt gebruik van de **tegenovergestelde** teken @"microsoft.quantum.intrinsic.r"Conventie van en bevat niet de factor $1/2 $, opgenomen door @"microsoft.quantum.intrinsic.r1".
 remarks: >-
   Gelijk aan:
 
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233982"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683739"

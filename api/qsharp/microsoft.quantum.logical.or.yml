@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Retourneert de Booleaanse schei ding van twee waarden.
 remarks: >-
-  In tegens telling tot de operator `or`, is deze functie niet korte circuits, zodat beide invoer volledig worden geëvalueerd.
+  In tegens `or` telling tot de operator is deze functie niet korte circuits, zodat beide invoer volledig worden geëvalueerd.
 
 
   Tot het korte circuit, zijn de volgende equivalenten:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` als en alleen als `a` of `b` `true`zijn.'
+  - summary: '`true`Als en alleen als dat `a` wel `b` of `true`het geval is.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235155"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683567"
