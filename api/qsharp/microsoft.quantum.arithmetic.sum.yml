@@ -3,8 +3,8 @@ uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Implementeert een onomkeerbaare Sum-poort. Op basis van een door Voer in Qubit `carryIn` en twee summand bits die zijn gecodeerd in `summand1` en `summand2`, berekent u de Bitsgewijze XOR van `carryIn`, `summand1` en `summand2` in de Qubit-`summand2`.
-remarks: In tegens telling tot de `Carry` bewerking, wordt de verwerkings bit niet berekend.
+summary: Implementeert een onomkeerbaare Sum-poort. Een door Voer in Qubit `carryIn` en twee summand bits die zijn gecodeerd in `summand1` en `summand2`, berekent de Bitsgewijze XOR van `carryIn` `summand1` en `summand2` in de Qubit. `summand2`
+remarks: In tegens telling `Carry` tot de bewerking, wordt de verwerkings bit niet berekend.
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Tweede summand Qubit wordt vervangen door het laagste deel van de som van `summand1` en `summand2`.
+    summary: Tweede summand Qubit wordt vervangen door de laagste bit van de som van `summand1` en. `summand2`
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218393"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681054"

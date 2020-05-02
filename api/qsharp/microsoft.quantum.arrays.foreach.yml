@@ -4,13 +4,13 @@ name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
 summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
-remarks: "De bewerking wordt gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` hebben en een bewerking `action : 'T -> 'U` we kunnen de elementen van de matrix toewijzen en een nieuwe matrix van het type `'U[]`produceren."
+remarks: "De bewerking wordt gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een bewerking `action : 'T -> 'U` hebben die de elementen van de matrix kunnen toewijzen en een nieuwe matrix van het `'U[]`type maken."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: Een bewerking van `'T` naar `'U` die op elk element wordt toegepast.
+    summary: Een bewerking van `'T` naar `'U` die wordt toegepast op elk element.
     isOperation: true
     input:
       types:
@@ -21,14 +21,14 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Een matrix met elementen ten opzichte van `'T`.
+    summary: Een matrix van elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Een matrix `'U[]` van elementen die worden toegewezen door de `action` bewerking.
+  - summary: Een matrix `'U[]` met elementen die worden toegewezen door de `action` bewerking.
     isArray: true
     uid: "'U"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: Het resultaat type van de `action` bewerking.
 metadata:
-  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871019"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681040"

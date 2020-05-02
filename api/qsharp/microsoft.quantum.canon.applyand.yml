@@ -7,10 +7,10 @@ summary: >-
   Hiermee wordt een bepaalde doel-Qubit als en alleen als beide besturings qubits de status 1 hebben, met behulp van meting om de adjoint-bewerking uit te voeren.
 
 
-  Keer `target` alleen als beide besturings elementen 1 zijn, maar er wordt van uitgegaan dat `target` de status 0 heeft.  De bewerking heeft T-Count 4, T-diepte 2 en vereist geen helper-Qubit en kan daarom de voor keur geven aan een CCNOT-bewerking, als `target` bekend is als 0.  De adjoint van deze bewerking is gebaseerd op metingen en vereist geen T-poorten.
+  Keert `target` alleen als beide besturings elementen 1 zijn, maar er wordt van uitgegaan dat de `target` status 0 is.  De bewerking heeft T-Count 4, T-diepte 2 en vereist geen helper Qubit. Dit kan daarom de voor keur hebben voor een CCNOT-bewerking `target` , als bekend is dat deze 0 is.  De adjoint van deze bewerking is gebaseerd op metingen en vereist geen T-poorten.
 
 
-  De beheerde toepassing van deze bewerking vereist geen helper Qubit, `2^c` `Rz` Gates en is niet geoptimaliseerd voor diepte, waarbij `c` het aantal algemene controle qubits is, inclusief de twee besturings elementen van de `ApplyAnd` bewerking.  Voor de door adjoint beheerde toepassing zijn `2^c - 1` `Rz` Gates vereist (met een hoek die twee maal zo groot is als de niet-adjoint bewerking), geen helper Qubit en is niet geoptimaliseerd voor diepte.
+  De beheerde toepassing van deze bewerking vereist geen Qubit, `2^c` `Rz` poorten en is niet geoptimaliseerd voor diepte, waarbij `c` het aantal algemene besturings elementen qubits, met inbegrip van de twee controles `ApplyAnd` van de bewerking.  De door adjoint beheerde toepassing `2^c - 1` `Rz` vereist poorten (met een hoek van twee keer de grootte van de niet-adjoint bewerking), geen helper-Qubit en is niet geoptimaliseerd voor diepte.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: ' nieuwe constructies voor de fout tolerante Toffoli-Gate ', fysiek. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872985"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680544"

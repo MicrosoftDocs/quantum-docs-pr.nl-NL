@@ -1,147 +1,101 @@
 ---
-title: 'Ontwikkelen met Q # +C#'
+title: Ontwikkelen met Q# + C#
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036284"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680170"
 ---
-# <a name="develop-with-q--c"></a>Ontwikkelen met Q # +C#
+# <a name="using-q-with-c-and-f"></a>Q # gebruiken met C\# en F\#
 
-Installeer de QDK voor het C# ontwikkelen van host-Program Ma's om Q #-bewerkingen aan te roepen.
+Q # is gebouwd om goed te kunnen spelen met .NET-talen zoals C# en F #.
+In deze hand leiding wordt uitgelegd hoe u Q # gebruikt met een hostprogramma dat is geschreven in een .NET-taal.
 
-Q # is gebouwd om goed te kunnen spelen met .NET-talen C#, met name. U kunt in verschillende ontwikkel omgevingen met deze koppeling werken:
+## <a name="prerequisites"></a>Vereisten
 
-- [Q # + C# met Visual Studio (Windows)](#VS)
-- [Q # + C# met Visual Studio code (Windows, Linux en Mac)](#VSC)
-- [Q # + C# met behulp van het `dotnet` opdracht regel programma](#command)
+- Installeer de Quantum Development Kit [voor gebruik met Q #-opdracht regel projecten](xref:microsoft.quantum.install.standalone).
 
-## Ontwikkelen met Q # + C# met Visual Studio <a name="VS"></a>
+## <a name="creating-a-q-library-and-a-net-host"></a>Een Q #-bibliotheek en een .NET-host maken
 
-Visual Studio biedt een uitgebreide omgeving voor het ontwikkelen van Q #-Program ma's. De Q # Visual Studio-extensie bevat sjablonen voor Q # bestanden en projecten, evenals syntaxis markeringen, het volt ooien van code en IntelliSense-ondersteuning.
+De eerste stap is het maken van projecten voor uw Q #-bibliotheek en voor de .NET-host die de bewerkingen en functies bevat die in uw Q #-bibliotheek zijn gedefinieerd.
 
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-1. Vereisten
+- Een nieuwe Q #-bibliotheek maken
+  - Ga naar het **bestand** -> **Nieuw** -> **project**
+  - Typ "Q #" in het zoekvak
+  - Selecteer **Q # Library**
+  - Selecteer **volgende**
+  - Een naam en locatie voor uw bibliotheek kiezen
+  - Zorg ervoor dat ' project en oplossing in dezelfde directory plaatsen ' is **uitgeschakeld**
+  - Selecteer **maken**
+- Een nieuw C#-of F #-host-programma maken
+  - Ga naar **bestand** → **Nieuw** → **project**
+  - Selecteer console-app (.NET core) voor C# of F #
+  - Selecteer **volgende**
+  - Onder *oplossing*selecteert u ' toevoegen aan oplossing '
+  - Kies een naam voor uw hostprogramma
+  - Selecteer **maken**
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, waarbij de workload voor platformoverschrijdende ontwikkeling met .NET Core is ingeschakeld
+### <a name="visual-studio-code-or-command-line"></a>[Visual Studio code of opdracht regel](#tab/tabid-cmdline)
 
-1. Installeer de Q# Visual Studio-extensie
+- Een nieuwe Q #-bibliotheek maken
 
-    - Down load en installeer de [Visual Studio-extensie](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+  ```dotnetcli
+  dotnet new classlib -lang Q# -o quantum
+  ```
 
-1. Controleer de installatie door een `Hello World`-toepassing te maken
+- Een nieuw C#-of F #-console project maken
 
-    - Maak een nieuwe Q#-toepassing
+  ```dotnetcli
+  dotnet new console -lang C# -o host  
+  ```
 
-        - Ga naar **Bestand** -> **Nieuw** -> **Project**
-        - Typ `Q#` in het zoekvak
-        - Selecteer **Q#-toepassing**
-        - Selecteer **Volgende**
-        - Kies een naam en een locatie voor uw toepassing
-        - Selecteer **Maken**
+- Voeg uw Q #-bibliotheek toe als referentie van uw host-programma
 
-    - Controleer het project
+  ```dotnetcli
+  cd host
+  dotnet add reference ../quantum/quantum.csproj
+  ```
 
-        U ziet dat er twee bestanden zijn gemaakt: `Driver.cs`, de C#-hosttoepassing. en `Operation.qs`, een Q#-programma dat een eenvoudige bewerking definieert om een bericht naar de console af te drukken.
+- Beschrijving Een oplossing maken voor beide projecten
 
-    - De toepassing uitvoeren
+  ```dotnetcli
+  dotnet new sln -n quantum-dotnet
+  dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
+  dotnet sln quantum-dotnet.sln add ./host/host.csproj
+  ```
 
-        - Selecteer **Fouten opsporen** -> **Starten zonder foutopsporing**
-        - Als het goed is, wordt de tekst `Hello quantum world!` afgedrukt naar een consolevenster.
+***
 
-> [!NOTE]
-> * Als u meerdere projecten in één Visual Studio-oplossing hebt, moeten alle projecten in de oplossing zich in dezelfde map bevinden als de oplossing, of in een van de submappen.  
+## <a name="calling-into-q-from-net"></a>Aanroepen van Q # vanuit .NET
 
-## Ontwikkelen met Q # + C# met Visual Studio code <a name="VSC"></a>
+Nadat u uw projecten hebt ingesteld, volgt u de bovenstaande instructies, kunt u aan Q # bellen vanuit uw .NET-console toepassing.
+De Q #-compiler maakt .NET-klassen voor elke Q #-bewerking en functie waarmee u uw Quantum Programma's in een Simulator kunt uitvoeren.
 
-Visual Studio code (VS code) biedt een uitgebreide omgeving voor het ontwikkelen van Q #-Program ma's in Windows, Linux en Mac.  De code-uitbrei ding Q # versus bevat ondersteuning voor Q #-syntaxis markering, code voltooiing en Q #-code fragmenten.
+Het voor beeld van een [.net-interoperabiliteit](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) omvat bijvoorbeeld het volgende een Q #-bewerking:
 
-1. Vereisten
+:::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-   - [VS-code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3,1 of hoger](https://www.microsoft.com/net/download)
+U kunt deze bewerking vanuit .NET aanroepen op een Quantum Simulator door de `Run` methode van de `RunAlgorithm` .net-klasse te gebruiken die is gegenereerd door de Q #-compiler:
 
-1. Installeer de Quantum VS Code-extensie
+### <a name="c"></a>[G #](#tab/tabid-csharp)
 
-    - Installeer de [VS Code-extensie](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+:::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-1. Installeer de Quantum-projectsjablonen:
+### <a name="f"></a>[Ls #](#tab/tabid-fsharp)
 
-   - Ga naar **Weergave** -> **Opdrachtpalet**
-   - Selecteer **Q #: Project sjablonen installeren**
+:::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-    De Quantum development kit is nu geïnstalleerd en klaar voor gebruik in uw eigen toepassingen en bibliotheken.
-
-1. Controleer de installatie door een `Hello World`-toepassing te maken
-
-    - Maak een nieuw project:
-
-        - Ga naar **Weergave** -> **Opdrachtpalet**
-        - Selecteer **Q #: nieuw project maken**
-        - **Zelfstandige console toepassing** selecteren
-        - Ga naar de locatie in het bestandssysteem waar u de toepassing wilt maken
-        - Klik op de knop **Nieuw project openen...** zodra het project is gemaakt
-
-    - Als u de C# uitbrei ding voor VS-code nog niet hebt geïnstalleerd, wordt er een pop-upvenster weer gegeven. Installeer de extensie. 
-
-    - Voer de toepassing uit:
-
-        - Ga naar **terminal** -> **nieuwe terminal**
-        - Voer `dotnet run` in
-        - Als het goed is, ziet u de volgende tekst in het uitvoervenster: `Hello quantum world!`
-
-
-> [!NOTE]
-> * Werkruimten met meerdere hoofdmappen worden momenteel niet ondersteund door de Visual Studio Code-extensie. Als u meerdere projecten in één VS Code-werkruimte hebt, moeten alle projecten zich in dezelfde hoofdmap bevinden.
-
-## Ontwikkelen met Q # + C# met behulp van het opdracht regel programma `dotnet`<a name="command"></a>
-
-Natuurlijk kunt u ook Q#-programma's schrijven en uitvoeren vanaf de opdrachtregel. U hoeft hiervoor alleen de .NET Core SDK en de QDK-projectsjablonen te installeren. 
-
-1. Vereisten
-
-    - [.NET Core SDK 3,1 of hoger](https://www.microsoft.com/net/download)
-
-1. Installeer de Quantum-projectsjablonen voor .NET
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
-
-    De Quantum development kit is nu geïnstalleerd en klaar voor gebruik in uw eigen toepassingen en bibliotheken.
-
-1. Controleer de installatie door een `Hello World`-toepassing te maken
-
-    - Een nieuwe toepassing maken
-
-       ```dotnetcli
-       dotnet new console -lang "Q#" -o runSayHello
-       ```
-
-    - Navigeer naar de nieuwe toepassingsmap
-
-       ```bash
-       cd runSayHello
-       ```
-
-    U ziet dat er twee bestanden zijn gemaakt, samen met de projectbestanden van de toepassing: een Q#-bestand (`Operation.qs`) en een C#-hostbestand (`Driver.cs`).
-
-    - De toepassing uitvoeren
-
-        ```dotnetcli
-        dotnet run
-        ```
-
-        U ziet de volgende uitvoer: `Hello quantum world!`
-
+***
     
 ## <a name="whats-next"></a>Volgende stappen
 
-Nu u de Quantum development kit hebt geïnstalleerd in de omgeving van uw voorkeur, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.write-program) schrijven en uitvoeren.
+Nu u de Quantum Development Kit hebt ingesteld voor zowel Q # opdracht regel Programma's als voor interoperabiliteit met .NET, kunt u [uw eerste Quantum programma](xref:microsoft.quantum.write-program)schrijven en uitvoeren.
