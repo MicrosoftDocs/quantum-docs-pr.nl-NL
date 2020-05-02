@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Implementeert een eenmalige stap van tijd-ontwikkeling door het systeem dat wordt beschreven in een `EvolutionGenerator` met behulp van een Trotter-Suzuki-ontleding.
+summary: Implementeert een eenmalige stap van tijd-ontwikkeling door het systeem dat wordt beschreven in `EvolutionGenerator` een Trotter – Suzuki-ontleding.
 remarks: Zie voor meer informatie over de ontleding van de Trotter-Suzuki een [geordende samen stelling](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Unitary-bewerking die een enkele stap van tijd-evolutie voor de duur `trotterStepSize`benadert.
+  - summary: Een unitary-bewerking die een enkele stap van tijd-ontwikkeling voor de `trotterStepSize`duur van de periode benadert.
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065211"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687218"

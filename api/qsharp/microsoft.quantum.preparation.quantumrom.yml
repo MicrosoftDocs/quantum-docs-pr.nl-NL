@@ -7,11 +7,11 @@ summary: >-
   Maakt gebruik van de Quantum ROM-techniek om een opgegeven dichtheids matrix weer te geven.
 
 
-  Op basis van een lijst met $N $ \alpha_j $, retourneert dit een unitary $U $ die gebruikmaakt van de Quantum-ROM-techniek voor het voorbereiden van een benadering $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ van de zuivering van de dichtheids matrix $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. In deze benadering is de fout $ \epsilon $ dusdanig dat $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ en $\|\tilde\rho-\rho\| \le \epsilon $. Met andere woorden, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ Ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage}_J}.
+  Op basis van een lijst met $N $ coëfficiënten $ \ alpha_j $ wordt een unitary $U $ geretourneerd die gebruikmaakt van de Quantum-ROM-techniek voor het voorbereiden van een benadering $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ van de zuivering van de dichtheids matrix $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{ {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. In deze benadering is de fout $ \epsilon $ zo dat $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ en $\|\tilde\rho-\rho\| \le \epsilon $. Met andere woorden, $ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ Ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _J}.
 
   \end{align} $ $
 examples: >-
-  Het volgende code fragment bereidt een zuivering van de $3 $-Qubit-status $ \rho = \sum_{j = 0} ^{4}\frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $, waarbij $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, en de fout is `1e-3`;
+  Het volgende code fragment bereidt een zuivering van de $3 $-Qubit-status $ \rho = \ sum_ {j = 0{4}} ^ \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, waarbij $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, en de fout is `1e-3`;
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- Versleutelen van elektronische spectra in Quantum circuits met lineaire T complexiteit Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pastel, Austin Fowler, Hartmut neven https://arxiv.org/abs/1805.03662'
+references: '- Versleutelen van elektronische spectra in Quantum circuits met lineaire T complexiteit Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pastel, Austin Fowler, Hartmut nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -42,7 +42,7 @@ input:
     summary: >-
       Matrix van $N $-coëfficiënten waarmee de kans op basis status wordt opgegeven.
 
-      Negatieve getallen $-\alpha_j $ worden behandeld als positief $ | \alpha_j | $.
+      Negatieve getallen $-\ alpha_j $ worden behandeld als positieve waarde $ | \ alpha_j | $.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -53,13 +53,13 @@ output:
       ## <a name="first-parameter"></a>Eerste para meter
 
 
-      Een tuple `(x,(y,z))` waarbij `x = y + z` het totale aantal toegewezen qubits is, `y` het aantal qubits voor de `LittleEndian` registratie en `z` het aantal garbage qubits.
+      Een tuple `(x,(y,z))` waarbij `x = y + z` het totale aantal toegewezen qubits is, `y` het aantal qubits voor het `LittleEndian` REGI ster en `z` het aantal garbage qubits.
 
 
       ## <a name="second-parameter"></a>Tweede para meter
 
 
-      De One-norm $ \sum_j | \alpha_j | $ van de coëfficiënt matrix.
+      De One-norm $ \ sum_j | \ alpha_j | $ van de coëfficiënt matrix.
 
 
       ## <a name="third-parameter"></a>Derde para meter
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226417"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686483"
