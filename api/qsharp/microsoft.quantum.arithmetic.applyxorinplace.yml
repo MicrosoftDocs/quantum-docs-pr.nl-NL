@@ -7,10 +7,10 @@ summary: >-
   Past een Bitsgewijze-XOR-bewerking toe tussen een klassiek geheel getal en een geheel getal dat wordt vertegenwoordigd door een REGI ster van qubits.
 
 
-  Hiermee worden `X` bewerkingen toegepast op qubits in een little-endian-REGI ster op basis van 1 bits in een geheel getal.
+  Hiermee `X` worden bewerkingen toegepast op qubits in een little-endian-REGI ster op basis van 1 bits in een geheel getal.
 
 
-  Laat ons `value` door a en laat y een niet-ondertekend geheel getal zijn dat is gecodeerd in `target`. vervolgens voert `InPlaceXorLE` een bewerking uit die is opgegeven door de volgende kaart: $ \ket{y}\rightarrow \ket{y\oplus a} $, waarbij $ \oplus $ de bitsgewijze exclusieve OR-operator is.
+  Laat het ons weten `value` en laat y een niet-ondertekend geheel getal dat is gecodeerd in `target`en voert `InPlaceXorLE` een bewerking uit die wordt gegeven door de volgende kaart: $ \ket{y}\rightarrow \ket{y\oplus a} $, waarbij $ \oplus $ de bitsgewijze exclusieve OR-operator is.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Een Quantum register dat wordt gebruikt om `value` op te slaan in code ring van little-endian.
+    summary: Een Quantum register dat wordt gebruikt voor het `value` opslaan van de code ring met little endian.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871172"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679917"

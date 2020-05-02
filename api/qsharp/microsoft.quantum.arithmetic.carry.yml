@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Implementeert een geomkeerbaare transport poort. Op basis van een in-Qubit `carryIn` en twee summand bits die in `summand1` en `summand2`worden gecodeerd, wordt de Bitsgewijze XOR van `carryIn`, `summand1` en `summand2` in de Qubit `summand2` en de uitwerkings xored naar de Qubit `carryOut`berekend.
+summary: Implementeert een geomkeerbaare transport poort. Een door `carryIn` Voer in Qubit en twee summand bits die zijn gecodeerd in `summand1` en `summand2`, berekent de Bitsgewijze XOR van `carryIn` `summand1` en `summand2` in de Qubit `summand2` en de uitwerkings wijze xored naar de Qubit. `carryOut`
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Tweede summand Qubit wordt vervangen door het laagste deel van de som van `summand1` en `summand2`.
+    summary: Tweede summand Qubit wordt vervangen door de laagste bit van de som van `summand1` en. `summand2`
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221334"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679837"

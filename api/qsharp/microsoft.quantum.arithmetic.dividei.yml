@@ -7,7 +7,7 @@ summary: >-
   Deelt twee Quantum-gehele getallen.
 
 
-  `xs` houdt de rest `xs - floor(xs/ys) * ys` en `result` houdt `floor(xs/ys)`in.
+  `xs`houdt het restant `xs - floor(xs/ys) * ys` en `result` zal in beslaan. `floor(xs/ys)`
 remarks: >-
   Maakt gebruik van een standaard aanpak voor Shift en aftrekken om de deling te implementeren.
 
@@ -23,7 +23,7 @@ input:
     summary: $-bit-deler $n
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $n $-bit-resultaat moet de status $ \ket{0}$ in eerste instantie zijn en vervangen door het resultaat van de deling van een geheel getal.
+    summary: $n $-bit-resultaat moet de status $ \ket{0}$ in eerste instantie hebben en wordt vervangen door het resultaat van de deling geheel getal.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cf59cded0bb1de135268b578d3e06872c0cb8b68
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215112"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679695"
