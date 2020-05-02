@@ -3,25 +3,25 @@ uid: microsoft.quantum.canon.isresultzero
 name: IsResultZero
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Test of een gegeven resultaat waarde gelijk is aan `Zero`.
+summary: Testen of een gegeven resultaat waarde gelijk is aan `Zero`.
 syntax: 'function IsResultZero (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
   - name: input
-    summary: '`Result` waarde die moet worden getest.'
+    summary: '`Result`de waarde die moet worden getest.'
     isPrimitive: true
     uid: Result
 output:
   content: Bool
   types:
-  - summary: Retourneert `true` als `input` gelijk is aan `Zero`.
+  - summary: Retourneert `true` of `input` is gelijk aan `Zero`.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 8a7d10424bebb7abc65722d738cfd1945ddf0901
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eec7a18daccb41bd29fcd00d139914574488f60f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225261"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679079"
