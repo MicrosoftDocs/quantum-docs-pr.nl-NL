@@ -7,17 +7,17 @@ summary: >-
   Vertegenwoordigt een `BlockEncoding` die wordt beheerd door een klok registratie.
 
 
-  Dat wil zeggen dat een `TimeDependentBlockEncoding` een unitary-$U $ is die wordt beheerd door een status $ \ket{k}_d $ in de klok registratie `d` zodanig dat een wille keurige operator $H _k $ van belang die op het systeem register wordt toegepast `s` wordt gecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket @no __t_3_ _a $. Dat wil zeggen,
+  Dat wil zeggen, `TimeDependentBlockEncoding` a is een unitary-$U $, beheerd door een status $ \ket{k} _d $ `d` in een klok registratie, zodat een wille keurige operator $H _k $ van `s` belang dat er op het systeem register wordt gedecodeerd in het blok linksboven{0}dat overeenkomt met de hulp status $ \ket _a $. Dat wil zeggen,
 
 
-  $ $ \begin{align} (\bra{0}\_a\otimes i_ {DS}) U (\ket{0}\_a\otimes i_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+  $ $ \begin{align} (\bra{0}\_a\otimes i_ {DS}) U (\ket{0}\_a\otimes i_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
   \end{align} $ $.
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6a9bb3648a24eae7fd5279c4300ece7b169fb00a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211015"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687308"
