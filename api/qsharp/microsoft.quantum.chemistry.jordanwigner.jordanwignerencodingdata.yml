@@ -4,14 +4,14 @@ name: JordanWignerEncodingData
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: >-
-  De indeling van gegevens die C# worden door gegeven van naar Q # om alle informatie voor Hamiltonian simulatie weer te geven.
+  Indeling van gegevens die zijn door gegeven van C# naar Q # om alle informatie voor Hamiltonian simulatie weer te geven.
 
   De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
 syntax: newtype JordanWignerEncodingData = (Int, Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms, (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), Double);
 metadata:
-  ms.openlocfilehash: 9e0dd700be01f80b2e0414c7a67b5a72836e5ba5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ab47c3c5075b884576c0c5d0f18c252f94c472e2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228712"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82667491"
