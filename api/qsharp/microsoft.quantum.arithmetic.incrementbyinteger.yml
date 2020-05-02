@@ -7,7 +7,7 @@ summary: >-
   Verhoogt een niet-ondertekend Quantum register met een klassiek geheel getal, met behulp van fase rotaties.
 
 
-  Stel dat `target` een geheel getal zonder teken codeert $x $ in een code ring van little-endian en dat `increment` gelijk is aan $a $.
+  Stel dat `target` een niet-ondertekend geheel getal $x $ in een code ring van Little-Endian `increment` wordt gecodeerd en gelijk is aan $a $.
 
   Deze bewerking implementeert vervolgens de unitary $ \ket{x} \mapsto \ket{x + a} $, waarbij de aanvulling wordt uitgevoerd modulo $2 ^ n $, waarbij $n = \texttt{Length (doel!)} $.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871155"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679562"

@@ -17,7 +17,7 @@ input:
     summary: Invoer nummer van vaste komma waarvoor de polynoom moet worden geëvalueerd.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Uitvoer met een vast punt dat P (x) zal bevatten. Moeten in eerste instantie de status $ \ket{0}$ hebben.
+    summary: Uitvoer met een vast punt dat P (x) zal bevatten. Moet in eerste instantie de status{0}$ \ket $ hebben.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae149fe3ef12b5384bd08b62daabd6368e130399
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219107"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679654"

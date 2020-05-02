@@ -8,15 +8,15 @@ summary: >-
 
 
   Als $ \ket{x} $ bijvoorbeeld de code ring little-endian van het gehele getal $x $ in de berekening is, dan is $ \operatorname{QFTLE} \ket{x} $ de code ring van $x $ in de QFT basis.
-remarks: '`PhaseLittleEndian` als `PhaseLE` in de documentatie worden afgekort.'
+remarks: We hebben `PhaseLittleEndian` afkorting als `PhaseLE` in de documentatie.
 syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
 - qft
 - qftle
 metadata:
-  ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a4c547a88ef49de180f68534f4f61fb1062a4764
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218716"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679436"

@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Vermenigvuldig geheel getal `xs` door geheel getal `ys` en sla het resultaat op in `result`. dit moet aanvankelijk nul zijn.
+summary: Vermenigvuldig het `xs` geheel getal `ys` met een geheel getal en `result`Sla het resultaat op in. dit moet aanvankelijk nul zijn.
 remarks: >-
   Maakt gebruik van een standaard methode voor Shift en toevoegen om de vermenigvuldiging te implementeren.
 
-  De gecontroleerde versie is verbeterd door $x _I $ te kopiëren naar een ancilla Qubit die is ingesteld op het besturings element qubits en vervolgens de toevoeging van de ancilla Qubit te beheren.
+  De gecontroleerde versie is verbeterd door $x _i $ te kopiëren naar een ancilla Qubit die is voor bereid op het besturings element qubits en vervolgens de toevoeging van de ancilla Qubit te beheren.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -19,7 +19,7 @@ input:
     summary: $n $-bits vermenigvuldiger (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $2n $-bit result (LittleEndian) moet de status $ \ket{0}$ in eerste instantie hebben.
+    summary: $2n $-bit result (LittleEndian), moet de status $ \ket{0}$ in eerste instantie hebben.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218733"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679491"

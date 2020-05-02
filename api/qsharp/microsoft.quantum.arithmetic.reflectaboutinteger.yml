@@ -7,7 +7,7 @@ summary: >-
   Weerspiegelt een Quantum register over een gegeven klassiek geheel getal.
 
 
-  Gezien een Quantum register in eerste instantie in de staat $ \ sum_i \ alpha_i \ket{i} $, waarbij elke $ \ket{i} $ een basis status is die een geheel getal vertegenwoordigt $i $, weerspiegelt de status van de kassa over de basis status voor een bepaald geheel getal $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {IJ}} \alpha _i \ket{i} $ $
+  Gezien een Quantum register in eerste instantie in de staat $ \ sum_i \ alpha_i \ket{i} $, waarbij elke $ \ket{i} $ een basis status is van een geheel getal $i $, weerspiegelt de status van de kassa over de basis status voor een bepaald geheel getal $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {IJ}} \ alpha_i \ket{i} $ $
 remarks: Deze bewerking wordt in-place geïmplementeerd zonder uitdrukkelijke toewijzing van extra auxillary qubits.
 syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a76b08b8d8b7b70a63a615f8e69e26cd4df7129
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 656a2d30b7895e8482e113ac792fac0012b07445
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908256"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679407"
