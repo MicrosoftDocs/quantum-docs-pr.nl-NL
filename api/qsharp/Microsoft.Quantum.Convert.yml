@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Op basis van een bit string retourneert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli-Opera tors met één Qubit.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Hiermee wordt een `Bool[]` type geconverteerd naar een `Result[]` type, waarbij `true` wordt toegewezen aan `One` en `false` aan `Zero`is toegewezen.
+  summary: Converteert een `Bool[]` type naar een `Result[]` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero`.
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Hiermee wordt een `Bool` type geconverteerd naar een `Result` type, waarbij `true` wordt toegewezen aan `One` en `false` aan `Zero`is toegewezen.
+  summary: Converteert een `Bool` type naar een `Result` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero`.
 - uid: microsoft.quantum.convert.boolasstring
   summary: Zet een gegeven Booleaanse waarde om in een equivalente teken reeks representatie.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: Codeert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli Opera tors met één Qubit in een geheel getal.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Hiermee maakt u een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.
+  summary: Maakt een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Hiermee wordt een `Result[]` type geconverteerd naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` aan `false`is toegewezen.
+  summary: Converteert een `Result[]` type naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false`.
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Produceert een positief geheel getal uit een teken reeks met resultaten in little endian indeling.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Hiermee wordt een `Result` type geconverteerd naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` aan `false`is toegewezen.
+  summary: Converteert een `Result` type naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false`.
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Roept een functie aan met een opgegeven invoer.
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210964"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677006"

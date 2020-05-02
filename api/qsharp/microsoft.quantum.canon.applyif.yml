@@ -7,9 +7,9 @@ summary: >-
   Past een bewerking toe die is voor een klassieke bit heeft gevoorwaardeeerd.
 
 
-  Op basis van een bewerking `op` en een bits waarde `bit`, wordt `op` toegepast op de `target` als `bit` `true`is. Als `false`, gebeurt er niets met de `target`.
+  Gezien een bewerking `op` en een bitlengte, `bit`geldt `op` voor de `target` if `bit` -waarde `true`. Als `false`, gebeurt er niets met `target`.
 examples: >-
-  Het volgende is een voor bereiding van een REGI ster van qubits in een verwerkings status die wordt vertegenwoordigd door een klassieke-bits teken reeks, gegeven als een matrix met `Bool` waarden:
+  Het volgende is een voor bereiding van een REGI ster van qubits in een verwerkings status die wordt vertegenwoordigd door een klassieke `Bool` -bits teken reeks, gegeven als een matrix met waarden:
 
 
   ```Q#
@@ -59,9 +59,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 8493200e8c87fc423bee6754f50f0f5c6b7cdd5c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b3a573c55d461eb3c1a2af0cb7bacd0a4cfecbe5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217645"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676363"
