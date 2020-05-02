@@ -4,14 +4,14 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Hiermee maakt u een uniforme superpositie op status die 0 door `nIndices`versleutelen.
+  Hiermee maakt u een uniforme superpositie op status die 0 `nIndices`t/m-codeert.
 
 
-  Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  In het volgende voor beeld wordt de status $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ op $3 $ qubits voor bereid.
+  In het volgende voor beeld wordt de status ${1}\frac {{6}\sqrt} \ sum_ {j = 0}{5}^ \ket{j} $ op $3 $ qubits voor bereid.
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      Het Qubit-REGI ster waarin de nummer Staten worden opgeslagen in `LittleEndian` indeling.
+      Het Qubit-REGI ster waarin de nummer Staten `LittleEndian` worden opgeslagen in de indeling.
 
       In dit REGI ster moet het getal $M-$1 worden opgeslagen en wordt ervan uitgegaan dat het is geïnitialiseerd in de status $ \ket{0\cdots 0} $.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226485"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686531"

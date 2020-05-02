@@ -7,8 +7,8 @@ summary: >-
   Codeert een operator van belang in een `BlockEncodingReflection`.
 
 
-  Hiermee wordt een `BlockEncodingReflection` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een deel van de operator $H wordt gecodeerd = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. $P $ is doorgaans een status voorbereiding unitary, zodat $P \ket{0}\_een \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ en $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
-remarks: Deze `BlockEncoding`-implementatie geeft de eigenschappen van een `BlockEncodingReflection`.
+  Hiermee wordt een `BlockEncodingReflection` unitary $U = P\cdot V\cdot P ^ \dagger $ waarmee een bepaalde operator wordt gecodeerd $H = \ sum_ {j} | \ alpha_j | U_j $ van belang dat een lineaire combi natie is van unitaries. Normaal gesp roken is $P $ een status voorbereidings unitary,{0}\_zodanig dat $P \ket een \\|sum_j\|\_\sqrt{\ alpha_j/\_\vec\alpha 2} \ket{j} a $ en $V = \ sum_ {\_j} \ket{j}\bra{j} a\otimes U_j $.
+remarks: Deze `BlockEncoding` implementatie geeft de eigenschappen van een `BlockEncodingReflection`.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Een unitary $U $ communiceert gezamenlijk op registers `a` en `s` dat blok-coderingen $H $, en voldoet aan $U ^{-1} = U $.
+  - summary: Een unitary $U $ communiceert gezamenlijk aan `a` registers en `s` die door block-code ring $H $, en voldoet{-1} aan $U ^ = U $.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219158"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687103"

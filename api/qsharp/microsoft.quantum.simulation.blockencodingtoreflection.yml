@@ -4,33 +4,33 @@ name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Hiermee wordt een `BlockEncoding` geconverteerd naar een gelijkwaardig `BLockEncodingReflection`.
+  Converteert een `BlockEncoding` in een gelijkwaardige `BLockEncodingReflection`waarde.
 
 
-  Dat wil zeggen, op basis van een `BlockEncoding` unitary $U $ waarmee een bepaalde operator $H $ van belang wordt gecodeerd, wordt deze geconverteerd naar een `BlockEncodingReflection` $U $ waarmee dezelfde operator wordt gecodeerd, maar ook voldoet aan $U ^ \dagger = U $.
+  Op basis van een `BlockEncoding` unitary $U $ die een bepaalde operator $H $ van de rente codeert, wordt deze omgezet `BlockEncodingReflection` in een $U $ die dezelfde operator codeert, maar ook voldoet aan $U ^ \dagger = U ' $ '.
 
   Dit verhoogt de grootte van het hulp register van $U $ door één Qubit.
 remarks: Dit verhoogt de grootte van het hulp register van $U $ door één Qubit.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: '- Hamiltonian simulatie door Qubitization Guang Hao laag, Isaac L. Chuang https://arxiv.org/abs/1610.06546'
+references: '- Hamiltonian simulatie door Qubitization Guang Hao laag, Isaac L. Chuanghttps://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
   - name: blockEncoding
-    summary: Een `BlockEncoding` unitary $U $ om te worden geconverteerd naar een reflectie.
+    summary: Een `BlockEncoding` unitary $U $ moet worden geconverteerd naar een reflectie.
     uid: microsoft.quantum.simulation.blockencoding
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Een unitary-$U ' $ treedt gezamenlijk op registers `a` en `s` dat blok-coderingen $H $, en voldoet aan $U ^ \dagger = U ' $ '.
+  - summary: Een unitary-$U ' $ communiceert gezamenlijk `a` aan `s` registers en die blok-coderings $H $, en voldoet aan $U ^ \dagger = U ' $.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e656a5ab9e187660a20420049374380ef9726647
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065619"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686924"

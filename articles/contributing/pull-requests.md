@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907457"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686842"
 ---
 # <a name="opening-pull-requests"></a>Pull-aanvragen openen #
 
@@ -39,7 +39,7 @@ Als u het bovenstaande hebt gezegd, is het handig om even te weten wat een pull-
 Wanneer u werkt met git, worden alle wijzigingen weer gegeven als _door voeringen_ die beschrijven hoe deze wijzigingen zijn gerelateerd aan de status van de opslag plaats voordat deze worden gewijzigd.
 We tekenen vaak diagrammen waarin de door voeringen worden getekend als cirkels met pijlen van eerdere door voeringen.
 
-Stel dat u een bijdrage in een _vertakking_ met de naam `feature`hebt gestart.
+Stel dat u een bijdrage hebt gestart in _branch_ een vertakking `feature`met de naam.
 Uw Fork van **micro soft/Quantum** kan er ongeveer als volgt uitzien:
 
 ![Een werk vertakking in GitHub](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ Met dit proces kunnen we de GitHub-functionaliteit gebruiken om bijdragen te ver
 
 ## <a name="how-to-make-a-pull-request"></a>Een pull-aanvraag maken ##
 
-Er zijn twee belang rijke manieren om een pull-aanvraag uit te voeren.
-Voor kleine wijzigingen die alleen van invloed zijn op één bestand, kan de GitHub-webinterface worden gebruikt om een pull-aanvraag volledig online te maken.
-Voor complexere bijdragen is het vaak eenvoudiger om uw lokale computer te gebruiken om eerst een pull-aanvraag voor te bereiden.
+Er zijn twee belang rijke manieren om een pull-aanvraag uit te voeren.  
+Voor kleine wijzigingen die alleen van invloed zijn op één bestand, kan de GitHub-webinterface worden gebruikt om een pull-aanvraag volledig online te maken. Navigeer naar het bestand dat u wilt bewerken en gebruik het bewerkings pictogram.  
+Voor complexere bijdragen is het vaak eenvoudiger om de opslag plaats te klonen op uw lokale computer om eerst een pull-aanvraag voor te bereiden.
 
 <!--
 ### Using the Web Interface ###
