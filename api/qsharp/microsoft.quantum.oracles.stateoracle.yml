@@ -14,14 +14,14 @@ summary: >-
 
   - De systeem register $s $ waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
 remarks: >-
-  Deze Oracle gedefinieerd door $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ reageert op de status op basis van de berekening $ \ket{0}\_{f} \ket{0}\_s $ om de doel status $ \ket{\psi}\_s $ met amplitude $ \lambda $ te maken in de basis die is gemarkeerd door $ \ket{1}\_f $.
+  Deze Oracle die is gedefinieerd door ${0}\_$ O\ket {f{0}\_} \ket s{1}\_= \lambda\ket f\ket {\\_PSI} s + \sqrt{1-| \lambda | ^ 2{0}\_} \ket f\cdots, $ $ treedt op bij berekening van de status ${0}\_\ket {f}{0}\_\ket s $ om de doel status $ \ket{\psi}\_s $ met amplitude $ \lambda $ te maken in de basis van $ \ket{1}\_f $.
 
-  De eerste para meter is een index voor het Qubit-REGI ster van $ \ket{0}\_f $. De tweede para meter omvat beide registers.
+  De eerste para meter is een index van het Qubit-REGI ster{0}\_van $ \ket f $. De tweede para meter omvat beide registers.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067217"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673486"

@@ -4,29 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Samenvatting\n Dit zijn enkele van de functies van systeem. Converteer de naam ruimte van .NET CLR die relevant zijn binnen Q # type System.\n\n # <a name=\"remarks\"></a>Opmerkingen\n Als er verschillende versies van de functie zijn voor BOOL-, int-en Double-typen, hebben de bijbehorende functies het achtervoegsel B, I en D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBigIntToBools is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.bigintasboolarray\".\nGebruik @\"microsoft.quantum.convert.bigintasboolarray\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBigIntToBools is afgeschaft. Gebruik @\"microsoft.quantum.convert.bigintasboolarray\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBoolsToBigInt is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.boolarrayasbigint\".\nGebruik @\"microsoft.quantum.convert.boolarrayasbigint\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBoolsToBigInt is afgeschaft. Gebruik @\"microsoft.quantum.convert.boolarrayasbigint\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nPauliArrayToInt is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.pauliarrayasint\".\nGebruik @\"microsoft.quantum.convert.pauliarrayasint\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nPauliArrayToInt is afgeschaft. Gebruik @\"microsoft.quantum.convert.pauliarrayasint\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToBigInt is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.intasbigint\".\nGebruik @\"microsoft.quantum.convert.intasbigint\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToBigInt is afgeschaft. Gebruik @\"microsoft.quantum.convert.intasbigint\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToDouble is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.intasdouble\".\nGebruik @\"microsoft.quantum.convert.intasdouble\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToDouble is afgeschaft. Gebruik @\"microsoft.quantum.convert.intasdouble\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringB is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.boolasstring\".\nGebruik @\"microsoft.quantum.convert.boolasstring\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringB is afgeschaft. Gebruik @\"microsoft.quantum.convert.boolasstring\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringD is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.doubleasstring\".\nGebruik @\"microsoft.quantum.convert.doubleasstring\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringD is afgeschaft. Gebruik @\"microsoft.quantum.convert.doubleasstring\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringDFormat is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.doubleasstringwithformat\".\nGebruik @\"microsoft.quantum.convert.doubleasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringDFormat is afgeschaft. Gebruik @\"microsoft.quantum.convert.doubleasstringwithformat\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringI is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.intasstring\".\nGebruik @\"microsoft.quantum.convert.intasstring\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringI is afgeschaft. Gebruik @\"microsoft.quantum.convert.intasstring\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringIFormat is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.convert.intasstringwithformat\".\nGebruik @\"microsoft.quantum.convert.intasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nToStringIFormat is afgeschaft. Gebruik @\"microsoft.quantum.convert.intasstringwithformat\" in plaats daarvan.\nGebruik @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 372c58096cab091560ae6d3bebc165f09e201b9c
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858306"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673296"

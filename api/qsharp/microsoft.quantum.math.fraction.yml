@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: Vertegenwoordigt een rationeel nummer van het formulier `p/q`. Geheel getal `p` is het eerste element van de tuple en `q` is het tweede element van de tuple.
+summary: Vertegenwoordigt een rationeel nummer van het `p/q`formulier. Geheel `p` getal is het eerste element van de tuple `q` en is het tweede element van de tuple.
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232945"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673804"
