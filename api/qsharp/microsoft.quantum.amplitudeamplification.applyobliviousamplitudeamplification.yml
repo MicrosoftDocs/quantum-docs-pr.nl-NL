@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Oblivious-amplitude versterking door gedeeltelijke reflecties op te geven.
 remarks: >-
-  Een bepaalde hulp begin status $ \ket{\Text{start}}\_een $, een bepaalde hulp doel status $ \ket{\Text{target}}\_a $, en alle systeem status $ \ket{\psi}\_s $, stel dat \begin{align} O\ket {\ text {start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{target} ^ \perp}\_a\cdots \end{align} voor sommige unitary $U $.
+  Op basis van een bepaalde hulp begin status $\_\ket{\Text{start}} a $, een bepaalde hulp doel status $ \ket{\Text{target}}\_a $ en een systeem\_status $ \ket{\psi} s $, stel dat \begin{align} O\ket {\ text {start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{target} ^ \perp}\_a\cdots \end{align} voor sommige unitary $U $.
 
-  Door een opeenvolging van reflecties over de begin-en doel statussen van het hulp REGI ster door toepassingen van `signalOracle` en de adjoint, is het mogelijk dat U de kans op het Toep assen van de toepassing kunt wijzigen.
+  Met een opeenvolging van reflecties over de begin-en doel status van de hulp registratie die door toepassingen van `signalOracle` en haar adjoint wordt toegepast, kan de kans op voltooiing van het Toep assen van U worden gewijzigd.
 
 
-  In de meeste gevallen wordt `auxiliaryRegister` geïnitialiseerd in de status $ \ket{\Text{start}}\_een $.
+  In de meeste gevallen `auxiliaryRegister` wordt geïnitialiseerd in de status $ \ket{\Text{start}}\_a $.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Raadpleeg
@@ -32,7 +32,7 @@ input:
     summary: Reflectie operator over de doel status van de hulp registratie
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Unitary Oracle $O $ van het type `ObliviousOracle` dat gezamenlijk op de hulp-en systeem registers werkt.
+    summary: Unitary Oracle $O $ van het `ObliviousOracle` type dat gezamenlijk op de hulp-en systeem registers reageert.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Hulp registratie
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872543"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672949"

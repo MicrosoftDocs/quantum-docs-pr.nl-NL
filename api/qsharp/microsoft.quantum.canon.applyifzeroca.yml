@@ -7,7 +7,7 @@ summary: >-
   Past een unitary-bewerking toe die is ingesteld op een klassieke resultaat waarde is nul.
 
 
-  Op basis van een bewerking `op` en een resultaat waarde `result`, wordt `op` toegepast op de `target` als `result` `Zero`is. Als `One`, gebeurt er niets met de `target`.
+  `target` Als `result` dat zo is `Zero`, geldt `op` een `result`bewerking `op` en een resultaat waarde. Als `One`, gebeurt er niets met `target`.
 
   Het achtervoegsel `CA` geeft aan dat de bewerking die moet worden toegepast, unitary is (adjointable).
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213599"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672573"
