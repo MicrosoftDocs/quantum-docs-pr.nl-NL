@@ -4,14 +4,14 @@ name: HTerm
 type: newtype
 namespace: Microsoft.Quantum.Chemistry
 summary: >-
-  De indeling van gegevens die C# worden door gegeven van naar Q # om een term van de Hamiltonian weer te geven.
+  Indeling van gegevens die zijn door gegeven van C# naar Q # om een term van de Hamiltonian weer te geven.
 
   De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
 syntax: newtype HTerm = (Int[], Double[]);
 metadata:
-  ms.openlocfilehash: 9284a94448e3f0c3738e8e68df0839e349c7946a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 06a54570477ceaacc2b8e1d3df4094235eebc573
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228967"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677543"

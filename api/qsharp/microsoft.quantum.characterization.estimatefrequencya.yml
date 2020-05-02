@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Op basis van een voor bereiding die adjointable en meting levert, wordt de frequentie waarmee deze meting slaagt (retourneert `Zero`) door een bepaald aantal experimenten uit te voeren.
+summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie `Zero`waarmee deze meting slaagt (retourneert) door een bepaald aantal experimenten uit te voeren.
 remarks: Voor adjointable-bewerkingen kunnen bepaalde hypo Thesen worden gemaakt, zoals het aanroepen van de bewerking, wordt de qubits voor bereid op exact dezelfde staat, zodat doel machines een aantal prestatie optimalisaties mogelijk maken.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de niet-verwerkte binomiale Estimator $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, waarbij $n\_{\uparrow} $ is het aantal `Zero` resultaten dat is waargenomen.
+  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de niet-verwerkte binomiale Estimator\_$ \hat{p} = n\_{\uparrow}/n {\Text{measurements}}\_$, waarbij $n {\uparrow} $ `Zero` het aantal waargenomen resultaten is.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229171"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677709"

@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Gezien een matrix van Pauli-Opera tors `[P0, ..., Pn]`, retourneert deze functie een geheel getal met een binaire expansie die is gevormd door het samen voegen van de toewijzingen van elke Pauli-operator in volg orde van big endian `bits(Pn) ... bits(P0)`.
+  Met een matrix van Pauli- `[P0, ..., Pn]`Opera tors retourneert deze functie een geheel getal met een binaire expansie die is gevormd door het samen voegen van de toewijzingen van elke `bits(Pn) ... bits(P0)`Pauli-operator in een big-endian-volg orde.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Een unieke identificatie van `paulis`, zoals hieronder wordt beschreven.
+  - summary: Een unieke identificatie `paulis`van een geheel getal, zoals hieronder wordt beschreven.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230752"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677393"

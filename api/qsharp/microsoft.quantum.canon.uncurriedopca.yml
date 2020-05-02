@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
 
-  De modificator `CA` geeft aan dat de bewerkingen kunnen worden bestuurd en adjointable.
+  De aanpassings `CA` functie geeft aan dat de bewerkingen kunnen worden bestuurd en adjointable.
 syntax: "function UncurriedOpCA (curriedOp : ('T -> ('U => Unit is Ctl + Adj))) : (('T, 'U) => Unit is Ctl + Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl + Adj)))"
@@ -35,7 +35,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl + Adj)
   types:
-  - summary: Een nieuwe bewerking `op` zodanig dat `op(t, u)` gelijk is aan `(curriedOp(t))(u)`.
+  - summary: Een nieuwe bewerking `op` , die `op(t, u)` gelijk is aan `(curriedOp(t))(u)`.
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 831ff5d68f6b3e97f6ab80460e0a4918b0b4e085
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa04fce36dcfb989e109ab791822e83fba3cd9bc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216863"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677965"
