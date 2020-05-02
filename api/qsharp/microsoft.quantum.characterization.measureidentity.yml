@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Hiermee wordt de identiteits operator in een REGI ster van qubits gemeten.
 remarks: >-
-  Aangezien $ \boldone $ alleen de eigenvalue $1 $ heeft en geen negatieve eigenvalue heeft, retourneert deze bewerking altijd `Zero`, die overeenkomt met de eigenvalue $ + 1 = (-1) ^ 0 $, waardoor de status van `register`niet wordt samengevouwen.
+  Aangezien $ \boldone $ alleen de eigenvalue $1 $ heeft en geen negatieve eigenvalue heeft, retourneert `Zero`deze bewerking altijd, die overeenkomt met de eigenvalue $ + 1 = (-1) ^ 0 $, en treedt er geen samen werking van de status van op `register`.
 
 
   Op zichzelf is deze bewerking niet nuttig, maar is handig in de context van Process tomography, omdat deze informatie bevat over het behoud van de bewaring van een quantum proces.
@@ -27,9 +27,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229120"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677637"

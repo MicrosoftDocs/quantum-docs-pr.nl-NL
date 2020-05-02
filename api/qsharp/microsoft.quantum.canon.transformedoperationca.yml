@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Met een functie en een bewerking wordt een nieuwe bewerking geretourneerd waarvan de invoer wordt getransformeerd door de opgegeven functie.
 examples: >-
-  De volgende aanroep gebruikt @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" voor het transformeren van een bewerking die is bedoeld voor @"Microsoft.Quantum.Arithmetic.BigEndian" invoer in een bewerking die invoer van het type @"Microsoft.Quantum.Arithmetic.LittleEndian"accepteert:
+  Met de volgende aanroep @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" wordt een bewerking die is ontworpen @"Microsoft.Quantum.Arithmetic.BigEndian" voor invoer, omgezet in een bewerking die invoer @"Microsoft.Quantum.Arithmetic.LittleEndian"van het type accepteert:
 
 
   ```qsharp
@@ -45,7 +45,7 @@ input:
 output:
   content: ('U => Unit is Adj + Ctl)
   types:
-  - summary: Een nieuwe bewerking tbat roept `fn` met de invoer en geeft vervolgens de resulterende uitvoer door aan `op`.
+  - summary: Een nieuwe bewerking tbat aanroepen `fn` met de invoer en geeft vervolgens de resulterende uitvoer `op`door aan.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 4383a28fa6cae8e36438b6c4ba8262f60edbf025
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 95f2233ae50f404ec3a6e137470150fc77ae2406
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217033"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678023"

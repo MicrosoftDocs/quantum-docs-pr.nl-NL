@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Beweringen dat de Qubit-`q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
-remarks: met <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> kunt u wille keurige Qubit-statussen bevestigen in plaats van alleen $Z $ eigenstates.
+summary: Beweringen dat de `q` Qubit zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>Hiermee kunnen wille keurige Qubit-statussen worden bevestigd in plaats van alleen $Z $ eigenstates.
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 'In de status van de Qubit wordt verwacht dat deze zich bevindt in: `Zero` of `One`.'
+    summary: 'In welke staat wordt verwacht dat Qubit zich in: `Zero` of `One`bevindt.'
     isPrimitive: true
     uid: Result
   - name: q
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227080"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677250"

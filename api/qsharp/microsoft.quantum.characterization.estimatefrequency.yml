@@ -44,16 +44,16 @@ output:
   content: Double
   types:
   - summary: >-
-      Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de onzuivere binomiale Estimator $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, waarbij $n\_{\ pijl-omhoog} $ is het aantal `Zero` resultaten dat is waargenomen.
+      Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de niet-verwerkte binomiale Estimator\_$ \hat{p} = n\_{\uparrow}/n {\Text{measurements}}\_$, waarbij $n {\uparrow} $ `Zero` het aantal waargenomen resultaten is.
 
 
       Dit is met name belang rijk voor doel computers die fysieke beperkingen eerbiedigen, zodat er waarschijnlijk niet kan worden gemeten.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229188"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677740"
