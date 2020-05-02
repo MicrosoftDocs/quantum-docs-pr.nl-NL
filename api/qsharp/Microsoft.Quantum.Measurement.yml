@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Hiermee wordt één Qubit in de Y-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Hiermee wordt één Qubit in de `Z` gemeten en teruggezet naar de standaard status | 0 〉 na de meting.
+  summary: Hiermee wordt één Qubit in de `Z` basis gemeten en teruggezet naar de standaard status | 0 〉 na de meting.
 - uid: microsoft.quantum.measurement.multim
   summary: Meet elk Qubit in een bepaalde matrix in de standaard basis.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Hiermee wordt een Qubit ingesteld op basis van de status van de berekening door de Qubit te meten en zo nodig een bit te spie gelen.
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905757"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673148"

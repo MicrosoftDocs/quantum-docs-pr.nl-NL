@@ -6,7 +6,7 @@ functions:
   summary: >-
     Retourneert de bitsgewijze en van twee gehele getallen.
 
-    Dit voert dezelfde berekening uit als de ingebouwde `&&&` operator.
+    Dit voert dezelfde berekening uit `&&&` als de ingebouwde operator.
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Hiermee wordt de bitsgewijze weer gave van een getal overgelaten door een bepaald aantal bits.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     Retourneert de Bitsgewijze NOT van een geheel getal.
 
-    Dit voert dezelfde berekening uit als de ingebouwde `~~~` operator.
+    Dit voert dezelfde berekening uit `~~~` als de ingebouwde operator.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     Retourneert de bitsgewijze of van twee gehele getallen.
 
-    Dit voert dezelfde berekening uit als de ingebouwde `|||` operator.
+    Dit voert dezelfde berekening uit `|||` als de ingebouwde operator.
 - uid: microsoft.quantum.bitwise.parity
   summary: Retourneert de bitsgewijze PARITEIT van een geheel getal (1 als de binaire representatie een oneven aantal records bevat en 0 anders).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     Retourneert de bitsgewijze exclusieve-of (XOR) van twee gehele getallen.
 
-    Dit voert dezelfde berekening uit als de ingebouwde `^^^` operator.
+    Dit voert dezelfde berekening uit `^^^` als de ingebouwde operator.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Retourneert een geheel getal dat de Z-bits van een matrix van Pauli-Opera tors vertegenwoordigt.
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor het optreden van de bitsgewijze weer gave van klassieke gegevens typen."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210947"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673382"

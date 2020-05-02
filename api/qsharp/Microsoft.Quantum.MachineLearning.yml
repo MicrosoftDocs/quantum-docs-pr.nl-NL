@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte biedt functies en bewerkingen die worden gebruikt in Quantum machine learning toepassingen.\n\n # <a name=\"references\"></a>Verwijzingen\n - Maria schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"circuit-georiënteerde Quantum classificaties\", https://arxiv.org/abs/1804.00633."
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte biedt functies en bewerkingen die worden gebruikt in Quantum machine learning toepassingen.\n\n # <a name=\"references\"></a>Verwijzingen\n - Maria schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"circuit-georiënteerde Quantum classificaties https://arxiv.org/abs/1804.00633\",."
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: Op basis van een set coëfficiënten en een tolerantie, wordt een status voorbereidings bewerking geretourneerd die elke coëfficiënt voorbereidt als de overeenkomstige amplitude van een reken kundige status, tot aan de opgegeven tolerantie.
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: De resultaten van het valideren van een classificatie op basis van een reeks voor beelden.
 metadata:
-  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908307"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673168"

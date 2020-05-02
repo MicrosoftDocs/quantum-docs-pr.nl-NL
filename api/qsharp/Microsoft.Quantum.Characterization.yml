@@ -10,7 +10,7 @@ operations:
 - uid: microsoft.quantum.characterization.estimatefrequency
   summary: Op basis van een voor bereiding en meting, schat de frequentie waarmee deze meting slaagt (retourneert `Zero`) door een bepaald aantal experimenten uit te voeren.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Op basis van een voor bereiding die adjointable en meting levert, wordt de frequentie waarmee deze meting slaagt (retourneert `Zero`) door een bepaald aantal experimenten uit te voeren.
+  summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie `Zero`waarmee deze meting slaagt (retourneert) door een bepaald aantal experimenten uit te voeren.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: Op basis van twee bewerkingen die elk een kopie van een staat voorbereiden, wordt het imaginaire deel van de overlap ping tussen de staten die door elke bewerking zijn voor bereid.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: Op basis van twee bewerkingen die elk een kopie van een staat voorbereiden, wordt het werkelijke deel van de overlap ping tussen de staten die door elke bewerking zijn voor bereid, geschat.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMeasureAllZ is afgeschaft. Gebruik in plaats daarvan @\"microsoft.quantum.measurement.measureallz\".\nGebruik @\"microsoft.quantum.measurement.measureAllZ\"."
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nMeasureAllZ is afgeschaft. Gebruik @\"microsoft.quantum.measurement.measureallz\" in plaats daarvan.\nGebruik @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Hiermee wordt de identiteits operator in een REGI ster van qubits gemeten.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Voert het geraamde algoritme van de Quantum fase uit voor een gegeven Oracle-`U` en `targetState`, waarbij u de fase in een quantum van een big endian leest.
+  summary: Voert het geraamde algoritme van de Quantum fase `U` uit `targetState`voor een bepaalde Oracle en lees de fase in een Quantum registratie big endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve Quantum fase voor een gegeven Oracle-`U` en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
+  summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve `U` Quantum fase voor een bepaalde Oracle-en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Hiermee wordt een Qubit-proces tomography meting uitgevoerd in de Pauli, op basis van een bepaald kanaal van belang.
 metadata:
-  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870678"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673360"
