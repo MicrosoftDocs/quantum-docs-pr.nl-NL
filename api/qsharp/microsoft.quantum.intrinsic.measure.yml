@@ -7,9 +7,9 @@ summary: >-
   Hiermee wordt een gemeen schappelijke meting uitgevoerd van een of meer qubits in de opgegeven Pauli bases.
 
 
-  Het resultaat van de uitvoer wordt gegeven door de distributie: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} waarbij $P _I $ het $i $ TH-element van @no__ t_0_ en where $N = \texttt{Length} (\texttt{bases}) $.
+  Het resultaat van de uitvoer wordt gegeven door de distributie: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} waarbij $P _i $ het $i $ th- `bases`element van is en waar $N = \texttt{length} (\texttt{bases}) $.
 
-  Dat wil zeggen, de meting retourneert een `Result` $d $ zodanig dat de eigenvalue van het waargenomen meet effect $ (-1) ^ d $ is.
+  Dat wil zeggen dat de meting `Result` een $d $ zo retourneert dat de eigenvalue van het waargenomen meet effect $ (-1) ^ d $ is.
 remarks: Als de matrix basis en Qubit verschillende lengten hebben, mislukt de bewerking.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero` als de $ + $1-eigenvalue wordt waargenomen en `One` als de $-$1 eigenvalue wordt waargenomen.'
+  - summary: '`Zero`Als de $ + $1 eigenvalue wordt waargenomen en `One` als de $-$1 eigenvalue wordt waargenomen.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234101"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682861"

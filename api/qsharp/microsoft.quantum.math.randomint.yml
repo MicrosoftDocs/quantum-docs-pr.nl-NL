@@ -4,7 +4,7 @@ name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Hiermee genereert u een wille keurig geheel getal dat groter is dan of gelijk is aan nul en kleiner dan een gegeven bovengrens.
-remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid ervan afhankelijk is van de implementatie van `Random`.
+remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid afhankelijk is van de `Random`implementatie van.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ gelijk aan het opgegeven interval. dat wil zeggen, met $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+  - summary: Een geheel getal $x $ gelijk aan het opgegeven interval. dat wil zeggen, met $ \Pr (x) ={1}\Frac {\texttt{maxInt}} $.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682758"

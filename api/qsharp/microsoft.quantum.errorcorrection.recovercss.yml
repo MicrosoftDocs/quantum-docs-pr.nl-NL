@@ -3,19 +3,19 @@ uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Voert één afronding van de fout correctie uit met een Quantum code die wordt beschreven door een `CSS` type.
+summary: Voert één afronding van de fout correctie uit op basis van een `CSS` Quantum code die wordt beschreven door een type.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 'Een Quantum CSS-fout: de juiste code wordt verpakt als een `CSS` type beschrijft de code ring en het decoderen van Quantum gegevens en hoe fout-Syndromes moeten worden gemeten.'
+    summary: 'Een Quantum CSS-fout: de code die is verpakt `CSS` als een type wordt beschreven in een beschrijving van de code ring en het decoderen van Quantum gegevens en hoe fout-Syndromes worden gemeten.'
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: Een `RecoveryFn` waarmee elke $X $ error Syndrome wordt toegewezen aan de `Pauli[]` bewerkingen die de gedetecteerde fout corrigeren.
+    summary: Een `RecoveryFn` waarmee elke $X $ error Syndrome wordt toegewezen aan `Pauli[]` de bewerkingen die de gedetecteerde fout corrigeren.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: Een `RecoveryFn` waarmee elke $Z $ error Syndrome wordt toegewezen aan de `Pauli[]` bewerkingen die de gedetecteerde fout corrigeren.
+    summary: Een `RecoveryFn` waarmee elke $Z $ error Syndrome wordt toegewezen aan `Pauli[]` de bewerkingen die de gedetecteerde fout corrigeren.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Een matrix met qubits waarvan de stabilisatorer code is gedefinieerd.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220263"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682275"

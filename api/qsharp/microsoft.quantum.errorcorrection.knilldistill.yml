@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Een REGI ster van vijf tien qubits die geschatte kopieën van een magische status bevatten. Na toepassing van deze destillatie procedure bevat `roughMagic[0]` één kopie van een hogere kwaliteit en wordt de rest van het REGI ster opnieuw ingesteld op de status $ \ket{00\cdots 0} $.
+    summary: Een REGI ster van vijf tien qubits die geschatte kopieën van een magische status bevatten. De volgende toepassing van deze destillatie procedure `roughMagic[0]` bevat één kopie van een hogere kwaliteit en de rest van het REGI ster wordt opnieuw ingesteld op de status $ \ket{00\cdots 0} $.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: Als `true`, de procedure is geslaagd en de kopie van de hogere kwaliteit moet worden geaccepteerd. Als `false`, kan de procedure niet worden uitgevoerd en moet de status van het REGI ster worden beschouwd als niet-gedefinieerd.
+  - summary: Als `true`de procedure is geslaagd en de kopie van de hogere kwaliteit moet worden geaccepteerd. Als `false`de procedure is mislukt en de status van het REGI ster moet worden beschouwd als niet-gedefinieerd.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226723"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682366"
