@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` als en alleen als `a` kleiner is dan of gelijk is aan `b`.'
+  - summary: '`true`Als en alleen als `a` deze kleiner is dan of gelijk `b`is aan.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9c9b663eab0c88024f05bd9da245a3c49c22ac8a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f287c5cd0c43ace8fe0397bf237073b514b4b964
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235495"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684649"

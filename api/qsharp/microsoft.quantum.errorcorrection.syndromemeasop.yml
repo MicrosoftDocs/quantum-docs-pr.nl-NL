@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: Hiermee wordt een bewerking aangeduid die wordt gebruikt om de Syndrome van een fout-correct code blok te meten.
 remarks: >-
-  De hand tekening `(LogicalRegister => Syndrome)` vertegenwoordigt een bewerking die gezamenlijk wordt uitgevoerd op de qubits in `LogicalRegister` en een aantal auxillary qubits, gevolgd door een meting van de auxillary qubits om een `Syndrome` waarde op te halen die de `Result[]` van deze metingen aangeeft.
+  De hand `(LogicalRegister => Syndrome)` tekening vertegenwoordigt een bewerking die gezamenlijk reageert op de qubits `LogicalRegister` in en een aantal auxillary qubits, gevolgd door een meting van de auxillary qubits `Syndrome` om een waarde `Result[]` op te halen die van deze metingen is.
 
 
   ### <a name="examples"></a>Voorbeelden
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232231"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684828"

@@ -10,7 +10,7 @@ remarks: >-
 
   - C. HxBxD. Bennett,, D. DiVincenzo, J. A. Smolin en W. K. Wootters, "gemengde status entanglement en Quantum fout correctie," fysiek. Rev. A, 54 (1996) pp. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 en
 
-  - R. LaFlamme, C. Miquel, J. P. Paz en W. H. Zurek, "perfecte Quantum fout correctie code," fysiek. Rev. lett. 77 (1996) pp. 198-201; https://arxiv.org/abs/quant-ph/9602019
+  - N. LaFlamme, C. Miquel, J. P. Paz en W. H. Zurek, "perfecte Quantum fout correctie code," fysiek. Rev. lett. 77 (1996) pp. 198-201;https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
 input:
   content: ()
@@ -21,9 +21,9 @@ output:
   - summary: Retourneert een implementatie van een Quantum fout correctie code door een `QECC` type op te geven.
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39bd3adacd0f8e872d682d0df0bf81a3f1e1d8f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220399"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684946"
