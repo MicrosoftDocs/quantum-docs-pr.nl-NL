@@ -7,7 +7,7 @@ summary: >-
   Hiermee wordt een adjointable-bewerking toegepast op een klassieke resultaat waarde die één.
 
 
-  Op basis van een bewerking `op` en een resultaat waarde `result`, wordt `op` toegepast op de `target` als `result` `One`is. Als `Zero`, gebeurt er niets met de `target`.
+  `target` Als `result` dat zo is `One`, geldt `op` een `result`bewerking `op` en een resultaat waarde. Als `Zero`, gebeurt er niets met `target`.
 
   Het achtervoegsel `A` geeft aan dat de bewerking die moet worden toegepast, adjointable is.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217407"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672690"

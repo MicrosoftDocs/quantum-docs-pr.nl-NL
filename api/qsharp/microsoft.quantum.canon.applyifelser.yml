@@ -7,17 +7,17 @@ summary: >-
   Past een van de twee bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
 
 
-  Als er een resultaat `result`, wordt de bewerking `zeroOp` met `zeroInput` als invoer toegepast wanneer `result` gelijk is aan `Zero`en wordt `oneOp(oneInput)` toegepast wanneer `result == One`.
+  Als er een `result`resultaat is gegeven, `zeroOp` wordt `zeroInput` de bewerking met als `result` invoer toegepast wanneer `Zero`deze gelijk is `oneOp(oneInput)` aan `result == One`en wordt toegepast wanneer.
 syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
   types:
   - name: result
-    summary: Het meet resultaat dat wordt gebruikt om te bepalen of `zeroOp` of `oneOp` wordt toegepast.
+    summary: Het meet resultaat dat wordt gebruikt om `zeroOp` te `oneOp` bepalen of het wordt toegepast.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: De bewerking die moet worden toegepast wanneer `result == Zero`.
+    summary: De bewerking die moet worden toegepast `result == Zero`wanneer.
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: zeroInput
-    summary: De invoer die moet worden opgegeven om `zeroOp` wanneer `result == Zero`.
+    summary: De invoer die moet worden opgegeven `zeroOp` als `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: De bewerking die moet worden toegepast wanneer `result == One`.
+    summary: De bewerking die moet worden toegepast `result == One`wanneer.
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: oneInput
-    summary: De invoer die moet worden opgegeven om `oneOp` wanneer `result == One`.
+    summary: De invoer die moet worden opgegeven `oneOp` als `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -53,9 +53,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Het invoer type van de bewerking `zeroOp` voorwaardelijk worden toegepast.
+  summary: Het invoer type van de bewerking `zeroOp` die voorwaardelijk moet worden toegepast.
 - uid: "'U"
-  summary: Het invoer type van de bewerking `oneOp` voorwaardelijk worden toegepast.
+  summary: Het invoer type van de bewerking `oneOp` die voorwaardelijk moet worden toegepast.
 seeAlso:
 - microsoft.quantum.canon.applyifzero
 - microsoft.quantum.canon.applyifone
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: dc3c41c064297dfa3aef53362095c4d9f998538b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4623c321aa2b802b8f27f6a3ec8e65463083b314
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217424"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672751"

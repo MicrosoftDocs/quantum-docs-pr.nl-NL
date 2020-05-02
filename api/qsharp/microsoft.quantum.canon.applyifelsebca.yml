@@ -7,17 +7,17 @@ summary: >-
   Past een van de twee unitary-bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
 
 
-  Op basis van een bit `bit`, wordt de bewerking `trueOp` met `trueInput` als invoer toegepast wanneer `bit` is `true`, en wordt `falseOp(falseInput)` toegepast wanneer `bit` `false`is.
+  Gezien een bit `bit`, wordt de bewerking `trueOp` met `trueInput` als invoer `bit` `true`toegepast en toegepast `falseOp(falseInput)` als `bit` dat zo is. `false`
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: De Booleaanse waarde die wordt gebruikt om te bepalen of `trueOp` of `falseOp` wordt toegepast.
+    summary: De Booleaanse waarde die wordt gebruikt om `trueOp` te `falseOp` bepalen of deze is toegepast.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: De unitary-bewerking die moet worden toegepast wanneer `bit` is `true`.
+    summary: De unitary-bewerking die moet worden `bit` toegepast `true`wanneer dat het geval is.
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: De invoer die moet worden opgegeven om `trueOp` wanneer `bit` is `true`.
+    summary: De invoer die moet worden opgegeven `trueOp` `bit` als `true`.
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: De unitary-bewerking die moet worden toegepast wanneer `bit` is `false`.
+    summary: De unitary-bewerking die moet worden `bit` toegepast `false`wanneer dat het geval is.
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: De invoer die moet worden opgegeven om `falseOp` wanneer `bit` is `false`.
+    summary: De invoer die moet worden opgegeven `falseOp` `bit` als `false`.
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Het invoer type van de bewerking `trueOp` voorwaardelijk worden toegepast.
+  summary: Het invoer type van de bewerking `trueOp` die voorwaardelijk moet worden toegepast.
 - uid: "'U"
-  summary: Het invoer type van de bewerking `falseOp` voorwaardelijk worden toegepast.
+  summary: Het invoer type van de bewerking `falseOp` die voorwaardelijk moet worden toegepast.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 526170a58fcab51aa36abeee6bd1573dc5eeddbb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871325"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672772"
