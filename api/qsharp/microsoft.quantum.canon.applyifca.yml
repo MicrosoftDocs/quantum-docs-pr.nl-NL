@@ -7,11 +7,11 @@ summary: >-
   Hiermee wordt een unitary bewerking toegepast die is voor bereid op een klassieke bit.
 
 
-  Op basis van een bewerking `op` en een bits waarde `bit`, wordt `op` toegepast op de `target` als `bit` `true`is. Als `false`, gebeurt er niets met de `target`.
+  Gezien een bewerking `op` en een bitlengte, `bit`geldt `op` voor de `target` if `bit` -waarde `true`. Als `false`, gebeurt er niets met `target`.
 
   Het achtervoegsel `CA` geeft aan dat de bewerking die moet worden toegepast, unitary is (adjointable).
 examples: >-
-  Het volgende is een voor bereiding van een REGI ster van qubits in een verwerkings status die wordt vertegenwoordigd door een klassieke-bits teken reeks, gegeven als een matrix met `Bool` waarden:
+  Het volgende is een voor bereiding van een REGI ster van qubits in een verwerkings status die wordt vertegenwoordigd door een klassieke `Bool` -bits teken reeks, gegeven als een matrix met waarden:
 
 
   ```Q#
@@ -67,9 +67,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2b716ef4a7d429176aa1359fb22b3ce24be0d5f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213752"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675043"
