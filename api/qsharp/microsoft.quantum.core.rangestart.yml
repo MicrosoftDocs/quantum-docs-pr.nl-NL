@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Retourneert de gedefinieerde begin waarde van het opgegeven bereik.
 remarks: >-
-  Het eerste element van een bereik expressie is `start`, het tweede element is `start+step`, het derde element is `start+step+step`enzovoort, totdat `end` is door gegeven.
+  Het eerste element van een bereik expressie `start`is, het tweede element `start+step`is, het derde `start+step+step`element, enzovoort, totdat `end` het wordt door gegeven.
 
 
   Houd er rekening mee dat de gedefinieerde begin waarde van een bereik hetzelfde is als het eerste element van de reeks, tenzij het bereik een lege reeks opgeeft (bijvoorbeeld 2.. 1).
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231755"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657238"
