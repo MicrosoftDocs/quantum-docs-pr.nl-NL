@@ -34,21 +34,21 @@ functions:
   summary: Hierbij wordt bevestigd dat een klassieke drijvende-komma waarde de verwachte waarde heeft tot een kleine tolerantie van 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: De bevestiging dat de opgegeven qubits zich in $ \ket{0}$ State bevindt.
+  summary: Bevestiging dat opgegeven qubits de status $ \ket{0}$ heeft.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Bevestiging dat de opgegeven qubits zich in $ \ket{0}$ status tot een bepaalde tolerantie bevindt.
+  summary: De bevestiging dat de opgegeven qubits zich in ${0}\ket $-status bevindt, tot een gegeven tolerantie.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
 
 
-    Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ (+ 1 eigenstate van Pauli Y-operator).
+    Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ (+ 1 eigenstate van Pauli Y-operator) is.
 
 
     Deze verklaring maakt gebruik van $n $ qubits en vereist dat meerdere aanroepen van de bewerkingen worden vergeleken.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Hiermee wordt gecontroleerd of de bewerking `givenU` gelijk is aan de bewerking `expectedU` de opgegeven invoer grootte door de bewerking van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
+    Hiermee wordt gecontroleerd of `givenU` de bewerking gelijk is aan `expectedU` de bewerking op de opgegeven invoer grootte door de actie van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
 
     Dit is een vereiste, maar niet voldoende, voor waarde voor de gelijkheid van twee unitaries.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     Deze bevestiging kan worden gebruikt om ervoor te zorgen dat een geoptimaliseerde versie van een bewerking identiek is aan de Naïve-implementatie, of dat een bewerking die op een bereik van niet-Quantum gegevens reageert, overeenkomt met de bekende gevallen.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Beweringen dat de Qubit-`q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
+  summary: Beweringen dat de `q` Qubit zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Beweringen dat een Qubit de verwachte status heeft.
 
 
-    `expected` vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected`vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Het eerste element van de Tuples die elk van $a $ vertegenwoordigen, $b $ het reële deel van het complexe getal is, terwijl de tweede het meest imaginaire deel uitmaakt.
 
     Met het laatste argument wordt de tolerantie gedefinieerd waarmee de bevestiging wordt gemaakt.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Beweringen dat de Qubit-`q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
+  summary: Beweringen dat de `q` Qubit zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: Een door het compiler herkend kenmerk waarmee een alternatieve naam kan worden gedefinieerd die kan worden gebruikt bij het laden van een type of aanroepable voor test doeleinden.
 - uid: microsoft.quantum.diagnostics.test
   summary: Door het compiler herkend kenmerk dat wordt gebruikt om een eenheids test te markeren.
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905910"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676975"

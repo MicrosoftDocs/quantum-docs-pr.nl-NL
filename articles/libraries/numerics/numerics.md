@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907253"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677115"
 ---
 # <a name="using-the-numerics-library"></a>De numerieke bibliotheek gebruiken
 
@@ -23,7 +23,7 @@ De numerieke bibliotheek bestaat uit drie onderdelen
 1. **Gehele functionaliteit op hoog niveau** die is gebaseerd op de basis functionaliteit; Dit omvat vermenigvuldiging, deling, inversie, enzovoort.  voor ondertekende en niet-ondertekende gehele getallen.
 1. **Reken kundige functionaliteit met vaste komma** met vaste-komma initialisatie, optellen, vermenigvuldigen, reciproque, polynoom-evaluatie en meting.
 
-Al deze onderdelen kunnen worden geopend met behulp van een enkele `open`-instructie:
+Al deze onderdelen kunnen worden geopend met één `open` instructie:
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
@@ -32,33 +32,33 @@ open Microsoft.Quantum.Arithmetic;
 
 De numerieke bibliotheek ondersteunt de volgende typen
 
-1. **`LittleEndian`** : een Qubit-matrix `qArr : Qubit[]` die een geheel getal vertegenwoordigt waarbij `qArr[0]` de minst significante bit aangeeft.
-1. **`SignedLittleEndian`** : hetzelfde als `LittleEndian`, behalve dat het een geheel getal met teken vertegenwoordigt dat is opgeslagen in twee aanvullingen.
-1. **`FixedPoint`** : vertegenwoordigt een reëel getal dat bestaat uit een Qubit-matrix `qArr2 : Qubit[]` en een binaire punt positie `pos`, waarmee het aantal binaire cijfers links van het binaire punt wordt geteld. `qArr2` wordt op dezelfde manier opgeslagen als `SignedLittleEndian`.
+1. **`LittleEndian`**: Een Qubit- `qArr : Qubit[]` matrix die een geheel getal `qArr[0]` vertegenwoordigt waarbij de minst significante bit wordt aangeduid.
+1. **`SignedLittleEndian`**: Zelfde als `LittleEndian` , behalve dat dit staat voor een geheel getal met teken dat is opgeslagen in twee aanvullingen.
+1. **`FixedPoint`**: Dit is een reëel getal dat bestaat uit een Qubit `qArr2 : Qubit[]` -matrix en een binaire `pos`punt positie, waarmee het aantal binaire cijfers links van het binaire punt wordt geteld. `qArr2`wordt op dezelfde manier opgeslagen als `SignedLittleEndian`.
 
 ## <a name="operations"></a>Bewerkingen
 
 Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaar:
 
 1. **`LittleEndian`**
-    - Toevoegingen
+    - Optelling
     - Vergelijking
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
     - Deling (met rest)
 
 1. **`SignedLittleEndian`**
-    - Toevoegingen
+    - Optelling
     - Vergelijking
     - Aanvulling van inversie modulo 2
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
 
 1. **`FixedPoint`**
     - Voor bereiding/initialisatie naar een klassieke waarde
     - Toevoeging (klassieke constante of andere Quantum vaste komma)
     - Vergelijking
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
     - Polynoom-evaluatie met specialisatie voor even en oneven functies
     - Reciproque (1/x)
@@ -75,8 +75,8 @@ Met de Quantum Development Kit kan deze bewerking als volgt worden toegepast:
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>Voor beeld: vloeiende functies evalueren
 
-Als u vloeiende functies, zoals $ \sin (x) $ op een quantum computer, wilt evalueren, waarbij $x $ een Quantum `FixedPoint` getal is, biedt de nummer bibliotheek van de Quantum Development Kit de bewerkingen `EvaluatePolynomialFxP` en `Evaluate[Even/Odd]PolynomialFxP`.
+Voor het evalueren van vloeiende functies, zoals $ \sin (x) $ op een quantum computer, waarbij $x $ `FixedPoint` een Quantum nummer is, levert de nummer bibliotheek van de Quantum `EvaluatePolynomialFxP` Development `Evaluate[Even/Odd]PolynomialFxP`Kit de bewerkingen en.
 
-Met de eerste, `EvaluatePolynomialFxP`, kunt u een polynoom van de notatie $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, waarbij $d $ de *mate*aangeeft. Om dit te doen, zijn alle benodigde `[a_0,..., a_d]` de polynomiale coëfficiënten (van het type `Double[]`), de invoer `x : FixedPoint` en de uitvoer `y : FixedPoint` (aanvankelijk nul):
+De eerste, `EvaluatePolynomialFxP`, geeft u de mogelijkheid om een polynoom van het formulier $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ te evalueren waarbij $d $ de *graad*aangeeft. Hiervoor moeten alle benodigde `[a_0,..., a_d]` geoefficienties (van het type `Double[]`), de invoer `x : FixedPoint` en de uitvoer `y : FixedPoint` (aanvankelijk nul) zijn:
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Het resultaat, $P (x) = 1 + 2x $, wordt opgeslagen in `yFxP`.
 
-De tweede, `EvaluateEvenPolynomialFxP`en de derde, `EvaluateOddPolynomialFxP`, zijn specialisaties voor de gevallen van respectievelijk zelfs en oneven functies. Dat wil zeggen dat voor een even/oneven-functie $f (x) $ en $ $ P_ {ook} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ is goed geraamd op $P _ {ook} (x) $ of $P _ {oneven} (x): = x\cdot {even} (x) $. P_
+De tweede, `EvaluateEvenPolynomialFxP`, en de derde, `EvaluateOddPolynomialFxP`zijn specialisaties voor de gevallen van respectievelijk zelfs en oneven functies. Dat wil zeggen dat voor een even/oneven-functie $f (x) $ en $ $ P_ {ook} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ is goed geraamd op $P _ {ook} (x) $ of $P _ {oneven} (x): = x\cdot {even} (x) $. P_
 In Q # kunnen deze twee cases als volgt worden verwerkt:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ Hiermee wordt geëvalueerd $P _ {oneven} (x) = x + 2x ^ 3 $.
 
 Meer voor beelden vindt u in de [opslag plaats](https://github.com/Microsoft/Quantum)voor voor beelden.
 
-Als u aan de slag wilt gaan, kloont u de opslag plaats en opent u de `Numerics` submap:
+Als u aan de slag wilt gaan, kloont `Numerics` u de opslag plaats en opent u de submap:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-`cd` vervolgens naar een van de voorbeeld mappen en voer het voor beeld uit via
+Ga vervolgens `cd` naar een van de voorbeeld mappen en voer het voor beeld uit via
 
 ```bash
 dotnet run

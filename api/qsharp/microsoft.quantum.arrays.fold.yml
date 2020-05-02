@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Herhaalt een functie `f` via een matrix `array`, waarmee `f(f(f(initialState, array[0]), array[1]), ...)`wordt geretourneerd.
+summary: Herhaalt een functie `f` via een matrix `array`, waarbij wordt `f(f(f(initialState, array[0]), array[1]), ...)`geretourneerd.
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: De uiteindelijke status die is geretourneerd door de map na het herhalen van alle elementen van `array`.
+  - summary: De uiteindelijke status die is geretourneerd door de map na het herhalen van `array`alle elementen van.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: Het type statussen waarop de `folder` functie wordt uitgevoerd, dat wil zeggen, accepteert als eerste argument en retourneert.
+  summary: Het type statussen waarop `folder` de functie wordt uitgevoerd, dat wil zeggen, accepteert als eerste argument en retourneert.
 - uid: "'T"
   summary: Het type `array` elementen.
 metadata:
-  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214347"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676452"
