@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: Een tuple waarbij het eerste element `Int` het aantal unitaries $N $ is en het tweede element `(Int -> ('T => () is Adj + Ctl))` een functie is waarbij een geheel getal wordt gebruikt $j $ in $ [0, N-1] $ en de unitary-bewerking wordt uitgevoerd $V _j $.
+    summary: Een tuple waarbij het eerste element `Int` het aantal unitaries $N $ is en het tweede element `(Int -> ('T => () is Adj + Ctl))` is een functie die een geheel getal $j $ in $ [0, N-1] $ gebruikt en de bewerking unitary $V _J $ uitvoert.
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Een met vermenigvuldiging beheerde unitary-bewerking $U $ waarmee unitaries worden toegepast die worden beschreven door `unitaryGenerator`.
+  - summary: Een met vermenigvuldiging beheerde unitary-bewerking $U $ waarmee unitaries worden `unitaryGenerator`toegepast die worden beschreven door.
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexerbruteforcefromgenerator
 metadata:
-  ms.openlocfilehash: 3a5fc9e4b21f14833f28513ad66baa20a4df3de4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cfd415245dd96508b015f8d6fa3dfe0c90fa9c0e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222728"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678862"
