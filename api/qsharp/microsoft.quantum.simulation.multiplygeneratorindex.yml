@@ -23,19 +23,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: generatorIndex
-    summary: Het `GeneratorIndex` dat moet worden vermenigvuldigd.
+    summary: De `GeneratorIndex` te vermenigvuldigen.
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: Een `GeneratorIndex` die een term met coëfficiënt een factor `multiplier` groter vertegenwoordigt.
+  - summary: Een `GeneratorIndex` waarde die een term met een coëfficiënt heeft `multiplier` die groter is dan een grotere factor.
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
 metadata:
-  ms.openlocfilehash: a417f41110f95a82e76038680ba76502aae84bd4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 37a7981f62881e1b8f1a6874508df87c042c6382
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226230"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682577"

@@ -8,13 +8,13 @@ summary: >-
 
 
   De Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ wordt beschreven door een som van Pauli-voor waarden $P _j $, elk met een real-efficient $ \ alpha_j $.
-remarks: Dit wordt verkregen door de status van $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ voor te bereiden en ontoegankelijk te maken en een met vermenigvuldiging unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> en <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>te bouwen.
+remarks: Dit wordt verkregen door de status van $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ voor te bereiden en te ontbouwen en een unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> met vermenigvuldiging te <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>maken.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: Een `GeneratorSystem` dat $H $ als som van Pauli-voor waarden beschrijft
+    summary: Een `GeneratorSystem` van $H $ als een som van de Pauli-voor waarden
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -35,9 +35,9 @@ output:
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216132"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682548"
