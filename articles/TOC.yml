@@ -17,15 +17,7 @@
     - name: Aan de slag met de QDK
       href: welcome.md
     - name: De QDK installeren
-      items:
-        - name: Overzicht van de installatie
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q#-Jupyter-notebooks'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: De QDK bijwerken
       href: install-guide/update.md
     - name: 'Een Q#-project maken'
