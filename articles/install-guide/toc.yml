@@ -1,0 +1,13 @@
+items:
+  - name: Overzicht van de installatie
+    href: index.md
+  - name: 'Q#-opdrachtregeltoepassingen'
+    href: standalone.md
+  - name: 'Q#-Jupyter-notebooks'
+    href: qjupyter.md
+  - name: 'Q# gebruiken met andere talen'
+    items:
+      - name: 'Q# gebruiken met Python'
+        href: pyinstall.md
+      - name: 'Q# gebruiken met .NET'
+        href: csinstall.md
