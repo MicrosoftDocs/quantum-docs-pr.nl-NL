@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: Magic-opdracht %chemistry.broombridge
+- href: chemistry.encode.md
+  name: Magic-opdracht %chemistry.encode
+- href: chemistry.fh.add_terms.md
+  name: Magic-opdracht %chemistry.fh.add_terms
+- href: chemistry.fh.load.md
+  name: Magic-opdracht %chemistry.fh.load
+- href: chemistry.inputstate.load.md
+  name: Magic-opdracht %chemistry.inputstate.load
+- href: config.md
+  name: Magic-opdracht %config
+- href: estimate.md
+  name: Magic-opdracht %estimate
+- href: lsmagic.md
+  name: Magic-opdracht %Ismagic
+- href: package.md
+  name: Magic-opdracht %package
+- href: performance.md
+  name: Magic-opdracht %performance
+- href: simulate.md
+  name: Magic-opdracht %simulate
+- href: toffoli.md
+  name: Magic-opdracht %toffoli
+- href: who.md
+  name: Magic-opdracht %who
+- href: workspace.md
+  name: Magic-opdracht %workspace
