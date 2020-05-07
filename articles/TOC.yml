@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: De QDK bijwerken
       href: install-guide/update.md
-    - name: 'Een Q#-project maken'
-      href: how-to-guides/create-qsharp-project.md
 - name: Zelfstudies
   items:
     - name: Kwantumgenerator voor willekeurige nummers
