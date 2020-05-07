@@ -1,6 +1,6 @@
 - name: Documentatie over Microsoft Quantum
   href: index.yml
-- name: Aan de slag met kwantumcomputing
+- name: Overzicht
   items:
     - name: Wat is kwantumcomputing?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Waar vind ik meer informatie?
       href: overview/how-to-learn-quantum-computing.md
-- name: De Quantum Development Kit downloaden
+- name: Snelstartgidsen
   items:
     - name: Aan de slag met de QDK
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Een Q#-project maken'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Q#-trainingsmateriaal'
+- name: Zelfstudies
   items:
-    - name: Snelstartgidsen
-      items:
-        - name: Kwantumgenerator voor willekeurige nummers
-          href: quickstarts/qrng.md
-        - name: 'Kennismaken met verstrengeling met Q#'
-          href: quickstart.md
-        - name: Zoekalgoritme van Grover implementeren
-          href: quickstarts/search.md
+    - name: Kwantumgenerator voor willekeurige nummers
+      href: quickstarts/qrng.md
+    - name: 'Kennismaken met verstrengeling met Q#'
+      href: quickstart.md
+    - name: Zoekalgoritme van Grover implementeren
+      href: quickstarts/search.md
     - name: 'Q# leren met de Quantum Katas'
       href: intro-to-katas.md
     - name: 'Q#-codevoorbeelden'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Uitgebreide blik op de QDK
+- name: 'Q#-gebruikershandleiding'
   items:
     - name: Kwantumontwikkelingstechnieken
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Kwantumsimulators en resourceschattingen
       href: machines/toc.yml
-- name: 'Q#-bibliotheken'
-  href: libraries/toc.yml
-- name: Concepten van kwantumcomputing
-  href: concepts/toc.yml
-- name: Meer informatie
-  href: for-more-info.md
-- name: Bijdragen aan de QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Releaseopmerkingen voor QDK
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Concepten
+  items:
+    - name: Concepten van kwantumcomputing
+      href: concepts/toc.yml
+    - name: 'Q#-bibliotheken'
+      href: libraries/toc.yml
+- name: Resources
+  items:
+    - name: Woordenlijst
+      href: concepts/Glossary.md
+    - name: Bijdragen aan de QDK
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Releaseopmerkingen voor QDK
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Meer informatie
+      href: for-more-info.md
