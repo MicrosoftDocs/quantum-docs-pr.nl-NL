@@ -6,16 +6,16 @@ ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: a8e830e8f46ac6bd53ed5c607ca8cc2897721a20
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82687345"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426449"
 ---
 # <a name="q-api-design-principles"></a>Q # API-ontwerp principes
 
-## <a name="introduction"></a>Inleiding
+## <a name="introduction"></a>Introductie
 
 Als taal en als platform biedt Q # gebruikers de mogelijkheid om Quantum toepassingen te schrijven, uit te voeren, te begrijpen en te verkennen.
 Om gebruikers te helpen bij het ontwerpen van Q #-Bibliotheken, volgen we een aantal API-ontwerp principes om onze ontwerpen te begeleiden en om ervoor te zorgen dat we bruikbare bibliotheken kunnen maken voor de Quantum Development Community.
@@ -46,14 +46,14 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅**Maak** brainstorm en workshop nieuwe API-ontwerpen om te controleren of ze intuïtief zijn en voldoen aan de voorgestelde gebruiks voorbeelden.
 
   *Voorbeelden:*
-  - Inspecteer de\# huidige Q-code om te zien hoe nieuwe API-ontwerpen de bestaande implementaties kunnen vereenvoudigen en verduidelijken.
+  - Inspecteer de huidige Q- \# code om te zien hoe nieuwe API-ontwerpen de bestaande implementaties kunnen vereenvoudigen en verduidelijken.
   - Bekijk voorgestelde API-ontwerpen met vertegenwoordigers van primaire doel groepen.
 
 **Sleutel principe:** Ontwerp Api's om Lees bare code te ondersteunen en te stimuleren.
 
 - ✅Zorg **ervoor dat code kan worden gelezen** door domein experts en niet-experts.
 - ✅**Plaats de** focus op de effecten van elke bewerking en functie binnen het algoritme op hoog niveau, met behulp van documentatie voor meer informatie over de implementatie, indien van toepassing.
-- ✅Volg de algemene [Q\# -stijl gids](xref:microsoft.quantum.contributing.style) als **Dit** van toepassing is.
+- ✅Volg de algemene [Q- \# stijl gids](xref:microsoft.quantum.contributing.style) als **Dit** van toepassing is.
 
 **Sleutel principe:** Ontwerp Api's stabiel en om voorwaartse compatibiliteit te bieden.
 
@@ -62,11 +62,11 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅**Geef bewerkingen** en functies op waarmee de bestaande gebruikers code op de juiste wijze kan worden uitgevoerd tijdens de afschaffing.
 
   *Voorbeelden:*
-  - Bij het wijzigen van de naam `EstimateExpectation` van `EstimateAverage`een bewerking die wordt aangeroepen in `EstimateExpectation` , wordt een nieuwe bewerking aangeroepen die de oorspronkelijke bewerking aanroept met de nieuwe naam, zodat bestaande code correct kan blijven werken.
+  - Bij het wijzigen van de naam van een bewerking `EstimateExpectation` `EstimateAverage` die wordt aangeroepen in, wordt een nieuwe bewerking aangeroepen `EstimateExpectation` die de oorspronkelijke bewerking aanroept met de nieuwe naam, zodat bestaande code correct kan blijven werken.
 
 - ✅**Gebruik het** @"microsoft.quantum.core.deprecated" kenmerk om afschaffing van de gebruiker te communiceren.
 
-- ✅Als u de naam van een bewerking of functie **wijzigt, geeft** u de nieuwe naam op `@Deprecated`als een teken reeks invoer.
+- ✅Als u de naam van een bewerking of functie **wijzigt, geeft** u de nieuwe naam op als een teken reeks invoer `@Deprecated` .
 
 - ⛔️ **geen** bestaande functies of bewerkingen verwijderen zonder een afschaffing van ten minste zes maanden voor Preview-versies of ten minste twee jaar voor ondersteunde releases.
 
@@ -87,14 +87,14 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅**Zorg** dat er louter deterministische, klassieke logica als functies beschikbaar zijn in plaats van bewerkingen.
 
   *Voorbeelden:*
-  - Een subroutine waarmee de drijvende-komma invoer kan worden gedeterministisch, en moet dus worden blootgesteld aan de gebruiker, `Squared : Double -> Double` in plaats van als een bewerking `Square : Double => Double`. Op die manier kan de subroutine op meer locaties worden aangeroepen (bijvoorbeeld: binnen andere functies) en kunnen er nuttige optimalisatie gegevens worden verstrekt aan de compiler die van invloed kan zijn op de prestaties en Optima Lise ring.
+  - Een subroutine waarmee de drijvende-komma invoer kan worden gedeterministisch, en moet dus worden blootgesteld aan de gebruiker, `Squared : Double -> Double` in plaats van als een bewerking `Square : Double => Double` . Op die manier kan de subroutine op meer locaties worden aangeroepen (bijvoorbeeld: binnen andere functies) en kunnen er nuttige optimalisatie gegevens worden verstrekt aan de compiler die van invloed kan zijn op de prestaties en Optima Lise ring.
   - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`en `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` verschillen van de garanties die zijn aangebracht met betrekking tot determinism; beide zijn handig in verschillende omstandigheden.
-  - API-routines waarmee de toepassing van Quantum bewerkingen wordt getransformeerd, kunnen vaak op een deterministische manier worden uitgevoerd en kunnen daarom beschikbaar worden `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`gemaakt als functies zoals.
+  - API-routines waarmee de toepassing van Quantum bewerkingen wordt getransformeerd, kunnen vaak op een deterministische manier worden uitgevoerd en kunnen daarom beschikbaar worden gemaakt als functies zoals `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
 - ✅**Generaliseer** het invoer type zoveel mogelijk voor elke functie en bewerking, met behulp van type parameters als dat nodig is.
 
   *Voorbeelden:*
-  - `ApplyToEach`heeft type `<'T>(('T => Unit), 'T[]) => Unit` in plaats van het specifieke type van de meest voorkomende toepassing `((Qubit => Unit), Qubit[]) => Unit`,.
+  - `ApplyToEach`heeft type `<'T>(('T => Unit), 'T[]) => Unit` in plaats van het specifieke type van de meest voorkomende toepassing, `((Qubit => Unit), Qubit[]) => Unit` .
 
 > [!TIP]
 > Het is belang rijk om toekomstige behoeften te anticiperen, maar het is ook belang rijk om concrete problemen voor uw gebruikers op te lossen.
@@ -105,20 +105,20 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅**Gebruik tuple** -typen om invoer en uitvoer logisch te groeperen die alleen aanzienlijk zijn wanneer deze samen worden beschouwd. U kunt in deze gevallen gebruikmaken van een door de gebruiker gedefinieerd type.
 
   *Voorbeelden:*
-  - Een functie voor het uitvoeren van de lokale minima van een andere functie moet mogelijk grenzen van een zoek interval als invoer hebben, zodat `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` dit een juiste hand tekening kan zijn.
-  - Een bewerking voor het ramen van een afgeleide van een machine learning classificatie met behulp van de para meter Shift-techniek moet mogelijk zowel de verschoven als niet-verwerkte parameter vectoren als invoer hebben. In dit geval kan `(unshifted : Double[], shifted : Double[])` een invoer vergelijkbaar zijn met die van toepassing.
+  - Een functie voor het uitvoeren van de lokale minima van een andere functie moet mogelijk grenzen van een zoek interval als invoer hebben, zodat dit `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` een juiste hand tekening kan zijn.
+  - Een bewerking voor het ramen van een afgeleide van een machine learning classificatie met behulp van de para meter Shift-techniek moet mogelijk zowel de verschoven als niet-verwerkte parameter vectoren als invoer hebben. `(unshifted : Double[], shifted : Double[])`In dit geval kan een invoer vergelijkbaar zijn met die van toepassing.
 
 - ✅**Volg items** in de invoer-en uitvoer-Tuples consistent in de verschillende functies en bewerkingen.
 
   *Voorbeelden:*
-  - Als u twee of functions of bewerkingen overweegt die elk een rotatie hoek hebben en een doel-Qubit als invoer, moet u ervoor zorgen dat ze hetzelfde zijn gerangschikt in elke ingevoerde tuple. Dat wil zeggen, `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` liever `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` en `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` aan `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`en.
+  - Als u twee of functions of bewerkingen overweegt die elk een rotatie hoek hebben en een doel-Qubit als invoer, moet u ervoor zorgen dat ze hetzelfde zijn gerangschikt in elke ingevoerde tuple. Dat wil zeggen, liever `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` en `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` aan `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` en `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` .
 
-**Sleutel principe:** ontwerp functies en bewerkingen die goed werken met Q\# -taal functies zoals gedeeltelijke toepassingen.
+**Sleutel principe:** ontwerp functies en bewerkingen die goed werken met Q- \# taal functies zoals gedeeltelijke toepassingen.
 
 - ✅**Bestel items** in invoer-Tuples, zodat de meest voorkomende invoer het eerst wordt uitgevoerd (dat wil zeggen: zodat gedeeltelijke toepassingen op dezelfde manier reageren op currying).
 
   *Voorbeelden:*
-  - Een bewerking `ApplyRotation` waarbij een drijvende-komma nummer en een Qubit worden gebruikt als invoer wordt vaak gedeeltelijk toegepast met de drijvende-komma invoer voor gebruik met bewerkingen waarvoor een invoer van het `Qubit => Unit`type wordt verwacht. Daarom is een hand tekening van`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - Een bewerking `ApplyRotation` waarbij een drijvende-komma nummer en een Qubit worden gebruikt als invoer wordt vaak gedeeltelijk toegepast met de drijvende-komma invoer voor gebruik met bewerkingen waarvoor een invoer van het type wordt verwacht `Qubit => Unit` . Daarom is een hand tekening van`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       werkt het meest consistent met een gedeeltelijke toepassing.
   - Normaal gesp roken houdt dit in dat alle klassieke gegevens worden geplaatst vóór alle qubits in de invoer-Tuples, maar een goede arrest gebruiken en onderzoeken hoe uw API in de praktijk wordt genoemd.
 
@@ -135,69 +135,69 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅**Voer** nieuwe door de gebruiker gedefinieerde typen in om aan te geven dat een bepaald basis type alleen in een zeer bepaalde zin moet worden gebruikt.
 
   *Voorbeelden:*
-  - Een bewerking die specifiek moet worden geïnterpreteerd als een bewerking die klassieke gegevens in een Quantum REGI ster codeert, kan geschikt zijn voor een label met een door `newtype InputEncoder = (Apply : (Qubit[] => Unit))`de gebruiker gedefinieerd type.
+  - Een bewerking die specifiek moet worden geïnterpreteerd als een bewerking die klassieke gegevens in een Quantum REGI ster codeert, kan geschikt zijn voor een label met een door de gebruiker gedefinieerd type `newtype InputEncoder = (Apply : (Qubit[] => Unit))` .
 
 - ✅**Introduceer** nieuwe door de gebruiker gedefinieerde typen met benoemde items die toekomstige uitbreid baarheid mogelijk maken (bijvoorbeeld: een structuur van resultaten die in de toekomst extra benoemde items kan bevatten).
 
   *Voorbeelden:*
-  - Wanneer een bewerking `TrainModel` een groot aantal configuratie opties beschikbaar stelt, worden deze opties weer gegeven als een nieuwe `TrainingOptions` UDT en kunnen gebruikers met een `DefaultTrainingOptions : Unit -> TrainingOptions` nieuwe functie specifieke, benoemde items in TrainingOptions UDT-waarden overschrijven, terwijl bibliotheken ontwikkel aars nog steeds nieuwe UDT-items kunnen toevoegen.
+  - Wanneer een bewerking `TrainModel` een groot aantal configuratie opties beschikbaar stelt, worden deze opties weer gegeven als een nieuwe `TrainingOptions` UDT en `DefaultTrainingOptions : Unit -> TrainingOptions` kunnen gebruikers met een nieuwe functie specifieke, benoemde items in TrainingOptions UDT-waarden overschrijven, terwijl bibliotheken ontwikkel aars nog steeds nieuwe UDT-items kunnen toevoegen.
 
 - ✅**Declareer** benoemde items voor nieuwe door de gebruiker gedefinieerde typen in de voor keur om te vereisen dat gebruikers de juiste tuple-ontbouwing kennen.
 
   *Voorbeelden:*
-  - Als u een complex getal in de polaire ontleding vertegenwoordigt `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` , `newtype ComplexPolar = (Double, Double)`krijgt u de voor keur.
+  - Als u een complex getal in de polaire ontleding vertegenwoordigt, krijgt `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` u de voor keur `newtype ComplexPolar = (Double, Double)` .
 
 **Belang rijk:** gebruik door de gebruiker gedefinieerde typen op manieren om de cognitieve belasting te reduceren en niet dat de gebruiker aanvullende concepten en de nomenclatuur hoeft te leren.
 
-- ⛔️ **geen** door de gebruiker gedefinieerde typen die de gebruiker nodig heeft om veelvuldig gebruik te maken van de operator voor`!`uitpakken (), of waarvoor vaak meerdere niveaus van het uitpakken nodig zijn. Mogelijke strategieën voor risico beperking zijn:
+- ⛔️ **geen** door de gebruiker gedefinieerde typen die de gebruiker nodig heeft om veelvuldig gebruik te maken van de operator voor uitpakken ( `!` ), of waarvoor vaak meerdere niveaus van het uitpakken nodig zijn. Mogelijke strategieën voor risico beperking zijn:
 
-  - Wanneer u een door de gebruiker gedefinieerd type zichtbaar maakt met één item, kunt u een naam voor dat item definiëren. Overweeg `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` bijvoorbeeld bij voor keur aan `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`.
+  - Wanneer u een door de gebruiker gedefinieerd type zichtbaar maakt met één item, kunt u een naam voor dat item definiëren. Overweeg bijvoorbeeld bij voor `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` keur aan `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)` .
 
   - Zorg ervoor dat andere functies en bewerkingen de ' verpakte ' UDT-instanties rechtstreeks kunnen accepteren.
 
 - ⛔️ **geen** nieuwe door de gebruiker gedefinieerde typen voor het dupliceren van ingebouwde typen, zonder extra betrouwbaarheid te bieden.
 
   *Voorbeelden:*
-  - Een UDT `newtype QubitRegister = Qubit[]` biedt geen extra `Qubit[]`duidelijkheid en is dus moeilijker te gebruiken zonder te voor deel.
+  - Een UDT `newtype QubitRegister = Qubit[]` biedt geen extra duidelijkheid `Qubit[]` en is dus moeilijker te gebruiken zonder te voor deel.
   - Een UDT `newtype LittleEndian = Qubit[]` -document geeft aan hoe het onderliggende REGI ster moet worden gebruikt en geïnterpreteerd, en biedt daarom een extra beschrijving van het basis type.
 
 - ⛔️ **geen** accessor-functies, tenzij strikt vereist;   in dit geval is het zeer handig om benoemde items te noemen.
 
   *Voorbeelden:*
-  - Wanneer u een UDT `newtype Complex = (Double, Double)`introduceert, wijzigt u de definitie `newtype Complex = (Real : Double, Imag : Double)` voor het introduceren van functies `GetReal : Complex -> Double` en `GetImag : Complex -> Double`.
+  - Wanneer u een UDT introduceert `newtype Complex = (Double, Double)` , wijzigt u de definitie voor het `newtype Complex = (Real : Double, Imag : Double)` introduceren van functies `GetReal : Complex -> Double` en `GetImag : Complex -> Double` .
 
 ## <a name="namespaces-and-organization"></a>Naam ruimten en organisatie
 
 **Sleutel principe:** Kies naam ruimte namen die voorspelbaar zijn en waarmee duidelijk het doel van functies, bewerkingen en door de gebruiker gedefinieerde typen in elke naam ruimte kan worden gecommuniceerd.
 
-- ✅**Geef** naam ruimten op als `Publisher.Product.DomainArea`.
+- ✅**Geef** naam ruimten op als `Publisher.Product.DomainArea` .
 
   *Voorbeelden:*
-  - Functies, bewerkingen en UDTs die door micro soft zijn gepubliceerd als onderdeel van de Quantum simulatie functie van de Quantum Development Kit, worden in `Microsoft.Quantum.Simulation` de naam ruimte geplaatst.
+  - Functies, bewerkingen en UDTs die door micro soft zijn gepubliceerd als onderdeel van de Quantum simulatie functie van de Quantum Development Kit, worden in de `Microsoft.Quantum.Simulation` naam ruimte geplaatst.
   - `Microsoft.Quantum.Math`vertegenwoordigt een naam ruimte die door micro soft is gepubliceerd als onderdeel van de Quantum Development Kit die betrekking heeft op het wiskunde domein gebied.
 
 - ✅**Plaats bewerkingen** , functies en door de gebruiker gedefinieerde typen die worden gebruikt voor specifieke functionaliteit in een naam ruimte die deze functionaliteit beschrijft, zelfs wanneer die functionaliteit wordt gebruikt in verschillende probleem domeinen.
 
   *Voorbeelden:*
-  - Status voorbereiding-Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, `Microsoft.Quantum.Preparation`worden opgenomen in.
-  - Quantum simulatie Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, worden `Microsoft.Quantum.Simulation`opgenomen in.
+  - Status voorbereiding-Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, worden opgenomen in `Microsoft.Quantum.Preparation` .
+  - Quantum simulatie Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, worden opgenomen in `Microsoft.Quantum.Simulation` .
 
 - ✅**Plaatsen bewerkingen** , functies en door de gebruiker gedefinieerde typen die alleen binnen specifieke domeinen worden gebruikt in naam ruimten die het domein van het hulp programma aangeven. Gebruik, indien nodig, subnaam ruimten om taken binnen elke domein-specifieke naam ruimte aan te duiden.
 
   *Voorbeelden:*
-  - De Quantum machine learning bibliotheek die door micro soft is gepubliceerd, wordt @"microsoft.quantum.machinelearning" voornamelijk in de naam ruimte geplaatst, maar voor @"microsoft.quantum.machinelearning.datasets" beelden van gegevens sets worden door de naam ruimte verschaft.
-  - Quantum chemie-Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, `Microsoft.Quantum.Chemistry`moeten in worden geplaatst. De functionaliteit die specifiek is voor het implementeren van de Wigner-ontleding, `Microsoft.Quantum.Chemistry.JordanWigner`kan in worden geplaatst, zodat de primaire interface voor het domein gebied van de quantum chemie geen betrekking heeft op implementaties.
+  - De Quantum machine learning bibliotheek die door micro soft is gepubliceerd, wordt voornamelijk in de @"microsoft.quantum.machinelearning" naam ruimte geplaatst, maar voor beelden van gegevens sets worden door de @"microsoft.quantum.machinelearning.datasets" naam ruimte verschaft.
+  - Quantum chemie-Api's die door micro soft zijn gepubliceerd als onderdeel van de Quantum Development Kit, moeten in worden geplaatst `Microsoft.Quantum.Chemistry` . De functionaliteit die specifiek is voor het implementeren van de Wigner-ontleding, kan in worden geplaatst `Microsoft.Quantum.Chemistry.JordanWigner` , zodat de primaire interface voor het domein gebied van de quantum chemie geen betrekking heeft op implementaties.
 
 **Sleutel principe:** Gebruik naam ruimten en toegangs parameters samen om het API-Opper vlak dat wordt blootgesteld aan gebruikers te gebruiken en om interne gegevens te verbergen met betrekking tot de implementatie en het testen van uw Api's.
 
-- ✅Indien redelijk moeten alle functies en bewerkingen **worden uitgevoerd die** nodig zijn om een API te implementeren in dezelfde naam ruimte als de API die wordt geïmplementeerd, maar gemarkeerd met de sleutel woorden ' privé ' of ' intern ' om aan te geven dat ze geen deel uitmaken van het open bare API-Opper vlak voor een tape wisselaar. Gebruik een naam die begint met een onderstrepings teken (`_`) om persoonlijke en interne bewerkingen en functies van open bare callables visueel te onderscheiden.
+- ✅Indien redelijk moeten alle functies en bewerkingen **worden uitgevoerd die** nodig zijn om een API te implementeren in dezelfde naam ruimte als de API die wordt geïmplementeerd, maar gemarkeerd met de sleutel woorden ' privé ' of ' intern ' om aan te geven dat ze geen deel uitmaken van het open bare API-Opper vlak voor een tape wisselaar. Gebruik een naam die begint met een onderstrepings teken ( `_` ) om persoonlijke en interne bewerkingen en functies van open bare callables visueel te onderscheiden.
 
   *Voorbeelden:*
-  - De naam `_Features` van de bewerking geeft een functie aan die privé is voor een bepaalde naam ruimte en assembly, en moet `internal` vergezeld gaan van het sleutel woord.
+  - De naam van de bewerking `_Features` geeft een functie aan die privé is voor een bepaalde naam ruimte en assembly, en moet vergezeld gaan van het `internal` sleutel woord.
 
-- ✅In het zeldzame geval dat een uitgebreide set persoonlijke functies of bewerkingen nodig zijn om de API voor een bepaalde naam ruimte te implementeren, **moet u** deze in een nieuwe naam ruimte plaatsen die overeenkomt met de `.Private`naam ruimte die wordt geïmplementeerd en eindigt op.
+- ✅In het zeldzame geval dat een uitgebreide set persoonlijke functies of bewerkingen nodig zijn om de API voor een bepaalde naam ruimte te implementeren, **moet u** deze in een nieuwe naam ruimte plaatsen die overeenkomt met de naam ruimte die wordt geïmplementeerd en eindigt op `.Private` .
 
-- ✅**Plaats alle** eenheids tests in naam ruimten die overeenkomen met de naam ruimte onder `.Tests`testen en eindigend op.
+- ✅**Plaats alle** eenheids tests in naam ruimten die overeenkomen met de naam ruimte onder testen en eindigend op `.Tests` .
 
 ## <a name="naming-conventions-and-vocabulary"></a>Naam conventies en woordenlijst
 
@@ -212,12 +212,12 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
   *Voorbeelden:*
   - Kies voor keur voor ' amplitude versterking ' naar ' Grover iteratie '.
 
-- ✅**Kies bewerkingen** en functie namen waarmee duidelijk het beoogde effect van een aanroepbaar en niet de implementatie wordt gecommuniceerd. Houd er rekening mee dat de implementatie kan en moet worden beschreven in [API-documentatie opmerkingen](xref:microsoft.quantum.language.statements#documentation-comments).
+- ✅**Kies bewerkingen** en functie namen waarmee duidelijk het beoogde effect van een aanroepbaar en niet de implementatie wordt gecommuniceerd. Houd er rekening mee dat de implementatie kan en moet worden beschreven in [API-documentatie opmerkingen](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
   *Voorbeelden:*
   - De voor keur ' schatting overlappen ' op ' Hadamard test ', aangezien de laatste wordt gecommuniceerd hoe de voormalige wordt geïmplementeerd.
 
-- ✅**Gebruik woorden** op een consistente manier in alle Q\# -api's:
+- ✅**Gebruik woorden** op een consistente manier in alle Q- \# api's:
 
   - **Termen**
 
@@ -242,7 +242,7 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Toep assen**: een Quantum bewerking of reeks bewerkingen Toep assen op een of meer qubits, waardoor de status van die qubits op een samenhangende manier kan worden gewijzigd. Dit woord is de meest algemene term in Q\# -nomenclatuur en **mag niet worden** gebruikt wanneer een meer specifieke term direct relevant is.
+    - **Toep assen**: een Quantum bewerking of reeks bewerkingen Toep assen op een of meer qubits, waardoor de status van die qubits op een samenhangende manier kan worden gewijzigd. Dit woord is de meest algemene term in Q \# -nomenclatuur en **mag niet worden** gebruikt wanneer een meer specifieke term direct relevant is.
 
   - **Zelfstandige naam woorden**:
 
@@ -265,7 +265,7 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
     - **Als:** Hiermee wordt aangegeven dat de invoer en uitvoer van een functie dezelfde informatie vertegenwoordigen, maar dat de uitvoer de gegevens vertegenwoordigt **als** een *X* in plaats van de oorspronkelijke weer gave. Dit is met name gebruikelijk voor functies van type conversie.
 
       *Voorbeelden:*
-      - `IntAsDouble(2)`Hiermee wordt aangegeven dat zowel de`2`invoer () als de`2.0`uitvoer () op kwalitatieve manier dezelfde informatie vertegenwoordigen, maar met\# verschillende gegevens typen van Q.
+      - `IntAsDouble(2)`Hiermee wordt aangegeven dat zowel de invoer ( `2` ) als de uitvoer ( `2.0` ) op kwalitatieve manier dezelfde informatie vertegenwoordigen, maar met verschillende \# gegevens typen van Q.
 
     - **Van:** Om consistentie te garanderen, mag deze voor positie **niet** worden gebruikt om type conversie functies of een ander geval waar **dat** van toepassing is, aan te geven.
 

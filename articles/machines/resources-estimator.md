@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320811"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426878"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>De doel computer van de ResourcesEstimator
+# <a name="the-resources-estimator-target-machine"></a>De doel machine van de resources-estimator
 
-Zoals de naam al aangeeft, schat het `ResourcesEstimator` de resources die nodig zijn om een bepaald exemplaar van een Q #-bewerking uit te voeren op een quantum computer.
+Zoals de naam al aangeeft, worden de `ResourcesEstimator` resources die nodig zijn om een bepaald exemplaar van een Q #-bewerking uit te voeren op een quantum computer, geschat.
 Dit wordt bereikt door de Quantum bewerking uit te voeren zonder dat de status van een quantum computer werkelijk wordt gesimuleerd. Daarom kunnen er resources worden geschat voor Q #-bewerkingen die gebruikmaken van duizenden qubits als het klassieke deel van de code in een redelijke tijd kan worden uitgevoerd.
 
 ## <a name="usage"></a>Gebruik
 
-De `ResourcesEstimator` is maar een ander type doel computer, zodat deze kan worden gebruikt om elke Q #-bewerking uit te voeren. 
+Het `ResourcesEstimator` is slechts een ander type doel computer, zodat het kan worden gebruikt om elke Q #-bewerking uit te voeren. 
 
-Als andere doel machines kunt u deze gebruiken voor een C# hostprogramma een exemplaar maken en dit door geven als de eerste para meter van de `Run` methode van de bewerking:
+Als andere doel machines kunt u deze gebruiken voor een C#-hostprogramma een exemplaar maken en dit door geven als de eerste para meter van de methode van de bewerking `Run` :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Zoals in het voor beeld wordt weer gegeven, biedt de `ResourcesEstimator` een `ToTSV()` methode voor het genereren van een tabel met tab-gescheiden waarden (TSV) die in een bestand kunnen worden opgeslagen of naar de console worden geschreven voor analyse. De uitvoer van het bovenstaande programma moet er ongeveer als volgt uitzien:
+Zoals in het voor beeld wordt weer gegeven, `ResourcesEstimator` biedt de `ToTSV()` methode om een tabel met tab-gescheiden waarden (TSV) te genereren die in een bestand kunnen worden opgeslagen of naar de-console voor analyse kan worden geschreven. De uitvoer van het bovenstaande programma moet er ongeveer als volgt uitzien:
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> Met de `ResourcesEstimator` worden de berekeningen bij elke uitvoering niet opnieuw ingesteld, als hetzelfde exemplaar wordt gebruikt om een andere bewerking uit te voeren, wordt het samen voegen van het aantal bestaande resultaten bewaard.
+> De `ResourcesEstimator` berekeningen worden bij elke uitvoering niet opnieuw ingesteld, als hetzelfde exemplaar wordt gebruikt om een andere bewerking uit te voeren, wordt het samen voegen van het totaal op bestaande resultaten bewaard.
 > Als u berekeningen tussen uitvoeringen wilt resetten, maakt u voor elke uitvoering een nieuw exemplaar.
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>De geschatte gegevens programmatisch ophalen
 
-Naast een TSV-tabel kunnen de geschatte resources via een programma worden opgehaald via de eigenschap `Data` van de `ResourcesEstimator`. `Data` levert een `System.DataTable`-exemplaar met twee kolommen: `Metric` en `Sum`, geïndexeerd op basis van de namen van metrische gegevens.
+Naast een TSV-tabel kunnen de geschatte bronnen via een programma worden opgehaald via de `ResourcesEstimator` `Data` eigenschap. `Data`levert een `System.DataTable` exemplaar met twee kolommen: `Metric` en `Sum` , geïndexeerd door de namen van metrische gegevens.
 
-De volgende code laat zien hoe u het totale aantal `QubitClifford`, `T` en `CNOT` poorten die worden gebruikt door een Q #-bewerking kunt ophalen en afdrukken:
+De volgende code laat zien hoe u het totale aantal `QubitClifford` `T` en de `CNOT` poorten die worden gebruikt door een Q #-bewerking kunt ophalen en afdrukken:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Gemelde metrische gegevens
 
-Hier volgt een lijst met metrische gegevens die worden geschat door de `ResourcesEstimator`:
+Hier volgt een lijst met metrische gegevens die worden geschat door `ResourcesEstimator` :
 
 * __CNOT__: het aantal CNOT (ook wel de bewaakte Pauli X Gate)-poorten worden uitgevoerd.
 * __QubitClifford__: het aantal uitgevoerde Qubit-Clifford en Pauli-poorten.
@@ -105,7 +105,7 @@ Hier volgt een lijst met metrische gegevens die worden geschat door de `Resource
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metingsresultaten opgeven
 
-<xref:microsoft.quantum.intrinsic.assertprob> van de <xref:microsoft.quantum.intrinsic> naam ruimte kan worden gebruikt om informatie over de verwachte waarschijnlijkheid van een meting te bieden om de uitvoering van het Q #-programma te verhelpen. Het volgende voorbeeld illustreert dit:
+<xref:microsoft.quantum.intrinsic.assertprob>vanuit de <xref:microsoft.quantum.intrinsic> naam ruimte kan worden gebruikt om informatie over de verwachte waarschijnlijkheid van een meting te bieden om de uitvoering van het Q #-programma te verhelpen. Het volgende voorbeeld illustreert dit:
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Wanneer de `ResourcesEstimator` zich voordoet `AssertProb` wordt de meting `PauliZ` op `source` vastgelegd en moet `q` een resultaat van `Zero` met de kans 0,5 worden gegeven. Wanneer het `M` later wordt uitgevoerd, worden de vastgelegde waarden van de waarschijnlijkheid van de uitkomst gevonden en `M` wordt `Zero` of `One` geretourneerd met kans 0,5.
+Als er `ResourcesEstimator` wordt gestuit `AssertProb` , wordt dat meet tijdstip vastgelegd `PauliZ` `source` en `q` moet er een resultaat worden gegeven van de `Zero` kans 0,5. Wanneer het later wordt uitgevoerd `M` , worden de vastgelegde waarden van de resultaten kansen gevonden en `M` geretourneerd, `Zero` of `One` met kans van 0,5.
 
 
 ## <a name="see-also"></a>Zie ook
 
-De `ResourcesEstimator` is gebouwd op basis van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Dit biedt een uitgebreidere set metrische gegevens, de mogelijkheid om metrische gegevens te rapporteren over de volledige aanroep-Graph en functies als [afzonderlijke invoer controle](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) om te helpen bij het vinden van fouten in Q #-Program ma's. Raadpleeg de documentatie over de [traceer Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) voor meer informatie.
+De `ResourcesEstimator` is gebouwd op basis van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), met een uitgebreidere set metrische gegevens, de mogelijkheid om metrische gegevens te rapporteren over de volledige aanroep-Graph en functies als [afzonderlijke invoer controle](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) om te helpen bij het vinden van fouten in Q #-Program ma's. Raadpleeg de documentatie over de [traceer Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) voor meer informatie.
 
