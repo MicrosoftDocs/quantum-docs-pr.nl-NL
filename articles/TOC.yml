@@ -2,17 +2,20 @@
   href: index.yml
 - name: Overzicht
   items:
-    - name: Wat is kwantumcomputing?
-      href: overview/what-is-quantum-computing.md
-    - name: Wat kan een kwantumcomputer doen?
-      href: overview/quantum-computers.md
-    - name: Waarom zou ik kwantumcomputing leren gebruiken?
-      href: overview/why-learn-quantum-computing.md
-    - name: 'Wat zijn Q# en de QDK?'
-      href: overview/what-is-qsharp.md
-    - name: Waar vind ik meer informatie?
-      href: overview/how-to-learn-quantum-computing.md
+    - name: Inleiding tot kwantumcomputing
+      href: overview/overview.md
+    - name: Belangrijkste concepten
+      items:
+        - name: Kwantumcomputing begrijpen
+          href: overview/understanding-quantum-computing.md
+        - name: Kwantumcomputers en -simulators
+          href: overview/quantum-computers-and-simulators.md
+        - name: 'Wat zijn Q# en de QDK?'
+          href: overview/what-is-qsharp-and-qdk.md
+        - name: Lineaire algebra voor kwantumcomputing
+          href: overview/algebra-for-quantum-computing.md
 - name: Snelstartgidsen
+  expanded: true
   items:
     - name: Aan de slag met de QDK
       href: welcome.md
@@ -33,15 +36,7 @@
     - name: 'Q#-codevoorbeelden'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: 'Q#-gebruikershandleiding'
-  items:
-    - name: Kwantumontwikkelingstechnieken
-      topicHref: techniques/index.md
-      href: techniques/toc.yml
-    - name: 'Q#-programmeertaal'
-      topicHref: language/index.md
-      href: language/toc.yml
-    - name: Kwantumsimulators en resourceschattingen
-      href: machines/toc.yml
+  href: user-guide/toc.yml
 - name: Concepten
   items:
     - name: Concepten van kwantumcomputing
