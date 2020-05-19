@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
+ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426383"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551036"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Ontwikkelen met Q # Jupyter-notebooks
 
@@ -28,7 +28,7 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
 
     - [Python](https://www.python.org/downloads/) 3.6 of hoger
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 3,1 of hoger](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 1. Installeer het pakket `iqsharp`
 

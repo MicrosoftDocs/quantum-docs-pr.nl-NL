@@ -1,0 +1,12 @@
+- name: 'Q#-bestandsstructuur'
+  href: file-structure.md
+- name: Bewerkingen en functies
+  href: operations-functions.md
+- name: Variabelen
+  href: variables.md
+- name: Werken met qubits
+  href: working-with-qubits.md
+- name: Controlestroom
+  href: control-flow.md
+- name: Testen en fouten opsporen
+  href: testing-debugging.md

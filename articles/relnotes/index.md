@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82677095"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426764"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -48,7 +48,7 @@ Deze release bevat kleine foutoplossingen voor versie 0.11.2003.2506.
 
 Deze release omvat het volgende:
 
-- Nieuwe ondersteuning om modifiers te openen in Q#. Raadpleeg [Bestandsstructuren](xref:microsoft.quantum.language.file-structure#internal-declarations) voor meer informatie.
+- Nieuwe ondersteuning om modifiers te openen in Q#. Raadpleeg [Bestandsstructuren](xref:microsoft.quantum.guide.filestructure) voor meer informatie.
 - Bijgewerkt naar .NET Core SDK 3.1
 
 Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -86,7 +86,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Nieuwe kenmerk Test voor Q#-eenheidstest. Raadpleeg [hier](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) bijgewerkte API-documentatie en [hier](xref:microsoft.quantum.techniques.testing-and-debugging) bijgewerkte handleiding voor tests en foutopsporing
+- Nieuwe kenmerk Test voor Q#-eenheidstest. Raadpleeg [hier](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) bijgewerkte API-documentatie en [hier](xref:microsoft.quantum.guide.testingdebugging) bijgewerkte handleiding voor tests en foutopsporing
 - Stack-trace toegevoegd in het geval van een fout in een Q#-programmabewerking
 - Ondersteuning voor onderbrekingspunten in Visual Studio Code door een update in de [OmniSharp C# Visual Studio Code-extensie](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -133,7 +133,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Nieuwe ondersteuning voor [vervoegingsverklaringen](xref:microsoft.quantum.language.statements#conjugations) in Q#
+- Nieuwe ondersteuning voor [vervoegingsverklaringen](xref:microsoft.quantum.guide.operationsfunctions#conjugations) in Q#
 - Nieuwe codeacties in de compiler, zoals 'vervangen door', 'documentatie toevoegen' en eenvoudige updates van matrix-items
 - Installatiesjabloon en nieuwe projectopdrachten toegevoegd aan Visual Studio Code-extensie
 - Nieuwe varianten van ApplyIf-combinatie toegevoegd, zoals [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -150,7 +150,7 @@ De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige progra
 
 Deze release omvat het volgende:
 
-- Nieuwe indexeerlocaties voor slicermatrices. [Raadpleeg de taalreferentie](xref:microsoft.quantum.language.expressions#array-slices) voor meer informatie.
+- Nieuwe indexeerlocaties voor slicermatrices. [Raadpleeg de taalreferentie](xref:microsoft.quantum.guide.expressions#array-slices) voor meer informatie.
 - Dockerfile toegevoegd dat werd gehost in [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry). Raadpleeg de [IQ#-opslagplaats voor meer informatie](https://github.com/microsoft/iqsharp/blob/master/README.md)
 - Belangrijke wijziging voor de [traceersimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): configuratie-instellingen bijgewerkt, naam veranderd. Raadpleeg de [.NET API-browser voor de bijgewerkte namen](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
@@ -171,10 +171,10 @@ De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige progra
 
 ### <a name="q-language-syntax"></a>Q#-taalsyntaxis
 In deze release is een nieuwe Q#-taalsyntaxis toegevoegd:
-* Benoemde items toegevoegd voor [door de gebruiker gedefinieerde typen](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* Benoemde items toegevoegd voor [door de gebruiker gedefinieerde typen](xref:microsoft.quantum.guide.types#user-defined-types).  
 * Door de gebruiker gedefinieerde typeconstructies kunnen nu als functies worden gebruikt.
-* Ondersteuning toegevoegd voor [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) en [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in door gebruiker gedefinieerde typen.
-* Correctieblok voor [repeat-until-succes](xref:microsoft.quantum.language.statements#repeat-until-success-loop)-lussen is nu optioneel.
+* Ondersteuning toegevoegd voor [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) en [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) in door gebruiker gedefinieerde typen.
+* Correctieblok voor [repeat-until-succes](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)-lussen is nu optioneel.
 * We ondersteunen nu een lus in functies (niet in bewerkingen).
 
 ### <a name="library"></a>Bibliotheek 
@@ -202,10 +202,10 @@ De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige progra
 
 ### <a name="q-language-syntax"></a>Q#-taalsyntaxis
 In deze release is een nieuwe Q#-taalsyntaxis toegevoegd:
-* Een [stenomanier toegevoegd om specialisaties van kwantumbewerkingen uit te drukken](xref:microsoft.quantum.language.type-model#functors) (controles en aangrenzenden) met `+`-operators.  De oude syntaxis is afgeschaft.  Programma's die gebruikmaken van de oude syntaxis (bijvoorbeeld `: adjoint`) werken nog steeds, maar er wordt een waarschuwing voor een compilatietijd gegenereerd.  
-* Nieuwe operator toegevoegd voor [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, kan ook worden gebruikt om het maken van een matrix uit te drukken als een wijziging van een bestaande matrix.
-* De algemene [instructie apply-and-update](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols) toegevoegd, bijvoorbeeld `+=`, `w/=`.
-* Een manier toegevoegd om een korte naam op te geven voor naamruimten in [open instructies](xref:microsoft.quantum.language.file-structure#open-directives).
+* Een [stenomanier toegevoegd om specialisaties van kwantumbewerkingen uit te drukken](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (controles en aangrenzenden) met `+`-operators.  De oude syntaxis is afgeschaft.  Programma's die gebruikmaken van de oude syntaxis (bijvoorbeeld `: adjoint`) werken nog steeds, maar er wordt een waarschuwing voor een compilatietijd gegenereerd.  
+* Nieuwe operator toegevoegd voor [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions), `w/`, kan ook worden gebruikt om het maken van een matrix uit te drukken als een wijziging van een bestaande matrix.
+* Voeg de algemene instructie [apply-and-update](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) toe, bijvoorbeeld `+=`, `w/=`.
+* Een manier toegevoegd om een korte naam op te geven voor naamruimten in [open instructies](xref:microsoft.quantum.guide.filestructure#open-directives).
 
 In deze release staan we niet meer toe dat een matrix-element wordt opgegeven aan de linkerkant van een ingestelde instructie.  Dat komt omdat de syntaxis impliceert dat matrices veranderlijk zijn, terwijl het resultaat van de bewerking altijd het maken van een nieuwe matrix met de bewerking is geweest.  In plaats daarvan wordt een compileerfout gegenereerd met een suggestie om de nieuwe operator copy-and-update, `w/`, te gebruiken om hetzelfde resultaat te bereiken.  
 
@@ -280,7 +280,7 @@ Deze release omvat het volgende:
 
 - Foutoplossing voor DumpRegister-probleem die door de community is gerapporteerd ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Mogelijkheid toegevoegd om terug te keren vanuit een [gebruiksinstructie](xref:microsoft.quantum.language.statements).
+- Mogelijkheid toegevoegd om terug te keren vanuit een [gebruiksinstructie](xref:microsoft.quantum.guide.qubits#allocating-qubits).
 
 - [Introductiehandleiding](xref:microsoft.quantum.install) herschreven.
 
@@ -303,7 +303,7 @@ Deze release omvat het volgende:
 
 Deze release omvat het volgende:
 
-- ondersteuning toegevoegd voor een nieuw primitief type, BigInt, dat een geheel getal met teken van arbitraire grootte vertegenwoordigt.  Meer informatie over het [BigInt-type](xref:microsoft.quantum.language.type-model).
+- ondersteuning toegevoegd voor een nieuw primitief type, BigInt, dat een geheel getal met teken van arbitraire grootte vertegenwoordigt.  Meer informatie over het [BigInt-type](xref:microsoft.quantum.guide.types).
 - nieuwe Toffoli-simulator toegevoegd, een snelle simulator voor speciale doeleinden die X-, CNOT- en meerdere gecontroleerde X-kwantumbewerkingen kan simuleren met grote aantallen qubits.  Meer informatie over de [Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator).
 - een eenvoudige resource-inschatting toegevoegd die een schatting maakt van het aantal benodigde resources om een bepaald exemplaar uit te voeren van een Q#-bewerking in een kwantumcomputer.  Meer informatie over [Resource-inschatting](xref:microsoft.quantum.machines.resources-estimator).
 
@@ -427,7 +427,7 @@ Deze update voegt nieuw functionaliteit voor foutopsporing toe:
 * In Visual Studio wordt de kans op het meten van een $\ket{1}$ in een enkele qubit nu automatisch weergegeven in het foutopsporingsvenster voor de QuantumSimulator-doelmachine.
 * In Visual Studio is de weergave verbeterd van variabele eigenschappen in de foutopsporingsvensters **Autos** en **Locals**. 
 
-Meer informatie over [testen en foutopsporing](xref:microsoft.quantum.techniques.testing-and-debugging).
+Meer informatie over [testen en foutopsporing](xref:microsoft.quantum.guide.testingdebugging).
 
 ### <a name="community-contributions"></a>Bijdragen van de community
 
