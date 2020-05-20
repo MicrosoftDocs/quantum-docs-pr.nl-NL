@@ -1,19 +1,19 @@
 ---
-title: 'Ontwikkelen met Q # Jupyter-notebooks'
+title: Ontwikkelen met Q#-Jupyter-notebooks
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551036"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660770"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Ontwikkelen met Q # Jupyter-notebooks
+# <a name="develop-with-q-jupyter-notebooks"></a>Ontwikkelen met Q#-Jupyter-notebooks
 
 Installeer de QDK voor het ontwikkelen van Q #-bewerkingen op Q # Jupyter-notebooks.
 
@@ -45,9 +45,9 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
         jupyter notebook
         ```
 
-    - Als u het Jupyter-notebook wilt openen en de URL wilt plakken die u hebt ontvangen van de opdracht regel in uw browser.
+    - Als u de Jupyter Notebook wilt openen, kopieert en plakt u de URL die u hebt ontvangen van de opdracht regel in uw browser.
 
-    - Maak een Jupyter Notebook met een Q#-kernel en voeg de volgende code toe aan de eerste Notebook-cel:
+    - Maak een Jupyter Notebook met een Q #-kernel en voeg de volgende code toe aan de eerste notebook-cel:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
 
     - Voer deze cel van het Notebook uit:
 
-        ![Cel met Q#-code in een Jupyter-notebook](~/media/install-guide-jupyter.png)
+        ![Jupyter Notebook cel met Q # code](~/media/install-guide-jupyter.png)
 
-        U ziet `SayHello` in de uitvoer van de cel. Wanneer u werkt met Jupyter Notebook, wordt de Q#-code gecompileerd en wordt de naam van de gevonden bewerking(en) geretourneerd in de uitvoer.
+        U ziet `SayHello` in de uitvoer van de cel. Wanneer in Jupyter Notebook wordt uitgevoerd, wordt de Q #-code gecompileerd en de notitie blok voert de naam van de bewaarde bewerking (en) uit.
 
 
     - Voer in een nieuwe cel de bewerking uit die u zojuist hebt gemaakt (in een simulator) met behulp van de `%simulate` opdracht:
 
-        ![Cel met %simulate magic in een Jupyter-notebook](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter Notebook cel met% simulatie Magic](~/media/install-guide-jupyter-simulate.png)
 
         Het bericht wordt afgedrukt op het scherm samen met het resultaat van de bewerking die u hebt aangeroepen (hier zien we de lege tuple omdat de `()` bewerking alleen een `Unit` type retourneert).
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u de Quantum development kit hebt geïnstalleerd in de omgeving van uw voorkeur, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren.
+Nu u de QDK voor Q # Jupyter-notebooks hebt geïnstalleerd, kunt u [uw eerste Quantum programma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren door uw Q #-code rechtstreeks in de Jupyter notebook omgeving te schrijven.
+
+Voor meer voor beelden van wat u kunt doen met Q # Jupyter-notebooks, gaat u naar:
+- [Inleiding tot Q # en Jupyter notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Er wordt een Q #-Jupyter Notebook weer gegeven waarin wordt uitgelegd hoe u Q # in deze omgeving kunt gebruiken.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), een open-source verzameling zelf studies en reeksen programmeer oefeningen in de vorm van Q # Jupyter-notebooks. De [Quantum Katas zelf studie notebooks](https://github.com/microsoft/QuantumKatas#tutorial-topics) zijn een goed uitgangs punt. De Quantum Katas is gericht op het aanwijzen van de elementen van Quantum Computing en Q #-programmering tegelijk. Ze zijn een uitstekend voor beeld van wat voor soort inhoud u kunt maken met Q # Jupyter-notebooks.

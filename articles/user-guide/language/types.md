@@ -1,19 +1,19 @@
 ---
-title: 'Typen in Q #'
+title: Typen in Q#
 description: 'Meer informatie over de verschillende typen die worden gebruikt in de Q #-programmeer taal.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431135"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609138"
 ---
-# <a name="types-in-q"></a>Typen in Q #
+# <a name="types-in-q"></a>Typen in Q#
 
 Op deze pagina wordt het type Q # vermeld en wordt de syntaxis voor het opgeven en werken met typen beschreven.
 Op de volgende pagina [typt u expressies](xref:microsoft.quantum.guide.expressions), informatie over het maken en bewerken van expressies van deze typen.
@@ -35,7 +35,7 @@ De Q #-taal biedt verschillende *primitieve typen*, waaruit andere typen kunnen 
    voert.
 - Het `Double` type vertegenwoordigt een drijvende-komma getal met dubbele precisie, bijvoorbeeld: `0.0` , `-1.3` , `4e-7` .
 - Het `Bool` type vertegenwoordigt een Booleaanse waarde die kan of zijn `true` `false` .
-- Het `Range` type vertegenwoordigt een reeks van gehele getallen, aangegeven door `start..step..stop` , waarbij de stap wordt aangeduid als opties. 
+- Het `Range` type vertegenwoordigt een reeks gehele getallen, aangeduid door `start..step..stop` , waarbij de stap optioneel wordt aangeduid. 
    Dit `start .. stop` komt overeen met `start..1..stop` , en geeft bijvoorbeeld `1..2..7` de reeks $ \{ 1, 3, 5, 7 \} $ aan.
 - Het `String` type is een opeenvolging van Unicode-tekens die ondoorzichtig is voor de gebruiker nadat deze is gemaakt.
   Dit type wordt gebruikt om berichten te rapporteren aan een klassieke host in het geval van een fout of diagnostische gebeurtenis.
