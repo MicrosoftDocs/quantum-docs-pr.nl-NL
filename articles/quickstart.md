@@ -1,23 +1,25 @@
 ---
-title: Basisprincipes van het schrijven van kwantumprogramma's in Q#
+title: Kennismaken met verstrengeling met Q#
 description: Meer informatie over het schrijven van een kwantumprogramma in Q#. Een toepassing voor een Bell-toestand ontwikkelen met behulp van de Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906726"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426843"
 ---
-# <a name="quantum-basics-with-q"></a>Basisprincipes van schrijven van kwantumprogramma's in Q#
+# <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
-In deze quickstart laten we u zien hoe u een Q#-programma schrijft dat qubits bewerkt en meet, en dat de effecten van superpositie en verstrengeling demonstreert.  U krijgt instructies voor het installeren van de QDK, het bouwen van het programma en het uitvoeren van dat programma op een kwantumsimulator.  
+In deze zelfstudie laten we u zien hoe u een Q#-programma schrijft dat qubits manipuleert en meet, en dat de effecten van superpositie en verstrengeling demonstreert.
+U krijgt instructies voor het installeren van de QDK, het bouwen van het programma en het uitvoeren van dat programma op een kwantumsimulator.  
 
-U gaat een toepassing schrijven met de naam Bell om kwantumverstrengeling te demonstreren.  De naam Bell is een verwijzing naar de Bell-toestanden, wat specifieke kwantumtoestanden van twee qubits zijn die worden gebruikt om de eenvoudigste voorbeelden van superpositie en kwantumverstrengeling voor te stellen. 
+U gaat een toepassing schrijven met de naam Bell om kwantumverstrengeling te demonstreren.
+De naam Bell is een verwijzing naar de Bell-toestanden, wat specifieke kwantumtoestanden van twee qubits zijn die worden gebruikt om de eenvoudigste voorbeelden van superpositie en kwantumverstrengeling voor te stellen.
 
 ## <a name="pre-requisites"></a>Vereisten
 
@@ -30,7 +32,7 @@ U kunt de instructies ook volgen zonder de QDK te installeren, om een beeld te k
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Gedrag van qubits demonstreren met Q#
 
-Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.what#the-qubit).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een qubit in een **superpositie** zijn van gelijktijdig 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.understanding).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een qubit in een **superpositie** zijn van gelijktijdig 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 De handeling van het meten produceert een binair resultaat en verandert de toestand van een qubit. Meting resulteert in een binaire waarde, 0 of 1.  De qubit gaat over van de toestand van superpositie (willekeurige richting) in een van de klassieke toestanden.  Daarna levert herhaling van dezelfde meting zonder tussenliggende bewerkingen hetzelfde binaire resultaat op.  
@@ -498,7 +500,7 @@ Gefeliciteerd, u hebt uw eerste kwantumprogramma geschreven.
 
 ## <a name="whats-next"></a>Volgende stappen
 
-De quickstart [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search) laat zien hoe u een zoekalgoritme van Grover kunt bouwen en uitvoeren, een van de populairste algoritmen uit de kwantumcomputing en een goed voorbeeld van een Q#-programma dat kan worden gebruikt voor het oplossen van echte problemen met kwantumcomputing.  
+De zelfstudie [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search) laat zien hoe u een zoekalgoritme van Grover kunt bouwen en uitvoeren, een van de populairste algoritmen uit de kwantumcomputing en een goed voorbeeld van een Q#-programma dat kan worden gebruikt voor het oplossen van echte problemen met kwantumcomputing.  
 
 In [Aan de slag met de Quantum Development Kit](xref:microsoft.quantum.welcome) vindt u meer manieren om te leren werken met Q# en kwantumprogrammering.
 
