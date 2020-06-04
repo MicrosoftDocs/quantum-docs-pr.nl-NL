@@ -3,7 +3,11 @@ uid: microsoft.quantum.measurement.mresetx
 name: MResetX
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Hiermee wordt één Qubit in de X-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+summary: >-
+  Hiermee wordt één Qubit in de X-eenheid gemeten en teruggezet naar een vaste begin status na de meting.
+
+
+  Voert een meting met één Qubit uit in de $X $-soort_jaar en zorgt ervoor dat de Qubit wordt geretourneerd naar $ \ket {0} $ na de meting.
 syntax: 'operation MResetX (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -15,13 +19,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Het resultaat van het `target` meten van de Pauli-$X $ soort_jaar.
+  - summary: Het resultaat van het meten van `target` de Pauli-$X $ soort_jaar.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: de0422b51d7772892919ee1faeff1f27e9d0616b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 72df2fcf966fcda09ef35e644007e713780e7a68
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681413"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84327438"

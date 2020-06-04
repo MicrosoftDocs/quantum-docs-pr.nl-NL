@@ -6,6 +6,8 @@ functions:
   summary: Hierbij wordt bevestigd dat twee matrices van Boole-waarden gelijk zijn.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Hierbij wordt bevestigd dat twee matrices van gehele waarden gelijk zijn.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Declareert dat een klassieke voor waarde ONWAAR is.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: De huidige status van de doel computer dumpen.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,21 +36,21 @@ functions:
   summary: Hierbij wordt bevestigd dat een klassieke drijvende-komma waarde de verwachte waarde heeft tot een kleine tolerantie van 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Bevestiging dat opgegeven qubits de status $ \ket{0}$ heeft.
+  summary: Bevestiging dat opgegeven qubits de status $ \ket {0} $ heeft.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: De bevestiging dat de opgegeven qubits zich in ${0}\ket $-status bevindt, tot een gegeven tolerantie.
+  summary: De bevestiging dat de opgegeven qubits zich in $ \ket $-status bevindt, {0} tot een gegeven tolerantie.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
 
 
-    Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ en $ \ket{i} $ (+ 1 eigenstate van Pauli Y-operator) is.
+    Deze bevestiging wordt geïmplementeerd door de actie te controleren van de bewerkingen in alle provincies van het formulier $V _0 \otimes... \otimes V_ {n-1} $, waarbij $V _k $ een van de statussen $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ en $ \ket{i} $ (+ 1 Eigenstate van Pauli Y-operator) is.
 
 
     Deze verklaring maakt gebruik van $n $ qubits en vereist dat meerdere aanroepen van de bewerkingen worden vergeleken.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Hiermee wordt gecontroleerd of `givenU` de bewerking gelijk is aan `expectedU` de bewerking op de opgegeven invoer grootte door de actie van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
+    Hiermee wordt gecontroleerd of de bewerking `givenU` gelijk is aan de bewerking `expectedU` op de opgegeven invoer grootte door de actie van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
 
     Dit is een vereiste, maar niet voldoende, voor waarde voor de gelijkheid van twee unitaries.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,7 +64,7 @@ operations:
 
     Deze bevestiging kan worden gebruikt om ervoor te zorgen dat een geoptimaliseerde versie van een bewerking identiek is aan de Naïve-implementatie, of dat een bewerking die op een bereik van niet-Quantum gegevens reageert, overeenkomt met de bekende gevallen.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Beweringen dat de `q` Qubit zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
+  summary: Beweringen dat de Qubit `q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Beweringen dat een Qubit de verwachte status heeft.
@@ -74,7 +76,7 @@ operations:
 
     Met het laatste argument wordt de tolerantie gedefinieerd waarmee de bevestiging wordt gemaakt.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Beweringen dat de `q` Qubit zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
+  summary: Beweringen dat de Qubit `q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Een door het compiler herkend kenmerk waarmee een alternatieve naam kan worden gedefinieerd die kan worden gebruikt bij het laden van een type of aanroepable voor test doeleinden.
@@ -82,9 +84,9 @@ newtypes:
   summary: Door het compiler herkend kenmerk dat wordt gebruikt om een eenheids test te markeren.
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676975"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326588"

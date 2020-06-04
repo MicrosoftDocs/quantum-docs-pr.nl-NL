@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: Meet de opgegeven Pauli-operator met behulp van een expliciete Scratch Qubit om de meting uit te voeren.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: Hiermee wordt één Qubit in de X-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+  summary: Hiermee wordt één Qubit in de X-eenheid gemeten en teruggezet naar een vaste begin status na de meting.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Hiermee wordt één Qubit in de Y-eenheid gemeten en opnieuw ingesteld op de standaard status | 0 〉 na de meting.
+  summary: Hiermee wordt één Qubit in de Y-eenheid gemeten en teruggezet naar een vaste begin status na de meting.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Hiermee wordt één Qubit in de `Z` basis gemeten en teruggezet naar de standaard status | 0 〉 na de meting.
+  summary: Hiermee wordt één Qubit in de Z-basis gemeten en teruggezet naar een vaste begin status na de meting.
 - uid: microsoft.quantum.measurement.multim
   summary: Meet elk Qubit in een bepaalde matrix in de standaard basis.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Hiermee wordt een Qubit ingesteld op basis van de status van de berekening door de Qubit te meten en zo nodig een bit te spie gelen.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673148"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326622"

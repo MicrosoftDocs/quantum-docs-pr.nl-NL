@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, retourneert een matrix die bestaat uit die elementen die voldoen aan het predicaat.
 - uid: microsoft.quantum.arrays.fold
-  summary: Herhaalt een functie `f` via een matrix `array`, waarbij wordt `f(f(f(initialState, array[0]), array[1]), ...)`geretourneerd.
+  summary: Herhaalt een functie `f` via een matrix `array` , waarbij wordt geretourneerd `f(f(f(initialState, array[0]), array[1]), ...)` .
 - uid: microsoft.quantum.arrays.head
   summary: Retourneert het eerste element van de matrix.
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: Op basis van een matrix, retourneert een bereik over de indices van die matrix, die geschikt is voor gebruik in een for-lus.
 - uid: microsoft.quantum.arrays.isempty
   summary: Retourneert waar als en alleen als een matrix leeg is.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: Uitvoer waar als en alleen als een bepaalde matrix een permutatie vertegenwoordigt.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Retourneert een functie die elementen van die matrix retourneert, uitgedrukt in een matrix.
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673396"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326707"

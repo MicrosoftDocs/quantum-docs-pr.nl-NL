@@ -20,12 +20,8 @@ functions:
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
   summary: Decoder voor het Z-deel van de stabilisatorer groep van de ⟦ ⟧ Steane Quantum code.
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: Voor een gegeven tabel met Pauli-bewerkingen op een bepaald REGI ster van qubits retourneert deze functie een object van `RecoveryFn` het type dat alle informatie bevat die nodig is voor het uitvoeren van een tabel-lookup-code ring met betrekking tot de opgegeven matrix van Pauli-bewerkingen.
+  summary: Voor een gegeven tabel met Pauli-bewerkingen op een bepaald REGI ster van qubits retourneert deze functie een object van het type `RecoveryFn` dat alle informatie bevat die nodig is voor het uitvoeren van een tabel-lookup-code ring met betrekking tot de opgegeven matrix van Pauli-bewerkingen.
 operations:
-- uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBitFlipDecoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
-- uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nBitFlipEncoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decoderen van de [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-Flip code.
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -38,10 +34,6 @@ operations:
   summary: Codeert in de ⟦ van 5, 1, 3 en ⟧.
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: Een coderings bewerking waarbij een niet-versleutelde Quantum wordt toegewezen aan een versleuteld Quantum REGI ster onder de Quantum code ⟦, 1, 3 ⟧ Steane.
-- uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nFiveQubitCodeDecoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
-- uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nFiveQubitCodeEncoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: Hiermee roteert u één Qubit door π/4 over de Y-as.
 - uid: microsoft.quantum.errorcorrection.knilldistill
@@ -49,16 +41,12 @@ operations:
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Meet de opgegeven set met Generators van een stabilisatoren groep.
 - uid: microsoft.quantum.errorcorrection.recover
-  summary: Voert één afronding van de fout correctie uit op basis van een `QECC` Quantum code die wordt beschreven door een type.
+  summary: Voert één afronding van de fout correctie uit op basis van een Quantum code die wordt beschreven door een `QECC` type.
 - uid: microsoft.quantum.errorcorrection.recovercss
-  summary: Voert één afronding van de fout correctie uit op basis van een `CSS` Quantum code die wordt beschreven door een type.
-- uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSteaneCodeDecoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.decodefromsteanecode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
-- uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nSteaneCodeEncoder is afgeschaft. Gebruik @\"microsoft.quantum.errorcorrection.encodeintosteanecode\" in plaats daarvan.\nGebruik @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: Voert één afronding van de fout correctie uit op basis van een Quantum code die wordt beschreven door een `CSS` type.
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: Vertegenwoordigt een code van Calderbank – Shor – Steane (CSS) zoals gedefinieerd door de encoder, decoder en de Syndrome-meet procedures `X` voor `Z` en fouten respectievelijk.
+  summary: Vertegenwoordigt een code van Calderbank – Shor – Steane (CSS) zoals gedefinieerd door de encoder, decoder en de Syndrome-meet procedures voor `X` en `Z` fouten respectievelijk.
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
     Hiermee wordt een bewerking aangeduid waarmee een gecodeerd REGI ster wordt gedecodeerd in een fysiek REGI ster en het scratch qubits dat wordt gebruikt om een Syndrome op te nemen.
@@ -72,7 +60,7 @@ newtypes:
 
     Het eerste argument wordt opgehaald als het fysieke REGI ster dat wordt gecodeerd, terwijl het tweede argument wordt gebruikt om de Scratch-register te zijn die wordt toegepast.
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: Type voor het REGI ster van `Qubit[]` fysieke qubits die de logische qubits coderen.
+  summary: Type voor het REGI ster van fysieke qubits `Qubit[]` die de logische qubits coderen.
 - uid: microsoft.quantum.errorcorrection.qecc
   summary: Hiermee wordt een code voor fout correctie aangeduid, zoals gedefinieerd door de coderings-, decoder-en Syndrome-meet procedure.
 - uid: microsoft.quantum.errorcorrection.recoveryfn
@@ -82,9 +70,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Hiermee wordt een bewerking aangeduid die wordt gebruikt om de Syndrome van een fout-correct code blok te meten.
 metadata:
-  ms.openlocfilehash: b4d7aaa55fee7e99b9c96ebf3cecb36706a66062
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eed1de587e6bfbfc197113c5cd280ae72df1ce7e
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673333"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326605"

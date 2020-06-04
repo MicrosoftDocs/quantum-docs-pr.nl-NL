@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Retourneert de absolute waarde van een complex type `Complex`getal.
+  summary: Retourneert de absolute waarde van een complex type getal `Complex` .
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Retourneert de absolute waarde van een complex type `ComplexPolar`getal.
+  summary: Retourneert de absolute waarde van een complex type getal `ComplexPolar` .
 - uid: microsoft.quantum.math.absd
   summary: Retourneert de absolute waarde van een drijvende-komma getal met dubbele precisie.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Retourneert de absolute waarde van een Big geheel getal.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Retourneert de kwadraat absolute waarde van een complex type `Complex`.
+  summary: Retourneert de kwadraat absolute waarde van een complex type `Complex` .
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Retourneert de kwadraat absolute waarde van een complex type `ComplexPolar`.
+  summary: Retourneert de kwadraat absolute waarde van een complex type `ComplexPolar` .
 - uid: microsoft.quantum.math.arccos
   summary: Retourneert de hoek waarvan de cosinus het opgegeven getal is.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Hiermee wordt de inverse hyperbolische tangens van een getal berekend.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Retourneert de fase van een complex type `Complex`getal.
+  summary: Retourneert de fase van een complex type getal `Complex` .
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Retourneert de fase van een complex type `ComplexPolar`getal.
+  summary: Retourneert de fase van een complex type getal `ComplexPolar` .
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Voor een niet-negatief geheel `a`getal retourneert het aantal bits dat is vereist om `a`aan te duiden.
+    Voor een niet-negatief geheel getal `a` retourneert het aantal bits dat is vereist om aan te duiden `a` .
 
 
     Dat wil zeggen, retourneert de kleinste $n $, zodat $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Voor een niet-negatief geheel `a`getal retourneert het aantal bits dat is vereist om `a`aan te duiden.
+    Voor een niet-negatief geheel getal `a` retourneert het aantal bits dat is vereist om aan te duiden `a` .
 
 
     Dat wil zeggen, retourneert de kleinste $n $, zodat $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: Retourneert het kleinste gehele getal dat groter is dan of gelijk is aan het opgegeven getal.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Converteert een complex getal van het `Complex` type naar een complex type `ComplexPolar`.
+  summary: Converteert een complex getal van het type `Complex` naar een complex type `ComplexPolar` .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Converteert een complex getal van het `ComplexPolar` type naar een complex type `Complex`.
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nComplexPolarToComplex is afgeschaft. Gebruik @\"microsoft.quantum.math.complexpolarascomplex\" in plaats daarvan."
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Afgeschaft\n\nComplexToComplexPolar is afgeschaft. Gebruik @\"microsoft.quantum.math.complexascomplexpolar\" in plaats daarvan."
+  summary: Converteert een complex getal van het type `ComplexPolar` naar een complex type `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Hiermee wordt gezocht naar de voortgezette `fraction` fractie convergent die het dichtst bij met de noemer kleiner of gelijk is aan`denominatorBound`
+  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Hiermee wordt gezocht naar de voortgezette `fraction` fractie convergent die het dichtst bij met de noemer kleiner of gelijk is aan`denominatorBound`
+  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Retourneert de cosinus van de opgegeven hoek.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Voert een modulaire deling uit op een getal verheven tot de macht van een ander getal.
 - uid: microsoft.quantum.math.modulusi
-  summary: Berekent het canonieke residu van `value` modulo. `modulus`
+  summary: Berekent het canonieke residu van `value` modulo `modulus` .
 - uid: microsoft.quantum.math.modulusl
-  summary: Berekent het canonieke residu van `value` modulo. `modulus`
+  summary: Berekent het canonieke residu van `value` modulo `modulus` .
 - uid: microsoft.quantum.math.negationc
   summary: Retourneert de unaire ontkenning van een invoer.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: Retourneert de som van twee invoer waarden.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Retourneert de `L(p)` norm van een vector van `Double`s.
+    Retourneert de `L(p)` norm van een vector van `Double` s.
 
 
-    Op basis van een matrix $x $ van het type `Double[]`, retourneert dit de $p $-norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Op basis van een matrix $x $ van het type `Double[]` , retourneert dit de $p $-norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normaliseert een vector van `Double`s in de `L(p)` norm.
+    Normaliseert een vector van `Double` s in de `L(p)` norm.
 
 
-    Op basis van een matrix $x $ van type `Double[]`, wordt hiermee een matrix geretourneerd waarin alle elementen worden gedeeld door de $p $-norm $\|x\|_p $.
+    Op basis van een matrix $x $ van type, wordt hiermee `Double[]` een matrix geretourneerd waarin alle elementen worden gedeeld door de $p $-norm $ \| x \| _p $.
 - uid: microsoft.quantum.math.powc
   summary: Retourneert een getal verheven tot een opgegeven macht.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: Hiermee berekent u het integraal deel van een getal.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Vertegenwoordigt een rationeel nummer van het `p/q`formulier. Geheel `p` getal is het eerste element van de tuple `q` en is het tweede element van de tuple.
+  summary: Vertegenwoordigt een rationeel nummer van het formulier `p/q` . Geheel getal `p` is het eerste element van de tuple en `q` is het tweede element van de tuple.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Vertegenwoordigt een complex getal door de reële en imaginaire componenten.
@@ -243,7 +239,7 @@ newtypes:
 
     De polaire weer gave van een complex getal is $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Vertegenwoordigt een rationeel nummer van het `p/q`formulier. Geheel `p` getal is het eerste element van de tuple `q` en is het tweede element van de tuple.
+  summary: Vertegenwoordigt een rationeel nummer van het formulier `p/q` . Geheel getal `p` is het eerste element van de tuple en `q` is het tweede element van de tuple.
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat klassieke wiskundige functies en gegevens typen."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Retourneert een van de Pauli-Opera tors (single-Qubit) op wille keurige wijze.
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673163"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326487"
