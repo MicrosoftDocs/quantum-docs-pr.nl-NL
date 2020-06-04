@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431067"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327795"
 ---
 # <a name="operations-and-functions-in-q"></a>Bewerkingen en functies in Q #
 
@@ -670,5 +670,6 @@ Er zijn twee belang rijke opmerkingen over het gebruik van recursie, echter:
 - Bij het uitvoeren van een echt Quantum apparaat kan de stack-ruimte beperkt zijn en kan een grondige recursie leiden tot een runtime-fout.
   Met name de Q #-compiler en runtime identificeren en optimaliseren de staart recursie niet.
 
-## <a name="whats-next"></a>Hoe nu verder?
+## <a name="next-steps"></a>Volgende stappen
+
 Meer informatie over [variabelen](xref:microsoft.quantum.guide.variables) in Q #.

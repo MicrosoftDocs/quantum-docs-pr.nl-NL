@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426708"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327608"
 ---
 # <a name="quantum-computing-glossary"></a>Woorden lijst voor Quantum Computing
 
@@ -55,7 +55,7 @@ De factor waarmee de grootte van een [eigenvector](xref:microsoft.quantum.glossa
 
 Een vector waarvan de richting wordt gewijzigd door een bepaalde trans formatie en waarvan de grootte wordt gewijzigd door een factor die overeenkomt met de [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)van die vector. Op basis van een vier Kante matrix $M $ en een eigenvalue $c $, $Mv = AVK $, waarbij $v $ een eigenvector van de matrix is en een complex aantal argumenten kan zijn. Zie [Advanced matrix concepten](xref:microsoft.quantum.concepts.matrix-advanced)(Engelstalig) voor meer informatie.
 
-## <a name="entanglement"></a>Entanglement
+## <a name="entanglement"></a>Verstrengeling
 
 Quantum deeltjes, zoals [qubits](xref:microsoft.quantum.glossary#qubit), kunnen worden aangesloten of *Entangled* , zodat ze onafhankelijk van elkaar kunnen worden beschreven. De meet resultaten worden ook gecorreleerd wanneer ze oneindig ver van elkaar zijn gescheiden. Entanglement is essentieel om de [status](xref:microsoft.quantum.glossary#quantum-state) van een Qubit te [meten](xref:microsoft.quantum.glossary#measurement) .  Zie [Advanced matrix concepten](xref:microsoft.quantum.concepts.matrix-advanced)(Engelstalig) voor meer informatie.
 
@@ -120,7 +120,11 @@ Een set van drie unitary matrices met een matrix die de en de `X` Quantum-bewerk
 
 ## <a name="quantum-circuit-diagram"></a>Quantum circuit diagram
 
-Een methode voor het grafisch weer geven van de volg orde van de [bewerkingen](xref:microsoft.quantum.glossary#operation) (of [poorten](xref:microsoft.quantum.glossary#gate)) voor eenvoudige Quantum Program ma's, zoals ![ voorbeeld diagram van een circuit ](~/media/qpe.png) . Zie [Quantum circuits](xref:microsoft.quantum.concepts.circuits)voor meer informatie.
+Een methode voor het grafisch weer geven van de volg orde van de [bewerkingen](xref:microsoft.quantum.glossary#operation) (of [poorten](xref:microsoft.quantum.glossary#gate)) voor eenvoudige Quantum-Program ma's, bijvoorbeeld 
+
+![Voorbeeld diagram van circuit](~/media/qpe.png). 
+
+Zie [Quantum circuits](xref:microsoft.quantum.concepts.circuits)voor meer informatie.
 
 ## <a name="quantum-libraries"></a>Quantum bibliotheken
 
@@ -144,7 +148,7 @@ Een Quantum algoritme dat probabilistically slaagt. Als de routine is mislukt, w
 
 ## <a name="superposition"></a>Superpositie
 
-Het concept in het quantum computing dat een [Qubit](xref:microsoft.quantum.glossary#qubit) is een lineaire combi natie van twee staten, $ \ket{\0} $ en $ \ket{\1} $, totdat deze wordt [gemeten](xref:microsoft.quantum.glossary#measurement).  Zie [informatie over Quantum Computing](xref:microsoft.quantum.overview.understanding)voor meer informatie.
+Het concept in het quantum computing dat een [Qubit](xref:microsoft.quantum.glossary#qubit) is een lineaire combi natie van twee staten, $ \ket {0} $ en $ \ket {1} $, totdat deze wordt [gemeten](xref:microsoft.quantum.glossary#measurement).  Zie [informatie over Quantum Computing](xref:microsoft.quantum.overview.understanding)voor meer informatie.
 
 ## <a name="target-machine"></a>Doel computer
 

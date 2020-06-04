@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609138"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327285"
 ---
 # <a name="types-in-q"></a>Typen in Q#
 
@@ -63,7 +63,8 @@ In het tweede voor beeld ziet u dat dit een mogelijk gekartelde matrix van matri
 Q # biedt geen ondersteuning voor rechthoekige matrices met meerdere dimensies.
 
 Een matrix waarde kan worden geschreven in Q #-bron code met behulp van rechte haken rond de elementen van een matrix, zoals in `[PauliI, PauliX, PauliY, PauliZ]` .
-Het type van een matrix letterlijke waarde wordt bepaald door het algemene basis type van alle items in de matrix. 
+Het type van een matrix letterlijke waarde wordt bepaald door het algemene basis type van alle items in de matrix. Wanneer u probeert een matrix te maken met elementen die geen gemeen schappelijk basis type hebben, wordt er een fout gegenereerd.  
+Zie [matrices van callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables) voor een voor beeld hiervan.
 
 > [!WARNING]
 > De elementen van een matrix kunnen niet worden gewijzigd nadat de matrix is gemaakt.
@@ -291,7 +292,8 @@ Bij het aanroepen van een type geparametriseerde aanroepable moeten alle argumen
 
 Q # biedt geen mechanisme voor het beperken van de mogelijke typen die voor een type parameter kunnen worden vervangen.
 
-## <a name="whats-next"></a>Hoe nu verder?
+## <a name="next-steps"></a>Volgende stappen
+
 Nu u alle typen hebt gezien die de Q #-taal vormen, kunt u in het hoofd om [expressies in q # te typen](xref:microsoft.quantum.guide.expressions) om te zien hoe u expressies van deze verschillende typen maakt en bewerkt.
 
 

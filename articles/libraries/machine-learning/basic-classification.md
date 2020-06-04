@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: f42e3e4492f934d7a8f03d4fec6fa0de765401d7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909922"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327642"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basis classificatie: gegevens classificeren met de QDK
 
@@ -22,7 +22,7 @@ In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behu
 ## <a name="prerequisites"></a>Vereisten
 
 - De Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Een Q#-project maken](xref:microsoft.quantum.howto.createproject)
+- Een Q #-project maken voor een [python-hostprogramma](xref:microsoft.quantum.install.python) of een [C#-hostprogramma](xref:microsoft.quantum.install.cs).
 
 ## <a name="host-program"></a>Host-programma
 
@@ -34,7 +34,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python met Visual Studio Code of de opdrachtregel](#tab/tabid-python)
 
-    Als u de classificatie Q # van python wilt uitvoeren, slaat u de volgende code op als `host.py`. Houd er rekening mee dat u ook de Q #-bestands `Training.qs` nodig hebt die verderop in deze zelf studie wordt uitgelegd.
+    Als u de ' Q #-classificatie van python wilt uitvoeren, slaat u de volgende code op als `host.py` . Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# met Visual Studio Code of de opdrachtregel](#tab/tabid-csharp)
 
-    Als u de classificatie # ' Q # ' C#wilt uitvoeren, slaat u de volgende code op als `Host.cs`. Houd er rekening mee dat u ook de Q #-bestands `Training.qs` nodig hebt die verderop in deze zelf studie wordt uitgelegd.
+    Als u de ' Q #-classificatie van C# wilt uitvoeren, slaat u de volgende code op als `Host.cs` . Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="c-with-visual-studio-2019"></a>[C# met Visual Studio 2019](#tab/tabid-vs2019)
 
-    Als u uw nieuwe Q #-programma C# wilt uitvoeren vanuit Visual Studio, wijzigt u `Host.cs` zodat C# de volgende code wordt toegevoegd. Houd er rekening mee dat u ook de Q #-bestands `Training.qs` nodig hebt die verderop in deze zelf studie wordt uitgelegd.
+    Als u uw nieuwe Q #-programma van C# in Visual Studio wilt uitvoeren, wijzigt `Host.cs` u de volgende C#-code. Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -76,17 +76,17 @@ Uw hostprogramma bestaat uit drie delen:
     ```
     ***
 
-## <a name="q-classifier-code"></a>Q\#-classificatie code
+## <a name="q-classifier-code"></a>Q- \# classificeerder code
 
 Nu gaan we kijken hoe de bewerkingen die worden aangeroepen door het hostprogramma worden gedefinieerd in Q #.
-We slaan de volgende code op in een bestand met de naam `Training.qs`.
+We slaan de volgende code op in een bestand met de naam `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
 De belangrijkste functies en bewerkingen die zijn gedefinieerd in de bovenstaande code zijn:
 
-- `ClassifierStructure() : ControlledRotation[]`: in deze functie is de structuur van het circuit model ingesteld door de lagen van de beheerde poorten toe te voegen. Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking `TrainSequentialClassifier` die in de bibliotheek is opgenomen, aan te roepen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
+- `ClassifierStructure() : ControlledRotation[]`: in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen. Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.
+- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren. Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie. Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.
 
 ## <a name="next-steps"></a>Volgende stappen

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431203"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327302"
 ---
 # <a name="type-expressions-in-q"></a>Type-expressies in Q #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Een letterlijke matrix is een reeks van een of meer element expressies, gescheiden door komma's, tussen `[` en `]` .
 Alle elementen moeten compatibel zijn met hetzelfde type.
 
-
 Als er twee matrices van hetzelfde type zijn opgegeven, kan de binaire `+` operator worden gebruikt voor het vormen van een nieuwe matrix die de samen voeging van de twee matrices vormt.
 Bijvoorbeeld: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Bijvoorbeeld: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
 
 Op basis van een type en een `Int` expressie `new` kan de operator worden gebruikt voor het toewijzen van een nieuwe matrix met de opgegeven grootte.
 Bijvoorbeeld, `new Int[i + 1]` zou een nieuwe `Int` matrix met elementen kunnen toewijzen `i + 1` .
+
+Lege letterlijke arrays, `[]` , zijn niet toegestaan.
+In plaats daarvan `new ★[0]` kunt u, waar `★` als tijdelijke aanduiding voor een geschikt type, de gewenste matrix met een lengte van nul maken.
 
 De elementen van een nieuwe matrix worden geïnitialiseerd op een type-afhankelijke standaard waarde.
 In de meeste gevallen is dit een bepaalde variatie van nul.
@@ -373,8 +375,7 @@ Bijvoorbeeld als `Op1` , `Op2` , en `Op3` alle zijn `Qubit[] => Unit` , maar `Op
 - `[Op1, Op3]`is een matrix met `(Qubit[] => Unit is Adj)` bewerkingen.
 - `[Op2, Op3]`is een matrix met `(Qubit[] => Unit is Ctl)` bewerkingen.
 
-Lege letterlijke arrays, `[]` , zijn niet toegestaan.
-In plaats daarvan `new ★[0]` kunt u, waar `★` als tijdelijke aanduiding voor een geschikt type, de gewenste matrix met een lengte van nul maken.
+Hoewel `(Qubit[] => Unit is Adj)` en bewerkingen echter `(Qubit[] => Unit is Ctl)` het gemeen schappelijke basis type hebben `(Qubit[] => Unit)` , is het niet mogelijk dat matrices *van* deze opera tors een gemeen schappelijk basis type hebben. Er wordt bijvoorbeeld `[[Op1], [Op2]]` momenteel een fout gegenereerd omdat er wordt geprobeerd een matrix te maken van de incompatibele matrix typen `(Qubit[] => Unit is Adj)[]` en `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Voorwaardelijke expressies
@@ -475,8 +476,8 @@ Opera tors in volg orde van prioriteit, van hoog naar laag:
 
 Operator | Ariteit | Beschrijving | Typen operand
 ---------|----------|---------|---------------
- Volg`!` | Unaire | Uitpakken | Een door de gebruiker gedefinieerd type
- `-`, `~~~`, `not` | Unaire | Numerieke, negatieve, bitsgewijze complement, logische negatie | `Int`, `BigInt` of voor, `Double` of voor `-` `Int` `BigInt` `~~~` , `Bool` voor`not`
+ Volg`!` | Unair | Uitpakken | Een door de gebruiker gedefinieerd type
+ `-`, `~~~`, `not` | Unair | Numerieke, negatieve, bitsgewijze complement, logische negatie | `Int`, `BigInt` of voor, `Double` of voor `-` `Int` `BigInt` `~~~` , `Bool` voor`not`
  `^` | Binair | Geheel getal energie | `Int`of `BigInt` voor de basis `Int` voor de exponent
  `/`, `*`, `%` | Binair | Deling, vermenigvuldiging, integer modulus | `Int`, `BigInt` of `Double` voor `/` en `*` , `Int` of `BigInt` voor`%`
  `+`, `-` | Binair | Toevoeging of teken reeks-en matrix samenvoeging, aftrekken | `Int`, `BigInt` of `Double` , ook `String` of een matrix type voor`+`
@@ -486,11 +487,12 @@ Operator | Ariteit | Beschrijving | Typen operand
  `&&&` | Binair | Bitsgewijze AND | `Int` of `BigInt`
  `^^^` | Binair | Bitsgewijze XOR | `Int` of `BigInt`
  <code>\|\|\|</code> | Binair | Bitsgewijze OR | `Int` of `BigInt`
- `and` | Binair | Logische en | `Bool`
- `or` | Binair | Logische of | `Bool`
+ `and` | Binair | Logische AND | `Bool`
+ `or` | Binair | Logische OR | `Bool`
  `..` | Binair/Ternair | De operator Range | `Int`
  `?` `|` | Ternair | Voorwaardelijk | `Bool`voor de linkerkant
 `w/` `<-` | Ternair | Kopiëren en bijwerken | Zie [expressies voor kopiëren en bijwerken](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Hoe nu verder?
+## <a name="next-steps"></a>Volgende stappen
+
 Nu u met de expressies in Q # kunt werken, kunt u de [bewerkingen en functies in q #](xref:microsoft.quantum.guide.operationsfunctions) gebruiken om te leren hoe u bewerkingen en functies definieert en aanroept.

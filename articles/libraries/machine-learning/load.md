@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909956"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327659"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Uw eigen gegevens sets laden en classificeren
 
@@ -25,7 +25,7 @@ We raden u met name aan om onze sjabloon te gebruiken voor het laden van de gege
 
 Stel dat we een training-gegevensset $ (x, y) $ van grootte $N = $2 waarbij elk exemplaar $x _i $ van $x $ drie functies heeft: $x _ {I1} $, $x _ {I2} $ en $x _ {i3} $.
 De validatie gegevensset heeft dezelfde structuur.
-Deze datsets kunnen worden aangeduid met een `data.json`-bestand dat vergelijkbaar is met het volgende:
+Deze datsets kunnen worden aangeduid met een `data.json` bestand dat vergelijkbaar is met het volgende:
 
 ```json
 {
@@ -79,15 +79,15 @@ Stel dat er een kleine gegevensset is met de hoogten en het gewicht van verschil
 | 0,91      | 44         | Honden    |
 | 0,86      | 31          | Honden    |
 | 0,32      | 5         | Cat5    |
-| 0.25      | 4          | Cat5    |
+| 0,25      | 4          | Cat5    |
 
 Het proces is:
 
 - Eerst moet u de gegevensset scheiden in training en validatie. In dit geval kunnen we alleen de eerste drie voor beelden voor de training en de rest van voor beelden voor validatie nemen. Over het algemeen is het een goed idee om wille keurig de training en validatie gegevensset te samplen om ongewenste BIASS in de trainings gegevens te voor komen.
-- Ten tweede moeten we een numeriek label toewijzen aan elke klasse. Houd er rekening mee dat de QML-bibliotheek alleen tijdelijke classificatie problemen heeft. Daarom zullen we het label 0 toewijzen aan de klasse `Dog` en het nummer 1 aan de klasse `Cat`.
+- Ten tweede moeten we een numeriek label toewijzen aan elke klasse. Houd er rekening mee dat de QML-bibliotheek alleen tijdelijke classificatie problemen heeft. Daarom zullen we het label 0 toewijzen aan de klasse `Dog` en het nummer 1 aan de klasse `Cat` .
 - Ten slotte vullen we de sjabloon in met behulp van de gegevens uit de gegevensset. Houd er rekening mee dat voor Big gegevens sets een klein script moet worden gemaakt om de sjabloon automatisch te genereren op basis van uw specifieke gegevensset. Dit script is afhankelijk van de oorspronkelijke indeling van uw gegevensset.
 
-Voor onze gegevensset is het `data.json`-bestand:
+Voor onze gegevensset `data.json` is het bestand:
 
 ```json
 {
@@ -143,18 +143,18 @@ Zodra u uw gegevens hebt geserialiseerd als een JSON-bestand, kunt u deze laden 
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python biedt het [ingebouwde `json`-pakket](https://docs.python.org/3.7/library/json.html) voor het werken met JSON-geserialiseerde gegevens:
+Python biedt het [ingebouwde `json` pakket](https://docs.python.org/3.7/library/json.html) voor het werken met JSON-geserialiseerde gegevens:
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-Het .NET Core-platform biedt het [`System.Text.Json`-pakket](https://www.nuget.org/packages/System.Text.Json) voor het werken met JSON-geserialiseerde gegevens:
+Het .NET Core-platform biedt het [ `System.Text.Json` pakket](https://www.nuget.org/packages/System.Text.Json) voor het werken met JSON-geserialiseerde gegevens:
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>Volgende stappen
+## <a name="next-steps"></a>Volgende stappen
 
 Nu bent u klaar om uw eigen experimenten uit te voeren met uw eigen gegevens sets. Probeer verschillende classificaties en gegevensset uit en draagt bij aan de community om uw resultaten te delen.

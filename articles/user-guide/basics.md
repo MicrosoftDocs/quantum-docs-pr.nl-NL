@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431152"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327319"
 ---
 # <a name="q-basics"></a>Q # basis principes
 
@@ -106,8 +106,7 @@ Voor expressie-evaluatie-instructies is een afsluit punt komma vereist.
 Bijna elk aspect van een Q #-programma is gebouwd met behulp van instructies, zodat niet alle informatie die betrekking heeft op de pagina kan worden opgenomen.
 De lexicale structuur en-opmaak worden echter beschreven op de pagina [q # bestands structuur](xref:microsoft.quantum.guide.filestructure) , de toewijzing van het symbool en het bereik bij [variabelen in q #](xref:microsoft.quantum.guide.variables), en controle stroom lussen zoals `for` bij [controle stroom in q #](xref:microsoft.quantum.guide.controlflow).
 
-
-## <a name="whats-next"></a>Volgende stappen
+## <a name="next-steps"></a>Volgende stappen
 In de rest van deze hand leiding wordt uitgelegd hoe u Q # kunt gebruiken om complexe Quantum Programma's te maken met behulp van de basis bouwstenen van bewerkingen, functies en typen.
 
 Om aan de slag te gaan, kunt u beginnen met het leren [van typen in Q #](xref:microsoft.quantum.guide.types).

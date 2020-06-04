@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 53f72f1d49ae32a5a8572a1cf68a66a1d9b45e4a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426908"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327562"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Het Microsoft Quantum Development Kit bijwerken (QDK)
 
@@ -21,8 +21,8 @@ Meer informatie over het bijwerken van de Microsoft Quantum Development Kit (QDK
 In dit artikel wordt ervan uitgegaan dat u de QDK al hebt geïnstalleerd. Als u voor de eerste keer installeert, raadpleegt u de [installatie handleiding](xref:microsoft.quantum.install).
 
 We raden u aan om de nieuwste versie van QDK up-to-date te houden. Volg deze update handleiding om een upgrade uit te voeren naar de meest recente versie van QDK. Het proces bestaat uit twee delen:
-1. uw bestaande Q #-bestanden en-projecten bijwerken om uw code uit te lijnen met een bijgewerkte syntaxis
-2. de QDK voor uw gekozen ontwikkel omgeving bijwerken 
+1. Het bijwerken van uw bestaande Q #-bestanden en-projecten om uw code uit te lijnen met een bijgewerkte syntaxis.
+2. De QDK voor uw gekozen ontwikkel omgeving bijwerken.
 
 ## <a name="updating-q-projects"></a>Q #-projecten bijwerken 
 
@@ -38,9 +38,9 @@ Ongeacht of u C# of python gebruikt om Q #-bewerkingen te hosten, volgt u deze i
 
 ### <a name="update-q-projects-in-visual-studio"></a>Update Q #-projecten in Visual Studio
  
-1. Update naar de nieuwste versie van Visual Studio 2019. Zie [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) voor instructies
-2. Open uw oplossing in Visual Studio
-3. Selecteer in het menu een **Build**  ->  **schone oplossing** bouwen
+1. Update naar de nieuwste versie van Visual Studio 2019. Zie [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) voor instructies.
+2. Open uw oplossing in Visual Studio.
+3. Selecteer in het menu een **Build**  ->  **schone oplossing**bouwen.
 4. Werk in elk van uw. csproj-bestanden het doel raamwerk bij naar `netcoreapp3.1` (of `netstandard2.1` als het een bibliotheek project is).
     Dat wil zeggen, regels van het formulier bewerken:
 
@@ -49,52 +49,96 @@ Ongeacht of u C# of python gebruikt om Q #-bewerkingen te hosten, volgt u deze i
     ```
 
     [Hier](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)vindt u meer informatie over het opgeven van doel raamwerken.
-5. Sla alle bestanden in uw oplossing op en sluit deze af
-6. Selecteer **extra**  ->  **opdracht regel**opdracht  ->  **prompt**
-7. Voer voor elk project in de oplossing de volgende opdracht uit:
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. Stel in elk van de. csproj-bestanden de SDK in op `Microsoft.Quantum.Sdk` , zoals aangegeven in de onderstaande regel. Het versie nummer moet het meest recent beschik bare zijn, en u kunt dit vaststellen door de [release opmerkingen](https://docs.microsoft.com/quantum/relnotes/)te bekijken.
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   Als uw projecten andere micro soft. Quantum-pakketten gebruiken (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht ook uit.
-8. Sluit de opdracht prompt en selecteer **Build**  ->  **Build Solution** (Selecteer *geen* oplossing opnieuw maken)
+6. Sla alle bestanden in uw oplossing op en sluit deze.
+
+7. Selecteer **extra**  ->  **opdracht regel**opdracht  ->  **prompt**. U kunt ook de pakket beheer console in Visual Studio gebruiken.
+
+8. Voer voor elk project in de oplossing de volgende opdracht uit om dit pakket te **verwijderen** :
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   Als uw projecten gebruikmaken van andere micro soft. Quantum-of micro soft. Azure. Quantum pakketten (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht toevoegen voor deze **toepassingen** uit om de gebruikte versie bij te werken.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. Sluit de opdracht prompt en selecteer **Build**  ->  **Build Solution** (Selecteer *geen* oplossing voor opnieuw samen stellen).
 
 U kunt nu door gaan om [uw Visual Studio QDK-extensie](#update-visual-studio-qdk-extension)bij te werken.
 
 
 ### <a name="update-q-projects-in-visual-studio-code"></a>Update Q #-projecten in Visual Studio code
 
-1. Open in Visual Studio code de map met het project dat moet worden bijgewerkt
-2. **Terminal**  ->  **nieuwe terminal** selecteren
-3. Volg de instructies voor het bijwerken met behulp van de opdracht regel (direct hieronder)
+1. Open in Visual Studio code de map met het project dat moet worden bijgewerkt.
+2. Selecteer **Terminal**  ->  **New Terminal**.
+3. Volg de instructies voor het bijwerken met behulp van de opdracht regel (direct hieronder).
 
 ### <a name="update-q-projects-using-the-command-line"></a>Q #-projecten bijwerken met behulp van de opdracht regel
 
-1. Ga naar de map die het project bestand bevat
+1. Navigeer naar de map met het hoofd project bestand.
+
 2. Voer de volgende opdracht uit:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. Werk in elk van uw. csproj-bestanden het doel raamwerk bij naar `netcoreapp3.1` (of `netstandard2.1` als het een bibliotheek project is).
-    Dat wil zeggen, regels van het formulier bewerken:
+3. Bepaal de huidige versie van de QDK. U kunt het vinden door de [release opmerkingen](https://docs.microsoft.com/quantum/relnotes/)te bekijken. De versie heeft een indeling die vergelijkbaar is met `0.11.2006.207` .
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. In elk van uw `.csproj` bestanden gaat u als volgt te werk:
 
-    [Hier](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)vindt u meer informatie over het opgeven van doel raamwerken.
-4. Voer de volgende opdracht uit:
+    - Werk het doel raamwerk bij naar `netcoreapp3.1` (of `netstandard2.1` als het een bibliotheek project is). Dat wil zeggen, regels van het formulier bewerken:
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    Als uw project gebruikmaakt van andere micro soft. Quantum-pakketten (bijvoorbeeld micro soft. Quantum. NUMERIC), voert u de opdracht ook uit.
-5. Sla alle bestanden op en sluit deze.
-6. Herhaal 1-4 voor elke project afhankelijkheid en ga vervolgens terug naar de map met het hoofd project en voer het volgende uit:
+        [Hier](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)vindt u meer informatie over het opgeven van doel raamwerken.
+
+    - De verwijzing naar de SDK in de project definitie vervangen. Zorg ervoor dat het versie nummer overeenkomt met de waarde die u in **stap 3**hebt bepaald.
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - Verwijder de verwijzing naar het pakket `Microsoft.Quantum.Development.Kit` indien aanwezig, dat wordt opgegeven in de volgende vermelding:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - Werk de versie van de micro soft Quantum-pakketten bij naar de meest recente versie van de QDK (bepaald in **stap 3**). Deze pakketten worden benoemd met de volgende patronen:
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        Verwijzingen naar pakketten hebben de volgende indeling:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - Sla het bijgewerkte bestand op.
+
+    - Herstel de afhankelijkheden van het project door het volgende te doen:
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. Ga terug naar de map met het hoofd project en voer het volgende uit:
 
     ```dotnetcli
     dotnet build [project_name].csproj
