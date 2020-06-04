@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: 55ac946aa935d3748b36ac99096a89d0db686835
-ms.sourcegitcommit: a03d79ca3f0774161a9f86a15528d36e1291acce
+ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433024"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327698"
 ---
 # <a name="what-are-the-q-programming-language-and-qdk"></a>Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
 
@@ -71,5 +71,4 @@ Q# is een opensource-programmeertaal voor het ontwikkelen van kwantumprogramma's
 
 ## <a name="next-steps"></a>Volgende stappen
 
-> [!div class="nextstepaction"]
-> [Lineaire algebra voor kwantumcomputing](xref:microsoft.quantum.overview.algebra)
+[Lineaire algebra voor kwantumcomputing](xref:microsoft.quantum.overview.algebra)
