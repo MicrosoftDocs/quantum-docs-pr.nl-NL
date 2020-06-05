@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 04f90e9f88cf17259f96532617ef6f092b56b859
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430744"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327744"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Kwantumcomputers en kwantumsimulators
 
@@ -70,5 +70,4 @@ De vooruitgang in de kwantumhardware en -techniek is snel aan het veranderen. Hi
 
 ## <a name="next-steps"></a>Volgende stappen
 
-> [!div class="nextstepaction"]
-> [Wat is de Q#-programmeertaal en de QDK?](xref:microsoft.quantum.overview.q-sharp)
+[Wat wordt verstaan onder de Q#-programmeertaal en de QDK?](xref:microsoft.quantum.overview.q-sharp)

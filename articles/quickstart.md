@@ -3,15 +3,15 @@ title: Kennismaken met verstrengeling met Q#
 description: Meer informatie over het schrijven van een kwantumprogramma in Q#. Een toepassing voor een Bell-toestand ontwikkelen met behulp van de Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426843"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327370"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
@@ -25,28 +25,27 @@ De naam Bell is een verwijzing naar de Bell-toestanden, wat specifieke kwantumto
 
 Als u klaar bent om te gaan coderen, voert u deze stappen uit voordat u verdergaat: 
 
-* [Installeer](xref:microsoft.quantum.install) de Quantum Development Kit met behulp van de taal en ontwikkelomgeving van uw voorkeur
+* Installeer de Quantum Development Kit voor [Python](xref:microsoft.quantum.install.python) of [.NET](xref:microsoft.quantum.install.cs).
 * Als u de QDK al hebt geïnstalleerd, controleert u of uw versie is [bijgewerkt](xref:microsoft.quantum.update) naar de nieuwste versie
 
 U kunt de instructies ook volgen zonder de QDK te installeren, om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Gedrag van qubits demonstreren met Q#
 
-Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.understanding).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een qubit in een **superpositie** zijn van gelijktijdig 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.understanding).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een [qubit](xref:microsoft.quantum.glossary#qubit) in een **superpositie** zijn van 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 De handeling van het meten produceert een binair resultaat en verandert de toestand van een qubit. Meting resulteert in een binaire waarde, 0 of 1.  De qubit gaat over van de toestand van superpositie (willekeurige richting) in een van de klassieke toestanden.  Daarna levert herhaling van dezelfde meting zonder tussenliggende bewerkingen hetzelfde binaire resultaat op.  
 
-Meerdere qubits kunnen worden **verstrengeld**. Wanneer we een meting uitvoeren van één verstrengelde qubit, wordt onze kennis van de toestand van de andere qubit(s) ook bijgewerkt.
+Meerdere qubits kunnen worden [**verstrengeld**](xref:microsoft.quantum.glossary#entanglement). Wanneer we een meting uitvoeren van één verstrengelde qubit, wordt onze kennis van de toestand van de andere qubit(s) ook bijgewerkt.
 
 We laten nu zien hoe dit gedrag wordt uitgedrukt in Q#.  U begint met het eenvoudigst mogelijke programma en bouwt dit op om kwantumsuperpositie en kwantumverstrengeling te demonstreren.
 
 ## <a name="setup"></a>Instellen
 
-Toepassingen die zijn ontwikkeld met de Quantum Development Kit van Microsoft bestaan uit twee delen:
+In deze zelfstudie wordt gebruikgemaakt van een hostprogramma en de studie bestaat uit twee delen:
 
-1. Een of meer kwantumalgoritmen, geïmplementeerd met behulp van de kwantumprogrammeertaal Q#.
-1. Een hostprogramma, geïmplementeerd in een programmeertaal als Python of C#, die als het belangrijkste toegangspunt fungeert en Q#-bewerkingen aanroept om een kwantumalgoritme uit te voeren.
+1. Een reeks kwantumalgoritmen, geïmplementeerd met behulp van de kwantumprogrammeertaal Q#.
+1. Een hostprogramma, geïmplementeerd in Python of C#, die als het belangrijkste toegangspunt fungeert en Q#-bewerkingen aanroept om de kwantumalgoritmen uit te voeren.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Zoals aangegeven in het overzicht, zijn onze statistieken voor de eerste qubit n
 
 Gefeliciteerd, u hebt uw eerste kwantumprogramma geschreven.
 
-## <a name="whats-next"></a>Volgende stappen
+## <a name="next-steps"></a>Volgende stappen
 
 De zelfstudie [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search) laat zien hoe u een zoekalgoritme van Grover kunt bouwen en uitvoeren, een van de populairste algoritmen uit de kwantumcomputing en een goed voorbeeld van een Q#-programma dat kan worden gebruikt voor het oplossen van echte problemen met kwantumcomputing.  
 
 In [Aan de slag met de Quantum Development Kit](xref:microsoft.quantum.welcome) vindt u meer manieren om te leren werken met Q# en kwantumprogrammering.
-

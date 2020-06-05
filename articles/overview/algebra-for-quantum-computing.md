@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430846"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327591"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineaire algebra voor kwantumcomputing
 
@@ -67,7 +67,7 @@ $$
 
 Het resultaat is een vierdimensionale matrix, waarbij elk element een waarschijnlijkheid vertegenwoordigt. Bijvoorbeeld: $ac$ is de kans dat de twee qubits ineenstorten tot 0 en 0, $ad$ is de kans op 0 en 1, enzovoort. 
 
-Net zoals de toestand van één qubit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ moet voldoen aan de vereiste $|a|^2 + |b|^2 = 1$ om een kwantumtoestand te vertegenwoordigen, moet de toestand van twee qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ voldoen aan de vereiste $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Net zoals de toestand van één qubit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ moet voldoen aan de vereiste $|a|^2 + |b|^2 = 1$ om een kwantumtoestand te vertegenwoordigen, moet de toestand van twee qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ voldoen aan de vereiste $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Samenvatting
 
@@ -75,5 +75,4 @@ Lineaire algebra is de standaardtaal voor het beschrijven van kwantumcomputing e
 
 ## <a name="next-steps"></a>Volgende stappen
 
-> [!div class="nextstepaction"]
-> [De QDK installeren](xref:microsoft.quantum.install)
+[De QDK installeren](xref:microsoft.quantum.install)
