@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327642"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422169"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basis classificatie: gegevens classificeren met de QDK
 
@@ -86,7 +86,7 @@ We slaan de volgende code op in een bestand met de naam `Training.qs` .
 De belangrijkste functies en bewerkingen die zijn gedefinieerd in de bovenstaande code zijn:
 
 - `ClassifierStructure() : ControlledRotation[]`: in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen. Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
+- `TrainHalfMoonModel() : (Double[], Double)`: deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren. Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie. Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.
 
 ## <a name="next-steps"></a>Volgende stappen

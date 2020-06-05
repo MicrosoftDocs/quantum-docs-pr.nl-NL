@@ -31,6 +31,8 @@
       href: quickstart.md
     - name: Zoekalgoritme van Grover implementeren
       href: quickstarts/search.md
+    - name: Programmeren op Qubit-niveau
+      href: tutorials/qft-tutorial.md
     - name: 'Q# leren met de Quantum Katas'
       href: intro-to-katas.md
     - name: 'Q#-codevoorbeelden'

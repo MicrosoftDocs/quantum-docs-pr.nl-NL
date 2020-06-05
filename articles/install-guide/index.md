@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 2041b90ba021b7640615d73c35841cc21f025ac0
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: a5230f506bce02c331d22d6a428b3bd92052bbd4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426461"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327561"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum development kit (QDK) installeren
 
@@ -29,10 +29,10 @@ Ze kunnen ook worden gekoppeld met een hostprogramma dat is geschreven in een .N
 
 De QDK is beschikbaar voor meerdere ontwikkelomgevingen. Selecteer uw voorkeursinstellingen vanuit:
 
-[**Ontwikkelen met Q#-opdrachtregeltoepassing**](xref:microsoft.quantum.install.standalone): kies deze methode als u wilt werken met Q# vanaf de opdrachtregel. Hiervoor is geen stuurprogramma of hostprogramma vereist, zoals voor de onderstaande opties.
+[Ontwikkelen met Q#-opdrachtregeltoepassing](xref:microsoft.quantum.install.standalone): kies deze methode als u wilt werken met Q# vanaf de opdrachtregel. Hiervoor is geen stuurprogramma of hostprogramma vereist, zoals voor de onderstaande opties.
 
-[**Ontwikkelen met Q# Jupyter Notebooks**](xref:microsoft.quantum.install.jupyter): kies deze omgeving als u Q#-code wilt uitvoeren in cellen met ingesloten tekst of om interactieve zelfstudies te maken voor kwantumcomputing. 
+[Ontwikkelen met Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter): kies deze omgeving als u Q#-code wilt uitvoeren in cellen met ingesloten tekst of om interactieve zelfstudies te maken voor kwantumcomputing. 
 
-[**Ontwikkelen met Q# en Python**](xref:microsoft.quantum.install.python): hiermee kunt u Python en Q# combineren om een Python-hostprogramma te maken dat Python-bewerkingen aanroept.
+[Ontwikkelen met Q# en Python](xref:microsoft.quantum.install.python): hiermee kunt u Python en Q# combineren om een Python-hostprogramma te maken dat Python-bewerkingen aanroept.
 
-[**Ontwikkelen met Q# en .NET**](xref:microsoft.quantum.install.cs): combineer C#, F# of VB.NET met Q# om een .NET-hostprogramma te maken dat Q#-bewerkingen aanroept.
+[Ontwikkelen met Q# en .NET](xref:microsoft.quantum.install.cs): combineer C#, F# of VB.NET met Q# om een .NET-hostprogramma te maken dat Q#-bewerkingen aanroept.

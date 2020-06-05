@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426764"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327761"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-0112006207"></a>Versie 0.11.2006.207
+
+*Releasedatum: 3 juni 2020*
+
+Deze release omvat het volgende:
+
+- Q#-notebooks en Python-hostprogramma's worden niet meer uitgevoerd wanneer er een Q#-ingangspunt is
+- Updates voor de [standaardbibliotheek](xref:microsoft.quantum.libraries.standard.intro) voor het gebruik van toegangsparameters
+- Compiler kan nu een invoegtoepassing voor het herschrijven van stappen uitvoeren tussen de ingebouwde stappen voor herschrijven
+- Er zijn verschillende afgeschafte functies en bewerkingen verwijderd volgens de planning die wordt beschreven in onze [API-principes](xref:microsoft.quantum.contributing.api-design). Q#-programma's en bibliotheken die zonder waarschuwingen in versie 0.11.2004.2825 worden gemaakt, blijven ongewijzigd werken.
+
+Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01120042825"></a>Versie 0.11.2004.2825
 
@@ -34,7 +47,6 @@ Deze release omvat het volgende:
 > [!NOTE]
 > Q#-opdrachtregeltoepassingen die gebruikmaken van het nieuwe kenmerk [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint), kunnen momenteel niet worden opgeroepen vanuit Python-of .NET-hostprogramma's.
 > Raadpleeg de gidsen voor [Python](xref:microsoft.quantum.install.python) en [.NET-interoperabiliteit](xref:microsoft.quantum.install.cs) voor meer informatie.
-
 
 ## <a name="version-01120033107"></a>Versie 0.11.2003.3107
 

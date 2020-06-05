@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328592"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422237"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Zelf studie: Program ma's op Qubit schrijven en simuleren in Q\#
 
@@ -386,7 +386,7 @@ Gedetailleerd voor de eerste rij van de invoer status $ \ket {000} $:
 * **`    ---`**: Een grafische weer gave van de fase van de amplitude.
 * **`[ 0.0000 rad ]`**: de numerieke waarde van de fase (in radialen).
 
-Zowel de grootte als de fase worden weer gegeven met een grafische weer gave. De weer gave met de grootte is eenvoudig: er wordt een balk van weer gegeven `*` , en hoe hoger de kans, hoe groter de balk is. Voor de-fase raadpleegt u de sectie DumpMachine [hier](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) voor de mogelijke symbool representaties op basis van de bereik hoek.
+Zowel de grootte als de fase worden weer gegeven met een grafische weer gave. De weer gave met de grootte is eenvoudig: er wordt een balk van weer gegeven `*` , en hoe hoger de kans, hoe groter de balk is. Zie voor de fase [testen en fout opsporing: dump functies](xref:microsoft.quantum.guide.testingdebugging#dump-functions) voor de mogelijke symbool representaties op basis van een hoek bereik.
 
 
 De gedrukte uitvoer illustreert dus dat onze geprogrammeerde Gates onze staat hebben getransformeerd van

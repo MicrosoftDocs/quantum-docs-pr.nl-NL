@@ -1,3 +1,5 @@
+- href: check_kata.md
+  name: Magic-opdracht %check_kata
 - href: chemistry.broombridge.md
   name: Magic-opdracht %chemistry.broombridge
 - href: chemistry.encode.md
@@ -12,6 +14,8 @@
   name: Magic-opdracht %config
 - href: estimate.md
   name: Magic-opdracht %estimate
+- href: kata.md
+  name: Magic-opdracht %kata
 - href: lsmagic.md
   name: Magic-opdracht %Ismagic
 - href: package.md
