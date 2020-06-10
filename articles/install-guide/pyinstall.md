@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: 1ae208e7047cb040fb44945a59c3cc6508a09723
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578161"
+ms.locfileid: "84630290"
 ---
 # <a name="develop-with-q-and-python"></a>Ontwikkelen met Q # en python
 
@@ -36,6 +36,15 @@ Installeer de QDK om python-hosttoepassingen te ontwikkelen om Q #-bewerkingen a
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Als er tijdens de stap een fout optreedt `dotnet iqsharp install` , opent u een nieuw terminal venster en probeert u het opnieuw.
+    > Als dit nog steeds niet werkt, probeert u het geïnstalleerde `dotnet-iqsharp` hulp programma (in Windows) te vinden en uit te `dotnet-iqsharp.exe` voeren:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > waar `/path/to/dotnet-iqsharp` moet worden vervangen door het absolute pad naar het `dotnet-iqsharp` hulp programma in het bestands systeem.
+    > Normaal gesp roken wordt dit onder `.dotnet/tools` in uw gebruikersprofielmap.
   
 1. Hoewel u Q # met python kunt gebruiken in een IDE, raden we u aan om met behulp van de IDE # + python-toepassingen van de Q # code (VS code) te gebruiken. Met Visual Studio code en de Visual Studio code extension van QDK krijgt u toegang tot uitgebreide functionaliteit.
 

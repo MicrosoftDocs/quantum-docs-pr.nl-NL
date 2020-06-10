@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422220"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578131"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies
 
 *Releasedatum: 4 juni, 2020*
 
+In deze release wordt een fout in de compilatie van Q#-projecten opgelost.
+
+## <a name="version-0112006207"></a>Versie 0.11.2006.207
+
+*Releasedatum: 3 juni 2020*
+
 Deze release omvat het volgende:
 
 - Q#-notebooks en Python-hostprogramma's worden niet meer uitgevoerd wanneer er een Q#-ingangspunt is
@@ -33,6 +39,9 @@ Deze release omvat het volgende:
 - Er zijn verschillende afgeschafte functies en bewerkingen verwijderd volgens de planning die wordt beschreven in onze [API-principes](xref:microsoft.quantum.contributing.api-design). Q#-programma's en bibliotheken die zonder waarschuwingen in versie 0.11.2004.2825 worden gemaakt, blijven ongewijzigd werken.
 
 Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Deze versie bevat een fout in de compilatie van Q#-projecten. We raden u aan bij te werken naar een nieuwere versie.
 
 ## <a name="version-01120042825"></a>Versie 0.11.2004.2825
 

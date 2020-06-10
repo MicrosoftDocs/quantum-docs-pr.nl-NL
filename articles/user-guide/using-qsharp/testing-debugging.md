@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630035"
 ---
 # <a name="testing-and-debugging"></a>Testen en foutopsporing
 
@@ -218,7 +218,7 @@ De rest van de rijen beschrijven de waarschijnlijke amplitude van het meten van 
 
 * **`∣0❭:`** deze rij komt overeen met de status van de `0` reken kundige basis
 * **`0.707107 +  0.000000 i`**: de waarschijnlijke amplitude in Cartesisch formaat.
-* **` == `**: het `equal` teken gescheiden beide gelijkwaardige verklaringen.
+* **` == `**: het `equal` teken scheidt beide equivalente verklaringen.
 * **`**********  `**: Een grafische weer gave van de omvang, het aantal `*` is evenredig met de kans dat deze status vector wordt gemeten.
 * **`[ 0.500000 ]`**: de numerieke waarde van de grootte
 * **`    ---`**: Een grafische weer gave van de fase van de amplitude (zie hieronder).

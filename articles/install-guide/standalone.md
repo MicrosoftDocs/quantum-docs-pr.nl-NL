@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426424"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630264"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Ontwikkelen met Q # opdracht regel toepassingen
 
 Q #-Program ma's kunnen zelfstandig worden uitgevoerd, zonder een stuur programma in een host-taal als C#, F # of python.
 
-## <a name="pre-requisites"></a>Vereisten
+## <a name="prerequisites"></a>Vereisten
 
 - [.NET Core SDK 3,1 of hoger](https://www.microsoft.com/net/download)
 

@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630396"
 ---
 # <a name="quantum-circuits"></a>Quantum circuits
-Denk eens na over een ogen blik dat de unitary-trans formatie $ \Text{CNOT} _ {01} (H\otimes 1) $.
+Denk eens na over een ogen blik dat de unitary-trans formatie $ \Text { CNOT} _ {01 } (H \otimes 1) $.
 Deze poort reeks is van fundamenteel belang voor Quantum Computing omdat hiermee een maximally Entangled-status van twee Qubit wordt gemaakt:
 
-$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\sqrt{2 } } \left (\ket{00 } + \ket{11 } \right), $ $
 
 Bewerkingen met deze of meer complexiteit zijn alomtegenwoordige in Quantum-algoritmen en Quantum fout correctie, zodat het een uitstekende goed keuring vormt voor de visualisatie die een *Quantum diagram*wordt genoemd.
 Het circuit diagram voor het voorbereiden van de Quantum status van deze maximally Entangled is:
@@ -31,7 +102,7 @@ Deze visuele taal voor Quantum bewerkingen kan beter digestible zijn dan het sch
 Deze conventies worden hieronder besproken.
 
 In een circuit diagram geeft elke ononderbroken lijn een Qubit of meer in het algemeen een Qubit-REGI ster.
-Per Conventie is de bovenste regel Qubit REGI ster $0 $ en de rest wordt opeenvolgend gelabeld. Het bovenstaande voor beeld wordt weer gegeven als een actie op twee qubits (of gelijkwaardige twee registers die uit één Qubit bestaan).
+Per Conventie is de bovenste regel Qubit REGI ster $0 $ en de rest is opeenvolgend gelabeld. Het bovenstaande voor beeld wordt weer gegeven als een actie op twee qubits (of gelijkwaardige twee registers die uit één Qubit bestaan).
 Poorten die aan een of meer Qubit-registers fungeren, worden aangeduid als een doos.
 Bijvoorbeeld het symbool
 
@@ -49,7 +120,7 @@ Dat wil zeggen
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagram van Quantum-Gates dat links-naar-rechts wordt toegepast](~/media/3.svg)
 
-is de unitary matrix $CBA $.
+is de unitary matrix $CBA $ .
 Matrix vermenigvuldiging voldoet aan de tegenovergestelde Conventie: de meest rechtse matrix wordt eerst toegepast. In Quantum-circuit diagrammen wordt echter de meest linkse poort toegepast eerst.
 Dit verschil kan in de loop van Verwar ring zijn, dus het is belang rijk dat u weet dat dit aanzienlijk verschil is tussen de lineaire algebraic notatie en Quantum circuit diagrammen.
 
@@ -61,27 +132,27 @@ Als ze niet hetzelfde aantal uitvoer hebben als invoer, zouden ze niet omkeerbaa
 Daarom moet elk vak dat in een circuit diagram wordt getekend, exact hetzelfde aantal draden hebben als het wordt afgesloten.
 
 Multi-Qubit circuit diagrammen volgen vergelijk bare conventies voor enkelvoudige Qubit.
-Een voor beeld hiervan is dat we een unitary-bewerking met twee Qubit definiëren $B $ (H S\otimes X) $ en het circuit gelijk geven aan
+Een voor beeld hiervan is dat er een unitary-bewerking van twee Qubit wordt gedefinieerd $B $ als $ (H S \otimes X) $ en het circuit gelijk als
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Circuit diagram van een unitary-bewerking met twee Qubit](~/media/4.svg)
 
-We kunnen ook $B $ weer geven als een actie voor een enkele twee Qubit-registratie in plaats van 2 1-Qubit registreert, afhankelijk van de context waarin het circuit wordt gebruikt. Misschien is de meest nuttige eigenschap van dergelijke abstracte circuit diagrammen dat ze gecompliceerde Quantum algoritmen op een hoog niveau mogen worden beschreven, zonder dat ze hoeven te compileren op basis poorten.
+We kunnen ook $B weer geven $ als een actie hebben op één Qubit-REGI ster in plaats van 2 1-Qubit-kassa's, afhankelijk van de context waarin het circuit wordt gebruikt. Misschien is de meest nuttige eigenschap van dergelijke abstracte circuit diagrammen dat ze gecompliceerde Quantum algoritmen op een hoog niveau mogen worden beschreven, zonder dat ze hoeven te compileren op basis poorten.
 Dit betekent dat u een Intuition voor de gegevens stroom kunt verkrijgen voor een grote Quantum algoritme zonder dat u alle details hoeft te begrijpen van de manier waarop elk van de subroutines binnen het algoritme werkt.
 
 ## <a name="controlled-gates"></a>Bewaakte poorten
 De andere constructie die is ingebouwd in multi-Qubit Quantum circuit diagrammen is Control.
-De actie van een Quantum die is geïsoleerd als poort, heeft $ \Lambda (G) $, waarbij de waarde van één Qubit de toepassing van $G $, kan worden geïnterpreteerd door het volgende voor beeld van een product status invoer $ \Lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \alpha \ket {0} \ket{\psi} + \beta \ket {1} G\ket {\ psi} $ te bekijken.
-Dat wil zeggen dat de bewaakte Gate $G $ toepast op het REGI ster met $ \psi $ als en alleen als het besturings element Qubit de waarde $1 $ heeft.
+De actie van een Quantum die is geïsoleerd als poort, heeft $ \Lambda (G) $, waarbij de waarde van één Qubit de toepassing van $G $ , kan worden geïnterpreteerd door het volgende voor beeld van een product status invoer $ \Lambda (G) (\alpha \ket{0 } + \beta \ket{1 } ) \ket { \psi } = \alpha \ket{0 } \ket { \psi } + \beta \ket{1 } G \ket { \psi } $ te bekijken.
+Dat wil zeggen dat de bewaakte Gate $G van toepassing is $ op het REGI ster met $ \psi $ als en alleen als het besturings element Qubit de waarde $1 $ .
 Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diagrammen als
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Circuit diagram van een poort die afzonderlijk wordt gecontroleerd](~/media/5.svg)
 
-Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $1 $ heeft.
-Voor de speciale gevallen waarin $G = X $ en $G = Z $, introduceren we de volgende notatie om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) is:
+Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $1 $ .
+Voor de speciale gevallen waarin $G = X $ en $G = Z, $ wordt de volgende notatie geïntroduceerd om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-gate de [$CNOT $ poort](xref:microsoft.quantum.intrinsic.cnot)is):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ Op dezelfde manier wordt het subcircuit
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Circuit diagram dat een bewaakte bewerking vertegenwoordigt](~/media/8.svg)
 
-geeft een klassieke, gecontroleerde poort, waarbij $G $ wordt toegepast op de waarde van het klassieke besturings element bit $1 $.
+geeft een klassieke, gecontroleerde poort, waarbij $G $ wordt toegepast op het klassieke besturings element bit waarde $1 $ .
 
 ## <a name="teleportation-circuit-diagram"></a>Circuit diagram teleportatie
 Quantum-teleportie is misschien het beste Quantum algoritme voor het illustreren van deze onderdelen.
