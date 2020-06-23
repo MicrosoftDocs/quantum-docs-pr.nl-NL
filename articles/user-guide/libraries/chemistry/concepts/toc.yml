@@ -1,0 +1,16 @@
+- name: Kwantumdynamiek
+  href: quantum-dynamics.md
+- name: Kwantummodellen voor elektronische systemen
+  href: quantum-models.md
+- name: Tweede kwantisatie
+  href: second-quantization.md
+- name: Symmetrieën van moleculaire integralen
+  href: symmetries-molecular.md
+- name: Jordan-Wigner-representatie
+  href: jordan-wigner.md
+- name: Hamiltoniaanse dynamica simuleren
+  href: algorithms.md
+- name: Hartree-Fock-theorie
+  href: hartree-fock.md
+- name: Gecorreleerde golffuncties
+  href: multireference.md
