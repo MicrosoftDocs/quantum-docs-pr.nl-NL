@@ -1,0 +1,9 @@
+- name: Woordenlijst
+  href: glossary.md
+- name: Bijdragen aan de QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Releaseopmerkingen voor QDK
+  href: relnotes.md
+- name: Meer informatie
+  href: further-reading.md

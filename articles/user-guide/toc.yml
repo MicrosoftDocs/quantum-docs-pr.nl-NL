@@ -1,12 +1,14 @@
 - name: Overzicht/inhoud
   href: index.md
-- name: 'Q#-basis'
+- name: Q#-basis
   href: basics.md
-- name: 'Q#-taal'
+- name: Q#-taal
   href: language/toc.yml
-- name: 'Q# gebruiken'
+- name: Q# gebruiken
   href: using-qsharp/toc.yml
 - name: Simulators en resourceschattingen
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Q#-bibliotheken
+  href: libraries/toc.yml
 - name: Snelzoekgids
   href: quickref/toc.yml
