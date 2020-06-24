@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630368"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269487"
 ---
 # <a name="multiple-qubits"></a>Meerdere qubits
 
@@ -138,7 +145,7 @@ $$
 
 Het is ook mogelijk slechts één Qubit van een Quantum-status van twee Qubit te meten. In gevallen waarbij u slechts één van de qubits meet, is de impact van de meting subtiel verschillend, omdat de gehele status niet wordt samengevouwen in een reken kundige status, en niet wordt samengevouwen tot slechts één subsysteem.  Met andere woorden, in dergelijke gevallen waarbij slechts één Qubit wordt gewerkt, wordt slechts een van de subsystemen, maar niet alle, samengevouwen.  
 
-Om dit te zien, moet u de eerste Qubit van de volgende status meten, die wordt gevormd door het Toep assen van de Hadamard-trans formatie $H $ op twee qubits in eerste instantie ingesteld op de status ' 0 ': $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 0 \\\\ \\\\ 0 \end { bmatrix } = \frac{1 } {2 } \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \mapsto \begin{cases } \Text{outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \Text{outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{cases } .
+Om dit te zien, moet u de eerste Qubit van de volgende status meten, die wordt gevormd door het Toep assen van de Hadamard-trans formatie $H $ op twee qubits in eerste instantie ingesteld op de status ' 0 ': $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \frac{1 } {2 } \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases } \Text{outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \Text{outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{cases } .
 $ $ Beide resultaten hebben een waarschijnlijkheid van 50%.  Het resultaat van 50% waarschijnlijk voor beide kunnen worden afgeleid van het feit dat de initiële Quantum State-vector onvariant is onder swaping $0 $ met $1 $ op de eerste Qubit.
 
 De wiskundige regel voor het meten van de eerste of tweede Qubit is eenvoudig.  Als we $e _k $ de $k ^ {\rm th- } reken vector hebben en $S $ de set van alle $e _k de $ waarde $1 $ voor die waarde van $k, moet u het Qubit $ .  Als we bijvoorbeeld geïnteresseerd zijn in het meten van de eerste Qubit, $ bestaat $S uit $e _1 \equiv 10 $ en $e _3 \equiv 11 $ .  En als we geïnteresseerd zijn in het tweede Qubit-$S $ zou bestaan uit $e _2 \equiv 01 $ en $e _3 \equiv 11 $ .  De waarschijnlijkheid om de gekozen Qubit te meten als $1 $ is voor status vector $ \psi$
@@ -167,12 +174,12 @@ $$
 Houd er rekening mee dat dit slechts de som is van de twee waarschijnlijkheden die zouden kunnen worden verwacht voor het meten van de resultaten $10 $ en $11 $ alle qubits die moeten worden gemeten.
 In ons voor beeld evalueert dit naar
 
-$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end { bmatrix } \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \right | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end{bmatrix} \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end{bmatrix} \right | ^ 2 = \frac{1 } {2 } .
 $$
 
 wat precies overeenkomt met wat onze Intuition vertelt, zou ons moeten zijn.  Op dezelfde manier kan de status worden geschreven als
 
-$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ \endbmatrix}
+$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 opnieuw in overeenstemming met onze intuition.

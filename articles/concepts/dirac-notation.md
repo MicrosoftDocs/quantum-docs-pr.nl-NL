@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630383"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269503"
 ---
 # <a name="dirac-notation"></a>Dirac-notatie
 
@@ -123,7 +130,7 @@ $$
 
 Als voor beeld van een Dirac-notatie moet u de remmen $ \braket{0 | 1 } $ overwegen. Dit is het binnenste product tussen $0 $ en $1 $ .  Het kan worden geschreven als 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Dit betekent dat $ \ket{0 } $ en $ \ket{1 } $ een orthogonale vector zijn, wat inhoudt dat $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ .  Ook per definitie $ \braket{0 | 0 } = \braket{1 | 1 } = 1 $ , wat betekent dat de twee reken kundige basis vectoren ook *orthonormal*kunnen worden genoemd.
 Deze orthonormal-eigenschappen zijn handig in het volgende voor beeld. Als we de status $ \ket { \psi } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 $ hebben } , omdat $ \braket{1 | 0 } = 0 $ de kans op het meten van $1 $ is  
@@ -173,7 +180,7 @@ Het feit dat het negatieve teken in de berekening van de kans wordt weer gegeven
 ## <a name="ketbra-or-outer-product"></a>ketbra of buiten product
 De uiteindelijke waarde voor het bespreken van de Dirac-notatie is de *ketbra* of het buitenste product.  Het buitenste product wordt weer gegeven in Dirac-notaties als $ \ket { \psi } \bra { \phi } $, en wordt soms ketbras genoemd, omdat de Bras en Kets in tegenovergestelde volg orde als brakets optreden.  Het buitenste product wordt gedefinieerd via matrix vermenigvuldiging als $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ voor Quantum status vectoren $ \psi $ en $ \phi $ .  Het eenvoudigste en weliswaar meest voorkomende voor beeld van deze notatie is
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras worden vaak projectors genoemd omdat ze een Quantum status op een vaste waarde projecteren.  Aangezien deze bewerkingen niet unitary zijn (en niet zelfs de norm van een vector behouden), zou het moeten zijn om te voor komen dat een quantum computer een projector niet kan Toep assen.  Projectors maken echter een mooie taak van het beschrijven van de actie die meting heeft op een Quantum status.  Als we bijvoorbeeld een status $ \ket { \psi $ meten als } $0 $ , wordt de resulterende trans formatie waarvan de status ervaring oplevert als gevolg van de meting,

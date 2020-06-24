@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 115c1703e433f24930e4be61b545048c95da28d1
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 7f10c4ad5eb325da97552d60ff47ea89a699f08d
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630305"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269470"
 ---
 # <a name="pauli-measurements"></a>Pauli metingen
 
@@ -161,7 +168,7 @@ In Q # zeggen we het resultaat---dat wil zeggen dat de klassieke informatie die 
 
 Metingen van Qubit Pauli-Opera tors worden op dezelfde manier gedefinieerd, zoals u kunt zien van:
 
-$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0 & -1&0 \\\\ 0&0&0&1 \end { bmatrix } .
+$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0 & -1&0 \\\\ 0&0&0&1 \end{bmatrix} .
 $$
 
 Daarom vormen de tensor-producten van twee Pauli-$Z- $ Opera tors een matrix die bestaat uit twee ruimten die bestaan uit $ + 1 $ en $-1 $ eigenvalues.

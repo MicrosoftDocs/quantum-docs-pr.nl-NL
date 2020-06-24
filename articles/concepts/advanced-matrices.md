@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630155"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269453"
 ---
 # <a name="advanced-matrix-concepts"></a>Geavanceerde matrix concepten #
 
@@ -104,7 +114,7 @@ $$
 
 De vectoren
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } en \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} en \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 zijn eigenvectors van deze matrix met respectievelijk eigenvalues $d _1 $ , $d _2 $ en $d _3 $ . Als $d _1 $ , $d _2 $ en $d _3 $ afzonderlijke getallen zijn, zijn deze vectoren (en hun veelvouden) de enige eigenvectors van de matrix $D $ . Over het algemeen kunt u voor een diagonale matrix eenvoudig de eigenvalues en eigenvectors lezen. De eigenvalues zijn alle getallen die worden weer gegeven op de diagonaal en hun respectieve eigenvectors zijn de eenheids vectoren met één vermelding gelijk aan $1 $ en de resterende vermeldingen gelijk zijn aan $0 $ .
 
