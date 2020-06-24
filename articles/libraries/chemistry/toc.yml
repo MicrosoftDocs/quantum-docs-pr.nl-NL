@@ -1,9 +1,0 @@
-- name: Installatie en validatie
-  href: installation.md
-- name: Kwantumchemische concepten
-  href: concepts/toc.yml
-- name: Chemiebibliotheek aanroepen
-  topicHref: samples/index.md
-  href: samples/toc.yml
-- name: Schema
-  href: schema/toc.yml
