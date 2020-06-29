@@ -1,152 +1,192 @@
 ---
 title: Kennismaken met verstrengeling met Q#
 description: Meer informatie over het schrijven van een kwantumprogramma in Q#. Een toepassing voor een Bell-toestand ontwikkelen met behulp van de Quantum Development Kit (QDK)
-author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+author: geduardo
+ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 294366b884da93f11c60cfdbdce9b40cf5202b0d
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 16c93b3dd17363c06602529cb34e8fc84aadc7a8
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274489"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415419"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
 In deze zelfstudie laten we u zien hoe u een Q#-programma schrijft dat qubits manipuleert en meet, en dat de effecten van superpositie en verstrengeling demonstreert.
-U krijgt instructies voor het installeren van de QDK, het bouwen van het programma en het uitvoeren van dat programma op een kwantumsimulator.  
 
 U gaat een toepassing schrijven met de naam Bell om kwantumverstrengeling te demonstreren.
 De naam Bell is een verwijzing naar de Bell-toestanden, wat specifieke kwantumtoestanden van twee qubits zijn die worden gebruikt om de eenvoudigste voorbeelden van superpositie en kwantumverstrengeling voor te stellen.
 
-## <a name="prerequisites"></a>Vereisten
+## <a name="pre-requisites"></a>Vereisten
 
 Als u klaar bent om te gaan coderen, voert u deze stappen uit voordat u verdergaat: 
 
-* Installeer de Quantum Development Kit voor [Python](xref:microsoft.quantum.install.python) of [.NET](xref:microsoft.quantum.install.cs).
+* [Installeer](xref:microsoft.quantum.install) de Quantum Development Kit met uw voorkeurs taal en-ontwikkelings omgeving.
 * Als u de QDK al hebt geïnstalleerd, controleert u of uw versie is [bijgewerkt](xref:microsoft.quantum.update) naar de nieuwste versie
 
-U kunt de instructies ook volgen zonder de QDK te installeren, om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
+U kunt ook de oplossing volgen zonder de QDK te installeren en de overzichten van de Q #-programmeer taal en de eerste concepten van quantum computing te bekijken.
 
-## <a name="demonstrating-qubit-behavior-with-q"></a>Gedrag van qubits demonstreren met Q#
+## <a name="in-this-tutorial-youll-learn-how-to"></a>In deze zelfstudie leert u het volgende:
 
-Denk nog even terug aan onze eenvoudige [definitie van een qubit](xref:microsoft.quantum.overview.understanding).  Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een [qubit](xref:microsoft.quantum.glossary#qubit) in een **superpositie** zijn van 0 en 1.  Conceptueel gezien kan een qubit worden gezien als een richting in de ruimte (ook wel een vector genoemd).  Een qubit kan zich in een van de mogelijke richtingen bevinden. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.  Deze voorstelling is ook formeel te visualiseren door de zogenaamde [Blochbol](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+> [!div class="checklist"]
+> * Bewerkingen in Q maken en combi neren\#
+> * Maak bewerkingen om qubits toe te voegen aan de superpositie, entangle en meet ze te meten.
+> * Laat Quantum Entanglement zien met een Q #-programma dat wordt uitgevoerd in een simulator. 
 
-De handeling van het meten produceert een binair resultaat en verandert de toestand van een qubit. Meting resulteert in een binaire waarde, 0 of 1.  De qubit gaat over van de toestand van superpositie (willekeurige richting) in een van de klassieke toestanden.  Daarna levert herhaling van dezelfde meting zonder tussenliggende bewerkingen hetzelfde binaire resultaat op.  
+## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>Een demonstratie van het gedrag van Qubit met de QDK
 
-Meerdere qubits kunnen worden [**verstrengeld**](xref:microsoft.quantum.glossary#entanglement). Wanneer we een meting uitvoeren van één verstrengelde qubit, wordt onze kennis van de toestand van de andere qubit(s) ook bijgewerkt.
+Waar klassieke bits één binaire waarde bevatten, zoals een 0 of een 1, kan de toestand van een [qubit](xref:microsoft.quantum.glossary#qubit) in een **superpositie** zijn van 0 en 1.  In het algemeen kan de status van een Qubit worden beschouwd als een richting in een abstracte ruimte (ook wel een vector genoemd).  Een Qubit-status kan zich in een van de mogelijke richtingen bevindt. De twee **klassieke toestanden** zijn de twee richtingen, die een 100% kans vertegenwoordigen dat de meting 0 oplevert en een 100% kans dat de meting 1 oplevert.
+
+De handeling van het meten produceert een binair resultaat en verandert de toestand van een qubit.
+Meting resulteert in een binaire waarde, 0 of 1.  De qubit gaat over van de toestand van superpositie (willekeurige richting) in een van de klassieke toestanden.  Daarna levert herhaling van dezelfde meting zonder tussenliggende bewerkingen hetzelfde binaire resultaat op.  
+
+Meerdere qubits kunnen worden [**verstrengeld**](xref:microsoft.quantum.glossary#entanglement).  Wanneer we een meting uitvoeren van één verstrengelde qubit, wordt onze kennis van de toestand van de andere qubit(s) ook bijgewerkt.
 
 We laten nu zien hoe dit gedrag wordt uitgedrukt in Q#.  U begint met het eenvoudigst mogelijke programma en bouwt dit op om kwantumsuperpositie en kwantumverstrengeling te demonstreren.
 
-## <a name="setup"></a>Instellen
+## <a name="creating-a-q-project"></a>Een Q #-project maken
 
-In deze zelfstudie wordt gebruikgemaakt van een hostprogramma en de studie bestaat uit twee delen:
+Het eerste wat u moet doen, is het maken van een nieuw Q #-project. In deze zelf studie gaan we de omgeving gebruiken op basis van de [opdracht regel toepassingen met VS code](xref:microsoft.quantum.install.standalone).
 
-1. Een reeks kwantumalgoritmen, geïmplementeerd met behulp van de kwantumprogrammeertaal Q#.
-1. Een hostprogramma, geïmplementeerd in Python of C#, die als het belangrijkste toegangspunt fungeert en Q#-bewerkingen aanroept om de kwantumalgoritmen uit te voeren.
+In VS code kunt u een nieuw project maken: 
 
-#### <a name="python"></a>[Python](#tab/tabid-python)
+1. Klik **View**op  ->  **opdracht palet** weer geven en selecteer **Q #: nieuw project maken**.
+2. Klik op **zelfstandige console toepassing**.
+3. Ga naar de locatie waar u het project wilt opslaan en klik op **project maken**.
+4. Wanneer het project is gemaakt, klikt u op **Nieuw project openen...** in de rechter benedenhoek.
 
-1. Een locatie kiezen voor uw toepassing
+In dit geval wordt het project genoemd `Bell` . Hiermee worden twee bestanden gegenereerd: `Bell.csproj` , het project bestand en `Program.qs` een sjabloon van een Q #-toepassing die we gaan gebruiken om onze toepassing te schrijven. De inhoud van `Program.qs` moet het volgende zijn:
 
-1. Maak een bestand met de naam `Bell.qs`. Dit bestand bevat uw Q#-code.
+```qsharp
+   namespace Bell {
 
-1. Maak een bestand met de naam `host.py`. Dit bestand bevat uw Python-hostcode.
+      open Microsoft.Quantum.Canon;
+      open Microsoft.Quantum.Intrinsic;
+    
 
-#### <a name="c-command-line"></a>[C#-opdrachtregel](#tab/tabid-csharp)
+      @EntryPoint()
+      operation HelloQ() : Unit {
+          Message("Hello quantum world!");
+      }
+   }
+```
 
-1. Een nieuw Q#-project maken:
+## <a name="write-the-q-application"></a>De Q- \# toepassing schrijven
+ 
+We willen twee qubits voorbereiden in een specifieke kwantumtoestand om te laten zien hoe u met Q# bewerkingen kunt uitvoeren op qubits om hun toestand te wijzigen en om de effecten van superpositie en verstrengeling te demonstreren. We bouwen dit stuk per stuk om qubite Staten, bewerkingen en metingen uit te voeren.
 
-    ```
-    dotnet new console -lang Q# --output Bell
-    cd Bell
-    ```
+### <a name="initialize-qubit-using-measurement"></a>Qubit initialiseren met meting
 
-    Als het goed is, ziet u een `.csproj`-bestand, een Q#-bestand met de naam `Operations.qs` en een hostprogrammabestand met de naam `Driver.cs`
+In het eerste codevoorbeeld hieronder laten we u zien hoe u met qubits kunt werken in Q#.  We voeren twee bewerkingen uit [`M`](xref:microsoft.quantum.intrinsic.m) en zorgen [`X`](xref:microsoft.quantum.intrinsic.x) dat de status van een Qubit wordt getransformeerd. In dit codefragment wordt een bewerking `SetQubitState` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `SetQubitState` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q # retourneert een Qubit-meting altijd `Zero` of `One` .  Als de meting een waarde retourneert die niet gelijk is aan de gewenste waarde, `SetQubitState` ' spiegelt ' de Qubit; dat wil zeggen, wordt een bewerking uitgevoerd. `X` Hiermee wordt de Qubit-status gewijzigd in een nieuwe status waarin de waarschijnlijkheid van een meting `Zero` wordt geretourneerd en `One` omgekeerd. Op deze manier `SetQubitState` plaatst de doel-Qubit altijd de gewenste status.
 
-1. De naam van het Q#-bestand wijzigen
-
-    ```
-    mv Operation.qs Bell.qs
-    ```
-
-#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
-
-1. Een nieuw project maken
-
-   * Open Visual Studio
-   * Ga naar het menu **Bestand** en selecteer **Nieuw** -> **Project...**
-   * Typ in de sjabloonverkenner `Q#` in het zoekveld en selecteer de sjabloon `Q# Application`
-   * Geef uw project de naam `Bell`
-
-1. De naam van het Q#-bestand wijzigen
-
-   * Ga naar **Solution Explorer**
-   * Klik met de rechter muisknop op bestand `Operations.qs`
-   * Wijzig de naam in `Bell.qs`
-
-* * *
-
-## <a name="write-a-q-operation"></a>Een Q#-bewerking schrijven
-
-We willen twee qubits voorbereiden in een specifieke kwantumtoestand om te laten zien hoe u met Q# bewerkingen kunt uitvoeren op qubits om hun toestand te wijzigen en om de effecten van superpositie en verstrengeling te demonstreren. Dit alles wordt stukje voor stukje opgebouwd om qubittoestanden, bewerkingen en metingen te demonstreren.
-
-**Overzicht:**  In het eerste codevoorbeeld hieronder laten we u zien hoe u met qubits kunt werken in Q#.  We introduceren twee bewerkingen, `M` en `X`, die de toestand van een qubit transformeren. 
-
-In dit codefragment wordt een bewerking `Set` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `Set` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q# levert een qubitmeting altijd `Zero` of `One` op.  Als de meting een waarde oplevert die niet gelijk is aan een gewenste waarde, wordt de qubit 'gespiegeld' door Set. Dit houdt in dat er een bewerking `X` wordt uitgevoerd waardoor de toestand van de qubit wordt gewijzigd in een nieuwe toestand waarin de waarschijnlijkheid dat een meting `Zero` en `One` oplevert, wordt omgedraaid.  Om het effect van de bewerking `Set` te demonstreren, wordt er vervolgens een bewerking `TestBellState` toegevoegd.  Deze bewerking krijgt als invoer een `Zero` of `One` en roept de bewerking `Set` een aantal keer aan met die invoer, en telt het aantal keren dat `Zero` het resultaat is van de meting van de qubit en het aantal keren dat `One` wordt geretourneerd. In deze eerste simulatie van de bewerking `TestBellState` verwachten we natuurlijk dat de uitvoer laat zien dat alle metingen van de qubit die is ingesteld met de parameterinvoer `Zero`, `Zero` oplevert en dat alle metingen van de qubit die is ingesteld met `One` als de parameterinvoer, `One` retourneert.  Later voegen we code toe aan `TestBellState` om de concepten van superpositie en verstrengeling te demonstreren.
+Vervang de inhoud van `Program.qs` door de volgende code:
 
 
-### <a name="q-operation-code"></a>Q#-bewerkingscode
+```qsharp
+   namespace Bell {
+       open Microsoft.Quantum.Intrinsic;
+       open Microsoft.Quantum.Canon;
 
-1. Vervang de inhoud van het bestand Bell.qs door de volgende code:
+       operation SetQubitState(desired : Result, q1 : Qubit) : Unit {
+           if (desired != M(q1)) {
+               X(q1);
+           }
+       }
+   }
+```
 
-    ```qsharp
-    namespace Quantum.Bell {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
+Deze bewerking kan nu worden aangeroepen om een qubit in te stellen op een klassieke toestand, met in 100% van de gevallen `Zero` of `One` als resultaat.
+`Zero` en `One` zijn constanten die de enige twee mogelijke resultaten van een meting van een qubit vertegenwoordigen.
 
-        operation Set(desired : Result, q1 : Qubit) : Unit {
-            if (desired != M(q1)) {
-                X(q1);
-            }
-        }
-    }
-    ```
+Met de bewerking `SetQubitState` wordt de qubit gemeten. Als de qubit zich in de gewenste toestand bevindt, wordt de toestand ongewijzigd gelaten door `SetQubitState`. Als dat niet zo is, wordt de toestand van de qubit gewijzigd in de gewenste toestand door het uitvoeren van de bewerking `X`.
 
-    Deze bewerking kan nu worden aangeroepen om een qubit in te stellen op een klassieke toestand, met in 100% van de gevallen `Zero` of `One` als resultaat.  `Zero` en `One` zijn constanten die de enige twee mogelijke resultaten van een meting van een qubit vertegenwoordigen.
+#### <a name="about-q-operations"></a>Q#-bewerkingen
 
-    Met de bewerking `Set` wordt de qubit gemeten.
-    Als de qubit zich in de gewenste toestand bevindt, wordt de toestand ongewijzigd gelaten door `Set`. Als dat niet zo is, wordt de toestand van de qubit gewijzigd in de gewenste toestand door het uitvoeren van de bewerking `X`.
-
-### <a name="about-q-operations"></a>Q#-bewerkingen
-
-Een Q#-bewerking is een kwantumsubroutine, ofwel een aanroepbare routine die kwantumbewerkingen bevat.
+Een Q#-bewerking is een kwantumsubroutine, Dat wil zeggen dat het een aanroep bare routine is die aanroepen naar andere Quantum bewerkingen bevat.
 
 De argumenten voor een bewerking worden tussen haakjes opgegeven als een tupel.
 
-Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de bewerking `Set` geen retourwaarde, zodat deze is gemarkeerd als retourzending `Unit`. Dit is het Q#-equivalent van `unit` in F#, dat ongeveer analoog is met `void` in C#, en een lege tupel (`Tuple[()]`) in Python.
+Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de bewerking `SetQubitState` geen retourwaarde, zodat deze is gemarkeerd als retourzending `Unit`. Dit is het Q#-equivalent van `unit` in F#, dat ongeveer analoog is met `void` in C#, en een lege tupel (`Tuple[()]`) in Python.
 
 U hebt twee kwantumbewerkingen gebruikt in uw eerste Q#-bewerking:
 
-* De bewerking [M](xref:microsoft.quantum.intrinsic.m), waarmee de toestand van de qubit wordt gemeten
-* De bewerking [X](xref:microsoft.quantum.intrinsic.x), waarmee de toestand van een qubit wordt gespiegeld
+* De [`M`](xref:microsoft.quantum.intrinsic.m) bewerking, waarmee de status van de Qubit wordt gemeten
+* De [`X`](xref:microsoft.quantum.intrinsic.x) bewerking, die de status van een Qubit spiegelt
 
 Een kwantumbewerking transformeert de toestand van een qubit. Soms worden kwantumbewerkingen ook wel kwantumpoorten genoemd, analoog aan klassieke logische poorten. Dit vindt zijn oorsprong in het begintijdperk van de kwantumcomputing, toen algoritmen niets meer waren dan een theoretische constructie en werden gevisualiseerd als schema's, vergelijkbaar met circuitschema's in klassieke computing.
 
-### <a name="add-q-test-code"></a>Q#-testcode toevoegen
+### <a name="counting-measurement-outcomes"></a>Resultaten van de meting tellen
 
-1. Voeg na het einde van bewerking `Set` de volgende bewerking toe aan `Bell.qs` bestand binnen de naamruimte:
+Om het effect van de bewerking `SetQubitState` te demonstreren, wordt er vervolgens een bewerking `TestBellState` toegevoegd. Deze bewerking krijgt als invoer een `Zero` of `One` en roept de bewerking `SetQubitState` een aantal keer aan met die invoer, en telt het aantal keren dat `Zero` het resultaat is van de meting van de qubit en het aantal keren dat `One` wordt geretourneerd. In deze eerste simulatie van de bewerking `TestBellState` verwachten we natuurlijk dat de uitvoer laat zien dat alle metingen van de qubit die is ingesteld met de parameterinvoer `Zero`, `Zero` oplevert en dat alle metingen van de qubit die is ingesteld met `One` als de parameterinvoer, `One` retourneert. Daarnaast voegen we code toe aan `TestBellState` om superpositie en entanglement te demonstreren.
 
-    ```qsharp
+Voeg na het einde van bewerking `SetQubitState` de volgende bewerking toe aan `Bell.qs` bestand binnen de naamruimte:
+
+```qsharp
+   operation TestBellState(count : Int, initial : Result) : (Int, Int) {
+
+       mutable numOnes = 0;
+       using (qubit = Qubit()) {
+
+           for (test in 1..count) {
+               SetQubitState(initial, qubit);
+               let res = M(qubit);
+
+               // Count the number of ones we saw:
+               if (res == One) {
+                   set numOnes += 1;
+               }
+           }
+            
+           SetQubitState(Zero, qubit);
+       }
+
+       // Return number of times we saw a |0> and number of times we saw a |1>
+       Message("Test results (# of 0s, # of 1s): ");
+       return (count - numOnes, numOnes);
+   }
+```
+Houd er rekening mee dat er een regel is toegevoegd voor het `return` afdrukken van een verklarend bericht in de-console met de functie ( `Message` ) [micro soft. Quantum. intrinsiek. Message]
+
+Deze bewerking (`TestBellState`) wordt gedurende `count` iteraties als een lus uitgevoerd, er wordt een opgegeven `initial`-waarde voor een qubit gedefinieerd en vervolgens wordt het resultaat, (`M`), gemeten. Er worden statistieken verzameld over het aantal nullen en enen dat we hebben gemeten, waarna ze naar de aanroepende functie worden geretourneerd. Er wordt nog een andere noodzakelijke bewerking uitgevoerd. De qubit wordt opnieuw ingesteld op een bekende toestand (`Zero`) voordat deze wordt geretourneerd, zodat anderen deze qubit een bekende toestand kunnen toewijzen. Dit wordt door de instructie `using` vereist.
+
+#### <a name="about-variables-in-q"></a>Over variabelen in Q\#
+
+Standaard zijn variabelen in Q# niet meer te veranderen. De waarde kan niet worden gewijzigd als de variabele gebonden is. Het sleutelwoord `let` wordt gebruikt om de binding van een onveranderlijke variabele aan te geven. Bewerkingsargumenten zijn altijd onveranderbaar.
+
+Als u een variabele nodig hebt waarvan de waarde kan worden gewijzigd, zoals `numOnes` in het voorbeeld, kunt u de variabele declareren met het sleutelwoord `mutable`. De waarde van een veranderlijke variabele kan worden gewijzigd met behulp van een `setQubitState`-instructie.
+
+In beide gevallen wordt het type variabele door de compiler afgeleid. Voor Q# zijn geen typeannotaties vereist voor variabelen.
+
+#### <a name="about-using-statements-in-q"></a>`using`Instructies in Q\#
+
+De instructie `using` is ook speciaal in Q#. Deze wordt gebruikt om qubits toe te wijzen voor gebruik in een codeblok. In Q# worden alle qubits dynamisch toegewezen en vrijgegeven. Het zijn geen vaste resources die de gehele levensduur van een complex algoritme meegaan. Een `using`-instructie wijst aan het begin een set qubits toe en geeft deze qubits aan het einde van het blok vrij.
+
+## <a name="execute-the-code-from-the-command-line"></a>De code uitvoeren vanaf de opdracht regel
+
+Als u de code wilt uitvoeren, moet u de compiler opgeven *die* kan worden uitgevoerd wanneer de opdracht wordt opgegeven `dotnet run` . Dit wordt gedaan met een eenvoudige wijziging in het Q #-bestand door een regel toe te voegen die `@EntryPoint()` direct voor de aanroep zou worden opgeroepen: de `TestBellState` bewerking in dit geval. De volledige code moet zijn:
+
+```qsharp
+namespace Bell {
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
+
+    operation SetQubitState(desired : Result, target : Qubit) : Unit {
+        if (desired != M(target)) {
+            X(target);
+        }
+    }
+
+    @EntryPoint()
     operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set(initial, qubit);
+                SetQubitState(initial, qubit);
                 let res = M(qubit);
 
                 // Count the number of ones we saw:
@@ -154,171 +194,45 @@ Een kwantumbewerking transformeert de toestand van een qubit. Soms worden kwantu
                     set numOnes += 1;
                 }
             }
-            Set(Zero, qubit);
+
+            SetQubitState(Zero, qubit);
         }
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
-        return (count-numOnes, numOnes);
+    // Return number of times we saw a |0> and number of times we saw a |1>
+    Message("Test results (# of 0s, # of 1s): ");
+    return (count - numOnes, numOnes);
     }
-    ```
-
-    Deze bewerking (`TestBellState`) wordt gedurende `count` iteraties als een lus uitgevoerd, er wordt een opgegeven `initial`-waarde voor een qubit gedefinieerd en vervolgens wordt het resultaat, (`M`), gemeten. Er worden statistieken verzameld over het aantal nullen en enen dat we hebben gemeten, waarna ze naar de aanroepende functie worden geretourneerd. Er wordt nog een andere noodzakelijke bewerking uitgevoerd. De qubit wordt opnieuw ingesteld op een bekende toestand (`Zero`) voordat deze wordt geretourneerd, zodat anderen deze qubit een bekende toestand kunnen toewijzen. Dit wordt door de instructie `using` vereist.
-
-### <a name="about-variables-in-q"></a>Variabelen in Q#
-
-Standaard zijn variabelen in Q# niet meer te veranderen. De waarde kan niet worden gewijzigd als de variabele gebonden is. Het sleutelwoord `let` wordt gebruikt om de binding van een onveranderlijke variabele aan te geven. Bewerkingsargumenten zijn altijd onveranderbaar.
-
-Als u een variabele nodig hebt waarvan de waarde kan worden gewijzigd, zoals `numOnes` in het voorbeeld, kunt u de variabele declareren met het sleutelwoord `mutable`. De waarde van een veranderlijke variabele kan worden gewijzigd met behulp van een `set`-instructie.
-
-In beide gevallen wordt het type variabele door de compiler afgeleid. Voor Q# zijn geen typeannotaties vereist voor variabelen.
-
-### <a name="about-using-statements-in-q"></a>`using`-instructies in Q#
-
-De instructie `using` is ook speciaal in Q#. Deze wordt gebruikt om qubits toe te wijzen voor gebruik in een codeblok. In Q# worden alle qubits dynamisch toegewezen en vrijgegeven. Het zijn geen vaste resources die de gehele levensduur van een complex algoritme meegaan. Een `using`-instructie wijst aan het begin een set qubits toe en geeft deze qubits aan het einde van het blok vrij.
-
-## <a name="create-the-host-application-code"></a>De code van de hosttoepassing maken
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-1. Open bestand `host.py` en voeg de volgende code toe:
-
-    ```python
-    import qsharp
-
-    from qsharp import Result
-    from Quantum.Bell import TestBellState
-
-    initials = (Result.Zero, Result.One)
-
-    for i in initials:
-      res = TestBellState.simulate(count=1000, initial=i)
-      (num_zeros, num_ones) = res
-      print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
-    ```
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-1. Vervang de inhoud van bestand `Driver.cs` door de volgende code:
-
-    ```csharp
-    using System;
-
-    using Microsoft.Quantum.Simulation.Core;
-    using Microsoft.Quantum.Simulation.Simulators;
-
-    namespace Quantum.Bell
-    {
-        class Driver
-        {
-            static void Main(string[] args)
-            {
-                using (var qsim = new QuantumSimulator())
-                {
-                    // Try initial values
-                    Result[] initials = new Result[] { Result.Zero, Result.One };
-                    foreach (Result initial in initials)
-                    {
-                        var res = TestBellState.Run(qsim, 1000, initial).Result;
-                        var (numZeros, numOnes) = res;
-                        System.Console.WriteLine(
-                            $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
-                    }
-                }
-
-                System.Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
-            }
-        }
-    }
-    ```
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-### <a name="about-the-host-application-code"></a>De code van de hosttoepassing
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-De Python-hosttoepassing kent drie onderdelen:
-
-* Bereken de argumenten die vereist zijn voor het kwantumalgoritme. In het voorbeeld wordt `count` vastgezet op 1000 en `initial` is de beginwaarde van de qubit.
-* Voer het kwantumalgoritme uit door methode `simulate()` van de geïmporteerde Q#-bewerking aan te roepen.
-* Verwerk het resultaat van de bewerking. In het voorbeeld ontvangt `res` het resultaat van de bewerking. Hier is het resultaat een tupel van het aantal nullen (`num_zeros`) en het aantal enen (`num_ones`) dat door de simulator wordt gemeten. De tupel wordt gedeconstrueerd om de twee velden te krijgen en de resultaten worden afgedrukt.
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-De C#-hosttoepassing bestaat uit vier delen:
-
-* Bouw een kwantumsimulator. In het voorbeeld is `qsim` de simulator.
-* Bereken de argumenten die vereist zijn voor het kwantumalgoritme. In het voorbeeld wordt `count` vastgezet op 1000 en `initial` is de beginwaarde van de qubit.
-* Voer het kwantumalgoritme uit. Elke Q#-bewerking genereert een C#-klasse met dezelfde naam. Deze klasse heeft een methode `Run` die de bewerking **asynchroon** uitvoert. De uitvoering is asynchroon, omdat de uitvoering op feitelijke hardware asynchroon is. Aangezien methode `Run` asynchroon is, wordt eigenschap `Result` opgehaald. Hiermee wordt de uitvoering geblokkeerd totdat de taak is voltooid en het resultaat synchroon wordt geretourneerd.
-* Verwerk het resultaat van de bewerking. In het voorbeeld ontvangt `res` het resultaat van de bewerking. Hier is het resultaat een tupel van het aantal nullen (`numZeros`) en het aantal enen (`numOnes`) dat door de simulator wordt gemeten. Dit wordt geretourneerd als een ValueTuple in C#. De tupel wordt gedeconstrueerd om de twee velden te krijgen, de resultaten worden afgedrukt en er wordt gewacht op het indrukken van een toets.
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-## <a name="build-and-run"></a>Bouwen en uitvoeren
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-1. Voer de volgende opdracht uit via de terminal:
-
-    ```
-    python host.py
-    ```
-
-    Met deze opdracht wordt de hosttoepassing uitgevoerd, waarmee de Q#-bewerking wordt gesimuleerd.
-
-De resultaten moeten zijn:
-
-```Output
-Init:0    0s=1000 1s=0   
-Init:1    0s=0    1s=1000
+}
 ```
 
-#### <a name="command-line--visual-studio-code"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-csharp)
+Als u het programma wilt uitvoeren, moet u argumenten opgeven voor `count` `initial` de opdracht regel. Laten we de voor beelden `count = 1000` kiezen `initial = One` . Voer de volgende opdracht in:
 
-1. Voer het volgende uit op de terminal:
-
-    ```dotnetcli
-    dotnet run
-    ```
-
-    Met deze opdracht worden alle vereiste pakketten automatisch gedownload, wordt de toepassing gebouwd en vervolgens uitgevoerd op de opdrachtregel.
-
-1. U kunt ook op **F1** drukken om het opdrachtpalet te openen en **Fouten opsporen: starten zonder foutopsporing** te selecteren.
-U wordt mogelijk gevraagd een nieuw bestand ``launch.json`` te maken waarin wordt beschreven hoe u het programma kunt starten.
-Het standaardbestand ``launch.json`` moet voor de meeste toepassingen goed werken.
-
-De resultaten moeten zijn:
-
-```Output
-Init:Zero 0s=1000 1s=0
-Init:One  0s=0    1s=1000
-Press any key to continue...
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
+En u moet rekening houden met de volgende uitvoer:
 
-1. Druk op `F5` om het programma te bouwen en uit te voeren.
-
-De resultaten moeten zijn:
-
-```Output
-Init:Zero 0s=1000 1s=0
-Init:One  0s=0    1s=1000
-Press any key to continue...
+```output
+Test results (# of 0s, # of 1s):
+(0, 1000)
 ```
 
-Het programma wordt afgesloten nadat u op een toets hebt gedrukt.
+Als u probeert met `initial = Zero` het volgende te weten:
 
-* * *
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s):
+(1000, 0)
+```
 
 ## <a name="prepare-superposition"></a>Superpositie voorbereiden
 
-**Overzicht** Laten we nu eens kijken welke manieren beschikbaar zijn in Q# om qubits in superpositie te plaatsen.  Zoals eerder gezegd, kan de toestand van een qubit een superpositie zijn van 0 en 1.  We gaan de bewerking `Hadamard` gebruiken om dit te bereiken. Als de qubit zich in een van de klassieke toestanden bevindt (waarbij een meting altijd `Zero` of altijd `One` retourneert) wordt de qubit met de bewerking `Hadamard` of `H` in een toestand geplaatst waarin een meting van de qubit in 50% van de gevallen `Zero` retourneert en in 50% van de gevallen `One`.  Conceptueel gezien, kan de qubit worden beschouwd als halverwege tussen de `Zero` en `One`.  Als we nu de bewerking `TestBellState` simuleren, zien we dat de resultaten na meting ongeveer een gelijk aantal keren `Zero` en `One` bevatten.  
+Laten we nu eens kijken hoe Q # de manieren krijgt om qubits te plaatsen in de superpositie.  Zoals eerder gezegd, kan de toestand van een qubit een superpositie zijn van 0 en 1.  We gaan de bewerking `Hadamard` gebruiken om dit te bereiken. Als de qubit zich in een van de klassieke toestanden bevindt (waarbij een meting altijd `Zero` of altijd `One` retourneert) wordt de qubit met de bewerking `Hadamard` of `H` in een toestand geplaatst waarin een meting van de qubit in 50% van de gevallen `Zero` retourneert en in 50% van de gevallen `One`.  Conceptueel gezien, kan de qubit worden beschouwd als halverwege tussen de `Zero` en `One`.  Als we nu de bewerking `TestBellState` simuleren, zien we dat de resultaten na meting ongeveer een gelijk aantal keren `Zero` en `One` bevatten.  
+
+### <a name="x-flips-qubit-state"></a>`X`Hiermee wordt de status van Qubit gespiegeld
 
 Eerst proberen we de qubit te spiegelen (als de qubit zich in de toestand `Zero` bevindt, wordt deze gespiegeld naar `One` en omgekeerd). Dit wordt bereikt door een bewerking `X` uit te voeren voordat we de qubit meten in `TestBellState`:
 
@@ -327,14 +241,30 @@ X(qubit);
 let res = M(qubit);
 ```
 
-De resultaten (nadat u op `F5` hebt gedrukt) worden nu omgedraaid:
+De resultaten worden nu omgekeerd:
 
-```Output
-Init:Zero 0s=0    1s=1000
-Init:One  0s=1000 1s=0
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-Alles wat we tot nu toe hebben gezien, is echter klassiek. Laten we een kwantumresultaat ophalen. We hoeven alleen maar de bewerking `X` uit het vorige voorbeeld te vervangen door een bewerking `H` of Hadamard. In plaats van de qubit te spiegelen van 0 naar 1, wordt deze slechts half gespiegeld. De vervangen regels in `TestBellState` zien er nu als volgt uit:
+```output
+Test results (# of 0s, # of 1s):
+(1000, 0)
+```
+
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s):
+(0, 1000)
+```
+
+Laten we nu de Quantum eigenschappen van de qubits verkennen.
+
+### <a name="h-prepares-superposition"></a>`H`voor bereiding van superpositie
+
+We hoeven alleen maar de bewerking `X` uit het vorige voorbeeld te vervangen door een bewerking `H` of Hadamard. In plaats van de qubit te spiegelen van 0 naar 1, wordt deze slechts half gespiegeld. De vervangen regels in `TestBellState` zien er nu als volgt uit:
 
 ```qsharp
 H(qubit);
@@ -343,18 +273,33 @@ let res = M(qubit);
 
 De resultaten worden nu interessanter:
 
-```Output
-Init:Zero 0s=484  1s=516
-Init:One  0s=522  1s=478
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-Telkens als we meten, vragen we om een klassieke waarde, maar de qubit bevindt zich halverwege tussen 0 en 1, zodat we de helft van de tijd (statistisch) 0 en de helft van de tijd 1 krijgen. Dit staat bekend als __superpositie__ en geeft ons de eerste echte blik op een kwantumtoestand.
+```output
+Test results (# of 0s, # of 1s):
+(496, 504)
+```
+
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+
+```output
+Test results (# of 0s, # of 1s):
+(506, 494)
+```
+
+Telkens als we meten, vragen we om een klassieke waarde, maar de qubit bevindt zich halverwege tussen 0 en 1, zodat we de helft van de tijd (statistisch) 0 en de helft van de tijd 1 krijgen.
+Dit staat bekend als **superpositie** en geeft ons de eerste echte blik op een kwantumtoestand.
 
 ## <a name="prepare-entanglement"></a>Verstrengeling voorbereiden
 
-**Overzicht:**  Laten we nu eens kijken welke manieren beschikbaar zijn in Q# om verstrengeling van qubits uit te drukken.  Eerst stellen we de eerste qubit in op de begintoestand en gebruiken we vervolgens de bewerking `H` om deze in superpositie te brengen.  Vervolgens gebruiken we, voordat we de eerste qubit gaan meten, een nieuwe bewerking (`CNOT`), die staat voor Controlled-Not.  Het resultaat van het uitvoeren van deze bewerking op twee qubits is het spiegelen van de tweede qubit als de eerste qubit `One` is.  Nu zijn de twee qubits verstrengeld.  Onze statistieken voor de eerste qubit zijn niet gewijzigd (kans van 50% op een `Zero` of `One` na meting), maar wanneer we nu de tweede qubit meten, krijgen we __altijd__ de uitkomst die voor de eerste qubit is gemeten. Onze `CNOT`-poort heeft de twee qubits verstrengeld, zodat wat er met de ene gebeurt, ook met de andere gebeurt. Als u de metingen omkeert (de tweede qubit vóór de eerste), zou zich hetzelfde voordoen. De eerste meting zal willekeurig zijn, waarna de tweede zich houdt aan wat voor de eerste is gedetecteerd.
+Laten we nu eens kijken welke manieren beschikbaar zijn in Q# om verstrengeling van qubits uit te drukken.
+Eerst stellen we de eerste qubit in op de begintoestand en gebruiken we vervolgens de bewerking `H` om deze in superpositie te brengen.  Voordat we de eerste Qubit meten, gebruiken we vervolgens een nieuwe bewerking ( `CNOT` ), die staat voor beheerd.  Het resultaat van het uitvoeren van deze bewerking op twee qubits is het spiegelen van de tweede qubit als de eerste qubit `One` is.  Nu zijn de twee qubits verstrengeld.  Onze statistieken voor de eerste qubit zijn niet gewijzigd (kans van 50% op een `Zero` of `One` na meting), maar wanneer we nu de tweede qubit meten, krijgen we __altijd__ de uitkomst die voor de eerste qubit is gemeten. Onze `CNOT`-poort heeft de twee qubits verstrengeld, zodat wat er met de ene gebeurt, ook met de andere gebeurt. Als u de metingen omkeert (de tweede qubit vóór de eerste), zou zich hetzelfde voordoen. De eerste meting zal willekeurig zijn, waarna de tweede zich houdt aan wat voor de eerste is gedetecteerd.
 
-Het eerste wat we nu moeten doen, is twee qubits toewijzen in plaats van één in `TestBellState`:
+Het eerste wat u moet doen, is twee qubits toewijzen in plaats van één in `TestBellState` :
 
 ```qsharp
 using ((q0, q1) = (Qubit(), Qubit())) {
@@ -363,21 +308,21 @@ using ((q0, q1) = (Qubit(), Qubit())) {
 Zo kunnen we een nieuwe bewerking (`CNOT`) toevoegen voordat we een meting (`M`) in `TestBellState` uitvoeren:
 
 ```qsharp
-Set(initial, q0);
-Set(Zero, q1);
+SetQubitState(initial, q0);
+SetQubitState(Zero, q1);
 
 H(q0);
 CNOT(q0, q1);
 let res = M(q0);
 ```
 
-We hebben nog een andere `Set`-bewerking toegevoegd om de eerste qubit te initialiseren, zodat we zeker weten dat deze altijd in toestand `Zero` is wanneer we starten.
+We hebben nog een andere `SetQubitState`-bewerking toegevoegd om de eerste qubit te initialiseren, zodat we zeker weten dat deze altijd in toestand `Zero` is wanneer we starten.
 
 We moeten ook de tweede qubit opnieuw instellen voordat deze wordt vrijgegeven.
 
 ```qsharp
-Set(Zero, q0);
-Set(Zero, q1);
+SetQubitState(Zero, q0);
+SetQubitState(Zero, q1);
 ```
 
 De volledige routine ziet er nu als volgt uit:
@@ -388,8 +333,8 @@ De volledige routine ziet er nu als volgt uit:
         mutable numOnes = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set (initial, q0);
-                Set (Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0,q1);
@@ -400,9 +345,9 @@ De volledige routine ziet er nu als volgt uit:
                     set numOnes += 1;
                 }
             }
-            
-            Set(Zero, q0);
-            Set(Zero, q1);
+
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
@@ -418,8 +363,8 @@ Als we deze uitvoeren, krijgen we precies hetzelfde 50-50-resultaat dat we eerde
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set(initial, q0);
-                Set(Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0, q1);
@@ -435,67 +380,35 @@ Als we deze uitvoeren, krijgen we precies hetzelfde 50-50-resultaat dat we eerde
                 }
             }
             
-            Set(Zero, q0);
-            Set(Zero, q1);
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
+        // Return times we saw |0>, times we saw |1>, and times measurements agreed
+        Message("Test results (# of 0s, # of 1s, # of agreements)");
         return (count-numOnes, numOnes, agree);
     }
 ```
 
-In de nieuwe retourwaarde (`agree`) wordt telkens bijgehouden als de meting van de eerste qubit overeenkomt met de meting van de tweede qubit. We moeten ook de hosttoepassing dienovereenkomstig bijwerken:
+In de nieuwe retourwaarde (`agree`) wordt telkens bijgehouden als de meting van de eerste qubit overeenkomt met de meting van de tweede qubit.
 
-#### <a name="python"></a>[Python](#tab/tabid-python)
+Het uitvoeren van de code die wij verkrijgen:
 
-```python
-import qsharp
-
-from qsharp import Result
-from Quantum.Bell import TestBellState
-
-initials = {Result.Zero, Result.One} 
-
-for i in initials:
-    res = TestBellState.simulate(count=1000, initial=i)
-    (num_zeros, num_ones, agree) = res
-    print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-```csharp
-            using (var qsim = new QuantumSimulator())
-            {
-                // Try initial values
-                Result[] initials = new Result[] { Result.Zero, Result.One };
-                foreach (Result initial in initials)
-                {
-                    var res = TestBellState.Run(qsim, 1000, initial).Result;
-                    var (numZeros, numOnes, agree) = res;
-                    System.Console.WriteLine(
-                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");
-                }
-            }
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+```output
+(505, 495, 1000)
 ```
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-Wanneer we nu een uitvoering doen, krijgen we verbluffende uitkomst:
-
-```Output
-Init:Zero 0s=499  1s=501  agree=1000
-Init:One  0s=490  1s=510  agree=1000
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s, # of agreements)
+(507, 493, 1000)
 ```
 
 Zoals aangegeven in het overzicht, zijn onze statistieken voor de eerste qubit niet gewijzigd (kans van 50% op 0 of 1), maar wanneer we nu de tweede qubit meten, krijgen we __altijd__ dezelfde uitkomst als voor de eerste qubit, omdat ze namelijk verstrengeld zijn.
-
-Gefeliciteerd, u hebt uw eerste kwantumprogramma geschreven.
 
 ## <a name="next-steps"></a>Volgende stappen
 

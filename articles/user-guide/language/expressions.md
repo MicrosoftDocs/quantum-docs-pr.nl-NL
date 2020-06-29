@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630002"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415385"
 ---
 # <a name="type-expressions-in-q"></a>Type-expressies in Q #
 
@@ -20,11 +20,11 @@ ms.locfileid: "84630002"
 Numerieke expressies zijn expressies van het type `Int` , `BigInt` of `Double` .
 Dat wil zeggen dat ze ofwel integeren of drijvende-komma getallen zijn.
 
-`Int`letterlijke waarden in Q # worden eenvoudigweg geschreven als een reeks cijfers.
-Hexadecimale en binaire gehele getallen worden ondersteund met `0x` respectievelijk een en `0b` -voor voegsel.
+`Int`letterlijke waarden in Q # worden geschreven als een reeks cijfers.
+Hexadecimale en binaire gehele getallen worden ondersteund en worden met `0x` respectievelijk een en `0b` -voor voegsel geschreven.
 
-`BigInt`letterlijke waarden in Q # worden geschreven met een afsluitend `l` of `L` achtervoegsel.
-Hexadecimale Big-gehele getallen worden ondersteund met het voor voegsel 0x.
+`BigInt`letterlijke waarden in Q # hebben een navolgende `l` of `L` achtervoegsel.
+Hexadecimale Big gehele getallen worden ondersteund en geschreven met het voor voegsel ' 0x '.
 Daarom zijn de volgende geldige toepassingen van `BigInt` letterlijke waarden:
 
 ```qsharp
@@ -34,35 +34,35 @@ let bigOne = bigZero + 1L;
 ```
 
 `Double`letterlijke waarden in Q # zijn drijvende-komma getallen die zijn geschreven met decimale cijfers.
-Ze kunnen worden geschreven met een decimaal teken, `.` en/of een exponentieel onderdeel dat is aangegeven met e of e (waarna alleen een mogelijk minteken en decimaal tekens geldig zijn).
+Ze kunnen worden geschreven met of zonder een decimaal teken, `.` of een exponentieel onderdeel dat is aangegeven met e of e (waarna alleen een mogelijk minteken en decimaal tekens geldig zijn).
 Hier volgen geldige `Double` letterlijke waarden: `0.0` , `1.2e5` , `1e-5` .
 
-Een expressie met een matrix expressie van elk element type `Int` kan worden gevormd met behulp van de [`Length`](xref:microsoft.quantum.core.length) ingebouwde functie, met de matrix expressie tussen haakjes `(` en `)` .
+Op basis van een matrix expressie van elk element type kunt u een `Int` expressie maken met behulp van de [`Length`](xref:microsoft.quantum.core.length) ingebouwde functie, waarbij de matrix expressie tussen haakjes staat.
 Als bijvoorbeeld `a` is gebonden aan een matrix, `Length(a)` is dit een expressie met gehele getallen.
 Als `b` is een matrix met matrices van gehele getallen, `Int[][]` `Length(b)` is dit het aantal submatrixen in `b` en `Length(b[1])` is het aantal gehele getallen in de tweede submatrix in `b` .
 
 Gegeven twee numerieke expressies van hetzelfde type, de binaire Opera tors `+` , `-` , `*` en `/` kunnen worden gebruikt om een nieuwe numerieke expressie te vormen.
 Het type van de nieuwe expressie is hetzelfde als de typen van de onderdeel expressies.
 
-Als u twee geheeltallige expressies hebt opgegeven, kan de binaire operator `^` (Power) worden gebruikt voor het maken van een nieuwe expressie met gehele getallen.
-Dit `^` kan ook worden gebruikt met twee dubbele expressies om een nieuwe dubbele expressie te vormen.
-Ten slotte `^` kan worden gebruikt met een groot geheel getal aan de linkerkant en een geheel getal aan de rechter kant om een nieuwe Big Integer-expressie te vormen.
+Als u twee geheeltallige expressies hebt opgegeven, gebruikt u de binaire operator `^` (Power) om een nieuwe expressie met gehele getallen te vormen.
+U kunt ook `^` met twee dubbele expressies gebruiken om een nieuwe dubbele expressie te maken.
+Ten slotte kunt u `^` met een groot geheel getal aan de linkerkant en een geheel getal aan de rechter kant gebruiken om een nieuwe Big Integer-expressie te vormen.
 In dit geval moet de tweede para meter in 32 bits passen; Als dat niet het geval is, wordt er een runtime-fout gegenereerd.
 
-Als er twee integere of Big Integer-expressies zijn opgegeven, kan een nieuwe integer of Big Integer-expressie worden gevormd met behulp van de `%` Opera tors (modulus), `&&&` (bitsgewijze en), `|||` (bitsgewijze OR) of `^^^` (Bitsgewijze XOR).
+Als er twee integere of Big Integer-expressies zijn, moet u een nieuwe geheel getal of Big Integer-expressie vormen met behulp van de `%` Opera tors (modulus), `&&&` (bitsgewijze en), `|||` (bitsgewijze OR) of `^^^` (Bitsgewijze XOR).
 
-Geef een geheel getal of een Big Integer-expressie aan de linkerkant en een expressie met gehele getallen aan de rechter kant, de `<<<` (reken kundige Shift-toets links) of de `>>>` Opera tors reken kundig naar rechts kan worden gebruikt om een nieuwe expressie te maken met hetzelfde type als de linker expressie.
+Geef een geheel getal of een Big Integer-expressie aan de linkerkant en een expressie met gehele getallen aan de rechter kant, gebruik de `<<<` (reken kundige verschuiving links) of `>>>` (reken kundige Shift-rechts) om een nieuwe expressie te maken met hetzelfde type als de linker expressie.
 
 De tweede para meter (de waarde van de ploeg) naar een Shift-bewerking moet groter dan of gelijk aan nul zijn. het gedrag voor negatieve verschuivings bedragen is niet gedefinieerd.
 Het aantal ploegen voor een Shift-bewerking moet ook in 32 bits passen. Als dat niet het geval is, wordt er een runtime-fout gegenereerd.
-Als het getal dat moet worden verplaatst een geheel getal is, wordt het verwerkings bedrag geïnterpreteerd `mod 64` ; dat wil zeggen, een verschuiving van 1 en een verschuiving van 65 hebben hetzelfde effect.
+Als het getal verschuiven een geheel getal is, wordt het verwerkings bedrag geïnterpreteerd `mod 64` ; dat wil zeggen, een verschuiving van 1 en een verschuiving van 65 hebben hetzelfde effect.
 
 Voor zowel een geheel getal als een Big Integer-waarde zijn shifts reken kundig.
 Als u een negatieve waarde naar links of rechts verschuift, resulteert dit in een negatief getal.
-Dat wil zeggen dat de ene stap naar links of rechts verschuift precies hetzelfde is als vermenigvuldigen of delen met 2.
+Dat wil zeggen dat de ene stap naar links of rechts verschuift, hetzelfde is als vermenigvuldigen of delen met 2.
 
 Geheel getal delen en integers modulus volgen hetzelfde gedrag voor negatieve getallen als C#.
-Dat wil zeggen, heeft `a % b` altijd hetzelfde teken als `a` en is `b * (a / b) + a % b` altijd gelijk aan `a` .
+Dat wil zeggen, `a % b` heeft altijd hetzelfde teken als `a` en is `b * (a / b) + a % b` altijd gelijk aan `a` .
 Bijvoorbeeld:
 
  `A` | `B` | `A / B` | `A % B`
@@ -72,12 +72,12 @@ Bijvoorbeeld:
  5 | 2 | -2 | -1
  5 | -2 | 2 | -1
 
-Het delen van een groot geheel getal en modulus werkt op dezelfde manier.
+Groot geheel getal delen en modulus bewerkingen werken op dezelfde manier.
 
-Op basis van een numerieke expressie kan een nieuwe expressie worden gevormd met behulp van de `-` unaire operator.
-De nieuwe expressie is van hetzelfde type als de component-expressie.
+Met een wille keurige numerieke expressie kunt u een nieuwe expressie maken met behulp van de `-` unaire operator.
+De nieuwe expressie is van hetzelfde type als de onderdeel expressie.
 
-Een nieuwe expressie van hetzelfde type als een geheel getal of Big Integer-expressie kan worden gevormd met behulp van de `~~~` (bitsgewijze complement) monadische operator.
+Als een geheel getal of een Big Integer-expressie, kunt u een nieuwe expressie van hetzelfde type vormen met behulp van de `~~~` (bitsgewijze complement) monadische operator.
 
 ## <a name="boolean-expressions"></a>Booleaanse expressies
 
@@ -97,26 +97,25 @@ let t = x == y;               // This will cause a compiler error.
 ```
 
 Gelijkheids vergelijking voor `Qubit` waarden is identiteits gelijkheid; dat wil zeggen of de twee expressies dezelfde Qubit identificeren.
-De status van de twee qubits wordt niet vergeleken, geopend, gemeten of gewijzigd door deze vergelijking.
+De statussen van de twee qubits worden niet vergeleken, geopend, gemeten of gewijzigd door deze vergelijking.
 
 Gelijkheids vergelijking voor `Double` waarden kan misleiden door Afrondings effecten.
 Bijvoorbeeld `49.0 * (1.0/49.0) != 1.0`.
 
 Met een wille keurige combi natie van twee numerieke expressies worden de binaire Opera tors `>` ,, `<` `>=` en `<=` kunnen worden gebruikt om een nieuwe booleaanse expressie te maken die waar is als de eerste expressie respectievelijk groter is dan, kleiner dan, groter dan of gelijk aan, of kleiner dan of gelijk aan de tweede expressie.
 
-Aan de hand van twee Booleaanse expressies `and` kunnen de en `or` binaire Opera tors worden gebruikt voor het maken van een nieuwe booleaanse expressie die waar is als beide (of beide) de twee expressies waar zijn.
+Gebruik voor twee Booleaanse expressies de `and` binaire operator om een nieuwe booleaanse expressie te maken die waar is als beide expressies True zijn. Evenzo maakt het gebruik `or` van de operator een expressie die waar is als een van de twee expressies True is.
 
 Aan de hand van een booleaanse expressie `not` kan de unaire operator worden gebruikt voor het maken van een nieuwe booleaanse expressie die waar is als de component expressie False is.
 
-## <a name="string-expressions"></a>Teken reeks expressies
+## <a name="string-expressions"></a>Tekenreeksexpressies
 
-Q # Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (toegelicht bij [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie.
-Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q #-programma.
+Q # Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (uitgelegd in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q #-programma.
 
 Teken reeksen in Q # zijn letterlijke waarden of geïnterpoleerde teken reeksen.
 
-Letterlijke teken reeksen zijn vergelijkbaar met letterlijke teken reeksen in de meeste talen: een reeks van Unicode-tekens tussen dubbele citaten, `"` .
-In een teken reeks kan de back slash-teken `\` worden gebruikt om een dubbel aanhalings teken te escapen en om een nieuwe regel als een regel `\n` terugloop als en een tab in te voegen als `\r` `\t` .
+Letterlijke teken reeksen zijn vergelijkbaar met letterlijke teken reeksen in de meeste talen: een reeks van Unicode-tekens tussen dubbele aanhalings symbolen `" "` .
+Gebruik in een teken reeks de back slash `\` om een dubbele aanhalings teken () te Escape `\"` of om een nieuwe regel ( `\n` ), een regel terugloop ( `\r` ) of een tab () in te voegen `\t` .
 Bijvoorbeeld:
 
 ```qsharp
@@ -124,32 +123,32 @@ Bijvoorbeeld:
 ```
 ### <a name="interpolated-strings"></a>Geïnterpoleerde teken reeksen
 
-De syntaxis van Q # voor teken reeks-interpolatie is een subset van de C#-syntaxis, maar hier worden de belangrijkste punten voor Q # samenvatten.
-De belangrijkste verschillen worden hieronder besproken.
+De syntaxis van Q # voor teken reeks-interpolatie is een subset van de C#-syntaxis. Hieronder vindt u de belangrijkste punten die van toepassing zijn op Q #:
 
-Als u een letterlijke teken reeks als een geïnterpoleerde teken reeks wilt identificeren, laten voorafgaan door u deze met het `$` symbool.
-Er mag geen spatie staan tussen de `$` en `"` die een letterlijke teken reeks start.
+* Als u een letterlijke teken reeks als een geïnterpoleerde teken reeks wilt identificeren, laten voorafgaan door u deze met het `$` symbool. Er mag geen witruimte tussen de `$` en de `"` letterlijke teken reeks worden gestart.
 
-Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:microsoft.quantum.intrinsic.message) om het resultaat van een meting te schrijven naar de-console, naast andere Q #-expressies.
+* Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:microsoft.quantum.intrinsic.message) om het resultaat van een meting te schrijven naar de-console, naast andere Q #-expressies.
 
 ```qsharp
     let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
-Een geldige Q #-expressie kan worden weer gegeven in een geïnterpoleerde teken reeks.
 
-Meer informatie over de C#-syntaxis vindt u in [*geïnterpoleerde teken reeksen*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
-Het belangrijkste verschil is dat Q # geen Verbatim-geïnterpoleerde teken reeksen ondersteunt.
-Expressies binnen een geïnterpoleerde teken reeks volgen Q # syntaxis, geen C#-syntaxis.
+* Een geldige Q #-expressie kan worden weer gegeven in een geïnterpoleerde teken reeks.
+
+* Expressies binnen een geïnterpoleerde teken reeks volgen Q # syntaxis, geen C#-syntaxis. Het belangrijkste verschil is dat Q # geen Verbatim-geïnterpoleerde teken reeksen ondersteunt.
+
+Zie [*geïnterpoleerde teken reeksen*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)voor meer informatie over de C#-syntaxis.
 
 ## <a name="range-expressions"></a>Bereik expressies
 
-Er zijn drie `Int` expressies `start` , `step` en, `stop` `start .. step .. stop` een bereik expressie waarvan het eerste element, het tweede element, het derde element is `start` `start+step` `start+step+step` , enzovoort, totdat het `stop` wordt door gegeven.
+`Int` `start` Aan de hand van drie expressies, `step` , en `stop` is de expressie `start .. step .. stop` een bereik expressie waarvan het eerste element, het tweede element, het derde element is `start` , enzovoort `start+step` `start+step+step` , totdat u het wacht `stop` .
 Een bereik kan leeg zijn als bijvoorbeeld `step` positief is en `stop < start` .
-Het laatste element van het bereik is `stop` het verschil tussen `start` en `stop` is een integraal veelvoud van `step` ; dat wil zeggen, het bereik is op beide uiteinden.
 
-`Int`Als u twee expressies opgeeft `start` en `stop` , `start .. stop` is dit een bereik expressie die gelijk is aan `start .. 1 .. stop` .
+Het bereik is inclusief aan beide uiteinden. Dat wil zeggen, als het verschil tussen `start` en `stop` een veelvoud van een geheel getal is `step` , dan is het laatste element van het bereik `stop` .
+
+Aan de hand van twee `Int` expressies `start` en `stop` is de expressie `start .. stop` een bereik expressie die gelijk is aan `start .. 1 .. stop` .
 Houd er rekening mee dat de geïmpliceerde `step` is + 1, zelfs als `stop` deze kleiner is dan `start` ; in dit geval is het bereik leeg.
 
 Enkele voor beelden van bereiken:
@@ -184,28 +183,28 @@ Hetzelfde geldt voor `Zero` en `0` .
 
 ## <a name="tuple-expressions"></a>Tuple-expressies
 
-Een tuple letterlijke waarde is een reeks element expressies van het juiste type, gescheiden door komma's, tussen `(` en `)` .
-Bijvoorbeeld: `(1, One)` is een `(Int, Result)` expressie.
+Een tuple letterlijke waarde is een reeks element expressies van het juiste type, gescheiden door komma's, tussen haakjes.
+`(1, One)`Is bijvoorbeeld een `(Int, Result)` expressie.
 
 Met uitzonde ring van letterlijke waarden, de enige tuple-expressies zijn symbolen die zijn gebonden aan tuplewaarde, matrix elementen van tuple-matrices en aanroep bare aanroepen die Tuples retour neren.
 
 ## <a name="user-defined-type-expressions"></a>Door de gebruiker gedefinieerde type expressies
 
 Een letterlijke waarde van een door de gebruiker gedefinieerd type bestaat uit de type naam gevolgd door een tuple letterlijke waarde van het type basis-tuple.
-Als bijvoorbeeld een door `IntPair` de gebruiker gedefinieerd type is op basis van `(Int, Int)` , is `IntPair(2, 3)` dit een geldige letterlijke waarde van dat type.
+Als bijvoorbeeld een door `IntPair` de gebruiker gedefinieerd type is op basis van `(Int, Int)` , `IntPair(2, 3)` is dit een geldige letterlijke waarde van dat type.
 
 Met uitzonde ring van letterlijke waarden zijn de enige expressies van een door de gebruiker gedefinieerd type symbolen die gebonden zijn aan de waarde van dat type, matrix elementen van matrices van dat type en aanroep bare aanroepen die dat type retour neren.
 
 ## <a name="unwrap-expressions"></a>Onverpakte expressies
 
 In Q # is de operator voor uitpakken een afsluitend uitroep teken `!` .
-Zo `IntPair` is bijvoorbeeld een door de gebruiker gedefinieerd type met een onderliggend type `(Int, Int)` en was dit `s` een variabele met de waarde `IntPair(2, 3)` `s!` . vervolgens zou het zijn `(2, 3)` .
+Als bijvoorbeeld een door `IntPair` de gebruiker gedefinieerd type is met het onderliggende type `(Int, Int)` en `s` een variabele met de waarde `IntPair(2, 3)` , dan `s!` is `(2, 3)` .
 
-Voor door de gebruiker gedefinieerde typen die zijn gedefinieerd in termen van andere door de gebruiker gedefinieerde typen, kan de operator voor uitpakken worden herhaald. `s!!`Hiermee geeft u bijvoorbeeld de dubbele waarde onverpakt van op `s` .
-Als is dus `WrappedPair` een door de gebruiker gedefinieerd type met een onderliggend type `IntPair` en dit `t` is een variabele met de waarde `WrappedPair(IntPair(1,2))` , dan `t!!` zou `(1,2)` .
+Voor door de gebruiker gedefinieerde typen die zijn gedefinieerd in termen van andere door de gebruiker gedefinieerde typen, kunt u de operator voor uitpakken herhalen. `s!!`Geeft bijvoorbeeld de dubbele waarde onverpakt van aan `s` .
+Als is dus `WrappedPair` een door de gebruiker gedefinieerd type met een onderliggend type `IntPair` en `t` een variabele met de waarde `WrappedPair(IntPair(1,2))` , dan `t!!` is `(1,2)` .
 
 De `!` operator heeft een hogere prioriteit dan alle andere opera tors dan `[]` voor het indexeren van matrices en het segmenteren.
-`!`en `[]` positioneel binden; dat wil zeggen, `a[i]![3]` moet worden gelezen als `((a[i])!)[3]` : Neem het `i` element van de th, pak het uit `a` en haal vervolgens het derde element van de niet-ingepakte waarde op (dit moet een matrix zijn).
+`!`en `[]` positioneel binden; dat wil zeggen, `a[i]![3]` wordt gelezen als `((a[i])!)[3]` : Neem het `i` element van `a` , pak het uit en haal vervolgens het element 3e van de niet-ingepakte waarde op (dit moet een matrix zijn).
 
 De prioriteit van de `!` operator heeft een invloed die mogelijk niet duidelijk is.
 Als een functie of bewerking een waarde retourneert die vervolgens terugkeert, moet de functie-of bewerkings aanroep tussen haakjes worden geplaatst, zodat de argument tuple wordt gekoppeld aan de aanroep in plaats van naar de uitpakken.
@@ -218,27 +217,26 @@ let g = Foo(arg)!;      // Syntax error
 
 ## <a name="array-expressions"></a>Matrix expressies
 
-Een letterlijke matrix is een reeks van een of meer element expressies, gescheiden door komma's, tussen `[` en `]` .
+Een letterlijke matrix is een reeks van een of meer element expressies, gescheiden door komma's, tussen vier Kante haken `[]` .
 Alle elementen moeten compatibel zijn met hetzelfde type.
 
-Als er twee matrices van hetzelfde type zijn opgegeven, kan de binaire `+` operator worden gebruikt voor het vormen van een nieuwe matrix die de samen voeging van de twee matrices vormt.
-Bijvoorbeeld: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
+Als er twee matrices van hetzelfde type zijn opgegeven, gebruikt u de binaire `+` operator om een nieuwe matrix te vormen die de samen voeging van de twee matrices vormt.
+Bijvoorbeeld `[1,2,3] + [4,5,6]` = `[1,2,3,4,5,6]`.
 
 ### <a name="array-creation"></a>Matrix maken
 
-Op basis van een type en een `Int` expressie `new` kan de operator worden gebruikt voor het toewijzen van een nieuwe matrix met de opgegeven grootte.
-Bijvoorbeeld, `new Int[i + 1]` zou een nieuwe `Int` matrix met elementen kunnen toewijzen `i + 1` .
+Met een type en een `Int` expressie kunt u de `new` operator gebruiken om een nieuwe matrix met de opgegeven grootte toe te wijzen.
+`new Int[i + 1]`Wijst bijvoorbeeld een nieuwe `Int` matrix met `i + 1` elementen toe.
 
-Lege letterlijke arrays, `[]` , zijn niet toegestaan.
-In plaats daarvan `new ★[0]` kunt u, waar `★` als tijdelijke aanduiding voor een geschikt type, de gewenste matrix met een lengte van nul maken.
+Lege letterlijke arrays, zoals `[]` , zijn niet toegestaan.
+In plaats daarvan kunt u een matrix met een lengte van nul maken met `new T[0]` , waarbij `T` een tijdelijke aanduiding voor een geschikt type is.
 
-De elementen van een nieuwe matrix worden geïnitialiseerd op een type-afhankelijke standaard waarde.
-In de meeste gevallen is dit een bepaalde variatie van nul.
+De elementen van een nieuwe matrix worden geïnitialiseerd naar een type-afhankelijke standaard waarde.
+In de meeste gevallen is dit een variatie van nul.
 
 Voor qubits en callables, die verwijzingen naar entiteiten zijn, is er geen redelijke standaard waarde.
-Daarom is de standaard waarde voor deze typen een ongeldige verwijzing die niet kan worden gebruikt zonder dat er een runtime-fout wordt veroorzaakt.
-Dit is vergelijkbaar met een null-verwijzing in talen als C# of Java.
-Matrices met qubits of callables moeten correct worden geïnitialiseerd met niet-standaard waarden voordat de elementen veilig kunnen worden gebruikt. Geschikte initialisatie routines kunt u vinden in <xref:microsoft.quantum.arrays> .
+Voor deze typen is de standaard waarde een ongeldige verwijzing die u niet kunt gebruiken zonder dat er een runtime-fout wordt veroorzaakt, vergelijkbaar met een null-verwijzing in talen als C# of Java.
+Matrices met qubits of callables moeten worden geïnitialiseerd met niet-standaard waarden voordat u de elementen ervan veilig kunt gebruiken. Zie voor de juiste initialisatie routines <xref:microsoft.quantum.arrays> .
 
 De standaard waarden voor elk type zijn:
 
@@ -256,17 +254,17 @@ Type | Standaard
  `Callable` | _Ongeldige aanroepable_
  `Array['T]` | `'T[0]`
 
-De tuple-typen zijn geïnitialiseerd met element-by-element.
+Type tuple Initialiseer element-by-element.
 
 
 ### <a name="array-elements"></a>Matrix elementen
 
-Met een matrix expressie en een `Int` expressie kan een nieuwe expressie worden gevormd met de `[` operator and van het `]` matrix element.
+Een matrix expressie en een `Int` expressie, vormen een nieuwe expressie met de operator matrix element `[]` .
 De nieuwe expressie is van hetzelfde type als het element type van de matrix.
-Als bijvoorbeeld `a` is gebonden aan een matrix van `Double` s, dan `a[4]` is een `Double` expressie.
+Als bijvoorbeeld `a` is gebonden aan een matrix van het type `Double` , `a[4]` is een `Double` expressie.
 
-Als de matrix expressie geen eenvoudige id is, moet deze tussen haakjes worden geplaatst om een element te selecteren.
-Als bijvoorbeeld `a` `b` beide matrices van `Int` s zijn, wordt een element uit de samen voeging als volgt weer gegeven:
+Als de matrix expressie geen eenvoudige id is, moet u deze tussen haakjes plaatsen om een element te selecteren.
+Als bijvoorbeeld `a` `b` beide matrices van het type zijn `Int` , wordt een element uit de samen voeging als volgt weer gegeven:
 
 ```qsharp
 (a + b)[13]
@@ -278,14 +276,14 @@ Dat wil zeggen, het eerste element van een matrix `a` is altijd `a[0]` .
 
 ### <a name="array-slices"></a>Matrix segmenten
 
-Met een matrix expressie en een `Range` expressie kan een nieuwe expressie worden gevormd met behulp van de `[` operator en de `]` matrix segment.
-De nieuwe expressie is van hetzelfde type als de matrix en bevat de matrix items die worden geïndexeerd door de elementen van de `Range` , in de volg orde die is gedefinieerd door de `Range` .
-Als bijvoorbeeld `a` is gebonden aan een matrix van `Double` s, `a[3..-1..0]` is `Double[]` dit een expressie die de eerste vier elementen van `a` , maar in de omgekeerde volg orde bevat zoals ze worden weer gegeven in `a` .
+Een matrix expressie en een `Range` expressie, vormen een nieuwe expressie met de operator matrix segment `[ ]` .
+De nieuwe expressie is van hetzelfde type als de matrix en bevat de matrix items die zijn geïndexeerd door de elementen van de `Range` , in de volg orde die is gedefinieerd door de `Range` .
+Als bijvoorbeeld `a` is gebonden aan een matrix van het type `Double` , `a[3..-1..0]` is `Double[]` dit een expressie die de eerste vier elementen van `a` , maar in de omgekeerde volg orde bevat zoals ze worden weer gegeven in `a` .
 
-Als het `Range` leeg is, is het resulterende matrix segment nul lengte.
+Als het `Range` leeg is, is het resulterende matrix segment geen lengte van nul.
 
-Net als bij het verwijzen naar matrix elementen als de matrix expressie geen eenvoudige id is, moet deze tussen haakjes worden geplaatst om te kunnen worden gesegmenteerd.
-Als `a` en `b` beide matrices van `Int` s, wordt een segment uit de samen voeging als volgt weer gegeven:
+Net als bij het verwijzen naar matrix elementen, moet u de matrix expressie tussen haakjes plaatsen om deze te segmenteren.
+Als bijvoorbeeld `a` `b` beide matrices van het type zijn `Int` , wordt een segment uit de samen voeging als volgt weer gegeven:
 
 ```qsharp
 (a+b)[1..2..7]
@@ -293,15 +291,17 @@ Als `a` en `b` beide matrices van `Int` s, wordt een segment uit de samen voegin
 
 #### <a name="inferred-startend-values"></a>Uitgestelde begin-en eind waarden
 
-Vanaf onze 0,8-release ondersteunen we context afhankelijke expressies voor bereik segmenting. Met name bereik begin-en eind waarden kunnen worden wegge laten in de context van een expressie voor bereik segmentering. In dat geval past de compiler de volgende regels toe om de beoogde scheidings tekens voor het bereik af te leiden. 
+Vanaf onze [0,8-release](xref:microsoft.quantum.relnotes)ondersteunen we context afhankelijke expressies voor bereik segmenting. Met name kunt u de begin-en eind waarden van het bereik weglaten in de context van een expressie voor bereik segmentatie. In dat geval past de compiler de volgende regels toe om de beoogde scheidings tekens voor het bereik af te leiden:
 
-Als de begin waarde van het bereik bijvoorbeeld wordt wegge laten, wordt de uitgestelde begin waarde 
-- is nul als er geen stap is opgegeven of als de opgegeven stap positief is en 
-- is de lengte van de gesegmenteerde matrix min één als de opgegeven stap negatief is. 
+* Als de *begin* waarde van het bereik wordt wegge laten, wordt de uitgestelde begin waarde
+  * is nul als er geen stap is opgegeven of de opgegeven stap positief is.  
+  * is de lengte van de gesegmenteerde matrix min één als de opgegeven stap negatief is.
 
-Als de eind waarde van het bereik wordt wegge laten, wordt de uitgestelde eind waarde 
-- is de lengte van de gesegmenteerde matrix min één als er geen stap is opgegeven, of als de opgegeven stap positief is en 
-- is nul als de opgegeven stap negatief is. 
+* Als de *eind* waarde van het bereik wordt wegge laten, wordt de uitgestelde eind waarde
+  * is de lengte van de gesegmenteerde matrix min één als er geen stap is opgegeven of de opgegeven stap positief is.
+  * is nul als de opgegeven stap negatief is.
+
+Een aantal voorbeelden:
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
@@ -318,18 +318,21 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Expressies kopiëren en bijwerken
 
-Omdat alle typen Q # waardetypen zijn, waarbij de qubits een enigszins speciale rol neemt, wordt formeel een ' Copy ' gemaakt wanneer een waarde is gebonden aan een symbool of wanneer een symbool wordt losgekoppeld. Dat wil zeggen dat het gedrag van Q # hetzelfde is als wanneer er een kopie is gemaakt voor de toewijzing.
-Natuurlijk worden alleen de relevante onderdelen, indien nodig, feitelijk opnieuw gemaakt. 
+Aangezien alle typen Q # waarden zijn, wordt er formeel een ' Copy ' gemaakt wanneer een waarde is gebonden aan een symbool of wanneer een symbool wordt gebindingt. Dat wil zeggen dat het gedrag van Q # hetzelfde is als wanneer een kopie is gemaakt met behulp van een toewijzings operator. 
 
-Dit bevat met name ook matrices.
-Met name het is niet mogelijk om matrix items bij te werken. Voor het wijzigen van een bestaande matrix is een mechanisme voor *kopiëren en bijwerken* vereist.
+Natuurlijk, in de praktijk, worden alleen de relevante onderdelen opnieuw gemaakt als dat nodig is. Dit is van invloed op hoe u matrices kopieert, omdat het niet mogelijk is om matrix items bij te werken. Voor het wijzigen van een bestaande matrix is een mechanisme voor *kopiëren en bijwerken* vereist.
 
-Nieuwe matrices kunnen worden gemaakt op basis van bestaande met behulp van *Copy-en-update-* expressies.
-Een copy-en-update-expressie is een expressie van het formulier `expression1 w/ expression2 <- expression3` , waarbij `expression1` type `T[]` voor een type is `T` .
-De tweede `expression2` definieert de indices van de element (en) die moeten worden gewijzigd vergeleken met de matrix in en moet van het type `expression1` `Int` of van het type zijn `Range` .
-Als `expression2` is van `Int` het type, moet `expression3` van het type zijn `T` . Als `expression2` is van `Range` het type, moet `expression3` van het type zijn `T[]` .
+U kunt een nieuwe matrix maken op basis van een bestaande matrix via de expressies *kopiëren en bijwerken* , die gebruikmaken van de Opera tors `w/` en `<-` .
+Een copy-en-update-expressie is een expressie van het formulier `expression1 w/ expression2 <- expression3` , waarbij
 
-Met een copy-and-update-expressie wordt `arr w/ idx <- value` een nieuwe matrix gemaakt met alle elementen die zijn ingesteld op het overeenkomstige element in `arr` , met uitzonde ring van het element (en) op `idx` , die zijn ingesteld op een of meer in `value` . Als bijvoorbeeld `arr` een matrix bevat `[0,1,2,3]` , 
+* `expression1`moet een type zijn `T[]` voor een bepaald type `T` .
+* `expression2`Hiermee wordt gedefinieerd welke indexen in de opgegeven matrix `expression1` worden gewijzigd. `expression2`moet van het type `Int` of van een type zijn `Range` .
+* `expression3`is de waarde (n) die wordt gebruikt voor het bijwerken van elementen in `expression1` , op basis van de indices die zijn opgegeven in `expression2` . Als `expression2` is type `Int` , `expression3` moet type zijn `T` . Als `expression2` is type `Range` , `expression3` moet type zijn `T[]` .
+
+De expressie Copy-and-update `arr w/ idx <- value` bouwt bijvoorbeeld een nieuwe matrix met alle elementen die zijn ingesteld op de overeenkomstige elementen in `arr` , met uitzonde ring van het element (en) `idx` dat is opgegeven door, die is ingesteld op de waarde (n) in `value` . 
+
+Opgegeven `arr` bevat de matrix `[0,1,2,3]` en vervolgens 
+
 - `arr w/ 0 <- 10`is de matrix `[10,1,2,3]` .
 - `arr w/ 2 <- 10`is de matrix `[0,1,10,3]` .
 - `arr w/ 0..2..3 <- [10,12]`is de matrix `[10,1,12,3]` .
@@ -365,50 +368,46 @@ for (i in 1..N) {
 
 ### <a name="arrays-of-callables"></a>Matrices van callables 
 
-Meer informatie over oproep bare typen vindt u hieronder en op de volgende pagina, [bewerkingen en functies in Q #](xref:microsoft.quantum.guide.operationsfunctions).
+U kunt ook een matrix van callables maken.
 
-Als het algemene element type een bewerking of functie type is, moeten alle elementen hetzelfde invoer-en uitvoer type hebben.
-Het element type van de matrix ondersteunt alle functors die door alle elementen worden ondersteund.
-Bijvoorbeeld als `Op1` , `Op2` , en `Op3` alle zijn `Qubit[] => Unit` , maar `Op1` ondersteunt `Adjoint` , `Op2` ondersteunt `Controlled` en `Op3` ondersteunt:
+* Als het algemene element type een bewerking of functie type is, moeten alle elementen hetzelfde invoer-en uitvoer type hebben.
+* Het element type van de matrix ondersteunt alle [functors](xref:microsoft.quantum.guide.operationsfunctions) die door alle elementen worden ondersteund.
+Bijvoorbeeld als `Op1` , `Op2` en `Op3` alle `Qubit[] => Unit` bewerkingen zijn, maar `Op1` ondersteunt `Adjoint` , `Op2` ondersteunt `Controlled` en `Op3` ondersteunt:
+  * `[Op1, Op2]`is een matrix met `(Qubit[] => Unit)` bewerkingen.
+  * `[Op1, Op3]`is een matrix met `(Qubit[] => Unit is Adj)` bewerkingen.
+  * `[Op2, Op3]`is een matrix met `(Qubit[] => Unit is Ctl)` bewerkingen.
 
-- `[Op1, Op2]`is een matrix met `(Qubit[] => Unit)` bewerkingen.
-- `[Op1, Op3]`is een matrix met `(Qubit[] => Unit is Adj)` bewerkingen.
-- `[Op2, Op3]`is een matrix met `(Qubit[] => Unit is Ctl)` bewerkingen.
+Terwijl de bewerkingen `(Qubit[] => Unit is Adj)` en `(Qubit[] => Unit is Ctl)` het gebruikelijke basis type van zijn `(Qubit[] => Unit)` , delen *matrices* van deze bewerkingen echter geen gemeen schappelijk basis type.
 
-Hoewel `(Qubit[] => Unit is Adj)` en bewerkingen echter `(Qubit[] => Unit is Ctl)` het gemeen schappelijke basis type hebben `(Qubit[] => Unit)` , is het niet mogelijk dat matrices *van* deze opera tors een gemeen schappelijk basis type hebben. Er wordt bijvoorbeeld `[[Op1], [Op2]]` momenteel een fout gegenereerd omdat er wordt geprobeerd een matrix te maken van de incompatibele matrix typen `(Qubit[] => Unit is Adj)[]` en `(Qubit[] => Unit is Ctl)[]` .
+Er wordt bijvoorbeeld `[[Op1], [Op2]]` momenteel een fout gegenereerd omdat er wordt geprobeerd een matrix te maken van de twee incompatibele matrix typen `(Qubit[] => Unit is Adj)[]` en `(Qubit[] => Unit is Ctl)[]` .
 
+Zie [aanroep bare expressies](#callable-expressions) op deze pagina of [bewerkingen en functies in Q #](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie over callables.
 
 ## <a name="conditional-expressions"></a>Voorwaardelijke expressies
 
-Als er twee andere expressies van hetzelfde type en een booleaanse expressie zijn opgegeven, kan de voorwaardelijke expressie worden gevormd met behulp van het vraag teken `?` en de verticale balk `|` .
-Bijvoorbeeld `a==b ? c | d`.
-In dit voor beeld is de waarde van de voorwaardelijke expressie `c` als `a==b` True en `d` als deze False is.
+Er zijn twee expressies van hetzelfde type en een booleaanse expressie die een voorwaardelijke expressie vormen met het vraag teken, `?` en de verticale balk `|` . Gegeven `a==b ? c | d` , is de waarde van de voorwaardelijke expressie `c` als `a==b` waar en `d` als deze False is.
 
 ### <a name="conditional-expressions-with-callables"></a>Voorwaardelijke expressies met callables
 
-De twee expressies kunnen resulteren in bewerkingen die dezelfde invoer en uitvoer hebben, maar verschillende functors ondersteunen.
-In dit geval is het type van de voorwaardelijke expressie een bewerking met de invoer en uitvoer die ondersteuning bieden voor functors die door beide expressies worden ondersteund.
+Voorwaardelijke expressies kunnen resulteren in bewerkingen die dezelfde invoer en uitvoer hebben, maar verschillende functors ondersteunen. In dit geval is het type van de voorwaardelijke expressie een bewerking met invoer en uitvoer die ondersteuning bieden voor functors die door beide expressies worden ondersteund.
 Bijvoorbeeld als `Op1` , `Op2` , en `Op3` alle zijn `Qubit[]=>Unit` , maar `Op1` ondersteunt `Adjoint` , `Op2` ondersteunt `Controlled` en `Op3` ondersteunt:
 
 - `flag ? Op1 | Op2`is een `(Qubit[] => Unit)` bewerking.
 - `flag ? Op1 | Op3`is een `(Qubit[] => Unit is Adj)` bewerking.
 - `flag ? Op2 | Op3`is een `(Qubit[] => Unit is Ctl)` bewerking.
 
-Als een van de twee mogelijke resultaat expressies een functie of een bewerkings aanroep bevat, wordt die aanroep alleen uitgevoerd als dat resulteert in het resultaat dat de waarde van de aanroep zal zijn.
-Als bijvoorbeeld is ingesteld op `a==b ? C(qs) | D(qs)` True, wordt `a==b` de `C` bewerking opgeroepen en als deze ONWAAR is, `D` wordt alleen aangeroepen.
-Dit is vergelijkbaar met kort circuits in andere talen.
+Als een van de twee mogelijke resultaat expressies een functie of een bewerkings aanroep bevat, wordt die aanroep alleen uitgevoerd als dat resulteert in de waarde van de aanroep. In het geval bijvoorbeeld `a==b ? C(qs) | D(qs)` als `a==b` is waar, wordt de `C` bewerking aangeroepen en als deze ONWAAR is, wordt alleen de `D` bewerking aangeroepen. Deze benadering is vergelijkbaar met *kort circuits* in andere talen.
 
 ## <a name="callable-expressions"></a>Aanroep bare expressies
 
-Een aanroep bare letterlijke waarde is de naam van een bewerking of functie die is gedefinieerd in het compilatie bereik.
-Bijvoorbeeld: `X` is een letterlijke bewerkings bewerking die verwijst naar de standaard `X` -bibliotheek bewerking en `Message` is een functie-literal die verwijst naar de functie standaard bibliotheek `Message` .
+Een aanroep bare letterlijke waarde is de naam van een bewerking of functie die is gedefinieerd in het compilatie bereik. Een voor beeld `X` is een letterlijke bewerking die verwijst naar de standaard `X` -bibliotheek bewerking en `Message` is een functie-literal die verwijst naar de `Message` functie standaard bibliotheek.
 
 Als een bewerking de `Adjoint` functor ondersteunt, `Adjoint op` is een bewerkings expressie.
 Op dezelfde manier geldt dat als de bewerking de `Controlled` functor ondersteunt, `Controlled op` een bewerkings expressie is.
-De typen van deze expressies worden opgegeven bij het [aanroepen van bewerkings-specials](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations).
+Zie [bewerkings bewerkingen aanroepen](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)voor meer informatie over de typen expressies.
 
-Functors ( `Adjoint` en `Controlled` ) binden meer nauw keuriger dan alle andere opera Tors, met uitzonde ring van de operator voor uitpakken `!` en het indexeren van matrices met [].
-Daarom is het volgende juridisch, ervan uitgaande dat de bewerkingen ondersteuning bieden voor de functors die worden gebruikt:
+Functors ( `Adjoint` en `Controlled` ) binden meer nauw keuriger dan alle andere opera Tors, met uitzonde ring van de operator voor uitpakken `!` en het indexeren van matrices met `[ ]` .
+Daarom zijn de volgende allemaal geldig, ervan uitgaande dat de bewerkingen ondersteuning bieden voor de functors die worden gebruikt:
 
 ```qsharp
 Adjoint Op(qs)
@@ -419,27 +418,25 @@ Adjoint WrappedOp!(qs)
 
 ### <a name="type-parameterized-callable-expressions"></a>Met type para meter aanroep bare expressies
 
-Een aanroep bare letterlijke tekenloze kan worden gebruikt als een waarde, moet worden toegewezen aan een variabele of door gegeven aan een andere aanroepable.
-Als de aanroepable van het [type para meters](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)is, moeten deze als onderdeel van de aanroep bare waarde worden opgegeven.
-Een aanroep bare waarde kan geen niet-opgegeven type parameters hebben.
+U kunt een aanroep bare letterlijke waarde gebruiken als een teken reeks, bijvoorbeeld om deze toe te wijzen aan een variabele of door geven aan een andere aanroepable. Als de aanroepable van het [type para meters](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)is, moet u in dit geval de para meters opgeven als onderdeel van de aanroep bare waarde.
 
-Als bijvoorbeeld `Fun` een functie met hand tekening is `'T1->Unit` :
+Een aanroep bare waarde kan geen niet-opgegeven type parameters hebben. Als `Fun` is bijvoorbeeld een functie met de hand tekening `'T1->Unit` :
 
 ```qsharp
 let f = Fun<Int>;            // f is (Int->Unit).
 let g = Fun;                 // This causes a compilation error.
-SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomOtherFun.
+SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomeOtherFun.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 ## <a name="callable-invocation-expressions"></a>Aanroep bare aanroepende expressies
 
-Gezien een aanroep bare (Operation-of Function-) expressie en een tuple-expressie van het invoer type van de hand tekening van de aanroepable, kan een aanroep expressie worden gevormd door de tuple-expressie toe te voegen aan de aanroep bare expressie.
+Gezien een aanroep bare expressie (bewerking of functie) en een tuple-expressie van het invoer type van de hand tekening van de aanroepable, kunt u een aanroep *expressie* vormen door de tuple-expressie toe te voegen aan de aanroep bare expressie.
 Het type van de aanroep expressie is het uitvoer type van de hand tekening van de aanroepable.
 
-Als bijvoorbeeld `Op` een bewerking met hand tekening is `((Int, Qubit) => Double)` , `Op(3, qubit1)` is een expressie van het type `Double` .
-Op dezelfde manier `Sin` is, als een functie met hand tekening `(Double -> Double)` , `Sin(0.1)` een expressie van het type `Double` .
-Ten slotte, als `Builder` een functie met hand tekening `(Int -> (Int -> Int))` , `Builder(3)` is een functie van naar int.
+Als bijvoorbeeld `Op` een bewerking met de hand tekening is `((Int, Qubit) => Double)` , `Op(3, qubit1)` is een expressie van het type `Double` .
+Op dezelfde manier `Sin` is als een functie met de hand tekening `(Double -> Double)` `Sin(0.1)` een expressie van het type `Double` .
+Ten slotte, als `Builder` een functie met de hand tekening `(Int -> (Int -> Int))` , `Builder(3)` is een functie van `Int` naar `Int` .
 
 Voor het aanroepen van het resultaat van een expressie met een aanroep bare waarde is een extra paar haakjes rond de aanroepende expressie vereist.
 Om het resultaat van aanroepen `Builder` vanuit de vorige alinea te kunnen aanroepen, is de juiste syntaxis:
@@ -448,12 +445,12 @@ Om het resultaat van aanroepen `Builder` vanuit de vorige alinea te kunnen aanro
 (Builder(3))(2)
 ```
 
-Bij het aanroepen van een aanroep [bare type para meter](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) kunnen de werkelijke type parameters worden opgegeven tussen punt haken `<` en `>` na de aanroep bare expressie.
-Dit is doorgaans onnodig omdat de compiler Q # de daad werkelijke typen afleidt.
+Wanneer u een aanroepable van een [type para meter](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) aanroept, kunt u de werkelijke type parameters tussen punt haken `< >` na de aanroep bare expressie opgeven.
+Deze actie is doorgaans niet nodig omdat de compiler Q # de daad werkelijke typen afleidt.
 Het *is* echter wel vereist voor een [gedeeltelijke toepassing](xref:microsoft.quantum.guide.operationsfunctions#partial-application) als een argument van het type para meter left niet is opgegeven.
-Het is ook soms handig bij het door geven van bewerkingen met verschillende functor-ondersteuning voor een aanroepable.
+Het is ook handig bij het door geven van bewerkingen met verschillende functor-ondersteuning voor een aanroepable.
 
-Bijvoorbeeld als `Func` hand tekening is ondertekend `('T1, 'T2, 'T1) -> 'T2` , `Op1` hand tekening heeft `Op2` `(Qubit[] => Unit is Adj)` en `Op3` hand tekening heeft, om als het `(Qubit[] => Unit)` `Func` `Op1` eerste argument `Op2` als tweede en `Op3` als derde te worden aangeroepen:
+Als u bijvoorbeeld een `Func` hand tekening `('T1, 'T2, 'T1) -> 'T2` `Op1` hebt en `Op2` hand tekening hebt en hand tekening hebt, `(Qubit[] => Unit is Adj)` moet u als het `Op3` `(Qubit[] => Unit)` `Func` `Op1` eerste argument als `Op2` tweede en `Op3` als derde worden aangeroepen:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -464,15 +461,15 @@ De type specificatie is vereist omdat `Op3` en `Op1` andere typen hebben, waardo
 
 ## <a name="operator-precedence"></a>Operator prioriteit
 
-Alle binaire Opera tors zijn rechts gekoppeld, met uitzonde ring van `^` .
+* Alle binaire Opera tors zijn rechts gekoppeld, met uitzonde ring van `^` .
 
-U kunt `[` `]` voor elke operator een binding maken, en voor het segmenteren en indexeren van matrices.
+* U kunt `[ ]` voor elke operator een binding maken,, voor het segmenteren en indexeren van matrices.
 
-De functors `Adjoint` en `Controlled` binding na het indexeren van de matrix, maar vóór alle andere opera tors.
+* De functors `Adjoint` en `Controlled` binding na het indexeren van de matrix, maar vóór alle andere opera tors.
 
-Tussen haakjes voor Operation-en functie aanroep moet u ook een operator binden, maar na het indexeren van matrices en functors.
+* Tussen haakjes voor Operation-en functie aanroep moet u ook een operator binden, maar na het indexeren van matrices en functors.
 
-Opera tors in volg orde van prioriteit, van hoog naar laag:
+Q #-Opera tors in volg orde van prioriteit, van hoog naar laag:
 
 Operator | Ariteit | Beschrijving | Typen operand
 ---------|----------|---------|---------------
@@ -495,4 +492,4 @@ Operator | Ariteit | Beschrijving | Typen operand
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u met de expressies in Q # kunt werken, kunt u de [bewerkingen en functies in q #](xref:microsoft.quantum.guide.operationsfunctions) gebruiken om te leren hoe u bewerkingen en functies definieert en aanroept.
+Nu u kunt werken met expressies in Q #, gaat u naar [bewerkingen en functies in q #](xref:microsoft.quantum.guide.operationsfunctions) voor meer informatie over het definiëren en aanroepen van bewerkingen en functies.

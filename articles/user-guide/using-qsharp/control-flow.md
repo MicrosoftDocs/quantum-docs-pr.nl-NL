@@ -6,43 +6,41 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326537"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415300"
 ---
 # <a name="control-flow-in-q"></a>Controle stroom in Q #
 
-Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met de meest voorkomende verplichte klassieke talen.
-Deze controle stroom kan echter op drie verschillende manieren worden gewijzigd:
+Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met andere gebruikelijke, klassieke talen.
+U kunt de controle stroom echter op drie verschillende manieren wijzigen:
 
-- `if`instructies
-- `for`lussen
-- `repeat`-`until`lussen
+* `if`instructies
+* `for`lussen
+* `repeat-until-success`lussen
 
-We stellen de bespreking van de laatste uit [voor meer informatie](#repeat-until-success-loop).
-De `if` `for` constructies en de controle stroom kunnen echter door gaan in een vertrouwde zin voor de meeste klassieke programmeer talen.
+De `if` `for` constructies en de controle stroom worden door gegeven in een vertrouwde zin voor de meeste klassieke programmeer talen. [`Repeat-until-success`](#repeat-until-success-loop)lussen worden verderop in dit artikel besproken.
 
-Belang rijk: `for` lussen en `if` instructies kunnen zelfs worden gebruikt in bewerkingen waarvoor specials automatisch worden gegenereerd. In dat geval keert de adjoint van een `for` lus de richting om en neemt de adjoint van elke iteratie toe.
-Dit is het principe ' schoenen en SOCKS ': als u het uitvoeren van een SOCKS ongedaan wilt maken en vervolgens schoenen wilt maken, moet u het op schoenen opzetten en vervolgens op SOCKS ongedaan maken.
-Het werkt minder goed om uw SOCKS uit te proberen terwijl u nog steeds uw schoenen afdraagt!
+Belang rijk: `for` lussen en `if` instructies kunnen worden gebruikt in bewerkingen waarvoor automatisch een [specialisatie](xref:microsoft.quantum.guide.operationsfunctions) wordt gegenereerd. In dat scenario keert de adjoint van een `for` lus de richting om en neemt de adjoint van elke iteratie toe.
+Met deze actie wordt het principe ' schoenen en SOCKS ' gehanteerd: als u het maken van een SOCKS-en vervolgens schoenen wilt opheffen, moet u de toevoeging op schoenen ongedaan maken en vervolgens op SOCKS ongedaan maken. 
 
 ## <a name="if-else-if-else"></a>If, else-if, else
 
 De `if` instructie ondersteunt voorwaardelijke uitvoering.
-Het bestaat uit het tref woord `if` , een open haakje, een `(` Boole-expressie, een haakje sluiten `)` en een instructie blok (de _vervolgens_ blok kering).
-Dit kan worden gevolgd door een wille keurig aantal else-if-componenten, die elk bestaan uit het sleutel woord `elif` , een haakje openen `(` , een booleaanse expressie, een haakje sluiten `)` en een instructie blok (het _else-if-_ blok).
+Het bestaat uit het sleutel woord `if` , een Boole-expressie tussen haakjes en een instructie blok (de _vervolgens_ blok kering).
+U kunt eventueel elk wille keurig aantal else-if-componenten volgen, elk met het sleutel woord `elif` , een Boole-expressie tussen haakjes en een instructie blok (het _else-if-_ blok).
 Ten slotte kan de instructie eventueel eindigen met een else-component, die bestaat uit het tref woord `else` gevolgd door een ander instructie blok (het _else_ -blok).
 
-De `if` voor waarde wordt geëvalueerd, en als deze waar is, wordt de blok kering uitgevoerd.
-Als de voor waarde ONWAAR is, wordt de eerste else-if-voor waarde geëvalueerd; Als de waarde True is, wordt het blok Else-If uitgevoerd.
-Anders wordt het tweede else-if-blok getest en vervolgens de derde, enzovoort, totdat een component met de voor waarde True wordt aangetroffen of omdat er geen else-if-componenten zijn.
-Als de component origineel als voor waarde en alle else-if resulteert in ONWAAR, wordt het else-blok uitgevoerd als er een is opgegeven.
+De `if` voor waarde wordt geëvalueerd en als deze *waar*is, wordt *then* de blok kering uitgevoerd.
+Als de voor waarde *Onwaar*is, wordt de eerste else-if-voor waarde geëvalueerd; Als dat het geval is, wordt de *else-if-* blok kering uitgevoerd.
+Als dat niet het geval is, wordt het tweede else-if-blok geëvalueerd en vervolgens de derde, enzovoort, totdat een component met de voor waarde True wordt aangetroffen of omdat er geen else-if-componenten zijn.
+*Als de voor waarde origineel* en alle else-if-componenten resulteren in *Onwaar*, wordt het *else* -blok uitgevoerd, indien opgegeven.
 
-Houd er rekening mee dat welk blok wordt uitgevoerd in een eigen bereik.
-Bindingen die zijn gemaakt in een `if` , `elif` of `else` blok zijn niet zichtbaar na het einde.
+Houd er rekening mee dat elk blok wordt uitgevoerd binnen een eigen bereik.
+Bindingen die zijn gemaakt in een `if` , `elif` of `else` blok zijn niet zichtbaar nadat de blok kering is beëindigd.
 
 Bijvoorbeeld:
 
@@ -69,18 +67,18 @@ if (i == 1) {
 
 ## <a name="for-loop"></a>For-lus
 
-De `for` instructie ondersteunt iteratie over een geheel getal of een matrix.
-De instructie bestaat uit het tref woord `for` , een open haakje, `(` gevolgd door een symbool of symbool tuple, het tref woord `in` , een expressie van het type `Range` of de matrix, een haakje sluiten `)` en een instructie blok.
+De `for` instructie ondersteunt herhalingen over een bereik met gehele getallen of een matrix.
+De instructie bestaat uit het tref woord `for` , gevolgd door een symbool of symbool tuple, het tref woord `in` en een expressie van het type `Range` of de matrix, alle tussen haakjes en een instructie blok.
 
-Het instructie blok (de hoofd tekst van de lus) wordt herhaaldelijk uitgevoerd, met de gedefinieerde symbolen (een of meer lussen) die zijn gekoppeld aan elke waarde in het bereik of de matrix.
+Het instructie blok (de hoofd tekst van de lus) wordt herhaaldelijk uitgevoerd, met het gedefinieerde symbool (de variabele lus) dat is gekoppeld aan elke waarde in het bereik of de matrix.
 Houd er rekening mee dat als de expressie Range resulteert in een leeg bereik of een lege matrix, de hoofd tekst helemaal niet wordt uitgevoerd.
 De expressie is volledig geëvalueerd voordat de lus wordt ingevoerd en wordt niet gewijzigd terwijl de lus wordt uitgevoerd.
 
-De lus-variabele is bij elke toegang aan de hoofd tekst van de lus gebonden en ontbond aan het einde van de hoofd tekst.
-Met name de lus-variabele is niet gebonden nadat de for-lus is voltooid.
-De binding van de gedeclareerde symbolen is onveranderbaar en volgt dezelfde regels als andere variabele bindingen. 
+De lus-variabele is bij elke toegang aan de hoofd tekst van de lus gebonden en is aan het einde van de hoofd tekst losgekoppeld.
+De lus-variabele is niet gebonden nadat de for-lus is voltooid.
+De binding van de lus-variabele is onveranderbaar en volgt dezelfde regels als andere variabele bindingen. 
 
-Voor sommige voor beelden `qubits` is supposing een REGI ster van qubits (bijvoorbeeld type `Qubit[]` ), 
+In deze voor beelden `qubits` is een REGI ster van qubits (bijvoorbeeld type `Qubit[]` ), 
 
 ```qsharp
 // ...
@@ -101,15 +99,15 @@ for ((index, measured) in results) { // iterates over the tuple values in result
     }
 }
 ```
-U ziet dat aan het eind de reken kundige-Shift-Left-operator wordt gebruikt, `<<<` Details van die kunnen worden gevonden bij [numerieke expressies](xref:microsoft.quantum.guide.expressions#numeric-expressions)
 
+Houd er rekening mee dat aan het einde de reken kundige-Shift-Left-operator wordt gebruikt `<<<` . Zie [numerieke expressies](xref:microsoft.quantum.guide.expressions#numeric-expressions)voor meer informatie.
 
 ## <a name="repeat-until-success-loop"></a>Herhalen-tot-succes-lus
 
 De Q #-taal staat de klassieke controle stroom afhankelijk van de resultaten van het meten van qubits.
 Met deze mogelijkheid kunnen krachtige Probabilistic-gadgets worden geïmplementeerd waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd.
-Een voor beeld is het eenvoudig om te implementeren, dat wil zeggen, *herhalen-tot-succes-* patronen (RUS) in Q #.
-Deze RUS-patronen zijn Probabilistic-Program ma's die een *verwachte* lage kosten in termen van elementaire poorten hebben, maar waarvoor de werkelijke kosten afhankelijk zijn van een feitelijke uitvoering en een daad werkelijke interleaving van verschillende mogelijke vertakkingen.
+Voor beelden hiervan zijn de patronen *herhalen tot en met succes* (RUS) in Q #.
+Deze RUS-patronen zijn Probabilistic-Program ma's die een *verwachte* lage kosten in termen van elementaire poorten hebben. de gefactureerde kosten zijn afhankelijk van de daad werkelijke uitvoering en de interleaving van de meerdere mogelijke vertakkingen.
 
 Q # ondersteunt de constructs om herhaalde tot geslaagde patronen (RUS) te vergemakkelijken
 
@@ -127,29 +125,31 @@ waar `expression` is een geldige expressie die resulteert in een waarde van het 
 De hoofd tekst van de lus wordt uitgevoerd en vervolgens wordt de voor waarde geëvalueerd.
 Als de voor waarde waar is, wordt de instructie voltooid. anders wordt de reparatie uitgevoerd en wordt de instructie opnieuw uitgevoerd, te beginnen met de hoofd tekst van de lus.
 
-Alle drie delen van een herhaling/until-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling*, waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in de test en in de reparatie.
-Het volt ooien van de uitvoering van de reparatie beëindigt echter het bereik voor de-instructie, zodat symbool bindingen die zijn gemaakt tijdens de hoofd tekst of reparatie, niet beschikbaar zijn in volgende herhalingen.
+Alle drie delen van een RUS-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling*, waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in zowel de test als de reparatie.
+Het volt ooien van de uitvoering van de reparatie beëindigt echter het bereik voor de instructie, zodat symbool bindingen die zijn gemaakt in de hoofd tekst of de reparatie, niet beschikbaar zijn in volgende herhalingen.
 
 Verder is de `fixup` instructie vaak handig, maar niet altijd nodig.
 In gevallen dat het niet nodig is, de construct
+
 ```qsharp
 repeat {
     // do stuff
 }
 until (expression);
 ```
+
 is ook een geldig RUS-patroon.
 
-Onder aan deze pagina wordt een aantal [voor beelden van Rus-lussen](#repeat-until-success-examples)weer gegeven.
+Zie voor meer voor beelden en Details [herhalen](#repeat-until-success-examples) in dit artikel.
 
 > [!TIP]   
-> Vermijd het gebruik van herhalingen tot geslaagde lussen binnen functions. De bijbehorende functionaliteit wordt gegeven door-lussen in-functies. 
+> Vermijd het gebruik van herhalingen tot geslaagde lussen binnen functions. Gebruik *while* -lussen om de bijbehorende functionaliteit binnen functions te bieden. 
 
 ## <a name="while-loop"></a>Lus while
 
-Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, dus de speciale taal construct in Q #. Lussen die op basis van een voor waarde worden uitgevoerd en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, moeten worden behandeld met een speciale Care in een Quantum runtime. Het gebruik ervan in functions is niet probleemend, omdat deze alleen code bevatten die op conventionele hardware (niet-Quantum) wordt uitgevoerd. 
+Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, dus de speciale taal construct in Q #. Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime. Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum). 
 
-Q # ondersteunt daarom alleen het gebruik van while-lussen in-functies. Een `while` instructie bestaat uit het tref woord `while` , een open haakje, een `(` voor waarde (bijvoorbeeld een Boole-expressie), een haakje sluiten `)` en een instructie blok.
+Q # biedt daarom ondersteuning voor het gebruik van while-lussen in functions. Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.
 Het instructie blok (de hoofd tekst van de lus) wordt uitgevoerd zolang de voor waarde wordt geëvalueerd `true` .
 
 ```qsharp
@@ -161,18 +161,10 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-
 ## <a name="return-statement"></a>Instructie return
 
 De instructie return beëindigt de uitvoering van een bewerking of functie en retourneert een waarde naar de aanroeper.
 Het bestaat uit het tref woord `return` , gevolgd door een expressie van het juiste type en een punt komma als scheidings tekens.
-
-Een aanroepable die een lege tuple retourneert, `()` heeft geen instructie return nodig.
-Als een vroege afsluiting gewenst is, `return ()` kan in dit geval worden gebruikt.
-Callables die een wille keurig ander type retour neren, moeten een laatste Return-instructie hebben.
-
-Er is geen maximum aantal retour instructies in een bewerking.
-De compiler kan een waarschuwing verzenden als de instructies een instructie return in een blok volgen.
 
 Bijvoorbeeld:
 ```qsharp
@@ -180,23 +172,27 @@ return 1;
 ```
 of
 ```qsharp
-return ();
-```
-of
-```qsharp
 return (results, qubits);
 ```
 
+* Een aanroepable die een lege tuple retourneert, `()` heeft geen instructie return nodig.
+* Als u een vroege afsluiting van de bewerking of functie wilt opgeven, gebruikt u `return ();` .
+Callables die een wille keurig ander type retour neren, moeten een laatste Return-instructie hebben.
+* Er is geen maximum aantal retour instructies in een bewerking.
+De compiler kan een waarschuwing verzenden als de instructies een instructie return in een blok volgen.
+
+   
 ## <a name="fail-statement"></a>Fout instructie
 
-De instructie Fail beëindigt de uitvoering van een bewerking en retourneert een fout waarde naar de aanroeper.
+De instructie Fail beëindigt het uitvoeren van een bewerking en retourneert een fout waarde naar de aanroeper.
 Het bevat het tref woord `fail` , gevolgd door een teken reeks en een punt komma.
-De teken reeks wordt geretourneerd naar het klassieke stuur programma als het fout bericht.
+De instructie retourneert de teken reeks naar het klassieke stuur programma als het fout bericht.
 
 Er is geen beperking voor het aantal mislukte instructies in een bewerking.
 De compiler kan een waarschuwing verzenden als de instructies een mislukte instructie binnen een blok volgen.
 
 Bijvoorbeeld:
+
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -207,9 +203,9 @@ fail $"Syndrome {syn} is incorrect";
 
 ## <a name="repeat-until-success-examples"></a>Herhalen-tot-geslaagde voor beelden
 
-### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-patroon voor één Qubit draaiing over een Irrational-as 
+### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-patroon voor Qubit draaiing over een Irrational-as 
 
-In een typische use-case implementeert de volgende Q #-bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol. Dit wordt bereikt door gebruik te maken van een bekend RUS-patroon:
+In een typische use-case implementeert de volgende Q #-bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol. De implementatie maakt gebruik van een bekend RUS-patroon:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -232,9 +228,9 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-mutable-variable-in-scope"></a>RUS-lus met onveranderlijke variabele in bereik
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a>RUS-lus met een onveranderlijke variabele in het bereik
 
-In dit voor beeld ziet u het gebruik van een onveranderlijke variabele `finished` die zich binnen het bereik van de volledige herhaling-until-reactie-lus bevindt en die wordt geïnitialiseerd vóór de lus en wordt bijgewerkt in de reparatie stap.
+In dit voor beeld ziet u het gebruik van een onveranderlijke variabele, `finished` die binnen het bereik van de volledige herhaling-until-reupdate-lus ligt en die wordt geïnitialiseerd vóór de lus en wordt bijgewerkt in de reparatie stap.
 
 ```qsharp
 mutable iter = 1;
@@ -251,7 +247,7 @@ fixup {
 
 ### <a name="rus-without-fixup"></a>RUS zonder`fixup`
 
-De volgende code is bijvoorbeeld een Probabilistic-circuit waarmee een belang rijke rotatie poort wordt geïmplementeerd $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ met behulp van de `H` en- `T` poorten.
+In dit voor beeld ziet u een RUS-lus zonder de stap voor de reparatie. De code is een Probabilistic-circuit dat een belang rijke rotatie poort implementeert $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ met behulp van de- `H` en- `T` poorten.
 De lus eindigt op gemiddeld $ \frac {8} {5} $ herhalingen.
 Zie [*herhalen-tot-geslaagd: niet-deterministische ontleding van single-Qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick en Svore, 2014) voor meer informatie.
 
@@ -277,8 +273,14 @@ using (qubit = Qubit()) {
 
 ### <a name="rus-to-prepare-a-quantum-state"></a>RUS om een Quantum status voor te bereiden
 
-Tot slot wordt een voor beeld van een RUS-patroon weer gegeven om een Quantum status te bereiden $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, te beginnen met de status $ \ket{+} $.
-Zie ook het [voor beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Ten slotte is hier een voor beeld van een RUS-patroon voor het voorbereiden van een Quantum status $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, te beginnen bij de status $ \ket{+} $.
+
+Belang rijke programmeer functies die in deze bewerking worden weer gegeven, zijn:
+
+* Een complexere `fixup` deel van de lus, waarbij Quantum bewerkingen betrokken zijn. 
+* Het gebruik van `AssertProb` instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten.
+
+[`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) Zie [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging)voor meer informatie over de-en-bewerkingen.
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -325,9 +327,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Opvallende programmatische functies die in deze bewerking worden weer gegeven, zijn een complexere `fixup` deel van de lus, waarbij Quantum bewerkingen worden uitgevoerd, en het gebruik van `AssertProb` instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten.
-Zie ook [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging) voor meer informatie over de [`Assert`](xref:microsoft.quantum.intrinsic.assert) en- [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) bewerkingen.
-
+Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Volgende stappen
 

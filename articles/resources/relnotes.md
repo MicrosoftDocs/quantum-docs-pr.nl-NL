@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415451"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -344,8 +344,6 @@ Als u de extensie eerder hebt geïnstalleerd, moet u deze opnieuw installeren. G
 
 In deze release wordt een fout opgelost waardoor sommige gebruikers de Visual Studio-extensie niet konden laden.
 
-Als u upgradet van de versie 0.2 van de Quantum Development Kit, gaat u voor meer informatie naar [Q#-taalwijzigingen en uw Q#-programma migreren](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-031811203"></a>Versie 0.3.1811.203
 
 *Releasedatum: 2 november 2018*
@@ -356,8 +354,6 @@ Deze release bevat enkele foutoplossingen, waaronder voor de volgende:
 * Compilatiewaarschuwingen verwijderd bij het bouwen van projecten met een versie van .NET Core voor 2.1.403.
 * Documentatie opgeschoond, in het bijzonder de tooltips die worden weergegeven wanneer in VS Code of Visual Studio de muisaanwijzer op een item wordt geplaatst.
 
-Als u upgradet van de versie 0.2 van de Quantum Development Kit, gaat u voor meer informatie naar [Q#-taalwijzigingen en uw Q#-programma migreren](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-0318102508"></a>Versie 0.3.1810.2508
 
 *Releasedatum: 29 oktober 2018*
@@ -367,8 +363,6 @@ Deze release bevat nieuwe taalfuncties en een verbeterde ontwikkelaarservaring:
 * Deze release bevat een taalserver voor Q#, evenals clientintegraties voor Visual Studio en Visual Studio Code. Hierdoor zijn meer IntelliSense-functies mogelijk, evenals live feedback bij typen, in de vorm van krabbeltjes onder fouten en waarschuwingen. 
 * Met deze update worden diagnostische berichten in het algemeen aanzienlijk verbeterd, met eenvoudige navigatie naar en precieze bereiken voor diagnostische gegevens en aanvullende informatie in de weergegeven, zwevende informatie.
 * De Q#-taal is dusdanig uitgebreid dat ontwikkelaars op een uniforme manier bewerkingen kunnen uitvoeren en er zijn nieuwe verbeteringen voor taalfuncties doorgevoerd om kwantumberekeningen beter uit te drukken.  Deze release bevat een aantal wijzigingen die fouten veroorzaken in de Q#-taal.   
-
-Meer informatie over [Q#-taalwijzigingen en het migreren van uw Q#-programma](xref:microsoft.quantum.relnotes.migration-0-3).
 
 Deze release bevat ook een nieuwe kwantumchemiebibliotheek:
 

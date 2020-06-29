@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274885"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415251"
 ---
 # <a name="the-resources-estimator-target-machine"></a>De doel machine van de resources-estimator
 
@@ -98,8 +98,8 @@ Hier volgt een lijst met metrische gegevens die worden geschat door `ResourcesEs
 * __Meting__: het aantal uitgevoerde metingen.
 * __R__: het aantal Qubit draaiingen dat wordt uitgevoerd, met uitzonde ring van T, Clifford en Pauli-poorten.
 * __T__: het aantal t-poorten en hun bijbehorende conjugaat, inclusief de t-poort, T_x = H. t. H en T_y = hy. t. hy, uitgevoerd.
-* __Diepte__: de diepte van het Quantum circuit dat wordt uitgevoerd door de Q #-bewerking. Standaard worden alleen T-poorten in de diepte geteld. Zie de [diepte teller](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) voor meer informatie.
-* __Breedte__: het maximum aantal toegewezen qubits tijdens de uitvoering van de Q #-bewerking.
+* __Diepte__: de ondergrens voor de diepte van het Quantum circuit dat wordt uitgevoerd door de Q #-bewerking. Standaard worden alleen T-poorten in de diepte geteld. Zie de [diepte teller](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) voor meer informatie.
+* __Width__: de ondergrens voor het maximum aantal qubits dat wordt toegewezen tijdens de uitvoering van de Q #-bewerking. Het is misschien niet mogelijk om tegelijkertijd zowel de __diepte__ als de __breedte__ van de ondergrenzen te verminderen.
 * __BorrowedWidth__: het maximum aantal qubits dat is geleend binnen de Q #-bewerking.
 
 
