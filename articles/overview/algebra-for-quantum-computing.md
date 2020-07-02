@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327591"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415437"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineaire algebra voor kwantumcomputing
 
@@ -62,8 +62,7 @@ In de bovenstaande voorbeelden is de toestand van een qubit beschreven als één
 
 Elke qubit is immers een vectorruimte, dus u kunt ze niet gewoon vermenigvuldigen. In plaats daarvan gebruikt u een **tensorproduct**. Dat is een gerelateerde bewerking waarmee een nieuwe vectorruimte wordt gemaakt op basis van afzonderlijke vectorruimten. Deze wordt uitgedrukt als $\otimes$. Het tensorproduct van de twee qubittoestanden $\begin{bmatrix} a \\\\  b \end{bmatrix}$ en $\begin{bmatrix} c \\\\  d \end{bmatrix}$ wordt als volgt berekend:
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}.
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
 Het resultaat is een vierdimensionale matrix, waarbij elk element een waarschijnlijkheid vertegenwoordigt. Bijvoorbeeld: $ac$ is de kans dat de twee qubits ineenstorten tot 0 en 0, $ad$ is de kans op 0 en 1, enzovoort. 
 
