@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274506"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884138"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Meer informatie bronnen over Quantum Computing
 
@@ -24,6 +24,14 @@ Deze sectie bevat de geselecteerde verwijzingen voor een diepe dekking van Quant
 + Kitaev, A. Y., Wolthuis, A., & Vyalyi, M. N. (2002). Klassieke en Quantum berekening (vol. 47). Providence: American wiskundige samenleving.
 + Kaye, P., LaFlamme, R., & Mosca, M. (2007). Een inleiding tot Quantum Computing. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Quantum Computing: een zacht introductie. MIT Press.
++ Sarah C. Kaiser en Christopher E. Granade (in het begin van de eerste Access-toepassing is de 2019-publicatie in najaar 2020). [Meer informatie over Quantum Computing met python en Q #-een praktische benadering](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>Online cursussen ##
+
++ [MS meer informatie over Quantum Computing-modules](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). Een stap-by-Step-zelf studie van quantum computing-concepten en-procedures. 
++ [Quantum Computing-prachtige cursus](https://brilliant.org/courses/quantum-computing/). Meer informatie over het bouwen van Quantum algoritmen van de basis met een quantum computer die in uw browser is gesimuleerd.
++ [Inleiding tot Quantum Computing-LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25m Video-inleiding. 
++ [Quantum Computing via met](https://hackaday.io/project/168554-introduction-to-quantum-computing). Zondag per week op de community. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>Elementaire technieken voor het bouwen van gecontroleerde poorten ##
 

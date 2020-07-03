@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884194"
 ---
 # <a name="q-style-guide"></a>Q #-stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
@@ -91,7 +91,7 @@ Suggesties voor:
 - Gebruik voor alle lokale variabelen een `pascalCase` sterke voor keur voor `CamelCase` , `snake_case` of `ANGRY_CASE` . Zorg er met name voor dat lokale variabelen beginnen met kleine letters.
 - Vermijd het gebruik van onderstrepings tekens `_` in functie-en bewerkings namen; wanneer extra hiërarchie niveaus nodig zijn, gebruikt u naam ruimten en aliassen van naam ruimten.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Naam | Beschrijving |
 |---|------|-------------|
@@ -105,6 +105,31 @@ Suggesties voor:
 | ☑ | `newtype GeneratorTerm` | Het gebruik van de woord groep van een zelfstandig nummer verwijst duidelijk naar het resultaat van het aanroepen van de UDT-constructor. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | Het gebruik van een verbale woord groep adviseert dat de UDT-constructor een bewerking is. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | Gebruik van de woord groep met zelfstandig naam communicatie communiceert het gebruik van het kenmerk. |
+
+***
+
+### <a name="entry-points"></a>Invoerpunten
+
+Bij het definiëren van een ingangs punt in een Q #-programma herkent de Q #-compiler het [ `@EntryPoint()` kenmerk](xref:microsoft.quantum.core.entrypoint) , in plaats van dat toegangs punten een bepaalde naam moeten hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
+Vanaf het perspectief van een Q #-ontwikkelaar zijn ingangs punten normale bewerkingen die aantekeningen maken bij `@EntryPoint()` .
+Bovendien kunnen Q # ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld: in Q # zelfstandige uitvoer bare bestanden) of een interface tussen een Q #-programma en het hostprogramma voor een toepassing (bijvoorbeeld: bij het gebruik van Q # met python of .NET), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q #-invoer punt.
+
+We raden aan gebruik te maken van naamgevings punten om het gebruik van het kenmerk weer te geven met `@EntryPoint()` behulp van het algemene advies voor naamgevings bewerkingen die hierboven worden vermeld.
+
+
+# <a name="guidance"></a>[Hulp](#tab/guidance)
+
+Suggesties voor:
+
+- Geef geen toegangs punt bewerkingen als Main.
+- Geef toegangs punt bewerkingen op als normale bewerkingen.
+
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
+
+|   | Naam | Beschrijving |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Het doel van het ingangs punt wordt duidelijk gecommuniceerd via de bewerkings naam. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | Het gebruik van `Main` heeft geen duidelijk communicatie doel van het begin punt en is redundant met het `@EntryPoint()` kenmerk. |
 
 ***
 
@@ -141,7 +166,7 @@ Suggesties voor:
 - Gebruik hoofd letters voor korte (twee letters) acroniemen en initialisms.
 - Gebruik `CamelCase` voor meer (drie of meer letter) acroniemen en initialisms.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Naam | Beschrijving |
 |---|------|-------------|
@@ -178,7 +203,7 @@ Suggesties voor:
 
 - Vermijd het gebruik van de juiste zelfstandige naam woorden in namen.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -198,7 +223,7 @@ Suggesties voor:
 
 - Als een functie een waarde van het type converteert `X` naar een waarde van `Y` het type, gebruikt u de naam `AsY` of `XAsY` .
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Naam | Beschrijving |
 |---|------|-------------|
@@ -221,7 +246,7 @@ Suggesties voor:
 
 - Wanneer een functie, bewerking of door de gebruiker gedefinieerd type geen deel uitmaakt van de open bare API voor een Q #-bibliotheek of-programma, moet u ervoor zorgen dat deze is gemarkeerd als intern door het `internal` tref woord vóór de `function` , `operation` of declaratie te plaatsen `newtype` .
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 |   | Naam | Beschrijving |
 |---|------|-------------|
@@ -250,7 +275,7 @@ Suggesties voor:
 - Als een functie of bewerking niet is gerelateerd aan vergelijk bare functies of bewerkingen door de typen en functor-ondersteuning van de invoer, mag u geen achtervoegsel gebruiken.
 - Als een functie of bewerking is gerelateerd aan vergelijk bare functies of bewerkingen door de typen en functor-ondersteuning van de invoer, gebruikt u achtervoegsels zoals in de bovenstaande tabel om varianten te onderscheiden.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -275,7 +300,7 @@ Suggesties voor:
   In het bijzonder Vermijd het gebruik van variabelen namen met één letter als indices. Overweeg `idx` ten minste te gebruiken.
 - Variabelen die worden gebruikt om de lengte van matrices te bewaren, moeten beginnen met `n` en moeten worden gemeervoudt (bijvoorbeeld: `nThings` ).
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -293,9 +318,9 @@ Suggesties voor:
 - Benoemde items die niet naar bewerkingen worden omgezet, moeten een naam hebben als woord groepen.
 - Voor UDTs die verloopt, moet een enkel benoemd item `Apply` worden gedefinieerd.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Codefragment | Description |
+|   | Codefragment | Beschrijving |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | De naam `Apply` is een `CamelCase` verbale woord groep waarmee wordt voorgesteld dat het benoemd item een bewerking is. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benoemde items moeten beginnen met een eerste hoofd letter. |
@@ -349,7 +374,7 @@ Suggesties voor:
 - Gebruik invoer volgorden die consistent zijn met ingebouwde functors.
 - Plaats alle klassieke invoer vóór een Quantum invoer.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 ***
 
@@ -387,7 +412,7 @@ Suggesties voor:
 - Wanneer een bewerking of functie is gerelateerd aan andere bewerkingen of functies van functor varianten, vermeldt u andere varianten als opsommings tekens in de `# See Also` sectie.
 - Laat een lege opmerkings regel tussen de secties Level-1 ( `/// #` ), maar laat geen lege regel tussen de secties Level-2 ( `/// ##` ) staan.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -450,9 +475,9 @@ Suggesties voor:
 - Gebruik geen spaties na functie, bewerking of UDT-namen, of na de `@` in-kenmerk declaraties.
 - Elke kenmerk declaratie moet op een eigen regel staan.
 
-# <a name="examples"></a>[Vindt](#tab/examples)
+# <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Codefragment | Description |
+|   | Codefragment | Beschrijving |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Gebruik spaties om binaire Opera tors. |
 | ☒ | <s>`target:Qubit`</s> | Gebruik spaties rondom type aantekening. |

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415451"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885049"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -20,6 +20,27 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-01220070124"></a>Versie 0.12.20070124
+
+*Release datum: juli 2e, 2020*
+
+Deze release omvat het volgende:
+
+- Nieuw `qdk-chem` hulp programma voor het converteren van verouderde indelingen voor de serialisatie van problemen met de elektronische structuur (bijvoorbeeld: FCIDUMP) naar [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
+- Nieuwe functies en bewerkingen in de [ `Microsoft.Quantum.Synthesis` naam ruimte](xref:microsoft.quantum.synthesis) voor een samenhangende toepassing van klassieke Oracle met behulp van trans formatie-en ontledings synthese algoritmen.
+- IQ # biedt nu argumenten voor de `%simulate` , `%estimate` en andere Magic-opdrachten. Raadpleeg de [ `%simulate` Magic-opdracht verwijzing](xref:microsoft.quantum.iqsharp.magic-ref.simulate) voor meer informatie.
+- Nieuwe fase weergave opties in IQ #. Raadpleeg de [ `%config` Magic-opdracht verwijzing](xref:microsoft.quantum.iqsharp.magic-ref.config) voor meer informatie.
+- IQ # en het `qsharp` python-pakket worden nu via Conda packages ([qsharp](https://anaconda.org/quantum-engineering/qsharp) en [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) verschaft om de lokale installatie van Q # Jupyter en python-functionaliteit te vereenvoudigen in een Conda-omgeving. Zie de [q # Jupyter-notebooks](xref:microsoft.quantum.install.jupyter) en [q # met python](xref:microsoft.quantum.install.python) -installatie handleidingen voor meer informatie.
+- Wanneer u de simulator gebruikt, hoeft qubits niet langer in de ⟩-status voor | 0 te zijn bij de release, maar deze kan automatisch opnieuw worden ingesteld als deze onmiddellijk worden gemeten voordat de versie wordt vrijgegeven.
+- Updates om het makkelijker te maken voor IQ # gebruikers om bibliotheek pakketten te gebruiken met verschillende QDK-versies, zodat alleen belang rijke & secundaire versie nummers overeenkomen in plaats van exact dezelfde versie
+- Afgeschafte `Microsoft.Quantum.Primitive.*` naam ruimte verwijderd
+- Verplaatste bewerkingen:
+  - `Microsoft.Quantum.Intrinsic.Assert`is nu`Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb`is nu`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Opgeloste fouten 
+
+Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0112006403"></a>Versie 0.11.2006.403
 
@@ -425,7 +446,7 @@ Deze release is een snelle oplossing voor [probleem #48 in GitHub](https://githu
 
 *Releasedatum: 22 juni 2018*
 
-Deze release omvat verschillende bijdragen van de community, evenals een verbeterde ervaring voor foutopsporing en verbeterde prestaties.  Met name:
+Deze release omvat verschillende bijdragen van de community, evenals een verbeterde ervaring voor foutopsporing en verbeterde prestaties.  Specifiek:
 
 * Prestatieverbeteringen in zowel kleine als grote simulaties voor de QuantumSimulator-doelmachine.
 * Verbeterde functionaliteit voor foutopsporing.
