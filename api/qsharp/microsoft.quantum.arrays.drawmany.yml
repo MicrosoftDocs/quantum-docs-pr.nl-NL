@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.drawmany
+name: DrawMany
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: Hiermee wordt een bewerking herhaald voor een bepaald aantal steek proeven, waarbij de uitvoer ervan in een matrix wordt verzameld.
+examples: >-
+  De volgende steek proeven worden uitgevoerd op een geheel getal, op voor waarde dat een bewerking wordt uitgevoerd met één bit per keer.
+
+
+  ```Q#
+
+  let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
+
+  ```
+syntax: "operation DrawMany (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput) : 'TOutput[]"
+input:
+  content: "(op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: De bewerking die herhaaldelijk moet worden aangeroepen.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - uid: "'TOutput"
+        isLocal: true
+  - name: nSamples
+    summary: Het aantal voor beelden van aanroepen `op` om te verzamelen.
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: De invoer die moet worden door gegeven aan `op` .
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: TInput
+  summary: Het type invoer verwacht door `op` .
+- uid: TOutput
+  summary: Het type uitvoer geretourneerd door `op` .
+seeAlso:
+- microsoft.quantum.canon.repeat
+metadata:
+  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886423"

@@ -7,7 +7,7 @@ summary: >-
   Maakt reflectie over een bepaalde status vanuit een Oracle.
 
 
-  Gezien een determinstic-status voorbereidings-Oracle die wordt vertegenwoordigd door een unitary matrix $O $, is het resultaat van deze functie een Oracle dat een reflectie rond de status $ \ket{\psi} $ die is voor bereid door de Oracle-$O $; dat wil zeggen de status $ \ket{\psi} $, $O \ket{0} = \ket{\psi} $.
+  Op basis van een deterministische status voorbereiding Oracle die wordt vertegenwoordigd door een unitary-matrix $O $, is het resultaat van deze functie een Oracle die een reflectie rond de status $ \ket{\psi} $ die is voor bereid door de Oracle-$O $; dat wil zeggen de status $ \ket{\psi} $, $O \ket {0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
@@ -24,9 +24,9 @@ seeAlso:
 - microsoft.quantum.oracles.deterministicstateoracle
 - microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: ecd14c8fbf54c6ba224693ea02f469379f66d1bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 580e4f0a38888faf0fbea99f680c82a5172f82a4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673502"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884504"

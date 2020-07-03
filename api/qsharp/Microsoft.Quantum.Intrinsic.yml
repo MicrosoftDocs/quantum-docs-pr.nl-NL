@@ -6,9 +6,9 @@ functions:
   summary: Een bericht wordt geregistreerd.
 operations:
 - uid: microsoft.quantum.intrinsic.assert
-  summary: Bevestigingen die de opgegeven qubits in het opgegeven Pauli meten, zullen altijd het gegeven resultaat hebben.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssert is afgeschaft. Gebruik @\"microsoft.quantum.diagnostics.assertmeasurement\" in plaats daarvan."
 - uid: microsoft.quantum.intrinsic.assertprob
-  summary: Bevestigingen die de opgegeven qubits in het gegeven Pauli meten, hebben het gegeven resultaat met de opgegeven kans, binnen een bepaalde tolerantie.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nAssertProb is afgeschaft. Gebruik @\"microsoft.quantum.diagnostics.assertmeasurementprobability\" in plaats daarvan."
 - uid: microsoft.quantum.intrinsic.ccnot
   summary: Past de CCNOT-poort (dubbele controle – niet) toe op drie qubits.
 - uid: microsoft.quantum.intrinsic.cnot
@@ -25,19 +25,19 @@ operations:
     Past de exponentiële waarde van een multi-Qubit Pauli-operator toe.
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} waarbij $P _i $ het $i $ TH element van `paulis`is en waar $N = $.`Length(paulis)`
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} waarbij $P _i $ het $i $ TH element van is `paulis` en waar $N = $ `Length(paulis)` .
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     Past de exponentiële waarde toe van een multi-Qubit Pauli-operator met een argument dat door een dyadic-fractie wordt gegeven.
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} waarbij $P _i $ het $i $ TH element van `paulis`is en waar $N = $.`Length(paulis)`
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} waarbij $P _i $ het $i $ TH element van is `paulis` en waar $N = $ `Length(paulis)` .
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     Hiermee wordt de Hadamard-trans formatie toegepast op één Qubit.
 
 
-    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ &-1 \end{bmatrix}.
+    \begin{align} H \mathrel{: =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ &-1 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
@@ -55,18 +55,18 @@ operations:
     Hiermee wordt een gemeen schappelijke meting uitgevoerd van een of meer qubits in de opgegeven Pauli bases.
 
 
-    Het resultaat van de uitvoer wordt gegeven door de distributie: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} waarbij $P _i $ het $i $ th- `bases`element van is en waar $N = \texttt{length} (\texttt{bases}) $.
+    Het resultaat van de uitvoer wordt gegeven door de distributie: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} waarbij $P _i $ het $i $ TH-element van is `bases` en waar $N = \texttt{length} (\texttt{bases}) $.
 
-    Dat wil zeggen dat de meting `Result` een $d $ zo retourneert dat de eigenvalue van het waargenomen meet effect $ (-1) ^ d $ is.
+    Dat wil zeggen dat de meting een `Result` $d $ zo retourneert dat de eigenvalue van het waargenomen meet effect $ (-1) ^ d $ is.
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     Past een rotatie over de opgegeven Pauli-as toe.
 
 
-    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} waarbij $ \mu \in \{i, X, Y, Z\}$.
+    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} waarbij $ \mu \in \{ i, X, Y, Z \} $.
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
-    Past een rotatie over de $ \ket{1}$-status toe op basis van een bepaalde hoek.
+    Past een rotatie over de $ \ket {1} $-status toe op basis van een bepaalde hoek.
 
 
     \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).
@@ -74,7 +74,7 @@ operations:
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    Past een rotatie over de $ \ket{1}$-status toe met een hoek die is opgegeven als een dyadic-Fractie.
+    Past een rotatie over de $ \ket {1} $-status toe met een hoek die is opgegeven als een dyadic-Fractie.
 
 
     \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -84,10 +84,10 @@ operations:
 
     > [!WARNING]
 
-    > Deze bewerking maakt gebruik van de **tegenovergestelde** teken @"microsoft.quantum.intrinsic.r"Conventie van en bevat niet de factor $1/2 $, opgenomen door @"microsoft.quantum.intrinsic.r1".
+    > Deze bewerking maakt gebruik van de **tegenovergestelde** teken Conventie van en bevat @"microsoft.quantum.intrinsic.r" niet de factor $1/2 $, opgenomen door @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
   summary: >-
-    De wille keurige bewerking heeft een matrix van dubbele getallen als invoer en retourneert een wille keurig geselecteerde index in de matrix `Int`als een.
+    De wille keurige bewerking heeft een matrix van dubbele getallen als invoer en retourneert een wille keurig geselecteerde index in de matrix als een `Int` .
 
     De kans dat een specifieke index wordt geselecteerd, is evenredig met de waarde van het matrix element bij die index.
 
@@ -101,16 +101,16 @@ operations:
     Past een rotatie over de opgegeven Pauli-as toe met een hoek die is opgegeven als een dyadic Fractie.
 
 
-    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} waarbij $ \mu \in \{i, X, Y, Z\}$.
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} waarbij $ \mu \in \{ i, X, Y, Z \} $.
 
 
     > [!WARNING]
 
-    > Deze bewerking maakt gebruik van de **tegenovergestelde** Onderteken @"microsoft.quantum.intrinsic.r"Conventie van.
+    > Deze bewerking maakt gebruik van de **tegenovergestelde** Onderteken Conventie van @"microsoft.quantum.intrinsic.r" .
 - uid: microsoft.quantum.intrinsic.rx
-  summary: "Past een rotatie over de $x $-axis op een bepaalde hoek toe.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-i\\sin \\frac{\\theta}{2} \\\\ \\\\ -i\\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
+  summary: "Past een rotatie over de $x $-axis op een bepaalde hoek toe.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-i\\sin \\frac{\\theta} {2} \\\\ \\\\ -i\\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: "Past een rotatie over de $y $-axis op een bepaalde hoek toe.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-\\sin \\frac{\\theta}{2} \\\\ \\\\ \\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
+  summary: "Past een rotatie over de $y $-axis op een bepaalde hoek toe.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-\\sin \\frac{\\theta} {2} \\\\ \\\\ \\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
     Past een rotatie over de $z $-axis op een bepaalde hoek toe.
@@ -120,30 +120,18 @@ operations:
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
-  summary: >-
-    Hiermee wordt de π/4 Phase-Gate toegepast op één Qubit.
-
-
-    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & ik \end{bmatrix}.
-
-    \end{align}
+  summary: De S-poort wordt toegepast op één Qubit.
 - uid: microsoft.quantum.intrinsic.swap
   summary: >-
     Hiermee wordt de SWAP-Gate toegepast op een paar qubits.
 
 
-    \begin{align} \operatorname{swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
     waar rijen en kolommen worden besteld als in de Quantum begrippen-hand leiding.
 - uid: microsoft.quantum.intrinsic.t
-  summary: >-
-    Hiermee wordt de π/8-Gate toegepast op één Qubit.
-
-
-    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}.
-
-    \end{align}
+  summary: Hiermee past u de T-poort toe op één Qubit.
 - uid: microsoft.quantum.intrinsic.x
   summary: >-
     Hiermee past u de Pauli-$X $-Gate toe.
@@ -169,9 +157,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: 303e6d0376841672b9c8dbd3d8bd47ff7b24916a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673228"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885232"

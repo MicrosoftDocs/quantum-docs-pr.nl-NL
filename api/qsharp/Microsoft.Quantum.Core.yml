@@ -17,15 +17,15 @@ functions:
   summary: Retourneert het gehele getal dat aangeeft hoe de volgende waarde van een bereik wordt berekend.
 newtypes:
 - uid: microsoft.quantum.core.attribute
-  summary: Door de compiler herkend kenmerk dat door de gebruiker gedefinieerde typen markeert als kenmerken.
+  summary: Een door het compiler herkend kenmerk dat wordt gebruikt om door de gebruiker gedefinieerde typen als kenmerken te markeren.
 - uid: microsoft.quantum.core.deprecated
-  summary: Door het compiler herkend kenmerk dat wordt gebruikt om een type of aanroepable te markeren als afgeschaft.
+  summary: Een door het compiler herkend kenmerk dat wordt gebruikt om een type of aanroepable te markeren als afgeschaft.
 - uid: microsoft.quantum.core.entrypoint
   summary: Een door het compiler herkend kenmerk dat wordt gebruikt om het ingangs punt van een uitvoerbaar bestand te markeren.
 metadata:
-  ms.openlocfilehash: c9125849d8ed04613c92b66823917e468725981c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676989"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885261"

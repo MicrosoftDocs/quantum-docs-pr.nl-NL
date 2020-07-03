@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor het maken en bewerken van gegevens reeksen."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Gegeven een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix en controleert of alle elementen van de matrix voldoen aan het predicaat.
@@ -67,13 +66,16 @@ functions:
   summary: Als er drie matrices zijn opgegeven, wordt een nieuwe matrix van 3-Tuples geretourneerd, zodat elke 3-tuple een element uit elke oorspronkelijke matrix bevat.
 - uid: microsoft.quantum.arrays.zip4
   summary: Gegeven vier matrices retourneert een nieuwe matrix van 4 Tuples, zodat elke 4-tuple een element uit elke oorspronkelijke matrix bevat.
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies voor het maken en bewerken van gegevens reeksen."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Hiermee wordt een bewerking herhaald voor een bepaald aantal steek proeven, waarbij de uitvoer ervan in een matrix wordt verzameld.
 - uid: microsoft.quantum.arrays.foreach
   summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326707"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884692"
