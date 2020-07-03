@@ -4,6 +4,7 @@ name: ControlledOnInt
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Retourneert een unitary-operator die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven positief geheel getal.
+remarks: De waarde van `numberState` wordt geïnterpreteerd met een little-endian-code ring.
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl))"
@@ -29,7 +30,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Een unitary-operator die `oracle` van toepassing is op het doel register als de register status van het besturings `numberState`element overeenkomt met de nummer status.
+  - summary: Een unitary-operator die van toepassing is `oracle` op het doel register als de register status van het besturings element overeenkomt met de nummer status `numberState` .
     isOperation: true
     input:
       types:
@@ -46,9 +47,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 544b96c809af69ce1cc33aad2d42b012f93d4b3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 81aeec4086549691d789e02e5a94e86cd75fdf06
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675707"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885486"

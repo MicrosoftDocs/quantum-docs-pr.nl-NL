@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonbitstring
+name: ApplyControlledOnBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Hiermee wordt een unitary-bewerking op het doel register toegepast, gecontroleerd op een status die is opgegeven door een opgegeven bitmasker.
+remarks: >-
+  Het patroon `bits` dat wordt gegeven door, kan korter zijn dan `controlRegister` , in welk geval extra controle qubits worden genegeerd (dat wil zeggen, hetzij niet beheerd op $ \ket {0} $ noch $ \ket {1} $).
+
+  Als `bits` de lengte langer is dan `controlRegister` , treedt er een fout op.
+
+
+  `bits = [0,1,0,0,1]`Betekent bijvoorbeeld dat `oracle` wordt toegepast als en alleen als `controlRegister` de status $ \ket {0} \ket {1} \ket {0} \ket {0} \ket {1} $.
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: bits
+    summary: De bit-teken reeks voor het beheren van de opgegeven unitary-bewerking op.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: oracle
+    summary: De unitary-bewerking die moet worden toegepast op het doel register.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: Een Quantum registratie waarmee de toepassing van wordt bepaald `oracle` .
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: Het doel register dat moet worden door gegeven `oracle` als invoer.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886411"

@@ -7,22 +7,24 @@ summary: >-
   Retourneert een unitary-bewerking die een Oracle toepast op het doel register als de register status van het besturings element overeenkomt met een opgegeven bitmasker.
 
 
-  De uitvoer van deze functie is een bewerking die kan worden weer gegeven met een unitary-trans formatie $U $, waarmee \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1} \\ \\ ) = \texttt{bits} \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} waarbij $V $ een unitary-trans formatie is die `oracle` de actie van de bewerking vertegenwoordigt.
+  De uitvoer van deze functie is een bewerking die kan worden weer gegeven met een unitary-trans formatie $U $, waarmee \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} waarbij $V $ een unitary-trans formatie is die de actie van de `oracle` bewerking vertegenwoordigt.
 remarks: >-
-  De lengte van `bits` en `controlRegister` moet gelijk zijn.
+  Het patroon `bits` dat wordt gegeven door, kan korter zijn dan `controlRegister` , in welk geval extra controle qubits worden genegeerd (dat wil zeggen, hetzij niet beheerd op $ \ket {0} $ noch $ \ket {1} $).
+
+  Als `bits` de lengte langer is dan `controlRegister` , treedt er een fout op.
 
 
-  Op basis van een `bits` Boole-matrix en `oracle`een unitary-bewerking is de uitvoer van deze functie een bewerking die de volgende stappen uitvoert:
+  Op basis van een Boole `bits` -matrix en een unitary `oracle` -bewerking is de uitvoer van deze functie een bewerking die de volgende stappen uitvoert:
 
 
-  * een `X` bewerking Toep assen op elke qubit van het controle register dat overeenkomt met `false` het `bits`element van de;
+  * een bewerking Toep assen `X` op elke qubit van het controle register dat overeenkomt met `false` het element van de `bits` ;
 
-  * Toep `Controlled oracle` assen op het besturings element en de doel registers;
+  * Toep assen `Controlled oracle` op het besturings element en de doel registers;
 
-  * pas een `X` bewerking toe op elke qubit van het controle register dat overeenkomt met `false` het `bits` element van de opnieuw om het controle register te retour neren naar de oorspronkelijke staat.
+  * pas een `X` bewerking toe op elke qubit van het controle register dat overeenkomt met `false` het element van de `bits` opnieuw om het controle register te retour neren naar de oorspronkelijke staat.
 
 
-  De uitvoer van de `Controlled` functor is een speciaal geval `ControlledOnBitString` waar `bits` is gelijk aan. `[true, ..., true]`
+  De uitvoer van de `Controlled` functor is een speciaal geval `ControlledOnBitString` waar `bits` is gelijk aan `[true, ..., true]` .
 examples: >-
   De volgende code fragmenten zijn gelijk:
 
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  Met de volgende code wordt een status $ \frac{1}{2}(\ket{00} -\ket{01} + \ket{10} + \ket{11}) voor bereid.
+  Met de volgende code wordt een status $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) voor bereid.
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Een unitary-bewerking die `oracle` van toepassing is op het doel register als de register status van het besturings `bits`element overeenkomt met het bitmasker.
+  - summary: Een unitary-bewerking die van toepassing is `oracle` op het doel register als de register status van het besturings element overeenkomt met het bitmasker `bits` .
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680362"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885517"

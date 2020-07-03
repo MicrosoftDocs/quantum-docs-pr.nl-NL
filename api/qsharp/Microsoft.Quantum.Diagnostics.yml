@@ -39,6 +39,10 @@ operations:
   summary: Bevestiging dat opgegeven qubits de status $ \ket {0} $ heeft.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: De bevestiging dat de opgegeven qubits zich in $ \ket $-status bevindt, {0} tot een gegeven tolerantie.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Bevestigingen die de opgegeven qubits in het opgegeven Pauli meten, zullen altijd het gegeven resultaat hebben.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Bevestigingen die de opgegeven qubits in het gegeven Pauli meten, hebben het gegeven resultaat met de opgegeven kans, binnen een bepaalde tolerantie.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
@@ -84,9 +88,9 @@ newtypes:
   summary: Door het compiler herkend kenmerk dat wordt gebruikt om een eenheids test te markeren.
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326588"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884573"
