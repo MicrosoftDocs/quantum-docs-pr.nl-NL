@@ -6,17 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274051"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885497"
 ---
 # <a name="develop-with-q-and-net"></a>Ontwikkelen met Q# en .NET
 
 Q# is gebouwd om prettig te kunnen werken met .NET-talen, zoals C# en F#.
 In deze handleiding wordt uitgelegd hoe u Q# gebruikt in combinatie met een hostprogramma dat is geschreven in een .NET-taal.
+
+Eerst maken we de Q#-toepassing en .NET-host, en vervolgens laten we zien hoe u Q# aanroept vanaf de host.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -26,23 +28,8 @@ In deze handleiding wordt uitgelegd hoe u Q# gebruikt in combinatie met een host
 
 De eerste stap is het maken van projecten voor uw Q#-bibliotheek en voor de .NET-host die de bewerkingen en functies aanroept die in uw Q#-bibliotheek zijn gedefinieerd.
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- Maak een nieuwe Q#-bibliotheek
-  - Ga naar **Bestand** -> **Nieuw** -> **Project**
-  - Typ 'Q#' in het zoekvak
-  - Selecteer **Q#-bibliotheek**
-  - Selecteer **Volgende**
-  - Kies een naam en een locatie voor uw bibliotheek
-  - Zorg ervoor dat 'project en oplossing in dezelfde map plaatsen' is **uitgeschakeld**
-  - Selecteer **Maken**
-- Maak een nieuw C#- of F#-hostprogramma
-  - Ga naar **Bestand** → **Nieuw** → **Project**
-  - Selecteer 'Consoletoepassing (.NET Core)' voor C# of F#
-  - Selecteer **Volgende**
-  - Selecteer onder *oplossing* de optie 'aan oplossing toevoegen'
-  - Kies een naam voor uw hostprogramma
-  - Selecteer **Maken**
+Volg de instructies op het tabblad dat hoort bij de ontwikkelomgeving.
+Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de stappen voor de opdrachtregel.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code of opdrachtregel](#tab/tabid-cmdline)
 
@@ -72,6 +59,24 @@ De eerste stap is het maken van projecten voor uw Q#-bibliotheek en voor de .NET
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- Maak een nieuwe Q#-bibliotheek
+  - Ga naar **Bestand** -> **Nieuw** -> **Project**
+  - Typ 'Q#' in het zoekvak
+  - Selecteer **Q#-bibliotheek**
+  - Selecteer **Volgende**
+  - Kies een naam en een locatie voor uw bibliotheek
+  - Zorg ervoor dat 'project en oplossing in dezelfde map plaatsen' is **uitgeschakeld**
+  - Selecteer **Maken**
+- Maak een nieuw C#- of F#-hostprogramma
+  - Ga naar **Bestand** → **Nieuw** → **Project**
+  - Selecteer 'Consoletoepassing (.NET Core)' voor C# of F#
+  - Selecteer **Volgende**
+  - Selecteer onder *oplossing* de optie 'aan oplossing toevoegen'
+  - Kies een naam voor uw hostprogramma
+  - Selecteer **Maken**
 
 ***
 

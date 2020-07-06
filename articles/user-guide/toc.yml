@@ -2,6 +2,8 @@
   href: index.md
 - name: Q#-basis
   href: basics.md
+- name: Manieren om een Q#-programma uit te voeren
+  href: host-programs.md
 - name: Q#-taal
   href: language/toc.yml
 - name: Q# gebruiken

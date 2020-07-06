@@ -1,3 +1,17 @@
+- href: azure.connect.md
+  name: Magic-opdracht %azure.connect
+- href: azure.execute.md
+  name: Magic-opdracht %azure.execute
+- href: azure.jobs.md
+  name: Magic-opdracht %azure.jobs
+- href: azure.output.md
+  name: Magic-opdracht %azure.output
+- href: azure.status.md
+  name: Magic-opdracht %azure.status
+- href: azure.submit.md
+  name: Magic-opdracht %azure.submit
+- href: azure.target.md
+  name: Magic-opdracht %azure.target
 - href: check_kata.md
   name: Magic-opdracht %check_kata
 - href: chemistry.broombridge.md

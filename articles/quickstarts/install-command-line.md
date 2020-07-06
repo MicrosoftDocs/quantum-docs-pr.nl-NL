@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884275"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Ontwikkelen met Q#-opdrachtregeltoepassingen
 
@@ -23,7 +23,7 @@ Q#-programma's kunnen zelfstandig worden uitgevoerd zonder een stuurprogramma in
 
 ## <a name="installation"></a>Installatie
 
-Hoewel u Q#-opdrachtregeltoepassingen in elke IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken voor uw Q#-toepassingen. Tijdens het ontwikkelen in deze hulpprogramma's hebt u de beschikking over een groot aantal functies.
+Hoewel u Q#-opdrachtregeltoepassingen in elke IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken voor uw Q#-toepassingen. Ontwikkelen in deze omgevingen omvat de uitgebreide functies van de QDK-extensie, waaronder waarschuwingen, markeren van syntaxis, projectsjablonen, en meer.
 
 Ga als volgt te werk om VS Code te configureren:
 
@@ -35,8 +35,17 @@ Ga als volgt te werk om Visual Studio te configureren:
 1. Download en installeer [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 of hoger, waarbij de workload voor platformoverschrijdende ontwikkeling met .NET Core is ingeschakeld.
 2. Download en installeer de [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
+Als u de QDK wilt installeren in een andere omgeving, voert u het volgende in de opdrachtregel in:
 
-## <a name="develop-with-q-using-vs-code"></a>Ontwikkelen met Q#, met behulp van VS Code
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Ontwikkelen met Q#
+
+Volg de instructies op het tabblad dat hoort bij de omgeving.
+
+### <a name="vs-code"></a>[VS-code](#tab/tabid-vscode)
 
 Ga als volgt te werk om de Q#-projectsjablonen te installeren:
 
@@ -55,7 +64,7 @@ Ga als volgt te werk om een nieuw project te maken:
         
 Controleer het project. Als het goed is, ziet u een bronbestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven.
 
-Ga als volgt te werk om de toepassing uit te voeren:
+De toepassing uitvoeren:
 1. Klik op **Terminal** -> **Nieuwe terminal**.
 2. Voer bij de terminalprompt `dotnet run` in.
 3. Als het goed is, ziet u de volgende tekst in het uitvoervenster: `Hello quantum world!`
@@ -64,7 +73,7 @@ Ga als volgt te werk om de toepassing uit te voeren:
 > [!NOTE]
 > Werkruimten met meerdere hoofdmappen worden momenteel niet ondersteund door de VS Code Q#-extensie. Als u meerdere projecten in één VS Code-werkruimte hebt, moeten alle projecten zich in dezelfde hoofdmap bevinden.
 
-## <a name="develop-with-q-using-visual-studio"></a>Ontwikkelen met Q# met behulp van Visual Studio
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Controleer uw Visual Studio-installatie door een Q# `Hello World`-toepassing te maken.
 
@@ -83,6 +92,30 @@ De toepassing uitvoeren:
 > [!NOTE]
 > Als u meerdere projecten in één Visual Studio-oplossing hebt, moeten alle projecten in de oplossing zich in dezelfde map bevinden als de oplossing, of in een van de submappen.  
 
+### <a name="other-editors-with-the-command-line"></a>[Andere editors met de opdrachtregel](#tab/tabid-cmdline)
+
+Controleer de installatie door een Q# `Hello World`-toepassing te maken.
+
+1. Een nieuwe toepassing maken:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Navigeer naar de toepassingsmap:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    De map bevat nu een bestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven. U kunt deze sjabloon wijzigen met een teksteditor en overschrijven met uw eigen kwantumtoepassingen. 
+
+3. Voer het programma uit:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. U ziet nu de volgende tekst: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>Volgende stappen
 
