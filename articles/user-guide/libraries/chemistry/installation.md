@@ -1,87 +1,35 @@
 ---
-title: 'Micro soft Q # library-installatie en-validatie'
+title: 'Micro soft Q #-bibliotheek installatie'
 description: Meer informatie over het installeren van de micro soft quantum chemie-bibliotheek en het gebruik ervan met het NWChem Computation-chemische platform.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275178"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871530"
 ---
-# <a name="chemistry-library-installation-and-validation"></a>Schei kunde van de bibliotheek installatie en validatie
+# <a name="chemistry-library-installation"></a>Schei-bibliotheek installatie
 
-De Quantum Development Kit biedt ondersteuning voor quantum chemie-toepassingen via het [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) NuGet-pakket.
-Net als bij andere NuGet-pakketten is het eenvoudig om de Library chemie toe te voegen aan uw project.
-
-**Visual Studio 2019:** Als u Visual Studio 2019 gebruikt, kunt u de quantum chemie-pakketten toevoegen met behulp van de NuGet-pakket Manager.
-Als u pakket beheer wilt openen, klikt u met de rechter muisknop op het project waaraan u de bibliotheek voor schei kunde wilt toevoegen en selecteert u ' NuGet-pakketten beheren... ', zoals in de onderstaande scherm afbeelding.
-
-![NuGet Package Manager gebruiken in Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
-
-Zoek op het tabblad Bladeren naar de pakket naam ' micro soft. Quantum. chemie '.
-
-> [!NOTE]
-> Zorg ervoor dat u ' include Prerelease ' opgeeft.
-
-![Selectie vakje voor voorlopige versie toevoegen](~/media/vs2017-nuget-package-search.png)
-
-Hiermee worden de pakketten weer geven die kunnen worden gedownload.
-Klik op ' micro soft. Quantum. chemie ' in het linkerdeel venster, selecteer de nieuwste voorlopige versie in het rechterdeel venster en klik op installeren:
-
-![Installeer het nieuwste pakket micro soft. Quantum. chemie](~/media/vs2017-nuget-select-chem.png)
-
-Zie de [gebruikers interface voor pakket beheer](https://docs.microsoft.com/nuget/tools/package-manager-ui)voor meer informatie.
-
-U kunt ook de Package Manager-console gebruiken om de quantum chemie-bibliotheek toe te voegen aan uw project met een opdracht regel interface.
-
-![De Package Manager-console gebruiken vanaf de opdracht regel](~/media/vs2017-nuget-console-menu.png)
-
-Voer de volgende handelingen uit vanuit de Package Manager-console:
-
-```
-Install-Package Microsoft.Quantum.Chemistry
-```
-
-Zie de [console handleiding voor pakket beheer](https://docs.microsoft.com/nuget/tools/package-manager-console)voor meer informatie.
-
-**Opdracht regel of Visual Studio code:** Met de opdracht regel zelf of vanuit Visual Studio code kunt u de `dotnet` volgende opdracht gebruiken om een NuGet-pakket verwijzing toe te voegen aan uw project:
-
-```dotnetcli
-dotnet add package Microsoft.Quantum.Chemistry
-```
-
-## <a name="verifying-your-installation"></a>De installatie controleren 
-
-Net als de rest van de Quantum Development Kit wordt de quantum chemie-bibliotheek geleverd met een aantal volledig gedocumenteerde voor beelden om snel aan de slag te kunnen.
-Als u de installatie met behulp van deze voor beelden wilt testen, kloont u de [opslag plaats](https://github.com/Microsoft/Quantum)voor de belangrijkste voor beelden en voert u een van de voor beelden  Als u bijvoorbeeld het voor beeld wilt uitvoeren [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) :
-
-```bash
-git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/samples/chemistry/MolecularHydrogen
-dotnet run
-```
-
-Controleren of de quantum chemie-bibliotheek is geïnstalleerd met behulp van micro soft Visual Studio na het klonen van de opslag plaats:
-    1. Open de oplossing ChemistrySamples. SLN in de map schei kunde.  
-    2. Selecteer voor beelden/1. Eenvoudige moleculen/MolecularHydrogen als het opstart project.
-    3. Druk op F5 om de demo van de molecuul waterstof Quantum-fase schatting uit te voeren.
-
-Zie [schattingen voor het energie niveau verkrijgen](xref:microsoft.quantum.chemistry.examples.energyestimate) voor meer informatie over het schatten van de waarden van energie niveaus.   
-
-
-## <a name="using-the-quantum-development-kit-with-nwchem"></a>De Quantum Development Kit gebruiken met NWChem ##
-
-Het MolecularHydrogen-voor beeld maakt gebruik van moleculaire invoer gegevens die hand matig worden geconfigureerd.  Hoewel dit een kleine voor beeld is, is voor Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden voor waarden vereist. Dergelijke Hamiltonians, die zijn gegenereerd door schaal bare reken kunde-pakketten, zijn te groot om hand matig te importeren. 
+Het [ **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) -voor beeld maakt gebruik van moleculaire invoer gegevens die hand matig worden geconfigureerd.
+Hoewel dit goed is voor kleine voor beelden, vereist Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden termen.
+Dergelijke Hamiltonians, die worden gegenereerd door schaal bare reken kunde-pakketten, zijn te groot om met de hand te worden geïmporteerd.
 
 De quantum chemie-bibliotheek voor de Quantum Development Kit is ontworpen voor gebruik met reken kundige chemie-pakketten, met name het [**NWChem**](http://www.nwchem-sw.org/) computing computing-platform dat is ontwikkeld door het Environmental wetenschappen LABORATORY (EMSL) op Pacific Noordwest National Laboratory.
-Het `Microsoft.Quantum.Chemistry` pakket biedt met name hulp middelen voor het laden van exemplaren van de simulatie problemen die in het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)worden weer gegeven, ook ondersteund voor export door recente versies van NWChem.
+Met name het pakket [ **micro soft. Quantum. chemie** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) voorziet in hulpprogram ma's voor het laden van exemplaren van de simulatie problemen die in het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)worden weer gegeven, ook ondersteund voor export door recente versies van NWChem.
 
-Als u NWChem wilt gebruiken in combi natie met de Quantum Development Kit, wordt een van de volgende methoden voorgesteld:
+De Quantum Development Kit chemie-bibliotheek biedt ook een opdracht regel programma, `qdk-chem` voor het converteren van een oude indeling en [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge).
+
+In deze sectie wordt beschreven hoe u de Quantum Development Kit kunt gebruiken met NWChem en Broombridge, of met een verouderde indeling en `qdk-chem` .
+
+## <a name="using-the-quantum-development-kit-with-nwchem"></a>De Quantum Development Kit gebruiken met NWChem
+
+Gebruik een van de volgende methoden om aan de slag te gaan met NWChem in combi natie met de Quantum Development Kit:
+
 - Ga aan de slag met bestaande Broombridge-bestanden die zijn meegeleverd met de voor beelden op [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Gebruik de [opbouw functie voor EMSL-pijlen voor de Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) die een web-front-end is voor NWChem, voor het genereren van nieuwe Broombridge-geformatteerde moleculaire invoer bestanden.  
 - Gebruik de [docker-installatie kopie](https://hub.docker.com/r/nwchemorg/nwchem-qc/) van PNNL om NWChem uit te voeren, of
@@ -171,4 +119,27 @@ Meer informatie kan worden verkregen met behulp van de ingebouwde Help-functiona
 ```powershell
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
+```
+
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>De Quantum Development Kit gebruiken met`qdk-chem`
+
+Als u wilt installeren `qdk-chem` , kunt u het .net core SDK gebruiken op de opdracht regel:
+
+```dotnetcli
+dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
+```
+
+Wanneer u hebt geïnstalleerd `qdk-chem` , kunt u de `--help` optie gebruiken om meer informatie te krijgen over de functionaliteit van het `qdk-chem` hulp programma.
+
+Als u wilt converteren naar en van Broombridge, kunt u de `qdk-chem convert` opdracht gebruiken:
+
+```
+qdk-chem convert --from fcidump --to broombridge data.fcidump --out data.yml
+```
+
+De `qdk-chem convert` opdracht kan ook de gegevens van de standaard invoer accepteren en kan schrijven naar de standaard uitvoer. Dit is vooral nuttig in scripts en voor de integratie met hulpprogram ma's die naar verouderde indelingen exporteren.
+Bijvoorbeeld, in Bash:
+
+```bash
+cat data.fcidump | qdk-convert --from fcidump --to broombridge - > data.yml
 ```

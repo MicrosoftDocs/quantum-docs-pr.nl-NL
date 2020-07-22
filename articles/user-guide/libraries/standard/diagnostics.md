@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274985"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870631"
 ---
 # <a name="diagnostics"></a>Diagnostiek #
 
@@ -61,19 +61,19 @@ De standaard bibliotheken van Q # bieden verschillende functies voor het weer ge
 
 In de praktijk zijn de beweringen afhankelijk van het feit dat klassieke simulaties van Quantum-garages de [theorema zonder klonen](https://arxiv.org/abs/quant-ph/9607018)niet hoeven te volgen, zodat we fysieke metingen en beweringen kunnen maken wanneer ze een simulator voor onze doel computer gebruiken.
 Daarom kunnen we afzonderlijke bewerkingen op een klassieke Simulator testen voordat ze op hardware worden geïmplementeerd.
-Op doel computers die geen bevestigingen kunnen evalueren, kunnen aanroepen naar <xref:microsoft.quantum.intrinsic.assert> veilig worden genegeerd.
+Op doel computers die geen bevestigingen kunnen evalueren, kunnen aanroepen naar <xref:microsoft.quantum.diagnostics.assertmeasurement> veilig worden genegeerd.
 
-Meer in het algemeen is de <xref:microsoft.quantum.intrinsic.assert> bewerkings verklaring dat de opgegeven qubits in de gegeven Pauli gebaseerd altijd het gegeven resultaat heeft.
+Meer in het algemeen is de <xref:microsoft.quantum.diagnostics.assertmeasurement> bewerkings verklaring dat de opgegeven qubits in de gegeven Pauli gebaseerd altijd het gegeven resultaat heeft.
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
-`Assert`heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
-Omdat `Assert` een functie met een lege tuple als uitvoer type is, zijn geen effecten van aanroepen in `Assert` een Q #-programma waarneembaar.
+`AssertMeasurement`heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
+Omdat `AssertMeasurement` een functie met een lege tuple als uitvoer type is, zijn geen effecten van aanroepen in `AssertMeasurement` een Q #-programma waarneembaar.
 
-De <xref:microsoft.quantum.intrinsic.assertprob> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
+De <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
 Tolerantie is additief (bijvoorbeeld `abs(expected-actual) < tol` ).
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
-`AssertProb`heeft hand tekening `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . De eerste van de `Double` para meters geeft de gewenste kans op het resultaat en de tweede tolerantie.
+`AssertMeasurementProbability`heeft hand tekening `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . De eerste van de `Double` para meters geeft de gewenste kans op het resultaat en de tweede tolerantie.
 
 We kunnen meer dan één meting uitvoeren, met behulp van de klassieke informatie die door een simulator wordt gebruikt om de interne status van een Qubit weer te geven. zo is het niet nodig om een meting uit te voeren om onze bewering te testen.
 In het bijzonder kan dit redenen hebben om *incompatibele* metingen die niet mogelijk zijn op werkelijke hardware.
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 Meer in het algemeen is er echter geen toegang tot beweringen over staten die niet samen vallen met eigenstates van Pauli-Opera tors.
-Bijvoorbeeld: $ \ket{\psi} = (\ket {0} + e ^ {\pi/8} \ket {1} )/\sqrt {2} $ is geen Eigenstate van een Pauli-operator, zodat we niet kunnen gebruiken om te <xref:microsoft.quantum.intrinsic.assertprob> bepalen of een status $ \ket{\psi '} $ gelijk is aan $ \ket{\psi} $.
+Bijvoorbeeld: $ \ket{\psi} = (\ket {0} + e ^ {\pi/8} \ket {1} )/\sqrt {2} $ is geen Eigenstate van een Pauli-operator, zodat we niet kunnen gebruiken om te <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bepalen of een status $ \ket{\psi '} $ gelijk is aan $ \ket{\psi} $.
 In plaats daarvan moeten we de Assertion $ \ket{\psi} = \ket{\psi} $ afbreken in veronderstellingen die rechtstreeks kunnen worden getest met behulp van de primitieven die door onze Simulator worden ondersteund.
 Als u dit wilt doen, laat u $ \ket{\psi} = \alpha \ket {0} + \beta \ket {1} $ voor complexe getallen $ \alpha = a \_ r + a \_ i $ en $ \beta $.
 Houd er rekening mee dat deze expressie vier echte cijfers $ \{ a \_ r, a \_ i, b \_ r, b \_ i $ vereist om op te \} geven, aangezien elk complex getal kan worden uitgedrukt als de som van een reëel en imaginair deel.

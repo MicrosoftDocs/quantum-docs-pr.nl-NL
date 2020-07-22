@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884090"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870971"
 ---
 # <a name="testing-and-debugging"></a>Testen en foutopsporing
 
@@ -50,7 +50,7 @@ In eerste instantie bevat dit bestand één sample-eenheids test `AllocateQubit`
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ Hier gebruiken we de bewerking <xref:microsoft.quantum.environment.getqubitsavai
 Zoals dit afhankelijk is van de algemene status van het programma en de uitvoerings omgeving, moet de definitie van `AssertQubitsAreAvailable` ook een bewerking zijn.
 We kunnen die globale status echter gebruiken om een eenvoudige `Bool` waarde te leveren als invoer voor de `Fact` functie.
 
-[De prelude](xref:microsoft.quantum.libraries.standard.prelude), die voortbouwt op deze ideeën, biedt twee bijzonder nuttige verklaringen <xref:microsoft.quantum.intrinsic.assert> en <xref:microsoft.quantum.intrinsic.assertprob> beide gemodelleerd als bewerkingen op `()` . Deze beweringen maken elk deel uit van een Pauli-operator die een bepaalde meet waarde beschrijft, een Quantum registratie waarop een meting wordt uitgevoerd en een hypothetisch resultaat.
+[De prelude](xref:microsoft.quantum.libraries.standard.prelude), die voortbouwt op deze ideeën, biedt twee bijzonder nuttige verklaringen <xref:microsoft.quantum.diagnostics.assertmeasurement> en <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> beide gemodelleerd als bewerkingen op `()` . Deze beweringen maken elk deel uit van een Pauli-operator die een bepaalde meet waarde beschrijft, een Quantum registratie waarop een meting wordt uitgevoerd en een hypothetisch resultaat.
 Doel computers die door simulatie werken, zijn niet gebonden aan [het niet-klonen theorema](https://en.wikipedia.org/wiki/No-cloning_theorem)en kunnen dergelijke metingen uitvoeren zonder de kassa te verstoren die aan dergelijke bevestigingen wordt door gegeven.
 Een Simulator kan vervolgens, net als bij de `PositivityFact` vorige functie, de berekening stoppen als het hypothetische resultaat in de praktijk niet wordt waargenomen:
 
@@ -185,14 +185,14 @@ Een Simulator kan vervolgens, net als bij de `PositivityFact` vorige functie, de
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-In fysieke Quantum-hardware, waarbij het niet-klonen van theorema het onderzoek van een Quantum status voor komt, worden de `Assert` en- `AssertProb` bewerkingen gewoon `()` zonder ander effect geretourneerd.
+In fysieke Quantum-hardware, waarbij het niet-klonen van theorema het onderzoek van een Quantum status voor komt, worden de `AssertMeasurement` en- `AssertMeasurementProbability` bewerkingen gewoon `()` zonder ander effect geretourneerd.
 
 De <xref:microsoft.quantum.diagnostics> naam ruimte bevat verschillende meer functies van de `Assert` familie, waarmee u meer geavanceerde voor waarden kunt controleren. 
 

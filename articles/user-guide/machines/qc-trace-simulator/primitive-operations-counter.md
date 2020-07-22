@@ -1,21 +1,37 @@
 ---
-title: Teller voor primitieve bewerkingen
-description: Meer informatie over het item micro soft QDK primitieve bewerking, waarmee het aantal primitieve uitvoeringen wordt bijgehouden dat door bewerkingen in een Quantum programma wordt gebruikt.
+title: Teller voor primitieve bewerkingen-Quantum Development Kit
+description: 'Meer informatie over het micro soft QDK primitieve bewerkings item, dat gebruikmaakt van de Quantum Trace Simulator om primitieve uitvoeringen bij te houden die worden gebruikt door bewerkingen in een Q #-programma.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274892"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871022"
 ---
-# <a name="primitive-operations-counter"></a>Teller voor primitieve bewerkingen  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitieve bewerkingen teller
 
-De `Primitive Operations Counter` maakt deel uit van de quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het telt het aantal primitieve uitvoeringen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. Alle bewerkingen van `Microsoft.Quantum.Intrinsic` worden uitgedrukt in termen van enkelvoudige Qubit rotaties, T-poorten, enkelvoudige Qubit Clifford-poorten, CNOT poorten en metingen van multi-Qubit Pauli observables. Verzamelde statistieken worden geaggregeerd over de randen van de operations call-grafiek. We tellen nu het aantal `T` poorten dat nodig is voor het implementeren van de `CCNOT` bewerking. 
+Het teller primitieve bewerking maakt deel uit van de Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het telt het aantal primitieve uitvoeringen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. 
+
+Alle <xref:microsoft.quantum.intrinsic> bewerkingen worden uitgedrukt in termen van Qubit draaiingen, T-bewerkingen, single-Qubit Clifford-bewerkingen, CNOT bewerkingen en metingen van multi-Qubit Pauli observables. Met het teller primitieve bewerkingen worden statistieken geaggregeerd en verzameld over alle randen van de [aanroep grafiek](https://en.wikipedia.org/wiki/Call_graph)van de bewerking.
+
+## <a name="invoking-the-primitive-operation-counter"></a>Het item primitieve bewerking aanroepen
+
+Als u de Quantum Trace Simulator wilt uitvoeren met het teller primitieve bewerking, moet u een <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplaar maken, de `UsePrimitiveOperationsCounter` eigenschap instellen op **waar**en vervolgens een nieuw <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> exemplaar maken met de `QCTraceSimulatorConfiguration` as-para meter.
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Het teller primitieve bewerking in een C#-hostprogramma gebruiken
+
+Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:microsoft.quantum.intrinsic.t> bewerkingen dat nodig is voor het implementeren <xref:microsoft.quantum.intrinsic.ccnot> van de bewerking, op basis van de volgende Q #-voorbeeld code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a>Het item primitieve bewerkingen in een C#-programma gebruiken
-
-Om te controleren of `CCNOT` er zeven `T` Gates vereist zijn en dat `ApplySampleWithCCNOT` `T` er 8 Gates worden uitgevoerd, kunnen we de volgende C#-code gebruiken:
+`CCNOT` `T` `ApplySampleWithCCNOT` `T` Gebruik de volgende C#-code om te controleren dat zeven bewerkingen vereist en acht bewerkingen uitvoert:
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-Het eerste deel van het programma wordt uitgevoerd `ApplySampleWithCCNOT` . In het tweede deel wordt de methode gebruikt `QCTraceSimulator.GetMetric` om het aantal T-poorten te verkrijgen dat wordt uitgevoerd door `ApplySampleWithCCNOT` : 
+Het eerste deel van het programma wordt uitgevoerd `ApplySampleWithCCNOT` . In het tweede deel wordt gebruikgemaakt [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) van de methode voor het ophalen van het aantal bewerkingen dat wordt `T` uitgevoerd door `ApplySampleWithCCNOT` : 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+Wanneer u `GetMetric` met twee type parameters aanroept, wordt de waarde van de metriek geretourneerd die is gekoppeld aan een bepaalde rand van de oproep grafiek. In het voor gaande voor beeld roept het programma de `Primitive.CCNOT` bewerking binnen `ApplySampleWithCCNOT` en daarom bevat de oproep grafiek de rand `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
 
-Wanneer `GetMetric` wordt aangeroepen met twee type parameters, wordt de waarde van de metriek geretourneerd die is gekoppeld aan een bepaalde rand van de oproep grafiek. In de voor beeld-bewerking wordt de rand van de `Primitive.CCNOT` `ApplySampleWithCCNOT` aanroep grafiek genoemd `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
-
-Om het aantal `CNOT` gebruikte poorten te verkrijgen, kunnen we de volgende regel toevoegen:
+`CNOT`Voeg de volgende regel toe om het aantal gebruikte bewerkingen op te halen:
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-Ten slotte kunnen we het volgende gebruiken voor het uitvoeren van alle statistieken die worden verzameld door de poort teller in CSV-indeling:
+Ten slotte kunt u alle statistieken die door het item primitieve bewerkingen zijn verzameld, in CSV-indeling uitvoeren met het volgende:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Zie ook ##
+## <a name="see-also"></a>Zie ook
 
-- Het quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) -overzicht.
+- Het Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Overview (Engelstalig).
+- De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-verwijzing.
+- De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-verwijzing.
+- De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API-verwijzing.

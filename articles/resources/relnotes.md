@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885049"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871549"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -21,6 +21,17 @@ Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instr
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
 
+
+## <a name="version-01220072031"></a>Versie 0.12.20072031
+
+*Release datum: 21 juli 2020*
+
+Deze release omvat het volgende:
+
+- Geopende naam ruimten in Q # notebooks zijn nu beschikbaar voor alle toekomstige uitvoeringen van cellen. Zo kunt u bijvoorbeeld een naam ruimte openen in een cel boven aan het notitie blok, in plaats van dat u relevante naam ruimten in elke code-cel hoeft te openen. Met een nieuwe `%lsopen` Magic-opdracht wordt de lijst met momenteel geopende naam ruimten weer gegeven.
+
+Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01220070124"></a>Versie 0.12.20070124
 
 *Release datum: juli 2e, 2020*
@@ -28,7 +39,7 @@ Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies
 Deze release omvat het volgende:
 
 - Nieuw `qdk-chem` hulp programma voor het converteren van verouderde indelingen voor de serialisatie van problemen met de elektronische structuur (bijvoorbeeld: FCIDUMP) naar [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- Nieuwe functies en bewerkingen in de [ `Microsoft.Quantum.Synthesis` naam ruimte](xref:microsoft.quantum.synthesis) voor een samenhangende toepassing van klassieke Oracle met behulp van trans formatie-en ontledings synthese algoritmen.
+- Nieuwe functies en bewerkingen in de [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) naam ruimte voor een samenhangende toepassing van klassieke Oracle met behulp van trans formatie-en ontledings synthese algoritmen.
 - IQ # biedt nu argumenten voor de `%simulate` , `%estimate` en andere Magic-opdrachten. Raadpleeg de [ `%simulate` Magic-opdracht verwijzing](xref:microsoft.quantum.iqsharp.magic-ref.simulate) voor meer informatie.
 - Nieuwe fase weergave opties in IQ #. Raadpleeg de [ `%config` Magic-opdracht verwijzing](xref:microsoft.quantum.iqsharp.magic-ref.config) voor meer informatie.
 - IQ # en het `qsharp` python-pakket worden nu via Conda packages ([qsharp](https://anaconda.org/quantum-engineering/qsharp) en [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) verschaft om de lokale installatie van Q # Jupyter en python-functionaliteit te vereenvoudigen in een Conda-omgeving. Zie de [q # Jupyter-notebooks](xref:microsoft.quantum.install.jupyter) en [q # met python](xref:microsoft.quantum.install.python) -installatie handleidingen voor meer informatie.
