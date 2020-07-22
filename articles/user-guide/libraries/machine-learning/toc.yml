@@ -1,5 +1,5 @@
 - name: Inleiding tot kwantum-machine learning
-  href: introduction.md
+  href: intro.md
 - name: Eenvoudige classificatie
   href: basic-classification.md
 - name: Uw eigen classificatie ontwerpen
