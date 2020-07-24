@@ -1,160 +1,54 @@
 ---
-title: Kwantumsimulatoren en hosttoepassingen | Microsoft Docs
-description: Hierin wordt beschreven hoe u kwantumsimulatoren kunt aansturen met een klassieke .NET-programmeertaal, zoals C# of Q#.
+title: Kwantumsimulators en Q#-programma's
+description: Beschrijft de kwantumsimulators die beschikbaar zijn als doelmachines voor Q#-programma's.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
+ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273335"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871158"
 ---
-# <a name="quantum-simulators-and-host-applications"></a>Kwantumsimulatoren en hosttoepassingen
+# <a name="quantum-simulators"></a>Kwantumsimulators
 
-## <a name="what-youll-learn"></a>U leert het volgende
-
-> [!div class="checklist"]
-> * Hoe kwantumalgoritmen worden uitgevoerd
-> * Welke kwantumsimulatoren deze versie bevat
-> * Hoe u een C#-stuurprogramma schrijft voor uw kwantumalgoritme
-
-## <a name="the-quantum-development-kit-execution-model"></a>Het uitvoeringsmodel van de Quantum development kit
-
-In [Een kwantumprogramma schrijven](xref:microsoft.quantum.write-program) hebben we ons kwantumalgoritme uitgevoerd door het object `QuantumSimulator` door te geven aan de methode `Run` van de algoritmeklasse.
-De klasse `QuantumSimulator` voert het kwantumalgoritme uit door de kwantumtoestandsvector volledig te simuleren, wat perfect is voor het uitvoeren en testen van `Teleport`.
-Zie de [handleiding Concepten](xref:microsoft.quantum.concepts.intro) voor meer informatie over kwantumtoestandsvectoren.
-
-Andere doelcomputers kunnen worden gebruikt om een kwantumalgoritme uit te voeren.
-De computer is verantwoordelijk voor het leveren van de implementaties van kwantumprimitieven voor het algoritme.
-Dit omvat primitieve bewerkingen, zoals H, CNOT en Measure, plus qubitbeheer en -tracering.
-Verschillende klassen van kwantumcomputers vertegenwoordigen verschillende uitvoeringsmodellen voor hetzelfde kwantumalgoritme.
-
-Op elk type kwantumcomputer kunnen verschillende implementaties van deze primitieven worden geïnstalleerd.
-Met de kwantumcomputer-traceersimulator die deel uitmaakt van de development kit wordt bijvoorbeeld helemaal geen simulatie uitgevoerd.
-In plaats daarvan worden het gebruik van gates, qubits en andere resources bijgehouden voor het algoritme.
-
-### <a name="quantum-machines"></a>Kwantumcomputers
-
-In de toekomst zullen we aanvullende kwantumcomputerklassen definiëren om andere typen simulaties en uitvoering op topologische kwantumcomputers te ondersteunen.
-Het algoritme kan constant blijven terwijl de onderliggende computerimplementatie wordt gewijzigd. Dit maakt het eenvoudig om een algoritme in simulatie te testen en fouten op te sporen en het vervolgens op echte hardware uit te voeren in de wetenschap dat het algoritme niet is gewijzigd.
-
-### <a name="whats-included-in-this-release"></a>Wat bevat deze versie?
-
-Deze versie van de Quantum Development Kit bevat verschillende kwantumcomputerklassen.
-Deze zijn allemaal gedefinieerd in de naamruimte `Microsoft.Quantum.Simulation.Simulators`.
-
-* Een [volledige toestandsvectorsimulator](xref:microsoft.quantum.machines.full-state-simulator), de klasse `QuantumSimulator`.
-* Een [eenvoudige resource-estimator](xref:microsoft.quantum.machines.resources-estimator), de klasse `ResourcesEstimator`, waarmee u een algemene schatting kunt maken van de benodigde resources voor het uitvoeren van een kwantumalgoritme.
-* Een [op tracering gebaseerde resource-estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), de klasse `QCTraceSimulator`, waarmee u een geavanceerde analyse kunt maken van de verbruikte resources voor de hele call-graph (aanroepgrafiek) van het algoritme.
-* Een [Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator), de klasse `ToffoliSimulator`.
-
-## <a name="writing-a-host-application"></a>Een hosttoepassing schrijven
-
-In [Een kwantumprogramma schrijven](xref:microsoft.quantum.write-program) hebben we een eenvoudig C#-stuurprogramma voor ons teleporteeralgoritme geschreven. Een C#-stuurprogramma heeft 4 hoofddoelen:
-
-* De doelcomputer maken
-* Eventuele benodigde argumenten voor het kwantumalgoritme berekenen
-* Het kwantumalgoritme uitvoeren met behulp van de simulator
-* Het resultaat van de bewerking verwerken
-
-Hieronder bespreken we elke stap in meer detail.
-
-### <a name="constructing-the-target-machine"></a>De doelcomputer maken
-
-Kwantumcomputers zijn exemplaren van normale .NET-klassen en worden, net als elke andere .NET-klasse, gemaakt door hun constructor aan te roepen.
-Sommige simulatoren, met inbegrip van de `QuantumSimulator`, implementeren de .NET-interface <xref:System.IDisposable?displayProperty=nameWithType> en moeten dus worden verpakt in een C#-instructie met `using`.
-
-### <a name="computing-arguments-for-the-algorithm"></a>Argumenten berekenen voor het algoritme
-
-In het voorbeeld `Teleport` hebben we enkele relatief kunstmatige argumenten berekend om die door te geven aan het kwantumalgoritme.
-Doorgaans is er een aanzienlijke hoeveelheid gegevens nodig voor het kwantumalgoritme. Het is het gemakkelijkst om deze op te geven via het klassieke stuurprogramma.
-
-Bij het uitvoeren van chemische simulaties is voor het kwantumalgoritme bijvoorbeeld een grote tabel met moleculaire orbitaalinteractie-integralen vereist.
-Over het algemeen worden deze gelezen vanuit een bestand dat wordt aangeleverd bij het uitvoeren van het algoritme.
-Omdat in Q# geen mechanisme bestaat voor het openen van het bestandssysteem, kunnen dergelijke gegevens het beste worden verzameld via het klassieke stuurprogramma en vervolgens worden doorgegeven aan de methode `Run` van het kwantumalgoritme.
-
-Ook bij variabele methoden speelt het klassieke stuurprogramma een belangrijke rol.
-In deze klasse van algoritmen wordt een kwantumtoestand voorbereid op basis van enkele klassieke parameters, en wordt die toestand gebruikt voor het berekenen van een bepaalde waarde.
-De parameters worden aangepast op basis van een type Hill Climbing- of machine learning-algoritme en het kwantumalgoritme wordt opnieuw uitgevoerd.
-Voor dergelijke algoritmen kan het Hill Climbing-algoritme zelf het beste worden geïmplementeerd als een louter klassieke functie die wordt aangeroepen door het klassieke stuurprogramma; de resultaten van het Hill Climbing-algoritme worden vervolgens doorgegeven aan de volgende uitvoering van het kwantumalgoritme.
-
-### <a name="running-the-quantum-algorithm"></a>Het kwantumalgoritme uitvoeren
-
-Dit deel is over het algemeen zeer eenvoudig.
-Elke Q#-bewerking wordt gecompileerd in een klasse die voorziet in een statische `Run`-methode.
-De argumenten voor deze methode worden doorgegeven door de tuple van het afgevlakte argument van de bewerking zelf, plus een extra eerste argument voor de simulator waarmee de methode moet worden uitgevoerd. Voor een bewerking waarin de benoemde tuple van het type `(a: String, (b: Double, c: Double))` wordt verwacht, is het afgevlakte equivalent van het type `(String a, Double b, Double c)`.
+Kwantumsimulators zijn softwareprogramma's die worden uitgevoerd op klassieke computers en fungeren als *doelmachine* voor een Q#-programma. Dit maakt het mogelijk om kwantumprogramma's uit te voeren en te testen in een omgeving die voorspelt hoe qubits op verschillende bewerkingen reageren. In dit artikel wordt beschreven welke kwantumsimulators zijn opgenomen in de Quantum Development Kit (QDK), evenals de verschillende manieren waarop u een Q#-programma kunt doorgeven aan de kwantumsimulators, bijvoorbeeld via de opdrachtregel of met behulp van stuurprogrammacodes, geschreven in een klassieke taal.  
 
 
-Er zijn wel enkele subtiliteiten om rekening mee te houden bij het doorgeven van argumenten aan een `Run`-methode:
 
-* Matrices moeten worden verpakt in een `Microsoft.Quantum.Simulation.Core.QArray<T>`-object.
-    Een `QArray`-klasse heeft een constructor waarin u een geordende verzameling (`IEnumerable<T>`) van de juiste objecten kunt opgeven.
-* De lege tuple, `()` in Q#, wordt opgegeven met `QVoid.Instance` in C#.
-* Niet-lege tuples worden opgegeven als .NET `ValueTuple`-exemplaren.
-* Door de gebruiker gedefinieerde typen in Q# worden doorgegeven als het bijbehorende basistype.
-* Als u een bewerking of functie wilt doorgeven aan een `Run`-methode, moet u een exemplaar van de klasse van de bewerking of functie verkrijgen met behulp van de methode `Get<>` van de simulator.
+## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>De Quantum Development Kit (QDK)-kwantumsimulators
 
-### <a name="processing-the-results"></a>De resultaten verwerken
-
-De resultaten van het kwantumalgoritme worden geretourneerd met behulp van de methode `Run`.
-De methode `Run` wordt asynchroon uitgevoerd zodat er een exemplaar van <xref:System.Threading.Tasks.Task`1> wordt geretourneerd.
-Er zijn meerdere manieren om de werkelijke resultaten van de bewerking te verkrijgen. De eenvoudigste manier is met behulp van de eigenschap [`Result` van `Task`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):
-
-```csharp
-    var res = BellTest.Run(sim, 1000, initial).Result;
-```
-maar andere technieken, zoals het gebruik van de methode [`Wait`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) of het C#-sleutelwoord [`await`](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) werken ook.
-
-Net als bij argumenten, worden Q#-tuples weergegeven als exemplaren van `ValueTuple`, en Q#-matrices als exemplaren van `QArray`.
-Door de gebruiker gedefinieerde typen worden geretourneerd als de bijbehorende basistypen.
-De lege tuple, `()`, wordt geretourneerd als een exemplaar van de klasse `QVoid`.
-
-Voor veel kwantumalgoritmen is een aanzienlijke hoeveelheid naverwerking nodig om nuttige antwoorden te kunnen afleiden.
-Het kwantumdeel van het algoritme van Shor is slechts het begin van een berekening waarmee de factoren van een getal worden gevonden.
-
-In de meeste gevallen kan dergelijke naverwerking het snelst en eenvoudigst worden uitgevoerd in het klassieke stuurprogramma.
-Alleen met het klassieke stuurprogramma kunnen resultaten worden gerapporteerd aan de gebruiker of naar schijf worden geschreven.
-Het klassieke stuurprogramma biedt toegang tot analysebibliotheken en andere wiskundige functies die niet beschikbaar zijn in Q#.
+De kwantumsimulator is verantwoordelijk voor het leveren van de implementaties van kwantumprimitieven voor een algoritme. Dit omvat primitieve bewerkingen, zoals `H`, `CNOT` en `Measure`, plus qubitbeheer en -tracering. De QDK bevat verschillende klassen van kwantumsimulators die verschillende uitvoeringsmodellen voor hetzelfde kwantumalgoritme vertegenwoordigen. 
 
 
-## <a name="failures"></a>Fouten
+Op elk type kwantumsimulator kunnen verschillende implementaties van deze primitieven worden geïnstalleerd. Bijvoorbeeld: de [simulator voor volledige toestand](xref:microsoft.quantum.machines.full-state-simulator) voert het kwantumalgoritme uit door de [kwantumstatusvector](xref:microsoft.quantum.glossary#quantum-state) volledig te simuleren, terwijl de [trajectsimulator kwantumcomputer](xref:microsoft.quantum.machines.qc-trace-simulator.intro) geen rekening houdt met de daadwerkelijke kwantumstatus. In plaats daarvan worden het gebruik van gates, qubits en andere resources bijgehouden voor het algoritme.
 
-Wanneer de Q#-instructie `fail` wordt bereikt tijdens het uitvoeren van een bewerking, wordt er een `ExecutionFailException`-uitzondering gegenereerd.
+### <a name="quantum-machine-classes"></a>Klassen van kwantumcomputers
 
-Als gevolg van het gebruik van `System.Task` in de methode `Run`, wordt de uitzondering die is opgetreden als gevolg van een `fail`-instructie verpakt in een `System.AggregateException`.
-Als u de werkelijke oorzaak van de fout wilt achterhalen, moet u dit herhalen in de `AggregateException` 
-`InnerExceptions`, bijvoorbeeld:
+In de toekomst zal de QDK aanvullende kwantumcomputerklassen definiëren om andere typen simulaties en uitvoering op topologische kwantumhardware te ondersteunen. Het algoritme kan constant blijven terwijl de onderliggende computerimplementatie wordt gewijzigd. Dit maakt het eenvoudig om een algoritme in simulatie te testen en fouten op te sporen en het vervolgens op echte hardware uit te voeren in de wetenschap dat het algoritme niet is gewijzigd.
 
-```csharp
+De QDK bevat verschillende klassen kwantumcomputers, die allemaal zijn gedefinieerd in de naamruimte `Microsoft.Quantum.Simulation.Simulators`.
 
-            try
-            {
-                using(var sim = new QuantumSimulator())
-                {
-                    /// call your operations here...
-                }
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap AggregateException to get the message from Q# fail statement.
-                // Go through all inner exceptions.
-                foreach (Exception inner in e.InnerExceptions)
-                {
-                    // If the exception of type ExecutionFailException
-                    if (inner is ExecutionFailException failException)
-                    {
-                        // Print the message it contains
-                        Console.WriteLine($" {failException.Message}");
-                    }
-                }
-            }
-```
+|Simulator |Klasse|Beschrijving|
+|-----|------|---|
+|[Simulator voor volledige toestand](xref:microsoft.quantum.machines.full-state-simulator)| `QuantumSimulator` | Hiermee worden kwantumalgoritmen uitgevoerd en fouten opgespoord. Deze simulator is beperkt tot 30 qubits. |
+|[Eenvoudige resource-estimator](xref:microsoft.quantum.machines.resources-estimator)| `ResourcesEstimator` | Hiermee kunt u een algemene schatting maken van de benodigde resources voor het uitvoeren van een kwantumalgoritme. Deze simulator ondersteunt duizenden qubits.|
+|[Op tracering gebaseerde resource-estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)|  `QCTraceSimulator` |Hiermee kunt u een geavanceerde analyse uitvoeren van de verbruikte resources voor de hele call-graph (aanroepgrafiek) van het algoritme. Deze simulator ondersteunt duizenden qubits.|
+|[Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator)| `ToffoliSimulator` |Hiermee simuleert u kwantumalgoritmen die beperkt zijn tot `X`, `CNOT` en meerdere beheerde `X` kwantumbewerkingen. Deze simulator ondersteunt miljoenen qubits. |
 
-## <a name="other-classical-languages"></a>Andere klassieke talen
+## <a name="invoking-the-quantum-simulator"></a>De kwantumsimulator aanroepen
 
-Hoewel de gegeven voorbeelden zijn geschreven in C#, F# en Python, biedt de Quantum development kit ook ondersteuning voor het schrijven van klassieke hostprogramma's in andere talen.
-Als u bijvoorbeeld een hostprogramma wilt schrijven in Visual Basic, [zou het programma gewoon moeten werken](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).
+In [Manieren om een Q#-programma uit te voeren](xref:microsoft.quantum.guide.host-programs) worden drie manieren beschreven waarop de Q#-code wordt doorgegeven aan de kwantumsimulator: 
+
+* De opdrachtregel gebruiken
+* Een Python-hostprogramma gebruiken
+* Een C#-hostprogramma gebruiken
+
+Kwantumcomputers zijn exemplaren van normale .NET-klassen en worden, net als elke andere .NET-klasse, gemaakt door hun constructor aan te roepen. Hoe u dit doet, is afhankelijk van hoe u het Q#-programma uitvoert.
+
+## <a name="next-steps"></a>Volgende stappen
+
+* Raadpleeg [Manieren om een Q#-programma uit te voeren](xref:microsoft.quantum.guide.host-programs) voor meer informatie over het aanroepen van doelcomputers voor Q#-programma's in verschillende omgevingen.

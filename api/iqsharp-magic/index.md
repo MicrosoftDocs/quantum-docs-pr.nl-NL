@@ -1,5 +1,18 @@
+---
+title: IQ# Magic-opdrachten
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870699"
+---
 # <a name="iq-magic-commands"></a>IQ# Magic-opdrachten
-
 | Magic-opdracht | Samenvatting |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Hiermee maakt u verbinding met een Azure Quantum-werkruimte of wordt de huidige verbindingsstatus weergegeven. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Voert een bepaalde functie of bewerking op de doelcomputer van de ResourcesEstimator uit. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Voert één test uit. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Retourneert van alle Magic-opdrachten die nu beschikbaar zijn. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Hier ziet u een lijst met momenteel geopende naamruimten en de bijbehorende aliassen. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Biedt de mogelijkheid om een NuGet-pakket te laden. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Rapporteert de huidige metrische prestatiegegevens voor deze kernel. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Voert een bepaalde functie of bewerking uit op de doelcomputer van de QuantumSimulator. |

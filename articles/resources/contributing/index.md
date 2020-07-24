@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273311"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871413"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Bijdragen aan de Quantum development kit
 
@@ -61,10 +61,9 @@ Elk onderdeel hoort bij een andere opslagplaats, dus een van de eerste dingen di
 > [!NOTE]
 > Helaas kunnen we momenteel geen code- en documentatiebijdragen accepteren in de opslagplaats [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC), maar bugrapporten worden nog steeds zeer op prijs gesteld.
 
-Er zijn ook enkele andere, meer gespecialiseerde opslagplaatsen die gericht zijn op verschillende gebeurtenissen of op hulpfunctionaliteit met betrekking tot de Quantum development kit.
+Er zijn ook enkele andere, meer gespecialiseerde opslagplaatsen die gericht zijn op hulpfunctionaliteit met betrekking tot de Quantum Development Kit.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Ondersteuning voor LaTeX-opmaak voor Q#-syntaxis.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch – Jozsa-zelfstudie die is gegeven in de interne workshop in 2019.
 
 ## <a name="next-steps"></a>Volgende stappen
 
