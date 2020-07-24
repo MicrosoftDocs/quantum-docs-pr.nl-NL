@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 7fbbb81b1ee51bff74b287745bf4447004a0254c
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885526"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871583"
 ---
 # <a name="develop-with-q-and-python"></a>Ontwikkelen met Q# en Python
 
@@ -21,7 +21,7 @@ Installeer de QDK om Python-hostprogramma's te ontwikkelen waarmee Q#-bewerkinge
 
 ### <a name="install-using-conda-recommended"></a>[Installeren met behulp van Conda (aanbevolen)](#tab/tabid-conda)
 
-1. Installeer [Miniconda](https://docs.conda.io/en/latest/miniconda.html) of [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Installeer [Miniconda](https://docs.conda.io/en/latest/miniconda.html) of [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Opmerking:** 64-bits installatie vereist.
 
 1. Open een Anaconda-prompt.
 

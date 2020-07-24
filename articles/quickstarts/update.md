@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885153"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871396"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum Development Kit (QDK) bijwerken
 
@@ -53,7 +53,7 @@ U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of
 5. Stel in elk van de .csproj-bestanden de SDK in op `Microsoft.Quantum.Sdk`, zoals aangegeven in de onderstaande regel. Het versienummer moet het meest recent beschikbare nummer zijn. U kunt dit controleren door de [releaseopmerkingen](https://docs.microsoft.com/quantum/relnotes/) te bekijken.
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Sla alle bestanden in uw oplossing op en sluit deze.
@@ -93,7 +93,7 @@ U kunt nu doorgaan met het [bijwerken van uw Visual Studio QDK-extensie](#update
     dotnet clean [project_name].csproj
     ```
 
-3. Stel vast wat de huidige versie van de QDK is. Raadpleeg hiervoor de [releaseopmerkingen](https://docs.microsoft.com/quantum/relnotes/). De versie heeft een indeling die vergelijkbaar is met `0.11.2006.207`.
+3. Stel vast wat de huidige versie van de QDK is. Raadpleeg hiervoor de [releaseopmerkingen](https://docs.microsoft.com/quantum/relnotes/). De versie heeft een indeling die vergelijkbaar is met `0.12.20072031`.
 
 4. Volg voor elk van uw `.csproj`-bestanden de volgende stappen:
 
@@ -108,7 +108,7 @@ U kunt nu doorgaan met het [bijwerken van uw Visual Studio QDK-extensie](#update
     - Vervang de verwijzing naar de SDK in de projectdefinitie. Controleer of het versienummer overeenkomt met de waarde die is vastgesteld in **stap 3**.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Verwijder de verwijzing naar pakket het `Microsoft.Quantum.Development.Kit`, indien aanwezig, die wordt opgegeven in de volgende vermelding:
@@ -127,7 +127,7 @@ U kunt nu doorgaan met het [bijwerken van uw Visual Studio QDK-extensie](#update
         Verwijzingen naar pakketten hebben de volgende indeling:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Sla het bijgewerkte bestand op.
@@ -194,7 +194,7 @@ De updateprocedure is afhankelijk van of u oorspronkelijk hebt geïnstalleerd me
     In dat geval moet de volgende uitvoer worden weergegeven:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -216,7 +216,7 @@ De updateprocedure is afhankelijk van of u oorspronkelijk hebt geïnstalleerd me
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -267,7 +267,7 @@ De updateprocedure is afhankelijk van of u oorspronkelijk hebt geïnstalleerd me
     Uw uitvoer moet er als volgt uitzien:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -302,16 +302,19 @@ U kunt nu de bijgewerkte IQ#-kernel gebruiken om uw bestaande Q# Jupyter Noteboo
     - Selecteer de **Microsoft Quantum Development Kit voor de Visual Studio Code**-extensie
     - Laad de extensie opnieuw
 
-2. Werk de Quantum-projectsjablonen bij:
-
-   - Ga naar **Weergave** -> **Opdrachtpalet**
-   - Selecteer **Q#: Projectsjablonen installeren**
-   - Na een paar seconden krijgt u een pop-up te zien waarin wordt bevestigd dat de projectsjablonen zijn geïnstalleerd
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>C#, met behulp van het `dotnet`-opdrachtregelprogramma
 
 1. Werk de Quantum-projectsjablonen voor .NET bij
 
+    Vanaf de opdrachtregel:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Als u van plan bent om de opdrachtregelsjablonen te gebruiken en u de VS Code QDK-extensie al hebt geïnstalleerd, kunt u de projectsjablonen ook bijwerken vanuit de extensie zelf:
+
+   - [De QDK-extensie bijwerken](#update-vs-code-qdk-extension)
+   - Ga in VS Code naar **Weergave** -> **Opdrachtpalet**
+   - Selecteer **Q#: Projectsjablonen voor opdrachtregel installeren**
+   - Na een paar seconden krijgt u een pop-up te zien waarin wordt bevestigd dat de projectsjablonen zijn geïnstalleerd

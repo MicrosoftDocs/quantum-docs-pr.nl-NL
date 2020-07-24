@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884275"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871430"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Ontwikkelen met Q#-opdrachtregeltoepassingen
 
@@ -23,7 +23,7 @@ Q#-programma's kunnen zelfstandig worden uitgevoerd zonder een stuurprogramma in
 
 ## <a name="installation"></a>Installatie
 
-Hoewel u Q#-opdrachtregeltoepassingen in elke IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken voor uw Q#-toepassingen. Ontwikkelen in deze omgevingen omvat de uitgebreide functies van de QDK-extensie, waaronder waarschuwingen, markeren van syntaxis, projectsjablonen, en meer.
+Hoewel u Q#-opdrachtregeltoepassingen in elke IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken als u uw Q#-toepassingen lokaal wilt ontwikkelen. Als u uw toepassingen in de cloud wilt ontwikkelen via de webbrowser, raden we Visual Studio Codespaces aan. Ontwikkelen in deze omgevingen omvat de uitgebreide functies van de QDK-extensie, waaronder waarschuwingen, markeren van syntaxis, projectsjablonen, en meer. 
 
 Ga als volgt te werk om VS Code te configureren:
 
@@ -34,6 +34,13 @@ Ga als volgt te werk om Visual Studio te configureren:
 
 1. Download en installeer [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 of hoger, waarbij de workload voor platformoverschrijdende ontwikkeling met .NET Core is ingeschakeld.
 2. Download en installeer de [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+Voor de configuratie van Visual Studio Codespaces gaat u als volgt te werk:
+
+1. Maak een [Azure-account](https://azure.microsoft.com/free/).
+2. Maak een Codespaces-omgeving. Volg de [quickstart-gids](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). We raden u aan om bij het maken van de Codespace `microsoft/Quantum` in te voeren in het veld Git-opslagplaats om QDK-specifieke instellingen te laden.
+3. Nu kunt u uw nieuwe omgeving starten en beginnen met ontwikkelen in de browser via de [VS Codespaces cloud-IDE](https://online.visualstudio.com/environments). Het is ook mogelijk om uw lokale installatie van VS Code te gebruiken en Codespaces te gebruiken als een [externe omgeving](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
+
 
 Als u de QDK wilt installeren in een andere omgeving, voert u het volgende in de opdrachtregel in:
 
@@ -46,14 +53,6 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 Volg de instructies op het tabblad dat hoort bij de omgeving.
 
 ### <a name="vs-code"></a>[VS-code](#tab/tabid-vscode)
-
-Ga als volgt te werk om de Q#-projectsjablonen te installeren:
-
-1. Open VS Code.
-2. Klik op **Weergave** -> **Opdrachtpalet**.
-3. Selecteer **Q#: Installeer de projectsjablonen**.
-
-Als de melding **Projectsjablonen zijn geïnstalleerd** wordt weergegeven, is de QDK klaar om te worden gebruikt met uw eigen toepassingen en bibliotheken.
 
 Ga als volgt te werk om een nieuw project te maken:
 
@@ -96,24 +95,30 @@ De toepassing uitvoeren:
 
 Controleer de installatie door een Q# `Hello World`-toepassing te maken.
 
+1. Installeer de projectsjablonen.
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. Een nieuwe toepassing maken:
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. Navigeer naar de toepassingsmap:
+1. Navigeer naar de toepassingsmap:
     ```dotnetcli
     cd runSayHello
     ```
 
     De map bevat nu een bestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven. U kunt deze sjabloon wijzigen met een teksteditor en overschrijven met uw eigen kwantumtoepassingen. 
 
-3. Voer het programma uit:
+1. Voer het programma uit:
     ```dotnetcli
     dotnet run
     ```
 
-4. U ziet nu de volgende tekst: `Hello quantum world!`
+1. U ziet nu de volgende tekst: `Hello quantum world!`
 
 ***
 
