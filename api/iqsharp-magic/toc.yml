@@ -32,6 +32,8 @@
   name: Magic-opdracht %kata
 - href: lsmagic.md
   name: Magic-opdracht %Ismagic
+- href: lsopen.md
+  name: Magic-opdracht %lsopen
 - href: package.md
   name: Magic-opdracht %package
 - href: performance.md
