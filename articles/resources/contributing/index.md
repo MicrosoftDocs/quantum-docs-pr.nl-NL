@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871413"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436569"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Bijdragen aan de Quantum development kit
 
@@ -19,7 +19,7 @@ De Quantum development kit is meer dan een verzameling hulpprogramma's voor het 
 Het is onderdeel van een brede community van mensen die kwantumcomputing ontdekken, kwantumalgoritmen onderzoeken, nieuwe toepassingen voor kwantumapparaten ontwikkelen en/of op andere wijze samenwerken om optimaal gebruik te maken van de kwantumprogramma's.
 Als lid van die community is de Quantum development kit erop gericht om kwantumontwikkelaars uit allerlei vakgebieden te voorzien van de functies die ze nodig hebben.
 Uw bijdragen aan de Quantum development kit helpen om dat doel te verwezenlijken door de hulpprogramma's en de bijbehorende documentatie die door andere kwantumontwikkelaars worden gebruikt, te verbeteren of zelfs door nieuwe functies en functionaliteit te maken die de hele kwantumprogrammeercommunity ten goede komt.
-We zijn u zeer dankbaar voor uw bijdragen en de gelegenheid om er samen voor te zorgen dat onze community een succes wordt.
+We zijn u zeer dankbaar voor uw bijdragen en de gelegenheid om er samen voor te zorgen dat onze community een succes wordt. 
 
 In deze handleiding geven we enkele adviezen over hoe u een zo nuttig mogelijke bijdrage kunt leveren voor een breed publiek in de kwantum-programmeercommunity.
 

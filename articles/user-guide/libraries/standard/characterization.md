@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275022"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436536"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -96,7 +96,7 @@ De exacte Bayesiaanse-deinterferentie is in de praktijk onbepaald.
 Om dit voor stel te zien, willen we een $n $-bit-variabele $x $ leren.
 De vorige distributie $ \Pr (x) $ heeft ondersteuning voor meer dan $2 ^ n $ hypothetische waarden van $x $.
 Dit betekent dat als er een zeer nauw keurige schatting van $x $, de schatting van de Bayesiaanse-fase mogelijk een verboden geheugen en verwerkings tijd nodig heeft.
-Hoewel voor sommige toepassingen, zoals Quantum simulatie, de nauw keurigheid van de limitted niet van toepassing is op andere toepassingen, zoals het algoritme van Shor, kunt u geen gebruik maken van de exacte Bayesiaanse-afleiding binnen de fase-schattings stap.  Daarom bieden we ook implementaties voor het benaderen van Bayesiaanse-methoden, zoals een [wille keurige Walkie fase schatting (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) en ook niet-Bayesiaanse benaderingen zoals een [robuuste fase schatting](xref:microsoft.quantum.characterization.robustphaseestimation).
+Hoewel voor sommige toepassingen, zoals Quantum simulatie, de nauw keurigheid van de limitted niet van toepassing is op andere toepassingen, zoals het algoritme van Shor, kunt u geen gebruik maken van de exacte Bayesiaanse-afleiding binnen de fase-schattings stap.  Daarom bieden we ook implementaties voor het benaderen van Bayesiaanse-methoden, zoals een [wille keurige Walkie fase schatting (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) en ook niet-Bayesiaanse benaderingen zoals een [robuuste fase schatting](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Robuuste fase schatting ###
 
