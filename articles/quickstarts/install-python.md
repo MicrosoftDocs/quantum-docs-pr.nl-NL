@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871583"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436541"
 ---
 # <a name="develop-with-q-and-python"></a>Ontwikkelen met Q# en Python
 
@@ -97,7 +97,7 @@ Nu bent u klaar om de installatie van het Python-pakket voor `qsharp` te control
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. Voer vanuit de omgeving die u hebt gemaakt tijdens de installatie (dat is de Conda- of Python-omgeving waarin u `qsharp` hebt geïnstalleerd), het volgende programma uit:
@@ -106,7 +106,7 @@ Nu bent u klaar om de installatie van het Python-pakket voor `qsharp` te control
     python host.py
     ```
 
-1. U ziet nu het resultaat van de bewerking die u hebt aangeroepen. In dit geval ziet u `Zero` of `One` op het scherm, omdat met de bewerking een willekeurig resultaat is gegenereerd. Als u het programma herhaaldelijk uitvoert, ziet u elk resultaat ongeveer de helft van de tijd.
+1. U ziet nu het resultaat van de bewerking die u hebt aangeroepen. In dit geval ziet u `0` of `1` op het scherm, omdat met de bewerking een willekeurig resultaat is gegenereerd. Als u het programma herhaaldelijk uitvoert, ziet u elk resultaat ongeveer de helft van de tijd.
 
 > [!NOTE]
 > * De Python-code is een regulier Python-programma. U kunt een willekeurige Python-omgeving gebruiken, inclusief Jupyter Notebooks op basis van Python, om het Python-programma te schrijven en Q#-bewerkingen aan te roepen. Met het Python-programma kunnen Q #-bewerkingen worden geïmporteerd uit elk .qs-bestand dat zich in dezelfde map bevindt als de Python-code.
