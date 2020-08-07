@@ -1,48 +1,51 @@
 ---
-title: 'Controle stroom in Q #'
+title: Controle stroom inQ#
 description: Lussen, voor waarden enzovoort.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870988"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867944"
 ---
-# <a name="control-flow-in-q"></a><span data-ttu-id="047d3-103">Controle stroom in Q #</span><span class="sxs-lookup"><span data-stu-id="047d3-103">Control flow in Q#</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="ed078-103">Controle stroom inQ#</span><span class="sxs-lookup"><span data-stu-id="ed078-103">Control flow in Q#</span></span>
 
-<span data-ttu-id="047d3-104">Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met andere gebruikelijke, klassieke talen.</span><span class="sxs-lookup"><span data-stu-id="047d3-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
-<span data-ttu-id="047d3-105">U kunt de controle stroom echter op drie verschillende manieren wijzigen:</span><span class="sxs-lookup"><span data-stu-id="047d3-105">However, you can modify the flow of control in three distinct ways:</span></span>
+<span data-ttu-id="ed078-104">Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met andere gebruikelijke, klassieke talen.</span><span class="sxs-lookup"><span data-stu-id="ed078-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
+<span data-ttu-id="ed078-105">U kunt de controle stroom echter op drie verschillende manieren wijzigen:</span><span class="sxs-lookup"><span data-stu-id="ed078-105">However, you can modify the flow of control in three distinct ways:</span></span>
 
-* <span data-ttu-id="047d3-106">`if`instructies</span><span class="sxs-lookup"><span data-stu-id="047d3-106">`if` statements</span></span>
-* <span data-ttu-id="047d3-107">`for`lussen</span><span class="sxs-lookup"><span data-stu-id="047d3-107">`for` loops</span></span>
-* <span data-ttu-id="047d3-108">`repeat-until-success`lussen</span><span class="sxs-lookup"><span data-stu-id="047d3-108">`repeat-until-success` loops</span></span>
+* <span data-ttu-id="ed078-106">`if`instructies</span><span class="sxs-lookup"><span data-stu-id="ed078-106">`if` statements</span></span>
+* <span data-ttu-id="ed078-107">`for`lussen</span><span class="sxs-lookup"><span data-stu-id="ed078-107">`for` loops</span></span>
+* <span data-ttu-id="ed078-108">`repeat-until-success`lussen</span><span class="sxs-lookup"><span data-stu-id="ed078-108">`repeat-until-success` loops</span></span>
 
-<span data-ttu-id="047d3-109">De `if` `for` constructies en de controle stroom worden door gegeven in een vertrouwde zin voor de meeste klassieke programmeer talen.</span><span class="sxs-lookup"><span data-stu-id="047d3-109">The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages.</span></span> <span data-ttu-id="047d3-110">[`Repeat-until-success`](#repeat-until-success-loop)lussen worden verderop in dit artikel besproken.</span><span class="sxs-lookup"><span data-stu-id="047d3-110">[`Repeat-until-success`](#repeat-until-success-loop) loops are discussed later in this article.</span></span>
+<span data-ttu-id="ed078-109">De `if` `for` constructies en de controle stroom worden door gegeven in een vertrouwde zin voor de meeste klassieke programmeer talen.</span><span class="sxs-lookup"><span data-stu-id="ed078-109">The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages.</span></span> <span data-ttu-id="ed078-110">[`Repeat-until-success`](#repeat-until-success-loop)lussen worden verderop in dit artikel besproken.</span><span class="sxs-lookup"><span data-stu-id="ed078-110">[`Repeat-until-success`](#repeat-until-success-loop) loops are discussed later in this article.</span></span>
 
-<span data-ttu-id="047d3-111">Belang rijk: `for` lussen en `if` instructies kunnen worden gebruikt in bewerkingen waarvoor automatisch een [specialisatie](xref:microsoft.quantum.guide.operationsfunctions) wordt gegenereerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-111">Importantly, `for` loops and `if` statements can be used in operations for which [specializations](xref:microsoft.quantum.guide.operationsfunctions) are auto-generated.</span></span> <span data-ttu-id="047d3-112">In dat scenario keert de adjoint van een `for` lus de richting om en neemt de adjoint van elke iteratie toe.</span><span class="sxs-lookup"><span data-stu-id="047d3-112">In that scenario, the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.</span></span>
-<span data-ttu-id="047d3-113">Met deze actie wordt het principe ' schoenen en SOCKS ' gehanteerd: als u het maken van een SOCKS-en vervolgens schoenen wilt opheffen, moet u de toevoeging op schoenen ongedaan maken en vervolgens op SOCKS ongedaan maken.</span><span class="sxs-lookup"><span data-stu-id="047d3-113">This action follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.</span></span> 
+<span data-ttu-id="ed078-111">Belang rijk: `for` lussen en `if` instructies kunnen worden gebruikt in bewerkingen waarvoor automatisch een [specialisatie](xref:microsoft.quantum.guide.operationsfunctions) wordt gegenereerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-111">Importantly, `for` loops and `if` statements can be used in operations for which [specializations](xref:microsoft.quantum.guide.operationsfunctions) are auto-generated.</span></span> <span data-ttu-id="ed078-112">In dat scenario keert de adjoint van een `for` lus de richting om en neemt de adjoint van elke iteratie toe.</span><span class="sxs-lookup"><span data-stu-id="ed078-112">In that scenario, the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.</span></span>
+<span data-ttu-id="ed078-113">Met deze actie wordt het principe ' schoenen en SOCKS ' gehanteerd: als u het maken van een SOCKS-en vervolgens schoenen wilt opheffen, moet u de toevoeging op schoenen ongedaan maken en vervolgens op SOCKS ongedaan maken.</span><span class="sxs-lookup"><span data-stu-id="ed078-113">This action follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.</span></span> 
 
-## <a name="if-else-if-else"></a><span data-ttu-id="047d3-114">If, else-if, else</span><span class="sxs-lookup"><span data-stu-id="047d3-114">If, Else-if, Else</span></span>
+## <a name="if-else-if-else"></a><span data-ttu-id="ed078-114">If, else-if, else</span><span class="sxs-lookup"><span data-stu-id="ed078-114">If, Else-if, Else</span></span>
 
-<span data-ttu-id="047d3-115">De `if` instructie ondersteunt voorwaardelijke uitvoering.</span><span class="sxs-lookup"><span data-stu-id="047d3-115">The `if` statement supports conditional execution.</span></span>
-<span data-ttu-id="047d3-116">Het bestaat uit het sleutel woord `if` , een Boole-expressie tussen haakjes en een instructie blok (de _vervolgens_ blok kering).</span><span class="sxs-lookup"><span data-stu-id="047d3-116">It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).</span></span>
-<span data-ttu-id="047d3-117">U kunt eventueel elk wille keurig aantal else-if-componenten volgen, elk met het sleutel woord `elif` , een Boole-expressie tussen haakjes en een instructie blok (het _else-if-_ blok).</span><span class="sxs-lookup"><span data-stu-id="047d3-117">Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).</span></span>
-<span data-ttu-id="047d3-118">Ten slotte kan de instructie eventueel eindigen met een else-component, die bestaat uit het tref woord `else` gevolgd door een ander instructie blok (het _else_ -blok).</span><span class="sxs-lookup"><span data-stu-id="047d3-118">Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).</span></span>
+<span data-ttu-id="ed078-115">De `if` instructie ondersteunt voorwaardelijke uitvoering.</span><span class="sxs-lookup"><span data-stu-id="ed078-115">The `if` statement supports conditional execution.</span></span>
+<span data-ttu-id="ed078-116">Het bestaat uit het sleutel woord `if` , een Boole-expressie tussen haakjes en een instructie blok (de _vervolgens_ blok kering).</span><span class="sxs-lookup"><span data-stu-id="ed078-116">It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).</span></span>
+<span data-ttu-id="ed078-117">U kunt eventueel elk wille keurig aantal else-if-componenten volgen, elk met het sleutel woord `elif` , een Boole-expressie tussen haakjes en een instructie blok (het _else-if-_ blok).</span><span class="sxs-lookup"><span data-stu-id="ed078-117">Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).</span></span>
+<span data-ttu-id="ed078-118">Ten slotte kan de instructie eventueel eindigen met een else-component, die bestaat uit het tref woord `else` gevolgd door een ander instructie blok (het _else_ -blok).</span><span class="sxs-lookup"><span data-stu-id="ed078-118">Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).</span></span>
 
-<span data-ttu-id="047d3-119">De `if` voor waarde wordt geëvalueerd en als deze *waar*is, wordt *then* de blok kering uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-119">The `if` condition is evaluated, and if it is *true*, the *then* block is run.</span></span>
-<span data-ttu-id="047d3-120">Als de voor waarde *Onwaar*is, wordt de eerste else-if-voor waarde geëvalueerd; Als dat het geval is, wordt de *else-if-* blok kering uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-120">If the condition is *false*, then the first else-if condition is evaluated; if that is true, then the *else-if* block is run.</span></span>
-<span data-ttu-id="047d3-121">Als dat niet het geval is, wordt het tweede else-if-blok geëvalueerd en vervolgens de derde, enzovoort, totdat een component met de voor waarde True wordt aangetroffen of omdat er geen else-if-componenten zijn.</span><span class="sxs-lookup"><span data-stu-id="047d3-121">Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.</span></span>
-<span data-ttu-id="047d3-122">*Als de voor waarde origineel* en alle else-if-componenten resulteren in *Onwaar*, wordt het *else* -blok uitgevoerd, indien opgegeven.</span><span class="sxs-lookup"><span data-stu-id="047d3-122">If the original *if* condition and all the else-if clauses evaluate to *false*, the *else* block is run, if provided.</span></span>
+<span data-ttu-id="ed078-119">De `if` voor waarde wordt geëvalueerd en als deze *waar*is, wordt *then* de blok kering uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-119">The `if` condition is evaluated, and if it is *true*, the *then* block is run.</span></span>
+<span data-ttu-id="ed078-120">Als de voor waarde *Onwaar*is, wordt de eerste else-if-voor waarde geëvalueerd; Als dat het geval is, wordt de *else-if-* blok kering uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-120">If the condition is *false*, then the first else-if condition is evaluated; if that is true, then the *else-if* block is run.</span></span>
+<span data-ttu-id="ed078-121">Als dat niet het geval is, wordt het tweede else-if-blok geëvalueerd en vervolgens de derde, enzovoort, totdat een component met de voor waarde True wordt aangetroffen of omdat er geen else-if-componenten zijn.</span><span class="sxs-lookup"><span data-stu-id="ed078-121">Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.</span></span>
+<span data-ttu-id="ed078-122">*Als de voor waarde origineel* en alle else-if-componenten resulteren in *Onwaar*, wordt het *else* -blok uitgevoerd, indien opgegeven.</span><span class="sxs-lookup"><span data-stu-id="ed078-122">If the original *if* condition and all the else-if clauses evaluate to *false*, the *else* block is run, if provided.</span></span>
 
-<span data-ttu-id="047d3-123">Houd er rekening mee dat elk blok wordt uitgevoerd binnen een eigen bereik.</span><span class="sxs-lookup"><span data-stu-id="047d3-123">Note that whichever block runs, it runs within its own scope.</span></span>
-<span data-ttu-id="047d3-124">Bindingen die zijn gemaakt in een `if` , `elif` of `else` blok zijn niet zichtbaar nadat de blok kering is beëindigd.</span><span class="sxs-lookup"><span data-stu-id="047d3-124">Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.</span></span>
+<span data-ttu-id="ed078-123">Houd er rekening mee dat elk blok wordt uitgevoerd binnen een eigen bereik.</span><span class="sxs-lookup"><span data-stu-id="ed078-123">Note that whichever block runs, it runs within its own scope.</span></span>
+<span data-ttu-id="ed078-124">Bindingen die zijn gemaakt in een `if` , `elif` of `else` blok zijn niet zichtbaar nadat de blok kering is beëindigd.</span><span class="sxs-lookup"><span data-stu-id="ed078-124">Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.</span></span>
 
-<span data-ttu-id="047d3-125">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="047d3-125">For example,</span></span>
+<span data-ttu-id="ed078-125">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="ed078-125">For example,</span></span>
 
 ```qsharp
 if (result == One) {
@@ -52,7 +55,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-<span data-ttu-id="047d3-126">of</span><span class="sxs-lookup"><span data-stu-id="047d3-126">or</span></span>
+<span data-ttu-id="ed078-126">of</span><span class="sxs-lookup"><span data-stu-id="ed078-126">or</span></span>
 ```qsharp
 if (i == 1) {
     X(target);
@@ -65,20 +68,20 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a><span data-ttu-id="047d3-127">For-lus</span><span class="sxs-lookup"><span data-stu-id="047d3-127">For loop</span></span>
+## <a name="for-loop"></a><span data-ttu-id="ed078-127">For-lus</span><span class="sxs-lookup"><span data-stu-id="ed078-127">For loop</span></span>
 
-<span data-ttu-id="047d3-128">De `for` instructie ondersteunt herhalingen over een bereik met gehele getallen of een matrix.</span><span class="sxs-lookup"><span data-stu-id="047d3-128">The `for` statement supports iteration over an integer range or an array.</span></span>
-<span data-ttu-id="047d3-129">De instructie bestaat uit het tref woord `for` , gevolgd door een symbool of symbool tuple, het tref woord `in` en een expressie van het type `Range` of de matrix, alle tussen haakjes en een instructie blok.</span><span class="sxs-lookup"><span data-stu-id="047d3-129">The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.</span></span>
+<span data-ttu-id="ed078-128">De `for` instructie ondersteunt herhalingen over een bereik met gehele getallen of een matrix.</span><span class="sxs-lookup"><span data-stu-id="ed078-128">The `for` statement supports iteration over an integer range or an array.</span></span>
+<span data-ttu-id="ed078-129">De instructie bestaat uit het tref woord `for` , gevolgd door een symbool of symbool tuple, het tref woord `in` en een expressie van het type `Range` of de matrix, alle tussen haakjes en een instructie blok.</span><span class="sxs-lookup"><span data-stu-id="ed078-129">The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.</span></span>
 
-<span data-ttu-id="047d3-130">Het instructie blok (de hoofd tekst van de lus) wordt herhaaldelijk uitgevoerd, met het gedefinieerde symbool (de variabele lus) dat is gekoppeld aan elke waarde in het bereik of de matrix.</span><span class="sxs-lookup"><span data-stu-id="047d3-130">The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.</span></span>
-<span data-ttu-id="047d3-131">Houd er rekening mee dat als de expressie Range resulteert in een leeg bereik of een lege matrix, de hoofd tekst helemaal niet wordt uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-131">Note that if the range expression evaluates to an empty range or array, the body does not run at all.</span></span>
-<span data-ttu-id="047d3-132">De expressie is volledig geëvalueerd voordat de lus wordt ingevoerd en wordt niet gewijzigd terwijl de lus wordt uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-132">The expression is fully evaluated before entering the loop, and does not change while the loop is executing.</span></span>
+<span data-ttu-id="ed078-130">Het instructie blok (de hoofd tekst van de lus) wordt herhaaldelijk uitgevoerd, met het gedefinieerde symbool (de variabele lus) dat is gekoppeld aan elke waarde in het bereik of de matrix.</span><span class="sxs-lookup"><span data-stu-id="ed078-130">The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.</span></span>
+<span data-ttu-id="ed078-131">Houd er rekening mee dat als de expressie Range resulteert in een leeg bereik of een lege matrix, de hoofd tekst helemaal niet wordt uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-131">Note that if the range expression evaluates to an empty range or array, the body does not run at all.</span></span>
+<span data-ttu-id="ed078-132">De expressie is volledig geëvalueerd voordat de lus wordt ingevoerd en wordt niet gewijzigd terwijl de lus wordt uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-132">The expression is fully evaluated before entering the loop, and does not change while the loop is executing.</span></span>
 
-<span data-ttu-id="047d3-133">De lus-variabele is bij elke toegang aan de hoofd tekst van de lus gebonden en is aan het einde van de hoofd tekst losgekoppeld.</span><span class="sxs-lookup"><span data-stu-id="047d3-133">The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.</span></span>
-<span data-ttu-id="047d3-134">De lus-variabele is niet gebonden nadat de for-lus is voltooid.</span><span class="sxs-lookup"><span data-stu-id="047d3-134">The loop variable is not bound after the for loop is completed.</span></span>
-<span data-ttu-id="047d3-135">De binding van de lus-variabele is onveranderbaar en volgt dezelfde regels als andere variabele bindingen.</span><span class="sxs-lookup"><span data-stu-id="047d3-135">The binding of the loop variable is immutable and follows the same rules as other variable bindings.</span></span> 
+<span data-ttu-id="ed078-133">De lus-variabele is bij elke toegang aan de hoofd tekst van de lus gebonden en is aan het einde van de hoofd tekst losgekoppeld.</span><span class="sxs-lookup"><span data-stu-id="ed078-133">The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.</span></span>
+<span data-ttu-id="ed078-134">De lus-variabele is niet gebonden nadat de for-lus is voltooid.</span><span class="sxs-lookup"><span data-stu-id="ed078-134">The loop variable is not bound after the for loop is completed.</span></span>
+<span data-ttu-id="ed078-135">De binding van de lus-variabele is onveranderbaar en volgt dezelfde regels als andere variabele bindingen.</span><span class="sxs-lookup"><span data-stu-id="ed078-135">The binding of the loop variable is immutable and follows the same rules as other variable bindings.</span></span> 
 
-<span data-ttu-id="047d3-136">In deze voor beelden `qubits` is een REGI ster van qubits (bijvoorbeeld type `Qubit[]` ),</span><span class="sxs-lookup"><span data-stu-id="047d3-136">In these examples, `qubits` is a register of qubits (i.e. of type `Qubit[]`),</span></span> 
+<span data-ttu-id="ed078-136">In deze voor beelden `qubits` is een REGI ster van qubits (bijvoorbeeld type `Qubit[]` ),</span><span class="sxs-lookup"><span data-stu-id="ed078-136">In these examples, `qubits` is a register of qubits (i.e. of type `Qubit[]`),</span></span> 
 
 ```qsharp
 // ...
@@ -100,16 +103,16 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 }
 ```
 
-<span data-ttu-id="047d3-137">Houd er rekening mee dat aan het einde de reken kundige-Shift-Left-operator wordt gebruikt `<<<` .</span><span class="sxs-lookup"><span data-stu-id="047d3-137">Note that at the end, we utilized the arithmetic-shift-left binary operator, `<<<`.</span></span> <span data-ttu-id="047d3-138">Zie [numerieke expressies](xref:microsoft.quantum.guide.expressions#numeric-expressions)voor meer informatie.</span><span class="sxs-lookup"><span data-stu-id="047d3-138">For more information, see [Numeric Expressions](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span></span>
+<span data-ttu-id="ed078-137">Houd er rekening mee dat aan het einde de reken kundige-Shift-Left-operator wordt gebruikt `<<<` .</span><span class="sxs-lookup"><span data-stu-id="ed078-137">Note that at the end, we utilized the arithmetic-shift-left binary operator, `<<<`.</span></span> <span data-ttu-id="ed078-138">Zie [numerieke expressies](xref:microsoft.quantum.guide.expressions#numeric-expressions)voor meer informatie.</span><span class="sxs-lookup"><span data-stu-id="ed078-138">For more information, see [Numeric Expressions](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span></span>
 
-## <a name="repeat-until-success-loop"></a><span data-ttu-id="047d3-139">Herhalen-tot-succes-lus</span><span class="sxs-lookup"><span data-stu-id="047d3-139">Repeat-until-success loop</span></span>
+## <a name="repeat-until-success-loop"></a><span data-ttu-id="ed078-139">Herhalen-tot-succes-lus</span><span class="sxs-lookup"><span data-stu-id="ed078-139">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="047d3-140">De Q #-taal staat de klassieke controle stroom afhankelijk van de resultaten van het meten van qubits.</span><span class="sxs-lookup"><span data-stu-id="047d3-140">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
-<span data-ttu-id="047d3-141">Met deze mogelijkheid kunnen krachtige Probabilistic-gadgets worden geïmplementeerd waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd.</span><span class="sxs-lookup"><span data-stu-id="047d3-141">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="047d3-142">Voor beelden hiervan zijn de patronen *herhalen tot en met succes* (RUS) in Q #.</span><span class="sxs-lookup"><span data-stu-id="047d3-142">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
-<span data-ttu-id="047d3-143">Deze RUS-patronen zijn Probabilistic-Program ma's die een *verwachte* lage kosten in termen van elementaire poorten hebben. de gefactureerde kosten zijn afhankelijk van de daad werkelijke uitvoering en de interleaving van de meerdere mogelijke vertakkingen.</span><span class="sxs-lookup"><span data-stu-id="047d3-143">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
+<span data-ttu-id="ed078-140">De Q# taal maakt de klassieke controle stroom afhankelijk van de resultaten van het meten van qubits.</span><span class="sxs-lookup"><span data-stu-id="ed078-140">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="ed078-141">Met deze mogelijkheid kunnen krachtige Probabilistic-gadgets worden geïmplementeerd waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd.</span><span class="sxs-lookup"><span data-stu-id="ed078-141">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
+<span data-ttu-id="ed078-142">Voor beelden hiervan zijn de patroon *herhalingen tot geslaagd* (RUS) in Q# .</span><span class="sxs-lookup"><span data-stu-id="ed078-142">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
+<span data-ttu-id="ed078-143">Deze RUS-patronen zijn Probabilistic-Program ma's die een *verwachte* lage kosten in termen van elementaire poorten hebben. de gefactureerde kosten zijn afhankelijk van de daad werkelijke uitvoering en de interleaving van de meerdere mogelijke vertakkingen.</span><span class="sxs-lookup"><span data-stu-id="ed078-143">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="047d3-144">Q # ondersteunt de constructs om herhaalde tot geslaagde patronen (RUS) te vergemakkelijken</span><span class="sxs-lookup"><span data-stu-id="047d3-144">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
+<span data-ttu-id="ed078-144">Voor het vereenvoudigen van herhaalde tot geslaagde patronen (RUS) worden Q# de constructs ondersteund</span><span class="sxs-lookup"><span data-stu-id="ed078-144">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -121,15 +124,15 @@ fixup {
 }
 ```
 
-<span data-ttu-id="047d3-145">waar `expression` is een geldige expressie die resulteert in een waarde van het type `Bool` .</span><span class="sxs-lookup"><span data-stu-id="047d3-145">where `expression` is any valid expression that evaluates to a value of type `Bool`.</span></span>
-<span data-ttu-id="047d3-146">De hoofd tekst van de lus wordt uitgevoerd en vervolgens wordt de voor waarde geëvalueerd.</span><span class="sxs-lookup"><span data-stu-id="047d3-146">The loop body runs, and then the condition is evaluated.</span></span>
-<span data-ttu-id="047d3-147">Als de voor waarde waar is, wordt de instructie voltooid. anders wordt de reparatie uitgevoerd en wordt de instructie opnieuw uitgevoerd, te beginnen met de hoofd tekst van de lus.</span><span class="sxs-lookup"><span data-stu-id="047d3-147">If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.</span></span>
+<span data-ttu-id="ed078-145">waar `expression` is een geldige expressie die resulteert in een waarde van het type `Bool` .</span><span class="sxs-lookup"><span data-stu-id="ed078-145">where `expression` is any valid expression that evaluates to a value of type `Bool`.</span></span>
+<span data-ttu-id="ed078-146">De hoofd tekst van de lus wordt uitgevoerd en vervolgens wordt de voor waarde geëvalueerd.</span><span class="sxs-lookup"><span data-stu-id="ed078-146">The loop body runs, and then the condition is evaluated.</span></span>
+<span data-ttu-id="ed078-147">Als de voor waarde waar is, wordt de instructie voltooid. anders wordt de reparatie uitgevoerd en wordt de instructie opnieuw uitgevoerd, te beginnen met de hoofd tekst van de lus.</span><span class="sxs-lookup"><span data-stu-id="ed078-147">If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.</span></span>
 
-<span data-ttu-id="047d3-148">Alle drie delen van een RUS-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling*, waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in zowel de test als de reparatie.</span><span class="sxs-lookup"><span data-stu-id="047d3-148">All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in both the test and the fixup.</span></span>
-<span data-ttu-id="047d3-149">Het volt ooien van de uitvoering van de reparatie beëindigt echter het bereik voor de instructie, zodat symbool bindingen die zijn gemaakt in de hoofd tekst of de reparatie, niet beschikbaar zijn in volgende herhalingen.</span><span class="sxs-lookup"><span data-stu-id="047d3-149">However, completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.</span></span>
+<span data-ttu-id="ed078-148">Alle drie delen van een RUS-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling*, waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in zowel de test als de reparatie.</span><span class="sxs-lookup"><span data-stu-id="ed078-148">All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in both the test and the fixup.</span></span>
+<span data-ttu-id="ed078-149">Het volt ooien van de uitvoering van de reparatie beëindigt echter het bereik voor de instructie, zodat symbool bindingen die zijn gemaakt in de hoofd tekst of de reparatie, niet beschikbaar zijn in volgende herhalingen.</span><span class="sxs-lookup"><span data-stu-id="ed078-149">However, completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.</span></span>
 
-<span data-ttu-id="047d3-150">Verder is de `fixup` instructie vaak handig, maar niet altijd nodig.</span><span class="sxs-lookup"><span data-stu-id="047d3-150">Further, the `fixup` statement is often useful but not always necessary.</span></span>
-<span data-ttu-id="047d3-151">In gevallen dat het niet nodig is, de construct</span><span class="sxs-lookup"><span data-stu-id="047d3-151">In cases that it is not needed, the construct</span></span>
+<span data-ttu-id="ed078-150">Verder is de `fixup` instructie vaak handig, maar niet altijd nodig.</span><span class="sxs-lookup"><span data-stu-id="ed078-150">Further, the `fixup` statement is often useful but not always necessary.</span></span>
+<span data-ttu-id="ed078-151">In gevallen dat het niet nodig is, de construct</span><span class="sxs-lookup"><span data-stu-id="ed078-151">In cases that it is not needed, the construct</span></span>
 
 ```qsharp
 repeat {
@@ -138,19 +141,19 @@ repeat {
 until (expression);
 ```
 
-<span data-ttu-id="047d3-152">is ook een geldig RUS-patroon.</span><span class="sxs-lookup"><span data-stu-id="047d3-152">is also a valid RUS pattern.</span></span>
+<span data-ttu-id="ed078-152">is ook een geldig RUS-patroon.</span><span class="sxs-lookup"><span data-stu-id="ed078-152">is also a valid RUS pattern.</span></span>
 
-<span data-ttu-id="047d3-153">Zie voor meer voor beelden en Details [herhalen](#repeat-until-success-examples) in dit artikel.</span><span class="sxs-lookup"><span data-stu-id="047d3-153">For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples) in this article.</span></span>
+<span data-ttu-id="ed078-153">Zie voor meer voor beelden en Details [herhalen](#repeat-until-success-examples) in dit artikel.</span><span class="sxs-lookup"><span data-stu-id="ed078-153">For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples) in this article.</span></span>
 
 > [!TIP]   
-> <span data-ttu-id="047d3-154">Vermijd het gebruik van herhalingen tot geslaagde lussen binnen functions.</span><span class="sxs-lookup"><span data-stu-id="047d3-154">Avoid using repeat-until-success loops inside functions.</span></span> <span data-ttu-id="047d3-155">Gebruik *while* -lussen om de bijbehorende functionaliteit binnen functions te bieden.</span><span class="sxs-lookup"><span data-stu-id="047d3-155">Use *while* loops to provide the corresponding functionality inside functions.</span></span> 
+> <span data-ttu-id="ed078-154">Vermijd het gebruik van herhalingen tot geslaagde lussen binnen functions.</span><span class="sxs-lookup"><span data-stu-id="ed078-154">Avoid using repeat-until-success loops inside functions.</span></span> <span data-ttu-id="ed078-155">Gebruik *while* -lussen om de bijbehorende functionaliteit binnen functions te bieden.</span><span class="sxs-lookup"><span data-stu-id="ed078-155">Use *while* loops to provide the corresponding functionality inside functions.</span></span> 
 
-## <a name="while-loop"></a><span data-ttu-id="047d3-156">Lus while</span><span class="sxs-lookup"><span data-stu-id="047d3-156">While loop</span></span>
+## <a name="while-loop"></a><span data-ttu-id="ed078-156">Lus while</span><span class="sxs-lookup"><span data-stu-id="ed078-156">While loop</span></span>
 
-<span data-ttu-id="047d3-157">Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation.</span><span class="sxs-lookup"><span data-stu-id="047d3-157">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="047d3-158">Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, dus de speciale taal construct in Q #.</span><span class="sxs-lookup"><span data-stu-id="047d3-158">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="047d3-159">Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime.</span><span class="sxs-lookup"><span data-stu-id="047d3-159">However, loops that break based on a condition and whose execution length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="047d3-160">Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum).</span><span class="sxs-lookup"><span data-stu-id="047d3-160">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="ed078-157">Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation.</span><span class="sxs-lookup"><span data-stu-id="ed078-157">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="ed078-158">Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, in het bijzonder de exclusieve taal in Q# .</span><span class="sxs-lookup"><span data-stu-id="ed078-158">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="ed078-159">Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime.</span><span class="sxs-lookup"><span data-stu-id="ed078-159">However, loops that break based on a condition and whose execution length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="ed078-160">Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum).</span><span class="sxs-lookup"><span data-stu-id="ed078-160">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="047d3-161">Q # biedt daarom ondersteuning voor het gebruik van while-lussen in functions.</span><span class="sxs-lookup"><span data-stu-id="047d3-161">Q#, therefore, supports to use of while loops within functions only.</span></span> <span data-ttu-id="047d3-162">Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.</span><span class="sxs-lookup"><span data-stu-id="047d3-162">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
-<span data-ttu-id="047d3-163">Het instructie blok (de hoofd tekst van de lus) wordt uitgevoerd zolang de voor waarde wordt geëvalueerd `true` .</span><span class="sxs-lookup"><span data-stu-id="047d3-163">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
+<span data-ttu-id="ed078-161">Q#Daarom biedt ondersteuning voor het gebruik van while-lussen in-functies.</span><span class="sxs-lookup"><span data-stu-id="ed078-161">Q#, therefore, supports to use of while loops within functions only.</span></span> <span data-ttu-id="ed078-162">Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.</span><span class="sxs-lookup"><span data-stu-id="ed078-162">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
+<span data-ttu-id="ed078-163">Het instructie blok (de hoofd tekst van de lus) wordt uitgevoerd zolang de voor waarde wordt geëvalueerd `true` .</span><span class="sxs-lookup"><span data-stu-id="ed078-163">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
 ```qsharp
 // ...
@@ -161,51 +164,51 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-## <a name="return-statement"></a><span data-ttu-id="047d3-164">Instructie return</span><span class="sxs-lookup"><span data-stu-id="047d3-164">Return Statement</span></span>
+## <a name="return-statement"></a><span data-ttu-id="ed078-164">Instructie return</span><span class="sxs-lookup"><span data-stu-id="ed078-164">Return Statement</span></span>
 
-<span data-ttu-id="047d3-165">De instructie return beëindigt de uitvoering van een bewerking of functie en retourneert een waarde naar de aanroeper.</span><span class="sxs-lookup"><span data-stu-id="047d3-165">The return statement ends the run of an operation or function and returns a value to the caller.</span></span>
-<span data-ttu-id="047d3-166">Het bestaat uit het tref woord `return` , gevolgd door een expressie van het juiste type en een punt komma als scheidings tekens.</span><span class="sxs-lookup"><span data-stu-id="047d3-166">It consists of the keyword `return`, followed by an expression of the appropriate type, and a terminating semicolon.</span></span>
+<span data-ttu-id="ed078-165">De instructie return beëindigt de uitvoering van een bewerking of functie en retourneert een waarde naar de aanroeper.</span><span class="sxs-lookup"><span data-stu-id="ed078-165">The return statement ends the run of an operation or function and returns a value to the caller.</span></span>
+<span data-ttu-id="ed078-166">Het bestaat uit het tref woord `return` , gevolgd door een expressie van het juiste type en een punt komma als scheidings tekens.</span><span class="sxs-lookup"><span data-stu-id="ed078-166">It consists of the keyword `return`, followed by an expression of the appropriate type, and a terminating semicolon.</span></span>
 
-<span data-ttu-id="047d3-167">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="047d3-167">For example,</span></span>
+<span data-ttu-id="ed078-167">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="ed078-167">For example,</span></span>
 ```qsharp
 return 1;
 ```
-<span data-ttu-id="047d3-168">of</span><span class="sxs-lookup"><span data-stu-id="047d3-168">or</span></span>
+<span data-ttu-id="ed078-168">of</span><span class="sxs-lookup"><span data-stu-id="ed078-168">or</span></span>
 ```qsharp
 return (results, qubits);
 ```
 
-* <span data-ttu-id="047d3-169">Een aanroepable die een lege tuple retourneert, `()` heeft geen instructie return nodig.</span><span class="sxs-lookup"><span data-stu-id="047d3-169">A callable that returns an empty tuple, `()`, does not require a return statement.</span></span>
-* <span data-ttu-id="047d3-170">Als u een vroege afsluiting van de bewerking of functie wilt opgeven, gebruikt u `return ();` .</span><span class="sxs-lookup"><span data-stu-id="047d3-170">To specify an early exit from the operation or function, use `return ();`.</span></span>
-<span data-ttu-id="047d3-171">Callables die een wille keurig ander type retour neren, moeten een laatste Return-instructie hebben.</span><span class="sxs-lookup"><span data-stu-id="047d3-171">Callables that return any other type require a final return statement.</span></span>
-* <span data-ttu-id="047d3-172">Er is geen maximum aantal retour instructies in een bewerking.</span><span class="sxs-lookup"><span data-stu-id="047d3-172">There is no maximum number of return statements within an operation.</span></span>
-<span data-ttu-id="047d3-173">De compiler kan een waarschuwing verzenden als de instructies een instructie return in een blok volgen.</span><span class="sxs-lookup"><span data-stu-id="047d3-173">The compiler may emit a warning if statements follow a return statement within a block.</span></span>
+* <span data-ttu-id="ed078-169">Een aanroepable die een lege tuple retourneert, `()` heeft geen instructie return nodig.</span><span class="sxs-lookup"><span data-stu-id="ed078-169">A callable that returns an empty tuple, `()`, does not require a return statement.</span></span>
+* <span data-ttu-id="ed078-170">Als u een vroege afsluiting van de bewerking of functie wilt opgeven, gebruikt u `return ();` .</span><span class="sxs-lookup"><span data-stu-id="ed078-170">To specify an early exit from the operation or function, use `return ();`.</span></span>
+<span data-ttu-id="ed078-171">Callables die een wille keurig ander type retour neren, moeten een laatste Return-instructie hebben.</span><span class="sxs-lookup"><span data-stu-id="ed078-171">Callables that return any other type require a final return statement.</span></span>
+* <span data-ttu-id="ed078-172">Er is geen maximum aantal retour instructies in een bewerking.</span><span class="sxs-lookup"><span data-stu-id="ed078-172">There is no maximum number of return statements within an operation.</span></span>
+<span data-ttu-id="ed078-173">De compiler kan een waarschuwing verzenden als de instructies een instructie return in een blok volgen.</span><span class="sxs-lookup"><span data-stu-id="ed078-173">The compiler may emit a warning if statements follow a return statement within a block.</span></span>
 
    
-## <a name="fail-statement"></a><span data-ttu-id="047d3-174">Fout instructie</span><span class="sxs-lookup"><span data-stu-id="047d3-174">Fail statement</span></span>
+## <a name="fail-statement"></a><span data-ttu-id="ed078-174">Fout instructie</span><span class="sxs-lookup"><span data-stu-id="ed078-174">Fail statement</span></span>
 
-<span data-ttu-id="047d3-175">De instructie Fail beëindigt het uitvoeren van een bewerking en retourneert een fout waarde naar de aanroeper.</span><span class="sxs-lookup"><span data-stu-id="047d3-175">The fail statement ends the run of an operation and returns an error value to the caller.</span></span>
-<span data-ttu-id="047d3-176">Het bevat het tref woord `fail` , gevolgd door een teken reeks en een punt komma.</span><span class="sxs-lookup"><span data-stu-id="047d3-176">It consists of the keyword `fail`, followed by a string and a terminating semicolon.</span></span>
-<span data-ttu-id="047d3-177">De instructie retourneert de teken reeks naar het klassieke stuur programma als het fout bericht.</span><span class="sxs-lookup"><span data-stu-id="047d3-177">The statement returns the string to the classical driver as the error message.</span></span>
+<span data-ttu-id="ed078-175">De instructie Fail beëindigt het uitvoeren van een bewerking en retourneert een fout waarde naar de aanroeper.</span><span class="sxs-lookup"><span data-stu-id="ed078-175">The fail statement ends the run of an operation and returns an error value to the caller.</span></span>
+<span data-ttu-id="ed078-176">Het bevat het tref woord `fail` , gevolgd door een teken reeks en een punt komma.</span><span class="sxs-lookup"><span data-stu-id="ed078-176">It consists of the keyword `fail`, followed by a string and a terminating semicolon.</span></span>
+<span data-ttu-id="ed078-177">De instructie retourneert de teken reeks naar het klassieke stuur programma als het fout bericht.</span><span class="sxs-lookup"><span data-stu-id="ed078-177">The statement returns the string to the classical driver as the error message.</span></span>
 
-<span data-ttu-id="047d3-178">Er is geen beperking voor het aantal mislukte instructies in een bewerking.</span><span class="sxs-lookup"><span data-stu-id="047d3-178">There is no restriction on the number of fail statements within an operation.</span></span>
-<span data-ttu-id="047d3-179">De compiler kan een waarschuwing verzenden als de instructies een mislukte instructie binnen een blok volgen.</span><span class="sxs-lookup"><span data-stu-id="047d3-179">The compiler may emit a warning if statements follow a fail statement within a block.</span></span>
+<span data-ttu-id="ed078-178">Er is geen beperking voor het aantal mislukte instructies in een bewerking.</span><span class="sxs-lookup"><span data-stu-id="ed078-178">There is no restriction on the number of fail statements within an operation.</span></span>
+<span data-ttu-id="ed078-179">De compiler kan een waarschuwing verzenden als de instructies een mislukte instructie binnen een blok volgen.</span><span class="sxs-lookup"><span data-stu-id="ed078-179">The compiler may emit a warning if statements follow a fail statement within a block.</span></span>
 
-<span data-ttu-id="047d3-180">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="047d3-180">For example,</span></span>
+<span data-ttu-id="ed078-180">Bijvoorbeeld:</span><span class="sxs-lookup"><span data-stu-id="ed078-180">For example,</span></span>
 
 ```qsharp
 fail $"Impossible state reached";
 ```
-<span data-ttu-id="047d3-181">of, met behulp van [geïnterpoleerde teken reeksen](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span><span class="sxs-lookup"><span data-stu-id="047d3-181">or, using [interpolated strings](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span></span>
+<span data-ttu-id="ed078-181">of, met behulp van [geïnterpoleerde teken reeksen](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span><span class="sxs-lookup"><span data-stu-id="ed078-181">or, using [interpolated strings](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span></span>
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
 ```
 
-## <a name="repeat-until-success-examples"></a><span data-ttu-id="047d3-182">Herhalen-tot-geslaagde voor beelden</span><span class="sxs-lookup"><span data-stu-id="047d3-182">Repeat-until-success examples</span></span>
+## <a name="repeat-until-success-examples"></a><span data-ttu-id="ed078-182">Herhalen-tot-geslaagde voor beelden</span><span class="sxs-lookup"><span data-stu-id="ed078-182">Repeat-until-success examples</span></span>
 
-### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="047d3-183">RUS-patroon voor Qubit draaiing over een Irrational-as</span><span class="sxs-lookup"><span data-stu-id="047d3-183">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
+### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="ed078-183">RUS-patroon voor Qubit draaiing over een Irrational-as</span><span class="sxs-lookup"><span data-stu-id="ed078-183">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="047d3-184">In een typische use-case implementeert de volgende Q #-bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol.</span><span class="sxs-lookup"><span data-stu-id="047d3-184">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="047d3-185">De implementatie maakt gebruik van een bekend RUS-patroon:</span><span class="sxs-lookup"><span data-stu-id="047d3-185">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="ed078-184">In een typische use-case Q# implementeert de volgende bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol.</span><span class="sxs-lookup"><span data-stu-id="ed078-184">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="ed078-185">De implementatie maakt gebruik van een bekend RUS-patroon:</span><span class="sxs-lookup"><span data-stu-id="ed078-185">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -228,9 +231,9 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-a-mutable-variable-in-scope"></a><span data-ttu-id="047d3-186">RUS-lus met een onveranderlijke variabele in het bereik</span><span class="sxs-lookup"><span data-stu-id="047d3-186">RUS loop with a mutable variable in scope</span></span>
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a><span data-ttu-id="ed078-186">RUS-lus met een onveranderlijke variabele in het bereik</span><span class="sxs-lookup"><span data-stu-id="ed078-186">RUS loop with a mutable variable in scope</span></span>
 
-<span data-ttu-id="047d3-187">In dit voor beeld ziet u het gebruik van een onveranderlijke variabele, `finished` die binnen het bereik van de volledige herhaling-until-reupdate-lus ligt en die wordt geïnitialiseerd vóór de lus en wordt bijgewerkt in de reparatie stap.</span><span class="sxs-lookup"><span data-stu-id="047d3-187">This example shows the use of a mutable variable, `finished`, which is within the scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.</span></span>
+<span data-ttu-id="ed078-187">In dit voor beeld ziet u het gebruik van een onveranderlijke variabele, `finished` die binnen het bereik van de volledige herhaling-until-reupdate-lus ligt en die wordt geïnitialiseerd vóór de lus en wordt bijgewerkt in de reparatie stap.</span><span class="sxs-lookup"><span data-stu-id="ed078-187">This example shows the use of a mutable variable, `finished`, which is within the scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.</span></span>
 
 ```qsharp
 mutable iter = 1;
@@ -245,11 +248,11 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a><span data-ttu-id="047d3-188">RUS zonder`fixup`</span><span class="sxs-lookup"><span data-stu-id="047d3-188">RUS without `fixup`</span></span>
+### <a name="rus-without-fixup"></a><span data-ttu-id="ed078-188">RUS zonder`fixup`</span><span class="sxs-lookup"><span data-stu-id="ed078-188">RUS without `fixup`</span></span>
 
-<span data-ttu-id="047d3-189">In dit voor beeld ziet u een RUS-lus zonder de stap voor de reparatie.</span><span class="sxs-lookup"><span data-stu-id="047d3-189">This example shows an RUS loop without the fixup step.</span></span> <span data-ttu-id="047d3-190">De code is een Probabilistic-circuit dat een belang rijke rotatie poort implementeert $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ met behulp van de- `H` en- `T` poorten.</span><span class="sxs-lookup"><span data-stu-id="047d3-190">The code is a probabilistic circuit that implements an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the `H` and `T` gates.</span></span>
-<span data-ttu-id="047d3-191">De lus eindigt op gemiddeld $ \frac {8} {5} $ herhalingen.</span><span class="sxs-lookup"><span data-stu-id="047d3-191">The loop terminates in $\frac{8}{5}$ repetitions on average.</span></span>
-<span data-ttu-id="047d3-192">Zie [*herhalen-tot-geslaagd: niet-deterministische ontleding van single-Qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick en Svore, 2014) voor meer informatie.</span><span class="sxs-lookup"><span data-stu-id="047d3-192">See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick and Svore, 2014) for more details.</span></span>
+<span data-ttu-id="ed078-189">In dit voor beeld ziet u een RUS-lus zonder de stap voor de reparatie.</span><span class="sxs-lookup"><span data-stu-id="ed078-189">This example shows an RUS loop without the fixup step.</span></span> <span data-ttu-id="ed078-190">De code is een Probabilistic-circuit dat een belang rijke rotatie poort implementeert $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ met behulp van de- `H` en- `T` poorten.</span><span class="sxs-lookup"><span data-stu-id="ed078-190">The code is a probabilistic circuit that implements an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the `H` and `T` gates.</span></span>
+<span data-ttu-id="ed078-191">De lus eindigt op gemiddeld $ \frac {8} {5} $ herhalingen.</span><span class="sxs-lookup"><span data-stu-id="ed078-191">The loop terminates in $\frac{8}{5}$ repetitions on average.</span></span>
+<span data-ttu-id="ed078-192">Zie [*herhalen-tot-geslaagd: niet-deterministische ontleding van single-Qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick en Svore, 2014) voor meer informatie.</span><span class="sxs-lookup"><span data-stu-id="ed078-192">See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick and Svore, 2014) for more details.</span></span>
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -271,16 +274,16 @@ using (qubit = Qubit()) {
 }
 ```
 
-### <a name="rus-to-prepare-a-quantum-state"></a><span data-ttu-id="047d3-193">RUS om een Quantum status voor te bereiden</span><span class="sxs-lookup"><span data-stu-id="047d3-193">RUS to prepare a quantum state</span></span>
+### <a name="rus-to-prepare-a-quantum-state"></a><span data-ttu-id="ed078-193">RUS om een Quantum status voor te bereiden</span><span class="sxs-lookup"><span data-stu-id="ed078-193">RUS to prepare a quantum state</span></span>
 
-<span data-ttu-id="047d3-194">Ten slotte is hier een voor beeld van een RUS-patroon voor het voorbereiden van een Quantum status $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, te beginnen bij de status $ \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="047d3-194">Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.</span></span>
+<span data-ttu-id="ed078-194">Ten slotte is hier een voor beeld van een RUS-patroon voor het voorbereiden van een Quantum status $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, te beginnen bij de status $ \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="ed078-194">Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.</span></span>
 
-<span data-ttu-id="047d3-195">Belang rijke programmeer functies die in deze bewerking worden weer gegeven, zijn:</span><span class="sxs-lookup"><span data-stu-id="047d3-195">Notable programmatic features shown in this operation are:</span></span>
+<span data-ttu-id="ed078-195">Belang rijke programmeer functies die in deze bewerking worden weer gegeven, zijn:</span><span class="sxs-lookup"><span data-stu-id="ed078-195">Notable programmatic features shown in this operation are:</span></span>
 
-* <span data-ttu-id="047d3-196">Een complexere `fixup` deel van de lus, waarbij Quantum bewerkingen betrokken zijn.</span><span class="sxs-lookup"><span data-stu-id="047d3-196">A more complex `fixup` part of the loop, which involves quantum operations.</span></span> 
-* <span data-ttu-id="047d3-197">Het gebruik van `AssertMeasurementProbability` instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten.</span><span class="sxs-lookup"><span data-stu-id="047d3-197">The use of `AssertMeasurementProbability` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.</span></span>
+* <span data-ttu-id="ed078-196">Een complexere `fixup` deel van de lus, waarbij Quantum bewerkingen betrokken zijn.</span><span class="sxs-lookup"><span data-stu-id="ed078-196">A more complex `fixup` part of the loop, which involves quantum operations.</span></span> 
+* <span data-ttu-id="ed078-197">Het gebruik van `AssertMeasurementProbability` instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten.</span><span class="sxs-lookup"><span data-stu-id="ed078-197">The use of `AssertMeasurementProbability` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.</span></span>
 
-<span data-ttu-id="047d3-198">[`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) Zie [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging)voor meer informatie over de-en-bewerkingen.</span><span class="sxs-lookup"><span data-stu-id="047d3-198">For more information about the [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) and [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).</span></span>
+<span data-ttu-id="ed078-198">[`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) Zie [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging)voor meer informatie over de-en-bewerkingen.</span><span class="sxs-lookup"><span data-stu-id="ed078-198">For more information about the [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) and [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).</span></span>
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -327,8 +330,8 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-<span data-ttu-id="047d3-199">Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span><span class="sxs-lookup"><span data-stu-id="047d3-199">For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span></span>
+<span data-ttu-id="ed078-199">Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span><span class="sxs-lookup"><span data-stu-id="ed078-199">For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="047d3-200">Volgende stappen</span><span class="sxs-lookup"><span data-stu-id="047d3-200">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="ed078-200">Volgende stappen</span><span class="sxs-lookup"><span data-stu-id="ed078-200">Next steps</span></span>
 
-<span data-ttu-id="047d3-201">Meer informatie over [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging) in Q #.</span><span class="sxs-lookup"><span data-stu-id="047d3-201">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>
+<span data-ttu-id="ed078-201">Meer informatie over [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging) in Q# .</span><span class="sxs-lookup"><span data-stu-id="ed078-201">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>
