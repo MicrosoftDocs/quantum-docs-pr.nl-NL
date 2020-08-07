@@ -1,17 +1,20 @@
 ---
 title: Teller voor primitieve bewerkingen-Quantum Development Kit
-description: 'Meer informatie over het micro soft QDK primitieve bewerkings item, dat gebruikmaakt van de Quantum Trace Simulator om primitieve uitvoeringen bij te houden die worden gebruikt door bewerkingen in een Q #-programma.'
+description: Meer informatie over het Counter van micro soft QDK primitieve bewerking, dat gebruikmaakt van de Quantum Trace Simulator om primitieve uitvoeringen bij te houden die worden gebruikt door bewerkingen in een Q# programma.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871022"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868233"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitieve bewerkingen teller
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Het teller primitieve bewerking in een C#-hostprogramma gebruiken
 
-Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:microsoft.quantum.intrinsic.t> bewerkingen dat nodig is voor het implementeren <xref:microsoft.quantum.intrinsic.ccnot> van de bewerking, op basis van de volgende Q #-voorbeeld code:
+Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:microsoft.quantum.intrinsic.t> bewerkingen dat nodig is voor het implementeren van de <xref:microsoft.quantum.intrinsic.ccnot> bewerking, op basis van de volgende Q# voorbeeld code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -72,7 +75,7 @@ Ten slotte kunt u alle statistieken die door het item primitieve bewerkingen zij
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - Het Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Overview (Engelstalig).
 - De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-verwijzing.

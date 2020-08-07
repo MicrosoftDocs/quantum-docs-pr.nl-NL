@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885302"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867859"
 ---
 # <a name="working-with-qubits"></a>Werken met qubits
 
 Qubits zijn het fundamenteel object van informatie in Quantum Computing. Zie [de Qubit](xref:microsoft.quantum.concepts.qubit)voor een algemene inleiding tot qubits [over Quantum Computing](xref:microsoft.quantum.overview.understanding), en voor meer informatie over de wiskundige weer gave ervan. 
 
-In dit artikel wordt beschreven hoe u met qubits kunt werken in een Q #-programma. 
+In dit artikel wordt beschreven hoe u met qubits in een programma kunt werken Q# . 
 
 > [!IMPORTANT]
 >Geen van de instructies die in dit artikel worden besproken, is geldig in de hoofd tekst van een functie. Ze zijn alleen geldig in-bewerkingen.
@@ -25,7 +28,7 @@ In dit artikel wordt beschreven hoe u met qubits kunt werken in een Q #-programm
 ## <a name="allocating-qubits"></a>Qubits toewijzen
 
 Omdat fysieke qubits een kostbaar middel zijn in een quantum computer, moet u een deel van de taak van de compiler controleren om ervoor te zorgen dat ze zo efficiënt mogelijk worden gebruikt.
-Daarom moet u Q # vertellen om qubits toe te *wijzen* voor gebruik binnen een bepaald instructie blok.
+Als zodanig moet u aangeven dat u Q# qubits wilt *toewijzen* voor gebruik binnen een bepaald instructie blok.
 U kunt qubits toewijzen als één Qubit, of als een matrix van qubits, ook wel een *REGI ster*genoemd. 
 
 ### <a name="clean-qubits"></a>Qubits opschonen
@@ -82,17 +85,17 @@ Bij het lenen van qubits probeert het systeem eerst de aanvraag in te vullen van
 Als er onvoldoende qubits zijn, wijst deze nieuwe qubits toe om de aanvraag te volt ooien.
 
 In het geval van bekende qubits zijn implementaties van meerdere beheerde CNOT-Gates die slechts enkele weinig qubits en implementatie van versnelers vereisen.
-Zie voor een voor beeld van het gebruik in Q # het [lenen van qubits-voor beeld](#borrowing-qubits-example) in dit artikel of het papier [*confactoring met 2n + 2 qubits met op Toffoli gebaseerde modulaire vermenigvuldiging*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een algoritme die gebruikmaakt van geleed qubits.
+Zie voor een voor beeld van het gebruik in Q# het [lenen van qubits-voor beeld](#borrowing-qubits-example) in dit artikel of het papier [*confactoring met 2n + 2 qubits met op Toffoli gebaseerde modulaire vermenigvuldiging*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een algoritme die gebruikmaakt van geleed qubits.
 
 ## <a name="intrinsic-operations"></a>Intrinsieke bewerkingen
 
 Zodra de toewijzing is toegewezen, kunt u een Qubit door geven aan functies en bewerkingen.
-In sommige zin is dit alles wat een Q #-programma kan doen met een Qubit, omdat de acties die kunnen worden uitgevoerd, allemaal als bewerkingen worden gedefinieerd.
+In sommige zin is dit alles wat een Q# programma kan doen met een Qubit, omdat de acties die kunnen worden uitgevoerd, allemaal als bewerkingen worden gedefinieerd.
 
-In dit artikel worden enkele nuttige Q #-bewerkingen besproken die u kunt gebruiken om te communiceren met qubits.
+In dit artikel worden enkele nuttige Q# bewerkingen besproken die u kunt gebruiken om te communiceren met qubits.
 Zie [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude)voor meer informatie over deze en andere. 
 
-Eerst worden de Pauli-Opera tors met één Qubit $X $, $Y $ en $Z $ weer gegeven in Q # door de intrinsieke bewerkingen [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) en [`Z`](xref:microsoft.quantum.intrinsic.z) , die elk type hebben `(Qubit => Unit is Adj + Ctl)` .
+Eerst worden de Pauli-Opera tors (single-Qubit) $X $, $Y $ en $Z $ weer gegeven in Q# de intrinsieke bewerkingen [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) en [`Z`](xref:microsoft.quantum.intrinsic.z) die elk type hebben `(Qubit => Unit is Adj + Ctl)` .
 
 Zoals beschreven in [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude), beschouw $X $ en dus `X` als een bits-Flip-bewerking of niet-poort.
 U kunt de `X` bewerking voor het voorbereiden van statussen van de vorm $ \ket{s_0 s_1 \dots s_n} $ voor een klassieke-bits teken reeks $s $:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Later ziet u een compactere manier om deze bewerking te schrijven waarvoor geen hand matige controle stroom is vereist.
 
-U kunt ook staten voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ door gebruik te maken van de Hadamard Transform $H $, die wordt weer gegeven in Q # door de intrinsieke bewerking [`H`](xref:microsoft.quantum.intrinsic.h) (ook type (Qubit => eenheid is ADJ en CTL)):
+U kunt ook statussen voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ met behulp van de Hadamard Transform $H $, die wordt vertegenwoordigd Q# door de intrinsieke bewerking [`H`](xref:microsoft.quantum.intrinsic.h) (ook type (Qubit => eenheid is ADJ en CTL)):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ Het is een goed proces om deze code te vergelijken met een andere Canon `MultiCo
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over [controle stroom](xref:microsoft.quantum.guide.controlflow) in Q #.
+Meer informatie over [controle stroom](xref:microsoft.quantum.guide.controlflow) in Q# .

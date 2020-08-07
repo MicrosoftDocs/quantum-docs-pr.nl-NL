@@ -1,22 +1,25 @@
 ---
-title: 'Micro soft Q #-stijl gids'
-description: "Meer informatie over de naamgeving, invoer, documentatie en opmaak conventies voor Q # Program ma's en bibliotheken."
+title: Micro soft Q# stijl gids
+description: Meer informatie over de naamgeving, invoer, documentatie en opmaak conventies voor Q# Program ma's en bibliotheken.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871379"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867586"
 ---
-# <a name="q-style-guide"></a>Q #-stijl gids #
+# <a name="no-locq-style-guide"></a>Q#Stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
 
-De conventies die in deze hand leiding worden voorgesteld, zijn bedoeld om Program ma's en bibliotheken die zijn geschreven in Q # gemakkelijker te kunnen lezen en begrijpen.
+De conventies die in deze hand leiding worden beschreven, zijn bedoeld om Program ma's en bibliotheken te helpen maken die Q# gemakkelijker te lezen en te begrijpen zijn.
 
 ## <a name="guidance"></a>Hulp
 
@@ -29,13 +32,13 @@ Suggesties voor:
 Om de Quantum Development Kit te bieden, streven we naar functie-en bewerkings namen die verquantumt ontwikkel aars om Program ma's te schrijven die gemakkelijk te lezen zijn en die verrassingen minimaliseren.
 Een belang rijk deel hiervan is dat wanneer we namen kiezen voor functies, bewerkingen en typen, de *woorden lijst* die programmeurs gebruiken om de Quantum concepten te Express, te bepalen. met onze keuzes kunnen we deze in hun inspanningen helpen om duidelijk te communiceren.
 Dit is een verantwoordelijkheid voor ons om ervoor te zorgen dat de namen die we bieden, duidelijkheid geven in plaats van onduidelijkheid.
-In deze sectie wordt beschreven hoe we voldoen aan deze verplichting in termen van expliciete richt lijnen die ons helpen bij het beste van de Q #-ontwikkel community.
+In deze sectie wordt beschreven hoe we voldoen aan deze verplichting in termen van expliciete richt lijnen die ons helpen bij het beste door de Q# ontwikkelings community.
 
 ### <a name="operations-and-functions"></a>Bewerkingen en functies ###
 
 Een van de eerste dingen die een naam moet bepalen, is of een bepaald symbool een functie of een bewerking vertegenwoordigt.
 Het verschil tussen functies en bewerkingen is van cruciaal belang om te weten hoe een code blok zich gedraagt.
-Om het onderscheid tussen functies en bewerkingen voor gebruikers te communiceren, vertrouwen we op die Q # modellen Quantum bewerkingen door het gebruik van neven effecten.
+Om het onderscheid tussen functies en bewerkingen voor gebruikers te communiceren, vertrouwen we op die Q# modellen de Quantum bewerkingen via het gebruik van neven effecten.
 Dat wil zeggen dat een bewerking iets *doet* .
 
 Daarentegen beschrijven functies de wiskundige relaties tussen gegevens.
@@ -97,8 +100,8 @@ Suggesties voor:
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Het gebruik van een term (' reflectie ') wissen om het effect van de bewerking aan te geven. |
 | ☒ | <s>`operation XRotation`</s> | Het gebruik van de woord groep frase suggesties voor de functie, in plaats van de bewerking. |
-| ☒ | <s>`operation search_oracle`</s> | Gebruik van de `snake_case` Contravenes Q #-notatie. |
-| ☒ | <s>`operation Search_Oracle`</s> | Het gebruik van onderstrepings tekens intern voor de bewerkings naam contravenes Q #-notatie. |
+| ☒ | <s>`operation search_oracle`</s> | Gebruik van `snake_case` de Q# notatie contravenes. |
+| ☒ | <s>`operation Search_Oracle`</s> | Gebruik van onderstrepings tekens intern naar bewerkings naam contravenes Q# notatie. |
 | ☑ | `function StatePreparationOracle` | Als u een woord groep gebruikt, wordt gesuggereerd dat de functie een bewerking retourneert. |
 | ☑ | `function EqualityFact` | Het gebruik van zelfstandig naam woord ("feit") wissen om aan te geven dat dit een functie is, terwijl de bijvoeger. |
 | ☒ | <s>`function GetRotationAngles`</s> | Bij gebruik van term (' Get ') wordt voorgesteld dat dit een bewerking is. |
@@ -110,9 +113,9 @@ Suggesties voor:
 
 ### <a name="entry-points"></a>Invoerpunten
 
-Bij het definiëren van een ingangs punt in een Q #-programma herkent de Q #-compiler het [ `@EntryPoint()` kenmerk](xref:microsoft.quantum.core.entrypoint) , in plaats van dat toegangs punten een bepaalde naam moeten hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
-Vanaf het perspectief van een Q #-ontwikkelaar zijn ingangs punten normale bewerkingen die aantekeningen maken bij `@EntryPoint()` .
-Bovendien kunnen Q # ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld: in Q # zelfstandige uitvoer bare bestanden) of een interface tussen een Q #-programma en het hostprogramma voor een toepassing (bijvoorbeeld: bij het gebruik van Q # met python of .NET), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q #-invoer punt.
+Wanneer u een ingangs punt in een Q# programma definieert, Q# herkent de compiler het [ `@EntryPoint()` kenmerk](xref:microsoft.quantum.core.entrypoint) , in plaats van dat toegangs punten een bepaalde naam hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
+Vanuit het perspectief van een Q# ontwikkelaar zijn ingangs punten normale bewerkingen die aantekeningen maken bij `@EntryPoint()` .
+Daarnaast Q# kunnen ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld in Q# zelfstandige uitvoer bare bestanden), of kan een interface tussen een Q# programma en het hostprogramma voor een toepassing zijn (bijvoorbeeld: bij gebruik Q# van python of .net), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q# toegangs punt.
 
 We raden aan gebruik te maken van naamgevings punten om het gebruik van het kenmerk weer te geven met `@EntryPoint()` behulp van het algemene advies voor naamgevings bewerkingen die hierboven worden vermeld.
 
@@ -190,11 +193,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Daarom is het raadzaam om, waar mogelijk, veelvoorkomende algemene naam woorden die een concept beschrijven, in hoge voor keur te worden aangenomen voor de juiste naam woorden die de publicatie geschiedenis van een concept beschrijven.
-Een voor beeld hiervan is dat de afzonderlijk beheerde SWAP en de dubbele controle niet worden uitgevoerd, ook wel de Fredkin-en Toffoli-bewerkingen worden genoemd in academische literatuur, maar worden aangeduid met Q #, voornamelijk als `CSWAP` en `CCNOT` .
+Een voor beeld hiervan is dat de afzonderlijk beheerde SWAP-en dubbele controle niet worden uitgevoerd, ook wel de "Fredkin"-en "Toffoli"-bewerkingen worden genoemd in academische literatuur, maar worden in de Q# eerste plaats aangeduid als `CSWAP` en `CCNOT` .
 In beide gevallen bieden de API-documentatie opmerkingen synoniemen op basis van de juiste naam woorden, samen met alle relevante bron vermeldingen.
 
-Deze voor keur is met name belang rijk, omdat het gebruik van de juiste zelfstandige naam woorden altijd nood zakelijk is. Q # volgt de traditie die is ingesteld door veel klassieke talen, bijvoorbeeld, en verwijst naar `Bool` typen in verwijzingen naar Boole-logica, die op zijn beurt wordt genoemd in respect van George Boole.
-Enkele Quantum concepten worden op een vergelijk bare manier genoemd, met inbegrip van het `Pauli` type ingebouwd in de Q #-taal.
+Deze voor keur is met name belang rijk, omdat het gebruik van de juiste zelfstandige naam woorden altijd nood zakelijk is. Q# Dit is de traditie die is ingesteld door veel klassieke talen, bijvoorbeeld, en verwijst naar `Bool` typen in verwijzingen naar Booleaanse logica, die op zijn beurt wordt genoemd in respect van George Boole.
+Enkele Quantum concepten worden op een vergelijk bare manier genoemd, met inbegrip van het `Pauli` type ingebouwd in de Q# taal.
 Door het gebruik van de juiste zelfstandige naam woorden, waarbij dit gebruik niet essentieel is, te minimaliseren, kunnen we de impact verminderen waarbij de juiste zelfstandige naam woorden niet redelijkerwijs worden vermeden.
 
 # <a name="guidance"></a>[Hulp](#tab/guidance) 
@@ -209,9 +212,9 @@ Suggesties voor:
 
 ### <a name="type-conversions"></a>Type conversies ###
 
-Aangezien Q # een sterk en statisch getypte taal is, kan een waarde van één type alleen worden gebruikt als waarde van een ander type met behulp van een expliciete aanroep van een type conversie functie.
+Omdat een Q# sterk en statisch getypte taal is, kan een waarde van één type alleen worden gebruikt als een waarde van een ander type met behulp van een expliciete aanroep van een type conversie functie.
 Dit is in tegens telling tot talen waarmee waarden typen impliciet kunnen worden gewijzigd (bijvoorbeeld: type promotie) of via casting.
-Als gevolg hiervan spelen functies van het type conversie een belang rijke rol bij het ontwikkelen van Q #-bibliotheken en vormen ze een van de vaak voorkomende beslissingen over de naamgeving.
+Als gevolg hiervan spelen functies van het type conversie een belang rijke rol bij het Q# ontwikkelen van tape wisselaars en vormen ze een van de vaak voorkomende beslissingen over naamgeving.
 Maar omdat type conversies altijd _deterministisch_zijn, kunnen ze worden geschreven als functies en dus onder de bovenstaande aanbeveling vallen.
 In het bijzonder raden we aan dat type conversie functies nooit moeten worden benoemd als woorden (bijvoorbeeld:) of voor voor keuren voor bewerkings `ConvertToX` parameters ( `ToX` ), maar moeten worden benoemd als voor zetsels van bijvoeglijke woord groepen die de bron-en doel typen ( `XAsY` ) aangeven.
 Bij het weer geven van matrix typen in functie namen van type conversie, wordt de steno aangeraden `Arr` .
@@ -244,7 +247,7 @@ Als een bewerking of functie niet bedoeld is voor direct gebruik, maar moet word
 
 Suggesties voor:
 
-- Wanneer een functie, bewerking of door de gebruiker gedefinieerd type geen deel uitmaakt van de open bare API voor een Q #-bibliotheek of-programma, moet u ervoor zorgen dat deze is gemarkeerd als intern door het `internal` tref woord vóór de `function` , `operation` of declaratie te plaatsen `newtype` .
+- Wanneer een functie, bewerking of door de gebruiker gedefinieerd type geen deel uitmaakt van de open bare API voor een Q# bibliotheek of programma, moet u ervoor zorgen dat deze is gemarkeerd als intern door het `internal` tref woord vóór de `function` , `operation` of declaratie te plaatsen `newtype` .
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
@@ -256,7 +259,7 @@ Suggesties voor:
 ***
 ### <a name="variants"></a>Qua ###
 
-Hoewel deze beperking mogelijk niet persistent is in toekomstige versies van Q #, is het altijd zo dat er vaak groepen van gerelateerde bewerkingen of functies zijn die worden onderscheiden door welke functors hun invoer ondersteunen, of op basis van de concrete typen van de argumenten.
+Hoewel deze beperking mogelijk niet in toekomstige versies van van Q# toepassing is, is het al het geval dat er vaak groepen van gerelateerde bewerkingen of functies zijn die worden onderscheiden door welke functors hun invoer ondersteunen, of door het concrete type van de argumenten.
 Deze groepen kunnen worden onderscheiden met dezelfde hoofd naam, gevolgd door een of twee letters die de variant aangeven.
 
 | Achtervoegsel | Betekenis |
@@ -281,7 +284,7 @@ Suggesties voor:
 
 ### <a name="arguments-and-variables"></a>Argumenten en variabelen ###
 
-Een belang rijk doel van de Q #-code voor een functie of bewerking is dat deze eenvoudig kan worden gelezen en begrepen.
+Een belang rijk doel van de Q# code voor een functie of bewerking is dat deze eenvoudig kan worden gelezen en begrepen.
 Op dezelfde manier moeten de namen van invoer-en type argumenten communiceren hoe een functie of argument wordt gebruikt wanneer dit wordt gegeven.
 
 
@@ -380,10 +383,10 @@ Suggesties voor:
 
 ## <a name="documentation-conventions"></a>Documentatie conventies ##
 
-De Q #-taal maakt het mogelijk om documentatie toe te voegen aan bewerkingen, functies en door de gebruiker gedefinieerde typen door het gebruik van speciaal opgemaakte documentatie opmerkingen.
+De Q# taal biedt de mogelijkheid om documentatie te koppelen aan bewerkingen, functies en door de gebruiker gedefinieerde typen door het gebruik van documentatie opmerkingen over speciaal opgemaakte documenten.
 Deze documentatie opmerkingen worden aangeduid met drievoudige slashes ( `///` ) en zijn kleine [DocFX-geprijsde](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) documenten die kunnen worden gebruikt voor het beschrijven van het doel van elke bewerking, functie en door de gebruiker gedefinieerd type, welke invoer elk verwacht, enzovoort.
 De compiler die wordt geleverd met de Quantum Development Kit, haalt deze opmerkingen op en gebruikt deze om de typen documentatie op te geven die vergelijkbaar is met die in https://docs.microsoft.com/quantum .
-Op dezelfde manier gebruikt de taal server van de Quantum Development Kit deze opmerkingen om gebruikers te helpen bij het aanwijzen van de muis aanwijzer over symbolen in hun Q #-code.
+Op dezelfde manier gebruikt de taal server van de Quantum Development Kit deze opmerkingen om gebruikers te helpen bij het aanwijzen van de muis aanwijzer over symbolen in hun Q# code.
 Het gebruik van documentatie opmerkingen kan gebruikers helpen om code te maken met behulp van een nuttige referentie voor informatie die niet eenvoudig kan worden weer gegeven met de andere conventies in dit document.
 
 > [!div class="nextstepaction"]
@@ -398,7 +401,7 @@ Suggesties voor:
 - Elke open bare functie, bewerking en door de gebruiker gedefinieerd type moeten onmiddellijk worden voorafgegaan door een documentatie opmerking.
 - Elke documentatie opmerking moet mini maal de volgende secties bevatten:
     - Samenvatting
-    - Invoer
+    - Input
     - Uitvoer (indien van toepassing)
 - Zorg ervoor dat alle samen vattingen twee zinnen of minder zijn. Als er meer ruimte nodig is, geeft u een `# Description` sectie op die direct volgt `# Summary` met de volledige informatie.
 - Als dat niet het geval is, kunt u geen wiskundige formules in samen vattingen gebruiken, omdat niet alle clients TeX-notatie in samen vattingen ondersteunen. Houd er rekening mee dat bij het schrijven van Prose-documenten (bijvoorbeeld TeX of prijs verlaging) het voor keur is dat er langere lijn lengten worden gebruikt.
@@ -454,8 +457,8 @@ is Adj + Ctl {
 
 Naast de voor gaande suggesties is het handig om code zo leesbaar mogelijk te maken voor het gebruik van consistente opmaak regels.
 Dergelijke opmaak regels worden op een wille keurige manier en in het algemeen op persoonlijke wijze in het gepaareerd.
-Het is echter raadzaam een consistente set opmaak conventies binnen een groep mede werkers te onderhouden, met name voor grote Q #-projecten, zoals de Quantum Development Kit zelf.
-Deze regels kunnen automatisch worden toegepast met behulp van het opmaak programma dat is geïntegreerd met de compiler Q #.
+Het is echter raadzaam een consistente set opmaak conventies binnen een groep mede werkers te onderhouden, met name voor grote Q# projecten, zoals de Quantum Development Kit zelf.
+Deze regels kunnen automatisch worden toegepast met behulp van het opmaak programma dat is geïntegreerd met de Q# compiler.
 
 # <a name="guidance"></a>[Hulp](#tab/guidance) 
 

@@ -7,12 +7,15 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906811"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869746"
 ---
 # <a name="third-party-software-notices-and-information"></a>KENNISGEVINGEN EN INFORMATIE OVER SOFTWARE VAN DERDEN
 
@@ -20,8 +23,8 @@ Dit bestand is gebaseerd op of opgenomen in de projecten die hieronder worden we
 
 1. YamlDotNet. ondertekende versie 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. loper. Visual Studio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. loper. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
-4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+3. xUnit. loper. console 2.3.1 ( https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
 7. xUnit. assert 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
@@ -75,7 +78,7 @@ Zie de licentie voor de specifieke taal met betrekking tot machtigingen en beper
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>xUnit. Extensibility. uitvoerings KENNISGEVINGen en informatie
+## <a name="xunitextensibilityexecution-notices-and-information"></a>Cution-KENNISGEVINGen en-informatie xunit.extensibility.exe
 ---------------------------------------
 Copyright (c) .NET Foundation en inzenders alle rechten voor behouden
 
@@ -178,7 +181,7 @@ Een ' Inzender ' is een persoon die de bijdrage onder deze licentie distribueert
 
 2. Toekenning van rechten
 
-(A) auteurs rechten verleend op basis van de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3, verleent elke bijdrager u een niet-exclusieve, wereld wijd royalty gratis auteursrecht licentie om haar bijdrage te reproduceren, afgeleide voor bereiding werkt met de bijdrage en distribueert haar bijdrage of afgeleide werken die u maakt.
+(A) auteurs rechten verleend aan de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3, verleent elke bijdrager u een niet-exclusieve, Royalty gratis auteursrecht licentie om haar bijdrage te reproduceren, afgeleide werken van de bijdrage te maken en de bijdrage of afgeleide werkzaamheden te distribueren die u maakt.
 
 (B) Patent toekenning: onderhevig aan de voor waarden van deze licentie, met inbegrip van de licentie voorwaarden en beperkingen in sectie 3 verleent elke bijdrager u een niet-exclusieve, wereld wijd royalty vrije licentie onder de gelicentieerde patenten om te voorzien in, het gebruik, de verkoop, de verkoop, het importeren en/of anderszins afstoten van de bijdrage in de software of derivaten van de bijdrage in de software.
 
@@ -192,14 +195,14 @@ Een ' Inzender ' is een persoon die de bijdrage onder deze licentie distribueert
 
 (D) als u een deel van de software in broncode vorm distribueert, kunt u dit alleen doen onder deze licentie door een volledige kopie van deze licentie met uw distributie op te nemen. Als u een deel van de software in gecompileerde of object code vorm distribueert, kunt u dit alleen doen onder een licentie die voldoet aan deze licentie.
 
-(E) de software wordt ' in de praktijk ' in licentie gegeven. Gebruik van deze informatie is voor eigen risico. De mede werkers geven geen expliciete garanties, garanties of voor waarden. Het is mogelijk dat u aanvullende consumenten rechten hebt onder uw lokale wetgeving die deze licentie niet kan wijzigen. Voor zover is toegestaan onder uw lokale wetgeving, nemen de mede werkers de impliciete garanties van verkoop baarheid, geschiktheid voor een bepaald doel en niet-INBREUKMAKENDHEID.
+(E) de software wordt ' in de praktijk ' in licentie gegeven. Het gebruik van de voorbeelden is op eigen risico. De mede werkers geven geen expliciete garanties, garanties of voor waarden. Het is mogelijk dat u aanvullende consumenten rechten hebt onder uw lokale wetgeving die deze licentie niet kan wijzigen. Voor zover is toegestaan onder uw lokale wetgeving, nemen de mede werkers de impliciete garanties van verkoop baarheid, geschiktheid voor een bepaald doel en niet-INBREUKMAKENDHEID.
 
 ## <a name="fsharpcore-notices-and-information"></a>KENNISGEVINGen en informatie over FSharp. core
 ---------------------------------------
 De MIT-licentie (MIT)
 
-Copyright (c) micro soft Corporation.
-Alle rechten voorbehouden.
+Copyright (c) Microsoft Corporation.
+All rights reserved.
 
 Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze software en bijbehorende documentatie bestanden (de "software") ontvangt, voor het afhandelen van de software zonder beperkingen, zoals het beperken van de rechten voor het gebruik, het kopiëren, wijzigen, samen voegen, publiceren, distribueren, sublicentieen en/of het verkopen van kopieën van de software, en het toestaan van personen aan wie de software wordt geleverd, onder de volgende voor waarden:
 
@@ -218,7 +221,7 @@ Toestemming wordt verleend, kosteloos, aan eenieder die een exemplaar van deze s
 De bovenstaande auteursrecht vermelding en deze kennisgeving zijn opgenomen in alle kopieën of substantiële delen van de software.
 
 DE SOFTWARE WORDT VERSTREKT "IN DE STAAT", ZONDER ENIGE GARANTIE VAN WELKE AARD DAN OOK, UITDRUKKELIJK OF IMPLICIET, INCLUSIEF, MAAR NIET BEPERKT TOT DE GARANTIE VAN VERKOOP BAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN EEN NIET-INBREUKMAKENDHEID. IN GEEN GEVAL ZIJN DE AUTEURS OF AUTEURS RECHTHEBBENDE AANSPRAKELIJK VOOR ELKE CLAIM, SCHADE OF ANDERE AANSPRAKELIJKHEID, HETZIJ IN EEN ACTIE VAN CONTRACT, IN RECHTELIJKE OF ANDERSZINS, VOORTVLOEIEND UIT, OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE TRANS ACTIES IN DE SOFTWARE.
-Verpakte versies van deze software bevatten mogelijk kopieën van OxyPlot. core. dll en OxyPlot. GtkSharp. dll, een licentie hieronder.
+Verpakte versies van deze software bevatten mogelijk kopieën van OxyPlot.Core.dll en OxyPlot.GtkSharp.dll, onderstaande licentie.
 
 ---
 
@@ -236,7 +239,7 @@ DE SOFTWARE WORDT VERSTREKT "IN DE STAAT", ZONDER ENIGE GARANTIE VAN WELKE AARD 
 ---------------------------------------
 Copyright (c) 2008-2014, Kurt Schelfthout
 
-Alle rechten voorbehouden.
+All rights reserved.
 
 Herdistributie en gebruik in bron-en binaire formulieren, met of zonder wijziging, is toegestaan op voor waarde dat aan de volgende voor waarden wordt voldaan:
 
@@ -265,22 +268,22 @@ DE SOFTWARE WORDT VERSTREKT "IN DE STAAT", ZONDER ENIGE GARANTIE VAN WELKE AARD 
 
 Tenzij anders vermeld, wordt de FParsec-bibliotheek in de bron-en binaire vorm gedistribueerd onder de vereenvoudigde BSD-licentie. De vereenvoudigde BSD-licentie (ook "2 ‐-component BSD-licentie") is een eenvoudige, strikte licentie die voldoet aan OSI ‐. 
 
-FParsec bevat gegevens die zijn afgeleid van de Unicode-teken database v. 8.0.0, copyright (c) 1991 \ u20122015 Unicode, Inc., dat wordt gedistribueerd onder de volgende voor waarden: http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec bevat gegevens die zijn afgeleid van de Unicode-teken database v. 8.0.0, copyright (c) 1991 \ u20122015 Unicode, Inc., dat wordt gedistribueerd onder de volgende voor waarden:http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 De documentatie in de map doc wordt in licentie gegeven onder de Creative Commons-toewijzing ‐ NietCommercieel 3,0 niet-getransporteerde licentie. Deze Creative Commons-licentie staat niet toe dat u de documentatie voor commerciële doel einden zonder toestemming gebruikt. Dit betekent bijvoorbeeld dat u de documentatie niet in de boek vorm kunt verkopen voor winst of dat u deze in een webinhouds Farm plaatst om geld te verdienen met advertenties. U kunt natuurlijk echter gebruikmaken van de documentatie in een commerciële context (bijvoorbeeld op het intranet van een commerciële onderneming), zolang u niet rechtstreeks geld wilt verdienen uit de tekst van de documentatie. 
 
 2,1 vereenvoudigd BSD-licentie
 
-Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. Alle rechten voorbehouden.
+Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. All rights reserved.
 
 Herdistributie en gebruik in bron-en binaire formulieren, met of zonder wijziging, is toegestaan op voor waarde dat aan de volgende voor waarden wordt voldaan: 
 * Bij herdistributies van de bron code moet de bovenstaande auteursrecht vermelding, deze lijst met voor waarden en de volgende disclaimer worden bewaard.
 * Herdistributies in een binaire vorm moeten de bovenstaande copyright informatie, deze lijst met voor waarden en de volgende disclaimer in de documentatie en/of andere materialen die bij de distributie worden geleverd reproduceren. 
 
-Deze software wordt verstrekt door de copyright houders "zoals is" en alle uitdrukkelijke of impliciete garanties, inclusief, maar niet beperkt tot, de impliciete garanties van verhandel baarheid en geschiktheid voor een bepaald doel. De auteurs rechten zijn in geen geval aansprakelijk voor directe, indirecte, incidentele, speciale, afgeleide of gevolg schade (inclusief, maar niet beperkt tot) het verkrijgen van vervangende goederen of diensten, verlies van het gebruik, de gegevens of de winst of het bedrijf onderbreking), en op enige theorie van aansprakelijkheid, hetzij in contracten, strikte aansprakelijkheid of onrecht matige samen werking (met inbegrip van nalatigheid of anderszins), voortvloeiend uit het gebruik van deze software, zelfs als de mogelijkheid van dergelijke schade is geadviseerd. 
+Deze software wordt verstrekt door de copyright houders "zoals is" en alle uitdrukkelijke of impliciete garanties, inclusief, maar niet beperkt tot, de impliciete garanties van verhandel baarheid en geschiktheid voor een bepaald doel. In geen geval zijn de auteurs van copyright aansprakelijk voor directe, indirecte, incidentele, speciale, afgeleide of gevolg schade (inclusief, maar niet beperkt tot, vervangende goederen of diensten, verlies van gebruik, gegevens of winsten; of bedrijfs onderbreking), en op enige theorie van aansprakelijkheid, ongeacht of het gaat om het gebruik van deze software, of in contracten, strikte aansprakelijkheid of onrecht matige goed keuringen (inclusief nalatigheid of anderszins) , zelfs als wordt gewaarschuwd voor de mogelijkheid van dergelijke schade. 
 
 2,2 Creative Commons-toewijzing ‐ NietCommercieel 3,0 niet-getransporteerde licentie
 
-Samen vatting: https://creativecommons.org/licenses/by-nc/3.0/
+Overzichthttps://creativecommons.org/licenses/by-nc/3.0/
 
-De volledige tekst van de licentie: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+De volledige tekst van de licentie:https://creativecommons.org/licenses/by-nc/3.0/legalcode 

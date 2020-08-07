@@ -1,17 +1,20 @@
 ---
-title: 'De micro soft Q # Nummerings bibliotheek gebruiken'
+title: De micro soft Q# Nummerings bibliotheek gebruiken
 description: Meer informatie over de typen en bewerkingen die beschikbaar zijn in de micro soft Quantum Nummerings bibliotheek.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275186"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868794"
 ---
 # <a name="using-the-numerics-library"></a>De numerieke bibliotheek gebruiken
 
@@ -43,7 +46,7 @@ Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaa
 1. **`LittleEndian`**
     - Optellen
     - Vergelijking
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
     - Deling (met rest)
 
@@ -51,20 +54,20 @@ Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaa
     - Optellen
     - Vergelijking
     - Aanvulling van inversie modulo 2
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
 
 1. **`FixedPoint`**
     - Voor bereiding/initialisatie naar een klassieke waarde
     - Toevoeging (klassieke constante of andere Quantum vaste komma)
     - Vergelijking
-    - Vermenigvuldigen
+    - Vermenigvuldiging
     - Squaring
     - Polynoom-evaluatie met specialisatie voor even en oneven functies
     - Reciproque (1/x)
     - Meting (klassiek dubbel)
 
-Zie voor meer informatie en gedetailleerde documentatie voor elk van deze bewerkingen de Q # Library Reference docs op [docs.Microsoft.com](https://docs.microsoft.com/quantum)
+Zie Q# naslag documenten voor bibliotheken op [docs.Microsoft.com](https://docs.microsoft.com/quantum) voor meer informatie en gedetailleerde documentatie voor elk van deze bewerkingen.
 
 ## <a name="sample-integer-addition"></a>Voor beeld: geheel getal toevoegen
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 Het resultaat, $P (x) = 1 + 2x $, wordt opgeslagen in `yFxP` .
 
 De tweede, `EvaluateEvenPolynomialFxP` , en de derde, `EvaluateOddPolynomialFxP` zijn specialisaties voor de gevallen van respectievelijk zelfs en oneven functies. Dat wil zeggen dat voor een even/oneven-functie $f (x) $ en $ $ P_ {ook} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ is goed geraamd op $P _ {ook} (x) $ of $P _ {oneven} (x): = x\cdot {even} (x) $. P_
-In Q # kunnen deze twee cases als volgt worden verwerkt:
+In Q# kunnen deze twee gevallen als volgt worden verwerkt:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

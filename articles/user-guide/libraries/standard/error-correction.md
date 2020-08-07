@@ -1,17 +1,20 @@
 ---
-title: 'Fout correctie in de Q # standaard-bibliotheken'
-description: "Meer informatie over het gebruik van fout correctie codes in uw Q #-Program ma's terwijl u de status van de qubits beveiligt."
+title: Fout correctie in de Q# standaard bibliotheken
+description: Meer informatie over het gebruik van fout correctie codes in uw Q# Program ma's terwijl u de status van de qubits beveiligt.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274995"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868488"
 ---
 # <a name="error-correction"></a>Fout correctie #
 
@@ -48,7 +51,7 @@ Houd er rekening mee dat $Z _0 Z_1 \ket {000} = \ket {000} $ en dat $Z _0 Z_1 \k
 Daarentegen $Z _0 Z_1 \ket {100} =-\ket {100} $ en $Z _0 Z_1 \ket {011} =-\ket {011} $, zodat het resultaat van het meten van $Z _0 Z_1 $ nuttige informatie over welke fout is opgetreden.
 
 Als u dit wilt benadrukken, herhaalt u de bovenstaande tabel, maar voegt u de resultaten van meting $Z _0 Z_1 $ en $Z _1 Z_2 $ toe aan elke rij.
-De resultaten van elke meting worden aangegeven door het teken van de eigenvalue die wordt waargenomen, ofwel $ + $ of $-$, overeenkomt met de Q # `Result` -waarden van `Zero` en `One` .
+De resultaten van elke meting worden aangegeven door het teken van de eigenvalue die wordt waargenomen, ofwel $ + $ of $-$, die overeenkomt met de Q# `Result` waarden van `Zero` en `One` .
 
 | Fout $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | Resultaat van $Z _0 Z_1 $ | Resultaat van $Z _1 Z_2 $ |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ In het bijzonder benadrukken we dat herstel een *klassieke* methode voor het afw
 > Meer in het algemeen kunnen codes worden gemaakt voor het verwerken van een groter aantal fouten en voor het afhandelen van $Z $-fouten, evenals $X $-fouten.
 
 Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de essentie van de *stabilisatie formaliteit*.
-De Q # Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisator-codes, en voor het beschrijven van het herstel van fouten.
+De Q# Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisatoren codes en voor het beschrijven van het herstel van fouten.
 In deze sectie beschrijven we dit kader en de toepassing ervan tot een paar eenvoudige Quantum fout codes.
 
 > [!TIP]
 > Een volledige inleiding tot de stabilisatie formaliteit valt buiten het bereik van deze sectie.
 > We verwijzen naar lezers die meer willen weten over [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-q"></a>Geeft aan dat fouten zijn gecorrigeerd codes in Q # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Duidt op fouten corrigerende codes inQ# ##
 
-Om u te helpen bij het opgeven van fouten corrigerende codes, biedt Q # Canon verschillende door de gebruiker gedefinieerde typen:
+Om u te helpen bij het opgeven van fout codes voor het corrigeren van fouten, Q# biedt Canon verschillende afzonderlijke door de gebruiker gedefinieerde typen:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Hiermee wordt aangegeven dat een REGI ster van qubits moet worden geïnterpreteerd als het code blok van een fout code.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Hiermee wordt aangegeven dat een matrix met meet resultaten moet worden geïnterpreteerd als de Syndrome die op een code blok wordt gemeten.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Afgezien van de code voor het spie gelen van bits, wordt Q # Canon gegeven met implementaties van de code van [vijf Qubit perfect](https://arxiv.org/abs/quant-ph/9602019)en de [code van zeven Qubit](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige fout met één qubit kan oplossen.
+Naast de code voor het spie gelen van bits, Q# wordt de Canon voorzien van implementaties van de [Qubit perfecte code](https://arxiv.org/abs/quant-ph/9602019)en de [zeven Qubit-code](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige, single-Qubit fout kan corrigeren.

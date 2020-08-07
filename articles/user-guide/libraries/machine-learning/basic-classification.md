@@ -1,28 +1,31 @@
 ---
 title: Basis classificatie met de Quantum Machine Learning-bibliotheek
-description: 'Meer informatie over het uitvoeren van een Quantum sequentiële classificatie die is geschreven in Q # met de Quantum Machine Learning bibliotheek van de micro soft-QDK.'
+description: Meer informatie over het uitvoeren van een Quantum sequentiële classificatie die is geschreven in Q# met behulp van de quantum machine learning bibliotheek van de micro soft-QDK.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275035"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868964"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basis classificatie: gegevens classificeren met de QDK
 
-In deze Quick Start leert u hoe u een Quantum sequentiële classificatie kunt uitvoeren die is geschreven in Q # met de Quantum Machine Learning bibliotheek van de QDK. 
+In deze Quick Start leert u hoe u een Quantum sequentiële classificatie kunt uitvoeren die is geschreven in Q# met behulp van de quantum machine learning bibliotheek van de QDK. 
 
-In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behulp van een classificatie structuur die is gedefinieerd in Q #.
+In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behulp van een classificatie structuur die is gedefinieerd in Q# .
 
 ## <a name="prerequisites"></a>Vereisten
 
 - De Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Een Q #-project maken voor een [python-hostprogramma](xref:microsoft.quantum.install.python) of een [C#-hostprogramma](xref:microsoft.quantum.install.cs).
+- Maak een Q# project voor een [python-hostprogramma](xref:microsoft.quantum.install.python) of een [C#-hostprogramma](xref:microsoft.quantum.install.cs).
 
 ## <a name="host-program"></a>Host-programma
 
@@ -34,7 +37,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python met Visual Studio Code of de opdrachtregel](#tab/tabid-python)
 
-    Als u de ' Q #-classificatie van python wilt uitvoeren, slaat u de volgende code op als `host.py` . Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
+    Als u de Q# classificatie van python wilt uitvoeren, slaat u de volgende code op als `host.py` . Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# met Visual Studio Code of de opdrachtregel](#tab/tabid-csharp)
 
-    Als u de ' Q #-classificatie van C# wilt uitvoeren, slaat u de volgende code op als `Host.cs` . Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
+    Als u de Q# classificatie van C# wilt uitvoeren, slaat u de volgende code op als `Host.cs` . Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     ### <a name="c-with-visual-studio-2019"></a>[C# met Visual Studio 2019](#tab/tabid-vs2019)
 
-    Als u uw nieuwe Q #-programma van C# in Visual Studio wilt uitvoeren, wijzigt `Host.cs` u de volgende C#-code. Houd er rekening mee dat u ook het Q #-bestand nodig hebt `Training.qs` dat verderop in deze zelf studie wordt beschreven.
+    Als u uw nieuwe Q# programma wilt uitvoeren vanuit C# in Visual Studio, wijzigt `Host.cs` u de volgende C#-code. Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ Uw hostprogramma bestaat uit drie delen:
 
 ## <a name="q-classifier-code"></a>Q- \# classificeerder code
 
-Nu gaan we kijken hoe de bewerkingen die worden aangeroepen door het hostprogramma worden gedefinieerd in Q #.
+Laten we nu zien hoe de bewerkingen die door het hostprogramma worden aangeroepen, worden gedefinieerd in Q# .
 We slaan de volgende code op in een bestand met de naam `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::

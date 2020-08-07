@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274962"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868437"
 ---
 # <a name="the-prelude"></a>De prelude #
 
-De Q #-compiler en de doel computers die deel uitmaken van de Quantum Development Kit bieden een aantal ingebouwde functies en bewerkingen die kunnen worden gebruikt bij het schrijven van Quantum Program ma's in Q #.
+De Q# compiler en de doel computers die deel uitmaken van de Quantum Development Kit bieden een reeks ingebouwde functies en bewerkingen die kunnen worden gebruikt bij het schrijven van Quantum Program ma's in Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>Intrinsieke bewerkingen en functies ##
 
@@ -27,11 +30,11 @@ De intrinsieke bewerkingen die in de standaard bibliotheek zijn gedefinieerd, va
 - Bewerkingen geïmplementeerd metingen.
 
 Omdat de Clifford + $T $ Gate-set is ingesteld op [Universal](xref:microsoft.quantum.concepts.multiple-qubits) voor Quantum Computing, zijn deze bewerkingen voldoende om een Quantum algoritme te implementeren in negligibly kleine fout.
-Door ook rotaties op te geven, kan met Q # de programmeur binnen de single Qubit unitary-en CNOT-poort bibliotheek werken. Deze bibliotheek is veel gemakkelijker te zien, omdat het niet vereist is dat de programmeur rechtstreeks de Clifford + $T $ decompileren en omdat er zeer efficiënte methoden bestaan voor het samen stellen van één Qubit unitaries in Clifford en $T $ Gates (Zie [hier](xref:microsoft.quantum.more-information) voor meer informatie).
+Door draaiing te bieden, Q# kan de programmeur binnen de single Qubit unitary-en CNOT-poort bibliotheek werken. Deze bibliotheek is veel gemakkelijker te zien, omdat het niet vereist is dat de programmeur rechtstreeks de Clifford + $T $ decompileren en omdat er zeer efficiënte methoden bestaan voor het samen stellen van één Qubit unitaries in Clifford en $T $ Gates (Zie [hier](xref:microsoft.quantum.more-information) voor meer informatie).
 
 Waar mogelijk, de bewerkingen die zijn gedefinieerd in de prelude die op qubits zijn toegestaan voor het Toep assen van de `Controlled` Variant, zodat de doel computer de juiste ontleding uitvoert.
 
-Veel van de functies en bewerkingen die in dit gedeelte van de prelude zijn gedefinieerd, bevinden zich in de @"microsoft.quantum.intrinsic" naam ruimte, zodat de meeste Q #-bron bestanden een instructie hebben die `open Microsoft.Quantum.Intrinsic;` direct volgt op de oorspronkelijke naam ruimte declaratie.
+Veel van de functies en bewerkingen die in dit gedeelte van de prelude zijn gedefinieerd, bevinden zich in de @"microsoft.quantum.intrinsic" naam ruimte, zodat Q# de meeste bron bestanden een instructie hebben die `open Microsoft.Quantum.Intrinsic;` direct volgt op de oorspronkelijke naam ruimte declaratie.
 De <xref:microsoft.quantum.core> naam ruimte wordt automatisch geopend, zodat functies zoals <xref:microsoft.quantum.core.length> kan worden gebruikt zonder een `open` instructie.
 
 ### <a name="common-single-qubit-unitary-operations"></a>Algemene single-Qubit unitary-bewerkingen ###
@@ -96,9 +99,9 @@ Het heeft hand tekening `(Qubit => Unit is Adj + Ctl)` en komt overeen met de si
 \begin{Equation} \begin{bmatrix} 1 & 0 \\ \\ % controle: dit maakt momenteel gebruik van de quadwhack hack.
 0 & \end{bmatrix} \end{Equation}
 
-#### <a name="rotations"></a>Rotaties ####
+#### <a name="rotations"></a>Rouleringen ####
 
-Naast de bovenstaande Pauli-en Clifford-bewerkingen biedt Q # prelude diverse manieren om draaiingen uit te drukken.
+Naast de bovenstaande Pauli-en Clifford-bewerkingen biedt de Q# prelude diverse manieren om draaiingen uit te drukken.
 Zoals beschreven in [Single-Qubit bewerkingen](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), is de mogelijkheid om te draaien essentieel voor Quantum algoritmen.
 
 We beginnen met het opnieuw aanroepen van een bewerking met één Qubit met de $H $ en $T $ Gates, waarbij $H $ de Hadamard-bewerking is, en waarbij \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % controle: dit maakt momenteel gebruik van de Quad back Swagger hack.
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Uitbreidings functies en-bewerkingen ##
 
-Daarnaast definieert de prelude een uitgebreide set wiskundige en type conversie functies op .NET-niveau voor gebruik binnen Q #-code.
+Daarnaast definieert de prelude een uitgebreide set wiskundige en type conversie functies op .NET-niveau voor gebruik in Q# code.
 Zo <xref:microsoft.quantum.math> definieert de naam ruimte nuttige bewerkingen zoals <xref:microsoft.quantum.math.sin> en <xref:microsoft.quantum.math.log> .
 De implementatie van de Quantum Development Kit maakt gebruik van de klassieke .NET-basis klassen bibliotheek en kan daarom een extra communicatie tussen Quantum Program ma's en hun klassieke Stuur Programma's tot stand brengen.
 Hoewel dit geen probleem voor een lokale Simulator voordoet, kan dit een prestatie probleem zijn bij het gebruik van een externe Simulator of een echte hardware als doel computer.
@@ -238,7 +241,7 @@ Op die manier kan een individuele doel computer deze invloed op de prestaties be
 ### <a name="math"></a>Berekeningen ###
 
 De <xref:microsoft.quantum.math> naam ruimte biedt veel nuttige functies van de [ `System.Math` klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)van de .net-basis klasse-bibliotheek.
-Deze functies kunnen op dezelfde manier worden gebruikt als andere Q #-functies:
+Deze functies kunnen op dezelfde manier worden gebruikt als andere Q# functies:
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-Wanneer een statische .NET-methode is overbelast op basis van het type van de argumenten, wordt de bijbehorende Q #-functie vermeld met een achtervoegsel dat het type invoer aangeeft:
+Wanneer een statische methode van .NET is overbelast op basis van het type van de argumenten, wordt de bijbehorende Q# functie vermeld met een achtervoegsel dat het type invoer aangeeft:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

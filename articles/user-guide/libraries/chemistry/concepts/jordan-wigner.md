@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275098"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869508"
 ---
 # <a name="jordan-wigner-representation"></a>Jordanië-Wignere representatie
 
@@ -28,7 +31,7 @@ We hebben dat $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ en $a ^ \ dagger_j \ke
 Het is eenvoudig om te controleren of \begin{align} een ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j-iY_j} {2} , \nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{align} waarbij $X _J $ en $Y _J $ de Opera tors Pauli-$X $ en
 
 >[!NOTE]
-> In Q # de $ \ket {0} $-status vertegenwoordigt de + 1 eigenstate van de operator $Z $. In sommige gebieden van fysieke fysica $ \ket {0} $ staat voor de lage energie stand en dus de eigenstate van de $Z $-operator. Sommige formules kunnen daarom verschillen van populaire literatuur.
+> In Q# de $ \ket {0} $ status staat voor de + 1 eigenstate van de operator $Z $. In sommige gebieden van fysieke fysica $ \ket {0} $ staat voor de lage energie stand en dus de eigenstate van de $Z $-operator. Sommige formules kunnen daarom verschillen van populaire literatuur.
 
 In de Library chemie gebruiken we $ \ket {0} $ om een onbezette spin-Orbital aan te duiden.
 Dit laat zien dat voor een enkele spin Orbital het gemakkelijk is om de Opera tors voor maken en Annihilation te vertegenwoordigen in termen van unitary-matrices die quantum computers begrijpen.

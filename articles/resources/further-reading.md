@@ -6,12 +6,15 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884138"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866839"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Meer informatie bronnen over Quantum Computing
 
@@ -24,7 +27,7 @@ Deze sectie bevat de geselecteerde verwijzingen voor een diepe dekking van Quant
 + Kitaev, A. Y., Wolthuis, A., & Vyalyi, M. N. (2002). Klassieke en Quantum berekening (vol. 47). Providence: American wiskundige samenleving.
 + Kaye, P., LaFlamme, R., & Mosca, M. (2007). Een inleiding tot Quantum Computing. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Quantum Computing: een zacht introductie. MIT Press.
-+ Sarah C. Kaiser en Christopher E. Granade (in het begin van de eerste Access-toepassing is de 2019-publicatie in najaar 2020). [Meer informatie over Quantum Computing met python en Q #-een praktische benadering](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
++ Sarah C. Kaiser en Christopher E. Granade (in het begin van de eerste Access-toepassing is de 2019-publicatie in najaar 2020). [Meer informatie over Quantum Computing met python en Q# -een praktische benadering](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
 
 ## <a name="online-courses"></a>Online cursussen ##
 

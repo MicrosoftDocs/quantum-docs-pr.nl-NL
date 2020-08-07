@@ -1,21 +1,24 @@
 ---
-title: Algoritme van Grover uitvoeren in Q# - Quantum Development Kit
-description: U gaat een Q#-project maken waarin het algoritme van Grover wordt gedemonstreerd, een van de bekendste kwantumalgoritmen.
+title: Zoek algoritme van de Grover uitvoeren in de Q# Quantum Development Kit
+description: Bouw een Q# project dat het algoritme van Grover toont, een van de canonieke Quantum algoritmen.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274478"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869661"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Zelfstudie: Zoekalgoritme van Grover implementeren in Q\#
 
-In deze zelfstudie leert u hoe u het zoekalgoritme van Grover kunt bouwen en uitvoeren om het doorzoeken van niet-gestructureerde gegevens te versnellen.  Het zoekalgoritme van Grover is een van de populairste algoritmen voor kwantumcomputing en deze relatief kleine Q#-implementatie geeft u een beeld van enkele van de voordelen van het programmeren van kwantumoplossingen met de high-level Q#-programmeertaal voor het voorstellen van kwantumalgoritmen.  Aan het einde van de quickstart ziet u dat in een lijst met ongeordende vermeldingen een bepaalde tekenreeks wordt gevonden in een fractie van de tijd die nodig zou zijn om de hele lijst op een klassieke computer te doorzoeken.
+In deze zelfstudie leert u hoe u het zoekalgoritme van Grover kunt bouwen en uitvoeren om het doorzoeken van niet-gestructureerde gegevens te versnellen.  De zoek functie van Grover is een van de populairste Quantum Computing-algoritmen, en met deze relatief kleine Q# implementatie krijgt u een beeld van de voor delen van het Program meren van Quantum oplossingen met een Quantum-programmeer taal op hoog niveau voor het weggeven van Q# Quantum algoritmen.  Aan het einde van de quickstart ziet u dat in een lijst met ongeordende vermeldingen een bepaalde tekenreeks wordt gevonden in een fractie van de tijd die nodig zou zijn om de hele lijst op een klassieke computer te doorzoeken.
 
 Het algoritme van Grover doorzoekt een lijst met ongestructureerde gegevens op specifieke items. Het algoritme kan bijvoorbeeld deze vraag beantwoorden: Is deze kaart uit een spel kaarten een hartenaas? De labeling van het specifieke item wordt _marked input_ genoemd.
 
@@ -39,7 +42,7 @@ Het aantal incrementele ophogingen is minder dan het aantal items in de lijst. D
 
 ## <a name="write-the-code"></a>De code schrijven
 
-1. Maak met de Quantum Development Kit [een nieuw Q#-project voor de opdrachtregeltoepassing](xref:microsoft.quantum.install.standalone). Titel van het project `Grover`.
+1. [Maak een nieuw Q# project voor de opdracht regel toepassing](xref:microsoft.quantum.install.standalone)met behulp van de Quantum Development Kit. Titel van het project `Grover`.
 
 1. Voeg de volgende code toe aan het bestand `Program.qs` in uw nieuwe project:
 
@@ -51,9 +54,9 @@ Het aantal incrementele ophogingen is minder dan het aantal items in de lijst. D
 
     Met de bewerking `ReflectAboutMarked` wordt de marked input gedefinieerd die u zoekt: de reeks van afwisselend nullen en enen. In dit voorbeeld wordt de marked input in code vastgelegd en kan deze worden uitgebreid om te zoeken naar andere invoer of worden gegeneraliseerd voor willekeurige invoer.
 
-1. Vervolgens voert u het nieuwe Q#-programma uit om het item te vinden dat is gemarkeerd door `ReflectAboutMarked`.
+1. Voer vervolgens het nieuwe Q# programma uit om het item te vinden dat is gemarkeerd door `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#-opdrachtregeltoepassingen met Visual Studio of Visual Studio Code
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#opdracht regel toepassingen met Visual Studio of Visual Studio code
 
 Het uitvoerbare bestand voert de bewerking of functie met het kenmerk `@EntryPoint()` uit in een simulator of resourceschatter, afhankelijk van de projectconfiguratie en opdrachtregelopties.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Als deze zelfstudie een succes was, kunt u de onderstaande informatiebronnen bekijken voor meer informatie over het schrijven van uw eigen kwantumtoepassingen met Q#:
+Als u deze zelf studie hebt, raadpleegt u een aantal van de onderstaande bronnen voor meer informatie over hoe u kunt gebruiken Q# om uw eigen Quantum toepassingen te schrijven:
 
 - [Terug naar de handleiding Aan de slag met de Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
 - Probeer een meer algemeen [voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) van het zoekalgoritme van Grover

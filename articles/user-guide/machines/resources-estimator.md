@@ -1,33 +1,36 @@
 ---
 title: Quantum bronnen Estimator-Quantum Development Kit
-description: 'Meer informatie over de micro soft QDK resources Estimator, waarmee de resources die vereist zijn voor het uitvoeren van een bepaald exemplaar van een Q #-bewerking op een quantum computer, worden geschat.'
+description: Meer informatie over de micro soft QDK resources Estimator, waarmee de resources die nodig zijn voor het uitvoeren van een bepaald exemplaar van een Q# bewerking op een quantum computer, worden geschat.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870533"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868182"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK-resources (Quantum Development Kit) estimator
 
-Zoals de naam al aangeeft, `ResourcesEstimator` schat de klasse de resources die vereist zijn om een bepaald exemplaar van een Q #-bewerking uit te voeren op een quantum computer. Dit wordt bereikt door de Quantum bewerking uit te voeren zonder dat de status van een quantum computer werkelijk wordt gesimuleerd. Daarom schatten IT resources voor Q #-bewerkingen die gebruikmaken van duizenden qubits, op voor waarde dat het klassieke deel van de code in een redelijke tijd wordt uitgevoerd.
+Zoals de naam al aangeeft, `ResourcesEstimator` schat de klasse de resources die vereist zijn om een bepaald exemplaar van een Q# bewerking op een quantum computer uit te voeren. Dit wordt bereikt door de Quantum bewerking uit te voeren zonder dat de status van een quantum computer werkelijk wordt gesimuleerd. Daarom schatten IT resources voor Q# bewerkingen die gebruikmaken van duizenden qubits, op voor waarde dat het klassieke deel van de code in een redelijke tijd wordt uitgevoerd.
 
-De Estimator van de resources is gebaseerd op de [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), die een uitgebreidere set metrische gegevens en hulpprogram ma's biedt om fouten in Q #-Program ma's op te sporen.
+De bronnen Estimator is gebaseerd op de [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), die een uitgebreidere verzameling metrische gegevens en hulpprogram ma's biedt om fouten in Program ma's op te sporen Q# .
 
 ## <a name="invoking-and-running-the-resources-estimator"></a>De bronnen Estimator aanroepen en uitvoeren
 
-U kunt de Estimator van resources gebruiken om een Q #-bewerking uit te voeren. Zie [manieren om een Q #-programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
+U kunt de resources Estimator gebruiken om een wille keurige bewerking uit te voeren Q# . Zie [manieren om een Q# programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Aanroepen van de bronnen Estimator van C # 
 
-Net als bij andere doel machines maakt u eerst een instantie van de `ResourceEstimator` klasse en geeft u deze vervolgens door als de eerste para meter van de methode van een bewerking `Run` .
+Net als bij andere doelmachines maakt u eerst een exemplaar van de klasse `ResourceEstimator` en geeft u deze vervolgens door als de eerste parameter van de methode `Run` van een bewerking.
 
-Houd er rekening mee dat, in tegens telling tot de `QuantumSimulator` -klasse, de- `ResourceEstimator` interface niet wordt geïmplementeerd door de klasse <xref:System.IDisposable> en dat u deze niet hoeft op te nemen in een- `using` instructie.
+Houd er rekening mee dat, in tegenstelling tot de klasse `QuantumSimulator`, de klasse `ResourceEstimator` de interface <xref:System.IDisposable> niet implementeert, zodat u deze niet hoeft in te sluiten in een instructie `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -66,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>De bronnen Estimator van python worden aangeroepen
 
-Gebruik de methode [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q #-bewerking:
+Gebruik de methode [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q# bewerking:
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -74,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a>Aanroepen van de bronnen Estimator vanaf de opdracht regel
 
-Wanneer u een Q #-programma uitvoert vanaf de opdracht regel, gebruikt u de para meter **--Simulator** (of **-s** ) om de doel computer op te geven `ResourcesEstimator` . Met de volgende opdracht voert u een programma uit met behulp van de resources Estimator: 
+Wanneer u een Q# programma uitvoert vanaf de opdracht regel, gebruikt u de para meter **--Simulator** (of **-s** ) om de doel computer op te geven `ResourcesEstimator` . Met de volgende opdracht voert u een programma uit met behulp van de resources Estimator: 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -82,7 +85,7 @@ dotnet run -s ResourcesEstimator
 
 ### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>De bronnen Estimator van Juptyer-notebooks aanroepen
 
-Gebruik de opdracht IQ # Magic [% schatting](xref:microsoft.quantum.iqsharp.magic-ref.simulate) om de Q #-bewerking uit te voeren.
+Gebruik de I Q# Magic-opdracht [% schatting](xref:microsoft.quantum.iqsharp.magic-ref.simulate) om de bewerking uit te voeren Q# .
 
 ```
 %estimate myOperation
@@ -92,7 +95,7 @@ Gebruik de opdracht IQ # Magic [% schatting](xref:microsoft.quantum.iqsharp.magi
 
 Naast een TSV-tabel kunt u de resources die zijn geschat tijdens de uitvoering programmatisch ophalen via de `Data` eigenschap van de resources Estimator. De `Data` eigenschap levert een `System.DataTable` exemplaar met twee kolommen: `Metric` en `Sum` , geïndexeerd op basis van de namen van de metrische gegevens.
 
-De volgende code laat zien hoe u het totale aantal `QubitClifford` `T` en de `CNOT` bewerkingen die worden gebruikt door een Q #-bewerking kunt ophalen en afdrukken:
+De volgende code laat zien hoe u het totale aantal `QubitClifford` `T` en de `CNOT` bewerkingen die worden gebruikt door een bewerking Q# kunt ophalen en afdrukken:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -127,16 +130,16 @@ De resources Estimator traceert de volgende metrische gegevens:
 |__Meting__    |Het aantal uitvoeringen van een wille keurige meting.  |
 |__R__    |Het aantal uitvoeringen van een Qubit draaiing, met uitzonde ring van `T` Clifford-en Pauli-bewerkingen.  |
 |__T__    |Het aantal uitvoeringen van `T` bewerkingen en hun conjugaat, waaronder de `T` bewerkingen, T_x = h. t. h en T_y = hy. t. hy.  |
-|__Diepga__|De ondergrens voor de diepte van het Quantum circuit dat wordt uitgevoerd door de Q #-bewerking. Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
-|__Breedte__    |De ondergrens voor het maximum aantal qubits dat wordt toegewezen tijdens de uitvoering van de Q #-bewerking. Het is misschien niet mogelijk om tegelijkertijd zowel de __diepte__ als de __breedte__ van de ondergrenzen te verminderen.  |
-|__BorrowedWidth__    |Het maximum aantal qubits dat is geleend binnen de Q #-bewerking.  |
+|__Diepga__|De ondergrens voor de diepte van het Quantum circuit dat door de bewerking wordt uitgevoerd Q# . Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
+|__Breedte__    |De ondergrens voor het maximum aantal toegewezen qubits tijdens het uitvoeren van de Q# bewerking. Het is misschien niet mogelijk om tegelijkertijd zowel de __diepte__ als de __breedte__ van de ondergrenzen te verminderen.  |
+|__BorrowedWidth__    |Het maximale aantal qubits dat in de bewerking is geleend Q# .  |
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metings resultaten opgeven
+## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metingsresultaten opgeven
 
 U kunt <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> uit de <xref:microsoft.quantum.diagnostics> naam ruimte gebruiken om informatie te geven over de verwachte waarschijnlijkheid van een meting bewerking. Zie [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) voor meer informatie.
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
-- [Quantum Toffoli Simulator](xref:microsoft.quantum.machines.toffoli-simulator)
-- [Quantum Full State Simulator](xref:microsoft.quantum.machines.full-state-simulator) 
+- [Kwantum Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Kwantumsimulator voor volledige toestand](xref:microsoft.quantum.machines.full-state-simulator) 

@@ -1,17 +1,20 @@
 ---
 title: Ongeldig qubits use Checker-Quantum Development Kit
-description: 'Meer informatie over de micro soft QDK ongeldig qubits use Checker, die gebruikmaakt van de Quantum Trace Simulator om uw Q #-code te controleren op mogelijk ongeldige qubits.'
+description: Meer informatie over de micro soft QDK qubits use Checker, die gebruikmaakt van de Quantum Trace Simulator om uw code te controleren op Q# potentieel ongeldige qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871090"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868284"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Quantum Trace Simulator: ongeldig qubits use Checker
 
@@ -19,7 +22,7 @@ De ongeldig qubits use-controle is een onderdeel van de Quantum Development Kit 
 
 ## <a name="invalid-qubits"></a>Ongeldige qubits
 
-Houd rekening met het volgende deel van Q # code voor het illustreren van de problemen die worden gedetecteerd door de ongeldig qubits-controle functie:
+Houd rekening met het volgende Q# code fragment voor een illustratie van de problemen die worden gedetecteerd door de ongeldig qubits use Checker:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -70,7 +73,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - Het Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Overview (Engelstalig).
 - De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-verwijzing.

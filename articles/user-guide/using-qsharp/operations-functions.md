@@ -1,28 +1,31 @@
 ---
-title: 'Bewerkingen en functies in Q #'
+title: Bewerkingen en functies inQ#
 description: Bewerkingen en functies definiëren en aanroepen, evenals de gecontroleerde en adjoint bewerkingen.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884208"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867876"
 ---
-# <a name="operations-and-functions-in-q"></a>Bewerkingen en functies in Q #
+# <a name="operations-and-functions-in-no-locq"></a>Bewerkingen en functies inQ#
 
 ## <a name="defining-new-operations"></a>Nieuwe bewerkingen definiëren
 
-Bewerkingen zijn de kern van Q #.
-Na de declaratie kunnen ze worden aangeroepen vanuit klassieke .NET-toepassingen, bijvoorbeeld met behulp van een Simulator of door andere bewerkingen binnen Q #.
-Elke in Q # gedefinieerde bewerking kan een wille keurig aantal andere bewerkingen aanroepen, met inbegrip van de ingebouwde intrinsieke bewerkingen die door de taal worden gedefinieerd. De bijzondere manier waarop Q # deze intrinsieke bewerkingen definieert, is afhankelijk van de doel computer.
+Bewerkingen zijn de kern van Q# .
+Als ze eenmaal zijn gedeclareerd, kunnen ze worden aangeroepen vanuit klassieke .NET-toepassingen, bijvoorbeeld door gebruik te maken van een Simulator of door andere bewerkingen binnen Q# .
+Elke bewerking die in Q# wordt gedefinieerd in, kan een wille keurig aantal andere bewerkingen aanroepen, met inbegrip van de ingebouwde intrinsieke bewerkingen die door de taal worden gedefinieerd. De specifieke manier waarop Q# deze intrinsieke bewerkingen worden gedefinieerd, is afhankelijk van de doel computer.
 Bij compilatie wordt elke bewerking weer gegeven als een .NET-klassetype dat kan worden geleverd aan doel computers.
 
-Elk Q #-bron bestand kan een wille keurig aantal bewerkingen definiëren.
+Elk Q# bron bestand kan elk wille keurig aantal bewerkingen definiëren.
 Bewerkings namen moeten uniek zijn binnen een naam ruimte en kunnen niet conflicteren met type-of functie namen.
 
 Een bewerkings declaratie bestaat uit het tref woord `operation` , gevolgd door het symbool dat de naam van de bewerking is, een getypeerde id-tupel waarmee de argumenten voor de bewerking worden gedefinieerd, een dubbele punt `:` , een type aantekening waarmee het resultaat type van de bewerking wordt beschreven, optioneel een aantekening met de bewerkings kenmerken, een open accolade en de hoofd tekst van de bewerkings `{ }`
@@ -61,16 +64,16 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 ```
 
 > [!NOTE]
-> Elke bewerking in Q # heeft precies één invoer en retourneert precies één uitvoer.
+> Elke bewerking in Q# heeft precies één invoer en retourneert precies één uitvoer.
 > Meerdere invoer en uitvoer worden weer gegeven met behulp van *Tuples*, waarmee meerdere waarden worden verzameld in één waarde.
-> In dit opzicht is Q # de taal ' tuple-in-tuple '.
+> In dit opzicht Q# is de taal ' tuple-in-tuple '.
 > In dit concept moet een reeks lege haakjes `()` worden gelezen als de ' lege ' tuple, die het type heeft `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Gecontroleerde en adjoint bewerkingen
 
-Als een bewerking een unitary-trans formatie implementeert, zoals het geval is voor veel bewerkingen in Q #, is het mogelijk om te definiëren hoe de bewerking optreedt wanneer *adjointed* of *beheerd*wordt. Met een *adjoint* specialisatie van een bewerking wordt aangegeven hoe de ' inverse ' van de bewerking wordt uitgevoerd, terwijl een *beheerde* specialisatie aangeeft hoe een bewerking wordt uitgevoerd wanneer de toepassing wordt ingesteld op de status van een bepaalde Quantum register.
+Als een bewerking een unitary-trans formatie implementeert, zoals het geval is voor veel bewerkingen in Q# , is het mogelijk om te definiëren hoe de bewerking optreedt wanneer *adjointed* of *beheerd*wordt. Met een *adjoint* specialisatie van een bewerking wordt aangegeven hoe de ' inverse ' van de bewerking wordt uitgevoerd, terwijl een *beheerde* specialisatie aangeeft hoe een bewerking wordt uitgevoerd wanneer de toepassing wordt ingesteld op de status van een bepaalde Quantum register.
 
-Adjoints van Quantum bewerkingen zijn cruciaal voor veel aspecten van Quantum Computing. Zie [Conjugations](#conjugations) in dit artikel voor een voor beeld van een dergelijke situatie die wordt besproken naast een handige Q #-programmeer techniek. 
+Adjoints van Quantum bewerkingen zijn cruciaal voor veel aspecten van Quantum Computing. Q#Zie [Conjugations](#conjugations) in dit artikel voor een voor beeld van een dergelijke situatie die wordt besproken naast een handige programmeer techniek. 
 
 De gecontroleerde versie van een bewerking is een nieuwe bewerking waarbij de basis bewerking alleen effectief wordt toegepast als alle besturings elementen qubits een opgegeven status hebben.
 Als het besturings element qubits zich in de superpositie bevindt, wordt de basis bewerking samenhangend toegepast op het juiste deel van de superpositie.
@@ -83,15 +86,15 @@ Natuurlijk kan ook een *beheerde adjoint* -specialisatie bestaan en de gecontrol
 > Als er een bewerking wordt toegepast en vervolgens de adjoint naar een status, blijft de status ongewijzigd, zoals wordt geïllustreerd door $UU ^ \dagger = U ^ \dagger U = \id $, de identiteits matrix.
 > De unitary-weer gave van een gecontroleerde bewerking is iets ingewik complexer, maar u kunt meer informatie vinden over de [concepten van Quantum Computing: meerdere qubits](xref:microsoft.quantum.concepts.multiple-qubits).
 
-In de volgende sectie wordt beschreven hoe u deze verschillende specials aanroept in uw Q #-code en hoe u bewerkingen kunt definiëren om ze te ondersteunen.
+In de volgende sectie wordt beschreven hoe u deze verschillende specials in uw code aanroept Q# en hoe u bewerkingen definieert om ze te ondersteunen.
 
 ### <a name="calling-operation-specializations"></a>Bewerkings specials aanroepen
 
-Een *functor* in Q # is een Factory die een nieuwe bewerking vanuit een andere bewerking definieert.
-De twee standaard functors in Q # zijn `Adjoint` en `Controlled` .
+Een *functor* in Q# is een Factory die een nieuwe bewerking vanuit een andere bewerking definieert.
+De twee standaard functors in Q# zijn `Adjoint` en `Controlled` .
 
 Functors hebben toegang tot de implementatie van de basis bewerking bij het definiëren van de implementatie van de nieuwe bewerking.
-Daarom kunnen functors complexere functies uitvoeren dan traditionele functies op een hoger niveau. Functors hebben geen weer gave in het Q #-type systeem. Het is dus niet mogelijk om deze aan een variabele te binden of als argumenten door te geven. 
+Daarom kunnen functors complexere functies uitvoeren dan traditionele functies op een hoger niveau. Functors hebben geen weer gave in het Q# type systeem. Het is dus niet mogelijk om deze aan een variabele te binden of als argumenten door te geven. 
 
 Gebruik een functor door het toe te passen op een bewerking, waardoor een nieuwe bewerking wordt geretourneerd.
 `Adjoint`Als u bijvoorbeeld de functor toepast op de `Y` bewerking, wordt de nieuwe bewerking geretourneerd `Adjoint Y` . U kunt de nieuwe bewerking aanroepen, zoals elke andere bewerking.
@@ -109,7 +112,7 @@ De `Adjoint` functor is een eigen inverse; dat wil zeggen, `Adjoint Adjoint Op` 
 Op dezelfde manier wordt `Controlled X(controls, target)` de `Controlled` functor toegepast op de `X` bewerking om een nieuwe bewerking te genereren en wordt die nieuwe bewerking toegepast op `controls` en `target` .
 
 > [!NOTE]
-> In Q # maken bewaakte versies altijd een matrix van besturings element qubits en is de besturing altijd gebaseerd op alle besturings elementen qubits in de status berekenen ( `PauliZ` ) `One` , $ \ket {1} $.
+> In worden Q# door gereguleerde versies altijd een matrix van besturings element qubits, en is de besturing altijd gebaseerd op alle besturings elementen qubits in de status berekenen ( `PauliZ` ) `One` , $ \ket {1} $.
 > Het beheren op basis van andere statussen wordt bereikt door de juiste unitary-bewerking toe te passen op de controle qubits vóór de gecontroleerde bewerking en vervolgens de inverse van de unitary-bewerking toe te passen na de gecontroleerde bewerking.
 > Als u bijvoorbeeld een `X` bewerking toepast op een besturings element Qubit vóór en na een beheerde bewerking, wordt de bewerking voor het beheren van de `Zero` status ($ \ket {0} $) voor die Qubit uitgevoerd; het Toep assen van een `H` bewerking voor en na de besturings elementen van de `PauliX` `One` status, die-1 eigenvalue van Pauli X, $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt {2} $ in plaats van de `PauliZ` `One` status
 
@@ -140,7 +143,7 @@ In de eerste declaratie van de bewerking in de vorige voor beelden `BitFlip` zij
 Net als bij `DecodeSuperdense` metingen, is het geen unitary-bewerking en zijn er geen beheerde niet-adjointe specials mogelijk (roep de gerelateerde vereiste in die een dergelijke bewerking retourneert `Unit` ).
 Als `BitFlip` simpelweg de unitary <xref:microsoft.quantum.intrinsic.x> -bewerking uitvoert, kunt u deze echter ook met beide specials hebben gedefinieerd.
 
-In deze sectie wordt beschreven hoe u het bestaan van specials in uw Q #-bewerkings declaraties opneemt, zodat deze kunnen worden aangeroepen in combi natie met de `Adjoint` of `Controlled` functors.
+In deze sectie wordt beschreven hoe u het bestaan van specials in uw Q# bewerkings declaraties opneemt, waardoor u de mogelijkheid hebt om in combi natie met de of functors te worden aangeroepen `Adjoint` `Controlled` .
 Zie voor meer informatie over een aantal situaties waarin het geldig is of niet geldig is voor het declareren van bepaalde specialies, de [omstandigheden voor het op geldige wijze definiëren van specials](#circumstances-for-validly-defining-specializations) in dit artikel.
 
 De bewerkings kenmerken bepalen welke soorten functors u kunt Toep assen op de gedeclareerde bewerking en welk effect ze hebben. Het bestaan van deze specials kan worden gedeclareerd als onderdeel van de hand tekening van de bewerking, met name door een aantekening met de bewerkings kenmerken: ofwel `is Adj` , `is Ctl` of `is Adj + Ctl` .
@@ -189,7 +192,7 @@ Hieronder vindt u het volledige aanbod van mogelijkheden, met enkele voor beelde
 
 #### <a name="explicit-specialization-declarations"></a>Expliciete specialisatie declaraties
 
-Q #-bewerkingen kunnen de volgende expliciete specialisatie declaraties bevatten:
+Q#bewerkingen kunnen de volgende expliciete specialisatie declaraties bevatten:
 
 - De `body` specialisatie specificeert de implementatie van de bewerking waarvoor geen functors is toegepast.
 - De `adjoint` specialisatie specificeert de implementatie van de bewerking waarop de `Adjoint` functor is toegepast.
@@ -224,7 +227,7 @@ De `auto` instructie wordt omgezet in de volgende gegenereerde instructie als ee
 > [!TIP]   
 > Als een bewerking zelf adjoint is, geeft u expliciet de adjoint of de bewaakte adjoint-specialisatie op via de generatie-instructie `self` zodat de compiler gebruik van die informatie kan maken voor optimaliserings doeleinden.
 
-Een specialisatie declaratie met een door de gebruiker gedefinieerde implementatie bestaat uit een argument tuple gevolgd door een instructie blok met de Q #-code die de specialisatie implementeert.
+Een specialisatie declaratie met een door de gebruiker gedefinieerde implementatie bestaat uit een argument tuple gevolgd door een instructie blok met de Q# code die de specialisatie implementeert.
 In de argumenten lijst `...` wordt gebruikt om de argumenten weer te geven die zijn gedeclareerd voor de bewerking als geheel.
 Voor `body` en `adjoint` , de lijst met argumenten moet altijd zijn `(...)` : voor `controlled` en `adjoint controlled` , de lijst met argumenten moet een symbool zijn dat de matrix van besturings element qubits, gevolgd door `...` , tussen haakjes (bijvoorbeeld) `(controls,...)` .
 
@@ -326,9 +329,9 @@ Voor een bewerking waarvan de hoofd tekst aanroepen naar andere bewerkingen beva
 
 Gebruik een bewerking met aanvullende functors die overal worden ondersteund. u gebruikt een bewerking met minder functors maar dezelfde hand tekening. Gebruik bijvoorbeeld een bewerking van het type `(Qubit => Unit is Adj)` overal waar u een bewerking van type gebruikt `(Qubit => Unit)` .
 
-Q # is *covariantie* ten opzichte van aanroep bare retour typen: een aanroepable die een type retourneert `'A` , is compatibel met een aanroepbaar met hetzelfde invoer type en een resultaat type dat compatibel is met `'A` .
+Q#is *covariantie* ten opzichte van aanroep bare retour typen: een aanroepable die een type retourneert `'A` , is compatibel met een aanroepbaar met hetzelfde invoer type en een resultaat type dat compatibel is met `'A` .
 
-Q # is *contra variant* met betrekking tot invoer typen: een aanroepable die een type `'A` als invoer vereist, is compatibel met een aanroepbaar met hetzelfde resultaat type en een invoer type dat compatibel is met `'A` .
+Q#is *contra variant* ten opzichte van invoer typen: een aanroepable die een type `'A` als invoer vereist, is compatibel met een aanroepbaar met hetzelfde resultaat type en een invoer type dat compatibel is met `'A` .
 
 Dat wil zeggen, op basis van de volgende definities:
 
@@ -357,7 +360,7 @@ U kunt
 - Retourneert een waarde van het type `(Qubit[] => Unit is Adj + Ctl)` van `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q # 0,3 heeft een aanzienlijk verschil in het gedrag van door de gebruiker gedefinieerde typen geïntroduceerd.
+> Q#0,3 heeft een aanzienlijk verschil in het gedrag van door de gebruiker gedefinieerde typen geïntroduceerd.
 
 Door de gebruiker gedefinieerde typen worden behandeld als een ingepakte versie van het onderliggende type, in plaats van als subtype.
 Dit betekent dat een waarde van een door de gebruiker gedefinieerd type niet kan worden gebruikt, waarbij u een waarde van het onderliggende type verwacht.
@@ -380,7 +383,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-Vanaf onze 0,9-release ondersteunt Q # een conjugation-instructie die de voor gaande trans formatie implementeert. Met deze instructie kan de bewerking `ApplyWith` op de volgende manier worden geïmplementeerd:
+Vanaf onze 0,9-release Q# ondersteunt een conjugation-instructie waarmee de voor gaande trans formatie wordt geïmplementeerd. Met deze instructie kan de bewerking `ApplyWith` op de volgende manier worden geïmplementeerd:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -405,12 +408,12 @@ Omdat alle onveranderlijke variabelen die als onderdeel van de binnen-blok kerin
 
 ## <a name="defining-new-functions"></a>Nieuwe functies definiëren
 
-Functions zijn louter deterministische, klassieke routines in Q #, die verschillend zijn van bewerkingen in dat ze geen invloed mogen hebben op de berekening van een uitvoer waarde.
+Functions zijn louter deterministische, klassieke routines in Q# , die verschillen van bewerkingen in dat ze geen effect mogen hebben op de berekening van een uitvoer waarde.
 Met name functies kunnen geen bewerkingen aanroepen; actie ondernemen, toewijzen of lenen qubits; voor beelden van wille keurige getallen; of op andere wijze, afhankelijk van de invoer waarde voor een functie.
-Als gevolg hiervan zijn Q #-functies *puur*, in dat ze altijd dezelfde invoer waarden toewijzen aan dezelfde uitvoer waarden.
-Dit gedrag zorgt ervoor dat de Q #-compiler veilig kan ordenen hoe en wanneer functies moeten worden aangeroepen bij het genereren van bewerkings-specials.
+Als gevolg hiervan Q# zijn functies *puur*, in die tijd dat ze altijd dezelfde invoer waarden toewijzen aan dezelfde uitvoer waarden.
+Dit gedrag zorgt ervoor Q# dat de compiler veilig kan ordenen hoe en wanneer functies moeten worden aangeroepen bij het genereren van bewerkings-specials.
 
-Elk Q #-bron bestand kan een wille keurig aantal functies definiëren.
+Elk Q# bron bestand kan elk wille keurig aantal functies definiëren.
 Functie namen moeten uniek zijn binnen een naam ruimte en kunnen niet conflicteren met bewerkingen of type namen.
 
 Het definiëren van een functie werkt op dezelfde manier als het definiëren van een bewerking, behalve dat er geen adjoint of beheerde Specials kunnen worden gedefinieerd voor een functie.
@@ -442,7 +445,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 Wanneer het mogelijk is om dit te doen, is het handig om klassieke logica te schrijven in termen van functies in plaats van bewerkingen, zodat u deze eenvoudig kunt gebruiken met bewerkingen. Als u bijvoorbeeld de eerdere `Square` declaratie als een *bewerking*had geschreven, zou de compiler niet kunnen garanderen dat het aanroepen van deze met dezelfde invoer dezelfde uitvoer zou produceren.
 
-Als u het verschil tussen functies en bewerkingen wilt onderstrepen, moet u rekening houden met het probleem van klassieke steek proeven voor een wille keurig getal in een Q #-bewerking:
+Als u het verschil tussen functies en bewerkingen wilt onderstrepen, moet u rekening houden met het probleem bij het klassiek bemonsteren van een wille keurig getal in een Q# bewerking:
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -464,7 +467,7 @@ Door zo veel mogelijk klassieke logica in functies te isoleren, is het eenvoudig
 
 Veel functies en bewerkingen die u mogelijk wilt definiëren, zijn niet echt afhankelijk van de typen invoer, maar u kunt de typen echter alleen impliciet gebruiken via een andere functie of bewerking.
 Stel dat het *kaart* concept gebruikelijk is in veel functionele talen. op basis van een functie $f (x) $ en een verzameling waarden $ \{ x_1, x_2, \dots, x_n \} $, kaart retourneert een nieuwe verzameling $ \{ f (x_1), f (x_2), \dots, f (x_n) \} $.
-Als u dit in Q # wilt implementeren, kunt u profiteren van het feit dat de functies van de eerste klasse zijn.
+Als u dit in wilt implementeren, moet u Q# profiteren van het feit dat de functies voor de eerste klasse zijn.
 Hier volgt een kort voor beeld van `Map` , met `T` als tijdelijke aanduiding wanneer u uitweet wat voor typen u nodig hebt.
 
 ```qsharp
@@ -504,17 +507,17 @@ Als u bovendien een nieuwe tuple of UDT bouwt, moet u nu ook een nieuwe `Map` co
 Hoewel dit kan worden beperkt door een klein aantal functies, kunt u, wanneer u meer en meer functies van hetzelfde formulier verzamelt `Map` , de kosten voor het introduceren van nieuwe typen in een redelijk korte volg orde onredelijk groot worden.
 
 Veel van deze problemen kunnen er echter toe leiden dat u de compiler niet hebt gezien de informatie die nodig is om te bepalen hoe de verschillende versies van `Map` zijn gerelateerd.
-Effectief wilt dat de compiler `Map` als een soort wiskundige functie van q #- *typen* naar q #-functies wordt behandeld.
+Effectief wilt dat de compiler `Map` als een soort wiskundige functie van Q# *typen* naar functions wordt behandeld Q# .
 
-V # formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters*te hebben, evenals hun gewone tuple-para meters.
+Q#formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters*te hebben, evenals de normale tuple-para meters.
 In de vorige voor beelden wilt u nadenken `Map` als having-para meters `Int, Pauli` in het eerste geval en `Double, String` in het tweede geval.
 Voor het grootste deel gebruikt u deze type parameters alsof het normale typen zijn. Gebruik waarden van het type para meters om matrices en Tuples te maken, functies en bewerkingen aan te roepen en toe te wijzen aan gewone of onveranderlijke variabelen.
 
 > [!NOTE]
-> Het meest extreme geval van indirecte afhankelijkheid is die van qubits, waarbij een Q #-programma niet rechtstreeks kan vertrouwen op de structuur van het `Qubit` type, maar **moet** dergelijke typen door geven aan andere bewerkingen en functies.
+> Het meest extreme geval van indirecte afhankelijkheid is die van qubits, waarbij een Q# programma niet rechtstreeks kan vertrouwen op de structuur van het `Qubit` type, maar **moet** dergelijke typen door geven aan andere bewerkingen en functies.
 
 Teruggaan naar het vorige voor beeld. vervolgens ziet u dat u `Map` de para meters van het type moet hebben, een voor de invoer tot `fn` en met één om de uitvoer van weer te geven `fn` .
-In Q # wordt dit geschreven door punt haken (dat wil zeggen `<>` , niet brakets $ \braket $!) toe te voegen {} na de naam van een functie of bewerking in de declaratie en door elke type parameter te vermelden.
+In Q# wordt dit geschreven door punt haken (dat wil zeggen `<>` , niet brakets $ \braket $!) toe te voegen {} na de naam van een functie of bewerking in de declaratie ervan en door elke type parameter te vermelden.
 De naam van elke type parameter moet beginnen met een streepje `'` , wat aangeeft dat het een type parameter is en niet een normaal type (ook wel een *concreet* type genoemd).
 Daarom `Map` is, geschreven:
 
@@ -541,8 +544,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Het schrijven van algemene functies en bewerkingen is een plek waar ' tuple-in ' tuple-out ' een zeer handige manier is om te denken over Q #-functies en-bewerkingen.
-> Omdat voor elke functie precies één invoer wordt gebruikt en er precies één uitvoer wordt geretourneerd, komt een invoer van het type `'T -> 'U` overeen met *elke* Q #-functie.
+> Het schrijven van algemene functies en bewerkingen is een plek waar ' tuple-in ' tuple-out ' een zeer handige manier is om te denken over Q# functies en bewerkingen.
+> Omdat elke functie precies één invoer heeft en er precies één uitvoer wordt geretourneerd, komt een invoer van het type `'T -> 'U` overeen met *een wille keurige* Q# functie.
 > Op dezelfde manier kunt u een wille keurige bewerking door geven aan een invoer van het type `'T => 'U` .
 
 Als tweede voor beeld moet u de uitdaging van het schrijven van een functie die de samen stelling van twee andere functies retourneert, overwegen:
@@ -571,15 +574,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-De standaard bibliotheken van Q # bieden een reeks dergelijke bewerkingen en functies van type para meters waarmee de controle stroom van een hogere volg orde eenvoudiger kan worden gemaakt.
-Deze worden verder besproken in de [hand leiding Q # Standard Library](xref:microsoft.quantum.libraries.standard.intro).
+De Q# standaard bibliotheken bieden een reeks dergelijke bewerkingen en functies van type para meters waarmee de controle stroom van een hogere volg orde eenvoudiger kan worden gemaakt.
+Deze worden verder besproken in de [ Q# hand leiding standaard bibliotheek](xref:microsoft.quantum.libraries.standard.intro).
 
 
 ## <a name="callables-as-first-class-values"></a>Callables als waarden voor de eerste klasse
 
-Een van de essentiële technieken voor het opwegen van de controle stroom en klassieke logica met behulp van functies in plaats van bewerkingen is het gebruik van die bewerkingen en functies in Q # zijn de *eerste klasse*.
+Een van de essentiële technieken voor het nemen van de controle stroom en klassieke logica met behulp van functies in plaats van bewerkingen is het gebruik van deze bewerkingen en functies in Q# *eerste klasse*.
 Dat wil zeggen dat ze elke waarde in de taal in hun eigen recht zijn.
-Het volgende is bijvoorbeeld een zeer geldige Q #-code, als een beetje indirect:
+Het volgende is bijvoorbeeld een zeer geldige Q# code, als een beetje indirect:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -649,12 +652,12 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-In principe is de klassieke logica binnen `SquareOperation` mogelijk veel meer betrokken, maar is deze nog steeds geïsoleerd van de rest van een bewerking door de garanties dat de compiler over functies kan bieden. In de standaard bibliotheek van Q # wordt deze methode gebruikt voor het uitdrukken van de klassieke controle stroom op een manier die quantum-Program ma's gemakkelijk kunnen gebruiken.
+In principe is de klassieke logica binnen `SquareOperation` mogelijk veel meer betrokken, maar is deze nog steeds geïsoleerd van de rest van een bewerking door de garanties dat de compiler over functies kan bieden. De Q# Standard-bibliotheek maakt gebruik van deze methode voor het uitdrukken van de klassieke controle stroom op een manier die kan worden gebruikt door Quantum Program ma's.
 
 
 ## <a name="recursion"></a>Recursie
 
-Q # callables mogen direct of indirect recursief zijn.
+Q#callables mogen direct of indirect recursief zijn.
 Dat wil zeggen dat een bewerking of functie zichzelf kan aanroepen, of een andere aanroep kan aanroepen die direct of indirect de aanroep bare bewerking aanroept.
 
 Er zijn twee belang rijke opmerkingen over het gebruik van recursie, echter:
@@ -662,8 +665,8 @@ Er zijn twee belang rijke opmerkingen over het gebruik van recursie, echter:
 - Het gebruik van recursie in bewerkingen heeft waarschijnlijk een conflict met bepaalde optimalisaties.
   Deze interferentie kan een grote invloed hebben op de uitvoerings tijd van de algoritme.
 - Bij het uitvoeren van een echt Quantum apparaat kan de stack-ruimte beperkt zijn, waardoor een grondige recursie kan leiden tot een runtime-fout.
-  Met name de Q #-compiler en runtime identificeren en optimaliseren de staart recursie niet.
+  Met name de Q# compiler en runtime identificeren en optimaliseren de staart recursie niet.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over [variabelen](xref:microsoft.quantum.guide.variables) in Q #.
+Meer informatie over [variabelen](xref:microsoft.quantum.guide.variables) in Q# .

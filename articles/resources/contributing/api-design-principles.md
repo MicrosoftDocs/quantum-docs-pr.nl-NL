@@ -1,32 +1,35 @@
 ---
-title: 'Q # API-ontwerp principes'
-description: 'Q # API-ontwerp principes'
+title: Q#Ontwerp principes van API
+description: Q#Ontwerp principes van API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274549"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866890"
 ---
-# <a name="q-api-design-principles"></a>Q # API-ontwerp principes
+# <a name="no-locq-api-design-principles"></a>Q#Ontwerp principes van API
 
 ## <a name="introduction"></a>Inleiding
 
-Als taal en als platform biedt Q # gebruikers de mogelijkheid om Quantum toepassingen te schrijven, uit te voeren, te begrijpen en te verkennen.
-Om gebruikers te helpen bij het ontwerpen van Q #-Bibliotheken, volgen we een aantal API-ontwerp principes om onze ontwerpen te begeleiden en om ervoor te zorgen dat we bruikbare bibliotheken kunnen maken voor de Quantum Development Community.
-Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te leren hoe u deze toepast bij het ontwerpen van Q # Api's.
+Als taal en als platform bieden gebruikers de mogelijkheid Q# om Quantum toepassingen te schrijven, uit te voeren, te begrijpen en te verkennen.
+Om gebruikers in staat te stellen, wanneer we Q# bibliotheken ontwerpen, volgen we een aantal API-ontwerp principes voor het begeleiden van onze ontwerpen en om ons te helpen bij het maken van bruikbare bibliotheken voor de Quantum Development Community.
+Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te leren hoe u deze toepast tijdens het ontwerpen van Q# api's.
 
 > [!TIP]
 > Dit is een redelijk gedetailleerd document dat is bedoeld om de ontwikkeling van bibliotheken en diep gaande bibliotheek bijdragen te helpen begeleiden.
-> Waarschijnlijk zult u het het meest nuttig vinden als u uw eigen bibliotheken schrijft in Q # of als u grotere functies bijwerkt naar de [bibliotheek met q #-bibliotheken](https://github.com/microsoft/QuantumLibraries).
+> Waarschijnlijk zult u het het beste vinden als u uw eigen bibliotheken schrijft Q# of als u grotere functies bijwerkt naar de [ Q# opslag plaats van de tape wisselaar](https://github.com/microsoft/QuantumLibraries).
 >
 > Als u daarentegen meer wilt weten hoe u een bijdrage levert aan de Quantum Development Kit in het algemeen, kunt u beginnen met de [bijdrage gids](xref:microsoft.quantum.contributing).
-> Als u meer algemene informatie wilt over hoe we u aanraden om uw Q #-code te Format teren, bent u mogelijk geïnteresseerd in het uitchecken van de [stijl gids](xref:microsoft.quantum.contributing.style).
+> Als u meer algemene informatie wilt over de manier waarop we uw Q# code kunnen opmaken, bent u mogelijk geïnteresseerd in het uitchecken van de [stijl gids](xref:microsoft.quantum.contributing.style).
 
 ## <a name="general-principles"></a>Algemene principes
 
@@ -81,7 +84,7 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 - ✅Ontwerp functies en-bewerkingen om goed te kunnen samen **werken** met andere functies en bewerkingen, zowel in dezelfde API als in eerdere bestaande bibliotheken.
 
   *Voorbeelden:*
-  - De @"microsoft.quantum.canon.delay" bewerking maakt minimale veronderstellingen over de invoer en kan dus worden gebruikt voor het uitstellen van toepassingen van bewerkingen in de standaard bibliotheek van Q # of zoals gedefinieerd door gebruikers.
+  - Met deze @"microsoft.quantum.canon.delay" bewerking worden minimale veronderstellingen over de invoer gemaakt en kunnen deze worden gebruikt om toepassingen te vertragen van bewerkingen in de Q# standaard bibliotheek of zoals gedefinieerd door gebruikers.
     <!-- TODO: define bad example. -->
 
 - ✅**Zorg** dat er louter deterministische, klassieke logica als functies beschikbaar zijn in plaats van bewerkingen.

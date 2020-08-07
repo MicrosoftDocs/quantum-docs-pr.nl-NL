@@ -1,21 +1,24 @@
 ---
-title: 'Diagnostische gegevens in de standaard bibliotheken van Q #'
-description: "Meer informatie over de diagnostische functies en bewerkingen in de standaard bibliotheken van Q # die worden gebruikt om fouten of fouten in Quantum Program ma's te ondervangen."
+title: Diagnostische gegevens in de Q# standaard bibliotheken
+description: Meer informatie over de diagnostische functies en bewerkingen in de Q# standaard bibliotheken die worden gebruikt om fouten of fouten in Quantum Programma's te ondervangen.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870631"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868539"
 ---
 # <a name="diagnostics"></a>Diagnostiek #
 
 Net als bij de klassieke ontwikkeling is het belang rijk om fouten en fouten in Quantum Program ma's te kunnen onderzoeken.
-De standaard bibliotheken van Q # bieden verschillende manieren om de juistheid van Quantum Program ma's, zoals beschreven in, te garanderen <xref:microsoft.quantum.guide.testingdebugging> .
+De Q# standaard bibliotheken bieden verschillende manieren om de juistheid van Quantum Program ma's, zoals beschreven in, te garanderen <xref:microsoft.quantum.guide.testingdebugging> .
 In het algemeen is deze ondersteuning beschikbaar in de vorm van functies en bewerkingen waarmee de doel computer aanvullende diagnostische gegevens kan leveren aan het hostprogramma of de ontwikkelaar, of die de juistheid van voor waarden en varianten afdwingt, uitgedrukt door de functie of de bewerkings aanroep.
 
 ## <a name="machine-diagnostics"></a>Machine diagnostiek ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`een hand tekening heeft `(String -> Unit)` die opnieuw aangeeft dat een logboek bestand voor fout opsporing kan worden verzonden, kan niet worden waargenomen vanuit Q #.
+> `Message`een hand tekening heeft `(String -> Unit)` die opnieuw aangeeft dat een logboek bestand voor fout opsporing niet in acht kan worden genomen Q# .
 
 De <xref:microsoft.quantum.diagnostics.dumpmachine> en <xref:microsoft.quantum.diagnostics.dumpregister> callables instrueren doel machines om diagnostische gegevens te verstrekken over alle momenteel toegewezen qubits of over een specifiek REGI ster van qubits.
 Elke doel computer is afhankelijk van de diagnostische gegevens die worden verstrekt in reactie op een dump instructie.
@@ -49,7 +52,7 @@ Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_, die de waarde
 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")`Geeft bijvoorbeeld het mathematische feit weer dat $1 + 1 = $2, terwijl `AssertQubit(One, qubit)` de voor waarde vertegenwoordigt die het meten `qubit` `One` van een met zekerheid retourneert.
 In het eerste geval kunnen we controleren of de voor waarde juist is gegeven, maar in de laatste gevallen moeten we iets weten over de status van de Qubit om de bewering te kunnen evalueren.
 
-De standaard bibliotheken van Q # bieden verschillende functies voor het weer geven van feiten, waaronder:
+De Q# standaard bibliotheken bieden verschillende functies voor het weer geven van feiten, waaronder:
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Meer in het algemeen is de <xref:microsoft.quantum.diagnostics.assertmeasurement
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
 `AssertMeasurement`heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
-Omdat `AssertMeasurement` een functie met een lege tuple als uitvoer type is, zijn geen effecten van aanroepen in `AssertMeasurement` een Q #-programma waarneembaar.
+Omdat `AssertMeasurement` een functie met een lege tuple als uitvoer type is, kan geen effect van het aangeroepen `AssertMeasurement` worden gezien in een Q# programma.
 
 De <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
 Tolerantie is additief (bijvoorbeeld `abs(expected-actual) < tol` ).

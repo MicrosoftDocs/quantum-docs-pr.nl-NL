@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275229"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869678"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kwantumcomputing leren met de Quantum Katas
 
-[De Quantum Katas](https://github.com/Microsoft/QuantumKatas/) zijn open source, zelf studies en programmeer oefeningen gericht op het door geven van de elementen van Quantum Computing en Q #-programmering tegelijk.
+[De Quantum Katas](https://github.com/Microsoft/QuantumKatas/) zijn open source, zelf studies en programmeer oefeningen gericht op het door geven van de elementen van Quantum Computing en Q# programmering.
 
 ## <a name="learning-by-doing"></a>Leren door te doen
 
@@ -36,27 +39,27 @@ Verken de basis principes en fundamentals van Quantum Computing of dieper in Qua
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Concepten van kwantumcomputing
 
-| Kata | Description |
+| Kata | Beschrijving |
 |:-----|-------------|
 |[Complexe wiskundige bewerkingen](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)|In deze zelf studie wordt een deel van de wiskundige achtergrond uitgelegd dat vereist is voor het werken met Quantum Computing, zoals imaginaire en complexe getallen.|
 |[Lineaire algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Lineaire algebra wordt gebruikt om Quantum statussen en bewerkingen in Quantum Computing aan te geven. In deze zelf studie worden de basis principes beschreven, waaronder matrices en vectoren.|
 |[Het concept van een qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Meer informatie over qubits: een van de basis concepten van Quantum Computing. |
 |[Kwantumpoorten met één qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|In deze zelf studie wordt gequbiteerde Quantum-poorten, die fungeren als de bouw stenen van Quantum algoritmen en het transformeren van Quantum Qubit-Staten op verschillende manieren.|
-|[Systemen met meerdere qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|In deze zelf studie worden multi-Qubit systemen, hun representatie in wiskundige notatie en Q #-code geïntroduceerd en het concept van Entanglement.|
+|[Systemen met meerdere qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|In deze zelf studie introduceert u multi-Qubit systemen, hun representatie in wiskundige notatie en in Q# code en het concept van Entanglement.|
 |[Multi-Qubit Quantum-Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|In deze zelf studie wordt de zelf studie [Single-Qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) beschreven en wordt gekeken naar het Toep assen van Quantum-poorten op multi-Qubit-systemen.|
 
 ### <a name="quantum-computing-fundamentals"></a>Basisprincipes van kwantumcomputing
 
-| Kata | Description |
+| Kata | Beschrijving |
 |:-----|-------------|
-|[Kwantumpoorten herkennen](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Een reeks oefeningen die zijn ontworpen om u vertrouwd te raken met de eenvoudige Quantum Gates in Q #. Bevat oefeningen voor enkelvoudige Qubit-en multi-Qubit-Gates, adjoint en gecontroleerde poorten en hoe u Gates kunt gebruiken om de status van een Qubit te wijzigen.|
-|[Kwantumsuperpositie maken](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Gebruik deze oefeningen om vertrouwd te raken met het concept van superpositie en het Program meren in Q #. Bevat oefeningen voor Qubit-en multi-Qubit-Gates, Super position en datatransport besturing en recursie in Q #.|
+|[Kwantumpoorten herkennen](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Een reeks oefeningen die zijn ontworpen om u vertrouwd te raken met de eenvoudige Quantum Gates in Q# . Bevat oefeningen voor enkelvoudige Qubit-en multi-Qubit-Gates, adjoint en gecontroleerde poorten en hoe u Gates kunt gebruiken om de status van een Qubit te wijzigen.|
+|[Kwantumsuperpositie maken](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Gebruik deze oefeningen om vertrouwd te raken met het concept van superpositie en het Program meren in Q# . Bevat oefeningen voor Qubit-en multi-Qubit-Gates, Super position en datatransport besturing en recursie in Q# .|
 |[Kwantumtoestanden onderscheiden met metingen](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Los deze oefeningen op tijdens het leren over Quantum metingen en orthogonale en niet-orthogonale Staten. |
 |[Gezamenlijke metingen](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Meer informatie over gezamenlijke pariteits metingen en hoe u de [meet](xref:microsoft.quantum.intrinsic.measure) bewerking kunt gebruiken om Quantum Staten te onderscheiden.|
 
 ### <a name="algorithms"></a>Algoritmen
 
-| Kata | Description |
+| Kata | Beschrijving |
 |:-----|-------------|
 |[Kwantumteleportatie](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)|In deze Kata wordt gebruikgemaakt van Quantum Teleportation-een protocol waarmee een Quantum status kan worden gecommuniceerd met alleen klassieke communicatie en voorheen gedeelde Quantum Entanglement.|
 |[Superdense codering](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)|De code ring van superzijdig is een protocol waarmee twee bits aan klassieke informatie kunnen worden verzonden door slechts één Qubit te verzenden met behulp van eerder gedeelde Quantum Entanglement.  |
@@ -68,16 +71,16 @@ Verken de basis principes en fundamentals van Quantum Computing of dieper in Qua
 
 ### <a name="protocols-and-libraries"></a>Protocollen en bibliotheken
 
-| Kata | Description |
+| Kata | Beschrijving |
 |:-----|-------------|
 |[BB84-protocol voor distributie van kwantumsleutels](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Meer informatie over en implementeren van een Quantum Key Distribution Protocol, [BB84](https://en.wikipedia.org/wiki/BB84), met behulp van qubits voor het uitwisselen van cryptografische sleutels. |
 |[Bit-spie gelen fout bij het corrigeren van code](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Verken de Quantum-fout correctie met de eenvoudigste van de Quantum fout correctie (QEC)-codes-de code met drie Qubit bits spie gelen.|
-|[Faseschatting](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Fase schattings algoritmen zijn enkele van de meest fundamentele bouw stenen van Quantum Computing. Meer informatie over fase schatting met deze oefeningen die betrekking hebben op de Quantum fase-schatting en het voorbereiden en uitvoeren van fase schattings routines in Q #.|
+|[Faseschatting](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Fase schattings algoritmen zijn enkele van de meest fundamentele bouw stenen van Quantum Computing. Meer informatie over fase schatting met deze oefeningen die betrekking hebben op de Quantum fase-schatting en het voorbereiden en uitvoeren van fase-schattings routines in Q# .|
 |[Quantum aritmetische: adders bouwen](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Een diep gaande reeks oefeningen waarmee [rimpels](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) worden toegevoegd aan een quantum computer. Bouw een ' in-place ' Quantum adder, breid deze uit met een ander algoritme en bouw ten slotte een Quantum-subtrekker in plaats daarvan.   |
 
 ### <a name="entanglement-games"></a>Verstrengelingsgames
 
-| Kata | Description |
+| Kata | Beschrijving |
 |:-----|-------------|
 |[CHSH-game](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)|Verken de Quantum Entanglement met een implementatie van het [CHSH](https://en.wikipedia.org/wiki/CHSH_inequality) -spel. Dit niet- [lokale](https://en.wikipedia.org/wiki/Quantum_refereed_game) spel laat zien hoe Quantum Entanglement kan worden gebruikt om de kans te verg Roten dat de spelers groter worden dan wat zou kunnen zijn met een louter klassieke strategie.|
 |[GHZ-game](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)|Het GIGAHERTZ-spel is een ander niet-lokaal spel, maar omvat drie spelers.|

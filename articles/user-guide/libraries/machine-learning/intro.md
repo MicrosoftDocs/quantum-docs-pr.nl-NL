@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
-ms.openlocfilehash: 4a4ecbb85cc5bbfb1ccb1f111309578bcc5bce3d
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872627"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868913"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Inleiding tot Quantum Machine Learning
 
@@ -63,6 +66,6 @@ Een duidelijk $b $ moet in het interval $ (-0,5, + 0,5) $ liggen om betekenisvol
 
 Een trainings case $ (x, y) \in \mathcal{D} $ wordt beschouwd als een onechte *classificatie* , gezien de bias $b $ als het label dat is uitgesteld voor $x $ zoals per firewallregel1 een andere naam heeft dan $y $. Het totale aantal misclassificaties is de *trainings Score* van de classificatie, gezien de bias $b $. De *optimale* Classifier-afwijking $b $ minimaliseert de trainings Score. Het is eenvoudig te zien dat, gezien de vooraf berekende waarschijnlijke schattingen $ \{ P (M = y_2 | U (\theta) x) | (x, *) \in\mathcal{D} \} $, de optimale classificatie afwijking kan worden gevonden door binaire zoek opdracht in interval $ (-0,5, + 0,5) $ door Maxi maal $ \ log_2 te maken (| \mathcal{D} |) $ stappen.
 
-### <a name="reference"></a>Referentie
+### <a name="reference"></a>Naslaginformatie
 
 Deze informatie moet voldoende zijn om met de code te kunnen spelen. Als u echter meer wilt weten over dit model, leest u het oorspronkelijke voor stel: [ *' circuit-georiënteerde Quantum classificaties ', Maria schuld, Alex Bocharov, Krysta Svore en Nathan Wiebe*](https://arxiv.org/abs/1804.00633)

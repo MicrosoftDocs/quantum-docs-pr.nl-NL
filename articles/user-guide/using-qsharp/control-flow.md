@@ -1,19 +1,22 @@
 ---
-title: 'Controle stroom in Q #'
+title: Controle stroom inQ#
 description: Lussen, voor waarden enzovoort.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870988"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867944"
 ---
-# <a name="control-flow-in-q"></a>Controle stroom in Q #
+# <a name="control-flow-in-no-locq"></a>Controle stroom inQ#
 
 Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met andere gebruikelijke, klassieke talen.
 U kunt de controle stroom echter op drie verschillende manieren wijzigen:
@@ -104,12 +107,12 @@ Houd er rekening mee dat aan het einde de reken kundige-Shift-Left-operator word
 
 ## <a name="repeat-until-success-loop"></a>Herhalen-tot-succes-lus
 
-De Q #-taal staat de klassieke controle stroom afhankelijk van de resultaten van het meten van qubits.
+De Q# taal maakt de klassieke controle stroom afhankelijk van de resultaten van het meten van qubits.
 Met deze mogelijkheid kunnen krachtige Probabilistic-gadgets worden geïmplementeerd waarmee de reken kosten voor het implementeren van unitaries kunnen worden verminderd.
-Voor beelden hiervan zijn de patronen *herhalen tot en met succes* (RUS) in Q #.
+Voor beelden hiervan zijn de patroon *herhalingen tot geslaagd* (RUS) in Q# .
 Deze RUS-patronen zijn Probabilistic-Program ma's die een *verwachte* lage kosten in termen van elementaire poorten hebben. de gefactureerde kosten zijn afhankelijk van de daad werkelijke uitvoering en de interleaving van de meerdere mogelijke vertakkingen.
 
-Q # ondersteunt de constructs om herhaalde tot geslaagde patronen (RUS) te vergemakkelijken
+Voor het vereenvoudigen van herhaalde tot geslaagde patronen (RUS) worden Q# de constructs ondersteund
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Zie voor meer voor beelden en Details [herhalen](#repeat-until-success-examples)
 
 ## <a name="while-loop"></a>Lus while
 
-Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, dus de speciale taal construct in Q #. Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime. Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum). 
+Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, in het bijzonder de exclusieve taal in Q# . Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime. Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum). 
 
-Q # biedt daarom ondersteuning voor het gebruik van while-lussen in functions. Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.
+Q#Daarom biedt ondersteuning voor het gebruik van while-lussen in-functies. Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.
 Het instructie blok (de hoofd tekst van de lus) wordt uitgevoerd zolang de voor waarde wordt geëvalueerd `true` .
 
 ```qsharp
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-patroon voor Qubit draaiing over een Irrational-as 
 
-In een typische use-case implementeert de volgende Q #-bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol. De implementatie maakt gebruik van een bekend RUS-patroon:
+In een typische use-case Q# implementeert de volgende bewerking een rotatie rond een Irrational-as van $ (I + 2i Z)/\sqrt {5} $ op de Bloch-bol. De implementatie maakt gebruik van een bekend RUS-patroon:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging) in Q #.
+Meer informatie over [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging) in Q# .

@@ -1,21 +1,24 @@
 ---
-title: 'Q # bestands structuur'
-description: 'Hierin worden de structuur en syntaxis van een Q #-bestand beschreven.'
+title: Q#Bestands structuur
+description: Hierin worden de structuur en syntaxis van een Q# bestand beschreven.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884171"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867927"
 ---
-# <a name="q-file-structure"></a>Q # bestands structuur
+# <a name="no-locq-file-structure"></a>Q#Bestands structuur
 
-Een Q #-bestand bestaat uit een reeks *naam ruimte declaraties*.
+Een Q# bestand bestaat uit een reeks *naam ruimte declaraties*.
 Elke naam ruimte declaratie bevat declaraties voor door de gebruiker gedefinieerde typen, bewerkingen en functies en kan een wille keurig aantal van elk type declaratie en een wille keurige volg orde bevatten.
 Zie door de [gebruiker gedefinieerde typen](xref:microsoft.quantum.guide.types#user-defined-types), [bewerkingen](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)en [functies](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions)voor meer informatie over declaraties in een naam ruimte.
 
@@ -24,10 +27,10 @@ In het bijzonder worden documentatie opmerkingen voor een naam ruimte voorafgaat
 
 ## <a name="namespace-declarations"></a>Naam ruimte declaraties
 
-Een Q #-bestand heeft normaal gesp roken slechts één naam ruimte declaratie, maar kan geen (en leeg zijn of alleen opmerkingen bevatten) of meerdere naam ruimten bevatten.
+Een Q# bestand heeft doorgaans slechts één naam ruimte declaratie, maar kan geen (en leeg zijn of alleen opmerkingen bevatten) of meerdere naam ruimten bevatten.
 Naam ruimte declaraties kunnen niet worden genest.
 
-U kunt dezelfde naam ruimte declareren in meerdere Q #-bestanden die samen worden gecompileerd, zolang er geen type, bewerking of functie declaraties met dezelfde naam zijn.
+U kunt dezelfde naam ruimte declareren in meerdere Q# bestanden die samen worden gecompileerd, zolang er geen type, bewerking of functie declaraties met dezelfde naam zijn.
 Het is met name ongeldig om hetzelfde type in dezelfde naam ruimte in meerdere bestanden te definiëren, zelfs als de declaraties identiek zijn.
 
 Een naam ruimte declaratie bestaat uit het tref woord `namespace` , gevolgd door de naam van de naam ruimte en de declaraties in de naam ruimte tussen accolades `{ }` .
@@ -61,7 +64,7 @@ Als een gedeclareerde bewerking gebruikmaakt `Op` van een bewerking vanuit `Micr
 Als u echter een bepaalde functie wilt aanroepen `Fn` vanuit `Microsoft.Quantum.Math` , moet u deze aanroepen met `Math.Fn` .
 
 De `open` instructie is van toepassing op het volledige naam ruimte blok binnen een bestand.
-Als u dus een extra naam ruimte in hetzelfde Q #-bestand als `NS` eerder definieert, hebben alle bewerkingen/functies/typen die zijn gedefinieerd in de tweede naam ruimte, geen toegang tot niets van `Microsoft.Quantum.Intrinsic` of `Microsoft.Quantum.Math` tenzij u de open instructies daarin hebt herhaald. 
+Als u dus een extra naam ruimte in hetzelfde bestand definieert Q# als `NS` eerder, hebben alle bewerkingen/functies/typen die zijn gedefinieerd in de tweede naam ruimte, geen toegang tot niets van `Microsoft.Quantum.Intrinsic` of `Microsoft.Quantum.Math` tenzij u de open instructies daarin hebt herhaald. 
 
 Als u wilt verwijzen naar een type of aanroepable dat is gedefinieerd in een andere naam ruimte die *niet* in de huidige naam ruimte wordt geopend, moet u ernaar verwijzen met de volledig gekwalificeerde naam.
 Een voor beeld van een bewerking `Op` met de naam van de `X.Y` naam ruimte:
@@ -73,13 +76,13 @@ Een voor beeld van een bewerking `Op` met de naam van de `X.Y` naam ruimte:
 Het is doorgaans beter om een naam ruimte op te neemen met behulp van een `open` instructie.
 Het gebruik van een volledig gekwalificeerde naam is vereist als twee naam ruimten constructies met dezelfde naam definiëren. voor de huidige bron worden constructies van beide gebruikt.
 
-Q # volgt dezelfde regels als voor naam als andere .NET-talen.
-Q # biedt echter geen ondersteuning voor relatieve verwijzingen naar naam ruimten.
+Q#volgt dezelfde regels als voor naam als andere .NET-talen.
+Biedt echter Q# geen ondersteuning voor relatieve verwijzingen naar naam ruimten.
 Als de naam ruimte bijvoorbeeld `a.b` is geopend, wordt een verwijzing naar een bewerking met de naam `c.d` *niet* omgezet naar een bewerking met een volledige naam `a.b.c.d` .
 
 ## <a name="formatting"></a>Opmaak
 
-De meeste Q #-instructies en de instructies eindigen met een punt komma, `;` .
+Q#De meeste instructies en instructies eindigen met een punt komma, `;` .
 Instructies en declaraties, zoals `for` en `operation` die eindigen op een instructie blok (Zie de volgende sectie), vereisen geen afsluitende punt komma.
 Elke instructie bevat een beschrijving van de vraag of de afsluit punt komma is vereist.
 
@@ -88,14 +91,14 @@ Vermijd het plaatsen van meerdere instructies op één regel.
 
 ## <a name="statement-blocks"></a>Instructie blokken
 
-Q #-instructies worden gegroepeerd in instructie blokken, die zijn opgenomen in accolades `{ }` . Een instructie blok begint met het openen `{` en eindigen met een afsluiting `}` .
+Q#instructies worden gegroepeerd in instructie blokken, die zijn opgenomen in accolades `{ }` . Een instructie blok begint met het openen `{` en eindigen met een afsluiting `}` .
 
 Een overzichts blok dat is inge sloten in een ander blok, wordt beschouwd als een subblok van het container blok; contains-en sub-blokken worden ook outer-en Inner-blokken genoemd.
 
 ## <a name="comments"></a>Opmerkingen
 
 Opmerkingen beginnen met twee slashes `//` en door gaan tot het einde van de regel.
-Een opmerking kan ergens in een Q #-bron bestand worden weer gegeven.
+Een opmerking kan ergens in een bron bestand worden weer gegeven Q# .
 
 ## <a name="documentation-comments"></a>Documentatie opmerkingen
 
@@ -103,7 +106,7 @@ Opmerkingen die beginnen met drie slashes, `///` worden speciaal door de compile
 In dat geval behandelt de compiler ze als documentatie voor het gedefinieerde aanroep bare of door de gebruiker gedefinieerde type, hetzelfde als andere .NET-talen.
 
 In `///` opmerkingen wordt tekst die als onderdeel van de API-documentatie moet worden weer gegeven, opgemaakt als een [prijs](https://daringfireball.net/projects/markdown/syntax)opgave, met verschillende delen van de documentatie die worden aangegeven door een speciaal benoemde koptekst.
-In de prijs verlaging gebruikt `@"<ref target>"` u de extensie voor kruis verwijzingen, functies en door de gebruiker gedefinieerde typen in Q #. Vervang door `<ref target>` de volledig gekwalificeerde naam van het code object waarnaar wordt verwezen.
+Gebruik in de prijs van de `@"<ref target>"` uitbrei ding voor kruis verwijzings bewerkingen, functies en door de gebruiker gedefinieerde typen in Q# . Vervang door `<ref target>` de volledig gekwalificeerde naam van het code object waarnaar wordt verwezen.
 Andere documentatie-engines kunnen ook extra kortings uitbreidingen ondersteunen.
 
 Bijvoorbeeld:
@@ -153,4 +156,4 @@ De volgende namen zijn geldig als documentatie opmerkings koppen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions) in Q #.
+Meer informatie over [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions) in Q# .

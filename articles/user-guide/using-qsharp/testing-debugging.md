@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870971"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867910"
 ---
 # <a name="testing-and-debugging"></a>Testen en foutopsporing
 
 Net als bij klassiek Program meren is het essentieel om te controleren of Quantum-Program ma's functioneren zoals bedoeld en om te kunnen vaststellen of het probleem onjuist is.
-In deze sectie hebben we de hulp middelen die worden aangeboden door Q # voor het testen en opsporen van fouten in Quantum Program ma's.
+In deze sectie hebben we de hulp middelen die worden aangeboden Q# voor het testen en opsporen van fouten in Quantum Program ma's.
 
 ## <a name="unit-tests"></a>Eenheids tests
 
 Een gemeen schappelijke aanpak voor het testen van klassieke Program ma's is het schrijven van kleine Program ma's met de naam *unit-tests*, waarmee code wordt uitgevoerd in een bibliotheek en de uitvoer ervan wordt vergeleken met een verwachte uitvoer.
 U kunt er bijvoorbeeld voor zorgen dat er `Square(2)` wordt geretourneerd, `4` omdat u *een priori* weet dat $2 ^ 2 = $4.
 
-Q # ondersteunt het maken van eenheids tests voor Quantum-Program ma's en die als tests kunnen worden uitgevoerd binnen het test raamwerk van de [xUnit](https://xunit.github.io/) -eenheid.
+Q#biedt ondersteuning voor het maken van eenheids tests voor Quantum-Program ma's en die als tests kunnen worden uitgevoerd binnen het test raamwerk van de [xUnit](https://xunit.github.io/) -eenheid.
 
 ### <a name="creating-a-test-project"></a>Een test project maken
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Open Visual Studio 2019. Ga naar het menu **bestand** en selecteer **Nieuw > project...**. Zoek in de rechter bovenhoek `Q#` de sjabloon **Q # test project** en selecteer deze.
+Open Visual Studio 2019. Ga naar het menu **bestand** en selecteer **Nieuw > project...**. Zoek in de rechter bovenhoek `Q#` de ** Q# test project** sjabloon en selecteer deze.
 
 #### <a name="command-line--visual-studio-code"></a>[Opdrachtregel/Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-Het nieuwe project heeft één bestand `Tests.qs` , dat een handige plaats biedt om nieuwe Q #-eenheids tests te definiëren.
+Het nieuwe project heeft één bestand `Tests.qs` , dat een handige plaats biedt om nieuwe Q# eenheids tests te definiëren.
 In eerste instantie bevat dit bestand één sample-eenheids test `AllocateQubit` waarmee wordt gecontroleerd of een nieuw toegewezen Qubit zich in de status $ \ket $ bevindt {0} en een bericht afdrukt:
 
 ```qsharp
@@ -57,7 +60,7 @@ In eerste instantie bevat dit bestand één sample-eenheids test `AllocateQubit`
     }
 ```
 
-Een Q #-bewerking of-functie die een argument van het type `Unit` en retourneert, `Unit` kan worden gemarkeerd als een eenheids test via het `@Test("...")` kenmerk. In het vorige voor beeld, het argument voor dat kenmerk, `"QuantumSimulator"` geeft het doel aan waarop de test wordt uitgevoerd. Eén test kan op meerdere doelen worden uitgevoerd. Voeg bijvoorbeeld eerst een kenmerk toe `@Test("ResourcesEstimator")` `AllocateQubit` . 
+Elke Q# bewerking of functie die een argument van het type `Unit` en retourneert, `Unit` kan worden gemarkeerd als een eenheids test via het `@Test("...")` kenmerk. In het vorige voor beeld, het argument voor dat kenmerk, `"QuantumSimulator"` geeft het doel aan waarop de test wordt uitgevoerd. Eén test kan op meerdere doelen worden uitgevoerd. Voeg bijvoorbeeld eerst een kenmerk toe `@Test("ResourcesEstimator")` `AllocateQubit` . 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ Een Q #-bewerking of-functie die een argument van het type `Unit` en retourneert
 ```
 Sla het bestand op en voer alle tests uit. Er moeten nu twee eenheids tests zijn, één waarbij `AllocateQubit` wordt uitgevoerd op de `QuantumSimulator` en een waar deze wordt uitgevoerd in de `ResourcesEstimator` . 
 
-De Q #-compiler herkent de ingebouwde doelen `"QuantumSimulator"` , `"ToffoliSimulator"` en `"ResourcesEstimator"` als geldige uitvoerings doelen voor eenheids testen. Het is ook mogelijk om een volledig gekwalificeerde naam op te geven voor het definiëren van een aangepast uitvoerings doel. 
+De Q# compiler herkent de ingebouwde doelen `"QuantumSimulator"` , `"ToffoliSimulator"` en `"ResourcesEstimator"` als geldige uitvoerings doelen voor eenheids testen. Het is ook mogelijk om een volledig gekwalificeerde naam op te geven voor het definiëren van een aangepast uitvoerings doel. 
 
-### <a name="running-q-unit-tests"></a>Er worden Q #-eenheids tests uitgevoerd
+### <a name="running-no-locq-unit-tests"></a>Actieve Q# eenheids tests
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ Voor mislukte tests worden ook de uitvoer naar de console afgedrukt om de fout t
 
 ## <a name="facts-and-assertions"></a>Feiten en verklaringen
 
-Omdat functies in Q # geen _logische_ neven effecten hebben, kunt u nooit nakijken, vanuit een Q #-programma, andere soorten effecten van het uitvoeren van een functie waarvan het uitvoer type de lege tuple is `()` .
-Dat wil zeggen dat een doel computer ervoor kiest geen functie uit te voeren die wordt geretourneerd `()` met de garantie dat dit weglatings gedrag van de volgende Q #-code niet wordt gewijzigd.
-Dit gedrag zorgt ervoor dat functies die worden geretourneerd `()` (zoals `Unit` ) een handig hulp middel voor het insluiten van beweringen en het opsporen van fouten in Q #-Program ma's. 
+Omdat functies in Q# geen _logische_ neven effecten hebben, kunt u nooit nagaan, vanuit een Q# programma, andere soorten effecten van het uitvoeren van een functie waarvan het uitvoer type de lege tuple is `()` .
+Dat wil zeggen dat een doel computer ervoor kiest geen functie uit te voeren die wordt geretourneerd `()` met de garantie dat dit weglatings gedrag van de volgende code niet wordt gewijzigd Q# .
+Dit gedrag zorgt ervoor dat functies die worden geretourneerd `()` (zoals `Unit` ) een handig hulp middel voor het insluiten van beweringen en het opsporen van fouten in Q# Program ma's. 
 
 Laten we eens een eenvoudig voor beeld bekijken:
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-Hier geeft het tref woord `fail` aan dat de berekening niet moet worden voortgezet en wordt er een uitzonde ring gegenereerd op de doel computer waarop het Q #-programma wordt uitgevoerd.
-Op basis van de definitie kan een fout van dit soort niet worden waargenomen vanuit Q # omdat de doel machine de Q #-code niet meer uitvoert nadat een instructie is bereikt `fail` .
+Hier geeft het sleutel woord `fail` aan dat de berekening niet moet worden voortgezet en wordt er een uitzonde ring gegenereerd op de doel computer waarop het programma wordt uitgevoerd Q# .
+Op basis van de definitie kan een fout van dit soort niet worden waargenomen Q# , omdat de doel computer de code niet langer uitvoert Q# nadat een `fail` instructie is bereikt.
 Daarom `PositivityFact` kunnen we er zeker van zijn dat de invoer van de gegevens positief is.
 
 Houd er rekening mee dat we hetzelfde gedrag kunnen implementeren als `PositivityFact` het gebruik [`Fact`](xref:microsoft.quantum.diagnostics.fact) van de functie uit de <xref:microsoft.quantum.diagnostics> naam ruimte:
@@ -354,7 +357,7 @@ Over het algemeen is de status van een REGI ster dat Entangled met een ander REG
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-In het volgende voor beeld ziet u hoe u zowel <xref:microsoft.quantum.diagnostics.dumpregister> als <xref:microsoft.quantum.diagnostics.dumpmachine> in uw Q #-code kunt gebruiken:
+In het volgende voor beeld ziet u hoe u zowel <xref:microsoft.quantum.diagnostics.dumpregister> als <xref:microsoft.quantum.diagnostics.dumpmachine> in uw Q# code kunt gebruiken:
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Foutopsporing
 
-Naast `Assert` en `Dump` functions en Operations ondersteunt Q # een subset van de standaard functies voor het opsporen van problemen met Visual Studio: het [instellen van regel onderbrekingen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), het [door lopen van code met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)en het [controleren van waarden van klassieke variabelen](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) is allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
+Onder `Assert` en `Dump` functions en Operations Q# ondersteunt een subset van de standaard functies voor het opsporen van fouten in Visual Studio: het [instellen van regel onderbrekingen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), het [door lopen van code met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)en het [controleren van waarden van klassieke variabelen](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) is allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
 
 Fout opsporing in Visual Studio code maakt gebruik van de mogelijkheden voor fout opsporing die worden geboden door de C# voor Visual Studio code-extensie die wordt ondersteund door OmniSharp en waarvoor de [nieuwste versie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)moet worden geïnstalleerd. 

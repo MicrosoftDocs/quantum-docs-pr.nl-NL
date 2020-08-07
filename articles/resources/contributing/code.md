@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274548"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866906"
 ---
 # <a name="contributing-code"></a>Code bijdragen
 
@@ -28,10 +31,10 @@ Het is dus handig wanneer de functionaliteit die door een bijdrage wordt toegevo
 
 ### <a name="unit-tests"></a>Eenheids tests
 
-De Q #-functies,-bewerkingen en door de gebruiker gedefinieerde typen waaruit bibliotheken bestaan, zoals de Canon, worden automatisch getest als onderdeel van de ontwikkeling van de [**micro soft/QuantumLibraries-**](https://github.com/Microsoft/QuantumLibraries/) opslag plaats.
+De Q# functies, bewerkingen en door de gebruiker gedefinieerde typen die bibliotheken vormen zoals de Canon, worden automatisch getest als onderdeel van de ontwikkeling van de [**micro soft/QuantumLibraries-**](https://github.com/Microsoft/QuantumLibraries/) opslag plaats.
 Wanneer er een nieuwe pull-aanvraag wordt geopend, bijvoorbeeld de configuratie van [Azure-pijp lijnen](https://azure.microsoft.com/services/devops/pipelines/) , wordt gecontroleerd of de wijzigingen in de pull-aanvraag geen invloed hebben op de bestaande functionaliteit waarvan de Quantum-programmeer Community afhankelijk is.
 
-Met de meest recente Q #-versie wordt de eenheids test gedefinieerd met behulp van het- `@Test("QuantumSimulator")` kenmerk. Het argument kan "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" of een volledig gekwalificeerde naam zijn die het uitvoerings doel opgeeft. Verschillende kenmerken die verschillende uitvoerings doelen definiëren, kunnen worden gekoppeld aan dezelfde aanroepable. Sommige van onze tests maken nog steeds gebruik van het afgeschafte [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -pakket dat alle Q #-functies en-bewerkingen bevat die eindigen op `Test` het [xUnit](https://xunit.github.io/) -Framework. Dit pakket is niet meer nodig om de eenheids tests te definiëren. 
+Met de nieuwste Q# versie wordt eenheids test gedefinieerd met behulp van het- `@Test("QuantumSimulator")` kenmerk. Het argument kan "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" of een volledig gekwalificeerde naam zijn die het uitvoerings doel opgeeft. Verschillende kenmerken die verschillende uitvoerings doelen definiëren, kunnen worden gekoppeld aan dezelfde aanroepable. Sommige van onze tests maken nog steeds gebruik van het afgeschafte [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -pakket dat alle Q# functies en bewerkingen bevat die eindigen op `Test` het [xUnit](https://xunit.github.io/) -Framework. Dit pakket is niet meer nodig om de eenheids tests te definiëren. 
 
 De volgende functie wordt gebruikt om ervoor te zorgen dat de <xref:microsoft.quantum.canon.fst> en- <xref:microsoft.quantum.canon.snd> functies de juiste uitvoer in een representatief voor beeld retour neren.
 Als de uitvoer van `Fst` of `Snd` onjuist is, `fail` wordt de instructie gebruikt om te zorgen dat de test mislukt.
@@ -92,7 +95,7 @@ Het kan lastig zijn om alles te doen, dus we plannen welke functies u het beste 
 Dit kan een andere situatie zijn waarbij het loslaten van een functie als een bibliotheek van derden een hoop idee kan maken.
 Het is ook mogelijk om uw hulp te vragen bij het wijzigen van een functie zodat deze beter past in onze route kaart, zodat we het beste werk kunnen doen.
 
-We vragen u ook om wijzigingen in een pull-aanvraag als er meer documentatie of eenheids tests nodig zijn om ons te helpen hun gebruik te maken, of als de stijl van de rest van de Q #-bibliotheken zo veel verschilt dat het voor gebruikers moeilijker wordt om uw functie te vinden.
+We vragen u ook om wijzigingen in een pull-aanvraag als er meer documentatie of eenheids tests nodig zijn om ons te helpen hun gebruik te maken, of als het verschilt van de stijl van de rest van de Q# bibliotheken waardoor het voor gebruikers moeilijker wordt om uw functie te vinden.
 In deze gevallen proberen we een aantal adviezen te geven over wat er kan worden toegevoegd of gewijzigd om uw bijdrage voor ons gemakkelijker te maken.
 
 Ten slotte kunnen we geen bijdragen accepteren die schade aanrichten aan de quantum computer Community, zoals beschreven in de [micro soft open source-gedrags code](https://opensource.microsoft.com/codeofconduct/).
@@ -102,10 +105,10 @@ Bedankt voor uw hulp bij het realiseren van dit doel.
 ## <a name="next-steps"></a>Volgende stappen
 
 Hartelijk dank dat u de Quantum Development Kit een fantastische resource wilt maken voor de hele Quantum-programmeer community.
-Ga voor meer informatie naar de volgende hand leiding over Q # style.
+Ga voor meer informatie naar de volgende hand leiding voor Q# stijl.
 
 > [!div class="nextstepaction"]
-> [Meer informatie over Q # Style-richt lijnen](xref:microsoft.quantum.contributing.style)
+> [Meer informatie over Q# stijl richtlijnen](xref:microsoft.quantum.contributing.style)
 
 Afhankelijk van wat voor soort code u bijdraagt, zijn er mogelijk extra zaken die u kunnen helpen om uw bijdrage zo goed mogelijk voor de community te laten doen.
 

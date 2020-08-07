@@ -1,30 +1,33 @@
 ---
-title: "Program ma's op Qubit-niveau schrijven en simuleren in Q #"
+title: Program ma's op Qubit-niveau schrijven en simuleren inQ#
 description: Stapsgewijze zelf studie voor het schrijven en simuleren van een Quantum programma dat op het individuele Qubit niveau werkt
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: e7ebdec4cd1aa201030d82759a3aa56473b26417
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869712"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Zelf studie: Program ma's op Qubit schrijven en simuleren in Q\#
 
 Welkom bij de Quantum Development Kit-zelf studie over het schrijven en simuleren van een eenvoudig Quantum programma dat wordt uitgevoerd op afzonderlijke qubits. 
 
-Hoewel Q # primair is gemaakt als een programmeer taal op hoog niveau voor grootschalige Quantum Program ma's, kan deze net zo eenvoudig worden gebruikt om het lagere niveau van Quantum Program ma's te verkennen: rechtstreeks adresseren specifieke qubits.
-Met de flexibiliteit van Q # kunnen gebruikers een Quantum systeem van een dergelijk abstractie niveau benaderen, en in deze zelf studie gaan we in op de qubits zelf.
+Hoewel Q# primair is gemaakt als een programmeer taal op hoog niveau voor grootschalige Quantum Program ma's, kan deze net zo eenvoudig worden gebruikt voor het verkennen van het lagere niveau van Quantum Program ma's: rechtstreeks adresseren van specifieke qubits.
+Dankzij de flexibiliteit van Q# kunnen gebruikers een Quantum systeem van een dergelijk abstractie niveau benaderen, en in deze zelf studie gaan we in op de qubits zelf.
 In het bijzonder kijken we naar de schermen van de [Quantum-Fourier-trans formatie](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), een subroutine die integraal is aan veel grotere Quantum algoritmen.
 
 Houd er rekening mee dat deze weer gave op laag niveau van Quantum gegevens verwerking vaak wordt beschreven in termen van '[Quantum circuits](xref:microsoft.quantum.concepts.circuits)', die de sequentiële toepassing van poorten voor specifieke qubits van een systeem vertegenwoordigen.
 
 Daarom kunnen de single-en multi-Qubit-bewerkingen die we opeenvolgend Toep assen, gemakkelijk worden weer gegeven in een circuit diagram.
-In ons geval definieert u een Q #-bewerking voor het uitvoeren van de volledige Qubit Quantum-Fourier-trans formatie, die de volgende representatie als een circuit heeft:
+In ons geval definieert Q# u een bewerking voor het uitvoeren van de volledige Qubit Quantum-Fourier-trans formatie, die de volgende representatie als een circuit heeft:
 
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
@@ -38,33 +41,33 @@ In ons geval definieert u een Q #-bewerking voor het uitvoeren van de volledige 
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>In deze zelfstudie leert u het volgende:
 
 > [!div class="checklist"]
-> * Quantum bewerkingen definiëren in Q #
-> * Vraag Q #-bewerkingen rechtstreeks vanaf de opdracht regel of met behulp van een klassiek host-programma
+> * Quantum bewerkingen definiëren inQ#
+> * Q#Bewerkingen rechtstreeks aanroepen vanaf de opdracht regel of met behulp van een klassiek host-programma
 > * Een Quantum bewerking simuleren vanuit Qubit-toewijzing naar meting uitvoer
 > * Bekijk hoe de gesimuleerde Wavefunction van het Quantum systeem tijdens de bewerking wordt ontwikkeld
 
 Het uitvoeren van een Quantum programma met de Quantum Development Kit van micro soft bestaat meestal uit twee delen:
-1. Het programma zelf, dat wordt geïmplementeerd met behulp van de ' Q # Quantum-programmeer taal en vervolgens wordt aangeroepen om te worden uitgevoerd op een quantum computer of Quantum Simulator. Deze bestaan uit 
-    - V # bewerkingen: subroutines die op Quantum registers handelen, en 
-    - Q # functions: klassieke subroutines die worden gebruikt binnen het Quantum algoritme.
+1. Het programma zelf, dat wordt geïmplementeerd met behulp van de Q# Quantum programmeer taal en vervolgens wordt aangeroepen om te worden uitgevoerd op een quantum computer of Quantum Simulator. Deze bestaan uit 
+    - Q#bewerkingen: subroutines die optreden op Quantum registers en 
+    - Q#functions: klassieke subroutines die worden gebruikt binnen het Quantum algoritme.
 2. Het ingangs punt dat wordt gebruikt om het Quantum programma aan te roepen en de doel computer op te geven waarop het moet worden uitgevoerd.
     U kunt dit rechtstreeks doen via de opdracht regel of via een hostprogramma dat is geschreven in een klassieke programmeer taal, zoals python of C#.
     Deze zelf studie bevat instructies voor de methode die u wilt gebruiken.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits toewijzen en Quantum bewerkingen definiëren
 
-Het eerste deel van deze zelf studie bestaat uit het definiëren van de Q # `Perform3qubitQFT` -bewerking, waarmee de Quantum Fourier-trans formatie op drie qubits wordt uitgevoerd. 
+Het eerste deel van deze zelf studie bestaat uit het definiëren van de Q# bewerking `Perform3qubitQFT` , waarmee de Quantum Fourier-trans formatie op drie qubits wordt uitgevoerd. 
 
 Daarnaast gebruiken we de [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) functie om te zien hoe de gesimuleerde Wavefunction van ons drie Qubit systeem zich in de hele bewerking ontwikkelt.
 
-In de eerste stap maakt u uw Q #-project en-bestand.
+De eerste stap is het Q# project en het bestand maken.
 De stappen hiervoor zijn afhankelijk van de omgeving die u gebruikt om het programma aan te roepen, en u kunt de details vinden in de respectieve [installatie handleidingen](xref:microsoft.quantum.install).
 
 De onderdelen van het bestand worden stapsgewijs door lopen, maar de code is ook beschikbaar als een volledige blok kering.
 
-### <a name="namespaces-to-access-other-q-operations"></a>Naam ruimten voor toegang tot andere Q #-bewerkingen
+### <a name="namespaces-to-access-other-no-locq-operations"></a>Naam ruimten voor toegang tot andere Q# bewerkingen
 In het bestand definieert u eerst de naam ruimte `NamespaceQFT` die wordt gebruikt door de compiler.
-Voor de bewerking om gebruik te maken van bestaande Q #-bewerkingen, openen we de relevante `Microsoft.Quantum.<>` naam ruimten.
+Voor de bewerking om gebruik te maken van bestaande Q# bewerkingen opent u de relevante `Microsoft.Quantum.<>` naam ruimten.
 
 ```qsharp
 namespace NamespaceQFT {
@@ -90,7 +93,7 @@ De bewerking heeft nu geen argumenten en retourneert niets---in dit geval schrij
 Later gaan we deze wijzigen om een matrix met meet resultaten te retour neren, waarop het punt `Unit` wordt vervangen door `Result[]` . 
 
 ### <a name="allocate-qubits-with-using"></a>Qubits toewijzen aan`using`
-Binnen onze Q #-bewerking wijzen we eerst een REGI ster van drie qubits toe met de `using` instructie:
+In onze Q# bewerking wijzen we eerst een REGI ster van drie qubits toe met de `using` instructie:
 
 ```qsharp
         using (qs = Qubit[3]) {
@@ -104,16 +107,16 @@ Binnen onze Q #-bewerking wijzen we eerst een REGI ster van drie qubits toe met 
 Met `using` worden automatisch de qubits toegewezen in de status $ \ket {0} $. We kunnen dit controleren door te gebruiken [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) en [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , waarmee een teken reeks en de huidige status van het systeem naar de-console worden afgedrukt.
 
 > [!NOTE]
-> De `Message(<string>)` `DumpMachine()` functies en (van [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) en [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ) worden beide rechtstreeks naar de console afgedrukt. Net als bij een echte Quantum berekening biedt Q # geen rechtstreekse toegang tot Qubit Staten.
+> De `Message(<string>)` `DumpMachine()` functies en (van [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) en [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ) worden beide rechtstreeks naar de console afgedrukt. Net als bij een echte Quantum berekening, staat Q# ons niet toe direct toegang te krijgen tot Qubit Staten.
 > Als `DumpMachine` de huidige status van de doel computer afdrukt, kan dit echter waardevol inzicht geven in het gebruik van fouten in combi natie met de volledige status Simulator.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Single-Qubit en beheerde poorten Toep assen
 
 Daarna passen we de Gates toe die de bewerking zelf vormen.
-Q # bevat al veel eenvoudige Quantum poorten als bewerkingen in de [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) naam ruimte, en dit is geen uitzonde ring. 
+Q#bevat al veel eenvoudige Quantum poorten als bewerkingen in de [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) naam ruimte, en dit is geen uitzonde ring. 
 
-Binnen een Q #-bewerking worden de instructies die callables aanroepen, in sequentiële volg orde uitgevoerd.
+Binnen een Q# bewerking worden de instructies die callables aanroepen, in sequentiële volg orde uitgevoerd.
 Daarom is de eerste poort die moet worden toegepast, de [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) voor de eerste Qubit:
 
 <br/>
@@ -131,7 +134,7 @@ Een `R1(θ, <qubit>)` bewerking in het algemeen laat het onderdeel $ \ket {0} $ 
 
 #### <a name="controlled-operations"></a>Beheerde bewerkingen
 
-Q # maakt het zeer eenvoudig om een bewerking uit te voeren op een of meer besturings qubits.
+Q#maakt het zeer eenvoudig om een bewerking uit te voeren op een of meer besturings qubits.
 Over het algemeen hebben we alleen de oproep met en `Controlled` de bewerkings argumenten gewijzigd als:
 
  `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -176,12 +179,12 @@ We hoeven alleen een [`SWAP`](xref:microsoft.quantum.intrinsic.swap) Gate toe te
 
 Dit is nodig omdat de aard van de Quantum Fourier-trans formatie de qubits in omgekeerde volg orde uitvoert, zodat de wissels een naadloze integratie van de subroutine tot grotere algoritmen mogelijk maakt.
 
-Daarom hebben we de Qubit van de Quantum Fourier-trans formatie in onze Q #-bewerking voltooid:
+Daarom is het schrijven van de Qubit van de Quantum Fourier-trans formatie in onze Q# bewerking voltooid:
 
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 We kunnen de service echter nog maar een dag aanroepen.
-Onze qubits stond in de status $ \ket {0} $ toen we ze hebben toegewezen, en in de loop van de tijd, in Q #, moeten we alles op dezelfde manier hebben gevonden (of beter!).
+Onze qubits stond in de status $ \ket {0} $ toen we ze hebben toegewezen, en in het geval van leven, moeten we op Q# dezelfde manier op dezelfde wijze worden gevonden als we ze hebben aangetroffen (of beter!).
 
 ### <a name="deallocate-qubits"></a>Toewijzing qubits ongedaan maken
 
@@ -194,11 +197,11 @@ We bellen [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) opni
             ResetAll(qs);
 ```
 
-Als u wilt dat alle niet-toegewezen qubits expliciet worden ingesteld op $ \ket {0} $ is een basis functie van Q #, omdat het mogelijk is dat andere bewerkingen hun status nauw keurig kennen wanneer ze dezelfde qubits (een schaarse resource) gaan gebruiken.
+Als u wilt dat alle niet-toegewezen qubits expliciet worden ingesteld op $ \ket {0} $ is een basis functie van Q# , omdat het mogelijk is dat andere bewerkingen hun status nauw keurig kennen wanneer ze dezelfde qubits (een schaarse resource) gaan gebruiken.
 Bovendien zorgt dit ervoor dat ze niet Entangled zijn met andere qubits in het systeem.
 Als het opnieuw instellen niet wordt uitgevoerd aan het einde van een `using` toewijzings blok, wordt een runtime-fout gegenereerd.
 
-Uw volledige Q #-bestand moet er nu als volgt uitzien:
+Het volledige Q# bestand moet er nu als volgt uitzien:
 
 ```qsharp
 namespace NamespaceQFT {
@@ -239,18 +242,18 @@ namespace NamespaceQFT {
 ```
 
 
-Als het bestand Q # en de bewerking is voltooid, kan ons Quantum programma worden aangeroepen en gesimuleerd.
+Het Q# bestand en de bewerking zijn voltooid, maar ons Quantum programma kan worden aangeroepen en gesimuleerd.
 
 ## <a name="execute-the-program"></a>Het programma uitvoeren
 
-Nadat u de Q #-bewerking in een `.qs` bestand hebt gedefinieerd, moet u deze bewerking nu aanroepen en de geretourneerde klassieke gegevens bekijken.
-Er wordt nu niets geretourneerd (terugvallen op basis van de hierboven gedefinieerde bewerking `Unit` ), maar wanneer we de Q #-bewerking later wijzigen om een matrix met meet resultaten te retour neren ( `Result[]` ), zullen we dit aanpakken.
+Q#Als u de bewerking in een `.qs` bestand hebt gedefinieerd, moet u deze bewerking nu aanroepen en de geretourneerde klassieke gegevens bekijken.
+Er wordt nu niets geretourneerd (intrekken dat de hierboven gedefinieerde bewerking is geretourneerd `Unit` ), maar wanneer we de bewerking later wijzigen Q# om een matrix met meet resultaten te retour neren ( `Result[]` ), zullen we dit aanpakken.
 
-Hoewel het programma Q # alomtegenwoordige is in de omgevingen die worden gebruikt om het te aanroepen, is de manier waarop u dit kunt doen, afhankelijk van elkaar. Volg de instructies in het tabblad dat overeenkomt met uw installatie: werken vanuit de Q #-opdracht regel toepassing of een host-programma in Python of C#.
+Terwijl het Q# programma wordt alomtegenwoordige in de omgevingen die worden gebruikt om het te aanroepen, is de manier waarop u dit kunt doen, afhankelijk van elkaar. Volg de instructies in het tabblad dat overeenkomt met uw installatie: werken vanuit de Q# opdracht regel toepassing of een host-programma in Python of C#.
 
 #### <a name="command-line"></a>[Opdrachtregel](#tab/tabid-cmdline)
 
-Voor het uitvoeren van het programma Q # vanaf de opdracht regel is slechts een kleine wijziging van het Q #-bestand vereist.
+Voor het uitvoeren Q# van het programma vanaf de opdracht regel is slechts een kleine wijziging in het Q# bestand vereist.
 
 Voeg simpelweg toe `@EntryPoint()` aan een regel voor de bewerkings definitie:
 
@@ -274,17 +277,17 @@ Na de uitvoering ziet u de `Message` onderstaande en `DumpMachine` afgedrukte ui
 Een python-hostbestand maken: `host.py` .
 
 Het hostbestand is als volgt samengesteld: 
-1. Eerst importeren we de `qsharp` module, die de module lader voor Q #-interoperabiliteit registreert. 
-    Op deze manier kunnen Q # naam ruimten (zoals de `NamespaceQFT` in ons Q #-bestand gedefinieerde) worden weer gegeven als python-modules, van waaruit we de bewerkingen van q # kunnen importeren.
-2. Importeer vervolgens de Q #-bewerkingen die in dit geval direct---worden aangeroepen `Perform3qubitQFT` .
-    Het invoer punt hoeft alleen te worden geïmporteerd naar een Q #-programma (dat wil zeggen _geen_ bewerkingen zoals `H` en `R1` , die worden aangeroepen door andere Q #-bewerkingen, maar nooit door de klassieke host).
-3. Bij het simuleren van Q #-bewerkingen of-functies gebruikt u het formulier `<Q#callable>.simulate(<args>)` om ze op de doel computer uit te voeren `QuantumSimulator()` . 
+1. Eerst importeren we de `qsharp` module, die de module lader registreert voor Q# interoperabiliteit. 
+    Op deze manier kunnen Q# naam ruimten (zoals de `NamespaceQFT` in ons Q# bestand gedefinieerde) worden weer gegeven als python-modules, waaruit we bewerkingen kunnen importeren Q# .
+2. Importeer vervolgens de Q# bewerkingen die in dit geval direct---worden aangeroepen `Perform3qubitQFT` .
+    We hoeven het toegangs punt alleen in een programma te importeren Q# (dat wil zeggen _geen_ bewerkingen zoals `H` en `R1` , die worden aangeroepen door andere Q# bewerkingen, maar nooit door de klassieke host).
+3. In het simuleren van Q# bewerkingen of functies gebruikt u het formulier `<Q#callable>.simulate(<args>)` om ze op de doel computer uit te voeren `QuantumSimulator()` . 
 
 > [!NOTE]
 > Als we de bewerking willen aanroepen op een andere computer, bijvoorbeeld de `ResourceEstimator()` , zou u gewoon gebruiken `<Q#callable>.estimate_resources(<args>)` .
-> Over het algemeen worden Q #-bewerkingen neutraal naar de machines waarop ze worden uitgevoerd, maar sommige functies, zoals `DumpMachine` mogelijk, kunnen zich anders gedragen.
+> Q#Over het algemeen worden de bewerkingen uitgevoerd op de computers waarop ze zijn gestart, maar sommige functies, zoals `DumpMachine` mogelijk, kunnen zich anders gedragen.
 
-4. Bij het uitvoeren van de simulatie retourneert de bewerkings aanroep waarden zoals gedefinieerd in het bestand Q #.
+4. Bij het uitvoeren van de simulatie retourneert de bewerkings aanroep waarden die zijn gedefinieerd in het Q# bestand.
     Er wordt op dit moment niets geretourneerd, maar er wordt later een voor beeld weer gegeven van het toewijzen en verwerken van deze waarden.
     Met de resulterende gegevens in onze handen en volledig klassiek kunnen we alles doen wat we graag doen.
 
@@ -310,7 +313,7 @@ De C#-host heeft vier onderdelen:
 2. Bereken de argumenten die vereist zijn voor het kwantumalgoritme.
     Er zijn geen in dit voor beeld.
 3. Voer het kwantumalgoritme uit. 
-    Elke Q#-bewerking genereert een C#-klasse met dezelfde naam. 
+    Elke Q# bewerking genereert een C#-klasse met dezelfde naam. 
     Deze klasse heeft een methode `Run` die de bewerking **asynchroon** uitvoert.
     De uitvoering is asynchroon, omdat de uitvoering op feitelijke hardware asynchroon is. 
     Omdat de `Run` methode asynchroon is, wordt de `Wait()` methode aangeroepen. Hiermee wordt de uitvoering geblokkeerd totdat de taak is voltooid en het resultaat synchroon wordt geretourneerd. 
@@ -393,7 +396,7 @@ De gedrukte uitvoer illustreert dus dat onze geprogrammeerde Gates onze staat he
 
 $ $ \ket{\psi} \_ {begin} = \ket {000} $ $
 
-tot 
+in 
 
 $ $ \begin{align} \ket{\psi} \_ {Final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -407,7 +410,7 @@ Helaas vertelt een hoek steen van Quantum monteurs dat een echt Quantum systeem 
 Er zijn veel sorteringen van Quantum metingen, maar we richten ons op het meest Basic: uitstekende metingen op één qubits.
 Bij meting in een gegeven (bijvoorbeeld de berekening van de verrekenings wijze $ \{ \ket {0} , \ket {1} \} $), wordt de status van het Qubit geprojecteerd op basis van de geschatte status, hetgeen wordt gemeten---, waardoor een wille keurige positie tussen de twee wordt vernietigd.
 
-Voor het implementeren van metingen binnen een Q #-programma gebruiken we de `M` bewerking (uit `Microsoft.Quantum.Intrinsic` ), die een `Result` type retourneert.
+Als u metingen binnen een Q# programma wilt implementeren, gebruiken we de `M` bewerking (uit `Microsoft.Quantum.Intrinsic` ), die een `Result` type retourneert.
 
 Eerst wijzigen we onze `Perform3QubitQFT` bewerking om een matrix met meet resultaten te retour neren, `Result[]` in plaats van `Unit` .
 
@@ -438,7 +441,7 @@ De [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) functie die wordt aa
 Elk gemeten `Result` type ( `Zero` of `One` ) wordt vervolgens toegevoegd aan de bijbehorende index positie in `resultArray` met een update-en-reassign-instructie.
 
 > [!NOTE]
-> De syntaxis van deze instructie is uniek voor Q #, maar komt overeen met de nieuwe hertoewijzing van een variabele `resultArray[i] <- M(qs[i])` die in andere talen wordt weer gegeven, zoals F # en R.
+> De syntaxis van deze instructie is uniek voor Q# , maar komt overeen met de nieuwe hertoewijzing van een variabele die `resultArray[i] <- M(qs[i])` in andere talen wordt weer gegeven, zoals F # en R.
 
 Het sleutel woord `set` wordt altijd gebruikt voor het opnieuw toewijzen van variabelen die zijn gekoppeld met `mutable` .
 
@@ -501,7 +504,7 @@ Werk anders uw host-programma bij om de geretourneerde matrix te verwerken.
 
 #### <a name="command-line"></a>[Opdrachtregel](#tab/tabid-cmdline)
 
-Om meer te weten te komen over de geretourneerde matrix die in de-console zal worden afgedrukt, kunnen we nog een nieuwe `Message` in het Q #-bestand toevoegen net vóór de `return` instructie:
+Om meer te weten te komen over de geretourneerde matrix die in de-console zal worden afgedrukt, kunnen we een andere `Message` in het bestand invoegen, Q# net vóór de `return` instructie:
 
 ```qsharp
         Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
@@ -694,12 +697,12 @@ met de rest van de naam ruimte- `open` instructies.
 In de resulterende uitvoer ziet u de geleidelijke projectie in subruimten wanneer elke qubit wordt gemeten.
 
 
-## <a name="use-the-q-libraries"></a>De Q #-bibliotheken gebruiken
-Zoals we vermeld hebben in de inleiding, is veel Q # de kracht van de stroom, zodat u de zorgen over kunt samen stellen voor het afhandelen van afzonderlijke qubits.
+## <a name="use-the-no-locq-libraries"></a>De Q# bibliotheken gebruiken
+Zoals in de inleiding werd vermeld, is veel van de kracht van de Q# stroom in het voor deel dat u de zorgen over van het verwerken van afzonderlijke qubits kunt samen stellen.
 Als u de juiste, toepasselijke Quantum Program ma's wilt ontwikkelen, moet u er wel voor zorgen dat een bewerking wordt uitgevoerd `H` vóór of na een bepaalde rotatie. 
 
-De Q #-bibliotheken bevatten de [QFT](xref:microsoft.quantum.canon.qft) -bewerking, die u gewoon kunt uitvoeren en Toep assen voor een wille keurig aantal qubits.
-Als u een try wilt opgeven, definieert u een nieuwe bewerking in uw Q #-bestand met dezelfde inhoud `Perform3QubitQFT` , maar met alles van de eerste `H` tot de `SWAP` vervangen door twee eenvoudige lijnen:
+De Q# bibliotheken bevatten de [QFT](xref:microsoft.quantum.canon.qft) -bewerking, die u gewoon kunt uitvoeren en Toep assen voor een wille keurig aantal qubits.
+Om het een try-out te geven, definieert u een nieuwe bewerking in het Q# bestand met dezelfde inhoud `Perform3QubitQFT` , maar met alles van de eerste `H` tot de `SWAP` vervangen door twee eenvoudige lijnen:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
@@ -707,7 +710,7 @@ Als u een try wilt opgeven, definieert u een nieuwe bewerking in uw Q #-bestand 
 De eerste regel maakt simpelweg een [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) expressie van de toegewezen matrix van qubits, `qs` die de [QFT](xref:microsoft.quantum.canon.qft) -bewerking als argument gebruikt.
 Dit komt overeen met de index volgorde van de qubits in het REGI ster.
 
-Als u toegang wilt hebben tot deze bewerkingen, voegt u `open` instructies toe voor de bijbehorende naam ruimten aan het begin van het Q #-bestand:
+Als u toegang wilt hebben tot deze bewerkingen, voegt u `open` instructies toe voor de bijbehorende naam ruimten aan het begin van het Q# bestand:
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
@@ -715,7 +718,7 @@ Als u toegang wilt hebben tot deze bewerkingen, voegt u `open` instructies toe v
 
 Pas nu uw hostprogramma aan om de naam van uw nieuwe bewerking aan te roepen (bijvoorbeeld `PerformIntrinsicQFT` ) en geef het een uitproberen.
 
-Als u het werkelijke voor deel van het gebruik van de Q #-bibliotheek bewerkingen wilt zien, wijzigt u het aantal qubits in iets anders dan `3` :
+Als u het werkelijke voor deel van het gebruik van de Q# bibliotheek bewerkingen wilt zien, wijzigt u het aantal qubits in een andere waarde dan `3` :
 ```qsharp
         mutable resultArray = new Result[4]; 
 

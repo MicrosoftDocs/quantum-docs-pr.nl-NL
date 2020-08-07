@@ -1,6 +1,8 @@
 ---
 Titel: Quantum Oracle description Beschrijving: informatie over het werken met en het definiëren van Quantum Oracle, Black Box-bewerkingen die worden gebruikt als invoer voor een ander algoritme.
 Auteur: cgranade UID: micro soft. Quantum. concepten. Oracle MS. Author: Christopher.Granade@microsoft.com MS. date: 07/11/2018 MS. topic: artikel no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Nu $ o = ^ \dagger $ per constructie, waardoor we beide problemen hebben opgelost.
 
 > [!TIP]
->Als u wilt zien dat er o $ = o ^ { \dagger } $ is, noteert u dat $ o ^ 2 = \boldone $ sinds $ een \oplus b \oplus b = a $ voor alle $ a, b \in \[ ! BTW. GEEN-LOC ({)] 0, 1 \[ ! BTW. GEEN-LOC (})] $ .
+>$ = { \dagger } $ Houd er rekening mee dat $ o ^ 2 = \boldone $ sinds $ a \oplus b \oplus b = a $ voor alle $ a, b \in \: :: No-Loc ({)::: 0, 1 \: :: No-Loc (})::: is $ .
 >Als gevolg hiervan is de $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Belang rijk: als u een Oracle op deze manier definieert voor elke reken kundige basis status $ \ket { x } \ket { y, } $ wordt ook gedefinieerd hoe $ O moet worden uitgevoerd $ voor een andere status.

@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275149"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868934"
 ---
 # <a name="design-your-own-classifier"></a>Uw eigen classificatie ontwerpen
 
@@ -47,6 +50,8 @@ Laten we een voor beeld zien van een classificatie. In het voor [beeld van halve
 Wat we hier definiëren, is een functie die een matrix van `ControlledRotation` elementen retourneert, samen met een matrix met para meters en een bias definieert onze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Dit type is fundamenteel in de Quantum Machine Learning-bibliotheek en definieert de classificatie. Het circuit dat is gedefinieerd in de bovenstaande functie maakt deel uit van een classificatie waarin elk voor beeld van de gegevensset twee functies bevat. Daarom hebben we slechts twee qubits nodig. De grafische weer gave van het circuit is:
 
  ![Voor beeld van circuit model](~/media/circuit_model_1.PNG)
+
+Houd er rekening mee dat de bewerkingen van de Quantum Machine Learning bibliotheek de laatste Qubit van het REGI ster meten om de classificatie kansen te schatten. Houd rekening met dit feit bij het ontwerpen van uw circuit.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>De functies van de bibliotheek gebruiken om lagen van poorten te schrijven
 

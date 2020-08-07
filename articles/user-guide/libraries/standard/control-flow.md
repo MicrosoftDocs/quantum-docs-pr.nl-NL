@@ -1,22 +1,25 @@
 ---
-title: 'Flow-besturings elementen in het Q # standaard-libararies'
-description: 'Meer informatie over de bewerkingen en functies voor datatransport besturing in de standaard bibliotheek van micro soft Q #.'
+title: Flow-besturings elementen in de Q# standaard libararies
+description: Meer informatie over de bewerkingen en functies voor datatransport besturing in de micro soft- Q# standaard bibliotheek.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275015"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868573"
 ---
 # <a name="higher-order-control-flow"></a>Controle stroom met hogere volg orde #
 
 Een van de primaire rollen van de standaard bibliotheek is om het eenvoudiger te maken om zeer belang rijke ideeën in te stellen als [Quantum Program ma's](https://en.wikipedia.org/wiki/Quantum_programming).
-Daarom biedt Q # Canon diverse verschillende constructies voor datatransport besturing, die allemaal zijn geïmplementeerd met behulp van gedeeltelijke toepassing van functies en bewerkingen.
+Daarom Q# biedt Canon diverse verschillende constructies voor datatransport besturing, die allemaal zijn geïmplementeerd met behulp van gedeeltelijke toepassing van functies en bewerkingen.
 Als u direct naar een voor beeld gaat, moet u rekening houden met het geval waarin één ' CNOT ladder ' moet worden gemaakt in een REGI ster:
 
 ```qsharp
@@ -47,7 +50,7 @@ In de rest van deze sectie bieden we een aantal voor beelden van het gebruik van
 
 Een van de primaire abstracties van de Canon is die van iteratie.
 Denk bijvoorbeeld aan een unitary van het formulier $U \otimes U \otimes \cdots \otimes U $ voor een single-Qubit unitary $U $.
-In Q # kunnen we gebruiken <xref:microsoft.quantum.arrays.indexrange> om dit als een `for` lus voor een REGI ster te vertegenwoordigen:
+In kunnen Q# we gebruiken <xref:microsoft.quantum.arrays.indexrange> om dit als een `for` lus voor een REGI ster te vertegenwoordigen:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Dit betekent met name dat aanroepen naar `ApplyToEachCA` kunnen worden weer gege
 > Vervolgens `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` worden de fout correctie code `code` en de herstel functie `recoveryFn` op elk afzonderlijk blok toegepast.
 > Dit geldt ook voor klassieke invoer: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` past een rotatie toe van $ \pi/$2 over $X $, gevolgd door een rotatie van $Pi/$3 over $Y $.
 
-De Q # Canon biedt ook ondersteuning voor klassieke inventarisatie patronen die bekend zijn met functionele programmering.
+De Q# Canon biedt ook ondersteuning voor klassieke inventarisatie patronen die bekend zijn met functionele programmering.
 Bijvoorbeeld: <xref:microsoft.quantum.arrays.fold> implementeert het patroon $f (f (f (s \_ {\Text{Initial}}, x \_ 0), x \_ 1), \dots) $ voor het verkleinen van een functie over een lijst.
 Dit patroon kan worden gebruikt voor het implementeren van sommen, producten, minima, maxima en andere dergelijke functies:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Op dezelfde manier kunnen functies zoals <xref:microsoft.quantum.arrays.mapped> en <xref:microsoft.quantum.arrays.mappedbyindex> worden gebruikt voor het uitdrukken van functionele Programmeer concepten in Q #.
+Op dezelfde manier werken functies zoals <xref:microsoft.quantum.arrays.mapped> en <xref:microsoft.quantum.arrays.mappedbyindex> kunnen worden gebruikt voor het uitdrukken van functionele Programmeer concepten in Q# .
 
 ## <a name="composing-operations-and-functions"></a>Bewerkingen en functies samen stellen ##
 
@@ -170,7 +173,7 @@ Dit herhalings patroon wordt geïmplementeerd door <xref:microsoft.quantum.canon
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-De hand tekening van `DecomposeIntoTimeStepsCA` volgt een gemeen schappelijk patroon in Q #, waarbij verzamelingen waarvan een back-up kan worden gemaakt, worden weer gegeven door middel van een of meer knoop punten die op de positie worden berekend door Tuples waarvan de eerste elementen `Int` waarden zijn die de lengte van de items aangeven.
+De hand tekening van `DecomposeIntoTimeStepsCA` volgt een gemeen schappelijk patroon in Q# , waarbij verzamelingen waarvan een back-up kan worden gemaakt, worden weer gegeven door middel van matrices of door een van de elementen die in de vlucht worden berekend door tupels waarvan de eerste elementen `Int` waarden aangeven die de lengte van die gegevens.
 
 ## <a name="putting-it-together-controlling-operations"></a>Samen te brengen: bewerkingen beheren ##
 
@@ -215,7 +218,7 @@ Dit `ApplyWith` houdt in dat u het controle register met $P $ kunt sluiten, prec
 
 Op dit moment kunnen we worden uitgevoerd, maar het lijkt erop dat onze nieuwe bewerking niet lijkt, zoals het Toep assen van de `Controlled` functor.
 Daarom volt ooien we het nieuwe controle stroom concept door een functie te schrijven waarmee de Oracle wordt gecontroleerd en een nieuwe bewerking wordt geretourneerd.
-Op deze manier ziet onze nieuwe functie er ongeveer als volgt uit `Controlled` : u kunt zien dat we eenvoudig krachtige nieuwe besturings stroom constructies kunnen definiëren met behulp van Q # en de Canon.
+Op deze manier ziet onze nieuwe functie er ongeveer als volgt uit, wat erop `Controlled` kan zien dat we eenvoudig krachtige nieuwe constructies voor de controle stroom kunnen definiëren met Q# en de Canon:
 
 ```qsharp
 function ControlledOnBitString(

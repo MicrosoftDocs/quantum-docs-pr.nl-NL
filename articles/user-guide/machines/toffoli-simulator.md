@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870614"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868097"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli Simulator
 
@@ -21,13 +24,13 @@ Hoewel de Toffoli-Simulator meer functionaliteit heeft dan de [volledige status 
 
 ## <a name="invoking-the-toffoli-simulator"></a>De Toffoli Simulator aanroepen
 
-U maakt de Toffoli Simulator via de- `ToffoliSimulator` klasse beschikbaar. Zie [manieren om een Q #-programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
+U maakt de Toffoli Simulator via de- `ToffoliSimulator` klasse beschikbaar. Zie [manieren om een Q# programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>Het aanroepen van Toffoli Simulator vanaf C #
 
-Net als bij andere doel machines maakt u eerst een instantie van de `ToffoliSimulator` klasse en geeft u deze vervolgens door als de eerste para meter van de methode van een bewerking `Run` .
+Net als bij andere doelmachines maakt u eerst een exemplaar van de klasse `ToffoliSimulator` en geeft u deze vervolgens door als de eerste parameter van de methode `Run` van een bewerking.
 
-Houd er rekening mee dat, in tegens telling tot de `QuantumSimulator` -klasse, de- `ToffoliSimulator` interface niet wordt geïmplementeerd door de klasse <xref:System.IDisposable> en dat u deze niet hoeft op te nemen in een- `using` instructie.
+Houd er rekening mee dat, in tegenstelling tot de klasse `QuantumSimulator`, de klasse `ToffoliSimulator` de interface <xref:System.IDisposable> niet implementeert, zodat u deze niet hoeft in te sluiten in een instructie `using`.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Houd er rekening mee dat, in tegens telling tot de `QuantumSimulator` -klasse, d
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>De Toffoli Simulator vanuit python aanroepen
 
-Gebruik de methode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q #-bewerking:
+Gebruik de methode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q# bewerking:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>Het aanroepen van Toffoli Simulator vanaf de opdracht regel
 
-Wanneer u een Q #-programma uitvoert vanaf de opdracht regel, gebruikt u de para meter **--Simulator** (of **-s** ) om de Toffoli Simulator-doel computer op te geven. Met de volgende opdracht voert u een programma uit met behulp van de resources Estimator: 
+Wanneer u een Q# programma uitvoert vanaf de opdracht regel, gebruikt u de para meter **--Simulator** (of **-s** ) om de doel computer van de Toffoli Simulator op te geven. Met de volgende opdracht voert u een programma uit met behulp van de resources Estimator: 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>De Toffoli Simulator van Juptyer-notebooks aanroepen
 
-Gebruik de IQ # Magic-opdracht [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) om de Q #-bewerking uit te voeren.
+Gebruik de Q# opdracht I Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) om de bewerking uit te voeren Q# .
 
 ```
 %toffoli myOperation
@@ -81,7 +84,7 @@ Bijvoorbeeld:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - [Quantum bronnen estimator](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

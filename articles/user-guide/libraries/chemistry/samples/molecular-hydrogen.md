@@ -1,17 +1,20 @@
 ---
 title: Schattingen van energieniveaus maken
-description: 'Door loop een voor beeld van een Q #-programma dat de waarden voor het energie niveau van moleculaire water stof schat.'
+description: Een voor beeld Q# van een programma voor het schatten van de waarden van het energie niveau van moleculaire water stof.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871565"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869202"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Schattingen van energieniveaus maken
 Het schatten van de waarden van energie niveaus is een van de belangrijkste toepassingen van quantum chemie. In dit artikel wordt beschreven hoe u dit kunt doen voor het canonieke voor beeld van moleculaire water stof. Het voor beeld waarnaar in deze sectie wordt verwezen, bevindt zich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) in de opslag plaats voor schei steek proeven. Een meer visueel voor beeld van het uitzetten van de uitvoer is de [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demo.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-U kunt de Q #-code nu aanroepen vanuit het hostprogramma. Met de volgende C#-code wordt een volledige status Simulator gemaakt en wordt uitgevoerd `GetEnergyByTrotterization` om de grond energie te verkrijgen.
+U kunt de code nu oproepen Q# vanuit het hostprogramma. Met de volgende C#-code wordt een volledige status Simulator gemaakt en wordt uitgevoerd `GetEnergyByTrotterization` om de grond energie te verkrijgen.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

@@ -1,17 +1,20 @@
 ---
-title: 'Gegevens structuren in de standaard bibliotheken van Q #'
-description: 'Meer informatie over gegevens structuren, Oracle en dynamische generatoren in de standaard bibliotheken van micro soft Q #.'
+title: Gegevens structuren in de Q# standaard bibliotheken
+description: Meer informatie over gegevens structuren, Oracle en dynamische generatoren in de micro soft- Q# standaard bibliotheken.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275002"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868512"
 ---
 # <a name="data-structures-and-modeling"></a>Gegevens structuren en model lering #
 
@@ -31,10 +34,10 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### <a name="arrays"></a>Matrixen ###
+### <a name="arrays"></a>Matrices ###
 
 De Canon biedt verschillende functies voor het bewerken van matrices.
-Deze functies zijn van het type para meters en kunnen dus worden gebruikt met matrices van elk Q #-type.
+Deze functies zijn van het type para meters en kunnen dus worden gebruikt met matrices van elk Q# type.
 De <xref:microsoft.quantum.arrays.reversed> functie retourneert bijvoorbeeld een nieuwe matrix waarvan de elementen in omgekeerde volg orde van de invoer worden weer gegeven.
 Dit kan worden gebruikt om te wijzigen hoe een Quantum register wordt weer gegeven bij het aanroepen van bewerkingen:
 
@@ -72,7 +75,7 @@ In de [fase schatting](https://en.wikipedia.org/wiki/Quantum_phase_estimation_al
 Hier verwijst de term Oracle naar een blackbox-Quantum-subroutine die wordt toegepast op een set qubits en die het antwoord als een fase retourneert.
 Deze subroutine kan vaak worden beschouwd als een invoer voor een Quantum algoritme die de Oracle accepteert, naast enkele andere para meters, en past een reeks Quantum bewerkingen toe en behandelt een aanroep naar deze Quantum subroutine alsof het een fundamenteel poort is.
 Uiteraard moet, om het grotere algoritme te implementeren, een concreet ontbinding van de Oracle in fundamentele Gates worden gegeven, maar een dergelijke ontbinding is niet nodig om inzicht te krijgen in het algoritme dat de Oracle aanroept.
-In Q # wordt deze abstractie vertegenwoordigd door gebruik te maken van de waarden van de eerste klasse, zodat bewerkingen kunnen worden door gegeven aan implementaties van Quantum algoritmen in een Black Box-manier.
+In Q# wordt deze abstractie vertegenwoordigd door gebruik te maken van die bewerkingen waarden voor de eerste klasse, zodat de bewerkingen kunnen worden door gegeven aan implementaties van Quantum algoritmen in een Black Box-vorm.
 Daarnaast worden door de gebruiker gedefinieerde typen gebruikt voor het labelen van de verschillende Oracle-representaties op een type veilige manier, waardoor het moeilijk is om verschillende soorten Black Box-bewerkingen per ongeluk te verkleinen.
 
 Dergelijke Oracle worden weer gegeven in een aantal verschillende contexten, waaronder beroemde-voor beelden zoals de zoek-en Quantum-simulatie algoritmen [van Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
@@ -189,7 +192,7 @@ De unitary die een dergelijke Quantum dynamiek beschrijft, is $U (t) = R_z (2 \ 
 In deze context kunnen we $U (t) $ voor elke $t $ simuleren met behulp van één $R _z-Gate en zo dat zelf niet hoeft te worden beperkt tot afzonderlijke query's voor de unitary.
 Een dergelijk doorlopende model heeft ook de eigenschap die de frequenties groter dan $2 \ PI $ kan worden geleerd van fase schattings processen die doorlopende query's gebruiken omdat de fase-informatie die anders zou worden gemaskeerd door de vertakking van de functie logaritme kan worden onthuld op basis van de resultaten van experimenten die worden uitgevoerd op niet-proportionele waarden van $t $.
 Daarom zijn problemen zoals deze continue query modellen voor de fase schatting Oracle niet alleen geschikt, maar ook de voor keur voor het discrete query model.
-Daarom heeft Q # functionaliteit voor beide vormen van query's en laten ze aan de gebruiker weten dat ze een fase schattings algoritme moeten afstemmen op hun behoeften en het type Oracle dat beschikbaar is.
+Daarom Q# heeft de functionaliteit voor beide vormen van query's en kan deze door de gebruiker worden afgestemd op een fase schattings algoritme om te voldoen aan de behoeften en het type Oracle dat beschikbaar is.
 
 ## <a name="dynamical-generator-modeling"></a>Model lering van dynamische generator ##
 

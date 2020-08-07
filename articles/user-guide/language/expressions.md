@@ -1,29 +1,32 @@
 ---
-title: 'Type-expressies in Q #'
-description: 'Meer informatie over het opgeven, verwijzen en combi neren van constanten, variabelen, Opera Tors, bewerkingen en functies als expressies in Q #.'
+title: Expressies inQ#
+description: Meer informatie over het opgeven, verwijzen en combi neren van constanten, variabelen, Opera Tors, bewerkingen en functies als expressies in Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415385"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869610"
 ---
-# <a name="type-expressions-in-q"></a>Type-expressies in Q #
+# <a name="expressions-in-no-locq"></a>Expressies inQ#
 
 ## <a name="numeric-expressions"></a>Numerieke expressies
 
 Numerieke expressies zijn expressies van het type `Int` , `BigInt` of `Double` .
 Dat wil zeggen dat ze ofwel integeren of drijvende-komma getallen zijn.
 
-`Int`letterlijke waarden in Q # worden geschreven als een reeks cijfers.
+`Int`letterlijke waarden in Q# worden geschreven als een reeks cijfers.
 Hexadecimale en binaire gehele getallen worden ondersteund en worden met `0x` respectievelijk een en `0b` -voor voegsel geschreven.
 
-`BigInt`letterlijke waarden in Q # hebben een navolgende `l` of `L` achtervoegsel.
+`BigInt`letterlijke waarden in Q# hebben een navolgende `l` of `L` achtervoegsel.
 Hexadecimale Big gehele getallen worden ondersteund en geschreven met het voor voegsel ' 0x '.
 Daarom zijn de volgende geldige toepassingen van `BigInt` letterlijke waarden:
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`letterlijke waarden in Q # zijn drijvende-komma getallen die zijn geschreven met decimale cijfers.
+`Double`letterlijke waarden in Q# zijn drijvende-komma getallen die zijn geschreven met decimale cijfers.
 Ze kunnen worden geschreven met of zonder een decimaal teken, `.` of een exponentieel onderdeel dat is aangegeven met e of e (waarna alleen een mogelijk minteken en decimaal tekens geldig zijn).
 Hier volgen geldige `Double` letterlijke waarden: `0.0` , `1.2e5` , `1e-5` .
 
@@ -86,7 +89,7 @@ De twee `Bool` letterlijke waarden zijn `true` en `false` .
 Op basis van twee expressies van hetzelfde primitieve type `==` kunnen de en `!=` binaire Opera tors worden gebruikt voor het maken van een `Bool` expressie.
 De expressie is waar als de twee expressies gelijk zijn en ONWAAR als dat niet het geval is.
 
-Waarden van door de gebruiker gedefinieerde typen mogen niet worden vergeleken; alleen de waarden die worden teruggestuurd, kunnen worden vergeleken. Als u bijvoorbeeld de operator ' uitpakken ' gebruikt `!` (in detail beschreven bij [typen in Q #](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
+Waarden van door de gebruiker gedefinieerde typen mogen niet worden vergeleken; alleen de waarden die worden teruggestuurd, kunnen worden vergeleken. Als u bijvoorbeeld de operator ' wrap ' gebruikt `!` (in detail beschreven bij [typen Q# in ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ Aan de hand van een booleaanse expressie `not` kan de unaire operator worden geb
 
 ## <a name="string-expressions"></a>Tekenreeksexpressies
 
-Q # Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (uitgelegd in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q #-programma.
+Q#Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (beschreven in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q# programma.
 
-Teken reeksen in Q # zijn letterlijke waarden of geïnterpoleerde teken reeksen.
+Teken reeksen in Q# zijn letterlijke waarden of geïnterpoleerde teken reeksen.
 
 Letterlijke teken reeksen zijn vergelijkbaar met letterlijke teken reeksen in de meeste talen: een reeks van Unicode-tekens tussen dubbele aanhalings symbolen `" "` .
 Gebruik in een teken reeks de back slash `\` om een dubbele aanhalings teken () te Escape `\"` of om een nieuwe regel ( `\n` ), een regel terugloop ( `\r` ) of een tab () in te voegen `\t` .
@@ -123,11 +126,11 @@ Bijvoorbeeld:
 ```
 ### <a name="interpolated-strings"></a>Geïnterpoleerde teken reeksen
 
-De syntaxis van Q # voor teken reeks-interpolatie is een subset van de C#-syntaxis. Hieronder vindt u de belangrijkste punten die van toepassing zijn op Q #:
+De Q# syntaxis voor de teken reeks interpolatie is een subset van de C#-syntaxis. Hieronder vindt u de belangrijkste punten die van toepassing zijn op Q# :
 
 * Als u een letterlijke teken reeks als een geïnterpoleerde teken reeks wilt identificeren, laten voorafgaan door u deze met het `$` symbool. Er mag geen witruimte tussen de `$` en de `"` letterlijke teken reeks worden gestart.
 
-* Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:microsoft.quantum.intrinsic.message) om het resultaat van een meting te schrijven naar de-console, naast andere Q #-expressies.
+* Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:microsoft.quantum.intrinsic.message) om het resultaat van een meting te schrijven naar de-console, naast andere Q# expressies.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ De syntaxis van Q # voor teken reeks-interpolatie is een subset van de C#-syntax
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Een geldige Q #-expressie kan worden weer gegeven in een geïnterpoleerde teken reeks.
+* Een geldige Q# expressie kan worden weer gegeven in een geïnterpoleerde teken reeks.
 
-* Expressies binnen een geïnterpoleerde teken reeks volgen Q # syntaxis, geen C#-syntaxis. Het belangrijkste verschil is dat Q # geen Verbatim-geïnterpoleerde teken reeksen ondersteunt.
+* Expressies binnen een geïnterpoleerde teken reeks volgen Q# syntaxis, geen C#-syntaxis. Het meest opvallende onderscheid is dat Q# geen ondersteuning biedt voor Verbatim-geïnterpoleerde teken reeksen (multi-line).
 
 Zie [*geïnterpoleerde teken reeksen*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)voor meer informatie over de C#-syntaxis.
 
@@ -197,7 +200,7 @@ Met uitzonde ring van letterlijke waarden zijn de enige expressies van een door 
 
 ## <a name="unwrap-expressions"></a>Onverpakte expressies
 
-In Q # is de operator voor uitpakken een afsluitend uitroep teken `!` .
+In Q# is de operator voor uitpakken een afsluitend uitroep teken `!` .
 Als bijvoorbeeld een door `IntPair` de gebruiker gedefinieerd type is met het onderliggende type `(Int, Int)` en `s` een variabele met de waarde `IntPair(2, 3)` , dan `s!` is `(2, 3)` .
 
 Voor door de gebruiker gedefinieerde typen die zijn gedefinieerd in termen van andere door de gebruiker gedefinieerde typen, kunt u de operator voor uitpakken herhalen. `s!!`Geeft bijvoorbeeld de dubbele waarde onverpakt van aan `s` .
@@ -270,7 +273,7 @@ Als bijvoorbeeld `a` `b` beide matrices van het type zijn `Int` , wordt een elem
 (a + b)[13]
 ```
 
-Alle matrices in Q # zijn gebaseerd op nul.
+Alle matrices in Q# zijn gebaseerd op nul.
 Dat wil zeggen, het eerste element van een matrix `a` is altijd `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Expressies kopiëren en bijwerken
 
-Aangezien alle typen Q # waarden zijn, wordt er formeel een ' Copy ' gemaakt wanneer een waarde is gebonden aan een symbool of wanneer een symbool wordt gebindingt. Dat wil zeggen dat het gedrag van Q # hetzelfde is als wanneer een kopie is gemaakt met behulp van een toewijzings operator. 
+Aangezien alle Q# typen waarden zijn (waarbij de qubits een enigszins speciale rol neemt), wordt er formeel een ' Copy ' gemaakt wanneer een waarde aan een symbool is gebonden of wanneer een symbool wordt losgekoppeld. Dat wil zeggen, het gedrag van Q# is hetzelfde als wanneer een kopie is gemaakt met behulp van een toewijzings operator. 
 
 Natuurlijk, in de praktijk, worden alleen de relevante onderdelen opnieuw gemaakt als dat nodig is. Dit is van invloed op hoe u matrices kopieert, omdat het niet mogelijk is om matrix items bij te werken. Voor het wijzigen van een bestaande matrix is een mechanisme voor *kopiëren en bijwerken* vereist.
 
@@ -381,7 +384,7 @@ Terwijl de bewerkingen `(Qubit[] => Unit is Adj)` en `(Qubit[] => Unit is Ctl)` 
 
 Er wordt bijvoorbeeld `[[Op1], [Op2]]` momenteel een fout gegenereerd omdat er wordt geprobeerd een matrix te maken van de twee incompatibele matrix typen `(Qubit[] => Unit is Adj)[]` en `(Qubit[] => Unit is Ctl)[]` .
 
-Zie [aanroep bare expressies](#callable-expressions) op deze pagina of [bewerkingen en functies in Q #](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie over callables.
+Zie [aanroep bare expressies](#callable-expressions) op deze pagina of [bewerkingen Q# en functies in ](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie over callables.
 
 ## <a name="conditional-expressions"></a>Voorwaardelijke expressies
 
@@ -446,7 +449,7 @@ Om het resultaat van aanroepen `Builder` vanuit de vorige alinea te kunnen aanro
 ```
 
 Wanneer u een aanroepable van een [type para meter](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) aanroept, kunt u de werkelijke type parameters tussen punt haken `< >` na de aanroep bare expressie opgeven.
-Deze actie is doorgaans niet nodig omdat de compiler Q # de daad werkelijke typen afleidt.
+Deze actie is doorgaans onnodig wanneer de Q# compiler de daad werkelijke typen afleidt.
 Het *is* echter wel vereist voor een [gedeeltelijke toepassing](xref:microsoft.quantum.guide.operationsfunctions#partial-application) als een argument van het type para meter left niet is opgegeven.
 Het is ook handig bij het door geven van bewerkingen met verschillende functor-ondersteuning voor een aanroepable.
 
@@ -469,7 +472,7 @@ De type specificatie is vereist omdat `Op3` en `Op1` andere typen hebben, waardo
 
 * Tussen haakjes voor Operation-en functie aanroep moet u ook een operator binden, maar na het indexeren van matrices en functors.
 
-Q #-Opera tors in volg orde van prioriteit, van hoog naar laag:
+Q#Opera tors in volg orde van prioriteit, van hoog naar laag:
 
 Operator | Ariteit | Beschrijving | Typen operand
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ Operator | Ariteit | Beschrijving | Typen operand
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u kunt werken met expressies in Q #, gaat u naar [bewerkingen en functies in q #](xref:microsoft.quantum.guide.operationsfunctions) voor meer informatie over het definiëren en aanroepen van bewerkingen en functies.
+Nu u kunt werken met expressies in Q# , gaat u naar [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions) voor meer informatie over het definiëren en aanroepen van bewerkingen en functies.

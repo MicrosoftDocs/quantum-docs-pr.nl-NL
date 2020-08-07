@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274473"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869236"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Hamiltoniaan uit een bestand laden
 Voorheen hebben we Hamiltonians gemaakt door afzonderlijke voor waarden toe te voegen. Hoewel dit een kleine voor beeld is, is voor Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden voor waarden vereist. Dergelijke Hamiltonians, die zijn gegenereerd door chemie pakketten zoals NWChem, zijn te groot om met de hand te worden geïmporteerd. In dit voor beeld laten we zien hoe een `FermionHamiltonian` exemplaar automatisch kan worden gegenereerd op basis van een molecuul dat wordt vertegenwoordigd door het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Ter referentie kan één het gegeven voor `LithiumHydrideGUI` beeld of het voor `RunSimulation` beeld controleren. Beperkte ondersteuning is ook beschikbaar voor importeren vanuit de indeling die wordt gebruikt door [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
@@ -40,7 +43,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-Het Broombridge-schema bevat ook suggesties voor de oorspronkelijke status die moet worden voor bereid. De labels, bijvoorbeeld `"|G⟩"` of `"|E1⟩"` , voor deze statussen kunnen worden weer gegeven door het bestand te controleren. Om deze initiële statussen voor te bereiden, `qSharpData` wordt het verbruikt door de Q # Quantum-algoritmen verkregen op dezelfde manier als de [vorige sectie](xref:microsoft.quantum.chemistry.examples.energyestimate), maar met een extra para meter die de gewenste begin status selecteert. Bijvoorbeeld
+Het Broombridge-schema bevat ook suggesties voor de oorspronkelijke status die moet worden voor bereid. De labels, bijvoorbeeld `"|G⟩"` of `"|E1⟩"` , voor deze statussen kunnen worden weer gegeven door het bestand te controleren. Om deze initiële statussen voor te bereiden, `qSharpData` wordt het verbruikt door de Q# Quantum algoritmen op dezelfde manier verkregen als de [vorige sectie](xref:microsoft.quantum.chemistry.examples.energyestimate), maar met een extra para meter die de gewenste begin status selecteert. Bijvoorbeeld
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.

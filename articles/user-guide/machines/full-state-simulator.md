@@ -1,25 +1,28 @@
 ---
 title: Full State Quantum Simulator-Quantum Development Kit
-description: "Meer informatie over het uitvoeren van uw Q #-Program ma's op de Microsoft Quantum Development Kit Full State Simulator."
+description: Meer informatie over het uitvoeren Q# van uw Program ma's op de Microsoft Quantum Development Kit Full State Simulator.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871175"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868335"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum Development Kit (QDK) Full State Simulator
 
-De QDK biedt een volledige status Simulator die een quantum computer op uw lokale computer simuleert. U kunt de volledige status Simulator gebruiken om de Quantum algoritmen uit te voeren en fouten op te sporen in Q #, waarbij Maxi maal 30 qubits wordt gebruikt. De volledige status Simulator is vergelijkbaar met de Quantum Simulator die wordt gebruikt in het [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) -platform van micro soft Research.
+De QDK biedt een volledige status Simulator die een quantum computer op uw lokale computer simuleert. U kunt de volledige status Simulator gebruiken voor het uitvoeren van en het opsporen van fouten in de Quantum-algoritmen die zijn geschreven in Q# , waarbij Maxi maal 30 qubits wordt gebruikt. De volledige status Simulator is vergelijkbaar met de Quantum Simulator die wordt gebruikt in het [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) -platform van micro soft Research.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>De volledige status Simulator aanroepen en uitvoeren
 
-U hebt de volledige status Simulator beschikbaar via de- `QuantumSimulator` klasse. Zie [manieren om een Q #-programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
+U hebt de volledige status Simulator beschikbaar via de- `QuantumSimulator` klasse. Zie [manieren om een Q# programma uit te voeren](xref:microsoft.quantum.guide.host-programs)voor meer informatie.
 
 ### <a name="invoking-the-simulator-from-c"></a>Het aanroepen van de Simulator vanaf C #
 
@@ -36,7 +39,7 @@ Omdat de `QuantumSimulator` klasse de interface implementeert <xref:System.IDisp
 
 ### <a name="invoking-the-simulator-from-python"></a>De Simulator vanuit python aanroepen
 
-Gebruik de methode [simuleren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de Q # python-bibliotheek met de geïmporteerde Q #-bewerking:
+Gebruik de methode [simuleren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de Q# python-bibliotheek met de geïmporteerde Q# bewerking:
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>Het aanroepen van de Simulator vanaf de opdracht regel
 
-Wanneer u een Q #-programma uitvoert vanaf de opdracht regel, is de volledige status Simulator de standaard doel computer. U kunt desgewenst de para meter **--Simulator** (of **-s** ) gebruiken om de gewenste doel computer op te geven. De volgende opdrachten voeren een programma uit met behulp van de volledige status Simulator. 
+Wanneer een programma wordt uitgevoerd Q# vanaf de opdracht regel, is de volledige status Simulator de standaard doel computer. U kunt desgewenst de para meter **--Simulator** (of **-s** ) gebruiken om de gewenste doel computer op te geven. De volgende opdrachten voeren een programma uit met behulp van de volledige status Simulator. 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Het aanroepen van de Simulator vanuit Juptyer-notebooks
 
-Gebruik de IQ # Magic opdracht [% simuleren](xref:microsoft.quantum.iqsharp.magic-ref.simulate) om de Q #-bewerking uit te voeren.
+Gebruik de I Q# Magic-opdracht [% simuleren](xref:microsoft.quantum.iqsharp.magic-ref.simulate) om de bewerking uit te voeren Q# .
 
 ```
 %simulate myOperation
@@ -76,6 +79,6 @@ De volledige status Simulator maakt gebruik van [OpenMP](http://www.openmp.org/)
 
 ## <a name="see-also"></a>Zie ook
 
-- [Quantum bronnen estimator](xref:microsoft.quantum.machines.resources-estimator)
-- [Quantum Toffoli Simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Kwantumresoure-estimator](xref:microsoft.quantum.machines.resources-estimator)
+- [Kwantum Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

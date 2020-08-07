@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275226"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868896"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Woorden lijst Quantum Machine Learning
 
@@ -48,7 +51,7 @@ Als vuist regel kan het aantal oorspronkelijke metingen ongeveer $1/\ mbox {tole
 
 ### <a name="training-threads"></a>Trainings threads
 
-De waarschijnlijke functie die het trainings hulpprogramma voor de classificatie is, is zeer zelden, wat inhoudt dat er meestal een groot aantal lokale optimaies is in de parameter ruimte die aanzienlijk kan variëren per kwaliteit. Omdat het SGD-proces kan convergeren naar slechts één specifiek optimaal, is het belang rijk om meerdere start parameter vectoren te verkennen. Een veelvoorkomende procedure in machine learning is om dergelijke begin vectoren wille keurig te initialiseren. De Q #-trainings-API accepteert een wille keurige matrix van dergelijke begin vectoren, maar de onderliggende code verkennen ze sequentieel. Op een computer met meerdere kernen of in feite is het raadzaam om verschillende aanroepen naar Q # trainings-API parallel uit te voeren met verschillende parameter initialisaties in de-aanroepen.
+De waarschijnlijke functie die het trainings hulpprogramma voor de classificatie is, is zeer zelden, wat inhoudt dat er meestal een groot aantal lokale optimaies is in de parameter ruimte die aanzienlijk kan variëren per kwaliteit. Omdat het SGD-proces kan convergeren naar slechts één specifiek optimaal, is het belang rijk om meerdere start parameter vectoren te verkennen. Een veelvoorkomende procedure in machine learning is om dergelijke begin vectoren wille keurig te initialiseren. De Q# trainings-API accepteert een wille keurige matrix van dergelijke begin vectoren, maar deze worden sequentieel door de onderliggende code verkend. Op een computer met meerdere kernen of in feite is het raadzaam om verschillende aanroepen naar trainings-API parallel uit te voeren Q# met verschillende parameter initialisaties in de-aanroepen.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>De Hyper parameters wijzigen
 

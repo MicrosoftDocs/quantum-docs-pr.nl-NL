@@ -1,6 +1,8 @@
 ---
 Titel: beschrijving van geavanceerde matrix concepten: meer informatie over eigenvectors, eigenvalues en matrix exponentiëles, de belangrijkste hulpprogram ma's voor het beschrijven en simuleren van Quantum algoritmen.
 Auteur: QuantumWriter UID: micro soft. Quantum. concepten. matrix-Geavanceerd MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + a \frac { ^ 2 } { 2! } + \frac { Een ^ 3 } { 3!}+\cdots
 $$
 
-Dit is belang rijk omdat de quantum-mechanische tijd wordt beschreven in een unitary-matrix van de vorm $ e ^ { IB } $ voor Hermitian matrix $ B $ .  Daarom is het uitvoeren van matrix exponentiëlen een fundamenteel onderdeel van Quantum Computing, en biedt dit Q # intrinsieke routines voor het beschrijven van deze bewerkingen.
+Dit is belang rijk omdat de quantum-mechanische tijd wordt beschreven in een unitary-matrix van de vorm $ e ^ { IB } $ voor Hermitian matrix $ B $ .  Daarom is het uitvoeren van matrix-exponentiëlen een fundamenteel onderdeel van Quantum Computing en biedt het een aantal Q# ingebouwde routines voor het beschrijven van deze bewerkingen.
 Er zijn veel manieren in de praktijk om een matrix exponentiële waarde te berekenen op een klassieke computer, en in het algemeen is een dergelijke exponentiële benadering fraught met Peril.  Zie [*Cleve moler en Jeroen van bruikleen. "19 dubious manieren om de exponentiële waarde van een matrix te berekenen." SIAM beoordeling 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) voor meer informatie over de betrokken uitdagingen.
 
 De eenvoudigste manier om inzicht te krijgen in het berekenen van de exponentiële waarde van een matrix is via de eigenvalues en eigenvectors van die matrix.  Met name de hierboven besproken Spectral theorema heeft aangegeven dat er voor elke Hermitian-of unitary-matrix $ een $ unitary matrix $ u $ en een diagonale matrix is, $ D $ zodat $ = u een u ^ \dagger D u $ .  Vanwege de eigenschappen van unitarity hebben we $ een ^ 2 = u ^ \dagger d ^ 2 u $ en op dezelfde manier voor Power $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Als we dit vervangen door de operator definitie van de operator exponentiële, krijgen we het volgende:

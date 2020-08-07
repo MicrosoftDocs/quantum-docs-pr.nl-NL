@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274513"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867504"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Voor beelden die bijdragen aan de Quantum Development Kit
 
@@ -45,10 +48,10 @@ In de map voor elk onderwerp, bestaat elk voor beeld uit één map waarin alles 
 
 Wanneer u de bestanden waaruit elke map bestaat, bekijkt, gaan we naar het voor [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) beeld.
 
-| File              | Description                                                |
+| File              | Beschrijving                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q #-project gebruikt om het voor beeld samen te stellen met de .NET Core SDK |
-| `Game.qs`         | Q # bewerkingen en functies voor het voor beeld                 |
+| `CHSHGame.csproj` | Q#project dat wordt gebruikt om het voor beeld samen te stellen met de .NET Core SDK |
+| `Game.qs`         | Q#bewerkingen en functies voor het voor beeld                 |
 | `Host.cs`         | C#-hostprogramma waarmee het voor beeld wordt uitgevoerd                     |
 | `host.py`         | Python-hostcluster dat wordt gebruikt om het voor beeld uit te voeren                 |
 | `README.md`       | Documentatie over wat het voor beeld doet en hoe u het kunt gebruiken    |

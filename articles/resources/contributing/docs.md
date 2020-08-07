@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274554"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866873"
 ---
 # <a name="improving-documentation"></a>Documentatie verbeteren
 
@@ -25,7 +28,7 @@ We gaan de [MathJax](https://www.mathjax.org/) -bibliotheek op dezelfde manier g
 Dit betekent dat elke vorm van documentatie enigszins in de details kan verschillen:
 
 - De **conceptuele documentatie** bestaat uit een set artikelen die worden gepubliceerd naar https://docs.microsoft.com/quantum en waarin alles wordt beschreven van de basis beginselen van Quantum Computing tot de technische specificaties voor Interchange-indelingen. Deze artikelen worden geschreven in [DocFXe prijs verlaging (dfm)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), een afkortings variant die wordt gebruikt voor het maken van uitgebreide documentatie sets.
-- De **API-verwijzing** is een set pagina's voor elke Q #-functie,-bewerking en door de gebruiker gedefinieerd type, gepubliceerd naar https://docs.microsoft.com/qsharp/api/ . Deze pagina's documenteren de invoer en bewerkingen van elke aanroep, samen met voor beelden en koppelingen naar meer informatie. De API-verwijzing wordt automatisch geëxtraheerd uit kleine DFM-documenten in Q #-bron code als onderdeel van elke release.
+- De **API-verwijzing** is een set pagina's voor elke Q# functie, bewerking en door de gebruiker gedefinieerd type, gepubliceerd naar https://docs.microsoft.com/qsharp/api/ . Deze pagina's documenteren de invoer en bewerkingen van elke aanroep, samen met voor beelden en koppelingen naar meer informatie. De API-verwijzing wordt automatisch geëxtraheerd uit kleine DFM-documenten in Q# de bron code als onderdeel van elke release.
 - De **Leesmij <!----> . MD** -bestanden die bij elk voor beeld en Kata worden opgenomen, beschrijven hoe u dit voor beeld of Kata gebruikt, wat het dekt en hoe het werkt met de rest van de Quantum Development Kit. Deze bestanden worden geschreven met behulp van github geringte [prijs verlaging (GFM)](https://github.github.com/gfm/), een licht gewicht alternatief voor dfm dat populair is voor het rechtstreeks koppelen van documentatie aan code opslagplaatsen.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Bijdragen aan de conceptuele documentatie
@@ -49,7 +52,7 @@ Als u code wilt toevoegen uit de [opslag plaats voor beelden](https://github.com
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Met deze opdracht worden regels 4 tot en met 8 van het [ `Game.qs` bestand geïmporteerd uit het voor `chsh-game` beeld](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs), waarbij ze worden gemarkeerd als Q #-code voor het markeren van syntaxis.
+Met deze opdracht worden de regels 4 tot en met 8 van het [ `Game.qs` bestand uit het voor `chsh-game` beeld](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)geïmporteerd en gemarkeerd als Q# code voor het markeren van syntaxis.
 Met deze opdracht kunt u voor komen dat code wordt gedupliceerd tussen conceptuele artikelen en de opslag plaats voor beelden, zodat voorbeeld code in de documentatie altijd zo actueel mogelijk is.
 
 ## <a name="contributing-to-the-api-references"></a>Bijdragen aan de API-verwijzingen
@@ -64,7 +67,7 @@ Wanneer we elke release van de Quantum Development Kit compileren, worden deze o
 
 Denk bijvoorbeeld aan de functie `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Een documentatie opmerking moet een gebruiker helpen om te leren hoe `bits` en `oracle` wat de functie is voor te begrijpen.
-Elk van deze verschillende informatie kan worden verstrekt aan de sectie Q # van een speciaal benoemde prijs opgave in de documentatie opmerking.
+Elk van deze verschillende informatie kan worden verstrekt aan de Q# compiler met een speciaal benoemde sectie prijs verlaging in de documentatie opmerking.
 Voor het voor beeld van kunnen `ControlledOnBitString` we een van de volgende zaken schrijven:
 
 ```qsharp
@@ -139,7 +142,7 @@ U ziet de gerenderde versie van de bovenstaande code in de [API-documentatie voo
 
 Naast de algemene procedures voor het schrijven van documentatie, in het schrijven van API-documentatie opmerkingen, is het handig om een aantal zaken in acht te nemen:
 
-- De indeling van elke documentatie opmerking moet overeenkomen met wat de Q #-compiler verwacht dat uw documentatie correct wordt weer gegeven. Sommige secties, zoals `/// # Remarks` het toestaan van vrije-vorm inhoud, terwijl secties als `/// # See Also` sectie meer beperkend zijn.
+- De indeling van elke documentatie opmerking moet overeenkomen met wat de Q# compiler verwacht dat uw documentatie correct wordt weer gegeven. Sommige secties, zoals `/// # Remarks` het toestaan van vrije-vorm inhoud, terwijl secties als `/// # See Also` sectie meer beperkend zijn.
 - Een lezer kan uw API-documentatie lezen op de belangrijkste API-referentie site, op basis van de samen vatting van elke naam ruimte of zelfs vanuit de IDE door het gebruik van de aanwijs informatie te gebruiken. Als u er zeker van bent dat `/// # Summary` de lezer niet meer dan een zin heeft, kunt u snel zien of ze verder moeten worden gelezen of ergens anders moeten kijken.
 - Het is mogelijk dat uw documentatie veel langer is dan de code zelf, maar dat is wel goed. Zelfs een klein stukje code kan onverwachte gevolgen hebben voor gebruikers die niet weten in welke context de code zich bevindt. Door concrete voor beelden te bieden en duidelijke uitleg te geven, kunt u gebruikers helpen het beste gebruik te maken van de code die voor hen van toepassing is.
 

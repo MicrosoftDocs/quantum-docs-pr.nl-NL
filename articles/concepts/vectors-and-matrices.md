@@ -1,6 +1,8 @@
 ---
 Titel: vectoren en matrices in Quantum Computing Description: Leer de basis beginselen van het werken met vectoren en matrices.
 Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Enige kennis met vectoren en matrices is essentieel voor het begrijpen van Quant
 
 Een kolom vector (of alleen [*Vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ van dimensie (of grootte) $ n $ is een verzameling van $ n $ complexe getallen $ (v_1, v_2, \ldots, v_n), $ gerangschikt als een kolom:
 
-$$verticale=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\

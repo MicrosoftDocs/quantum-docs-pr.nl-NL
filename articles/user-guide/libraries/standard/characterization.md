@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436536"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868624"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -19,7 +22,7 @@ Het is essentieel dat u de gevolgen van bewerkingen kunt kenmerken om nuttige Qu
 Dit is lastig omdat elke meting van een Quantum systeem Maxi maal één stukje informatie oplevert.
 Als u een eigenvalue wilt leren, kunt u alleen een Quantum status, de resultaten van een groot aantal metingen samen voegen, zodat de gebruiker de vele informatie die nodig is om deze concepten weer te geven, kan beschikken.
 De Quantum statussen zijn vooral complexe omdat de [theorema geen](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) enkele manier is om een wille keurige Quantum status te leren kennen uit één exemplaar van de status, omdat u hierdoor kopieën van de status kunt maken.
-Deze afspiegeling van de Quantum status van de gebruiker wordt weer gegeven in het feit dat Q # niet beschikbaar is of zelfs definieert wat een staat *is* voor Quantum Program ma's.
+Deze afspiegeling van de Quantum status van de gebruiker wordt weer gegeven in het feit dat Q# niet duidelijk is of zelfs definieert wat een staat *is* voor Quantum Program ma's.
 We gaan de Quantum karakte Rise ring ook behandelen door bewerkingen en Staten als Black Box uit te dienen. Deze benadering heeft veel gang bare aandelen met de experimentele praktijk van Quantum karakte Rise ring, verificatie en validatie (QCVV).
 
 Karakte Rise ring is verschillend van de vele andere bibliotheken die eerder zijn besproken.
@@ -36,7 +39,7 @@ Dit heeft het voor deel dat er slechts één extra Qubit is vereist voor het uit
 Elk van de hieronder voorgestelde methoden gebruikt een andere strategie voor het ontwerpen van experimenten en verschillende methoden voor gegevens verwerking om de fase te leren.  Ze hebben allemaal een uniek voor deel, variërend van het gebruik van strikte fout grenzen, de mogelijkheden voor het opnemen van eerdere informatie, het verdragen van fouten of het uitvoeren van geheugen limitted klassieke computers.
 
 In het bespreken van iteratieve fase-schattingen wordt een unitary-$U $ gegeven als een Black-Box-bewerking.
-Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), kan de Q # Canon dergelijke bewerkingen door het door de <xref:microsoft.quantum.oracles.discreteoracle> gebruiker gedefinieerde type gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), Q# modellen Canon dergelijke bewerkingen door het door de <xref:microsoft.quantum.oracles.discreteoracle> gebruiker gedefinieerde type, gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Als `U : DiscreteOracle` en vervolgens `U(m)` $U ^ m $ wordt geïmplementeerd voor `m : Int` .
 
 Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een hulp Qubit in de $ \ket{+} $-status voor te bereiden, samen met de aanvankelijke status $ \ket{\phi} $, wordt ervan uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) van $U is (m) $, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
@@ -47,7 +50,7 @@ De hulp Qubit die wordt gebruikt als besturings element voor `U(m)` , wordt verv
 
 Op dit moment is het opnieuw samen stellen van de fase van de `Result` waarden die zijn verkregen via iteratieve fase schatting een klassiek statistisch Afleidings probleem.
 Het vinden van de waarde van $m $ waarmee de opgedane informatie wordt gemaximaliseerd op basis van een vaste methode voor het afwijzen van een afwijzen, is gewoon een probleem met statistieken.
-We benadrukken dit door een korte beschrijving te geven van de iteratieve fase schatting op theoretisch niveau in de Bayesiaanse para meter schatting formeelheid voordat u doorgaat met het beschrijven van de statistische algoritmen die zijn opgenomen in het Q # Canon voor het oplossen van dit probleem met de klassieke interferentie.
+We benadrukken dit door een korte beschrijving te geven van de iteratieve fase schatting op theoretisch niveau in de Bayesiaanse para meter schatting formeelheid voordat u doorgaat met het beschrijven van de statistische algoritmen die zijn opgenomen in de Q# Canon voor het oplossen van dit probleem met de klassieke interferentie.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Schatting van iteratieve fase zonder Eigenstates ###
 
@@ -127,7 +130,7 @@ Met het gebruik van een fase-schatting met doorlopende query's kunnen we het ges
 
 ### <a name="random-walk-phase-estimation"></a>Schatting wille keurige Walkie fase ###
 
-Q # biedt een handige benadering van de schatting van de Bayesiaanse-fase, ontworpen voor het gebruik van close-to-Quantum apparaten.
+Q#voorziet in een handige benadering van de schatting van de Bayesiaanse-fase die is ontworpen voor het gebruik van close-to-Quantum apparaten.
 Deze methode is zowel adaptief als volledig deterministisch, waardoor bijna optimaal kan worden geschaald in de geschatte fase $ \hat{\phi} $ met weinig geheugen overhead.
 
 In het protocol wordt gebruikgemaakt van een geschatte methode voor het afwijzen van Bayesiaanse die ervan uitgaat dat de eerdere distributie Gaussiaans is.
@@ -141,7 +144,7 @@ Met de mogelijkheid om achterwaarts op te stappen, kan de algoritme ook worden a
 
 ## <a name="calling-phase-estimation-algorithms"></a>Algoritmen voor fase schatting aanroepen ##
 
-Elke fase-schattings bewerking die is opgegeven met Q # Canon, neemt een andere set invoer parameterizing de kwaliteit op die we nodig hebben voor de laatste schatting $ \hat{\phi} $.
+Elke fase-schattings bewerking die Q# is opgegeven met Canon, neemt een andere set invoer parameterizing de kwaliteit op die we nodig hebben voor de laatste schatting $ \hat{\phi} $.
 Deze verschillende invoer, maar alle gemeen schappelijke invoer delen, zoals een gedeeltelijke toepassing die de kwaliteits parameters overschrijdt, resulteert in een algemene hand tekening.
 De <xref:microsoft.quantum.characterization.robustphaseestimation> bewerking die in de volgende sectie wordt besproken, heeft bijvoorbeeld de volgende hand tekening:
 

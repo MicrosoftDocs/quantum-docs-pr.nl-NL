@@ -1,28 +1,31 @@
 ---
-title: 'Variabelen in Q #'
+title: Variabelen inQ#
 description: Beschrijving van opvulling
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885287"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867842"
 ---
-# <a name="variables-in-q"></a>Variabelen in Q #
+# <a name="variables-in-no-locq"></a>Variabelen inQ#
 
-Q # onderscheidt tussen onveranderlijke en onveranderlijke symbolen, of *variabelen*, die gebonden zijn/toegewezen aan expressies.
+Q#maakt onderscheid tussen onveranderlijke en onveranderlijke symbolen, of *variabelen*, die gebonden zijn/toegewezen aan expressies.
 In het algemeen wordt het gebruik van onveranderbare symbolen aanbevolen omdat de compiler meer optimalisaties kan uitvoeren.
 
 De linkerkant van een binding bestaat uit een symbool-tuple en de rechter kant van een expressie.
 
 ## <a name="immutable-variables"></a>Onveranderbare variabelen
 
-U kunt een waarde van elk type in Q # toewijzen aan een variabele voor hergebruik in een bewerking of functie met behulp van het `let` sleutel woord. 
+U kunt een waarde van elk type in Q# een variabele toewijzen voor hergebruik binnen een bewerking of functie met behulp van het `let` sleutel woord. 
 
 Een onveranderlijke binding bestaat uit het tref woord `let` , gevolgd door een symbool of symbool tuple, een gelijkteken `=` , een expressie waarmee de symbolen moeten worden verbonden en een punt komma als scheidings teken.
 
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-In het geval van matrices [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) beschikt u in de standaard bibliotheek van Q # over de benodigde hulpprogram ma's voor veel algemene matrix initialisatie en bewerkings behoeften. zo voor komt u dat u de matrix items in de eerste plaats hoeft bij te werken. 
+In het geval van matrices [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) beschikt u in de Q# Standard-bibliotheek over de benodigde hulpprogram ma's voor veel algemene matrix initialisatie en bewerkings behoeften. zo voor komt u dat u de matrix items in de eerste plaats hoeft bij te werken. 
 
 Instructies update-en-reassign bieden een alternatief als dat nodig is:
 
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over het [werken met qubits](xref:microsoft.quantum.guide.qubits) in Q #.
+Meer informatie over het [werken met qubits](xref:microsoft.quantum.guide.qubits) in Q# .
