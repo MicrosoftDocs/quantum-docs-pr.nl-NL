@@ -6,12 +6,15 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73442303"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866822"
 ---
 # <a name="quantum-computing-history-and-background"></a>Geschiedenis en achtergrond van kwantumcomputing
 
@@ -27,4 +30,4 @@ Het hoofddoel bij kwantumcomputing is om gegevens op te slaan in kwantumtoestand
 
 Het ontwerpen van een kwantumprogramma om gebruik te maken interferentie, klinkt als een bijna onmogelijke uitdaging. Desondanks zijn er veel technieken en hulpprogramma's, waaronder onze Microsoft Quantum development kit, geïntroduceerd om kwantumprogrammering en algoritme-ontwikkeling toegankelijker te maken. Er zijn enkele basisstrategieën die kunnen worden gebruikt voor het manipuleren van kwantuminterferentie op een manier die nuttig is voor computing, zonder dat de oplossing in de knoop raakt door een wirwar aan kwantummogelijkheden. Kwantumprogrammering is een kunst op zich vergeleken met klassieke programmering. Om kwantumalgoritmen te kunnen begrijpen en uitdrukken, zijn hele andere middelen vereist. Zonder algemene hulpprogramma's voor ontwikkelaars waarmee ze kwantumprogrammering kunnen aanpakken, is het ontwikkelen van kwantumalgoritmen niet zo eenvoudig.
 
-Gelukkig is er nu de Microsoft Quantum development kit. Deze voorziet een groeiende community van de middelen om het kwantumpotentieel voor hun taken, problemen en oplossingen te ontgrendelen. Onze high-level programmeertaal, Q#, is speciaal ontworpen voor de uitdagingen van kwantumgegevensverwerking; de taal is geïntegreerd in een software-stack die het mogelijk maakt om een kwantumalgoritme uit te compileren tot de primitieve bewerkingen van een kwantumcomputer.  Voordat we ingaan op de programmeertaal, is het handig om de basisprincipes te bekijken waarop kwantumcomputing is gebaseerd. We gaan uit van de basisregels van kwantumcomputing als axioma's in plaats van hun oorsprong in kwantummechanica te beschrijven. Daarnaast veronderstellen we basiskennis van lineaire algebra (vectoren, matrices enz.). Als u meer wilt weten over de basisbeginselen en geschiedenis van kwantumcomputing, raadpleegt u de [sectie met verwijzingen](xref:microsoft.quantum.more-information) voor meer informatie.
+Gelukkig is er nu de Microsoft Quantum development kit. Deze voorziet een groeiende community van de middelen om het kwantumpotentieel voor hun taken, problemen en oplossingen te ontgrendelen. De high-level programmeertaal Q# is speciaal ontworpen voor de uitdagingen van kwantumgegevensverwerking; de taal is geïntegreerd in een software-stack die het mogelijk maakt om een kwantumalgoritme uit te compileren tot de primitieve bewerkingen van een kwantumcomputer.  Voordat we ingaan op de programmeertaal, is het handig om de basisprincipes te bekijken waarop kwantumcomputing is gebaseerd. We gaan uit van de basisregels van kwantumcomputing als axioma's in plaats van hun oorsprong in kwantummechanica te beschrijven. Daarnaast veronderstellen we basiskennis van lineaire algebra (vectoren, matrices enz.). Als u meer wilt weten over de basisbeginselen en geschiedenis van kwantumcomputing, raadpleegt u de [sectie met verwijzingen](xref:microsoft.quantum.more-information) voor meer informatie.

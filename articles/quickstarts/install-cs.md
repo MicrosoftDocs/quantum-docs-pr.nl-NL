@@ -6,16 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885497"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867553"
 ---
-# <a name="develop-with-q-and-net"></a>Ontwikkelen met Q# en .NET
+# <a name="develop-with-no-locq-and-net"></a>Ontwikkelen met Q# en .NET
 
-Q# is gebouwd om prettig te kunnen werken met .NET-talen, zoals C# en F#.
+Q# is gebouwd om prettig te kunnen werken met .NET-talen als C# en F#.
 In deze handleiding wordt uitgelegd hoe u Q# gebruikt in combinatie met een hostprogramma dat is geschreven in een .NET-taal.
 
 Eerst maken we de Q#-toepassing en .NET-host, en vervolgens laten we zien hoe u Q# aanroept vanaf de host.
@@ -24,16 +27,16 @@ Eerst maken we de Q#-toepassing en .NET-host, en vervolgens laten we zien hoe u 
 
 - Installeer de Quantum Development Kit [voor Q#-opdrachtregelprojecten](xref:microsoft.quantum.install.standalone).
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Een Q#-bibliotheek en een .NET-host maken
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Een Q#-bibliotheek en een .NET-host maken
 
-De eerste stap is het maken van projecten voor uw Q#-bibliotheek en voor de .NET-host die de bewerkingen en functies aanroept die in uw Q#-bibliotheek zijn gedefinieerd.
+De eerste stap bestaat uit het maken van projecten voor uw Q#-bibliotheek en voor de .NET-host die de bewerkingen en functies aanroept die in de Q#-bibliotheek zijn gedefinieerd.
 
 Volg de instructies op het tabblad dat hoort bij de ontwikkelomgeving.
 Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de stappen voor de opdrachtregel.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code of opdrachtregel](#tab/tabid-cmdline)
 
-- Maak een nieuwe Q#-bibliotheek
+- Een nieuwe Q#-bibliotheek maken
 
   ```dotnetcli
   dotnet new classlib -lang Q# -o quantum
@@ -45,7 +48,7 @@ Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de
   dotnet new console -lang C# -o host  
   ```
 
-- Voeg uw Q#-bibliotheek toe als referentie van uw hostprogramma
+- Voeg vanaf uw hostprogramma de Q#-bibliotheek toe als referentie
 
   ```dotnetcli
   cd host
@@ -62,9 +65,9 @@ Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de
 
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-- Maak een nieuwe Q#-bibliotheek
+- Een nieuwe Q#-bibliotheek maken
   - Ga naar **Bestand** -> **Nieuw** -> **Project**
-  - Typ 'Q#' in het zoekvak
+  - Typ Q# in het zoekvak
   - Selecteer **Q#-bibliotheek**
   - Selecteer **Volgende**
   - Kies een naam en een locatie voor uw bibliotheek
@@ -80,9 +83,9 @@ Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Q# aanroepen vanuit .NET
+## <a name="calling-into-no-locq-from-net"></a>Q# aanroepen vanuit .NET
 
-Nadat u uw projecten hebt ingesteld, moet u de bovenstaande instructies volgen om Q# aan te roepen vanuit uw .NET-consoletoepassing.
+Nadat u de projecten hebt ingesteld, moet u de bovenstaande instructies volgen om Q# aan te roepen vanuit de .NET-consoletoepassing.
 De Q#-compiler maakt .NET-klassen voor elke Q#-bewerking en -functie waarmee u uw kwantumprogramma's in een simulator kunt uitvoeren.
 
 Zo bevat het [.NET-interoperabiliteitsvoorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) het volgende voorbeeld van een Q#-bewerking:

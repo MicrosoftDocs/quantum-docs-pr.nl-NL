@@ -1,28 +1,31 @@
 ---
-title: Ontwikkelen met Q#-Jupyter Notebooks
+title: Ontwikkelen met Q# Jupyter-notebooks
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871447"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866805"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Ontwikkelen met Q#-Jupyter Notebooks
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Ontwikkelen met Q# Jupyter-notebooks
 
-Installeer de QDK voor het ontwikkelen van Q#-bewerkingen op Q#-Jupyter Notebooks.
+Installeer de QDK voor het ontwikkelen van Q#-bewerkingen op Q# Jupyter Notebooks.
 
-Met Jupyter Notebooks kunt u in-place codes uitvoeren naast instructies, notities en andere inhoud. Deze omgeving is ideaal voor het schrijven van Q#-codes met ingesloten uitleg of interactieve zelfstudies over kwantumcomputing. Hier leest u hoe u aan de slag gaat om uw eigen Q#-notebooks te maken.
+Met Jupyter Notebooks kunt u in-place codes uitvoeren naast instructies, notities en andere inhoud. Deze omgeving is ideaal voor het schrijven van Q#-code met ingesloten uitleg of interactieve zelfstudies over kwantumcomputing. Hier leest u wat u moet doen om uw eigen Q#-notebooks te maken.
 
 > [!NOTE]
-> * In Q#-Jupyter Notebooks kunt u alleen Q#-codes uitvoeren en de bewerkingen kunnen niet worden aangeroepen vanuit externe hostprogramma's (zoals Python of C#-bestanden). Deze omgeving is niet geschikt als u een extern, klassiek hostprogramma wilt combineren met het kwantumprogramma.
+> * In Q# Jupyter Notebooks kunt u alleen Q#-code uitvoeren en de bewerkingen kunnen niet worden aangeroepen vanuit externe hostprogramma's (zoals Python of C#-bestanden). Deze omgeving is niet geschikt als u een extern, klassiek hostprogramma wilt combineren met het kwantumprogramma.
 
-## <a name="install-the-iq-jupyter-kernel"></a>De IQ # Jupyter-kernel installeren
+## <a name="install-the-ino-locq-jupyter-kernel"></a>De IQ# Jupyter-kernel installeren
 
 IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofdzakelijk wordt gebruikt door Jupyter en Python, en die de kernfunctionaliteit biedt voor het compileren en simuleren van Q#-bewerkingen.
 
@@ -72,7 +75,7 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
 
 Dat is alles. U beschikt nu over de IQ#-kernel voor Jupyter, die de kernfunctionaliteit biedt voor het compileren en uitvoeren van Q#-bewerkingen vanuit Q# Jupyter Notebooks.
 
-## <a name="create-your-first-q-notebook"></a>Uw eerste Q#-notebook maken
+## <a name="create-your-first-no-locq-notebook"></a>Uw eerste Q#-notebook maken
 
 Nu bent u klaar om de installatie van uw Q# Jupyter Notebook te controleren door een eenvoudige Q#-bewerking te schrijven en uit te voeren.
 
@@ -90,9 +93,9 @@ Nu bent u klaar om de installatie van uw Q# Jupyter Notebook te controleren door
 
 1. Voer deze cel van het Notebook uit:
 
-    ![Cel met Q#-code in een Jupyter Notebook](~/media/install-guide-jupyter.png)
+    ![Jupyter Notebook-cel met Q#-code](~/media/install-guide-jupyter.png)
 
-    U ziet `SampleQuantumRandomNumberGenerator` in de uitvoer van de cel. Als u de Q#-code uitvoert in een Jupyter Notebook, wordt de Q#-code gecompileerd en zijn de namen van alle gevonden bewerkingen te zien in de uitvoer van de cel.
+    U ziet `SampleQuantumRandomNumberGenerator` in de uitvoer van de cel. Als u de Q#-code uitvoert in een Jupyter Notebook, wordt de -code gecompileerd en zijn de namen van alle gevonden bewerkingen te zien in de uitvoer van de cel.
 
 1. Voer in een nieuwe cel de bewerking uit die u zojuist hebt gemaakt (in een simulator) met behulp van de opdracht `%simulate`:
 
@@ -102,9 +105,9 @@ Nu bent u klaar om de installatie van uw Q# Jupyter Notebook te controleren door
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u de QDK voor Q#-Jupyter Notebooks hebt geïnstalleerd, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren door Q#-code rechtstreeks in de Jupyter Notebook-omgeving te schrijven.
+Nu u de QDK voor Q# Jupyter Notebooks hebt geïnstalleerd, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren door Q#-code rechtstreeks binnen de Jupyter Notebook-omgeving te schrijven.
 
-Ga voor meer voorbeelden van wat u kunt doen met Q#-Jupyter Notebooks naar:
+Ga voor meer voorbeelden van wat u kunt doen met Q# Jupyter Notebooks naar:
 
-- [Inleiding tot Q# en Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Hier vindt u een Q#-Jupyter Notebook dat meer details biedt over hoe u Q# kunt gebruiken in de Jupyter-omgeving.
-- [Quantum Katas](xref:microsoft.quantum.overview.katas), een open-source verzameling van zelfstudies die u in uw eigen tempo kunt uitvoeren, evenals programmeeroefeningen in de vorm van Q#-Jupyter Notebooks. De [Quantum Katas-notebooks voor zelfstudie](https://github.com/microsoft/QuantumKatas#tutorial-topics) zijn een goed beginpunt. In de Quantum Katas leert u meer over de verschillende elementen van kwantumcomputing en Q#-programmering. Ze zijn een uitstekend voorbeeld van wat voor soort inhoud u kunt maken met Q#-Jupyter Notebooks.
+- [Inleiding tot Q# en Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Hier vindt u een Q# Jupyter Notebook dat meer details biedt over hoe u Q# kunt gebruiken in de Jupyter-omgeving.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), een open-source verzameling van zelfstudies die u in uw eigen tempo kunt uitvoeren, evenals programmeeroefeningen in de vorm van Q# Jupyter Notebooks. De [Quantum Katas-notebooks voor zelfstudie](https://github.com/microsoft/QuantumKatas#tutorial-topics) zijn een goed beginpunt. In de Quantum Katas leert u meer over de verschillende elementen van kwantumcomputing en programmeren in Q#. Ze zijn een uitstekend voorbeeld van wat voor soort content u kunt maken met Q# Jupyter Notebooks.

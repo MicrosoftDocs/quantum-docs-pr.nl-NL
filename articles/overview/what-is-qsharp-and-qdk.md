@@ -6,22 +6,25 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327698"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866941"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
 
-Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Het maakt deel uit van de Quantum Development Kit (QDK), waaronder [Q#-bibliotheken](xref:microsoft.quantum.libraries), [kwantumsimulators](xref:microsoft.quantum.machines), [extensies voor andere programmeeromgevingen](xref:microsoft.quantum.install) en [API-documentatie](xref:microsoft.quantum.standardlibsintro) vallen. Naast de Standard Q#-bibliotheek bevat de QDK ook scheikunde-, machine learning- en numerieke bibliotheken.
+Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Deze maakt deel uit van de Quantum Development Kit (QDK), met onder meer [Q#-bibliotheken](xref:microsoft.quantum.libraries), [kwantumsimulators](xref:microsoft.quantum.machines), [extensies voor andere programmeeromgevingen](xref:microsoft.quantum.install) en [API-documentatie](xref:microsoft.quantum.standardlibsintro). Naast de Standard Q#-bibliotheek bevat de QDK ook scheikunde-, machine learning- en numerieke bibliotheken.
 
 Als programmeertaal bevat Q# bekende elementen uit Python, C# en F#, en ondersteunt het een eenvoudig proceduremodel voor het schrijven van programma's met lussen, if/then-instructies en veelvoorkomende gegevenstypen. De taal introduceert tevens nieuwe, kwantumspecifieke gegevensstructuren en bewerkingen.
 
 ## <a name="what-can-i-do-with-the-qdk"></a>Wat kan ik met de QDK doen?
 
-De QDK is een volledige Development Kit voor Q# die u kunt gebruiken met gangbare tools en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren. Q#-programma's kunnen worden uitgevoerd als een opdrachtregel-app, via Jupyter Notebooks, of gebruikmaken van een Python- of .NET-hostprogramma.
+De QDK is een volledige Development Kit voor Q# die u kunt gebruiken met gangbare hulpprogramma's en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren. Q#-programma's kunnen worden uitgevoerd als een opdrachtregel-app, via Jupyter Notebooks, of gebruikmaken van een Python- of .NET-hostprogramma.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Ontwikkelen in veelgebruikte tools en omgevingen
 
@@ -33,7 +36,7 @@ Schrijf en test kwantumalgoritmen voor het verkennen van superpositie, verstreng
 
 ### <a name="run-programs-in-simulators"></a>Programma's uitvoeren in simulators
 
-Voer uw kwantumprogramma's uit in een volledige kwantumsimulator, een Toffoli-simulator met beperkt bereik of test uw Q#-code in verschillende resource-estimators. 
+Voer uw kwantumprogramma's uit in een volledige kwantumsimulator, een Toffoli-simulator met beperkt bereik of test uw Q#-code in verschillende resourceschattingen. 
 
 ## <a name="where-can-i-learn-more"></a>Waar vind ik meer informatie?
 
@@ -43,7 +46,7 @@ Voer uw kwantumprogramma's uit in een volledige kwantumsimulator, een Toffoli-si
 | **Ik wil me verder verdiepen in de Q#-taal** | Maak kennis met typen, expressies, variabelen en de kwantumprogrammastructuur in de [Q#-gebruikers handleiding](xref:microsoft.quantum.guide).|
 | **Ik wil alleen maar kwantumprogramma's schrijven** | Stel uw Q#-omgeving in en begin met het schrijven van kwantumprogramma's in [QuickStarts](xref:microsoft.quantum.install).|
 
-## <a name="how-does-q-work"></a>Hoe werkt Q#?
+## <a name="how-does-no-locq-work"></a>Hoe werkt Q#?
 
 Een Q#-programma kan worden gecompileerd in een zelfstandige opdrachtregeltoepassing of worden aangeroepen door een hostprogramma dat in Python of een .NET-taal is geschreven.
 

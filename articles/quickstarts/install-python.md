@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436541"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866737"
 ---
-# <a name="develop-with-q-and-python"></a>Ontwikkelen met Q# en Python
+# <a name="develop-with-no-locq-and-python"></a>Ontwikkelen met Q# en Python
 
 Installeer de QDK om Python-hostprogramma's te ontwikkelen waarmee Q#-bewerkingen kunnen worden aangeroepen.
 
@@ -70,7 +73,7 @@ Installeer de QDK om Python-hostprogramma's te ontwikkelen waarmee Q#-bewerkinge
     
 ***
 
-Dat is alles. U beschikt nu over het Python-pakket voor `qsharp` en de IQ#-kernel voor Jupyter, die de kernfunctionaliteit biedt voor het compileren en uitvoeren van Q#-bewerkingen vanuit Python, en u in staat stelt Q# Jupyter Notebooks te gebruiken.
+Dat is alles. U beschikt nu over het Python-pakket met `qsharp` en de IQ#-kernel voor Jupyter, die de kernfunctionaliteit biedt voor het compileren en uitvoeren van Q#-bewerkingen vanuit Python, en u in staat stelt Q# Jupyter Notebooks te gebruiken.
 
 ## <a name="choose-your-ide"></a>Uw IDE kiezen
 
@@ -83,7 +86,7 @@ Ga als volgt te werk als u VS Code wilt gebruiken:
 
 Als u een andere editor wilt gebruiken, helpen bovenstaande instructies u om aan de slag te gaan.
 
-## <a name="write-your-first-q-program"></a>Uw eerste Q#-programma schrijven
+## <a name="write-your-first-no-locq-program"></a>Uw eerste Q#-programma schrijven
 
 Nu bent u klaar om de installatie van het Python-pakket voor `qsharp` te controleren door een eenvoudig Q#-programma te schrijven en uit te voeren.
 
@@ -109,7 +112,7 @@ Nu bent u klaar om de installatie van het Python-pakket voor `qsharp` te control
 1. U ziet nu het resultaat van de bewerking die u hebt aangeroepen. In dit geval ziet u `0` of `1` op het scherm, omdat met de bewerking een willekeurig resultaat is gegenereerd. Als u het programma herhaaldelijk uitvoert, ziet u elk resultaat ongeveer de helft van de tijd.
 
 > [!NOTE]
-> * De Python-code is een regulier Python-programma. U kunt een willekeurige Python-omgeving gebruiken, inclusief Jupyter Notebooks op basis van Python, om het Python-programma te schrijven en Q#-bewerkingen aan te roepen. Met het Python-programma kunnen Q #-bewerkingen worden geïmporteerd uit elk .qs-bestand dat zich in dezelfde map bevindt als de Python-code.
+> * De Python-code is een regulier Python-programma. U kunt een willekeurige Python-omgeving gebruiken, inclusief Jupyter Notebooks op basis van Python, om het Python-programma te schrijven en Q#-bewerkingen aan te roepen. Met het Python-programma kunnen Q#-bewerkingen worden geïmporteerd uit elk .qs-bestand dat zich in dezelfde map bevindt als de Python-code.
 
 ## <a name="next-steps"></a>Volgende stappen
 

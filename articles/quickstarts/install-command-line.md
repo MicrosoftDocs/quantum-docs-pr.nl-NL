@@ -6,16 +6,19 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871430"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867604"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Ontwikkelen met Q#-opdrachtregeltoepassingen
+# <a name="develop-with-no-locq-command-line-applications"></a>Ontwikkelen met Q#-opdrachtregeltoepassingen
 
-Q#-programma's kunnen zelfstandig worden uitgevoerd zonder een stuurprogramma in een hosttaal, zoals C#, F# of Python.
+Q#-programma's kunnen zonder stuurprogramma zelfstandig worden uitgevoerd in een hosttaal als C#, F# of Python.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -23,7 +26,7 @@ Q#-programma's kunnen zelfstandig worden uitgevoerd zonder een stuurprogramma in
 
 ## <a name="installation"></a>Installatie
 
-Hoewel u Q#-opdrachtregeltoepassingen in elke IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken als u uw Q#-toepassingen lokaal wilt ontwikkelen. Als u uw toepassingen in de cloud wilt ontwikkelen via de webbrowser, raden we Visual Studio Codespaces aan. Ontwikkelen in deze omgevingen omvat de uitgebreide functies van de QDK-extensie, waaronder waarschuwingen, markeren van syntaxis, projectsjablonen, en meer. 
+Hoewel u Q#-opdrachtregeltoepassingen in een IDE kunt maken, raden we u aan om Visual Studio Code (VS Code) of Visual Studio IDE te gebruiken als u uw Q#-toepassingen lokaal wilt ontwikkelen. Als u uw toepassingen in de cloud wilt ontwikkelen via de webbrowser, raden we Visual Studio Codespaces aan. Ontwikkelen in deze omgevingen omvat de uitgebreide functies van de QDK-extensie, waaronder waarschuwingen, markeren van syntaxis, projectsjablonen, en meer. 
 
 Ga als volgt te werk om VS Code te configureren:
 
@@ -48,7 +51,7 @@ Als u de QDK wilt installeren in een andere omgeving, voert u het volgende in de
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Ontwikkelen met Q#
+## <a name="develop-with-no-locq"></a>Ontwikkelen met Q#
 
 Volg de instructies op het tabblad dat hoort bij de omgeving.
 
@@ -76,7 +79,7 @@ De toepassing uitvoeren:
 
 Controleer uw Visual Studio-installatie door een Q# `Hello World`-toepassing te maken.
 
-Ga als volgt te werk om een nieuwe Q#-toepassing te maken:
+Een nieuwe Q#-toepassing maken:
 1. Open Visual Studio en klik op **Bestand** -> **Nieuw** -> **Project**.
 2. Typ `Q#` in het zoekvak, selecteer **Q#-toepassing** en klik op **Volgende**.
 3. Geef een naam en een locatie op voor uw toepassing en klik op **Maken**.

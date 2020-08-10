@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871158"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868301"
 ---
 # <a name="quantum-simulators"></a>Kwantumsimulators
 
-Kwantumsimulators zijn softwareprogramma's die worden uitgevoerd op klassieke computers en fungeren als *doelmachine* voor een Q#-programma. Dit maakt het mogelijk om kwantumprogramma's uit te voeren en te testen in een omgeving die voorspelt hoe qubits op verschillende bewerkingen reageren. In dit artikel wordt beschreven welke kwantumsimulators zijn opgenomen in de Quantum Development Kit (QDK), evenals de verschillende manieren waarop u een Q#-programma kunt doorgeven aan de kwantumsimulators, bijvoorbeeld via de opdrachtregel of met behulp van stuurprogrammacodes, geschreven in een klassieke taal.  
+Kwantumsimulators zijn softwareprogramma's die worden uitgevoerd op klassieke computers en fungeren als *doelmachine* voor een Q#-programma. Dit maakt het mogelijk om kwantumprogramma's uit te voeren en te testen in een omgeving die voorspelt hoe qubits op verschillende bewerkingen reageren. In dit artikel wordt beschreven welke kwantumsimulators zijn opgenomen in de Quantum Development Kit (QDK), evenals de verschillende manieren waarop u een Q#-programma kunt doorgeven aan de kwantumsimulators, bijvoorbeeld via de opdrachtregel of met behulp van stuurprogrammacodes die in een klassieke taal zijn geschreven.  
 
 
 

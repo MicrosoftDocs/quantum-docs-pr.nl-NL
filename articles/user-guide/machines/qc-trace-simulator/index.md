@@ -1,17 +1,20 @@
 ---
 title: 'Kwantumtraceersimulator: Quantum Development Kit'
-description: Meer informatie over hoe u de Microsoft-quantumcomputertracesimulator kunt gebruiken om fouten in klassieke code op te sporen en om resourcevereisten van een Q#-programma in te schatten.
+description: Meer informatie over hoe u de Microsoft-kwantumcomputertraceersimulator kunt gebruiken om fouten in klassieke code op te sporen en om resourcevereisten van een Q#-programma in te schatten.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871107"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868216"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK)-kwantumtraceersimulator
 
@@ -91,7 +94,7 @@ Elk van deze hulpprogramma's wordt ingeschakeld door de juiste vlaggen in `QCTra
 
 ## <a name="qctracesimulator-methods"></a>QCTraceSimulator-methoden
 
-`QCTraceSimulator` heeft verschillende ingebouwde methoden voor het ophalen van de waarden van de metrische gegevens die tijdens een kwantumbewerking worden bijgehouden. Voorbeelden van de [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) en de methoden [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) zijn te vinden in de artikelen [Teller voor primitieve bewerkingen](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Diepteteller](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) en [Breedteteller](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter). Raadpleeg [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in de Q# API-verwijzing voor meer informatie over alle beschikbare methoden.  
+`QCTraceSimulator` heeft verschillende ingebouwde methoden voor het ophalen van de waarden van de metrische gegevens die tijdens een kwantumbewerking worden bijgehouden. Voorbeelden van de [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) en de methoden [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) zijn te vinden in de artikelen [Teller voor primitieve bewerkingen](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Diepteteller](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) en [Breedteteller](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter). Zie [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in de API-verwijzing voor Q# voor meer informatie over alle beschikbare methoden.  
 
 ## <a name="see-also"></a>Zie ook
 

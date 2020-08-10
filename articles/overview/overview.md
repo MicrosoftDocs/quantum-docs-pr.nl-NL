@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430778"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866975"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Inleiding tot kwantumcomputing en de Quantum Development Kit
 
@@ -62,9 +65,9 @@ Machine learning op klassieke computers brengt een revolutie teweeg in de wereld
 
 De Quantum Development Kit wordt geleverd met de [kwantumbibliotheek voor machine learning](xref:microsoft.quantum.machine-learning.concepts.intro), die u de mogelijkheid biedt om te experimenteren met een hybride combinatie van kwantum-machine learning en klassieke machine learning. De bibliotheek bevat voorbeelden en zelfstudies en voorziet in de nodige hulpprogramma's voor het implementeren van een nieuw hybride kwantum/klassiek algoritme, de circuit-gerichte kwantumclassificatie, om geleide classificatieproblemen op te lossen.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# en de Microsoft Quantum Development Kit (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# en de Microsoft Quantum Development Kit (QDK)
 
-Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Deze maakt deel uit van de [QDK](https://docs.microsoft.com/quantum/), een volledige Development Kit voor Q# die u kunt gebruiken met gangbare tools en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren, waaronder de ingebouwde kwantumsimulator van de volledige kwantumtoestand.
+Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Deze maakt deel uit van de [QDK](https://docs.microsoft.com/quantum/), een volledige Development Kit voor Q# die u kunt gebruiken met gangbare hulpprogramma's en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren, waaronder de ingebouwde kwantumsimulator van de volledige kwantumtoestand.
 
 Er zijn extensies voor Visual Studio en Visual Studio Code, en pakketten voor gebruik met Python en Jupyter Notebook.
 

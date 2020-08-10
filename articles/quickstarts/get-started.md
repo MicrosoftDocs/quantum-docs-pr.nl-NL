@@ -6,12 +6,15 @@ author: bradben
 ms.author: bradben
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: ff4a3dc829423525e18d89d5ed3d621079d1a524
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274068"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867509"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 
@@ -29,7 +32,7 @@ Als u geen ervaring hebt met kwantumcomputing, raadpleegt u de sectie [Overzicht
 De Quantum Development Kit biedt veel manieren om een kwantumprogramma te leren ontwikkelen met Q#.
 Bekijk een van onze zelfstudies als u de kracht van kwanta wilt gebruiken:
 
-* [Kwantumgenerator voor willekeurige nummers](xref:microsoft.quantum.quickstarts.qrng): begin met een Q#-toepassing in 'Hello World'-stijl. Hiermee maakt u kennis met kwamtumconcepten en leert u binnen enkele minuten een kwantumtoepassing bouwen en uitvoeren.
+* [Kwantumgenerator voor willekeurige nummers](xref:microsoft.quantum.quickstarts.qrng): begin met een Q#-toepassing in 'Hallo wereld'-stijl. Hiermee maakt u kennis met kwamtumconcepten en leert u binnen enkele minuten een kwantumtoepassing te bouwen en uit te voeren.
 * [Kennismaken met verstrengeling met Q#](xref:microsoft.quantum.write-program): in deze zelfstudie wordt u begeleid bij het schrijven van een Q#-programma waarin enkele fundamentele concepten van het kwantumprogrammeren worden gedemonstreerd.
     Als u nog niet zo ver bent om code te gaan schrijven, kunt u de zelfstudie volgen zonder de QDK te installeren om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
 * [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search): bekijk dit voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt.
@@ -54,18 +57,18 @@ Als u nog geen ervaring hebt met kwantumontwikkeling, kan dit er allemaal een be
 
 De huidige documentatie bevat de volgende aanvullende onderwerpen.
 
-### <a name="q-developer-guides"></a>Q#-handleidingen voor ontwikkelaars
+### <a name="no-locq-developer-guides"></a>Handleidingen voor ontwikkelaars in Q#
 
-* [Q#-gebruikershandleiding](xref:microsoft.quantum.guide) beschrijft uitgebreid de concepten voor het maken van kwantumprogramma's in Q#.
+* De [Q#-gebruikershandleiding](xref:microsoft.quantum.guide) beschrijft uitgebreid de concepten voor het maken van kwantumprogramma's in Q#.
 * [Kwantumsimulators en hosttoepassingen](xref:microsoft.quantum.machines): bevat informatie over hoe kwantumalgoritmen worden uitgevoerd, welke kwantumcomputers beschikbaar zijn en hoe u een niet-Q#-stuurprogramma schrijft voor uw kwantumprogramma.
 
-### <a name="q-libraries"></a>Q#-bibliotheken
+### <a name="no-locq-libraries"></a>Q#-bibliotheken
 
-* [Q#-standaardbibliotheken](xref:microsoft.quantum.libraries.standard.intro) beschrijft de bewerkingen en functies die ondersteuning bieden voor zowel het besturingselement in een klassieke taal als de Q#-kwantumalgoritmen. 
+* De [Q#-standaardbibliotheken](xref:microsoft.quantum.libraries.standard.intro) bevatten informatie over de bewerkingen en functies die ondersteuning bieden voor zowel het besturingselement in een klassieke taal als de Q#-kwantumalgoritmen. 
     Besproken onderwerpen omvatten controlestromen, gegevensstructuren, foutcorrectie, testen en foutopsporing. 
-* [De Q#-chemiebibliotheek](xref:microsoft.quantum.chemistry.concepts.intro) beschrijft de bewerkingen en functies die kwantumsimulaties mogelijk maken voor chemie, een belangrijke toepassing van kwantumcomputing. Onderwerpen zijn onder andere het simuleren van Hamiltoniaanse dynamica en kwantumfaseschatting.
-* [De Q#-wiskundebibliotheek](xref:microsoft.quantum.numerics.intro) beschrijft de bewerkingen en functies die het uitdrukken van ingewikkelde wiskundige functies mogelijk maken in systeemeigen bewerkingen voor de doelcomputers.
-* [De naslaginformatie voor de Q#-bibliotheek](xref:microsoft.quantum.standardlibsintro) bevat naslaginformatie over bibliotheekentiteiten per naamruimte.
+* De [Q#-chemiebibliotheek](xref:microsoft.quantum.chemistry.concepts.intro) bevat informatie over de bewerkingen en functies die kwantumsimulaties mogelijk maken voor chemie, een belangrijke toepassing van kwantumcomputing. Onderwerpen zijn onder andere het simuleren van Hamiltoniaanse dynamica en kwantumfaseschatting.
+* De [numerieke Q#-bibliotheek](xref:microsoft.quantum.numerics.intro) bevat informatie over de bewerkingen en functies die het uitdrukken van ingewikkelde wiskundige functies mogelijk maken in systeemeigen bewerkingen voor doelcomputers.
+* [Naslaginformatie over de Q#-bibliotheek](xref:microsoft.quantum.standardlibsintro) bevat naslaginformatie over bibliotheekentiteiten op naamruimte.
 
 ### <a name="general-quantum-computing"></a>Algemene kwantumcomputing
 
@@ -79,7 +82,7 @@ De huidige documentatie bevat de volgende aanvullende onderwerpen.
 * [Opmerkingen bij de release van de Microsoft Quantum Development Kit](xref:microsoft.quantum.relnotes).
 
 
-## <a name="be-a-part-of-the-q-open-source-community"></a>Deel uitmaken van de opensource-community voor Q#
+## <a name="be-a-part-of-the-no-locq-open-source-community"></a>Deel uitmaken van de opensource-community voor Q#
 
 De Quantum Development Kit is een open-source Development Kit waarmee ontwikkelaars kwantumcomputing toegankelijker maken, zodat we enkele van de meest uitdagende problemen ter wereld kunnen oplossen.  Academische instellingen die opensource-software nodig hebben, kunnen Q# implementeren voor hun kwantumonderwijs- en ontwikkeling. Door de Development Kit opensource te maken, krijgen ontwikkelaars en domeinexperts ook de kans om via hun code verbeteringen en ideeën bij te dragen.
 

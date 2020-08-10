@@ -7,12 +7,15 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871396"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866754"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum Development Kit (QDK) bijwerken
 
@@ -21,10 +24,10 @@ Meer informatie over het bijwerken van de Microsoft Quantum Development Kit (QDK
 In dit artikel wordt ervan uitgegaan dat u de QDK al hebt geïnstalleerd. Als u de QDK voor de eerste keer installeert, dient u de [installatiehandleiding](xref:microsoft.quantum.install) te raadplegen.
 
 We raden u aan om de QDK altijd naar de meest recente versie bij te werken. Volg deze updatehandleiding om een upgrade uit te voeren naar de meest recente versie van de QDK. Het proces bestaat uit twee delen:
-1. Uw bestaande Q#-bestanden en -projecten bijwerken om de code uit te lijnen met eventueel bijgewerkte syntaxis.
+1. Uw bestaande Q#-bestanden en -projecten bijwerken om de code in overeenstemming te brengen met eventueel bijgewerkte syntaxis.
 2. De QDK zelf bijwerken voor de door u gekozen ontwikkelomgeving.
 
-## <a name="updating-q-projects"></a>Q#-projecten bijwerken 
+## <a name="updating-no-locq-projects"></a>Q#-projecten bijwerken 
 
 U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of u C# of Python gebruikt om Q#-bewerkingen te hosten.
 
@@ -36,7 +39,7 @@ U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of
 
     Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, installeert u de [meest recente versie](https://dotnet.microsoft.com/download) en controleert u de uitvoer opnieuw. Volg de onderstaande instructies, afhankelijk van uw installatie (Visual Studio, Visual Studio Code of rechtstreeks vanaf de opdrachtregel).
 
-### <a name="update-q-projects-in-visual-studio"></a>Q#-projecten in Visual Studio bijwerken
+### <a name="update-no-locq-projects-in-visual-studio"></a>Q#-projecten in Visual Studio bijwerken
  
 1. Voer een update uit naar de meest recente versie van Visual Studio 2019. Instructies hiervoor vindt u [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019).
 2. Open uw oplossing in Visual Studio.
@@ -77,13 +80,13 @@ U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of
 U kunt nu doorgaan met het [bijwerken van uw Visual Studio QDK-extensie](#update-visual-studio-qdk-extension).
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>Q#-projecten in Visual Studio Code bijwerken
+### <a name="update-no-locq-projects-in-visual-studio-code"></a>Q#-projecten in Visual Studio Code bijwerken
 
 1. Open in Visual Studio Code de map met het project dat moet worden bijgewerkt.
 2. Klik op **Terminal** -> **Nieuwe terminal**.
 3. Volg de instructies voor het bijwerken met behulp van de opdrachtregel (direct hieronder).
 
-### <a name="update-q-projects-using-the-command-line"></a>Q#-projecten bijwerken met behulp van de opdrachtregel
+### <a name="update-no-locq-projects-using-the-command-line"></a>Q#-projecten bijwerken met behulp van de opdrachtregel
 
 1. Navigeer naar de map met het hoofdprojectbestand.
 
@@ -231,7 +234,7 @@ De updateprocedure is afhankelijk van of u oorspronkelijk hebt geïnstalleerd me
 
 U kunt nu het bijgewerkte Python-pakket voor `qsharp` gebruiken om uw bestaande kwantumprogramma's uit te voeren.
 
-### <a name="update-the-iq-jupyter-kernel"></a>De IQ # Jupyter-kernel bijwerken
+### <a name="update-the-ino-locq-jupyter-kernel"></a>De IQ# Jupyter-kernel bijwerken
 
 De updateprocedure is afhankelijk van of u oorspronkelijk hebt geïnstalleerd met behulp van Conda of met behulp van de .NET CLI en PIP.
 
@@ -285,7 +288,7 @@ U kunt nu de bijgewerkte IQ#-kernel gebruiken om uw bestaande Q# Jupyter Noteboo
 
 ### <a name="update-visual-studio-qdk-extension"></a>De Visual Studio QDK-extensie bijwerken
 
-1. Werk de Q# Visual Studio-extensie bij
+1. De Q# Visual Studio-extensie bijwerken
 
     - Visual Studio vraagt u updates te accepteren voor de [Quantum Visual Studio-extensie](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
     - Accepteer de update
