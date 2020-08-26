@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Hiermee genereert u een wille keurig geheel getal dat groter is dan of gelijk is aan nul en kleiner dan een gegeven bovengrens.
-remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid afhankelijk is van de `Random`implementatie van.
+summary: RandomInt is afgeschaft. Gebruik @"microsoft.quantum.random.drawrandomint" in plaats daarvan.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Een geheel getal dat een waarde heeft die groter is dan het grootste gehele getal dat door deze bewerking moet worden geretourneerd.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ gelijk aan het opgegeven interval. dat wil zeggen, met $ \Pr (x) ={1}\Frac {\texttt{maxInt}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682758"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863517"

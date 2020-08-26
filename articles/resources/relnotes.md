@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 869d13acd5cb82fac73be514d6622a616ddceb54
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863756"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -24,6 +24,23 @@ Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instr
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
 
+## <a name="version-01220082513"></a>Versie 0.12.20082513
+
+*Release datum: augustus 25e, 2020*
+
+Deze release omvat het volgende:
+
+- Nieuwe [micro soft. Quantum. wille keurige naam ruimte](xref:microsoft.quantum.random), waardoor u een handigere manier hebt om wille keurige waarden uit Program ma's te laten zien Q# . ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Verbeterde [micro soft. Quantum. Diagnostics-naam ruimte](xref:microsoft.quantum.diagnostics) met een nieuwe [ `DumpOperation` bewerking](xref:microsoft.quantum.diagnostics.dumpoperation)en nieuwe bewerkingen voor het beperken van Qubit-toewijzing en Oracle-aanroepen. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
+- De nieuwe [ `%project` Magic-opdracht](xref:microsoft.quantum.iqsharp.magic-ref.project) in I Q# en [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) in python ter ondersteuning van verwijzingen naar Q# projecten buiten de huidige werkruimte map. Zie [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) voor de huidige beperkingen van deze functie. 
+- Ondersteuning voor het automatisch laden van `.csproj` bestanden voor de Q# /python-hosts, waardoor het mogelijk is dat externe project-of pakket verwijzingen worden geladen tijdens de initialisatie. Raadpleeg de hand leiding voor het gebruik [ Q# van python-en Jupyter-notebooks](xref:microsoft.quantum.guide.host-programs) voor meer informatie.
+- Het voor beeld voor ErrorCorrection. Syndrome is toegevoegd.
+- Instel bare-koppeling toegevoegd aan SimpleIsing.
+- Bijgewerkt HiddenShift-voor beeld.
+- Voor beeld voor het oplossen van Sudoku met het algoritme van Grover (externe bijdrage) is toegevoegd.
+- Algemene oplossingen voor fouten.
+
+Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01220072031"></a>Versie 0.12.20072031
 
@@ -50,8 +67,8 @@ Deze release omvat het volgende:
 - Updates om het voor Q# gebruikers gemakkelijker te maken om bibliotheek pakketten te gebruiken met verschillende QDK-versies, zodat alleen grote & secundaire versie nummers overeenkomen in plaats van exact dezelfde versie
 - Afgeschafte `Microsoft.Quantum.Primitive.*` naam ruimte verwijderd
 - Verplaatste bewerkingen:
-  - `Microsoft.Quantum.Intrinsic.Assert`is nu`Microsoft.Quantum.Diagnostics.AssertMeasurement`
-  - `Microsoft.Quantum.Intrinsic.AssertProb`is nu`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+  - `Microsoft.Quantum.Intrinsic.Assert` is nu `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` is nu `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
 - Opgeloste fouten 
 
 Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -68,10 +85,10 @@ Deze release corrigeert een bug die invloed heeft op de compilatie van Q# projec
 
 Deze release omvat het volgende:
 
-- Q#notebooks en python-host-Program ma's mislukken niet meer wanneer een Q# ingangs punt aanwezig is
+- Q# notebooks en python-host-Program ma's mislukken niet meer wanneer een Q# ingangs punt aanwezig is
 - Updates voor de [standaardbibliotheek](xref:microsoft.quantum.libraries.standard.intro) voor het gebruik van toegangsparameters
 - Compiler kan nu een invoegtoepassing voor het herschrijven van stappen uitvoeren tussen de ingebouwde stappen voor herschrijven
-- Er zijn verschillende afgeschafte functies en bewerkingen verwijderd volgens de planning die wordt beschreven in onze [API-principes](xref:microsoft.quantum.contributing.api-design). Q#Program ma's en bibliotheken die zonder waarschuwingen in versie 0.11.2004.2825 maken, blijven werken ongewijzigd.
+- Er zijn verschillende afgeschafte functies en bewerkingen verwijderd volgens de planning die wordt beschreven in onze [API-principes](xref:microsoft.quantum.contributing.api-design). Q# Program ma's en bibliotheken die zonder waarschuwingen in versie 0.11.2004.2825 maken, blijven werken ongewijzigd.
 
 Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
@@ -84,12 +101,12 @@ Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.c
 
 Deze release omvat het volgende:
 
-- Nieuwe ondersteuning voor Q# opdracht regel toepassingen, waarvoor geen C#-of python-hostbestand meer nodig is. Zie hier voor meer informatie over het aan de slag Q# gaan met [here](xref:microsoft.quantum.install.standalone)opdracht regel toepassingen.
+- Nieuwe ondersteuning voor Q# toepassingen waarvoor geen C#-of python-hostbestand meer nodig is. Zie hier voor meer informatie over het aan de slag Q# gaan met toepassingen. [here](xref:microsoft.quantum.install.standalone)
 - De quickstart voor de kwantumgenerator voor willekeurige nummers is bijgewerkt. Er is nu geen C# of Python-hostbestand meer nodig. Bekijk de bijgewerkte [quickstart](xref:microsoft.quantum.quickstarts.qrng)
 - Prestatie verbeteringen voor I Q# docker-installatie kopieën
 
 > [!NOTE]
-> Q#opdracht regel toepassingen die het nieuwe kenmerk gebruiken, [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) kunnen momenteel niet worden aangeroepen vanuit Python-of .net-hostgroepen.
+> Q# toepassingen die gebruikmaken van het nieuwe [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) kenmerk kunnen momenteel niet worden aangeroepen vanuit Python-of .net-hostgroepen.
 > Raadpleeg de gidsen voor [Python](xref:microsoft.quantum.install.python) en [.NET-interoperabiliteit](xref:microsoft.quantum.install.cs) voor meer informatie.
 
 ## <a name="version-01120033107"></a>Versie 0.11.2003.3107
@@ -189,7 +206,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Nieuwe ondersteuning voor [conjugation-instructies](xref:microsoft.quantum.guide.operationsfunctions#conjugations) inQ#
+- Nieuwe ondersteuning voor [conjugation-instructies](xref:microsoft.quantum.guide.operationsfunctions#conjugations) in Q#
 - Nieuwe codeacties in de compiler, zoals 'vervangen door', 'documentatie toevoegen' en eenvoudige updates van matrix-items
 - Installatiesjabloon en nieuwe projectopdrachten toegevoegd aan Visual Studio Code-extensie
 - Nieuwe varianten van ApplyIf-combinatie toegevoegd, zoals [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -225,7 +242,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige programma's bij te werken.  Meer informatie over deze wijzigingen vindt u in het [ Q# dev-blog](https://devblogs.microsoft.com/qsharp).
 
-### <a name="no-locq-language-syntax"></a>Q#taal syntaxis
+### <a name="no-locq-language-syntax"></a>Q# taal syntaxis
 Deze release voegt een nieuwe Q# taal syntaxis toe:
 * Benoemde items toegevoegd voor [door de gebruiker gedefinieerde typen](xref:microsoft.quantum.guide.types#user-defined-types).  
 * Door de gebruiker gedefinieerde typeconstructies kunnen nu als functies worden gebruikt.
@@ -256,7 +273,7 @@ Deze release omvat het volgende:
 
 De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige programma's bij te werken.  Lees meer over deze wijzigingen op devblogs.microsoft.com/qsharp.
 
-### <a name="no-locq-language-syntax"></a>Q#taal syntaxis
+### <a name="no-locq-language-syntax"></a>Q# taal syntaxis
 Deze release voegt een nieuwe Q# taal syntaxis toe:
 * Een [stenomanier toegevoegd om specialisaties van kwantumbewerkingen uit te drukken](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (controles en aangrenzenden) met `+`-operators.  De oude syntaxis is afgeschaft.  Programma's die gebruikmaken van de oude syntaxis (bijvoorbeeld `: adjoint`) werken nog steeds, maar er wordt een waarschuwing voor een compilatietijd gegenereerd.  
 * Nieuwe operator toegevoegd voor [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions), `w/`, kan ook worden gebruikt om het maken van een matrix uit te drukken als een wijziging van een bestaande matrix.
@@ -297,19 +314,19 @@ Raadpleeg de [installatiegids](xref:microsoft.quantum.install) om de QDK bij te 
   
 Als u bestaande Q# projecten van versie 0,5 van de Quantum Development Kit hebt, zijn de volgende stappen voor het migreren van die projecten naar de nieuwste versie.
 
-    1. Projecten moeten in volgorde worden bijgewerkt.  Als u een oplossing hebt met meerdere projecten, werkt u elk project bij in de volgorde waarop ernaar wordt verwezen.
-    2. Voer in een opdrachtregel `dotnet clean` uit om alle bestaande binaire en tussenliggende bestanden te verwijderen.
-    3. Bewerk het .csproj-bestand in een teksteditor om de versie van alle 'Microsoft.Quantum' `PackageReference` te veranderen in versie 0.6.1904 en de naam van het pakket 'Microsoft.Quantum.Canon' te veranderen in 'Microsoft.Quantum.Standard', bijvoorbeeld:
+1. Projecten moeten in volgorde worden bijgewerkt.  Als u een oplossing hebt met meerdere projecten, werkt u elk project bij in de volgorde waarop ernaar wordt verwezen.
+2. Voer vanaf een opdracht prompt uit `dotnet clean` om alle bestaande binaire bestanden en tussenliggende bestand te verwijderen.
+3. Bewerk het .csproj-bestand in een teksteditor om de versie van alle 'Microsoft.Quantum' `PackageReference` te veranderen in versie 0.6.1904 en de naam van het pakket 'Microsoft.Quantum.Canon' te veranderen in 'Microsoft.Quantum.Standard', bijvoorbeeld:
 
-         ```xml
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-        ```
-    4. Voer vanuit de opdrachtregel deze opdracht uit: `dotnet msbuild`  
-    5. Nadat u de opdracht hebt uitgevoerd, moet u mogelijk nog steeds handmatig fouten aanpakken door de bovenstaande wijzigingen.  In veel gevallen worden deze fouten ook gerapporteerd door IntelliSense in Visual Studio of Visual Studio Code.
-        - Open de hoofdmap van het project of de oplossing in Visual Studio 2019 of Visual Studio Code.
-        - Nadat u een. QS-bestand in de editor hebt geopend, ziet u de uitvoer van de Q# taal extensie in het uitvoer venster.
-        - Nadat het project succesvol is geladen (aangegeven in het uitvoervenster), opent u elk bestand handmatig om de resterende problemen aan te pakken.
+    ```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+    ```
+4. Voer de volgende opdracht uit vanaf de opdracht prompt: `dotnet msbuild`  
+5. Nadat u de opdracht hebt uitgevoerd, moet u mogelijk nog steeds handmatig fouten aanpakken door de bovenstaande wijzigingen.  In veel gevallen worden deze fouten ook gerapporteerd door IntelliSense in Visual Studio of Visual Studio Code.
+    - Open de hoofdmap van het project of de oplossing in Visual Studio 2019 of Visual Studio Code.
+    - Nadat u een. QS-bestand in de editor hebt geopend, ziet u de uitvoer van de Q# taal extensie in het uitvoer venster.
+    - Nadat het project succesvol is geladen (aangegeven in het uitvoervenster), opent u elk bestand handmatig om de resterende problemen aan te pakken.
 
 > [!NOTE]
 > * Voor release 0.6 ondersteunt de taalserver in de Quantum Development Kit niet meerdere werkruimten.
@@ -571,7 +588,7 @@ Houd er rekening mee dat de bewerking RandomWalkPhaseEstimation van de raamruimt
 ### <a name="known-issues"></a>Bekende problemen
 
 - De `--filter` optie `dotnet test` werkt niet correct voor testen die in zijn geschreven Q# .
-  Als gevolg hiervan kunnen afzonderlijke moduletests niet worden uitgevoerd in Visual Studio Code. We raden aan dat u `dotnet test` gebruikt in de opdrachtregel om alle tests opnieuw uit te voeren.
+  Als gevolg hiervan kunnen afzonderlijke eenheids tests niet worden uitgevoerd in Visual Studio code. u `dotnet test` kunt het beste bij de opdracht prompt gebruiken om alle tests opnieuw uit te voeren.
 
 ## <a name="version-0118011707"></a>Versie 0.1.1801.1707
 

@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertphase
+name: AssertPhase
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Er wordt bevestigd dat de fase van een gelijke superpositie status de verwachte waarde heeft.
+
+
+  Met deze bewerking wordt in de fase $ \phi $ van een Quantum status aangegeven dat kan worden uitgedrukt als $ \frac{e ^ {i t}} {\sqrt {2} } (e ^ {i\phi} \ Ket {0} + e ^ {-i\phi} \ Ket {1} ) $ voor een wille keurig Real $t $ de verwachte waarde heeft.
+examples: >-
+  De volgende assert is geslaagd: `qubit` heeft de status $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ Ket {0} + e ^ {i 0.5} \ SQRT {1/2} \ Ket {1} $;
+
+
+  - `AssertPhase(0.0,qubit,10e-10);`
+
+
+  `qubit` heeft de status $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ Ket {0} + e ^ {-i 0.5} \ SQRT {1/2} \ Ket {1} $;
+
+
+  - `AssertPhase(0.5,qubit,10e-10);`
+
+
+  `qubit` heeft de status $ \ket{\psi} = e ^ {-i 2,2} \ SQRT {1/2} \ Ket {0} + e ^ {i 0,2} \ SQRT {1/2} \ Ket {1} $;
+
+
+  - `AssertPhase(-1.2,qubit,10e-10);`
+syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Double, qubit : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: De verwachte waarde van $ \phi \in (-\pi, \pi] $.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: De Qubit waarin de verwachte status wordt opgeslagen.
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: Absolute tolerantie voor het verschil tussen werkelijk en verwacht.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+metadata:
+  ms.openlocfilehash: 5be9fdb82a955282a824b06dd921e6a59a0828a2
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864015"

@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandomint
+name: DrawRandomInt
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Hiermee wordt een wille keurig geheel getal in een opgegeven, inclusief bereik getekend.
+remarks: Mislukt als `max <= min` .
+examples: >-
+  Het volgende Q #-fragment rolt een wille keurige dobbel steen op met zes zijden:
+
+
+  ```Q#
+
+  let roll = DrawRandomInt(1, 6);
+
+  ```
+syntax: 'operation DrawRandomInt (min : Int, max : Int) : Int'
+input:
+  content: '(min : Int, max : Int)'
+  types:
+  - name: min
+    summary: Het kleinste gehele getal dat moet worden getekend.
+    isPrimitive: true
+    uid: Int
+  - name: max
+    summary: Het grootste gehele getal dat moet worden getekend.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Een geheel getal in het inclusieve bereik van `min` tot `max` en met een uniforme kans.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.discreteuniformdistribution
+metadata:
+  ms.openlocfilehash: cb80cacff95dac9e4cecc5717124c20909a56ca0
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864063"

@@ -2,19 +2,19 @@
 title: Intrinsieke bewerkingen en functies in de QDK
 description: Meer informatie over de intrinsieke bewerkingen en functies in de QDK, waaronder klassieke functies en unitary, rotatie-en meet bewerkingen.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868437"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863724"
 ---
 # <a name="the-prelude"></a>De prelude #
 
@@ -128,27 +128,27 @@ Binnen Quantum-algoritmen is het vaak handig om rotaties als dyadic fracties te 
 Het verschil <xref:microsoft.quantum.intrinsic.r> is dat de draai hoek wordt opgegeven als twee invoer typen `Int` , geïnterpreteerd als een dyadic Fractie.
 Daarom `RFrac` heeft hand tekening `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Het implementeert de single-Qubit unitary $ \exp (i \pi k \sigma/2 ^ n) $, waarbij $ \sigma $ de Pauli matrix is die overeenkomt met het eerste argument, $k $ het tweede argument is en $n $ het derde argument is.
-`RFrac(_,k,n,_)`is hetzelfde als `R(_,-πk/2^n,_)` . Houd er rekening mee dat de hoek de *negatieve* waarde van de Fractie.
+`RFrac(_,k,n,_)` is hetzelfde als `R(_,-πk/2^n,_)` . Houd er rekening mee dat de hoek de *negatieve* waarde van de Fractie.
 
 Met de <xref:microsoft.quantum.intrinsic.rx> bewerking wordt een draaiing rond de Pauli $X $ as geïmplementeerd.
 Deze heeft hand tekening `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rx(_, _)`is hetzelfde als `R(PauliX, _, _)` .
+`Rx(_, _)` is hetzelfde als `R(PauliX, _, _)` .
 
 Met de <xref:microsoft.quantum.intrinsic.ry> bewerking wordt een draaiing rond de Pauli $Y $ as geïmplementeerd.
 Deze heeft hand tekening `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Ry(_, _)`is hetzelfde als `R(PauliY,_ , _)` .
+`Ry(_, _)` is hetzelfde als `R(PauliY,_ , _)` .
 
 Met de <xref:microsoft.quantum.intrinsic.rz> bewerking wordt een draaiing rond de Pauli $Z $ as geïmplementeerd.
 Deze heeft hand tekening `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rz(_, _)`is hetzelfde als `R(PauliZ, _, _)` .
+`Rz(_, _)` is hetzelfde als `R(PauliZ, _, _)` .
 
 <xref:microsoft.quantum.intrinsic.r1>Met de bewerking wordt een rotatie geïmplementeerd met de opgegeven hoeveelheid rond $ \ket {1} $, de $-$1 eigenstate van $Z $.
 Deze heeft hand tekening `((Double, Qubit) => Unit is Adj + Ctl)` .
-`R1(phi,_)`is hetzelfde als `R(PauliZ,phi,_)` gevolgd door `R(PauliI,-phi,_)` .
+`R1(phi,_)` is hetzelfde als `R(PauliZ,phi,_)` gevolgd door `R(PauliI,-phi,_)` .
 
 <xref:microsoft.quantum.intrinsic.r1frac>Met de bewerking wordt een gedeeltelijke draaiing geïmplementeerd met de opgegeven hoeveelheid rond de Z = 1 eigenstate.
 Deze heeft hand tekening `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
-`R1Frac(k,n,_)`is hetzelfde als `RFrac(PauliZ,-k.n+1,_)` gevolgd door `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` is hetzelfde als `RFrac(PauliZ,-k.n+1,_)` gevolgd door `RFrac(PauliI,k,n+1,_)` .
 
 Hieronder ziet u een voor beeld van een rotatie bewerking (rond de Pauli $Z $ as, in dit geval) die is toegewezen aan de Bloch-bol:
 
@@ -160,17 +160,17 @@ Naast de bovenstaande bewerkingen met één Qubit definieert de prelude ook enke
 
 Ten eerste <xref:microsoft.quantum.intrinsic.cnot> voert de bewerking een standaard Controlled- `NOT` Gate, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}.
 \end{Equation} heeft een hand tekening, waarmee wordt aangegeven `((Qubit, Qubit) => Unit is Adj + Ctl)` dat $ \operatorname{CNOT} $ unitarily op twee afzonderlijke qubits.
-`CNOT(q1, q2)`is hetzelfde als `(Controlled X)([q1], q2)` .
+`CNOT(q1, q2)` is hetzelfde als `(Controlled X)([q1], q2)` .
 Omdat de `Controlled` functor voor het beheren van een REGI ster toestaat, gebruiken we de matrix letterlijke waarde `[q1]` om aan te geven dat we alleen het ene besturings element willen.
 
 Met de <xref:microsoft.quantum.intrinsic.ccnot> bewerking wordt een niet-Gate met dubbele controle uitgevoerd, ook wel bekend als de Toffoli-poort.
 Deze heeft hand tekening `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
-`CCNOT(q1, q2, q3)`is hetzelfde als `(Controlled X)([q1, q2], q3)` .
+`CCNOT(q1, q2, q3)` is hetzelfde als `(Controlled X)([q1, q2], q3)` .
 
 <xref:microsoft.quantum.intrinsic.swap>Met deze bewerking worden de Quantum statussen van twee qubits gewisseld.
 Dat wil zeggen, implementeert de unitary-matrix \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}.
 \end{Equation} heeft een hand tekening `((Qubit, Qubit) => Unit is Adj + Ctl)` .
-`SWAP(q1,q2)`is gelijk aan `CNOT(q1, q2)` gevolgd door `CNOT(q2, q1)` en vervolgens `CNOT(q1, q2)` .
+`SWAP(q1,q2)` is gelijk aan `CNOT(q1, q2)` gevolgd door `CNOT(q2, q1)` en vervolgens `CNOT(q1, q2)` .
 
 > [!NOTE]
 > De SWAP-Gate is *niet* hetzelfde als de elementen van een variabele met type `Qubit[]` .
@@ -202,7 +202,7 @@ Meting bewerkingen ondersteunen noch de `Adjoint` `Controlled` functor.
 
 Met deze <xref:microsoft.quantum.intrinsic.measure> bewerking wordt een gemeen schappelijke meting uitgevoerd van een of meer qubits in het opgegeven product van Pauli-Opera tors.
 Als de matrix Pauli en Qubit verschillende lengten hebben, mislukt de bewerking.
-`Measure`heeft hand tekening `((Pauli[], Qubit[]) => Result)` .
+`Measure` heeft hand tekening `((Pauli[], Qubit[]) => Result)` .
 
 Houd er rekening mee dat een gezamenlijke meting niet hetzelfde is als het meten van elk Qubit afzonderlijk.
 Bekijk bijvoorbeeld de status $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket {00} $.
@@ -215,11 +215,11 @@ Deze eigenschap is op een later tijdstip essentieel, omdat de fout correctie wor
 Voor het gemak biedt de prelude ook twee andere bewerkingen voor het meten van qubits.
 Ten eerste, omdat het uitvoeren van metingen met één Qubit heel gebruikelijk is, definieert de prelude een steno voor deze aanvraag.
 De <xref:microsoft.quantum.intrinsic.m> bewerking meet de Pauli $Z $-operator op één Qubit en heeft hand tekening `(Qubit => Result)` .
-`M(q)`is gelijk aan `Measure([PauliZ], [q])` .
+`M(q)` is gelijk aan `Measure([PauliZ], [q])` .
 
 De <xref:microsoft.quantum.measurement.multim> meet de Pauli $Z $-operator *afzonderlijk* op elk van een matrix van qubits en retourneert de *matrix* met waarden die zijn `Result` verkregen voor elke qubit.
 In sommige gevallen kan dit worden geoptimaliseerd. Deze heeft hand tekening ( `Qubit[] => Result[])` .
-`MultiM(qs)`is gelijk aan:
+`MultiM(qs)` is gelijk aan:
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

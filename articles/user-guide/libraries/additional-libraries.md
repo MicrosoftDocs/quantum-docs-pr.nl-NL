@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869576"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863085"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Extra Q# bibliotheken gebruiken
 
 De Quantum Development Kit biedt aanvullende, domein-specifieke functionaliteit via _NuGet-pakketten_ die aan uw projecten kunnen worden toegevoegd Q# .
 
-| Q#Tagbibliotheek  | NuGet-pakket | Opmerkingen |
+| Q# Tagbibliotheek  | NuGet-pakket | Notities |
 |---------|---------|--------|
-| [Q#standaard bibliotheek](xref:microsoft.quantum.libraries.standard.intro) | [**Micro soft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Standaard opgenomen |
+| [Q# standaard bibliotheek](xref:microsoft.quantum.libraries.standard.intro) | [**Micro soft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Standaard opgenomen |
 | [Bibliotheek voor kwantumchemie](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Bibliotheek voor kwantumberekeningen](xref:microsoft.quantum.numerics.intro) | [**Micro soft. Quantum. numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Kwantumbibliotheek voor machine learning](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,9 +33,9 @@ Zodra u de Quantum Development Kit hebt geïnstalleerd voor gebruik met uw voork
 > Sommige Q# bibliotheken kunnen goed werken met aanvullende hulp middelen die samen werken met uw Q# Program ma's of die zijn geïntegreerd met uw host-toepassingen.
 > Zo wordt in de [installatie-instructies voor chemie](xref:microsoft.quantum.chemistry.concepts.installation) beschreven hoe u het [pakket **micro soft. Quantum. chemie** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) kunt gebruiken samen met het NWChem computing computing-platform, en hoe u de `qdk-chem` opdracht regel Programma's installeert voor het werken met gegevens van quantum chemie.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#opdracht regel toepassingen of .NET Interop](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# toepassingen of .NET Interop](#tab/tabid-csproj)
 
-**Opdracht regel of Visual Studio code:** Met de opdracht regel zelf of vanuit Visual Studio code kunt u de `dotnet` opdracht gebruiken om een NuGet-pakket verwijzing toe te voegen aan uw project.
+**Opdracht prompt of Visual Studio code:** Met behulp van de opdracht prompt zelf of vanuit Visual Studio code kunt u de opdracht gebruiken `dotnet` om een NuGet-pakket verwijzing toe te voegen aan uw project.
 Als u bijvoorbeeld het pakket [**micro soft. Quantum. numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) wilt toevoegen, voert u de volgende opdracht uit:
 
 ```dotnetcli
@@ -54,7 +54,7 @@ Zie de [gebruikers interface voor pakket beheer](https://docs.microsoft.com/nuge
 
 U kunt ook de Package Manager-console gebruiken om de numerieke bibliotheek toe te voegen aan uw project via de opdracht regel interface.
 
-![De Package Manager-console gebruiken vanaf de opdracht regel](~/media/vs2017-nuget-console-menu.png)
+![De Package Manager-console gebruiken vanaf de opdracht prompt](~/media/vs2017-nuget-console-menu.png)
 
 Voer de volgende handelingen uit vanuit de Package Manager-console:
 

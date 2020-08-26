@@ -1,5 +1,5 @@
 ---
-title: Program ma's op Qubit-niveau schrijven en simuleren inQ#
+title: Program ma's op Qubit-niveau schrijven en simuleren in Q#
 description: Stapsgewijze zelf studie voor het schrijven en simuleren van een Quantum programma dat op het individuele Qubit niveau werkt
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869712"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863335"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Zelf studie: Program ma's op Qubit schrijven en simuleren in Q\#
 
@@ -41,17 +41,17 @@ In ons geval definieert Q# u een bewerking voor het uitvoeren van de volledige Q
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>In deze zelfstudie leert u het volgende:
 
 > [!div class="checklist"]
-> * Quantum bewerkingen definiëren inQ#
-> * Q#Bewerkingen rechtstreeks aanroepen vanaf de opdracht regel of met behulp van een klassiek host-programma
+> * Quantum bewerkingen definiëren in Q#
+> * Q#Bewerkingen rechtstreeks aanroepen vanaf de opdracht prompt of met een klassiek host-programma
 > * Een Quantum bewerking simuleren vanuit Qubit-toewijzing naar meting uitvoer
 > * Bekijk hoe de gesimuleerde Wavefunction van het Quantum systeem tijdens de bewerking wordt ontwikkeld
 
 Het uitvoeren van een Quantum programma met de Quantum Development Kit van micro soft bestaat meestal uit twee delen:
 1. Het programma zelf, dat wordt geïmplementeerd met behulp van de Q# Quantum programmeer taal en vervolgens wordt aangeroepen om te worden uitgevoerd op een quantum computer of Quantum Simulator. Deze bestaan uit 
-    - Q#bewerkingen: subroutines die optreden op Quantum registers en 
-    - Q#functions: klassieke subroutines die worden gebruikt binnen het Quantum algoritme.
+    - Q# bewerkingen: subroutines die optreden op Quantum registers en 
+    - Q# functions: klassieke subroutines die worden gebruikt binnen het Quantum algoritme.
 2. Het ingangs punt dat wordt gebruikt om het Quantum programma aan te roepen en de doel computer op te geven waarop het moet worden uitgevoerd.
-    U kunt dit rechtstreeks doen via de opdracht regel of via een hostprogramma dat is geschreven in een klassieke programmeer taal, zoals python of C#.
+    Dit kan rechtstreeks worden gedaan via de opdracht prompt of via een hostprogramma dat is geschreven in een klassieke programmeer taal, zoals python of C#.
     Deze zelf studie bevat instructies voor de methode die u wilt gebruiken.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits toewijzen en Quantum bewerkingen definiëren
@@ -92,7 +92,7 @@ Vervolgens definieert u de `Perform3qubitQFT` bewerking:
 De bewerking heeft nu geen argumenten en retourneert niets---in dit geval schrijven we dat er een object wordt geretourneerd dat in `Unit` `void` C# of een lege tuple `Tuple[()]` in python is Akin.
 Later gaan we deze wijzigen om een matrix met meet resultaten te retour neren, waarop het punt `Unit` wordt vervangen door `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>Qubits toewijzen aan`using`
+### <a name="allocate-qubits-with-using"></a>Qubits toewijzen aan `using`
 In onze Q# bewerking wijzen we eerst een REGI ster van drie qubits toe met de `using` instructie:
 
 ```qsharp
@@ -114,7 +114,7 @@ Met `using` worden automatisch de qubits toegewezen in de status $ \ket {0} $. W
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Single-Qubit en beheerde poorten Toep assen
 
 Daarna passen we de Gates toe die de bewerking zelf vormen.
-Q#bevat al veel eenvoudige Quantum poorten als bewerkingen in de [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) naam ruimte, en dit is geen uitzonde ring. 
+Q# bevat al veel eenvoudige Quantum poorten als bewerkingen in de [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) naam ruimte, en dit is geen uitzonde ring. 
 
 Binnen een Q# bewerking worden de instructies die callables aanroepen, in sequentiële volg orde uitgevoerd.
 Daarom is de eerste poort die moet worden toegepast, de [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) voor de eerste Qubit:
@@ -134,10 +134,10 @@ Een `R1(θ, <qubit>)` bewerking in het algemeen laat het onderdeel $ \ket {0} $ 
 
 #### <a name="controlled-operations"></a>Beheerde bewerkingen
 
-Q#maakt het zeer eenvoudig om een bewerking uit te voeren op een of meer besturings qubits.
+Q# maakt het zeer eenvoudig om een bewerking uit te voeren op een of meer besturings qubits.
 Over het algemeen hebben we alleen de oproep met en `Controlled` de bewerkings argumenten gewijzigd als:
 
- `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
+ `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
 
 Houd er rekening mee dat het besturings element qubits moet worden ingesteld als een matrix, zelfs als het een enkele Qubit is.
 
@@ -157,7 +157,7 @@ Houd er rekening mee dat we de [`PI()`](xref:microsoft.quantum.math.pi) functie 
 Daarnaast delen we door een `Double` (bijvoorbeeld), `2.0` omdat het delen door een geheel getal `2` een type fout genereert. 
 
 > [!TIP]
-> `R1(π/2)`en `R1(π/4)` zijn gelijk aan de- `S` en- `T` bewerkingen (ook in `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` en `R1(π/4)` zijn gelijk aan de- `S` en- `T` bewerkingen (ook in `Microsoft.Quantum.Intrinsic` ).
 
 
 Na het Toep assen van de relevante `H` bewerkingen en de beheerde draaiingen naar de tweede en derde qubits:
@@ -249,11 +249,11 @@ Het Q# bestand en de bewerking zijn voltooid, maar ons Quantum programma kan wor
 Q#Als u de bewerking in een `.qs` bestand hebt gedefinieerd, moet u deze bewerking nu aanroepen en de geretourneerde klassieke gegevens bekijken.
 Er wordt nu niets geretourneerd (intrekken dat de hierboven gedefinieerde bewerking is geretourneerd `Unit` ), maar wanneer we de bewerking later wijzigen Q# om een matrix met meet resultaten te retour neren ( `Result[]` ), zullen we dit aanpakken.
 
-Terwijl het Q# programma wordt alomtegenwoordige in de omgevingen die worden gebruikt om het te aanroepen, is de manier waarop u dit kunt doen, afhankelijk van elkaar. Volg de instructies in het tabblad dat overeenkomt met uw installatie: werken vanuit de Q# opdracht regel toepassing of een host-programma in Python of C#.
+Terwijl het Q# programma wordt alomtegenwoordige in de omgevingen die worden gebruikt om het te aanroepen, is de manier waarop u dit kunt doen, afhankelijk van elkaar. Volg de instructies in het tabblad dat overeenkomt met uw installatie: werken vanuit de Q# toepassing of een host-programma gebruiken in Python of C#.
 
-#### <a name="command-line"></a>[Opdrachtregel](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Opdracht prompt](#tab/tabid-cmdline)
 
-Voor het uitvoeren Q# van het programma vanaf de opdracht regel is slechts een kleine wijziging in het Q# bestand vereist.
+Voor het uitvoeren Q# van het programma vanaf de opdracht prompt is alleen een kleine wijziging in het Q# bestand vereist.
 
 Voeg simpelweg toe `@EntryPoint()` aan een regel voor de bewerkings definitie:
 
@@ -396,7 +396,7 @@ De gedrukte uitvoer illustreert dus dat onze geprogrammeerde Gates onze staat he
 
 $ $ \ket{\psi} \_ {begin} = \ket {000} $ $
 
-in 
+in op 
 
 $ $ \begin{align} \ket{\psi} \_ {Final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -445,7 +445,7 @@ Elk gemeten `Result` type ( `Zero` of `One` ) wordt vervolgens toegevoegd aan de
 
 Het sleutel woord `set` wordt altijd gebruikt voor het opnieuw toewijzen van variabelen die zijn gekoppeld met `mutable` .
 
-#### <a name="return-resultarray"></a>Opvragen`resultArray`
+#### <a name="return-resultarray"></a>Opvragen `resultArray`
 
 Met alle drie qubits gemeten en de resultaten die worden toegevoegd aan `resultArray` , kunnen we de qubits als voorheen opnieuw instellen en de toewijzing ervan ongedaan maken.
 Invoegen nadat de `using` blok kering is gesloten
@@ -499,10 +499,10 @@ De uiteindelijke bewerkings code moet er als volgt uitzien:
 }
 ```
 
-Als u vanaf de opdracht regel werkt, wordt de geretourneerde matrix gewoon direct naar de console afgedrukt aan het einde van de uitvoering.
+Als u vanaf de opdracht prompt werkt, wordt de geretourneerde matrix gewoon direct naar de console afgedrukt aan het einde van de uitvoering.
 Werk anders uw host-programma bij om de geretourneerde matrix te verwerken.
 
-#### <a name="command-line"></a>[Opdrachtregel](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Opdracht prompt](#tab/tabid-cmdline)
 
 Om meer te weten te komen over de geretourneerde matrix die in de-console zal worden afgedrukt, kunnen we een andere `Message` in het bestand invoegen, Q# net vóór de `return` instructie:
 

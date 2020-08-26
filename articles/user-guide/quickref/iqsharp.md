@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867978"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863700"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# Magic-opdrachten
 
@@ -22,8 +22,10 @@ ms.locfileid: "87867978"
 - [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Hiermee kunnen configuratie opties worden ingesteld of opgevraagd.
 - [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Voert een bepaalde functie of bewerking op de ResourcesEstimator doel computer uit.
 - [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Retourneert een lijst met alle momenteel beschik bare Magic-opdrachten.
+- [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen): Hier worden de momenteel geopende naam ruimten en de bijbehorende aliassen weer gegeven.
 - [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Biedt de mogelijkheid om een NuGet-pakket te laden.
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Hiermee worden de huidige prestatie gegevens voor deze kernel gerapporteerd.
+- [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project): Biedt de mogelijkheid om project verwijzingen weer te geven of toe te voegen Q# . 
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Voert een bepaalde functie of bewerking op de QuantumSimulator doel computer uit.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Voert een bepaalde functie of bewerking op de ToffoliSimulator doel computer uit.
 - [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Hier worden de bewerkingen weer gegeven die Q# beschikbaar zijn in de huidige sessie.

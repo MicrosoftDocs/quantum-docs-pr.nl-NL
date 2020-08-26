@@ -91,8 +91,8 @@ Als u werkt met Q# , worden de meest voorkomende maat eenheden die u kunt uitvoe
 In dergelijke gevallen is het gebruikelijk om de meting van een Pauli-operator te bespreken, in het algemeen een operator zoals $ X, Y, z $ of $ z \otimes z, x \otimes x, x \otimes Y enzovoort $ .
 
 > [!TIP]
->In Q# worden Qubit-Opera tors van meerdere gebruikers doorgaans vertegenwoordigd door matrices van het type `Pauli[]` .
->Als $ u bijvoorbeeld X Z Y wilt weer geven \otimes \otimes $ , kunt u de matrix gebruiken `[PauliX, PauliZ, PauliY]` .
+> In Q# worden Qubit-Opera tors van meerdere gebruikers doorgaans vertegenwoordigd door matrices van het type `Pauli[]` .
+> Als $ u bijvoorbeeld X Z Y wilt weer geven \otimes \otimes $ , kunt u de matrix gebruiken `[PauliX, PauliZ, PauliY]` .
 
 Het bespreken van metingen in termen van Pauli-Opera Tors is vooral gebruikelijk in het subveld van Quantum fout correctie.
 In Q# volgen we een vergelijk bare Conventie. we bespreken nu deze alternatieve weer gave van metingen.
@@ -122,7 +122,7 @@ De notatie van Pauli metingen verwijst naar deze unitary-equivalentie door $ X-,
 Deze metingen worden hieronder vermeld voor het gemak.
 
 
-|Pauli meting | unitary-trans formatie|
+|Pauli meting  | unitary-trans formatie  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -162,7 +162,7 @@ In Q# geven we het resultaat---dat wil zeggen dat de klassieke informatie die is
 Metingen van Qubit Pauli-Opera tors worden op dezelfde manier gedefinieerd, zoals u kunt zien van:
 
 $$
-Z \otimes z = \begin{bmatrix} 1 & 0 0 0 & & \\\\ 0 & -1 0 0 0 0 & & \\\\ & & -1 0 0 0 & \\\\ & & & 1 \end{bmatrix} .
+Z \otimes z = \begin{bmatrix} 1 & 0 0 0 & & \\\\  0 & -1 0 0 0 0 & & \\\\ & & -1 0 0 0 & \\\\ & & & 1 \end{bmatrix} .
 $$
 
 Daarom vormen de tensor-producten van twee Pauli- $ Z- $ Opera tors een matrix die bestaat uit twee spaties die bestaan uit $ + 1 $ en $ -1 $ eigenvalues.
@@ -173,15 +173,15 @@ Bijvoorbeeld:
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
-        1 & 0 & 0 & 0\\\\
+        1 &  0 &  0 &  0 \\\\
         0 & 1 & 0 &\\\\
-        0 & 0 & -1 & 0\\\\
-        0 & 0 & 0 & -1 \end{bmatrix} .
+        0 &  0 & -1 &  0 \\\\
+        0 &  0 &  0 & -1 \end{bmatrix} .
 \end{align}
 $$
 
 Net als voorheen beschrijft elke unitary-trans formatie van dergelijke matrices ook twee halve ruimten die zijn gelabeld door $ \pm 1 $ eigenvalues.
-Bijvoorbeeld $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $ van de identiteit die $ Z = HXH $ .
+Bijvoorbeeld $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $  van de identiteit die $ Z = HXH $ .
 Net als bij de één-qubite-case kunnen alle twee Qubit Pauli-metingen worden geschreven als $ U ^ \dagger (Z \otimes \id ) u $ voor $ 4 \times 4 $ unitary matrices $ u $ . De trans formaties in de volgende tabel worden opgesomd.
 
 > [!NOTE]
@@ -189,16 +189,15 @@ Net als bij de één-qubite-case kunnen alle twee Qubit Pauli-metingen worden ge
 > \begin{align}
 >     \operatorname{WISSELEN } &=
 >     \left( \begin { matrix}
->1 & 0 & 0 & 0\\\\
->0 & 0 & 1 & 0\\\\
+>         1 & 0 & 0 & 0 \\\\
+>         0 & 0 & 1 & 0 \\\\
 >0 & 1 & 0 &\\\\
 >matrix van 0 & 0 0 & & 1 > \end { } \right ) >     \end{align}
 > $$
->wordt gebruikt om de intrinsieke bewerking te simuleren [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> wordt gebruikt om de intrinsieke bewerking te simuleren [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
-|Pauli meting | unitary-trans formatie|
+|Pauli meting     | unitary-trans formatie  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ Daarom vallen ze samen met de hierboven vermelde vereisten.
 In Q# retourneert deze metingen $ j $ als de meting resulteert in een resultaat in de eigenspace van het teken $ (-1) ^ j $ .
 Het hebben van Pauli-metingen als ingebouwde functie in Q# is nuttig omdat het meten van dergelijke Opera tors lange ketens van besturings-en basis transformaties vereist om de diagonalizing $ U te beschrijven $ die nodig is om de bewerking uit te geven als een tensor product van $ Z $ en $ \id $ .
 Doordat u kunt opgeven dat u een van deze vooraf gedefinieerde metingen wilt uitvoeren, hoeft u zich geen zorgen te maken over het transformeren van de basis, zodat een reken kundige basis meting de benodigde informatie bevat.
-Q#Hiermee worden alle nood zakelijke trans formaties voor u automatisch verwerkt.
+Q# Hiermee worden alle nood zakelijke trans formaties voor u automatisch verwerkt.
 Zie de en-bewerkingen voor meer informatie [`Measure`](xref:microsoft.quantum.intrinsic.measure) [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) .
 
 ## <a name="the-no-cloning-theorem"></a>De theorema zonder klonen
@@ -257,7 +256,7 @@ Hoewel een volledig bewijs van het no-klonen van theorema iets te technisch is v
 
 Voor een dergelijke quantum computer moet de kloon bewerking worden beschreven in een unitary-matrix.
 De meting is niet toegestaan omdat de Quantum status die we proberen te klonen, is beschadigd.
-Voor het simuleren van de kloon bewerking willen we de unitary-matrix gebruiken om de eigenschap die$$
+Voor het simuleren van de kloon bewerking willen we de unitary-matrix gebruiken om de eigenschap die $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 voor elke status $ \ket { \psi } $ .
