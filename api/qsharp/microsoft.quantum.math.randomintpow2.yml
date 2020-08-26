@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Genereert een wille keurig geheel getal dat afsteekt uit alle gehele getallen die kunnen worden weer gegeven in een bepaald aantal bits.
-remarks: Deze functie roept <xref:microsoft.quantum.intrinsic.random>, zodat de wille keurigheid afhankelijk is van de `Random`implementatie van.
+summary: RandomIntPow2 is afgeschaft. Gebruik @"microsoft.quantum.random.drawrandomint" in plaats daarvan.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
-    summary: Het aantal klassieke bits dat is vereist om het grootste gehele getal weer te geven dat door deze bewerking kan worden geretourneerd.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ gelijk aan een wille keurige waarde van $ [0, 2 ^ {\texttt{maxBits}}-1] $; dat wil zeggen, met $ \Pr (x) ={1}\frac {2 ^ {\texttt{maxBits}}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 61072e350facbf17b13aab9551210d00487cce40
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681543"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863594"

@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  Er wordt bevestigd dat de fase van een gelijke superpositie status de verwachte waarde heeft.
-
-
-  In het bijzonder bevestigen we dat de fase $ \phi $ van een Quantum status die kan worden uitgedrukt als $ \frac{e ^ {i t}} {{2}\sqrt} (e ^ {i\phi} \{0} Ket + e ^ {-i\phi} \{1}Ket) $ voor een wille keurige reële t de verwachte waarde heeft.
-examples: >-
-  De volgende assert is geslaagd: `qubit` heeft de status $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ Ket{0}+ e ^ {i 0.5} \ SQRT {1/2} \ Ket{1}$;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`heeft de status $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ Ket{0}+ e ^ {-i 0.5} \ SQRT {1/2} \ Ket{1}$;
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`heeft de status $ \ket{\psi} = e ^ {-i 2,2} \ SQRT {1/2} \ Ket{0}+ e ^ {i 0,2} \ SQRT {1/2} \ Ket{1}$;
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: AssertPhase is afgeschaft. Gebruik @"microsoft.quantum.diagnostics.assertphase" in plaats daarvan.
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: De verwachte waarde van $ \phi \in (-\pi, \pi] $.
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: De Qubit waarin de verwachte status wordt opgeslagen.
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Absolute tolerantie voor het verschil tussen werkelijk en verwacht.
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674319"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863288"

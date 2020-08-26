@@ -86,12 +86,7 @@ operations:
 
     > Deze bewerking maakt gebruik van de **tegenovergestelde** teken Conventie van en bevat @"microsoft.quantum.intrinsic.r" niet de factor $1/2 $, opgenomen door @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    De wille keurige bewerking heeft een matrix van dubbele getallen als invoer en retourneert een wille keurig geselecteerde index in de matrix als een `Int` .
-
-    De kans dat een specifieke index wordt geselecteerd, is evenredig met de waarde van het matrix element bij die index.
-
-    Matrix elementen die gelijk zijn aan nul, worden genegeerd en hun indices worden nooit geretourneerd. Als een matrix element kleiner dan nul is, of als er geen matrix element groter is dan nul, mislukt de bewerking.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nWille keurig is afgeschaft. Gebruik @\"microsoft.quantum.random.drawcategorical\" in plaats daarvan."
 - uid: microsoft.quantum.intrinsic.reset
   summary: Op basis van één Qubit wordt deze gemeten en wordt gegarandeerd dat deze zich in de ⟩-status | 0 bevindt, zodat deze veilig kan worden vrijgegeven.
 - uid: microsoft.quantum.intrinsic.resetall
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885232"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862710"

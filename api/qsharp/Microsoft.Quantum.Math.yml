@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Converteert een complex getal van het type `ComplexPolar` naar een complex type `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan`denominatorBound`
+  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan`denominatorBound`
+  summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Retourneert de cosinus van de opgegeven hoek.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat klassieke wiskundige functies en gegevens typen."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Hiermee genereert u een wille keurig geheel getal dat groter is dan of gelijk is aan nul en kleiner dan een gegeven bovengrens.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRandomInt is afgeschaft. Gebruik @\"microsoft.quantum.random.drawrandomint\" in plaats daarvan."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Genereert een wille keurig geheel getal dat afsteekt uit alle gehele getallen die kunnen worden weer gegeven in een bepaald aantal bits.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRandomIntPow2 is afgeschaft. Gebruik @\"microsoft.quantum.random.drawrandomint\" in plaats daarvan."
 - uid: microsoft.quantum.math.randomreal
-  summary: Retourneert een wille keurig reëel getal in het interval dat groter is dan of gelijk is aan nul en kleiner dan een.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRandomReal is afgeschaft. Gebruik @\"microsoft.quantum.random.drawrandomdouble\" in plaats daarvan."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Retourneert een van de Pauli-Opera tors (single-Qubit) op wille keurige wijze.
+  summary: "\n> [!WARNING]\n> Afgeschaft\n\nRandomSingleQubitPauli is afgeschaft. Gebruik @\"microsoft.quantum.random.drawrandompauli\" in plaats daarvan."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326487"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863069"

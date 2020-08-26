@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Hierbij wordt bevestigd dat twee matrices van Boole-waarden gelijk zijn.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Hierbij wordt bevestigd dat een klassieke drijvende-komma waarde de verwachte waarde heeft tot een kleine tolerantie van 1e-10.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: Tussen een aanroep van deze bewerking en de adjoint wordt bevestigd dat een bepaalde bewerking Maxi maal een bepaald aantal keer wordt aangeroepen.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: Tussen een aanroep van deze bewerking en de adjoint, wordt met behulp van-instructies gecontroleerd of er Maxi maal een gegeven aantal extra qubits is toegewezen.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Bevestiging dat opgegeven qubits de status $ \ket {0} $ heeft.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     Deze bewerking heeft dus slechts één aanroep nodig voor elke bewerking die wordt getest, maar vereist twee keer zoveel qubits die moeten worden toegewezen.
 
     Deze bevestiging kan worden gebruikt om ervoor te zorgen dat een geoptimaliseerde versie van een bewerking identiek is aan de Naïve-implementatie, of dat een bewerking die op een bereik van niet-Quantum gegevens reageert, overeenkomt met de bekende gevallen.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Er wordt bevestigd dat de fase van een gelijke superpositie status de verwachte waarde heeft.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Beweringen dat de Qubit `q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Beweringen dat een Qubit de verwachte status heeft.
 
 
-    `expected`vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Het eerste element van de Tuples die elk van $a $ vertegenwoordigen, $b $ het reële deel van het complexe getal is, terwijl de tweede het meest imaginaire deel uitmaakt.
 
     Met het laatste argument wordt de tolerantie gedefinieerd waarmee de bevestiging wordt gemaakt.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Beweringen dat de Qubit `q` zich in de verwachte eigenstate van de Pauli Z-operator bevindt, tot een gegeven tolerantie.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: Op basis van een bewerking worden diagnostische gegevens weer gegeven over de bewerking die beschikbaar is gemaakt door het huidige doel van de uitvoering.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Een door het compiler herkend kenmerk waarmee een alternatieve naam kan worden gedefinieerd die kan worden gebruikt bij het laden van een type of aanroepable voor test doeleinden.
 - uid: microsoft.quantum.diagnostics.test
   summary: Door het compiler herkend kenmerk dat wordt gebruikt om een eenheids test te markeren.
-summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimte bevat functies en bewerkingen die nuttig zijn voor diagnostische doel einden, waaronder bevestigings bewerkingen en claim functies."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884573"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863054"
