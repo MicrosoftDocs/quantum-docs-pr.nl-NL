@@ -9,18 +9,18 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39bf7dc52f4670a6e4536efc437d001c96f9584a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863085"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992136"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Extra Q# bibliotheken gebruiken
 
 De Quantum Development Kit biedt aanvullende, domein-specifieke functionaliteit via _NuGet-pakketten_ die aan uw projecten kunnen worden toegevoegd Q# .
 
-| Q# Tagbibliotheek  | NuGet-pakket | Notities |
+| Q# Tagbibliotheek  | NuGet-pakket | Opmerkingen |
 |---------|---------|--------|
 | [Q# standaard bibliotheek](xref:microsoft.quantum.libraries.standard.intro) | [**Micro soft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Standaard opgenomen |
 | [Bibliotheek voor kwantumchemie](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
@@ -83,7 +83,7 @@ Als u het pakket beschikbaar wilt maken op basis van Q# code in de huidige werk 
 ## <a name="python-interoperability"></a>[Python-interoperabiliteit](#tab/tabid-python)
 
 
-U kunt extra pakketten beschikbaar maken voor gebruik in een python-hostprogramma met behulp van de- [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) methode.
+U kunt extra pakketten beschikbaar maken voor gebruik in een python-hostprogramma met behulp van de- [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages) methode.
 Als u bijvoorbeeld het pakket [**micro soft. Quantum. numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) wilt toevoegen voor gebruik in een I Q# -notebook, voert u de volgende python-code uit:
 
 ```python

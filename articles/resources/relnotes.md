@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863756"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992255"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -32,7 +32,7 @@ Deze release omvat het volgende:
 
 - Nieuwe [micro soft. Quantum. wille keurige naam ruimte](xref:microsoft.quantum.random), waardoor u een handigere manier hebt om wille keurige waarden uit Program ma's te laten zien Q# . ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - Verbeterde [micro soft. Quantum. Diagnostics-naam ruimte](xref:microsoft.quantum.diagnostics) met een nieuwe [ `DumpOperation` bewerking](xref:microsoft.quantum.diagnostics.dumpoperation)en nieuwe bewerkingen voor het beperken van Qubit-toewijzing en Oracle-aanroepen. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- De nieuwe [ `%project` Magic-opdracht](xref:microsoft.quantum.iqsharp.magic-ref.project) in I Q# en [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) in python ter ondersteuning van verwijzingen naar Q# projecten buiten de huidige werkruimte map. Zie [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) voor de huidige beperkingen van deze functie. 
+- De nieuwe [ `%project` Magic-opdracht](xref:microsoft.quantum.iqsharp.magic-ref.project) in I Q# en [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) in python ter ondersteuning van verwijzingen naar Q# projecten buiten de huidige werkruimte map. Zie [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) voor de huidige beperkingen van deze functie. 
 - Ondersteuning voor het automatisch laden van `.csproj` bestanden voor de Q# /python-hosts, waardoor het mogelijk is dat externe project-of pakket verwijzingen worden geladen tijdens de initialisatie. Raadpleeg de hand leiding voor het gebruik [ Q# van python-en Jupyter-notebooks](xref:microsoft.quantum.guide.host-programs) voor meer informatie.
 - Het voor beeld voor ErrorCorrection. Syndrome is toegevoegd.
 - Instel bare-koppeling toegevoegd aan SimpleIsing.

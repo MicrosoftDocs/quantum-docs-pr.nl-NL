@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992205"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli Simulator
 
@@ -40,7 +40,7 @@ Houd er rekening mee dat, in tegenstelling tot de klasse `QuantumSimulator`, de 
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>De Toffoli Simulator vanuit python aanroepen
 
-Gebruik de methode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q# bewerking:
+Gebruik de methode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) vanuit de python-bibliotheek met de geïmporteerde Q# bewerking:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ De Toffoli Simulator ondersteunt:
 
 * Rotaties en exponentiated Paulis, zoals `R` en `Exp` , wanneer de resulterende bewerking gelijk is aan `X` of de identiteits matrix.
 * Metings-en [bevestigings](xref:microsoft.quantum.diagnostics.assertmeasurement) bewerkingen, maar alleen op basis van de Pauli `Z` . Houd er rekening mee dat de kans op een meting bewerking altijd **0** of **1**is; Er is geen wille keurige Toffoli Simulator.
-* `DumpMachine`en- `DumpRegister` functies.
+* `DumpMachine` en- `DumpRegister` functies.
 Beide functies voeren de huidige `Z` status van elke qubit, één Qubit per regel.
 
 ## <a name="specifying-the-number-of-qubits"></a>Het aantal qubits opgeven
@@ -84,7 +84,7 @@ Bijvoorbeeld:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Quantum bronnen estimator](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

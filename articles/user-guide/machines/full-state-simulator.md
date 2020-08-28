@@ -9,16 +9,16 @@ uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a27cece9858d62814b9d80c47e61c5d7d3b8c885
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868335"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992216"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum Development Kit (QDK) Full State Simulator
 
-De QDK biedt een volledige status Simulator die een quantum computer op uw lokale computer simuleert. U kunt de volledige status Simulator gebruiken voor het uitvoeren van en het opsporen van fouten in de Quantum-algoritmen die zijn geschreven in Q# , waarbij Maxi maal 30 qubits wordt gebruikt. De volledige status Simulator is vergelijkbaar met de Quantum Simulator die wordt gebruikt in het [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) -platform van micro soft Research.
+De QDK biedt een volledige status Simulator die een quantum computer op uw lokale computer simuleert. U kunt de volledige status Simulator gebruiken voor het uitvoeren van en het opsporen van fouten in de Quantum-algoritmen die zijn geschreven in Q# , waarbij Maxi maal 30 qubits wordt gebruikt. De volledige status Simulator is vergelijkbaar met de Quantum Simulator die wordt gebruikt in het  [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) -platform van micro soft Research.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>De volledige status Simulator aanroepen en uitvoeren
 
@@ -39,7 +39,7 @@ Omdat de `QuantumSimulator` klasse de interface implementeert <xref:System.IDisp
 
 ### <a name="invoking-the-simulator-from-python"></a>De Simulator vanuit python aanroepen
 
-Gebruik de methode [simuleren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) vanuit de Q# python-bibliotheek met de geïmporteerde Q# bewerking:
+Gebruik de methode [simuleren ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) vanuit de Q# python-bibliotheek met de geïmporteerde Q# bewerking:
 
 ```python
 qubit_result = myOperation.simulate()

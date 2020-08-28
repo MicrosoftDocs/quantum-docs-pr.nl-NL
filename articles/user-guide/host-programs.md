@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863194"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992187"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Manieren om een programma uit te voeren Q#
 
@@ -346,7 +346,7 @@ Multiple qubits:
 
 Standaard `import qsharp` laadt de opdracht alle `.qs` bestanden in de huidige map en Q# worden de bewerkingen en functies beschikbaar voor gebruik in het python-script.
 
-Als u Q# code wilt laden vanuit een andere map, kan de [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) worden gebruikt voor het toevoegen van een verwijzing naar een `.csproj` bestand voor een Q# project (dat wil zeggen een project waarnaar wordt verwezen `Microsoft.Quantum.Sdk` ).
+Als u Q# code wilt laden vanuit een andere map, kan de [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) worden gebruikt voor het toevoegen van een verwijzing naar een `.csproj` bestand voor een Q# project (dat wil zeggen een project waarnaar wordt verwezen `Microsoft.Quantum.Sdk` ).
 Met deze opdracht worden alle `.qs` bestanden in de map die de submappen bevat, gecompileerd `.csproj` . Ook worden alle pakketten die via of projecten verwijzen waarnaar wordt `PackageReference` Q# verwezen `ProjectReference` in dat bestand, recursief geladen `.csproj` .
 
 Met de volgende python-code wordt bijvoorbeeld een extern project geïmporteerd, dat verwijst naar het pad ten opzichte van de huidige map en wordt een van de Q# bewerkingen aangeroepen:
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-Als u externe pakketten wilt laden die Q# code bevatten, gebruikt u de [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+Als u externe pakketten wilt laden die Q# code bevatten, gebruikt u de [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
 
 Als de Q# code in de huidige map afhankelijk is van externe projecten of pakketten, kunnen er fouten optreden tijdens `import qsharp` de uitvoering, omdat de afhankelijkheden nog niet zijn geladen.
 Als u de vereiste externe pakketten of Q# projecten tijdens de opdracht wilt laden, moet u `import qsharp` ervoor zorgen dat de map met het python-script een `.csproj` bestand bevat waarnaar wordt verwezen `Microsoft.Quantum.Sdk` . Voeg in dat `.csproj` de eigenschap toe `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` aan de `<PropertyGroup>` . Dit geeft de instructie Q# om een of meer items te `ProjectReference` laden `PackageReference` die zijn gevonden in die `.csproj` tijdens de `import qsharp` opdracht.
