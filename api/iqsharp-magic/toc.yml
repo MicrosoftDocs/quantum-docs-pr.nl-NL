@@ -38,10 +38,14 @@
   name: Magic-opdracht %package
 - href: performance.md
   name: Magic-opdracht %performance
+- href: project.md
+  name: Magic-opdracht %project
 - href: simulate.md
   name: Magic-opdracht %simulate
 - href: toffoli.md
   name: Magic-opdracht %toffoli
+- href: trace.md
+  name: Magic-opdracht %trace
 - href: who.md
   name: Magic-opdracht %who
 - href: workspace.md

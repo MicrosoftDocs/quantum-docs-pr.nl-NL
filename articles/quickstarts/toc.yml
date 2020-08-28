@@ -6,7 +6,7 @@ items:
     items:
       - name: Overzicht van de installatie
         href: index.md
-      - name: Q#-opdrachtregeltoepassingen
+      - name: Q#-toepassingen
         href: install-command-line.md
       - name: Q# Jupyter Notebooks
         href: install-jupyter.md
