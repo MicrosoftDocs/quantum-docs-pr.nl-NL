@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 3aafe78d5910027e2836f7dce72c064e75fc4436
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867570"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863712"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum development kit (QDK) installeren
 
@@ -33,7 +33,7 @@ De werkstromen voor elk van deze configuraties worden beschreven en vergeleken i
 
 Selecteer de gewenste instellingen als u wilt doorgaan met het installeren van de QDK en het maken van Q#-projecten:
 
-[Ontwikkelen met Q#-opdrachtregeltoepassing](xref:microsoft.quantum.install.standalone): kies deze methode als u wilt werken met Q# vanaf de opdrachtregel. Hiervoor is geen stuurprogramma of hostprogramma vereist, zoals voor de onderstaande opties.
+[Ontwikkelen met Q#-toepassingen](xref:microsoft.quantum.install.standalone): kies deze methode als u wilt werken met Q# vanaf het opdrachtprompt. Hiervoor is geen stuurprogramma of hostprogramma vereist, zoals voor de onderstaande opties.
 
 [Ontwikkelen met Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter): kies deze omgeving als u Q#-code wilt uitvoeren in cellen met ingesloten tekst of om interactieve zelfstudies te maken voor kwantumcomputing. 
 

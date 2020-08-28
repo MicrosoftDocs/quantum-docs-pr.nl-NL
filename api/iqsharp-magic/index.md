@@ -3,14 +3,14 @@ title: IQ# Magic-opdrachten
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870699"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862971"
 ---
 # <a name="iq-magic-commands"></a>IQ# Magic-opdrachten
 | Magic-opdracht | Samenvatting |
@@ -35,7 +35,9 @@ ms.locfileid: "86870699"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Hier ziet u een lijst met momenteel geopende naamruimten en de bijbehorende aliassen. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Biedt de mogelijkheid om een NuGet-pakket te laden. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Rapporteert de huidige metrische prestatiegegevens voor deze kernel. |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | Biedt de mogelijkheid om Q#-projectreferenties te bekijken of toe te voegen. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Voert een bepaalde functie of bewerking uit op de doelcomputer van de QuantumSimulator. |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Voert een bepaalde functie of bewerking uit op de doelcomputer van de ToffoliSimulator. |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | Visaliseert het uitvoeringspad van de opgegeven bewerking. |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Geeft de Q#-bewerkingen weer die beschikbaar zijn in de huidige sessie. |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Biedt acties met betrekking op de huidige werkruimte. |
