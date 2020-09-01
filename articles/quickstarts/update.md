@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866754"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863648"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum Development Kit (QDK) bijwerken
 
@@ -37,7 +37,7 @@ U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of
     dotnet --version
     ```
 
-    Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, installeert u de [meest recente versie](https://dotnet.microsoft.com/download) en controleert u de uitvoer opnieuw. Volg de onderstaande instructies, afhankelijk van uw installatie (Visual Studio, Visual Studio Code of rechtstreeks vanaf de opdrachtregel).
+    Controleer of de uitvoer `3.1.100` of hoger is. Als dat niet het geval is, installeert u de [meest recente versie](https://dotnet.microsoft.com/download) en controleert u de uitvoer opnieuw. Volg de onderstaande instructies, afhankelijk van uw installatie (Visual Studio, Visual Studio Code of rechtstreeks vanaf de opdrachtprompt).
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Q#-projecten in Visual Studio bijwerken
  
@@ -84,9 +84,9 @@ U kunt nu doorgaan met het [bijwerken van uw Visual Studio QDK-extensie](#update
 
 1. Open in Visual Studio Code de map met het project dat moet worden bijgewerkt.
 2. Klik op **Terminal** -> **Nieuwe terminal**.
-3. Volg de instructies voor het bijwerken met behulp van de opdrachtregel (direct hieronder).
+3. Volg de instructies voor het bijwerken met behulp van de opdrachtprompt (direct hieronder).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Q#-projecten bijwerken met behulp van de opdrachtregel
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Q#-projecten bijwerken met behulp van de opdrachtprompt
 
 1. Navigeer naar de map met het hoofdprojectbestand.
 
@@ -158,7 +158,7 @@ Selecteer uw ontwikkelomgeving hieronder.
 * [Jupyter Notebooks: de IQ#-kernel bijwerken](#update-the-iq-jupyter-kernel)
 * [Visual Studio: de QDK-extensie bijwerken](#update-visual-studio-qdk-extension)
 * [VS Code: de QDK-extensie bijwerken](#update-vs-code-qdk-extension)
-* [Opdrachtregel en C# : projectsjablonen bijwerken](#c-using-the-dotnet-command-line-tool)
+* [Opdrachtregel en C#: projectsjablonen bijwerken](#c-using-the-dotnet-command-line-tool)
 
 
 ### <a name="update-the-qsharp-python-package"></a>Het Python-pakket voor `qsharp` bijwerken
@@ -309,13 +309,13 @@ U kunt nu de bijgewerkte IQ#-kernel gebruiken om uw bestaande Q# Jupyter Noteboo
 
 1. Werk de Quantum-projectsjablonen voor .NET bij
 
-    Vanaf de opdrachtregel:
+    Typ vanaf de opdrachtprompt:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-   Als u van plan bent om de opdrachtregelsjablonen te gebruiken en u de VS Code QDK-extensie al hebt geïnstalleerd, kunt u de projectsjablonen ook bijwerken vanuit de extensie zelf:
+   Als u van plan bent om de opdrachtpromptsjablonen te gebruiken en u de VS Code QDK-extensie al hebt geïnstalleerd, kunt u de projectsjablonen ook bijwerken vanuit de extensie zelf:
 
    - [De QDK-extensie bijwerken](#update-vs-code-qdk-extension)
    - Ga in VS Code naar **Weergave** -> **Opdrachtpalet**

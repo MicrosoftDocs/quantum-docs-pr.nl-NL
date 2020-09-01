@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867553"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863680"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Ontwikkelen met Q# en .NET
 
@@ -25,16 +25,16 @@ Eerst maken we de Q#-toepassing en .NET-host, en vervolgens laten we zien hoe u 
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Installeer de Quantum Development Kit [voor Q#-opdrachtregelprojecten](xref:microsoft.quantum.install.standalone).
+- Installeer de Quantum Development Kit [voor Q#-projecten](xref:microsoft.quantum.install.standalone).
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Een Q#-bibliotheek en een .NET-host maken
 
 De eerste stap bestaat uit het maken van projecten voor uw Q#-bibliotheek en voor de .NET-host die de bewerkingen en functies aanroept die in de Q#-bibliotheek zijn gedefinieerd.
 
 Volg de instructies op het tabblad dat hoort bij de ontwikkelomgeving.
-Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de stappen voor de opdrachtregel.
+Als u een andere editor gebruikt dan Visual Studio of VS Code, volgt u gewoon de stappen voor de opdrachtprompt.
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code of opdrachtregel](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code of opdrachtprompt](#tab/tabid-cmdline)
 
 - Een nieuwe Q#-bibliotheek maken
 
@@ -106,4 +106,4 @@ Als u deze bewerking vanuit .NET wilt aanroepen in een kwantumsimulator, kunt u 
     
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u de Quantum Development Kit hebt ingesteld voor Q#-opdrachtregelprogramma's en interoperabiliteit met .NET, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren.
+Nu u de Quantum Development Kit hebt ingesteld voor Q#-toepassingen en interoperabiliteit met .NET, kunt u [uw eerste kwantumprogramma](xref:microsoft.quantum.quickstarts.qrng) schrijven en uitvoeren.

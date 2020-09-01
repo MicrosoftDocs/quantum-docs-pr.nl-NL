@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866941"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863777"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
 
@@ -24,7 +24,7 @@ Als programmeertaal bevat Q# bekende elementen uit Python, C# en F#, en onderste
 
 ## <a name="what-can-i-do-with-the-qdk"></a>Wat kan ik met de QDK doen?
 
-De QDK is een volledige Development Kit voor Q# die u kunt gebruiken met gangbare hulpprogramma's en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren. Q#-programma's kunnen worden uitgevoerd als een opdrachtregel-app, via Jupyter Notebooks, of gebruikmaken van een Python- of .NET-hostprogramma.
+De QDK is een volledige Development Kit voor Q# die u kunt gebruiken met gangbare hulpprogramma's en talen om kwantumtoepassingen te ontwikkelen die u in verschillende omgevingen kunt uitvoeren. Q#-programma's kunnen worden uitgevoerd als een consoletoepassing, via Jupyter Notebooks, of gebruikmaken van een Python- of .NET-hostprogramma.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Ontwikkelen in veelgebruikte tools en omgevingen
 
@@ -48,7 +48,7 @@ Voer uw kwantumprogramma's uit in een volledige kwantumsimulator, een Toffoli-si
 
 ## <a name="how-does-no-locq-work"></a>Hoe werkt Q#?
 
-Een Q#-programma kan worden gecompileerd in een zelfstandige opdrachtregeltoepassing of worden aangeroepen door een hostprogramma dat in Python of een .NET-taal is geschreven.
+Een Q#-programma kan worden gecompileerd in een zelfstandige toepassing of worden aangeroepen door een hostprogramma dat in Python of een .NET-taal is geschreven.
 
 Wanneer u het programma compileert en uitvoert, wordt er een exemplaar van de kwantumsimulator gemaakt en de Q#-code hieraan doorgegeven. De simulator gebruikt de Q#-code voor het maken van qubits (simulaties van kwantumdeeltjes) en het toepassen van transformaties om hun toestand te wijzigen. De resultaten van de kwantumbewerkingen in de simulator worden vervolgens teruggestuurd naar het programma.  
 
@@ -60,7 +60,7 @@ Het isoleren van de Q#-code in de simulator zorgt ervoor dat de algoritmen de we
 
 Alles wat u nodig hebt om Q#-programma's te schrijven en uit te voeren, inclusief de Q#-compiler, de Q#-bibliotheken en de kwantumsimulators, kan worden geïnstalleerd op uw lokale computer en hierop worden uitgevoerd. Na verloop van tijd kunt u uw Q#-programma's op afstand uitvoeren op een echte kwantumcomputer, maar tot die tijd leveren de kwantumsimulators die met de QDK worden meegeleverd, nauwkeurige en betrouwbare resultaten.
 
-- Het uitvoeren van [Q# vanaf de opdrachtregel](xref:microsoft.quantum.install.standalone) is de snelste manier om aan de slag te gaan.
+- Het ontwikkelen van [Q#-toepassingen](xref:microsoft.quantum.install.standalone) is de snelste manier om aan de slag te gaan.
 
 - Voer zelfstandige [Jupyter-notebooks uit met IQ#](xref:microsoft.quantum.install.jupyter), een Jupyter-extensie voor het compileren, simuleren en visualiseren van Q#-programma's.
 

@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867509"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863737"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 
@@ -36,7 +36,7 @@ Bekijk een van onze zelfstudies als u de kracht van kwanta wilt gebruiken:
 * [Kennismaken met verstrengeling met Q#](xref:microsoft.quantum.write-program): in deze zelfstudie wordt u begeleid bij het schrijven van een Q#-programma waarin enkele fundamentele concepten van het kwantumprogrammeren worden gedemonstreerd.
     Als u nog niet zo ver bent om code te gaan schrijven, kunt u de zelfstudie volgen zonder de QDK te installeren om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
 * [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search): bekijk dit voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt.
-    In deze zelfstudie wordt u begeleid bij het ontwikkelen van het programma als een opdrachtregeltoepassing in Q#, met behulp van Visual Studio of Visual Studio Code.
+    In deze zelfstudie wordt u begeleid bij het ontwikkelen van het programma als een opdrachtprompttoepassing in Q#, met behulp van Visual Studio of Visual Studio Code.
 
 ### <a name="learning-further"></a>Verder leren
 * Met de [Microsoft Learn-modules voor kwantumcomputing](https://docs.microsoft.com/learn/browse/?term=quantum) leert u de basisconcepten in uw eigen tempo kennen. De basisbeginselen voor het maken van kwantumprogramma's met de QDK leert u in de [eerste module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
