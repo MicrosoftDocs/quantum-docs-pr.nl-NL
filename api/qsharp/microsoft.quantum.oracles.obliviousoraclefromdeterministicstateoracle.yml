@@ -2,30 +2,30 @@
 uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: Combineert de Oracle- `DeterministicStateOracle` en `ObliviousOracle`.
+namespace: microsoft.quantum.oracles
+summary: Combineert de Oracle- `DeterministicStateOracle` en `ObliviousOracle` .
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: Een status voorbereiding Oracle $A $ van het `DeterministicStateOracle` type dat wordt toegepast op regi ster $a $.
+    summary: Een status voorbereiding Oracle $A $ van het type dat wordt toegepast `DeterministicStateOracle` op REGI ster $a $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Een Oracle-$U $ van `ObliviousOracle` het type dat gezamenlijk in het regi ster $a, s $ wordt ingezet.
+    summary: Een Oracle-$U $ van het type dat `ObliviousOracle` gezamenlijk in het REGI ster $a, s $ wordt ingezet.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Een Oracle-$O = UA $ van `ObliviousOracle`type.
+  - summary: Een Oracle-$O = UA $ van type `ObliviousOracle` .
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b0b900189648ab78d74cc3378528156309c67d0e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681232"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331973"
