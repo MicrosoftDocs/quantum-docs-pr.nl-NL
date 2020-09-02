@@ -2,19 +2,19 @@
 uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Extraheert de Pauli-teken reeks en de Qubit indices van een Pauli-term die `GeneratorIndex`wordt beschreven door een.
+namespace: microsoft.quantum.simulation
+summary: Extraheert de Pauli-teken reeks en de Qubit indices van een Pauli-term die wordt beschreven door een `GeneratorIndex` .
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex`type dat een Pauli-term codeert.'
+    summary: '`GeneratorIndex` type dat een Pauli-term codeert.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: De Pauli-teken reeks van de term die `GeneratorIndex`wordt beschreven door een, en indexen voor de qubits waarop deze wordt uitgevoerd.
+  - summary: De Pauli-teken reeks van de term die wordt beschreven door een `GeneratorIndex` , en indexen voor de qubits waarop deze wordt uitgevoerd.
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c924d806130c1181290a3154c5dba1f337f787c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687037"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329491"

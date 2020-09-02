@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Retourneert een generator index die consistent is met de Hamiltonian `H = 0`nul,, die overeenkomt met de bewerking voor identiteits ontwikkeling.
+namespace: microsoft.quantum.simulation
+summary: Retourneert een generator index die consistent is met de Hamiltonian nul, `H = 0` , die overeenkomt met de bewerking voor identiteits ontwikkeling.
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'
   types:
   - name: idxTerm
-    summary: Deze invoer wordt genegeerd en wordt gedefinieerd voor consistentie met het <xref:microsoft.quantum.simulation.generatorsystem> door de gebruiker gedefinieerde type.
+    summary: Deze invoer wordt genegeerd en wordt gedefinieerd voor consistentie met het door de <xref:microsoft.quantum.simulation.generatorsystem> gebruiker gedefinieerde type.
     isPrimitive: true
     uid: Int
 output:
@@ -18,9 +18,9 @@ output:
   - summary: Een generator index die de ontwikkeling weergeeft onder het Hamiltonian-$H = $0.
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: b498cc055bed2fcc69ac28548fc08b2bbaa74430
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 680788feec5703ff6a9f23c5367070e7694f524a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683062"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330035"
