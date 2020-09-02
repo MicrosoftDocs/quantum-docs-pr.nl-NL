@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Op basis van een matrix en een bewerking die is gedefinieerd voor de elementen van de matrix, retourneert een nieuwe matrix die bestaat uit de installatie kopieën van de oorspronkelijke matrix onder de bewerking.
-remarks: "De bewerking wordt gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een bewerking `action : 'T -> 'U` hebben die de elementen van de matrix kunnen toewijzen en een nieuwe matrix van het `'U[]`type maken."
+remarks: "De bewerking wordt gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een bewerking hebben `action : 'T -> 'U` die de elementen van de matrix kunnen toewijzen en een nieuwe matrix van het type maken `'U[]` ."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
@@ -21,7 +21,7 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Een matrix van elementen `'T`.
+    summary: Een matrix van elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: Het resultaat type van de `action` bewerking.
 metadata:
-  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c630f23c57ccba1588e553641acf61312411f146
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681040"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352271"
