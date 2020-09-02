@@ -2,22 +2,22 @@
 uid: microsoft.quantum.simulation.timedependentblockencoding
 name: TimeDependentBlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Vertegenwoordigt een `BlockEncoding` die wordt beheerd door een klok registratie.
 
 
-  Dat wil zeggen, `TimeDependentBlockEncoding` a is een unitary-$U $, beheerd door een status $ \ket{k} _d $ `d` in een klok registratie, zodat een wille keurige operator $H _k $ van `s` belang dat er op het systeem register wordt gedecodeerd in het blok linksboven{0}dat overeenkomt met de hulp status $ \ket _a $. Dat wil zeggen,
+  Dat wil zeggen, a `TimeDependentBlockEncoding` is een unitary-$U $, beheerd door een status $ \ket{k} _d $ in een klok registratie, `d` zodat een wille keurige operator $H _k $ van belang dat er op het systeem register `s` wordt gedecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket {0} _a $. Dat wil zeggen,
 
 
-  $ $ \begin{align} (\bra{0}\_a\otimes i_ {DS}) U (\ket{0}\_a\otimes i_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
+  $ $ \begin{align} (\bra {0} \_ a\otimes i_ {DS}) U (\ket {0} \_ a\otimes i_ {DS}) = \ sum_ {k} \ket{k}\bra{k} \_ d\otimes H_k.
 
   \end{align} $ $.
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 6a9bb3648a24eae7fd5279c4300ece7b169fb00a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c61073bec751dca528d65c03c3631b881a27520
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687308"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328352"

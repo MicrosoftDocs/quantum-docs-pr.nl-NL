@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie `Zero`waarmee deze meting slaagt (retourneert) door een bepaald aantal experimenten uit te voeren.
+namespace: microsoft.quantum.characterization
+summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie waarmee deze meting slaagt (retourneert `Zero` ) door een bepaald aantal experimenten uit te voeren.
 remarks: Voor adjointable-bewerkingen kunnen bepaalde hypo Thesen worden gemaakt, zoals het aanroepen van de bewerking, wordt de qubits voor bereid op exact dezelfde staat, zodat doel machines een aantal prestatie optimalisaties mogelijk maken.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero`, verkregen met behulp van de niet-verwerkte binomiale Estimator\_$ \hat{p} = n\_{\uparrow}/n {\Text{measurements}}\_$, waarbij $n {\uparrow} $ `Zero` het aantal waargenomen resultaten is.
+  - summary: Een schatting $ \hat{p} $ van de frequentie waarmee $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourneert `Zero` , verkregen met behulp van de niet-verwerkte binomiale Estimator $ \hat{p} = n \_ {\uparrow}/n \_ {\Text{measurements}} $, waarbij $n \_ {\uparrow} $ het aantal `Zero` waargenomen resultaten is.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00d54b9dec4e2b57002b04dda4072b9d186baba4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677709"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354532"

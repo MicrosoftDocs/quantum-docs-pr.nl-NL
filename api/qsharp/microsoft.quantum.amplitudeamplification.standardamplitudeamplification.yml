@@ -2,9 +2,9 @@
 uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
 name: StandardAmplitudeAmplification
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Standaard amplitude versterking-algoritme
-remarks: Dit is het standaard algoritme voor amplitude versterking dat wordt verkregen door de keuze van de reflectie `AmpAmpPhasesStandard` fasen die worden berekend{0}\_door de vraag dat{0}\_\begin{align} A\ket {{1}\_f} \ket s = \lambda\ket f\ket {\_\ text {target}} s + \sqrt{1-|{0}\_\lambda | ^ 2} \ket f\cdots, \end{align} deze bewerking{0}\_wordt voor bereid op{0}\_de status \begin{align} \operatorname{AmpAmpByOracle}\ket {f} \ket s = \sin{-1}((2n + 1{1}\_) \sin ^ (\lambda)) \ket\_f\ket {\{0}\_text {target}} s `flagQubit` + `auxiliaryRegister` \cdots\ket f \end{align} in de meeste gevallen en{0}\_wordt{0}\_geïnitialiseerd in de status $ \ket f\ket a $.
+remarks: Dit is het standaard algoritme voor amplitude versterking dat wordt verkregen door de keuze van de reflectie fasen die worden berekend door de vraag `AmpAmpPhasesStandard` dat \Begin{align} A\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ text {target}} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots, \End{align} deze bewerking wordt voor bereid op de status \begin{align} \operatorname{AmpAmpByOracle}\ket {0} \_ {f} \ket {0} \_ s = \sin ((2n + 1) \sin ^ {-1} (\lambda)) \ket {1} \_ f\ket {\ text {target}} \_ s + \cdots\ket {0} \_ f \end{align} in de meeste gevallen `flagQubit` en `auxiliaryRegister` wordt geïnitialiseerd in de status $ \ket {0} \_ f\ket {0} \_ a $.
 syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard, P. Hoyer, M. Mosca, A. Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0fc7ceb390a64ce6224a084147207663d96c3b75
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f78b541045b309403387962128a3cfda3290cade
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676915"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341867"
