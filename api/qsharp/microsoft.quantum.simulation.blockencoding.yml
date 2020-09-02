@@ -2,20 +2,20 @@
 uid: microsoft.quantum.simulation.blockencoding
 name: BlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Hiermee wordt een unitary aangeduid waarbij een wille keurige operator van belang wordt gecodeerd in het blok linksboven.
 
 
-  Dat wil zeggen, `BlockEncoding` een is een unitary $U $ waarbij een wille keurige operator $H $ of interest die op `s` het systeem register reageert, wordt gecodeerd in het blok linksboven dat overeenkomt met{0}de hulp status $ \ket _a $. Dat wil zeggen,
+  Dat wil zeggen, een `BlockEncoding` is een unitary $U $ waarbij een wille keurige operator $H $ of interest die op het systeem register reageert `s` , wordt gecodeerd in het blok linksboven dat overeenkomt met de hulp status $ \ket {0} _a $. Dat wil zeggen,
 
 
-  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra {0} _a \otimes I_s) U (\ket {0} _a \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 514a67e646d9fa224bc80fdbadef7397f8e23fff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681103"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330222"
