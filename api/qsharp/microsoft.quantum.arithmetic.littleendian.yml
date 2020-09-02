@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Registreert dat een niet-ondertekend geheel getal codeert in de volg orde van little endian. De Qubit met index `0` codeert de laagste bit van een niet-ondertekend geheel getal.
-remarks: We hebben `LittleEndian` afkorting als `LE` in de documentatie.
+remarks: We hebben afkorting `LittleEndian` als `LE` in de documentatie.
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ac8833cad5eb3f8e9f6de66ebb499d33a1361a26
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676839"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342734"
