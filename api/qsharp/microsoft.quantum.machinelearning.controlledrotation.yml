@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Beschrijft een beheerde rotatie in termen van de doel-en besturings indexen, rotatieas en index in een model parameter vector.
 remarks: >-
-  Een onbeheerde rotatie kan worden weer gegeven `ControlIndices` door in te stellen op een lege `new Int[0]`matrix met indexen,.
+  Een onbeheerde rotatie kan worden weer gegeven door `ControlIndices` in te stellen op een lege matrix met indexen, `new Int[0]` .
 
 
   ### <a name="examples"></a>Voorbeelden
@@ -24,9 +24,9 @@ remarks: >-
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
 metadata:
-  ms.openlocfilehash: 058c1dc75dd169971d0c542d0577d739327e4d56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 132a69f35e1cbec57c15c3f362a25849e3d66c27
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681679"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344910"

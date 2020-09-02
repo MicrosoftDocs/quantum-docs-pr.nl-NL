@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
 name: AssertQubitIsInStateWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
   Beweringen dat een Qubit de verwachte status heeft.
 
 
-  `expected`vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+  `expected` vertegenwoordigt een complexe vector, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
   Het eerste element van de Tuples die elk van $a $ vertegenwoordigen, $b $ het reële deel van het complexe getal is, terwijl de tweede het meest imaginaire deel uitmaakt.
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  De tolerantie is de $L\_{\infty} $ de afstand tussen de 3 dimensionale reële vector (x ₂, x ₃, x ₄) gedefinieerd door $ \langle\psi | \psi\rangle\_= x 1 I\_+ x 2 x\_+ x 3 Y\_+ x 4 Z $ en Real vector (Y ₂, y ₃, y ₄) gedefinieerd door ρ = Y ₁ I + Y ₂ x + y ₃ Y + y ₄ Z waarbij ρ de dichtheids matrix is die overeenkomt met de status van het REGI ster.
+  De tolerantie is de $L \_ {\infty} $ de afstand tussen de 3 dimensionale reële vector (x ₂, x ₃, x ₄) gedefinieerd door $ \langle\psi | \psi\rangle = x \_ 1 I + x \_ 2 x + x \_ 3 Y + x \_ 4 Z $ en Real vector (Y ₂, y ₃, y ₄) gedefinieerd door ρ = y ₁ I + Y ₂ x + y ₃ Y + y ₄ Z waarbij ρ de dichtheids matrix is die overeenkomt met de status van het REGI ster.
 
   Dit geldt alleen voor de veronderstelling dat tr (ρ) en tr (| ψ ⟩ ⟨ ψ |) beide 1 zijn (bijvoorbeeld x ₁ = 1/2, y ₁ = 1/2).
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Er werden respectievelijk complexe amplitudes verwacht{0}voor $ \ket ${1}en $ \ket $.
+    summary: Er werden respectievelijk complexe amplitudes verwacht voor $ \ket {0} $ en $ \ket {1} $.
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6517c96e87042948d3e6f235e64c7b3e0dc5d387
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656608"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337430"

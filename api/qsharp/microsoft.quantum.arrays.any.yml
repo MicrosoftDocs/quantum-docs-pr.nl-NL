@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, wordt gecontroleerd of ten minste één element van de matrix voldoet aan het predicaat.
-remarks: "De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een functie `predicate: 'T -> Bool` hebben die we een `Bool` waarde kunnen produceren die aangeeft of een bepaald `predicate`element voldoet aan het resultaat."
+remarks: "De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een functie hebben `predicate: 'T -> Bool` die we een `Bool` waarde kunnen produceren die aangeeft of een bepaald element voldoet aan het resultaat `predicate` ."
 examples: >-
   ```qsharp
 
@@ -41,7 +41,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Een matrix van elementen `'T`.
+    summary: Een matrix van elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -55,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type `array` elementen.
 metadata:
-  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb61be88ccba6392ca70c75f6c506b9b6c1c8bbd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676563"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352594"

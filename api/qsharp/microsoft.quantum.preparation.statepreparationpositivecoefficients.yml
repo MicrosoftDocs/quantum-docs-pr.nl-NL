@@ -2,7 +2,7 @@
 uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
 name: StatePreparationPositiveCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Retourneert een bewerking die de opgegeven Quantum status voorbereidt.
 
@@ -13,9 +13,9 @@ summary: >-
   De actie van U op een nieuw toegewezen REGI ster wordt gegeven door $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Negatieve invoer coëfficiënten $ \ alpha_j < $0 worden beschouwd als positief met de waarde $ | \ alpha_j | $. `coefficients`wordt aangevuld met elementen $ \ alpha_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.
+remarks: Negatieve invoer coëfficiënten $ \ alpha_j < $0 worden beschouwd als positief met de waarde $ | \ alpha_j | $. `coefficients` wordt aangevuld met elementen $ \ alpha_j = $0,0 als er minder dan $2 ^ n $ is opgegeven.
 examples: >-
-  Het volgende code fragment bereidt de Quantum status $ \ket{\psi} = \ wortel {1/8} \{0}Ket + \ SQRT {7/8} \{2}Ket $ voor in de `qubitsLE`Qubit-registratie.
+  Het volgende code fragment bereidt de Quantum status $ \ket{\psi} = \ wortel {1/8} \ Ket {0} + \ SQRT {7/8} \ Ket {2} $ voor in de Qubit-registratie `qubitsLE` .
 
 
   ```qsharp
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f801c02044195aa2b85bf6fd941923cf474a36b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686461"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331225"
