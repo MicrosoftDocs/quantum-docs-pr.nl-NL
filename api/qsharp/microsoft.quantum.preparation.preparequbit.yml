@@ -2,17 +2,17 @@
 uid: microsoft.quantum.preparation.preparequbit
 name: PrepareQubit
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Bereidt een Qubit voor in de + 1`Zero`() eigenstate van de gegeven Pauli-operator.
+  Bereidt een Qubit voor in de + 1 ( `Zero` ) eigenstate van de gegeven Pauli-operator.
 
   Als de identiteits operator wordt opgegeven, wordt de Qubit voor bereid in de gemengde status maximally.
 
 
-  Als de Qubit in eerste instantie de $ \ket{0}$-status had, bereidt deze bewerking de Qubit voor `PauliI`in de $ + $1-Eigenstate van een bepaalde Pauli-operator of, in plaats daarvan, in de <xref:microsoft.quantum.preparation.preparesinglequbitidentity>gemengde status maximally (zie).
+  Als de Qubit in eerste instantie de $ \ket {0} $-status had, bereidt deze bewerking de Qubit voor in de $ + $1-eigenstate van een bepaalde Pauli-operator of, `PauliI` in plaats daarvan, in de gemengde status maximally (Zie <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
 
 
-  Als de Qubit een andere status heeft{0}dan $ \ket $, geldt deze bewerking voor de volgende poorten: $H $ voor `PauliX`, $HS $ voor `PauliY`, $I $ voor `PauliZ` en <xref:microsoft.quantum.preparation.preparesinglequbitidentity> voor `PauliI`.
+  Als de Qubit een andere status heeft dan $ \ket {0} $, geldt deze bewerking voor de volgende poorten: $H $ voor `PauliX` , $HS $ voor `PauliY` , $I $ voor `PauliZ` en <xref:microsoft.quantum.preparation.preparesinglequbitidentity> voor `PauliI` .
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
 input:
   content: '(basis : Pauli, qubit : Qubit)'
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f42cb0ab28168124c7589606c34446d35013a325
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681120"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331378"
