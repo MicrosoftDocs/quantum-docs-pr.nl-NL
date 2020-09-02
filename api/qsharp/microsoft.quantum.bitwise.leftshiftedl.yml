@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedl
 name: LeftShiftedL
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Hiermee wordt de bitsgewijze weer gave van een getal overgelaten door een bepaald aantal bits.
 remarks: >-
   De volgende zijn gelijkwaardig:
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Het aantal bits `value` dat naar links moet worden verplaatst.
+    summary: Het aantal bits dat `value` naar links moet worden verplaatst.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: De waarde van `value`, naar links geschoven `amount` op bits.
+  - summary: De waarde van `value` , naar links geschoven op `amount` bits.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 61ae04f5085513742058c0208e8add0af8fd463b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 89f2643e60027818c962f90f043094a21dd579ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680680"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351217"

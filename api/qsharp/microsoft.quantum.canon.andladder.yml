@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Hiermee wordt een beheerde "en ladder" uitgevoerd op een REGI ster van doel-qubits.
 
 
-  Met deze bewerking wordt een trans formatie toegepast die wordt beschreven door de volgende toewijzing van de berekening, $\_$ \begin{align} \ket{x 1,\_\dots, x\_n} \ket{y 1,\_\dots, y {n-1}\_} \mapsto \ket{x 1,\_\dots, x n\_} \ket{y 1\_\oplus (x\_1 \land x 2),\_\dots, y {n-1}\_\oplus (x\_1 \land x 2 \land\_\cdots \land x {n-1}}, \end{align} $ $\_waarbij $ \ket{x 1,\_\dots, x n} $ verwijst naar de berekening basis `controls`status van, en waarbij\_$ \ket{y 1, \dots\_, y {n-1}} $ verwijst naar de berekening basis statussen van `targets`.
+  Met deze bewerking wordt een trans formatie toegepast die wordt beschreven door de volgende toewijzing van de berekening, $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}, \end{align} $ $ waarbij $ \ket{x \_ 1, \dots, x \_ n} $ verwijst naar de berekening basis status van `controls` , en waarbij $ \ket{y \_ 1, \dots, y \_ {n-1}} $ verwijst naar de berekening basis statussen van `targets` .
 remarks: >-
-  - Wordt gebruikt als onderdeel van <xref:microsoft.quantum.canon.applymulticontrolledc> en <xref:microsoft.quantum.canon.applymulticontrolledca>.
+  - Wordt gebruikt als onderdeel van <xref:microsoft.quantum.canon.applymulticontrolledc> en <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
   - Zie afbeelding 4,10, sectie 4,3 in Nielsen & Chuang voor uitleg en circuit diagram.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,9 +24,9 @@ input:
     summary: >-
       Een REGI ster van qubits die als besturings elementen voor de en ladder moet worden gebruikt.
 
-      Met deze bewerking worden de reken kundige `controls` basis provincies van invariant gelaten.
+      Met deze bewerking worden de reken kundige basis provincies van `controls` invariant gelaten.
 
-      De lengte van `controls` moet ten minste 2 zijn en moet gelijk zijn aan een plus de lengte van `targets`.
+      De lengte van `controls` moet ten minste 2 zijn en moet gelijk zijn aan een plus de lengte van `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676396"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350877"

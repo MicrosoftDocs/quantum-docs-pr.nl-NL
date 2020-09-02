@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Past een Pauli-operator op elke qubit in een matrix toe als de overeenkomstige bit van een Boole-matrix overeenkomt met een gegeven invoer.
 remarks: De Boole-matrix en het Quantum register moeten even lang zijn.
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
@@ -10,7 +10,7 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: pauli
-    summary: De operator Pauli die moet `qubits[idx]` worden toegepast op Where`bitsApply == bits[idx]`
+    summary: De operator Pauli die moet worden toegepast op `qubits[idx]` WHERE `bitsApply == bits[idx]`
     isPrimitive: true
     uid: Pauli
   - name: bitApply
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: Booleaanse registratie voor het opgeven van de `qubits` bijbehorende Qubit in moet worden gebruikt
+    summary: Booleaanse registratie voor het opgeven van de bijbehorende Qubit in `qubits` moet worden gebruikt
     isArray: true
     isPrimitive: true
     uid: Bool
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5a65ec2aae17a1469e820e8cd14a0d50d0639015
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7efea4ea34ee1ae68695aa74142ebf6bce93d289
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672429"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357966"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Retourneert een geheel getal dat de Z-bits van een matrix van Pauli-Opera tors vertegenwoordigt.
-remarks: De functie wordt gegenereerd als de lengte van `paulis` de matrix groter is dan 63.
+remarks: De functie wordt gegenereerd als de lengte van de `paulis` matrix groter is dan 63.
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Een geheel getal $x $ met binaire weer gave ${62}\,({61}\,p_\,p_ \dots p_0) $, waarbij $p _I = `paulis[i]` $0 `PauliI` als `PauliX` is of en de $p _I = `paulis[i]` $1 `PauliY` als `PauliZ`dat zo is of.
+  - summary: Een geheel getal $x $ met binaire weer gave $ (p_ {62} \, p_ {61} \, \dots \, p_0) $, waarbij $p _I = $0 als `paulis[i]` is `PauliI` of en de $p `PauliX` _I = $1 als dat zo `paulis[i]` is `PauliY` of `PauliZ` .
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38515f1ad8e6f4a11161f4bea0604a21a61c7546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676428"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350911"
