@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Voert een modulaire verhoging van een Qubit-REGI ster uit met een constante van een geheel getal.
 
 
-  Laat het ons weten `increment` door $a $ door `modulus` $N $ en een geheel getal dat `target` is gecodeerd in $y $.
+  Laat het ons weten door `increment` $a $ `modulus` door $N $ en een geheel getal dat is gecodeerd in `target` $y $.
 
   De bewerking voert vervolgens de volgende trans formatie uit: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} gehele getallen worden in QFT gebaseerd in de indeling little endian.
 remarks: >-
-  Er wordt van `target` uitgegaan dat de hoogste bit is ingesteld op 0.
+  Er wordt van uitgegaan dat `target` de hoogste bit is ingesteld op 0.
 
   Er wordt ook van uitgegaan dat de waarde van target kleiner is dan $N $.
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Geheel getal $y $ in een indeling die uit een Phase `increment` -code is versleuteld en waaraan $a $ is toegevoegd.
+    summary: Geheel getal $y $ in een indeling die uit een Phase-code is versleuteld `increment` en waaraan $a $ is toegevoegd.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676852"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342836"
