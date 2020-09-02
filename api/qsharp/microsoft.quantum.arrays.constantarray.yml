@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.constantarray
 name: ConstantArray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Maakt een matrix met de opgegeven lengte en alle elementen die gelijk zijn aan de opgegeven waarde.
 examples: >-
-  Met de volgende code wordt een matrix van drie Booleaanse waarden gemaakt die gelijk `true`zijn aan:
+  Met de volgende code wordt een matrix van drie Booleaanse waarden gemaakt die gelijk zijn aan `true` :
 
 
   ```qsharp
@@ -28,14 +28,14 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Een nieuwe matrix met lengte `length`, zodat elk element is `value`.
+  - summary: Een nieuwe matrix met lengte `length` , zodat elk element is `value` .
     isArray: true
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: e989c80b27c3ce0d90a564181c0bcae2f892ada0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: df6f39577259d4e3fbfa5401cab6d25b06abe9c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676537"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352441"

@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Voert een iteratieve fase schatting uit met behulp van een wille keurige Walk om Bayesiaanse te benaderen bij de klassieke meet resultaten van een bepaalde Oracle-en eigenstate.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Schatting van iteratieve fase en Eigenstates
 
 
-  Over het algemeen hoeft het invoer `eigenstate` register geen eigenstate $ \ket{\phi} $ van $U $ te zijn, maar dit kan een superpositie zijn dan eigenstates. Stel dat de invoer status wordt gegeven door \begin{align} \ket{\psi} & = \sum\_{j} \alpha\_j \ket{\phi\_j}, \end{align} waarbij $\{\alpha\_j\}$ complexe coëfficiënten is, zoals\_$ \sum j | \alpha\_j | ^ 2 = $1 en waarbij $U \ket{\phi\_j} = \phi\_j\ket {\ Phi\_j} $.
+  Over het algemeen hoeft het invoer register `eigenstate` geen eigenstate $ \ket{\phi} $ van $U $ te zijn, maar dit kan een superpositie zijn dan eigenstates. Stel dat de invoer status wordt gegeven door \begin{align} \ket{\psi} & = \sum \_ {j} \alpha \_ j \ket{\phi \_ j}, \end{align} waarbij $ \{ \alpha \_ j \} $ complexe coëfficiënten is, zoals $ \sum \_ j | \alpha \_ j | ^ 2 = $1 en waarbij $U \ket{\phi \_ j} = \phi \_ j\ket {\ Phi \_ j} $.
 
 
   Vervolgens wordt de schatting van de iteratieve fase geconvergeerd naar één eigenstate, zoals beschreven in de [ontwikkel handleiding](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Experiment ontwerpen
 
 
-  De meet tijden $t $ en de inversie-hoeken $ \theta $ die `oracle` zijn door gegeven aan worden gekozen op basis van de heuristiek van de *partikel*, \begin{align} \theta \sim \Pr (\phi{1}), \quad t \approx \frac {\variance{\phi}}.
+  De meet tijden $t $ en de inversie-hoeken $ \theta $ die zijn door gegeven aan `oracle` worden gekozen op basis van de *heuristiek*van de partikel, \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
 
   \end{align} deze heuristiek is optimaal voor het verminderen van de verwachte posterior afwijking in een iteratieve fase schatting, onder de veronderstelling van een normaal voor gaande.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706734"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330579"

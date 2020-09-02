@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.continuedfractionconvergenti
 name: ContinuedFractionConvergentI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Hiermee wordt gezocht naar de voortgezette `fraction` fractie convergent die het dichtst bij met de noemer kleiner of gelijk is aan`denominatorBound`
+namespace: microsoft.quantum.math
+summary: Hiermee wordt gezocht naar de voortgezette fractie convergent die het dichtst bij `fraction` met de noemer kleiner of gelijk is aan `denominatorBound`
 syntax: 'function ContinuedFractionConvergentI (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.Math.Fraction
   types:
-  - summary: Achterliggende fractie `fraction` die het dichtst bij met de noemer kleiner of gelijk aan`denominatorBound`
+  - summary: Achterliggende fractie die het dichtst bij `fraction` met de noemer kleiner of gelijk aan `denominatorBound`
     uid: microsoft.quantum.math.fraction
 metadata:
-  ms.openlocfilehash: 4134f4b1f53403eee1c2c87c7442b05931c40026
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 60865a8dd02392f9dcd8585c4301939d5fdcfa17
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685727"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344179"
