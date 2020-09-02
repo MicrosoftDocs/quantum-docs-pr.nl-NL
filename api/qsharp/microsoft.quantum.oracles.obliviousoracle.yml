@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Vertegenwoordigt een Oracle voor Oblivious-amplitude versterking.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Het ancilla-REGI ster $a $ waarvoor $ wordt $O.
 
-  - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $\_\ket{t} a $.
+  - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $ \ket{t} \_ a $.
 remarks: >-
-  Deze Oracle gedefinieerd door $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ handelt op de ancilla-status\_$ \ket{s} a $ om de unitary $U $ te implementeren op een systeem\_status $ \ket{\psi} s $ met amplitude $ \lambda $ in de basis die is\_gemarkeerd met $ \ket{t} a $.
+  Deze Oracle gedefinieerd door $ $ O\ket {s} \_ a\ket {\ psi} \_ s = \Lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cdots $ $ handelt op de ancilla-status $ \ket{s} \_ a $ om de unitary $U $ te implementeren op een systeem status $ \ket{\psi} \_ s $ met amplitude $ \lambda $ in de basis die is gemarkeerd met $ \ket{t} \_ a $.
 
-  De eerste para meter is het Qubit-REGI ster\_van $ \ket{s} a $. De tweede para meter is het Qubit-REGI ster\_van $ \ket{\psi} s $.
+  De eerste para meter is het Qubit-REGI ster van $ \ket{s} \_ a $. De tweede para meter is het Qubit-REGI ster van $ \ket{\psi} \_ s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681262"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332007"

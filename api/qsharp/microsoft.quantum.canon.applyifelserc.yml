@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Past een van de twee instel bare bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
 
 
-  Als er een `result`resultaat is gegeven, `zeroOp` wordt `zeroInput` de bewerking met als `result` invoer toegepast wanneer `Zero`deze gelijk is `oneOp(oneInput)` aan `result == One`en wordt toegepast wanneer.
+  Als er een resultaat `result` is gegeven, wordt de bewerking `zeroOp` met `zeroInput` als invoer toegepast wanneer deze `result` gelijk is aan `Zero` en wordt toegepast `oneOp(oneInput)` Wanneer `result == One` .
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Het meet resultaat dat wordt gebruikt om `zeroOp` te `oneOp` bepalen of het wordt toegepast.
+    summary: Het meet resultaat dat wordt gebruikt om te bepalen `zeroOp` of het `oneOp` wordt toegepast.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: De instelbaar bewerking die moet worden toegepast `result == Zero`wanneer.
+    summary: De instelbaar bewerking die moet worden toegepast wanneer `result == Zero` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: De invoer die moet worden opgegeven `zeroOp` als `result == Zero`.
+    summary: De invoer die moet worden opgegeven `zeroOp` als `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: De instelbaar bewerking die moet worden toegepast `result == One`wanneer.
+    summary: De instelbaar bewerking die moet worden toegepast wanneer `result == One` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: De invoer die moet worden opgegeven `oneOp` als `result == One`.
+    summary: De invoer die moet worden opgegeven `oneOp` als `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b31ace845d04b3c279b54e0dfea575632ce575f8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672728"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350214"

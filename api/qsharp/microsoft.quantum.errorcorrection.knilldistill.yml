@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Implementeert het distillatie algoritme Knill Magic State.
 
 
-  Gegeven op 15 geschatte kopieën van een magische status $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ levert een kopie van een hogere kwaliteit.
+  Gegeven op 15 geschatte kopieën van een magische status $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket {1} \end{align}, $ $ levert een kopie van een hogere kwaliteit.
 remarks: >-
   We volgen het algoritme van Knill.
 
@@ -27,13 +27,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: Als `true`de procedure is geslaagd en de kopie van de hogere kwaliteit moet worden geaccepteerd. Als `false`de procedure is mislukt en de status van het REGI ster moet worden beschouwd als niet-gedefinieerd.
+  - summary: Als `true` de procedure is geslaagd en de kopie van de hogere kwaliteit moet worden geaccepteerd. Als `false` de procedure is mislukt en de status van het REGI ster moet worden beschouwd als niet-gedefinieerd.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682366"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350112"

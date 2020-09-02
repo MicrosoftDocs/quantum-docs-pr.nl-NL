@@ -2,27 +2,27 @@
 uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
 name: StateOracleFromDeterministicStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: Converteert een Oracle van het `DeterministicStateOracle` type `StateOracle`naar.
+namespace: microsoft.quantum.oracles
+summary: Converteert een Oracle van het type `DeterministicStateOracle` naar `StateOracle` .
 syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
 input:
   content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: deterministicStateOracle
-    summary: Een status voorbereiding Oracle $A $ van type `DeterministicStateOracle`.
+    summary: Een status voorbereiding Oracle $A $ van type `DeterministicStateOracle` .
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.StateOracle
   types:
-  - summary: Dezelfde status voorbereiding Oracle $A $, maar nu van type `StateOracle`. Houd er rekening mee dat de vlag `StateOracle` index in dit een dummy variabele is en geen effect heeft.
+  - summary: Dezelfde status voorbereiding Oracle $A $, maar nu van type `StateOracle` . Houd er rekening mee dat de vlag index in dit `StateOracle` een dummy variabele is en geen effect heeft.
     uid: microsoft.quantum.oracles.stateoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.stateoracle
 metadata:
-  ms.openlocfilehash: 9431b58659bb50de872f73890a4a055c5534b2a0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 77cdfba157be67bb68cec53f3d8a0780a347bf37
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685154"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331735"

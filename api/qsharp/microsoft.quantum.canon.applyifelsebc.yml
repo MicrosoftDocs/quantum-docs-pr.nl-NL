@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebc
 name: ApplyIfElseBC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Past een van de twee instel bare bewerkingen toe, afhankelijk van de waarde van een klassieke bit.
 
 
-  Gezien een bit `bit`, wordt de bewerking `trueOp` met `trueInput` als invoer `bit` `true`toegepast en toegepast `falseOp(falseInput)` als `bit` dat zo is. `false`
+  Gezien een bit `bit` , wordt de bewerking `trueOp` met `trueInput` als invoer toegepast `bit` `true` en toegepast als dat zo `falseOp(falseInput)` is `bit` `false` .
 syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: De Booleaanse waarde die wordt gebruikt om `trueOp` te `falseOp` bepalen of deze is toegepast.
+    summary: De Booleaanse waarde die wordt gebruikt om te bepalen of deze `trueOp` `falseOp` is toegepast.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: De instelbaar bewerking die moet worden toegepast `bit` wanneer `true`dat het geval is.
+    summary: De instelbaar bewerking die moet worden toegepast wanneer dat het geval `bit` is `true` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: trueInput
-    summary: De invoer die moet worden opgegeven `trueOp` `bit` als `true`.
+    summary: De invoer die moet worden opgegeven `trueOp` als `bit` `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: De instelbaar bewerking die moet worden toegepast `bit` wanneer `false`dat het geval is.
+    summary: De instelbaar bewerking die moet worden toegepast wanneer dat het geval `bit` is `false` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: falseInput
-    summary: De invoer die moet worden opgegeven `falseOp` `bit` als `false`.
+    summary: De invoer die moet worden opgegeven `falseOp` als `bit` `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: c1d7c1fdf83b5ec87b8d5e8b22c45bb00072f69a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cd8df26dabaaa13d39fc194ae958f71e3b618ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674993"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350384"
