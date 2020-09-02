@@ -2,28 +2,28 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Converteert een matrix met gehele getallen naar een matrix van Pauli-Opera tors met één Qubit.
 syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
 input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Matrix van gehele getallen in het bereik `0..3` dat moet worden geconverteerd naar Pauli-Opera tors.
+    summary: Matrix van gehele getallen in het bereik `0..3`  dat moet worden geconverteerd naar Pauli-Opera tors.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Een matrix `paulis` van Pauli- `Pauli[]` Opera tors met dezelfde `ints` lengte als `paulis[idxPauli]` die gelijk is aan het element `[PauliI, PauliX, PauliY, PauliZ]` van gegeven `ints[idxPauli]`door.
+  - summary: Een matrix `paulis` van Pauli-Opera tors `Pauli[]` met dezelfde lengte als `ints` die `paulis[idxPauli]` gelijk is aan het element van `[PauliI, PauliX, PauliY, PauliZ]` gegeven door `ints[idxPauli]` .
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f4d7e34cc7555fab89c6fd4d8371837da2296015
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682622"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329812"
