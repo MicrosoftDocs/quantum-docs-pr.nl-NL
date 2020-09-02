@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Vier kant ondertekend `xs` geheel getal en sla het `result`resultaat op in. dit moet aanvankelijk nul zijn.
+namespace: microsoft.quantum.arithmetic
+summary: Vier kant ondertekend geheel getal `xs` en sla het resultaat op in `result` . dit moet aanvankelijk nul zijn.
 remarks: De implementatie is afhankelijk van IntegerSquare.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n-bits geheel getal naar vier kant (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 2n-bit result (SignedLittleEndian), moet de status $ \ket{0}$ in eerste instantie hebben.
+    summary: 2n-bit result (SignedLittleEndian), moet de status $ \ket {0} $ in eerste instantie hebben.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee4e8a7ad27fdfb03f590f229a1c0e344a985ff6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676589"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352662"

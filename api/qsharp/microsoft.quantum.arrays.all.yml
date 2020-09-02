@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Gegeven een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix en controleert of alle elementen van de matrix voldoen aan het predicaat.
-remarks: "De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een functie `predicate: 'T -> Bool` hebben die we een `Bool` waarde kunnen produceren die aangeeft of alle `predicate`elementen voldoen."
+remarks: "De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` en een functie hebben `predicate: 'T -> Bool` die we een `Bool` waarde kunnen produceren die aangeeft of alle elementen voldoen `predicate` ."
 examples: >-
   Met de volgende code wordt gecontroleerd of alle elementen van de matrix niet-nul zijn:
 
@@ -39,7 +39,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Een matrix van elementen `'T`.
+    summary: Een matrix van elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -53,9 +53,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type `array` elementen.
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676582"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352645"

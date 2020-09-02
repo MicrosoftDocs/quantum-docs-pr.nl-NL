@@ -2,9 +2,9 @@
 uid: microsoft.quantum.core.rangestep
 name: RangeStep
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Retourneert het gehele getal dat aangeeft hoe de volgende waarde van een bereik wordt berekend.
-remarks: Het eerste element van een bereik expressie `start`is, het tweede element `start+step`is, het derde `start+step+step`element, enzovoort, totdat `end` het wordt door gegeven.
+remarks: Het eerste element van een bereik expressie is `start` , het tweede element is, het `start+step` derde element `start+step+step` , enzovoort, totdat het `end` wordt door gegeven.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7196f33548767bb47fde9e8bbd6b6dcf720e5f9c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677331"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337939"
