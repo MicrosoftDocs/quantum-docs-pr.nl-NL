@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformationca
 name: ApplyWithInputTransformationCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Op basis van een bewerking waarbij een invoer wordt geaccepteerd, wordt met een functie die een uitvoer die compatibel is met die bewerking, en een invoer naar die functie, de bewerking toegepast met behulp van de functie om de invoer te transformeren naar een formulier dat wordt verwacht door de bewerking.
 examples: >-
-  De volgende aanroep gebruikt @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" om een bewerking die is ontworpen @"Microsoft.Quantum.Arithmetic.BigEndian" voor invoer, toe te passen @"Microsoft.Quantum.Arithmetic.LittleEndian"op een invoer van het type:
+  De volgende aanroep gebruikt @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" om een bewerking die is ontworpen voor invoer, toe @"Microsoft.Quantum.Arithmetic.BigEndian" te passen op een invoer van het type @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -60,9 +60,9 @@ seeAlso:
 - applywithinputtransformationc
 - transformedoperation
 metadata:
-  ms.openlocfilehash: d49bfe512cc8460aaf9697b545b02ac2b5d96a9f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 505fd028126c966c9f64123414126b31c02a1ac1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676240"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357099"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Voor een gegeven tabel met Pauli-bewerkingen op een bepaald REGI ster van qubits retourneert deze functie een object van `RecoveryFn` het type dat alle informatie bevat die nodig is voor het uitvoeren van een tabel-lookup-code ring met betrekking tot de opgegeven matrix van Pauli-bewerkingen.
+namespace: microsoft.quantum.errorcorrection
+summary: Voor een gegeven tabel met Pauli-bewerkingen op een bepaald REGI ster van qubits retourneert deze functie een object van het type `RecoveryFn` dat alle informatie bevat die nodig is voor het uitvoeren van een tabel-lookup-code ring met betrekking tot de opgegeven matrix van Pauli-bewerkingen.
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Een object van het `RecoveryFn`type, dat wil zeggen een `Syndrome -> Pauli[]` kaart die is gekoppeld aan een bepaalde Syndrome-matrix een bijbehorende Pauli-correctie bewerking.
+  - summary: Een object van het type `RecoveryFn` , dat wil zeggen een kaart `Syndrome -> Pauli[]` die is gekoppeld aan een bepaalde Syndrome-matrix een bijbehorende Pauli-correctie bewerking.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 25f9fbf5890c28d52552ba7fdc89ab6bb1506f37
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684813"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349602"

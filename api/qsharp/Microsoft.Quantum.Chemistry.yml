@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Converteert een index naar een Hamiltonian-term `HTerm[]` in een gegevens indeling naar een GeneratorIndex.
+  summary: Converteert een index naar een Hamiltonian-term in `HTerm[]` een gegevens indeling naar een GeneratorIndex.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: Hiermee wordt een Hamiltonian `HTerm[]` in de gegevens indeling geconverteerd naar een GeneratorSystem.
+  summary: Hiermee wordt een Hamiltonian in `HTerm[]` de gegevens indeling geconverteerd naar een GeneratorSystem.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: Hiermee wordt een Hamiltonian- `HTerm` term in een gegevens indeling geconverteerd naar een GeneratorIndex.
+  summary: Hiermee wordt een Hamiltonian-term in `HTerm` een gegevens indeling geconverteerd naar een GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: Hiermee wordt gecontroleerd `Double` of een getal niet ongeveer nul is.
+  summary: Hiermee wordt gecontroleerd of een `Double` getal niet ongeveer nul is.
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
@@ -17,9 +17,9 @@ newtypes:
 
     De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.
 metadata:
-  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39701c0e7ee50a064d24020298bef12406e5728
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677023"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340218"

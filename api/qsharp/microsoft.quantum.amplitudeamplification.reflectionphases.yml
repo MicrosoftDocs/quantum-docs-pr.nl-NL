@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Fasen voor een reeks van gedeeltelijke reflecties in amplitude versterking.
 remarks: >-
   De eerste para meter is een matrix met fasen voor reflectie over de begin status. De tweede para meter is een matrix met fasen voor reflectie over de doel status.
@@ -10,9 +10,9 @@ remarks: >-
   Beide matrices moeten dezelfde lengte hebben. Houd er rekening mee dat in veel gevallen de eerste fase van de begin status en laatste fase over de doel status een globale fase verschuiving introduceert en kan worden ingesteld op $0 $.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680120"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340354"
