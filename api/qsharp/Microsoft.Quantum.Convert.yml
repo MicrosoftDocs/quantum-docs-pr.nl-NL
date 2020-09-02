@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Op basis van een bit string retourneert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli-Opera tors met één Qubit.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Converteert een `Bool[]` type naar een `Result[]` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero`.
+  summary: Converteert een `Bool[]` type naar een `Result[]` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero` .
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Converteert een `Bool` type naar een `Result` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero`.
+  summary: Converteert een `Bool` type naar een `Result` type, waarbij `true` wordt toegewezen aan `One` en `false` wordt toegewezen aan `Zero` .
 - uid: microsoft.quantum.convert.boolasstring
   summary: Zet een gegeven Booleaanse waarde om in een equivalente teken reeks representatie.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -49,18 +49,18 @@ functions:
 - uid: microsoft.quantum.convert.rangeasintarray
   summary: Maakt een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Converteert een `Result[]` type naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false`.
+  summary: Converteert een `Result[]` type naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false` .
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Produceert een positief geheel getal uit een teken reeks met resultaten in little endian indeling.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Converteert een `Result` type naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false`.
+  summary: Converteert een `Result` type naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false` .
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Roept een functie aan met een opgegeven invoer.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677006"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341357"

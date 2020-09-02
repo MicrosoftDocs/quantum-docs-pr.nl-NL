@@ -7,13 +7,13 @@ operations:
   summary: >-
     Retourneert het aantal qubits dat momenteel beschikbaar is om te lenen.
 
-    Dit omvat niet-gebruikte qubits; dat wil zeggen dat de qubits die wordt geretourneerd `GetQubitsAvailableToUse`door.
+    Dit omvat niet-gebruikte qubits; dat wil zeggen dat de qubits die wordt geretourneerd door `GetQubitsAvailableToUse` .
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: Retourneert het aantal qubits dat momenteel beschikbaar is voor gebruik.
 metadata:
-  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f597d8f429089b0ebf2c22cef1d1b98ea270402
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673353"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341153"
