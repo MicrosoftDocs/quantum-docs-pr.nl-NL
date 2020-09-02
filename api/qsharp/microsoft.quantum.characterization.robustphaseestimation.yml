@@ -2,11 +2,11 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve `U` Quantum fase voor een bepaalde Oracle-en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
+namespace: microsoft.quantum.characterization
+summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve Quantum fase voor een bepaalde Oracle `U` -en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
 remarks: In de limiet van een groot aantal query's, Cramer-Rao ondergrenzen voor de standaard afwijking van de schatting van $ \phi $ aan $ \sigma \ge 2 \pi/\Text{# van query's} $.
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- Robuuste kalibratie van een Universal single-Qubit Gate-set via een robuuste fase schatting Shelby Kimmel, Guang Hao low, Theodore J. Yoderhttps://arxiv.org/abs/1502.02677'
+references: '- Robuuste kalibratie van een Universal single-Qubit Gate-set via een robuuste fase schatting Shelby Kimmel, Guang Hao low, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 098cb9bbf804d93d2e03d4f776bd0e88cb5b25bb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677603"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354260"

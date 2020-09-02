@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Samenvatting\n Deze naam ruimten biedt door de gebruiker gedefinieerde typen om verschillende soorten Oracle te verf raaien door hun beoogde gebruik in Quantum algoritmen, zoals de fase schatting en amplitude versterking."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converteert een Oracle van het `StateOracle` type `DeterministicStateOracle`naar.
+  summary: Converteert een Oracle van het type `StateOracle` naar `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combineert de Oracle- `DeterministicStateOracle` en `ObliviousOracle`.
+  summary: Combineert de Oracle- `DeterministicStateOracle` en `ObliviousOracle` .
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Op basis van een bewerking die een ' Black-Box ' Oracle vertegenwoordigt, wordt een eenmalige Oracle-waarde geretourneerd waarmee het ' Black-Box ' Oracle meerdere malen wordt herhaald.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Maakt reflectie over een bepaalde status vanuit een Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converteert een Oracle van het `DeterministicStateOracle` type `StateOracle`naar.
+  summary: Converteert een Oracle van het type `DeterministicStateOracle` naar `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     De invoer voor de Oracle-$O $ is:
 
 
-    - Het REGI ster waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
+    - Het REGI ster waarin de gewenste Quantum status $ \ket{\psi} \_ s $ wordt opgeslagen.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Vertegenwoordigt een eenmalige Oracle.
@@ -45,7 +45,7 @@ newtypes:
 
     - Het ancilla-REGI ster $a $ waarvoor $ wordt $O.
 
-    - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $\_\ket{t} a $.
+    - Het systeem register $s $ waarop de gewenste unitary $U $ wordt toegepast, post-selected on REGI ster $a $ met de status $ \ket{t} \_ a $.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Vertegenwoordigt een weer spiegeling van Oracle.
@@ -67,11 +67,11 @@ newtypes:
 
     - Een geheel getal dat de vlag Qubit $f $ indexeert.
 
-    - De systeem register $s $ waarin de gewenste Quantum status $ \ket{\psi}\_s $ wordt opgeslagen.
+    - De systeem register $s $ waarin de gewenste Quantum status $ \ket{\psi} \_ s $ wordt opgeslagen.
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673110"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340949"

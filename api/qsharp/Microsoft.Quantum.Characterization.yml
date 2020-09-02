@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Voert een enkele herhaling van een iteratieve fase van een herhaald (klassiek) Phase uit met een geheel getal van een unitary Oracle.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Op basis van een voor bereiding en meting, schat de frequentie waarmee deze meting slaagt (retourneert `Zero`) door een bepaald aantal experimenten uit te voeren.
+  summary: Op basis van een voor bereiding en meting, schat de frequentie waarmee deze meting slaagt (retourneert `Zero` ) door een bepaald aantal experimenten uit te voeren.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie `Zero`waarmee deze meting slaagt (retourneert) door een bepaald aantal experimenten uit te voeren.
+  summary: Op basis van een voor bereiding die adjointable en meting levert, wordt een schatting gemaakt van de frequentie waarmee deze meting slaagt (retourneert `Zero` ) door een bepaald aantal experimenten uit te voeren.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: Op basis van twee bewerkingen die elk een kopie van een staat voorbereiden, wordt het imaginaire deel van de overlap ping tussen de staten die door elke bewerking zijn voor bereid.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -22,15 +22,15 @@ operations:
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Hiermee wordt de identiteits operator in een REGI ster van qubits gemeten.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Voert het geraamde algoritme van de Quantum fase `U` uit `targetState`voor een bepaalde Oracle en lees de fase in een Quantum registratie big endian.
+  summary: Voert het geraamde algoritme van de Quantum fase uit voor een bepaalde Oracle `U` en `targetState` Lees de fase in een Quantum registratie big endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve `U` Quantum fase voor een bepaalde Oracle-en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
+  summary: Voert het robuuste algoritme voor het schatten van de niet-iteratieve Quantum fase voor een bepaalde Oracle `U` -en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Hiermee wordt een Qubit-proces tomography meting uitgevoerd in de Pauli, op basis van een bepaald kanaal van belang.
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673360"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341476"

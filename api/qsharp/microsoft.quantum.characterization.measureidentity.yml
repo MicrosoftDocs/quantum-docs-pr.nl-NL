@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Hiermee wordt de identiteits operator in een REGI ster van qubits gemeten.
 remarks: >-
-  Aangezien $ \boldone $ alleen de eigenvalue $1 $ heeft en geen negatieve eigenvalue heeft, retourneert `Zero`deze bewerking altijd, die overeenkomt met de eigenvalue $ + 1 = (-1) ^ 0 $, en treedt er geen samen werking van de status van op `register`.
+  Aangezien $ \boldone $ alleen de eigenvalue $1 $ heeft en geen negatieve eigenvalue heeft, retourneert deze bewerking altijd `Zero` , die overeenkomt met de eigenvalue $ + 1 = (-1) ^ 0 $, en treedt er geen samen werking van de status van op `register` .
 
 
   Op zichzelf is deze bewerking niet nuttig, maar is handig in de context van Process tomography, omdat deze informatie bevat over het behoud van de bewaring van een quantum proces.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: De resultaat waarde `Zero`.
+  - summary: De resultaat waarde `Zero` .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677637"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354294"
