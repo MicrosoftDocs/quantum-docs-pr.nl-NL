@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Retourneert een bewerking die de Trotter – Suzuki integrator implementeert voor een bepaalde bewerking.
 remarks: >-
-  Als deze functie `order` wordt aangeroepen `1`met gelijk aan, wordt een bewerking geretourneerd die kan worden gesimuleerd door de laagste Trotter – Suzuki integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $ waar we de notatie van [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) hebben gevolgd en $ \lambda $ de ontwikkelings tijd zijn (vertegenwoordigd door de eerste invoer van de geretourneerde bewerking), en laat $\{H_j\}_ {j = 1} ^ {m} $ zijn de set van (schuine Hermitian) dynamische generators die `op(j, lambda, _)` worden gesimuleerd door de unitary-operator $e ^ {H_j \lambda} $.
+  Als `order` deze functie wordt aangeroepen met gelijk aan `1` , wordt een bewerking geretourneerd die kan worden gesimuleerd door de laagste Trotter – Suzuki integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $ waar we de notatie van [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) hebben gevolgd en $ \lambda $ de ontwikkelings tijd zijn (vertegenwoordigd door de eerste invoer van de geretourneerde bewerking), en laat $ \{ H_j \} _ {j = 1} ^ {m} $ zijn de set van (schuine Hermitian) dynamische generators die worden `op(j, lambda, _)` gesimuleerd door de unitary-operator $e ^ {H_j \lambda} $.
 
 
-  Op dezelfde manier `order` retourneert `2` een van de tweede volg orde symmetrisch Trotter – Suzuki integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}.
+  Op dezelfde manier `order` retourneert een van `2` de tweede volg orde symmetrisch Trotter – Suzuki integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.
 
   \end{align} $ $
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Een bewerking die een index-invoer (type `Int`) en een tijd invoer (type `Double`) voor de ontleding accepteert.
+    summary: Een bewerking die een index-invoer (type `Int` ) en een tijd invoer (type `Double` ) voor de ontleding accepteert.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Retourneert een unitary-implementatie van de Trotter – Suzuki integrator, waarbij de eerste `Double` para meter de grootte van de integratie stap is en de tweede para meter is gericht op het doel.
+  - summary: Retourneert een unitary-implementatie van de Trotter – Suzuki integrator, waarbij de eerste para meter `Double` de grootte van de integratie stap is en de tweede para meter is gericht op het doel.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Het type waarvoor elke stap moet worden uitgevoerd; normaal gesp roken `Qubit[]` , `Qubit`ofwel of.
+  summary: Het type waarvoor elke stap moet worden uitgevoerd; normaal gesp roken, ofwel `Qubit[]` of `Qubit` .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680252"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356538"
