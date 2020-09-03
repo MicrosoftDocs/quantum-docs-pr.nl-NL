@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Vermenigvuldig ondertekend geheel `xs` getal met ondertekende `ys` integer en sla het resultaat `result`op in. dit moet aanvankelijk nul zijn.
+namespace: microsoft.quantum.arithmetic
+summary: Vermenigvuldig ondertekend geheel getal `xs` met ondertekende integer `ys` en sla het resultaat op in `result` . dit moet aanvankelijk nul zijn.
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: n-bits vermenigvuldiger (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 2n-bit result (SignedLittleEndian), moet de status $ \ket{0}$ in eerste instantie hebben.
+    summary: 2n-bit result (SignedLittleEndian), moet de status $ \ket {0} $ in eerste instantie hebben.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e81995b6dfb20ddd3e3e3139831d3cc43bfd60da
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679457"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353393"
