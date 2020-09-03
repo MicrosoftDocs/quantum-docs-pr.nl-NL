@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.bounda
 name: BoundA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
 
-  De wijzigings `A` functie geeft aan dat alle bewerkingen in de matrix adjointable zijn.
+  De wijzigings functie `A` geeft aan dat alle bewerkingen in de matrix adjointable zijn.
 examples: >-
   De volgende zijn gelijkwaardig:
 
@@ -67,9 +67,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: a965cd80372dbec05810739ed3774b886dc0aa53
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6dc7dbec4ee57956a243fcc5aa61be330d64fb9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676006"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356963"

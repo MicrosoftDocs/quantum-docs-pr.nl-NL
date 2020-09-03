@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.boundca
 name: BoundCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Op basis van een matrix van bewerkingen die worden uitgevoerd op één invoer, produceert een nieuwe bewerking die elke opgegeven bewerking in volg orde uitvoert.
 
-  De wijzigings `CA` functie geeft aan dat alle bewerkingen in de matrix adjointable en bewerkbaar zijn.
+  De wijzigings functie `CA` geeft aan dat alle bewerkingen in de matrix adjointable en bewerkbaar zijn.
 examples: >-
   De volgende zijn gelijkwaardig:
 
@@ -69,9 +69,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: 0144486e675bfb18d4e171a4a8cfec7e5a8be2ae
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a843acbb186750e23d35b3c3e38ce76b369392e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675956"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356895"
