@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Hiermee wordt de inhoud van een Quantum register gemeten en omgezet in een geheel getal. De meting wordt uitgevoerd met betrekking tot de standaard berekening, d.w.z. de eigenbasis van `PauliZ`.
+namespace: microsoft.quantum.arithmetic
+summary: Hiermee wordt de inhoud van een Quantum register gemeten en omgezet in een geheel getal. De meting wordt uitgevoerd met betrekking tot de standaard berekening, d.w.z. de eigenbasis van `PauliZ` .
 remarks: Met deze bewerking wordt de invoer register opnieuw ingesteld op de status $ \ket{00\cdots 0} $, die geschikt is om terug te gaan naar een doel machine.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -15,15 +15,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Een niet-ondertekend geheel getal dat de gemeten waarde van `target`bevat.
+  - summary: Een niet-ondertekend geheel getal dat de gemeten waarde van bevat `target` .
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e89e30375be30508652f285295bcf79f2a5de919
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676761"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353580"
