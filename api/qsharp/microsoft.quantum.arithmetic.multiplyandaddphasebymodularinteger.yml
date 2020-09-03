@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Hetzelfde als MultiplyAndAddByModularInteger, maar er wordt van uitgegaan dat de summand integers codeert in QFT.
 remarks: >-
-  Er wordt van `phaseSummand` uitgegaan dat de hoogste bit is ingesteld op 0.
+  Er wordt van uitgegaan dat `phaseSummand` de hoogste bit is ingesteld op 0.
 
-  Er wordt ook van uitgegaan dat `phaseSummand` de waarde van kleiner is dan $N $.
+  Er wordt ook van uitgegaan dat de waarde van `phaseSummand` kleiner is dan $N $.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Een Quantum register dat een niet-ondertekend geheel getal vertegenwoordigt waarvan de waarde moet worden toegevoegd aan elk basis status `summand`label van.
+    summary: Een Quantum register dat een niet-ondertekend geheel getal vertegenwoordigt waarvan de waarde moet worden toegevoegd aan elk basis status label van `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
     summary: Een Quantum register dat een niet-ondertekend geheel getal vertegenwoordigt dat moet worden gebruikt als doel voor deze bewerking.
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c1a7fd9523ee9056215cfbd5f2c89134f250bf1c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672805"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353546"

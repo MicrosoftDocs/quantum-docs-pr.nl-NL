@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Maakt een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.
 examples: >-
   ```qsharp
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: Een `Range` van de `start..step..end` waarden die moeten worden geconverteerd naar een matrix.
+    summary: Een `Range` van de waarden `start..step..end` die moeten worden geconverteerd naar een matrix.
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: Een nieuwe matrix van gehele getallen die overeenkomen met waarden die worden `range`herhaald door.
+  - summary: Een nieuwe matrix van gehele getallen die overeenkomen met waarden die worden herhaald door `range` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677378"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338314"
