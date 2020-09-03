@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Neemt een matrix en een lijst met locaties en produceert een nieuwe matrix die is samengesteld op basis van de elementen van de oorspronkelijke matrix die overeenkomen met de opgegeven locaties.
 remarks: >-
-  De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix `'T[]` hebben en een lijst met `Int[]` locaties waarmee de submatrix wordt gedefinieerd.
+  De functie is gedefinieerd voor algemene typen, dat wil zeggen, wanneer we een matrix hebben `'T[]` en een lijst met locaties `Int[]` waarmee de submatrix wordt gedefinieerd.
 
   De constructie van de submatrix is een gebaseerd op het genereren van een nieuwe, diep gaande kopie van de opgegeven matrix in plaats van verwijzingen te onderhouden.
 
 
-  Als `Length(indices) < Length(array)`deze functie een subset retourneert, wordt geretourneerd `array`. Als `indices` er daarentegen herhaalde elementen bevatten, worden ook de bijbehorende elementen `array` van herhaald.
+  Als `Length(indices) < Length(array)` deze functie een subset retourneert, wordt geretourneerd `array` . Als er daarentegen `indices` herhaalde elementen bevatten, worden ook de bijbehorende elementen van `array` herhaald.
 
-  Als `indices` en `array` dezelfde lengte hebben, biedt deze functie permutaties van `array`.
+  Als `indices` en `array` dezelfde lengte hebben, biedt deze functie permutaties van `array` .
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Een matrix van elementen `'T`.
+    summary: Een matrix van elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Een matrix `out` met elementen waarvan de indices overeenkomen met de submatrix, dat `out[idx] == array[indices[idx]]`wil zeggen.
+  - summary: Een matrix `out` met elementen waarvan de indices overeenkomen met de submatrix, dat wil zeggen `out[idx] == array[indices[idx]]` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'T"
   summary: Het type `array` elementen.
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675117"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351625"
