@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Retourneert de Booleaanse combi natie van twee waarden.
 remarks: >-
-  In tegens `and` telling tot de operator is deze functie niet korte circuits, zodat beide invoer volledig worden geëvalueerd.
+  In tegens telling tot de `and` operator is deze functie niet korte circuits, zodat beide invoer volledig worden geëvalueerd.
 
 
   Tot het korte circuit, zijn de volgende equivalenten:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`Als en alleen als `a` en `b` beide `true`.'
+  - summary: '`true` Als en alleen als `a` en `b` beide `true` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 79d3e2fb5499e10a73c4ead1c19d36f09b721f98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674093"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346270"
