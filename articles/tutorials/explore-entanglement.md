@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863447"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063237"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
@@ -112,7 +112,7 @@ Een Q# bewerking is een Quantum subroutine. Dat wil zeggen dat het een aanroep b
 
 De argumenten voor een bewerking worden tussen haakjes opgegeven als een tupel.
 
-Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de bewerking `SetQubitState` geen retourwaarde, zodat deze is gemarkeerd als retourzending `Unit`. Dit is het Q# equivalent van `unit` in F #, wat ongeveer hetzelfde is als `void` in C#, en een lege tuple ( `Tuple[()]` ) in python.
+Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de bewerking `SetQubitState` geen retourwaarde, zodat deze is gemarkeerd als retourzending `Unit`. Dit is het Q# equivalent van `unit` in F #, wat ongeveer hetzelfde is als `void` in C# en een lege tuple in python ( `()` , vertegenwoordigd door de type hint `Tuple[()]` ).
 
 U hebt twee Quantum bewerkingen gebruikt in uw eerste Q# bewerking:
 
