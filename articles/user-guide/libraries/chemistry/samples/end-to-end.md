@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869304"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759712"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-end met NWChem #
 
@@ -22,7 +22,7 @@ Controleer voordat u doorgaat met dit voor beeld of u docker hebt geïnstalleerd
 
 Voor meer informatie:
 - [Structuur van NWChem-invoer dekken](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Invoer deck-opdrachten voor gebruik met de Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Invoer deck-opdrachten voor gebruik met de Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [De schei-bibliotheek en de afhankelijkheden worden geïnstalleerd](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Resources tellen](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Vervolgens importeren we de `Get-GateCount` opdracht die is opgenomen in het **GetGateCount** -voor beeld.
-Zie de instructies van het voor [beeld](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)voor meer informatie.
+Zie de instructies van het voor [beeld](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount)voor meer informatie.
 Voer vervolgens de volgende handelingen uit en vervang deze door `<runtime>` `win10-x64` of, `osx-x64` `linux-x64` afhankelijk van uw besturings systeem:
 
 ```powershell
@@ -95,7 +95,7 @@ Kloon eerst de [opslag plaats nwchemgit/NWChem](https://github.com/nwchemgit/nwc
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-De `nwchemgit/nwchem` opslag plaats wordt geleverd met diverse invoer dekken die zijn bedoeld voor gebruik met de Quantum Development Kit, die wordt weer gegeven in de [ `QA/chem_library_tests` map](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+De `nwchemgit/nwchem` opslag plaats wordt geleverd met diverse invoer dekken die zijn bedoeld voor gebruik met de Quantum Development Kit, die wordt weer gegeven in de [ `QA/chem_library_tests` map](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 In dit voor beeld gebruiken we het `H4` invoer deck:
 
 ```powershell
@@ -167,7 +167,7 @@ U kunt op de volgende manieren te werk gaan:
 - Probeer verschillende vooraf gedefinieerde invoer dekken, bijvoorbeeld door de para meter `alpha` in te variëren in `h4_sto6g_alpha.nw` 
 - Wijzig de dekken door de NWChem-dekken rechtstreeks te bewerken, bijvoorbeeld om modellen te verkennen `STO-nG` voor verschillende keuzes van n, 
 - Probeer andere vooraf gedefinieerde NWChem-invoer dekken die beschikbaar zijn op `nwchem/qa/chem_library_tests` ,
-- Probeer een reeks vooraf gedefinieerde Broombridge YAML-benchmarks die zijn gegenereerd op basis van NWChem en die beschikbaar zijn als onderdeel van de [micro soft/Quantum-opslag plaats](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Deze benchmarks zijn onder andere: 
+- Probeer een reeks vooraf gedefinieerde Broombridge YAML-benchmarks die zijn gegenereerd op basis van NWChem en die beschikbaar zijn als onderdeel van de [micro soft/Quantum-opslag plaats](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). Deze benchmarks zijn onder andere: 
     - kleine moleculen zoals moleculaire water stof (H2), beryllium (as), lithium hydride (LiH),
     - grotere moleculen, zoals ozon (O3), bèta-carotene, cytosine en nog veel meer. 
 - Probeer de grafische front-end [EMSL-pijlen](https://arrows.emsl.pnnl.gov/api/qsharp_chem) uit die een interface aan de Microsoft Quantum Development Kit. 
@@ -180,7 +180,7 @@ Als u aan de slag wilt met webgebaseerde front end EMSL-pijlen, navigeert u [hie
 > [!NOTE]
 > Voor het uitvoeren van EMSL-pijlen in een webbrowser moet Java script worden ingeschakeld. Raadpleeg deze [instructies](https://www.enable-javascript.com/) voor het inschakelen van Java script in uw browser. 
 
-Voer eerst een molecuul in in het query-vak met de tekst``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Voer eerst een molecuul in in het query-vak met de tekst ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 U kunt een groot aantal moleculen invoeren op basis van hun colloquial-naam, zoals "cafeïne" in plaats van "1, 3, 7-Trimethylxanthine". 
 

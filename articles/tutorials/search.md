@@ -2,19 +2,19 @@
 title: Zoek algoritme van de Grover uitvoeren in de Q# Quantum Development Kit
 description: Bouw een Q# project dat het algoritme van Grover toont, een van de canonieke Quantum algoritmen.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863108"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834802"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Zelfstudie: Zoekalgoritme van Grover implementeren in Q\#
 
@@ -58,9 +58,9 @@ Het aantal incrementele ophogingen is minder dan het aantal items in de lijst. D
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# toepassingen met Visual Studio of Visual Studio code
 
-Het uitvoerbare bestand voert de bewerking of functie met het kenmerk `@EntryPoint()` uit in een simulator of resourceschatter, afhankelijk van de projectconfiguratie en opdrachtregelopties.
+De bewerking of functie die is gemarkeerd met het `@EntryPoint()` kenmerk op een Simulator-of resource-Estimator wordt uitgevoerd, afhankelijk van de project configuratie en opdracht regel opties.
 
-Druk in Visual Studio op Ctrl + F5 om het script uit te voeren.
+Druk in Visual Studio op CTRL + F5 om het script uit te voeren.
 
 Bouw in VS Code `Program.qs` voor de eerste keer door het onderstaande in de terminal in te voeren:
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-Dit komt omdat u niet het aantal qubits hebt opgegeven dat u wilt gebruiken. Daarom zegt de terminal welke opdrachten beschikbaar zijn voor het uitvoerbare bestand. Als u 5 qubits wilt gebruiken, typt u:
+Dit komt omdat u niet het aantal qubits hebt opgegeven dat u wilde gebruiken. de terminal toont u de opdrachten die beschikbaar zijn voor het uitvoer bare programma. Als we 5 qubits willen gebruiken, moeten we het volgende typen:
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 Als u deze zelf studie hebt, raadpleegt u een aantal van de onderstaande bronnen voor meer informatie over hoe u kunt gebruiken Q# om uw eigen Quantum toepassingen te schrijven:
 
 - [Terug naar de handleiding Aan de slag met de Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
-- Probeer een meer algemeen [voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) van het zoekalgoritme van Grover
+- Probeer een meer algemeen [voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search) van het zoekalgoritme van Grover
 - [Meer informatie over het zoekalgoritme van Grover met de Quantum Katas](xref:microsoft.quantum.overview.katas)
 - Lees meer over [amplitudeversterking][amplitude-amplification], de techniek van kwantumcomputing die de basis vormt van het zoekalgoritme van Grover
 - [Concepten van kwantumcomputing](xref:microsoft.quantum.concepts.intro)

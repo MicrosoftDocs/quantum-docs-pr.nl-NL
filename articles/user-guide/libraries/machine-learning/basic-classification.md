@@ -2,19 +2,19 @@
 title: Basis classificatie met de Quantum Machine Learning-bibliotheek
 description: Meer informatie over het uitvoeren van een Quantum sequentiële classificatie die is geschreven in Q# met behulp van de quantum machine learning bibliotheek van de micro soft-QDK.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868964"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833721"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basis classificatie: gegevens classificeren met de QDK
 
@@ -32,7 +32,7 @@ In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behu
 Uw hostprogramma bestaat uit drie delen:
 
 - Laad de gegevensset en kies een set start-para meters voor uw model.
-- Voer de training uit om de para meters en bias van het model te bepalen.
+- Voer training uit om de para meters en bias van het model te bepalen.
 - Valideer het model om de nauw keurigheid te bepalen
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python met Visual Studio Code of de opdrachtregel](#tab/tabid-python)
@@ -70,7 +70,7 @@ Uw hostprogramma bestaat uit drie delen:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Druk vervolgens op F5 om het programma uit te voeren. Er worden nu nieuwe vensters weergegeven met de volgende resultaten: 
+    Druk op F5 om het programma te starten. In een nieuw venster worden de volgende resultaten weer gegeven: 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ We slaan de volgende code op in een bestand met de naam `Training.qs` .
 
 De belangrijkste functies en bewerkingen die zijn gedefinieerd in de bovenstaande code zijn:
 
-- `ClassifierStructure() : ControlledRotation[]`: in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen. Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.
-- `TrainHalfMoonModel() : (Double[], Double)`: deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren. Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie. Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.
+- `ClassifierStructure() : ControlledRotation[]` : in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen. Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.
+- `TrainHalfMoonModel() : (Double[], Double)` : deze bewerking is het belangrijkste deel van de code en definieert de training. Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen. De para meters en de bias die de classificatie bepalen, worden uitgevoerd.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren. Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie. Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.
 
 ## <a name="next-steps"></a>Volgende stappen
 

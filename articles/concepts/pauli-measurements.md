@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van Pauli-metingen: meer informatie over het werken met bewerkingen met een Pauli-meting met één en meerdere Qubit.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Pauli MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: bradben UID: micro soft. Quantum. concepten. Pauli MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Het is ook gelijk aan het Toep assen van $ HS ^ \dagger $ op de Quantum status v
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -230,7 +230,7 @@ Hoewel beide soorten metingen even waardevol zijn voor Quantum Computing, licht 
 In het geval van Quantum Computing is het vaak dat de informatie die u wilt leren, niet is opgeslagen in een enkele Qubit, maar niet lokaal is opgeslagen in alle qubits en daarom alleen door te kijken via een gemeen schappelijke meting (bijvoorbeeld $ Z \otimes z $ ).
 
 In het geval van een fout correctie willen we vaak weten welke fout is opgetreden tijdens het leren over de status die we proberen te beveiligen.
-Het [bit-Flip-code voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) toont een voor beeld van hoe u dit kunt doen met behulp van maten als $ z \otimes z \otimes \id $ en $ \id \otimes z \otimes z $ . < --TODO: Wijzig dit in een koppeling naar de voor beelden van de browser zodra het code voorbeeld bit-Flip is ingeschakeld. -->
+Het [bit-Flip-code voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) toont een voor beeld van hoe u dit kunt doen met behulp van maten als $ z \otimes z \otimes \id $ en $ \id \otimes z \otimes z $ . < --TODO: Wijzig dit in een koppeling naar de voor beelden van de browser zodra het code voorbeeld bit-Flip is ingeschakeld. -->
 
 Wille keurige Pauli Opera Tors, zoals $ X \otimes Y \otimes Z, \otimes \boldone $ kunnen ook worden gemeten.
 Al deze tensor-producten van Pauli-Opera tors hebben slechts twee eigenvalues $ \pm 1 $ en beide eigenspaces vormen een halve ruimte van de hele vector ruimte.

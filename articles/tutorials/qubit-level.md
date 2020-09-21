@@ -2,19 +2,19 @@
 title: Program ma's op Qubit-niveau schrijven en simuleren in Q#
 description: Stapsgewijze zelf studie voor het schrijven en simuleren van een Quantum programma dat op het individuele Qubit niveau werkt
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863335"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834955"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Zelf studie: Program ma's op Qubit schrijven en simuleren in Q\#
 
@@ -116,7 +116,7 @@ Met `using` worden automatisch de qubits toegewezen in de status $ \ket {0} $. W
 Daarna passen we de Gates toe die de bewerking zelf vormen.
 Q# bevat al veel eenvoudige Quantum poorten als bewerkingen in de [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) naam ruimte, en dit is geen uitzonde ring. 
 
-Binnen een Q# bewerking worden de instructies die callables aanroepen, in sequentiële volg orde uitgevoerd.
+Binnen een Q# bewerking worden de instructies die callables aanroepen, uiteraard in sequentiële volg orde uitgevoerd.
 Daarom is de eerste poort die moet worden toegepast, de [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) voor de eerste Qubit:
 
 <br/>
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Het Q# bestand en de bewerking zijn voltooid, maar ons Quantum programma kan worden aangeroepen en gesimuleerd.
 
-## <a name="execute-the-program"></a>Het programma uitvoeren
+## <a name="run-the-program"></a>Het programma uitvoeren
 
 Q#Als u de bewerking in een `.qs` bestand hebt gedefinieerd, moet u deze bewerking nu aanroepen en de geretourneerde klassieke gegevens bekijken.
 Er wordt nu niets geretourneerd (intrekken dat de hierboven gedefinieerde bewerking is geretourneerd `Unit` ), maar wanneer we de bewerking later wijzigen Q# om een matrix met meet resultaten te retour neren ( `Result[]` ), zullen we dit aanpakken.
@@ -269,7 +269,7 @@ Als u het programma wilt uitvoeren, opent u de terminal in de map van het projec
 dotnet run
 ```
 
-Na de uitvoering ziet u de `Message` onderstaande en `DumpMachine` afgedrukte uitvoer in uw-console.
+Na voltooiing ziet u de `Message` `DumpMachine` onderstaande en afgedrukte uitvoer in uw-console.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ De C#-host heeft vier onderdelen:
     Er zijn geen in dit voor beeld.
 3. Voer het kwantumalgoritme uit. 
     Elke Q# bewerking genereert een C#-klasse met dezelfde naam. 
-    Deze klasse heeft een methode `Run` die de bewerking **asynchroon** uitvoert.
-    De uitvoering is asynchroon, omdat de uitvoering op feitelijke hardware asynchroon is. 
+    Deze klasse heeft een `Run` methode waarmee de bewerking **asynchroon**wordt uitgevoerd.
+    De uitvoering is asynchroon, omdat het uitvoeren van de hardware asynchroon is. 
     Omdat de `Run` methode asynchroon is, wordt de `Wait()` methode aangeroepen. Hiermee wordt de uitvoering geblokkeerd totdat de taak is voltooid en het resultaat synchroon wordt geretourneerd. 
 4. Het geretourneerde resultaat van de bewerking verwerken.
     Voor nu retourneert de bewerking niets.
@@ -499,7 +499,7 @@ De uiteindelijke bewerkings code moet er als volgt uitzien:
 }
 ```
 
-Als u vanaf de opdracht prompt werkt, wordt de geretourneerde matrix gewoon direct naar de console afgedrukt aan het einde van de uitvoering.
+Als u vanaf de opdracht prompt werkt, wordt de geretourneerde matrix gewoon direct op de console weer gegeven aan het einde van de uitvoering.
 Werk anders uw host-programma bij om de geretourneerde matrix te verwerken.
 
 #### <a name="command-prompt"></a>[Opdracht prompt](#tab/tabid-cmdline)

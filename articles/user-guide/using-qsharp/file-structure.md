@@ -1,22 +1,22 @@
 ---
-title: Q#Bestands structuur
+title: Q# Bestands structuur
 description: Hierin worden de structuur en syntaxis van een Q# bestand beschreven.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867927"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833318"
 ---
-# <a name="no-locq-file-structure"></a>Q#Bestands structuur
+# <a name="no-locq-file-structure"></a>Q# Bestands structuur
 
 Een Q# bestand bestaat uit een reeks *naam ruimte declaraties*.
 Elke naam ruimte declaratie bevat declaraties voor door de gebruiker gedefinieerde typen, bewerkingen en functies en kan een wille keurig aantal van elk type declaratie en een wille keurige volg orde bevatten.
@@ -76,7 +76,7 @@ Een voor beeld van een bewerking `Op` met de naam van de `X.Y` naam ruimte:
 Het is doorgaans beter om een naam ruimte op te neemen met behulp van een `open` instructie.
 Het gebruik van een volledig gekwalificeerde naam is vereist als twee naam ruimten constructies met dezelfde naam definiëren. voor de huidige bron worden constructies van beide gebruikt.
 
-Q#volgt dezelfde regels als voor naam als andere .NET-talen.
+Q# volgt dezelfde regels als voor naam als andere .NET-talen.
 Biedt echter Q# geen ondersteuning voor relatieve verwijzingen naar naam ruimten.
 Als de naam ruimte bijvoorbeeld `a.b` is geopend, wordt een verwijzing naar een bewerking met de naam `c.d` *niet* omgezet naar een bewerking met een volledige naam `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Vermijd het plaatsen van meerdere instructies op één regel.
 
 ## <a name="statement-blocks"></a>Instructie blokken
 
-Q#instructies worden gegroepeerd in instructie blokken, die zijn opgenomen in accolades `{ }` . Een instructie blok begint met het openen `{` en eindigen met een afsluiting `}` .
+Q# instructies worden gegroepeerd in instructie blokken, die zijn opgenomen in accolades `{ }` . Een instructie blok begint met het openen `{` en eindigen met een afsluiting `}` .
 
 Een overzichts blok dat is inge sloten in een ander blok, wordt beschouwd als een subblok van het container blok; contains-en sub-blokken worden ook outer-en Inner-blokken genoemd.
 

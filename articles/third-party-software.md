@@ -4,18 +4,18 @@ description: Kennisgevingen en informatie over software van derden Microsoft Qua
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Voeg geen sleutelwoorden toe en bewerk ze niet zonder overleg met uw SEO-expert.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869746"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834122"
 ---
 # <a name="third-party-software-notices-and-information"></a>KENNISGEVINGEN EN INFORMATIE OVER SOFTWARE VAN DERDEN
 
@@ -268,7 +268,7 @@ DE SOFTWARE WORDT VERSTREKT "IN DE STAAT", ZONDER ENIGE GARANTIE VAN WELKE AARD 
 
 Tenzij anders vermeld, wordt de FParsec-bibliotheek in de bron-en binaire vorm gedistribueerd onder de vereenvoudigde BSD-licentie. De vereenvoudigde BSD-licentie (ook "2 ‐-component BSD-licentie") is een eenvoudige, strikte licentie die voldoet aan OSI ‐. 
 
-FParsec bevat gegevens die zijn afgeleid van de Unicode-teken database v. 8.0.0, copyright (c) 1991 \ u20122015 Unicode, Inc., dat wordt gedistribueerd onder de volgende voor waarden:http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec bevat gegevens die zijn afgeleid van de Unicode-teken database v. 8.0.0, copyright (c) 1991 \ u20122015 Unicode, Inc., dat wordt gedistribueerd onder de volgende voor waarden: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 De documentatie in de map doc wordt in licentie gegeven onder de Creative Commons-toewijzing ‐ NietCommercieel 3,0 niet-getransporteerde licentie. Deze Creative Commons-licentie staat niet toe dat u de documentatie voor commerciële doel einden zonder toestemming gebruikt. Dit betekent bijvoorbeeld dat u de documentatie niet in de boek vorm kunt verkopen voor winst of dat u deze in een webinhouds Farm plaatst om geld te verdienen met advertenties. U kunt natuurlijk echter gebruikmaken van de documentatie in een commerciële context (bijvoorbeeld op het intranet van een commerciële onderneming), zolang u niet rechtstreeks geld wilt verdienen uit de tekst van de documentatie. 
 
@@ -284,6 +284,6 @@ Deze software wordt verstrekt door de copyright houders "zoals is" en alle uitdr
 
 2,2 Creative Commons-toewijzing ‐ NietCommercieel 3,0 niet-getransporteerde licentie
 
-Overzichthttps://creativecommons.org/licenses/by-nc/3.0/
+Overzicht https://creativecommons.org/licenses/by-nc/3.0/
 
-De volledige tekst van de licentie:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+De volledige tekst van de licentie: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869202"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759729"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Schattingen van energieniveaus maken
-Het schatten van de waarden van energie niveaus is een van de belangrijkste toepassingen van quantum chemie. In dit artikel wordt beschreven hoe u dit kunt doen voor het canonieke voor beeld van moleculaire water stof. Het voor beeld waarnaar in deze sectie wordt verwezen, bevindt zich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) in de opslag plaats voor schei steek proeven. Een meer visueel voor beeld van het uitzetten van de uitvoer is de [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demo.
+Het schatten van de waarden van energie niveaus is een van de belangrijkste toepassingen van quantum chemie. In dit artikel wordt beschreven hoe u dit kunt doen voor het canonieke voor beeld van moleculaire water stof. Het voor beeld waarnaar in deze sectie wordt verwezen, bevindt zich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) in de opslag plaats voor schei steek proeven. Een meer visueel voor beeld van het uitzetten van de uitvoer is de [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demo.
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>Schatting van de energie waarden van moleculaire water stof
 
@@ -65,7 +65,7 @@ Voor het simuleren van de Hamiltonian moet u de fermion-Opera tors converteren n
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Geef vervolgens door `qSharpData` dat de Hamiltonian wordt aangeduid met de `TrotterStepOracle` functie. `TrotterStepOracle`retourneert een Quantum bewerking die de realtime-evolutie van de Hamiltonian benadert. Zie [Hamiltonian Dynamics simuleren](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)voor meer informatie.
+Geef vervolgens door `qSharpData` dat de Hamiltonian wordt aangeduid met de `TrotterStepOracle` functie. `TrotterStepOracle` retourneert een Quantum bewerking die de realtime-evolutie van de Hamiltonian benadert. Zie [Hamiltonian Dynamics simuleren](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)voor meer informatie.
 
 ```qsharp
 // qSharpData passed from driver
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 De bewerking retourneert twee para meters: 
 
-- `energyEst`is de schatting van de grond energie en moet dicht bij het `-1.137` gemiddelde liggen. 
-- `phaseEst`is de onbewerkte fase die wordt geretourneerd door de fase schattings algoritme. Dit is handig voor het oplossen van aliassen wanneer deze zich voordoen als gevolg van een `trotterStep` te grote waarde.
+- `energyEst` is de schatting van de grond energie en moet dicht bij het `-1.137` gemiddelde liggen. 
+- `phaseEst` is de onbewerkte fase die wordt geretourneerd door de fase schattings algoritme. Dit is handig voor het oplossen van aliassen wanneer deze zich voordoen als gevolg van een `trotterStep` te grote waarde.

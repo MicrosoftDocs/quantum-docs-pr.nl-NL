@@ -1,6 +1,6 @@
 ---
 Titel: vectoren en matrices in Quantum Computing Description: Leer de basis beginselen van het werken met vectoren en matrices.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 De norm van een vector $ v $ is gedefinieerd als $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ . Een vector is bedoeld als eenheids norm (of ook wel een [*eenheids vector*](https://en.wikipedia.org/wiki/Unit_vector)genoemd) als de norm $ 1 is $ . De [*adjoint van een vector*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ v $ wordt aangegeven $ als v ^ \dagger $ en is gedefinieerd als de volgende rij Vector $ \* $ , waarbij de complex geconjugeerde is aangegeven,
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { en}~
-verticale=\begin{bmatrix}
+verticale =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} en ~ \mathrm { vervolgens}~
-au + BV=\begin{bmatrix}
+au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Een [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) met een grootte van $ m \times n $ is een verzameling van $ MN $ complexe getallen die zijn gerangschikt in $ m $ rijen en $ n $ kolommen, zoals hieronder wordt weer gegeven:
 
-$$M= 
+$$M = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1N}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -183,7 +183,7 @@ Een matrix $ M $ wordt [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_mat
 Ten slotte is het [*tensor-product*](https://en.wikipedia.org/wiki/Tensor_product) (of het Kronecker-product) van twee matrices met $ $ een grootte van $ m \times n $ en $ n $ van grootte $ p \times q $ een grotere matrix $ p = M \otimes n $ van grootte $ MP \times NQ $ , en wordt $ als volgt opgehaald van M $ en $ n $ :
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1N }\\\\
         \ddots\\\\
@@ -211,7 +211,7 @@ $$
     \begin{bmatrix}
         a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        een \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+        een \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
         \\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =\begin{bmatrix}a a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
@@ -221,26 +221,26 @@ en
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     één\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     !\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ af \ BF\\\\
-    AG \ ah \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AE \ af \ BF \\\\
+    AG \ ah \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ CH \ DG \ DH \end{bmatrix} .
 $$
 

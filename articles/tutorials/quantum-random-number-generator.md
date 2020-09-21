@@ -2,19 +2,19 @@
 title: Een kwantumgenerator voor willekeurige getallen maken
 description: Bouw een Q# project waarin de fundamentele Quantum concepten zoals de superpositie worden gedemonstreerd door een generator voor wille keurige getallen te maken.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863630"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834037"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Zelfstudie: Een kwantumgenerator voor willekeurige getallen implementeren in Q\#
 
@@ -33,7 +33,7 @@ Een eenvoudig voor beeld van een genoteerd Quantum algoritme Q# is een Quantum r
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Zoals vermeld in het artikel [Inzicht in kwantumcomputing](xref:microsoft.quantum.overview.understanding) is een qubit een eenheid van kwantuminformatie die in superpositie kan zijn. Bij meting kan een qubit alleen 0 of 1 zijn. Tijdens de uitvoering vertegenwoordigt de toestand van de qubit echter de kans dat een meting een 0 of een 1 oplevert. Deze waarschijnlijkheidstoestand staat bekend als superpositie. We kunnen deze waarschijnlijkheid gebruiken voor het genereren van willekeurige getallen.
+Zoals vermeld in het artikel [Inzicht in kwantumcomputing](xref:microsoft.quantum.overview.understanding) is een qubit een eenheid van kwantuminformatie die in superpositie kan zijn. Bij meting kan een qubit alleen 0 of 1 zijn. Als er echter een bewerking wordt uitgevoerd, vertegenwoordigt de status van de Qubit de kans op het lezen van een 0 of een 1 met een meting. Deze waarschijnlijkheidstoestand staat bekend als superpositie. We kunnen deze waarschijnlijkheid gebruiken voor het genereren van willekeurige getallen.
 
 In onze Q# bewerking introduceren we het `Qubit` Data type, systeem eigen naar Q# . We kunnen een `Qubit` alleen toewijzen met een `using`-instructie. Wanneer een qubit wordt toegewezen, bevindt deze zich altijd in de toestand `Zero`. 
 
@@ -74,11 +74,11 @@ Als u de volledige Q# toepassing wilt maken, voegt u het volgende toegangs punt 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-Het uitvoerbare bestand voert de bewerking of functie met het kenmerk `@EntryPoint()` uit in een simulator of resourceschatter, afhankelijk van de projectconfiguratie en opdrachtregelopties.
+De bewerking of functie die is gemarkeerd met het `@EntryPoint()` kenmerk op een Simulator-of resource-Estimator wordt uitgevoerd, afhankelijk van de project configuratie en opdracht regel opties.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-Druk in Visual Studio op Ctrl + F5 om het script uit te voeren.
+Druk in Visual Studio op CTRL + F5 om het script uit te voeren.
 
 Bouw in VS Code Program.qs voor de eerste keer door het onderstaande in de terminal in te voeren:
 

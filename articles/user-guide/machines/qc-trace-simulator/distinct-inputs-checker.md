@@ -2,19 +2,19 @@
 title: Afzonderlijke invoer controle-Quantum Development Kit
 description: Meer informatie over de micro soft QDK DISTINCT inputs-controle, die gebruikmaakt van de Quantum Trace Simulator om uw code te controleren Q# op mogelijke conflicten met gedeelde qubits.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868267"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833461"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum Trace Simulator: DISTINCT-invoer controleprogramma
 

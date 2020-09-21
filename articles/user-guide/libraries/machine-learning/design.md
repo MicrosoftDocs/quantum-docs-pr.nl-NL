@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868934"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759218"
 ---
 # <a name="design-your-own-classifier"></a>Uw eigen classificatie ontwerpen
 
@@ -30,7 +30,7 @@ Net als bij klassiek diep leren is er geen algemene regel voor het kiezen van ee
 
 Voor het bouwen van een classificatie gaan we parametrized beheerde rotaties in ons circuit model samen voegen. Hiervoor kunnen we het type gebruiken dat is [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) gedefinieerd in de Quantum machine learning-bibliotheek. Dit type accepteert vier argumenten die bepalen: de index van de doel-Qubit, de matrix van de indexen van het besturings element qubits, de rotatieas en de index van de bijbehorende para meter in de matrix met para meters waarmee het model wordt gedefinieerd.
 
-Laten we een voor beeld zien van een classificatie. In het voor [beeld van halve maan](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)kunnen we de volgende classificatie vinden die in het bestand is gedefinieerd `Training.qs` .
+Laten we een voor beeld zien van een classificatie. In het voor [beeld van halve maan](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)kunnen we de volgende classificatie vinden die in het bestand is gedefinieerd `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

@@ -2,19 +2,19 @@
 title: Intrinsieke bewerkingen en functies in de QDK
 description: Meer informatie over de intrinsieke bewerkingen en functies in de QDK, waaronder klassieke functies en unitary, rotatie-en meet bewerkingen.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863724"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833550"
 ---
 # <a name="the-prelude"></a>De prelude #
 
@@ -240,7 +240,7 @@ Op die manier kan een individuele doel computer deze invloed op de prestaties be
 
 ### <a name="math"></a>Berekeningen ###
 
-De <xref:microsoft.quantum.math> naam ruimte biedt veel nuttige functies van de [ `System.Math` klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)van de .net-basis klasse-bibliotheek.
+De <xref:microsoft.quantum.math> naam ruimte biedt veel nuttige functies van de [ `System.Math` klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)van de .net-basis klasse-bibliotheek.
 Deze functies kunnen op dezelfde manier worden gebruikt als andere Q# functies:
 
 ```qsharp

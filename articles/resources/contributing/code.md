@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866906"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834887"
 ---
 # <a name="contributing-code"></a>Code bijdragen
 
@@ -34,7 +34,7 @@ Het is dus handig wanneer de functionaliteit die door een bijdrage wordt toegevo
 De Q# functies, bewerkingen en door de gebruiker gedefinieerde typen die bibliotheken vormen zoals de Canon, worden automatisch getest als onderdeel van de ontwikkeling van de [**micro soft/QuantumLibraries-**](https://github.com/Microsoft/QuantumLibraries/) opslag plaats.
 Wanneer er een nieuwe pull-aanvraag wordt geopend, bijvoorbeeld de configuratie van [Azure-pijp lijnen](https://azure.microsoft.com/services/devops/pipelines/) , wordt gecontroleerd of de wijzigingen in de pull-aanvraag geen invloed hebben op de bestaande functionaliteit waarvan de Quantum-programmeer Community afhankelijk is.
 
-Met de nieuwste Q# versie wordt eenheids test gedefinieerd met behulp van het- `@Test("QuantumSimulator")` kenmerk. Het argument kan "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" of een volledig gekwalificeerde naam zijn die het uitvoerings doel opgeeft. Verschillende kenmerken die verschillende uitvoerings doelen definiëren, kunnen worden gekoppeld aan dezelfde aanroepable. Sommige van onze tests maken nog steeds gebruik van het afgeschafte [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -pakket dat alle Q# functies en bewerkingen bevat die eindigen op `Test` het [xUnit](https://xunit.github.io/) -Framework. Dit pakket is niet meer nodig om de eenheids tests te definiëren. 
+Met de nieuwste Q# versie worden eenheids tests gedefinieerd met behulp van het- `@Test("QuantumSimulator")` kenmerk. Het argument kan ' QuantumSimulator ', ' ToffoliSimulator ', ' TraceSimulator ' zijn of een volledig gekwalificeerde naam die het doel van de uitvoering aangeeft. Verschillende kenmerken die verschillende uitvoerings doelen definiëren, kunnen worden gekoppeld aan dezelfde aanroepable. Sommige van onze tests maken nog steeds gebruik van het afgeschafte [micro soft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -pakket dat alle Q# functies en bewerkingen bevat die eindigen op `Test` het [xUnit](https://xunit.github.io/) -Framework. Dit pakket is niet meer nodig om de eenheids tests te definiëren. 
 
 De volgende functie wordt gebruikt om ervoor te zorgen dat de <xref:microsoft.quantum.canon.fst> en- <xref:microsoft.quantum.canon.snd> functies de juiste uitvoer in een representatief voor beeld retour neren.
 Als de uitvoer van `Fst` of `Snd` onjuist is, `fail` wordt de instructie gebruikt om te zorgen dat de test mislukt.

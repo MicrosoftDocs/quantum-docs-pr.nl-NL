@@ -9,16 +9,16 @@ uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869338"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759796"
 ---
 # <a name="chemistry-library-installation"></a>Schei-bibliotheek installatie
 
-Het [ **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) -voor beeld maakt gebruik van moleculaire invoer gegevens die hand matig worden geconfigureerd.
+Het [ **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) -voor beeld maakt gebruik van moleculaire invoer gegevens die hand matig worden geconfigureerd.
 Hoewel dit goed is voor kleine voor beelden, vereist Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden termen.
 Dergelijke Hamiltonians, die worden gegenereerd door schaal bare reken kunde-pakketten, zijn te groot om met de hand te worden geïmporteerd.
 
@@ -33,7 +33,7 @@ In deze sectie wordt beschreven hoe u de Quantum Development Kit kunt gebruiken 
 
 Gebruik een van de volgende methoden om aan de slag te gaan met NWChem in combi natie met de Quantum Development Kit:
 
-- Ga aan de slag met bestaande Broombridge-bestanden die zijn meegeleverd met de voor beelden op [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
+- Ga aan de slag met bestaande Broombridge-bestanden die zijn meegeleverd met de voor beelden op [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML).
 - Gebruik de [opbouw functie voor EMSL-pijlen voor de Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) die een web-front-end is voor NWChem, voor het genereren van nieuwe Broombridge-geformatteerde moleculaire invoer bestanden.  
 - Gebruik de [docker-installatie kopie](https://hub.docker.com/r/nwchemorg/nwchem-qc/) van PNNL om NWChem uit te voeren, of
 - [Compileer NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) voor uw platform.
@@ -42,9 +42,9 @@ Zie [end-to-end met NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) 
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Aan de slag met Broombridge-bestanden die worden meegeleverd met de voor beelden
 
-De map [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) in de Quantum Development Kit samples-opslag bevat Broombridge-indeling gelabelde gegevens bestanden.  
+De map [IntegralData/yaml](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML) in de Quantum Development Kit samples-opslag bevat Broombridge-indeling gelabelde gegevens bestanden.  
 
-Gebruik bijvoorbeeld het voor beeld van chemie Library, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) om de Hamiltonian te laden vanuit een van Broombridge-bestanden en poort schattingen van Quantum simulatie algorigthms uit te voeren:
+Gebruik bijvoorbeeld het voor beeld van chemie Library, [GetGateCount](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/GetGateCount) om de Hamiltonian te laden vanuit een van Broombridge-bestanden en poort schattingen van Quantum simulatie algorigthms uit te voeren:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -124,7 +124,7 @@ Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
 
-## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>De Quantum Development Kit gebruiken met`qdk-chem`
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>De Quantum Development Kit gebruiken met `qdk-chem`
 
 Als u wilt installeren `qdk-chem` , kunt u het .net core SDK gebruiken op de opdracht regel:
 

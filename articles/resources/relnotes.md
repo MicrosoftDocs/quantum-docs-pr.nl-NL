@@ -2,19 +2,19 @@
 title: Opmerkingen bij de release van de Quantum Development Kit
 description: Meer informatie over de meest recente updates voor de preview-versie van de Microsoft Quantum Development Kit.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992255"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834139"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -48,7 +48,7 @@ Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.c
 
 Deze release omvat het volgende:
 
-- Open bare naam ruimten in Q# notitie blokken zijn nu beschikbaar voor alle toekomstige uitvoeringen van cellen. Zo kunt u bijvoorbeeld een naam ruimte openen in een cel boven aan het notitie blok, in plaats van dat u relevante naam ruimten in elke code-cel hoeft te openen. Met een nieuwe `%lsopen` Magic-opdracht wordt de lijst met momenteel geopende naam ruimten weer gegeven.
+- Open bare naam ruimten in Q# notitie blokken zijn nu beschikbaar voor alle toekomstige berekeningen van de cellen. Zo kunt u bijvoorbeeld een naam ruimte openen in een cel boven aan het notitie blok, in plaats van dat u relevante naam ruimten in elke code-cel hoeft te openen. Met een nieuwe `%lsopen` Magic-opdracht wordt de lijst met momenteel geopende naam ruimten weer gegeven.
 
 Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
@@ -132,7 +132,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Nieuwe kwantumbibliotheek voor Machine Learning; bezoek voor meer informatie onze pagina met [QML-documentatie](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)
+- Nieuwe kwantumbibliotheek voor Machine Learning; bezoek voor meer informatie onze pagina met [QML-documentatie](xref:microsoft.quantum.machine-learning.concepts.intro)
 - Ik Q# Fout oplossingen, wat leidt tot een toename van 10 20x bij het laden van NuGet-pakketten
 
 Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -144,7 +144,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 Deze release omvat het volgende:
 
 - Nieuw NuGet-pakket Microsoft.Quantum.SDK, dat het NuGet-pakket Microsoft.Quantum.Development.Kit vervangt bij het maken van nieuwe projecten. Het NuGet-pakket Microsoft.Quantum.Development.Kit wordt nog steeds ondersteund voor bestaande projecten. 
-- Ondersteuning voor Q# compiler uitbreidingen, ingeschakeld door de nieuwe micro soft. Quantum. SDK NuGet uitgebracht, voor meer informatie raadpleegt u de [documentatie over github](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), het voor beeld van de [compiler extensies](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) en het [ Q# dev-blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
+- Ondersteuning voor Q# compiler uitbreidingen, ingeschakeld door de nieuwe micro soft. Quantum. SDK NuGet uitgebracht, voor meer informatie raadpleegt u de [documentatie over github](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler), het voor beeld van de [compiler extensies](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions) en het [ Q# dev-blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
 - Ondersteuning toegevoegd voor .NET Core 3.1. Het wordt zeer aanbevolen om versie 3.1.100 geïnstalleerd te hebben, omdat bouwen met oudere .NET Core SDK-versies mogelijk problemen veroorzaakt
 - Nieuwe compilatietransformaties beschikbaar onder Microsoft.Quantum.QsCompiler.Experimental
 - Nieuwe functionaliteit voor het beschikbaar maken van uitvoer status vectoren als HTML in IQ#
@@ -182,7 +182,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Updates voor Visual Studio Code en Visual Studio-extensies die het mogelijk maken de taalserver als zelfstandig uitvoerbaar bestand te implementeren, waardoor de versieafhankelijkheid van de .NET Core SDK wordt geëlimineerd  
+- Updates voor Visual Studio code & Visual Studio-extensies voor het implementeren van taal server als een zelfstandig uitvoerbaar bestand, waardoor de afhankelijkheid van de .NET Core SDK-versie wordt geëlimineerd  
 - Migratie naar .NET Core 3.0
 - Wijziging aan Microsoft.Quantum.Simulation.Core.IOperationFactory die fouten veroorzaakt met de introductie van een nieuwe `Fail`-methode. Dit heeft alleen betrekking op aangepaste simulatoren die SimulatorBase niet uitbreiden. [Bekijk de pull-aanvraag op GitHub](https://github.com/microsoft/qsharp-runtime/pull/59) voor meer informatie.
 - Nieuwe ondersteuning voor afgeschafte kenmerken
@@ -224,7 +224,7 @@ De wijzigingen zijn hier samengevat, evenals de instructies om uw huidige progra
 Deze release omvat het volgende:
 
 - Nieuwe indexeerlocaties voor slicermatrices. [Raadpleeg de taalreferentie](xref:microsoft.quantum.guide.expressions#array-slices) voor meer informatie.
-- Dockerfile toegevoegd die worden gehost op de [micro soft-container Registry](https://github.com/microsoft/ContainerRegistry), zie de [ Q# opslag plaats voor meer informatie](https://github.com/microsoft/iqsharp/blob/master/README.md)
+- Dockerfile toegevoegd die worden gehost op de [micro soft-container Registry](https://github.com/microsoft/ContainerRegistry), zie de [ Q# opslag plaats voor meer informatie](https://github.com/microsoft/iqsharp/blob/main/README.md)
 - Belangrijke wijziging voor de [traceersimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): configuratie-instellingen bijgewerkt, naam veranderd. Raadpleeg de [.NET API-browser voor de bijgewerkte namen](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
 Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) en [voorbeelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
@@ -252,14 +252,14 @@ Deze release voegt een nieuwe Q# taal syntaxis toe:
 
 ### <a name="library"></a>Bibliotheek 
 
-In deze release is een numerieke bibliotheek toegevoegd: Meer informatie over hoe u [de nieuwe numerieke bibliotheek gebruikt](xref:microsoft.quantum.numerics.usage) en de [nieuwe voorbeelden probeert](https://github.com/microsoft/quantum/tree/master/Numerics).  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
+In deze release is een numerieke bibliotheek toegevoegd: Meer informatie over hoe u [de nieuwe numerieke bibliotheek gebruikt](xref:microsoft.quantum.numerics.usage) en de [nieuwe voorbeelden probeert](https://github.com/microsoft/quantum/tree/main/Numerics).  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
 In deze release is de chemiebibliotheek opnieuw geordend en uitgebreid:
 * De modulariteit van onderdelen is verbeterd en uitgebreid en de algemene code is opgeschoond.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * Ondersteuning toegevoegd voor [wavefuncties met meerdere verwijzingen](xref:microsoft.quantum.chemistry.concepts.multireference), zowel verspreide wavefuncties met meerdere verwijzingen als unitaire gekoppelde clusters.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Bedankt!) [1QBit](https://1qbit.com)-inzender ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energie-evaluatie met behulp van variatie-ansatz. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)-schema bijgewerkt naar de nieuwe [versie 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), waarbij unitaire gekoppelde clusters zijn toegevoegd. [Probleem #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Interoperabiliteit van Python toegevoegd aan functies van chemiebibliotheek. Probeer dit [voorbeeld](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Probleem #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Interoperabiliteit van Python toegevoegd aan functies van chemiebibliotheek. Probeer dit [voorbeeld](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration). [Probleem #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Versie 0.6.1905
 
@@ -349,7 +349,7 @@ Deze release omvat het volgende:
 
 - Voegt ondersteuning toe voor Jupyter Notebook. Dit biedt een uitstekende manier om meer te weten te komen over Q# .  [Bekijk nieuwe Jupyter Notebook-voorbeelden en leer hoe u uw eigen Notebooks schrijft](xref:microsoft.quantum.install). 
 
-- Aritmetische toevoeging van hele getallen toegevoegd aan de Quantum Canon-bibliotheek.  Raadpleeg ook een Jupyter Notebook die [beschrijft hoe u de nieuwe toevoegingen van hele getallen gebruikt](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
+- Aritmetische toevoeging van hele getallen toegevoegd aan de Quantum Canon-bibliotheek.  Raadpleeg ook een Jupyter Notebook die [beschrijft hoe u de nieuwe toevoegingen van hele getallen gebruikt](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb).
 
 - Foutoplossing voor DumpRegister-probleem die door de community is gerapporteerd ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -635,7 +635,7 @@ In deze release is een aantal fouten opgelost die zijn gemeld door de community.
 
 #### <a name="testing"></a>Testen
 
-- Tests moeten worden uitgevoerd in 64-bits modus. Als uw tests mislukken met BadImageFormatException, gaat u naar het menu Test en selecteert u Testinstellingen > Standaard processorarchitectuur > X64.
+- Tests moeten worden uitgevoerd in de 64-bits modus. Als uw tests mislukken met BadImageFormatException, gaat u naar het menu Test en selecteert u Testinstellingen > Standaard processorarchitectuur > X64.
 - Sommige tests duren lang (waarschijnlijk vijf minuten, afhankelijk van uw computer). Dat is normaal, aangezien sommige tests meer dan 20 qubits gebruiken. Onze grootste test wordt momenteel uitgevoerd op 23 qubits.
 
 #### <a name="samples"></a>Voorbeelden

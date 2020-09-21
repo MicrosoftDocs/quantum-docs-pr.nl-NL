@@ -1,6 +1,6 @@
 ---
 Titel: de Qubit in Quantum Computing Description: meer informatie over qubits, de basis eenheid van informatie in Quantum Computing.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Qubit MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Qubit MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ De Quantum-status vectoren $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ en $ \begi
 
 We nemen deze twee Quantum Staten in overeenstemming met de twee staten van een klassieke bit, namelijk $ 0 $ en $ 1 $ . De standaard Conventie is om te kiezen
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ \end{bmatrix} ,$$
 
 Hoewel de tegenovergestelde keuze kan gelijkelijk worden uitgevoerd. Daarom is er een oneindig aantal mogelijke Quantum status vectoren met één Qubit, maar beide komen overeen met de statussen van klassieke bits; alle andere Quantum statussen doen dit niet.
 
@@ -120,7 +120,7 @@ Qubits kan ook in 3 D worden gepictureeerd $ $ met behulp van de weer gave [*Blo
 ![Bloch-bol](~/media/concepts_bloch.png)
 
 De pijlen in dit diagram tonen de richting waarin de Quantum status vector wijst en elke trans formatie van de pijl kan worden beschouwd als een rotatie over een van de assen.
-Het is een goed idee om met behulp van deze Intuition de algoritmen te ontwerpen en te beschrijven, terwijl u overweegt een Quantum berekening uit te geven als een reeks rotaties een krachtige Intuition is. Q#Hiermee verkleint u het probleem door een taal te bieden voor het beschrijven van dergelijke draaiingen.
+Het is een goed idee om met behulp van deze Intuition de algoritmen te ontwerpen en te beschrijven, terwijl u overweegt een Quantum berekening uit te geven als een reeks rotaties een krachtige Intuition is. Q# Hiermee verkleint u het probleem door een taal te bieden voor het beschrijven van dergelijke draaiingen.
 
 ## <a name="single-qubit-operations"></a>Single-Qubit bewerkingen
 
@@ -128,7 +128,7 @@ Quantum computers verwerken gegevens door een universele set Quantum-Gates toe t
 Dit voor stel van universality is Akin naar het principe van de universele kracht voor traditionele (klassieke) computing waarbij een poortset als universeel wordt beschouwd als elke trans formatie van de invoer bits kan worden uitgevoerd met behulp van een circuit met een eindige lengte.
 In Quantum Computing zijn de geldige trans formaties die we mogen uitvoeren op een Qubit, unitary trans formaties en meting.
 De *adjoint-bewerking* of de complex geconjugeerde getransponeerde is van cruciaal belang voor Quantum Computing, omdat het nodig is om Quantum trans formaties te omkeren.
-Q#Dit weerspiegelt door methoden te bieden voor het automatisch compileren van poort reeksen aan hun adjoint, waardoor de programmeur in veel gevallen de code van de hand heeft adjoints. Hieronder ziet u een voor beeld van dit:
+Q# Dit weerspiegelt door methoden te bieden voor het automatisch compileren van poort reeksen aan hun adjoint, waardoor de programmeur in veel gevallen de code van de hand heeft adjoints. Hieronder ziet u een voor beeld van dit:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Voor universality is het vereist dat een quantum computer alleen elke unitary-ma
 Met andere woorden, een reeks poorten is een universele Gate-set als een unitary-trans formatie ongeveer als een product van poorten van deze set kan worden geschreven. Als er sprake is van een eventueel vereiste fout, bestaan er Gates $ G_ { 1 } , G_ { 2 } , \ldots, G_N $ van de poortset, zodanig dat
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Houd er rekening mee dat de Conventie voor het vermenigvuldigen van de matrix van rechts naar links de eerste poort bewerking in deze volg orde, $ G_N $ , in feite de laatste is die is toegepast op de Quantum status vector. Formeel, we zeggen dat een dergelijke Gate set universeel is als voor elke fout tolerantie $ \epsilon > 0 $ bestaat $ G_1, \ldots G_N $ zodanig is dat de afstand tussen $ G_N \ldots G_1 $ en $ U $ Maxi maal $ \epsilon $ . In het ideale geval is de waarde van $ N $ vereist om deze afstand van \epsilon te bereiken $ $ , moet poly-logarithmically met $ 1/\ Epsilon worden geschaald $ .
 

@@ -2,19 +2,19 @@
 title: Testen en foutopsporing
 description: Meer informatie over het gebruik van eenheids testen, feiten en beweringen en dump functies om Quantum-Program ma's te testen en fout opsporing uit te voeren.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867910"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833181"
 ---
 # <a name="testing-and-debugging"></a>Testen en foutopsporing
 
@@ -26,7 +26,7 @@ In deze sectie hebben we de hulp middelen die worden aangeboden Q# voor het test
 Een gemeen schappelijke aanpak voor het testen van klassieke Program ma's is het schrijven van kleine Program ma's met de naam *unit-tests*, waarmee code wordt uitgevoerd in een bibliotheek en de uitvoer ervan wordt vergeleken met een verwachte uitvoer.
 U kunt er bijvoorbeeld voor zorgen dat er `Square(2)` wordt geretourneerd, `4` omdat u *een priori* weet dat $2 ^ 2 = $4.
 
-Q#biedt ondersteuning voor het maken van eenheids tests voor Quantum-Program ma's en die als tests kunnen worden uitgevoerd binnen het test raamwerk van de [xUnit](https://xunit.github.io/) -eenheid.
+Q# biedt ondersteuning voor het maken van eenheids tests voor Quantum-Program ma's en die als tests kunnen worden uitgevoerd binnen het test raamwerk van de [xUnit](https://xunit.github.io/) -eenheid.
 
 ### <a name="creating-a-test-project"></a>Een test project maken
 
@@ -113,7 +113,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Eenheids tests kunnen worden gefilterd op basis van hun naam of het uitvoerings doel:
+Eenheids tests kunnen worden gefilterd op basis van de naam of het uitvoerings doel:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -127,7 +127,7 @@ De intrinsieke functie <xref:microsoft.quantum.intrinsic.message> heeft type `(S
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Nadat u een test in test Explorer hebt uitgevoerd en op de test hebt geklikt, wordt een deel venster weer gegeven met informatie over het uitvoeren van de test: status van geslaagd/mislukt, verstreken tijd en een koppeling naar de uitvoer. Klik op **uitvoer** om de test uitvoer in een nieuw venster te openen.
+Nadat u een test in test Explorer hebt uitgevoerd en op de test hebt geklikt, wordt een deel venster weer gegeven met informatie over de test uitvoering: status van geslaagd/mislukt, verstreken tijd en een koppeling naar de uitvoer. Klik op **uitvoer** om de test uitvoer in een nieuw venster te openen.
 
 ![test uitvoer](~/media/unit-test-output.png)
 
@@ -314,7 +314,7 @@ In de volgende voor beelden ziet u `DumpMachine` een aantal algemene statussen:
 
 ***
 
-Aangezien <xref:microsoft.quantum.diagnostics.dumpmachine> u een deel van de <xref:microsoft.quantum.diagnostics> naam ruimte hebt, moet u een `open` instructie toevoegen om deze te openen:
+Aangezien <xref:microsoft.quantum.diagnostics.dumpmachine> u een deel van de  <xref:microsoft.quantum.diagnostics> naam ruimte hebt, moet u een `open` instructie toevoegen om deze te openen:
 
 ```qsharp
 namespace Samples {
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>werkt als <xref:microsoft.quantum.diagnostics.dumpmachine> , behalve dat er ook een matrix met qubits wordt gebruikt om de hoeveelheid gegevens te beperken tot alleen die relevant voor de bijbehorende qubits.
+<xref:microsoft.quantum.diagnostics.dumpregister> werkt als <xref:microsoft.quantum.diagnostics.dumpmachine> , behalve dat er ook een matrix met qubits wordt gebruikt om de hoeveelheid gegevens te beperken tot alleen die relevant voor de bijbehorende qubits.
 
 Net als bij is <xref:microsoft.quantum.diagnostics.dumpmachine> de informatie die door wordt gegenereerd, <xref:microsoft.quantum.diagnostics.dumpregister> afhankelijk van de doel computer. Voor de volle Quantum Simulator schrijft het naar het bestand met de functie Wave tot een globale fase van het Quantum subsysteem dat wordt gegenereerd door de geleverde qubits in dezelfde indeling als <xref:microsoft.quantum.diagnostics.dumpmachine> .  Bijvoorbeeld: Voer een machine opnieuw uit met slechts twee qubits toegewezen en in de Quantum status $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ Pi/4} ((\frac {1} {\sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ aanroepen <xref:microsoft.quantum.diagnostics.dumpregister> voor `qubit[0]` genereert deze uitvoer:
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Foutopsporing
 
-Onder `Assert` en `Dump` functions en Operations Q# ondersteunt een subset van de standaard functies voor het opsporen van fouten in Visual Studio: het [instellen van regel onderbrekingen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), het [door lopen van code met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)en het [controleren van waarden van klassieke variabelen](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) is allemaal mogelijk tijdens het uitvoeren van code in de Simulator.
+Onder `Assert` en `Dump` functions en Operations Q# ondersteunt een subset van de standaard functies voor het opsporen van fouten in Visual Studio: het [instellen van regel onderbrekingen](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), het [door lopen van code met behulp van F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)en het [inspecteren van de waarden van klassieke variabelen](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) zijn allemaal mogelijk wanneer u uw code op de Simulator uitvoert.
 
 Fout opsporing in Visual Studio code maakt gebruik van de mogelijkheden voor fout opsporing die worden geboden door de C# voor Visual Studio code-extensie die wordt ondersteund door OmniSharp en waarvoor de [nieuwste versie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)moet worden geïnstalleerd. 

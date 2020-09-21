@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867504"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759183"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Voor beelden die bijdragen aan de Quantum Development Kit
 
@@ -46,12 +46,12 @@ In de map voor elk onderwerp, bestaat elk voor beeld uit één map waarin alles 
 
 ## <a name="how-samples-are-structured"></a>Hoe steek proeven worden gestructureerd
 
-Wanneer u de bestanden waaruit elke map bestaat, bekijkt, gaan we naar het voor [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) beeld.
+Wanneer u de bestanden waaruit elke map bestaat, bekijkt, gaan we naar het voor [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) beeld.
 
 | File              | Beschrijving                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q#project dat wordt gebruikt om het voor beeld samen te stellen met de .NET Core SDK |
-| `Game.qs`         | Q#bewerkingen en functies voor het voor beeld                 |
+| `CHSHGame.csproj` | Q# project dat wordt gebruikt om het voor beeld samen te stellen met de .NET Core SDK |
+| `Game.qs`         | Q# bewerkingen en functies voor het voor beeld                 |
 | `Host.cs`         | C#-hostprogramma waarmee het voor beeld wordt uitgevoerd                     |
 | `host.py`         | Python-hostcluster dat wordt gebruikt om het voor beeld uit te voeren                 |
 | `README.md`       | Documentatie over wat het voor beeld doet en hoe u het kunt gebruiken    |

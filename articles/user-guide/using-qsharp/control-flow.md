@@ -1,38 +1,39 @@
 ---
-title: Controle stroom inQ#
+title: Controle stroom in Q#
 description: Lussen, voor waarden enzovoort.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867944"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833508"
 ---
-# <a name="control-flow-in-no-locq"></a>Controle stroom inQ#
+# <a name="control-flow-in-no-locq"></a>Controle stroom in Q#
 
 Binnen een bewerking of functie wordt elke instructie in volg orde uitgevoerd, vergelijkbaar met andere gebruikelijke, klassieke talen.
 U kunt de controle stroom echter op drie verschillende manieren wijzigen:
 
-* `if`instructies
-* `for`lussen
-* `repeat-until-success`lussen
+* `if` instructies
+* `for` lussen
+* `repeat-until-success` lussen
+* conjugations (- `apply-within` instructies)
 
-De `if` `for` constructies en de controle stroom worden door gegeven in een vertrouwde zin voor de meeste klassieke programmeer talen. [`Repeat-until-success`](#repeat-until-success-loop)lussen worden verderop in dit artikel besproken.
+De `if` `for` constructies en de controle stroom worden door gegeven in een vertrouwde zin voor de meeste klassieke programmeer talen. [`Repeat-until-success`](#repeat-until-success-loop) lussen en [conjugations](#conjugations) worden verderop in dit artikel besproken.
 
 Belang rijk: `for` lussen en `if` instructies kunnen worden gebruikt in bewerkingen waarvoor automatisch een [specialisatie](xref:microsoft.quantum.guide.operationsfunctions) wordt gegenereerd. In dat scenario keert de adjoint van een `for` lus de richting om en neemt de adjoint van elke iteratie toe.
 Met deze actie wordt het principe ' schoenen en SOCKS ' gehanteerd: als u het maken van een SOCKS-en vervolgens schoenen wilt opheffen, moet u de toevoeging op schoenen ongedaan maken en vervolgens op SOCKS ongedaan maken. 
 
 ## <a name="if-else-if-else"></a>If, else-if, else
 
-De `if` instructie ondersteunt voorwaardelijke uitvoering.
+De `if` instructie ondersteunt voorwaardelijke verwerking.
 Het bestaat uit het sleutel woord `if` , een Boole-expressie tussen haakjes en een instructie blok (de _vervolgens_ blok kering).
 U kunt eventueel elk wille keurig aantal else-if-componenten volgen, elk met het sleutel woord `elif` , een Boole-expressie tussen haakjes en een instructie blok (het _else-if-_ blok).
 Ten slotte kan de instructie eventueel eindigen met een else-component, die bestaat uit het tref woord `else` gevolgd door een ander instructie blok (het _else_ -blok).
@@ -75,7 +76,7 @@ De instructie bestaat uit het tref woord `for` , gevolgd door een symbool of sym
 
 Het instructie blok (de hoofd tekst van de lus) wordt herhaaldelijk uitgevoerd, met het gedefinieerde symbool (de variabele lus) dat is gekoppeld aan elke waarde in het bereik of de matrix.
 Houd er rekening mee dat als de expressie Range resulteert in een leeg bereik of een lege matrix, de hoofd tekst helemaal niet wordt uitgevoerd.
-De expressie is volledig geëvalueerd voordat de lus wordt ingevoerd en wordt niet gewijzigd terwijl de lus wordt uitgevoerd.
+De expressie is volledig geëvalueerd voordat de lus wordt ingevoerd en wordt niet gewijzigd terwijl de lus actief is.
 
 De lus-variabele is bij elke toegang aan de hoofd tekst van de lus gebonden en is aan het einde van de hoofd tekst losgekoppeld.
 De lus-variabele is niet gebonden nadat de for-lus is voltooid.
@@ -148,11 +149,12 @@ Zie voor meer voor beelden en Details [herhalen](#repeat-until-success-examples)
 > [!TIP]   
 > Vermijd het gebruik van herhalingen tot geslaagde lussen binnen functions. Gebruik *while* -lussen om de bijbehorende functionaliteit binnen functions te bieden. 
 
-## <a name="while-loop"></a>Lus while
+## <a name="while-loop"></a>While-lus
 
-Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, in het bijzonder de exclusieve taal in Q# . Lussen die worden onderbroken op basis van een voor waarde en waarvan de uitvoerings lengte daarom onbekend is tijdens de compilatie, worden met name behandeld in een Quantum runtime. Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum). 
+Herhalen-tot-succes-patronen hebben een zeer Quantum specifieke connotation. Ze worden veel gebruikt in bepaalde klassen van Quantum algoritmen, in het bijzonder de exclusieve taal in Q# . Als er echter lussen zijn op basis van een voor waarde en de Run-length dus onbekend is tijdens de compilatie, worden deze behandeld met een speciale Care in een Quantum runtime. Hun gebruik in functions is echter ongevoelig omdat deze lussen alleen code bevatten die wordt uitgevoerd op conventionele hardware (niet-Quantum). 
 
-Q#Daarom biedt ondersteuning voor het gebruik van while-lussen in-functies. Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.
+Q#Daarom biedt ondersteuning voor het gebruik van while-lussen in-functies.
+Een `while` instructie bestaat uit het tref woord `while` , een Boole-expressie tussen haakjes en een instructie blok.
 Het instructie blok (de hoofd tekst van de lus) wordt uitgevoerd zolang de voor waarde wordt geëvalueerd `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Conjugations
+
+In tegens telling tot klassieke bits is het vrijgeven van Quantum geheugen iets resterend omdat het blind opnieuw instellen van qubits mogelijk ongewenste gevolgen heeft voor de resterende berekening als de qubits nog steeds Entangled zijn. Deze effecten kunnen worden vermeden door de uitgevoerde berekeningen op de juiste manier uit te voeren voordat het geheugen wordt vrijgegeven. Een gemeen schappelijk patroon in de Quantum Computing is daarom het volgende: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# ondersteunt een conjugation-instructie waarmee de voor gaande trans formatie wordt geïmplementeerd. Met deze instructie kan de bewerking `ApplyWith` op de volgende manier worden geïmplementeerd:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Een dergelijke conjugation-instructie wordt nuttig als de buiten-en binnenste trans formaties niet direct beschikbaar zijn als bewerkingen, maar in plaats daarvan handiger zijn om te beschrijven door een blok bestaande uit verschillende instructies. 
+
+De inverse trans formatie voor de instructies die in het binnen-blok zijn gedefinieerd, wordt automatisch gegenereerd door de compiler en uitgevoerd nadat de Apply-Block is voltooid.
+Omdat alle onveranderlijke variabelen die als onderdeel van de binnen-blok kering worden gebruikt, niet in het apply-blok kunnen worden gebonden, is de gegenereerde trans formatie gegarandeerd de adjoint van de berekening in het binnen-blok. 
 
 ## <a name="return-statement"></a>Instructie return
 
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS zonder`fixup`
+### <a name="rus-without-fixup"></a>RUS zonder `fixup`
 
 In dit voor beeld ziet u een RUS-lus zonder de stap voor de reparatie. De code is een Probabilistic-circuit dat een belang rijke rotatie poort implementeert $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ met behulp van de- `H` en- `T` poorten.
 De lus eindigt op gemiddeld $ \frac {8} {5} $ herhalingen.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Voor meer informatie, zie voor [beeld van een eenheid testen dat is opgenomen in de standaard bibliotheek](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Volgende stappen
 

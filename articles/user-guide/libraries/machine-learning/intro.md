@@ -1,19 +1,20 @@
 ---
 title: Kwantumbibliotheek voor machine learning
+description: Meer informatie over hoe machine learning wordt gebruikt op Quantum systemen
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863104"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833795"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Inleiding tot Quantum Machine Learning
 
@@ -70,8 +71,8 @@ Een duidelijk $b $ moet in het interval $ (-0,5, + 0,5) $ liggen om betekenisvol
 
 Een trainings case $ (x, y) \in \mathcal{D} $ wordt beschouwd als een onechte *classificatie* , gezien de bias $b $ als het label dat is uitgesteld voor $x $ zoals per firewallregel1 een andere naam heeft dan $y $. Het totale aantal misclassificaties is de *trainings Score* van de classificatie, gezien de bias $b $. De *optimale* Classifier-afwijking $b $ minimaliseert de trainings Score. Het is eenvoudig te zien dat, gezien de vooraf berekende waarschijnlijke schattingen $ \{ P (M = y_2 | U (\theta) x) | (x, *) \in\mathcal{D} \} $, de optimale classificatie afwijking kan worden gevonden door binaire zoek opdracht in interval $ (-0,5, + 0,5) $ door Maxi maal $ \ log_2 te maken (| \mathcal{D} |) $ stappen.
 
-### <a name="reference"></a>Verwijzing
+### <a name="reference"></a>Naslaginformatie
 
 Deze informatie moet voldoende zijn om met de code te kunnen spelen. Als u echter meer wilt weten over dit model, leest u het oorspronkelijke voor stel: [ *' circuit-georiënteerde Quantum classificaties ', Maria schuld, Alex Bocharov, Krysta Svore en Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-Naast het code voorbeeld dat u in de volgende stappen ziet, kunt u ook beginnen met het verkennen van de Quantum classificatie in [deze zelf studie](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) . 
+Naast het code voorbeeld dat u in de volgende stappen ziet, kunt u ook beginnen met het verkennen van de Quantum classificatie in [deze zelf studie](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) . 

@@ -1,5 +1,5 @@
 ---
-title: Bewerkingen en functies inQ#
+title: Bewerkingen en functies in Q#
 description: Bewerkingen en functies definiëren en aanroepen, evenals de gecontroleerde en adjoint bewerkingen.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867876"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759421"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>Bewerkingen en functies inQ#
+# <a name="operations-and-functions-in-no-locq"></a>Bewerkingen en functies in Q#
 
 ## <a name="defining-new-operations"></a>Nieuwe bewerkingen definiëren
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 Het sleutel woord `operation` begint de bewerkings definitie, gevolgd door de naam; hier, `BitFlip` .
 Vervolgens wordt het type invoer gedefinieerd ( `Qubit` ), samen met een naam, `target` voor het verwijzen naar de invoer binnen de nieuwe bewerking.
 Hiermee wordt ten slotte `Unit` gedefinieerd dat de uitvoer van de bewerking leeg is.
-`Unit`wordt op dezelfde manier gebruikt als `void` in C# en andere dwingende talen en is gelijk aan `unit` in F # en andere functionele talen.
+`Unit` wordt op dezelfde manier gebruikt als `void` in C# en andere dwingende talen en is gelijk aan `unit` in F # en andere functionele talen.
 
 Bewerkingen kunnen ook interessante typen retour neren dan `Unit` .
 De <xref:microsoft.quantum.intrinsic.m> bewerking retourneert bijvoorbeeld een uitvoer van het type `Result` , die aangeeft dat een meting is uitgevoerd.  U kunt de bewerking door geven aan een andere bewerking of deze gebruiken met het `let` sleutel woord om een nieuwe variabele te definiëren.
 
-Deze aanpak maakt het mogelijk om klassieke berekeningen te geven die met Quantum bewerkingen op een laag niveau reageren, zoals in de [code ring van de superdichte](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)snelheid:
+Deze aanpak maakt het mogelijk om klassieke berekeningen te geven die met Quantum bewerkingen op een laag niveau reageren, zoals in de [code ring van de superdichte](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)snelheid:
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ Gebruik een functor door het toe te passen op een bewerking, waardoor een nieuwe
 `Adjoint`Als u bijvoorbeeld de functor toepast op de `Y` bewerking, wordt de nieuwe bewerking geretourneerd `Adjoint Y` . U kunt de nieuwe bewerking aanroepen, zoals elke andere bewerking.
 Voor een bewerking die de toepassing van de `Adjoint` of `Controlled` functors ondersteunt, moet het retour type daarvan nood zakelijk zijn `Unit` . 
 
-#### <a name="adjoint-functor"></a>`Adjoint`functor
+#### <a name="adjoint-functor"></a>`Adjoint` functor
 
 `Adjoint Y(q1)`Op die manier wordt de `Adjoint` functor toegepast op de `Y` bewerking om een nieuwe bewerking te genereren en wordt die nieuwe bewerking toegepast op `q1` .
 De nieuwe bewerking heeft dezelfde hand tekening en type als de basis bewerking `Y` .
 In het bijzonder ondersteunt de nieuwe bewerking ook `Adjoint` `Controlled` als en alleen als de basis bewerking is gelukt.
 De `Adjoint` functor is een eigen inverse; dat wil zeggen, `Adjoint Adjoint Op` is altijd hetzelfde als `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`functor
+#### <a name="controlled-functor"></a>`Controlled` functor
 
 Op dezelfde manier wordt `Controlled X(controls, target)` de `Controlled` functor toegepast op de `X` bewerking om een nieuwe bewerking te genereren en wordt die nieuwe bewerking toegepast op `controls` en `target` .
 
@@ -123,11 +123,11 @@ De nieuwe bewerking ondersteunt `Controlled` , en wordt alleen ondersteund als `
 
 Als de oorspronkelijke bewerking slechts één argument heeft, wordt er hier een [Singleton-tuple-equivalentie](xref:microsoft.quantum.guide.types) weer gegeven.
 Bijvoorbeeld, `Controlled X` is de beheerde versie van de `X` bewerking. 
-`X`heeft type `(Qubit => Unit is Adj + Ctl)` , dus `Controlled X` heeft type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; vanwege Singleton-tuple-equivalentie is dit hetzelfde als `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` heeft type `(Qubit => Unit is Adj + Ctl)` , dus `Controlled X` heeft type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; vanwege Singleton-tuple-equivalentie is dit hetzelfde als `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 Als de basis bewerking meerdere argumenten heeft, moet u de overeenkomstige argumenten van de gecontroleerde versie van de bewerking tussen haakjes plaatsen om ze te converteren naar een tuple.
 Bijvoorbeeld, `Controlled Rz` is de beheerde versie van de `Rz` bewerking. 
-`Rz`heeft type `((Double, Qubit) => Unit is Adj + Ctl)` , dus `Controlled Rz` heeft type `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
+`Rz` heeft type `((Double, Qubit) => Unit is Adj + Ctl)` , dus `Controlled Rz` heeft type `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Dit is dus `Controlled Rz(controls, (0.1, target))` een geldige aanroep van `Controlled Rz` (Let op de haakjes rond `0.1, target` ).
 
 Een ander voor beeld `CNOT(control, target)` kan worden geïmplementeerd als `Controlled X([control], target)` . Als een doel moet worden beheerd door twee Control qubits (CCNOT), gebruikt u een- `Controlled X([control1, control2], target)` instructie.
@@ -192,7 +192,7 @@ Hieronder vindt u het volledige aanbod van mogelijkheden, met enkele voor beelde
 
 #### <a name="explicit-specialization-declarations"></a>Expliciete specialisatie declaraties
 
-Q#bewerkingen kunnen de volgende expliciete specialisatie declaraties bevatten:
+Q# bewerkingen kunnen de volgende expliciete specialisatie declaraties bevatten:
 
 - De `body` specialisatie specificeert de implementatie van de bewerking waarvoor geen functors is toegepast.
 - De `adjoint` specialisatie specificeert de implementatie van de bewerking waarop de `Adjoint` functor is toegepast.
@@ -329,9 +329,9 @@ Voor een bewerking waarvan de hoofd tekst aanroepen naar andere bewerkingen beva
 
 Gebruik een bewerking met aanvullende functors die overal worden ondersteund. u gebruikt een bewerking met minder functors maar dezelfde hand tekening. Gebruik bijvoorbeeld een bewerking van het type `(Qubit => Unit is Adj)` overal waar u een bewerking van type gebruikt `(Qubit => Unit)` .
 
-Q#is *covariantie* ten opzichte van aanroep bare retour typen: een aanroepable die een type retourneert `'A` , is compatibel met een aanroepbaar met hetzelfde invoer type en een resultaat type dat compatibel is met `'A` .
+Q# is *covariantie* ten opzichte van aanroep bare retour typen: een aanroepable die een type retourneert `'A` , is compatibel met een aanroepbaar met hetzelfde invoer type en een resultaat type dat compatibel is met `'A` .
 
-Q#is *contra variant* ten opzichte van invoer typen: een aanroepable die een type `'A` als invoer vereist, is compatibel met een aanroepbaar met hetzelfde resultaat type en een invoer type dat compatibel is met `'A` .
+Q# is *contra variant* ten opzichte van invoer typen: een aanroepable die een type `'A` als invoer vereist, is compatibel met een aanroepbaar met hetzelfde resultaat type en een invoer type dat compatibel is met `'A` .
 
 Dat wil zeggen, op basis van de volgende definities:
 
@@ -360,7 +360,7 @@ U kunt
 - Retourneert een waarde van het type `(Qubit[] => Unit is Adj + Ctl)` van `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q#0,3 heeft een aanzienlijk verschil in het gedrag van door de gebruiker gedefinieerde typen geïntroduceerd.
+> Q# 0,3 heeft een aanzienlijk verschil in het gedrag van door de gebruiker gedefinieerde typen geïntroduceerd.
 
 Door de gebruiker gedefinieerde typen worden behandeld als een ingepakte versie van het onderliggende type, in plaats van als subtype.
 Dit betekent dat een waarde van een door de gebruiker gedefinieerd type niet kan worden gebruikt, waarbij u een waarde van het onderliggende type verwacht.
@@ -509,7 +509,7 @@ Hoewel dit kan worden beperkt door een klein aantal functies, kunt u, wanneer u 
 Veel van deze problemen kunnen er echter toe leiden dat u de compiler niet hebt gezien de informatie die nodig is om te bepalen hoe de verschillende versies van `Map` zijn gerelateerd.
 Effectief wilt dat de compiler `Map` als een soort wiskundige functie van Q# *typen* naar functions wordt behandeld Q# .
 
-Q#formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters*te hebben, evenals de normale tuple-para meters.
+Q# formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters*te hebben, evenals de normale tuple-para meters.
 In de vorige voor beelden wilt u nadenken `Map` als having-para meters `Int, Pauli` in het eerste geval en `Double, String` in het tweede geval.
 Voor het grootste deel gebruikt u deze type parameters alsof het normale typen zijn. Gebruik waarden van het type para meters om matrices en Tuples te maken, functies en bewerkingen aan te roepen en toe te wijzen aan gewone of onveranderlijke variabelen.
 
@@ -657,7 +657,7 @@ In principe is de klassieke logica binnen `SquareOperation` mogelijk veel meer b
 
 ## <a name="recursion"></a>Recursie
 
-Q#callables mogen direct of indirect recursief zijn.
+Q# callables mogen direct of indirect recursief zijn.
 Dat wil zeggen dat een bewerking of functie zichzelf kan aanroepen, of een andere aanroep kan aanroepen die direct of indirect de aanroep bare bewerking aanroept.
 
 Er zijn twee belang rijke opmerkingen over het gebruik van recursie, echter:

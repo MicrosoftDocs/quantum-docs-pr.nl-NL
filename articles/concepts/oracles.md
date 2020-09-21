@@ -1,6 +1,6 @@
 ---
 Titel: Quantum Oracle description Beschrijving: informatie over het werken met en het definiëren van Quantum Oracle, Black Box-bewerkingen die worden gebruikt als invoer voor een ander algoritme.
-Auteur: cgranade UID: micro soft. Quantum. concepten. Oracle MS. Author: Christopher.Granade@microsoft.com MS. date: 07/11/2018 MS. topic: artikel no-loc:
+Auteur: cgranade UID: micro soft. Quantum. concepten. Oracle MS. Author: chgranad MS. date: 07/11/2018 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ 
 $$
 
 ## <a name="phase-oracles"></a>Fase Oracle
-U kunt ook $ f coderen $ in een Oracle $ O $ door een _fase_ toe te passen op basis van de invoer voor $ O $ . We kunnen bijvoorbeeld $ O definiëren $ dat$$
+U kunt ook $ f coderen $ in een Oracle $ O $ door een _fase_ toe te passen op basis van de invoer voor $ O $ . We kunnen bijvoorbeeld $ O definiëren $ dat $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Als een Phase Oracle in eerste instantie op een registratie wordt uitgevoerd in een reken kundige basis status $ \ket { x } $ , is deze fase een globale fase en daarom niet waarneembaar.
 Maar zo'n Oracle kan een zeer krachtige bron zijn als deze wordt toegepast op een superpositie of als een beheerde bewerking.
 Denk bijvoorbeeld aan een Oracle O_f- $ fase $ voor een functie f met één $ Qubit $ .
-Kies$$
+Kies $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

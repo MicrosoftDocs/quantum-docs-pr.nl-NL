@@ -1,6 +1,6 @@
 ---
 Titel: Quantum circuit beschrijving: informatie over het visueel weer geven van eenvoudige en complexe Quantum bewerkingen met Quantum circuit diagrammen.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. circuits MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. circuits MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ Voor de speciale gevallen waarbij $ g = X $ en $ G = Z $ de volgende notatie heb
 <!--Kan geen manier vinden om dit eenvoudig te centreren... Er is waarschijnlijk een uitbrei ding nodig:-->
 ![Circuit diagram voor speciale gevallen van gecontroleerde poorten](~/media/6.svg)
 
-Q#biedt methoden voor het automatisch genereren van de bewaakte versie van een bewerking, waarmee de programmeur van de hand om deze bewerkingen te kunnen coderen. Hieronder ziet u een voor beeld van dit:
+Q# biedt methoden voor het automatisch genereren van de bewaakte versie van een bewerking, waarmee de programmeur van de hand om deze bewerkingen te kunnen coderen. Hieronder ziet u een voor beeld van dit:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Met name een dergelijk subcircuit ziet er als volgt uit:
 <!--Kan geen manier vinden om dit eenvoudig te centreren... Er is waarschijnlijk een uitbrei ding nodig:-->
 ![Symbool dat een meting bewerking vertegenwoordigt](~/media/7.svg)
 
-Q#Hiermee implementeert u een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
+Q# Hiermee implementeert u een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
 Zie de [sectie over metingen](xref:microsoft.quantum.libraries.standard.prelude#measurements) voor meer informatie.
 
 Op dezelfde manier wordt het subcircuit
