@@ -3,17 +3,17 @@ title: Diagnostische gegevens in de Q# standaard bibliotheken
 description: Meer informatie over de diagnostische functies en bewerkingen in de Q# standaard bibliotheken die worden gebruikt om fouten of fouten in Quantum Programma's te ondervangen.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868539"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835567"
 ---
 # <a name="diagnostics"></a>Diagnostiek #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`een hand tekening heeft `(String -> Unit)` die opnieuw aangeeft dat een logboek bestand voor fout opsporing niet in acht kan worden genomen Q# .
+> `Message` een hand tekening heeft `(String -> Unit)` die opnieuw aangeeft dat een logboek bestand voor fout opsporing niet in acht kan worden genomen Q# .
 
 De <xref:microsoft.quantum.diagnostics.dumpmachine> en <xref:microsoft.quantum.diagnostics.dumpregister> callables instrueren doel machines om diagnostische gegevens te verstrekken over alle momenteel toegewezen qubits of over een specifiek REGI ster van qubits.
 Elke doel computer is afhankelijk van de diagnostische gegevens die worden verstrekt in reactie op een dump instructie.
@@ -69,14 +69,14 @@ Op doel computers die geen bevestigingen kunnen evalueren, kunnen aanroepen naar
 Meer in het algemeen is de <xref:microsoft.quantum.diagnostics.assertmeasurement> bewerkings verklaring dat de opgegeven qubits in de gegeven Pauli gebaseerd altijd het gegeven resultaat heeft.
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
-`AssertMeasurement`heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
 Omdat `AssertMeasurement` een functie met een lege tuple als uitvoer type is, kan geen effect van het aangeroepen `AssertMeasurement` worden gezien in een Q# programma.
 
 De <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
 Tolerantie is additief (bijvoorbeeld `abs(expected-actual) < tol` ).
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
-`AssertMeasurementProbability`heeft hand tekening `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . De eerste van de `Double` para meters geeft de gewenste kans op het resultaat en de tweede tolerantie.
+`AssertMeasurementProbability` heeft hand tekening `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . De eerste van de `Double` para meters geeft de gewenste kans op het resultaat en de tweede tolerantie.
 
 We kunnen meer dan één meting uitvoeren, met behulp van de klassieke informatie die door een simulator wordt gebruikt om de interne status van een Qubit weer te geven. zo is het niet nodig om een meting uit te voeren om onze bewering te testen.
 In het bijzonder kan dit redenen hebben om *incompatibele* metingen die niet mogelijk zijn op werkelijke hardware.
@@ -149,7 +149,7 @@ Daarentegen wordt elke bewerking exact één keer aangeroepen, zodat er wordt ge
 Beide tests zijn handig om de juistheid van Quantum Program ma's te garanderen.
 
 
-## <a name="further-reading"></a>Meer informatie ##
+## <a name="further-reading"></a>Meer lezen ##
 
 - <xref:microsoft.quantum.guide.testingdebugging>
 - <xref:microsoft.quantum.diagnostics>

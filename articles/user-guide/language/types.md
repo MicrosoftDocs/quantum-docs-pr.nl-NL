@@ -1,31 +1,31 @@
 ---
-title: Typen inQ#
+title: Typen in Q#
 description: Meer informatie over de verschillende typen die in de Q# programmeer taal worden gebruikt.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869593"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835822"
 ---
-# <a name="types-in-no-locq"></a>Typen inQ#
+# <a name="types-in-no-locq"></a>Typen in Q#
 
 In dit artikel worden het Q# type model en de syntaxis voor het opgeven en werken met typen beschreven. Zie [type expressies](xref:microsoft.quantum.guide.expressions)voor meer informatie over het maken en uitvoeren van expressies van deze typen.
 
 Q#Het is een *sterk getypeerde* taal, zodat het gebruik van deze typen zorgvuldig kan helpen de compiler om sterke garanties te bieden voor Q# Program ma's tijdens het compileren.
 Om de krach tigste garanties te bieden, moeten conversies tussen typen in Q# expliciet worden aangeroepen met behulp van aanroepen naar functions die deze converteren. 
-Q#biedt diverse functies als onderdeel van de <xref:microsoft.quantum.convert> naam ruimte.
+Q# biedt diverse functies als onderdeel van de <xref:microsoft.quantum.convert> naam ruimte.
 Een upcast naar compatibele typen, anderzijds gebeurt impliciet. 
 
-Q#biedt zowel primitieve typen, die rechtstreeks worden gebruikt, als verschillende manieren om nieuwe typen van andere typen te maken.
+Q# biedt zowel primitieve typen, die rechtstreeks worden gebruikt, als verschillende manieren om nieuwe typen van andere typen te maken.
 We beschrijven elk in de rest van dit artikel.
 
 ## <a name="primitive-types"></a>Primitieve typen
@@ -34,7 +34,7 @@ De Q# taal biedt de volgende *primitieve typen*, die allemaal rechtstreeks in Pr
 
 - Het `Int` type vertegenwoordigt een 64-bits geheel getal met teken, bijvoorbeeld,, `2` `107` , `-5` .
 - Het `BigInt` type vertegenwoordigt een ondertekende integer met een wille keurige grootte, bijvoorbeeld,, `2L` `107L` `-5L` .
-   Dit type is gebaseerd op .NET<xref:System.Numerics.BigInteger>
+   Dit type is gebaseerd op .NET <xref:System.Numerics.BigInteger>
    voert.
 
 - Het `Double` type vertegenwoordigt een drijvende-komma getal met dubbele precisie, bijvoorbeeld, `0.0` , `-1.3` , `4e-7` .
@@ -53,7 +53,7 @@ De Q# taal biedt de volgende *primitieve typen*, die allemaal rechtstreeks in Pr
    Het is een opgesomd type met vier mogelijke waarden: `PauliI` , `PauliX` , `PauliY` , en `PauliZ` , constanten van het type `Pauli` .
 - Het `Result` type vertegenwoordigt het resultaat van een meting.
    Het is een opgesomd type met twee mogelijke waarden: `One` en `Zero` , die constanten van het type zijn `Result` .
-   `Zero`geeft aan dat de + 1-eigenvalue is gemeten; `One`geeft aan dat de eigenvalue-1 is gemeten.
+   `Zero` geeft aan dat de + 1-eigenvalue is gemeten; `One` geeft aan dat de eigenvalue-1 is gemeten.
 
 De constanten `true` , `false` ,,,,, `PauliI` `PauliX` `PauliY` `PauliZ` `One` en `Zero` zijn alle gereserveerde symbolen in Q# .
 
@@ -65,7 +65,7 @@ De constanten `true` , `false` ,,,,, `PauliI` `PauliX` `PauliY` `PauliZ` `One` e
 * Een matrix met matrices is ook geldig. Uitvouwen in het vorige voor beeld: er wordt een matrix met `(Bool, Pauli)` matrices aangeduid `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Dit voor beeld `(Bool, Pauli)[][]` vertegenwoordigt een mogelijk gekartelde matrix van matrices en geen rechthoekige tweedimensionale matrix. Q#biedt geen ondersteuning voor rechthoekige matrices met meerdere dimensies.
+> Dit voor beeld `(Bool, Pauli)[][]` vertegenwoordigt een mogelijk gekartelde matrix van matrices en geen rechthoekige tweedimensionale matrix. Q# biedt geen ondersteuning voor rechthoekige matrices met meerdere dimensies.
 
 * Een matrix waarde kan worden geschreven in Q# de bron code met behulp van rechte haken rond de elementen van een matrix, zoals in `[PauliI, PauliX, PauliY, PauliZ]` .
 Het algemene basis type van alle items in de matrix bepaalt het type van een matrix letterlijke waarde. Het maken van een matrix met elementen die geen gemeen schappelijk basis type hebben, veroorzaakt daarom een fout.  
@@ -98,7 +98,7 @@ De subscripts van matrices zijn gebaseerd op nul en moeten type `Int` of type zi
 Tuples zijn een krachtig concept dat door wordt gebruikt Q# voor het verzamelen van waarden in één waarde, waardoor het eenvoudiger wordt om ze te passeren.
 Met name voor het gebruik van de tuple-notatie kunt u zien dat elke bewerking en aanroepable precies één invoer hebben en er precies één uitvoer wordt geretourneerd.
 
-* Als er geen of meer verschillende typen `T0` , `T1` ,..., worden opgegeven, `Tn` kunt u een nieuw *tuple-type* aanduiden als `(T0, T1, ..., Tn)` .
+* Als er geen of meer verschillende typen `T0` , `T1` ,..., worden opgegeven, `Tn` kunt u een nieuw  *tuple-type* aanduiden als `(T0, T1, ..., Tn)` .
 De typen die worden gebruikt voor het maken van een nieuw tuple-type kunnen Tuples zijn, zoals in `(Int, (Qubit, Qubit))` .
 Deze geneste is altijd eindig, maar aangezien tuple-typen niet in elke situatie zichzelf kunnen bevatten.
 
@@ -109,7 +109,7 @@ Het is mogelijk om matrices met Tuples, Tuples van matrices, Tuples van sub-Tupl
 * Vanaf Q# 0,3, `Unit` is de naam van het *type* van de lege tuple; `()` wordt gebruikt voor de *waarde* van de lege tuple.
 
 * Tuple-instanties zijn onveranderbaar.
-Q#biedt geen mechanisme om de inhoud van een tuple te wijzigen nadat deze is gemaakt.
+Q# biedt geen mechanisme om de inhoud van een tuple te wijzigen nadat deze is gemaakt.
 
 
 
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 Met deze instructie maakt u een nieuw type met twee anonieme items van het type `Double` .   
 
-Door de gebruiker gedefinieerde typen bieden ook ondersteuning voor *benoemde items* van anonieme items, vanaf Q# versie 0,7 of hoger. U kunt bijvoorbeeld de items een naam geven `Re` voor de dubbele waarde van het werkelijke deel van een complex getal en `Im` voor het imaginaire deel: 
+Door de gebruiker gedefinieerde typen bieden ook ondersteuning voor *benoemde items* van anonieme items, vanaf Q# versie 0,7 of hoger. U kunt bijvoorbeeld de items een naam geven `Real` voor de dubbele waarde van het werkelijke deel van een complex getal en `Imag` voor het imaginaire deel: 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 De naam van een item in een door de gebruiker gedefinieerd type betekent niet dat alle items moeten worden benoemd: elke combi natie van benoemde en niet-benoemde items wordt ondersteund. Daarnaast kunnen interne items ook een naam hebben.
 Het type `Nested` , zoals hieronder gedefinieerd, heeft bijvoorbeeld een onderliggend type `(Double, (Int, String))` , waarvan alleen het item van het type de `Int` naam heeft en alle andere items anoniem zijn. 
@@ -171,18 +171,18 @@ Benoemde items hebben het voor deel dat ze rechtstreeks kunnen worden geopend vi
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 Naast het bieden van korte aliassen voor mogelijk gecompliceerde tuple-typen, is een belang rijk voor deel van het definiëren van dergelijke typen dat ze de bedoeling van een bepaalde waarde kunnen documenteren.
-Als u terugkeert naar het voor beeld van `Complex` , kunt u een 2D polaire coördinaten ook als een door de gebruiker gedefinieerd type hebben gedefinieerd:
+Als u terugkeert naar het voor beeld van `Complex` , kan er een polaire coördinaten represenation zijn gedefinieerd als een door de gebruiker gedefinieerd type:
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Hoewel beide `Complex` en `Polar` beide een onderliggend type hebben `(Double, Double)` , zijn de twee typen volledig incompatibel in Q# , waarmee het risico wordt geminimaliseerd dat per ongeluk een complexe wiskundige functie aanroept met polaire coördinaten en omgekeerd.
+Hoewel beide `Complex` en `ComplexPolar` beide een onderliggend type hebben `(Double, Double)` , zijn de twee typen volledig incompatibel in Q# , waarmee het risico wordt geminimaliseerd dat per ongeluk een complexe wiskundige functie aanroept met polaire coördinaten en omgekeerd.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Toegang tot anonieme items met de operator voor uitpakken
 
@@ -259,8 +259,8 @@ Meer in het algemeen zijn door de gebruiker gedefinieerde typen mogelijk geen cy
 
 Op basis van de typen `'Tinput` en `'Tresult` :
 
-* `('Tinput => 'Tresult)`is het basis type voor een wille keurige *bewerking*, bijvoorbeeld `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)`is het basis type voor een *functie*, bijvoorbeeld `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` is het basis type voor een wille keurige *bewerking*, bijvoorbeeld `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` is het basis type voor een *functie*, bijvoorbeeld `(Int -> Int)` . 
 
 Deze worden de *hand tekening* van de aanroepable genoemd.
 
@@ -289,7 +289,7 @@ Een bewerkings type dat geen functors ondersteunt, wordt opgegeven door het invo
 ### <a name="type-parameterized-functions-and-operations"></a>Functies en bewerkingen van het type para meters
 
 Aanroep bare typen kunnen *type parameters*bevatten.
-Gebruik een symbool dat wordt voorafgegaan door één aanhalings teken om een type parameter te vermelden. `'A`is bijvoorbeeld een geldige type parameter.
+Gebruik een symbool dat wordt voorafgegaan door één aanhalings teken om een type parameter te vermelden. `'A` is bijvoorbeeld een geldige type parameter.
 Zie [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)voor meer informatie en informatie over het definiëren van type parameters callables.
 
 Een type parameter kan meermaals voor komen in één hand tekening.
@@ -298,7 +298,7 @@ Op dezelfde manier heeft een functie die de samen stelling van twee bewerkingen 
 
 Wanneer u een aanroepable van het type para meter aanroept, moeten alle argumenten met dezelfde type parameter van hetzelfde type zijn.
 
-Q#biedt geen methode voor het beperken van de mogelijke typen die een gebruiker kan vervangen door een type parameter.
+Q# biedt geen methode voor het beperken van de mogelijke typen die een gebruiker kan vervangen door een type parameter.
 
 ## <a name="next-steps"></a>Volgende stappen
 

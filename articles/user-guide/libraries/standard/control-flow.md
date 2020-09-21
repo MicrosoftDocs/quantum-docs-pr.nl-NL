@@ -3,18 +3,18 @@ title: Flow-besturings elementen in de Q# standaard libararies
 description: Meer informatie over de bewerkingen en functies voor datatransport besturing in de micro soft- Q# standaard bibliotheek.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868573"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835618"
 ---
 # <a name="higher-order-control-flow"></a>Controle stroom met hogere volg orde #
 
@@ -86,7 +86,7 @@ Dit betekent met name dat aanroepen naar `ApplyToEachCA` kunnen worden weer gege
 <xref:microsoft.quantum.canon.applytoeachindex>Het is ook nuttig om patronen van het formulier weer `U(0, targets[0]); U(1, targets[1]); ...` te geven en biedt versies voor elke combi natie van functors die wordt ondersteund door de invoer.
 
 > [!TIP]
-> `ApplyToEach`is type-para meters, zodat deze kan worden gebruikt met bewerkingen die andere invoer hebben dan `Qubit` .
+> `ApplyToEach` is type-para meters, zodat deze kan worden gebruikt met bewerkingen die andere invoer hebben dan `Qubit` .
 > Stel bijvoorbeeld dat `codeBlocks` een matrix met <xref:microsoft.quantum.errorcorrection.logicalregister> waarden is die moeten worden hersteld.
 > Vervolgens `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` worden de fout correctie code `code` en de herstel functie `recoveryFn` op elk afzonderlijk blok toegepast.
 > Dit geldt ook voor klassieke invoer: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` past een rotatie toe van $ \pi/$2 over $X $, gevolgd door een rotatie van $Pi/$3 over $Y $.
@@ -120,7 +120,7 @@ Omdat het beheren van bewerkingen duur in het algemeen is, `WithC` `WithCA` kunt
 
 > [!NOTE]
 > Een andere consequentie van het factor maken van $U $ is dat we niet eens weten hoe de `Controlled` functor moet worden toegepast `U` .
-> `ApplyWithCA`heeft daarom een zwakkere hand tekening dan verwacht:
+> `ApplyWithCA` heeft daarom een zwakkere hand tekening dan verwacht:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

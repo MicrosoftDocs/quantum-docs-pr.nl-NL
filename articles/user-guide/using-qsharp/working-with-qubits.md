@@ -1,20 +1,20 @@
 ---
 title: Werken met qubits
-description: Beschrijving van opvulling
+description: Meer informatie over het werken met qubits in Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867859"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835856"
 ---
 # <a name="working-with-qubits"></a>Werken met qubits
 
@@ -150,7 +150,7 @@ De *reken kundige basis* verwijst naar de `PauliZ` basis en is de meest voorkome
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Eén Qubit meten op `PauliZ` basis
 
 Gebruik de [`M`](xref:microsoft.quantum.intrinsic.m) bewerking, een ingebouwde, intrinsieke, niet-unitary bewerking, om één Qubit te meten op `PauliZ` basis en een klassieke waarde aan het resultaat toe te wijzen.
-`M`heeft een gereserveerd retour type, `Result` dat alleen waarden kan overnemen `Zero` of `One` overeenkomt met de gemeten statussen $ \ket {0} $ of $ \ket {1} $-geeft aan dat het resultaat geen Quantum status meer is.
+`M` heeft een gereserveerd retour type, `Result` dat alleen waarden kan overnemen `Zero` of `One` overeenkomt met de gemeten statussen $ \ket {0} $ of $ \ket {1} $-geeft aan dat het resultaat geen Quantum status meer is.
 
 Een eenvoudig voor beeld is de volgende bewerking, die één Qubit toewijst in de $ \ket {0} $-status, vervolgens een Hadamard-bewerking toepast `H` op de waarde en het resultaat op basis daarvan meet `PauliZ` .
 

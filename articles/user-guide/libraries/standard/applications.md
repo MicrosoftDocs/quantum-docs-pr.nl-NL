@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868760"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759925"
 ---
 # <a name="applications"></a>Toepassingen #
 
@@ -52,9 +52,9 @@ In het speciale geval waarbij de Hamiltonian wordt ontsteld in een som van Hermi
 
 > [!TIP]
 > Toepassingen van het simulatie algoritme Trotter-Suzuki worden in de voor beelden besproken.
-> Zie het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple)-voor beeld voor het Ising-model met alleen de intrinsieke bewerkingen van elke doel computer.
-> Raadpleeg het [ **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution)-voor beeld voor het Ising-model met behulp van de Trotter-Suzuki.
-> Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)van de Trotter-Suzuki voor moleculaire water stof met behulp van de beheer structuur van de bibliotheek.
+> Zie het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)-voor beeld voor het Ising-model met alleen de intrinsieke bewerkingen van elke doel computer.
+> Raadpleeg het [ **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)-voor beeld voor het Ising-model met behulp van de Trotter-Suzuki.
+> Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)van de Trotter-Suzuki voor moleculaire water stof met behulp van de beheer structuur van de bibliotheek.
 
 In veel gevallen willen we het simulatie algoritme implementeren, maar zijn ze niet geïnteresseerd in de details van de implementatie. Bijvoorbeeld, de tweede order integrator komt met $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2R} e ^ {-IH \_ 1 t/2R} \cdots e ^ {-IH \_ {d-1} t/2R} e ^ {-IH \_ {d-1} t/2R} \cdots e ^ {-IH \_ 1 t/2R} e ^ {-IH \_ 0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ met een product van $2rd $-voor waarden. Grotere orders hebben zelfs nog meer voor waarden en geoptimaliseerde varianten kunnen een zeer niet-oplopende volg orde van de exponentiëlen vereisen. Andere geavanceerde algoritmen kunnen ook het gebruik van ancilla qubits in tussenliggende stappen omvatten. Daarom kunnen simulatie algoritmen in de Canon worden gepakketd als het door de gebruiker gedefinieerde type
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> Toepassingen van de simulatie bibliotheek worden in de voor beelden besproken. `SimulationAlgorithm`Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)-voor beeld voor een fase-schatting in het Ising-model met.
-> `TimeDependentSimulationAlgorithm`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)-voor beeld voor de voor bereiding van de Adiabatic-status in het Ising-model.
+> Toepassingen van de simulatie bibliotheek worden in de voor beelden besproken. `SimulationAlgorithm`Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor een fase-schatting in het Ising-model met.
+> `TimeDependentSimulationAlgorithm`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor de voor bereiding van de Adiabatic-status in het Ising-model.
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Schatting van Adiabatic-status voorbereiding & fase ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`is het aantal qubits dat wordt gebruikt om de initiële Quantum status te coderen. `statePrepUnitary`bereidt de start status voor op basis van de berekening $ \ket{0\cdots 0} $. `adiabaticUnitary`is de unitary-bewerking die de voor bereiding van Adiabatic-status implementeert, zoals geproduceerd door de `InterpolatedEvolution` functie. `qpeUnitary`is de bewerking unitary die wordt gebruikt voor het uitvoeren van een fase schatting voor de resulterende Quantum status. `phaseEstAlgorithm`is ons keuze-algoritme voor fase schatting.
+`nQubits` is het aantal qubits dat wordt gebruikt om de initiële Quantum status te coderen. `statePrepUnitary` bereidt de start status voor op basis van de berekening $ \ket{0\cdots 0} $. `adiabaticUnitary` is de unitary-bewerking die de voor bereiding van Adiabatic-status implementeert, zoals geproduceerd door de  `InterpolatedEvolution` functie. `qpeUnitary` is de bewerking unitary die wordt gebruikt voor het uitvoeren van een fase schatting voor de resulterende Quantum status. `phaseEstAlgorithm` is ons keuze-algoritme voor fase schatting.
 
 > [!TIP]
-> Toepassingen van de Adiabatic-status voorbereiding worden behandeld in de voor beelden. `AdiabaticEvolution`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)-voor beeld voor het Ising-model met behulp van een hand matige implementatie van Adiabatic-status voorbereiding versus het gebruik van de functie.
-> Raadpleeg het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)-voor beeld voor fase schatting en Adiabatic-status voorbereiding in het Ising-model.
+> Toepassingen van de Adiabatic-status voorbereiding worden behandeld in de voor beelden. `AdiabaticEvolution`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor het Ising-model met behulp van een hand matige implementatie van Adiabatic-status voorbereiding versus het gebruik van de functie.
+> Raadpleeg het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor fase schatting en Adiabatic-status voorbereiding in het Ising-model.
 
 > [!TIP]
-> De [simulatie van moleculaire water stof](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) is een interessant en beknopt voor beeld. De model-en experimentele resultaten die in [O'Malley et. al](https://arxiv.org/abs/1512.06860) zijn gerapporteerd. vereist alleen Pauli-matrices en heeft de vorm $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {Z \_ 0} {z \_ 1} + g \_ 4 {y 0} {Y 1} \_ \_ + g \_ 5 {X \_ 0} {X \_ 1} $. Dit is een effectief Hamiltonian waarvoor slechts 2 qubits nodig is, waarbij de constanten $g $ worden berekend op basis van de afstand $R $ tussen de twee water stof atomen. Met Canon functions worden de Paul-functies geconverteerd naar unitaries en vervolgens over korte Peri Oden gegroeid met behulp van de Trotter-Suzuki-ontleding. Een goede benadering van $H de _2 $ aarde kan worden gemaakt zonder gebruik te maken van Adiabatic-status voorbereiding, waardoor de grond staats energie direct kan worden gevonden door de fase-schatting van de Canon te gebruiken.
+> De [simulatie van moleculaire water stof](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) is een interessant en beknopt voor beeld. De model-en experimentele resultaten die in [O'Malley et. al](https://arxiv.org/abs/1512.06860) zijn gerapporteerd. vereist alleen Pauli-matrices en heeft de vorm $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {Z \_ 0} {z \_ 1} + g \_ 4 {y 0} {Y 1} \_ \_ + g \_ 5 {X \_ 0} {X \_ 1} $. Dit is een effectief Hamiltonian waarvoor slechts 2 qubits nodig is, waarbij de constanten $g $ worden berekend op basis van de afstand $R $ tussen de twee water stof atomen. Met Canon functions worden de Paul-functies geconverteerd naar unitaries en vervolgens over korte Peri Oden gegroeid met behulp van de Trotter-Suzuki-ontleding. Een goede benadering van $H de _2 $ aarde kan worden gemaakt zonder gebruik te maken van Adiabatic-status voorbereiding, waardoor de grond staats energie direct kan worden gevonden door de fase-schatting van de Canon te gebruiken.
 
 ## <a name="shors-algorithm"></a>Algoritme van Shor ##
 Het Shor-algoritme is een van de belangrijkste ontwikkelingen in de Quantum Computing, omdat blijkt dat quantum computers kunnen worden gebruikt voor het oplossen van belang rijke, op dit moment klassieke problemen.

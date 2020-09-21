@@ -1,24 +1,24 @@
 ---
 title: Teller voor primitieve bewerkingen-Quantum Development Kit
-description: Meer informatie over het Counter van micro soft QDK primitieve bewerking, dat gebruikmaakt van de Quantum Trace Simulator om primitieve uitvoeringen bij te houden die worden gebruikt door bewerkingen in een Q# programma.
+description: Meer informatie over het micro soft QDK primitieve bewerkings item, dat gebruikmaakt van de Quantum Trace Simulator om primitieve processen bij te houden die worden gebruikt door bewerkingen in een Q# programma.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868233"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835975"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitieve bewerkingen teller
 
-Het teller primitieve bewerking maakt deel uit van de Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Het telt het aantal primitieve uitvoeringen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. 
+Het teller primitieve bewerking maakt deel uit van de Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Hiermee wordt het aantal primitieve processen geteld dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. 
 
 Alle <xref:microsoft.quantum.intrinsic> bewerkingen worden uitgedrukt in termen van Qubit draaiingen, T-bewerkingen, single-Qubit Clifford-bewerkingen, CNOT bewerkingen en metingen van multi-Qubit Pauli observables. Met het teller primitieve bewerkingen worden statistieken geaggregeerd en verzameld over alle randen van de [aanroep grafiek](https://en.wikipedia.org/wiki/Call_graph)van de bewerking.
 

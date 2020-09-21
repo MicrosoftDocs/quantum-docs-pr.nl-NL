@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868624"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759906"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -74,7 +74,7 @@ De fase-schatting voor deze reden wordt weer gegeven in een aantal Quantum algor
 ### <a name="bayesian-phase-estimation"></a>Schatting van de Bayesiaanse-fase ###
 
 > [!TIP]
-> Zie het [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) -voor beeld voor meer informatie over de Bayesiaanse-fase schatting in de praktijk.
+> Zie het [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) -voor beeld voor meer informatie over de Bayesiaanse-fase schatting in de praktijk.
 
 Het idee van een schatting van de Bayesiaanse-fase is eenvoudig.
 U verzamelt meting statistieken vanuit het fase-schattings protocol en vervolgens verwerkt u de resultaten met behulp van Bayesiaanse deinterferentie en geeft u een schatting van de para meter op.
@@ -112,7 +112,7 @@ De belangrijkste functie van een robuuste fase schatting, die wordt gedeeld met 
 Andere relevante gegevens zijn onder meer de geringe overhead van $1 $ ancilla Qubit, of de procedure is niet-adaptief, wat inhoudt dat de vereiste reeks Quantum experimenten onafhankelijk is van de tussenliggende meet resultaten. In deze en komende voor beelden, waarbij de keuze van het algoritme voor fase schatting belang rijk is, moet één van beide verwijzen naar de documentatie, zoals @"microsoft.quantum.characterization.robustphaseestimation" en de publicaties waarnaar wordt verwezen, voor meer informatie en voor de implementatie ervan.
 
 > [!TIP]
-> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
+> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
 
 
 ### <a name="continuous-oracles"></a>Continue Oracle ###
@@ -130,7 +130,7 @@ Met het gebruik van een fase-schatting met doorlopende query's kunnen we het ges
 
 ### <a name="random-walk-phase-estimation"></a>Schatting wille keurige Walkie fase ###
 
-Q#voorziet in een handige benadering van de schatting van de Bayesiaanse-fase die is ontworpen voor het gebruik van close-to-Quantum apparaten.
+Q# voorziet in een handige benadering van de schatting van de Bayesiaanse-fase die is ontworpen voor het gebruik van close-to-Quantum apparaten.
 Deze methode is zowel adaptief als volledig deterministisch, waardoor bijna optimaal kan worden geschaald in de geschatte fase $ \hat{\phi} $ met weinig geheugen overhead.
 
 In het protocol wordt gebruikgemaakt van een geschatte methode voor het afwijzen van Bayesiaanse die ervan uitgaat dat de eerdere distributie Gaussiaans is.

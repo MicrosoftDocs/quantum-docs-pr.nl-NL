@@ -1,32 +1,32 @@
 ---
-title: Expressies inQ#
+title: Expressies in Q#
 description: Meer informatie over het opgeven, verwijzen en combi neren van constanten, variabelen, Opera Tors, bewerkingen en functies als expressies in Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869610"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835839"
 ---
-# <a name="expressions-in-no-locq"></a>Expressies inQ#
+# <a name="expressions-in-no-locq"></a>Expressies in Q#
 
 ## <a name="numeric-expressions"></a>Numerieke expressies
 
 Numerieke expressies zijn expressies van het type `Int` , `BigInt` of `Double` .
 Dat wil zeggen dat ze ofwel integeren of drijvende-komma getallen zijn.
 
-`Int`letterlijke waarden in Q# worden geschreven als een reeks cijfers.
+`Int` letterlijke waarden in Q# worden geschreven als een reeks cijfers.
 Hexadecimale en binaire gehele getallen worden ondersteund en worden met `0x` respectievelijk een en `0b` -voor voegsel geschreven.
 
-`BigInt`letterlijke waarden in Q# hebben een navolgende `l` of `L` achtervoegsel.
+`BigInt` letterlijke waarden in Q# hebben een navolgende `l` of `L` achtervoegsel.
 Hexadecimale Big gehele getallen worden ondersteund en geschreven met het voor voegsel ' 0x '.
 Daarom zijn de volgende geldige toepassingen van `BigInt` letterlijke waarden:
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`letterlijke waarden in Q# zijn drijvende-komma getallen die zijn geschreven met decimale cijfers.
+`Double` letterlijke waarden in Q# zijn drijvende-komma getallen die zijn geschreven met decimale cijfers.
 Ze kunnen worden geschreven met of zonder een decimaal teken, `.` of een exponentieel onderdeel dat is aangegeven met e of e (waarna alleen een mogelijk minteken en decimaal tekens geldig zijn).
 Hier volgen geldige `Double` letterlijke waarden: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Voor zowel een geheel getal als een Big Integer-waarde zijn shifts reken kundig.
 Als u een negatieve waarde naar links of rechts verschuift, resulteert dit in een negatief getal.
 Dat wil zeggen dat de ene stap naar links of rechts verschuift, hetzelfde is als vermenigvuldigen of delen met 2.
 
-Geheel getal delen en integers modulus volgen hetzelfde gedrag voor negatieve getallen als C#.
-Dat wil zeggen, `a % b` heeft altijd hetzelfde teken als `a` en is `b * (a / b) + a % b` altijd gelijk aan `a` .
-Bijvoorbeeld:
+Geheel getal delen en integers modulus volgen hetzelfde gedrag voor negatieve getallen als C#. Dat wil zeggen, `a % b` heeft altijd hetzelfde teken als `a` en is `b * (a / b) + a % b` altijd gelijk aan `a` . Bijvoorbeeld:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- 5 | 2 | -2 | -1
- 5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| 5 | 2 | -2 | -1 |
+| 5 | -2 | 2 | -1 |
 
 Groot geheel getal delen en modulus bewerkingen werken op dezelfde manier.
 
@@ -113,7 +111,7 @@ Aan de hand van een booleaanse expressie `not` kan de unaire operator worden geb
 
 ## <a name="string-expressions"></a>Tekenreeksexpressies
 
-Q#Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (beschreven in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q# programma.
+Q# Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (beschreven in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q# programma.
 
 Teken reeksen in Q# zijn letterlijke waarden of geïnterpoleerde teken reeksen.
 
@@ -156,14 +154,14 @@ Houd er rekening mee dat de geïmpliceerde `step` is + 1, zelfs als `stop` deze 
 
 Enkele voor beelden van bereiken:
 
-- `1..3`is het bereik van 1, 2, 3.
-- `2..2..5`is het bereik van 2, 4.
-- `2..2..6`is het bereik 2, 4, 6.
-- `6..-2..2`is het bereik van 6, 4, 2.
-- `2..1`is een leeg bereik.
-- `2..6..7`is het bereik 2.
-- `2..2..1`is een leeg bereik.
-- `1..-1..2`is een leeg bereik.
+- `1..3` is het bereik van 1, 2, 3.
+- `2..2..5` is het bereik van 2, 4.
+- `2..2..6` is het bereik 2, 4, 6.
+- `6..-2..2` is het bereik van 6, 4, 2.
+- `2..1` is een leeg bereik.
+- `2..6..7` is het bereik 2.
+- `2..2..1` is een leeg bereik.
+- `1..-1..2` is een leeg bereik.
 
 ## <a name="qubit-expressions"></a>Qubit-expressies
 
@@ -207,7 +205,7 @@ Voor door de gebruiker gedefinieerde typen die zijn gedefinieerd in termen van a
 Als is dus `WrappedPair` een door de gebruiker gedefinieerd type met een onderliggend type `IntPair` en `t` een variabele met de waarde `WrappedPair(IntPair(1,2))` , dan `t!!` is `(1,2)` .
 
 De `!` operator heeft een hogere prioriteit dan alle andere opera tors dan `[]` voor het indexeren van matrices en het segmenteren.
-`!`en `[]` positioneel binden; dat wil zeggen, `a[i]![3]` wordt gelezen als `((a[i])!)[3]` : Neem het `i` element van `a` , pak het uit en haal vervolgens het element 3e van de niet-ingepakte waarde op (dit moet een matrix zijn).
+`!` en `[]` positioneel binden; dat wil zeggen, `a[i]![3]` wordt gelezen als `((a[i])!)[3]` : Neem het `i` element van `a` , pak het uit en haal vervolgens het element 3e van de niet-ingepakte waarde op (dit moet een matrix zijn).
 
 De prioriteit van de `!` operator heeft een invloed die mogelijk niet duidelijk is.
 Als een functie of bewerking een waarde retourneert die vervolgens terugkeert, moet de functie-of bewerkings aanroep tussen haakjes worden geplaatst, zodat de argument tuple wordt gekoppeld aan de aanroep in plaats van naar de uitpakken.
@@ -253,7 +251,7 @@ Type | Standaard
  `Qubit` | _Ongeldige Qubit_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | Het lege bereik,`1..1..0`
+ `Range` | Het lege bereik, `1..1..0`
  `Callable` | _Ongeldige aanroepable_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Natuurlijk, in de praktijk, worden alleen de relevante onderdelen opnieuw gemaak
 U kunt een nieuwe matrix maken op basis van een bestaande matrix via de expressies *kopiëren en bijwerken* , die gebruikmaken van de Opera tors `w/` en `<-` .
 Een copy-en-update-expressie is een expressie van het formulier `expression1 w/ expression2 <- expression3` , waarbij
 
-* `expression1`moet een type zijn `T[]` voor een bepaald type `T` .
-* `expression2`Hiermee wordt gedefinieerd welke indexen in de opgegeven matrix `expression1` worden gewijzigd. `expression2`moet van het type `Int` of van een type zijn `Range` .
-* `expression3`is de waarde (n) die wordt gebruikt voor het bijwerken van elementen in `expression1` , op basis van de indices die zijn opgegeven in `expression2` . Als `expression2` is type `Int` , `expression3` moet type zijn `T` . Als `expression2` is type `Range` , `expression3` moet type zijn `T[]` .
+* `expression1` moet een type zijn `T[]` voor een bepaald type `T` .
+* `expression2` Hiermee wordt gedefinieerd welke indexen in de opgegeven matrix `expression1` worden gewijzigd. `expression2` moet van het type `Int` of van een type zijn `Range` .
+* `expression3` is de waarde (n) die wordt gebruikt voor het bijwerken van elementen in `expression1` , op basis van de indices die zijn opgegeven in `expression2` . Als `expression2` is type `Int` , `expression3` moet type zijn `T` . Als `expression2` is type `Range` , `expression3` moet type zijn `T[]` .
 
 De expressie Copy-and-update `arr w/ idx <- value` bouwt bijvoorbeeld een nieuwe matrix met alle elementen die zijn ingesteld op de overeenkomstige elementen in `arr` , met uitzonde ring van het element (en) `idx` dat is opgegeven door, die is ingesteld op de waarde (n) in `value` . 
 
 Opgegeven `arr` bevat de matrix `[0,1,2,3]` en vervolgens 
 
-- `arr w/ 0 <- 10`is de matrix `[10,1,2,3]` .
-- `arr w/ 2 <- 10`is de matrix `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`is de matrix `[10,1,12,3]` .
+- `arr w/ 0 <- 10` is de matrix `[10,1,2,3]` .
+- `arr w/ 2 <- 10` is de matrix `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` is de matrix `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Expressies kopiëren en bijwerken voor benoemde items
 
@@ -376,11 +374,11 @@ U kunt ook een matrix van callables maken.
 * Als het algemene element type een bewerking of functie type is, moeten alle elementen hetzelfde invoer-en uitvoer type hebben.
 * Het element type van de matrix ondersteunt alle [functors](xref:microsoft.quantum.guide.operationsfunctions) die door alle elementen worden ondersteund.
 Bijvoorbeeld als `Op1` , `Op2` en `Op3` alle `Qubit[] => Unit` bewerkingen zijn, maar `Op1` ondersteunt `Adjoint` , `Op2` ondersteunt `Controlled` en `Op3` ondersteunt:
-  * `[Op1, Op2]`is een matrix met `(Qubit[] => Unit)` bewerkingen.
-  * `[Op1, Op3]`is een matrix met `(Qubit[] => Unit is Adj)` bewerkingen.
-  * `[Op2, Op3]`is een matrix met `(Qubit[] => Unit is Ctl)` bewerkingen.
+  * `[Op1, Op2]` is een matrix met `(Qubit[] => Unit)` bewerkingen.
+  * `[Op1, Op3]` is een matrix met `(Qubit[] => Unit is Adj)` bewerkingen.
+  * `[Op2, Op3]` is een matrix met `(Qubit[] => Unit is Ctl)` bewerkingen.
 
-Terwijl de bewerkingen `(Qubit[] => Unit is Adj)` en `(Qubit[] => Unit is Ctl)` het gebruikelijke basis type van zijn `(Qubit[] => Unit)` , delen *matrices* van deze bewerkingen echter geen gemeen schappelijk basis type.
+Terwijl de bewerkingen `(Qubit[] => Unit is Adj)` en  `(Qubit[] => Unit is Ctl)` het gebruikelijke basis type van zijn `(Qubit[] => Unit)` , delen *matrices* van deze bewerkingen echter geen gemeen schappelijk basis type.
 
 Er wordt bijvoorbeeld `[[Op1], [Op2]]` momenteel een fout gegenereerd omdat er wordt geprobeerd een matrix te maken van de twee incompatibele matrix typen `(Qubit[] => Unit is Adj)[]` en `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Er zijn twee expressies van hetzelfde type en een booleaanse expressie die een v
 Voorwaardelijke expressies kunnen resulteren in bewerkingen die dezelfde invoer en uitvoer hebben, maar verschillende functors ondersteunen. In dit geval is het type van de voorwaardelijke expressie een bewerking met invoer en uitvoer die ondersteuning bieden voor functors die door beide expressies worden ondersteund.
 Bijvoorbeeld als `Op1` , `Op2` , en `Op3` alle zijn `Qubit[]=>Unit` , maar `Op1` ondersteunt `Adjoint` , `Op2` ondersteunt `Controlled` en `Op3` ondersteunt:
 
-- `flag ? Op1 | Op2`is een `(Qubit[] => Unit)` bewerking.
-- `flag ? Op1 | Op3`is een `(Qubit[] => Unit is Adj)` bewerking.
-- `flag ? Op2 | Op3`is een `(Qubit[] => Unit is Ctl)` bewerking.
+- `flag ? Op1 | Op2` is een `(Qubit[] => Unit)` bewerking.
+- `flag ? Op1 | Op3` is een `(Qubit[] => Unit is Adj)` bewerking.
+- `flag ? Op2 | Op3` is een `(Qubit[] => Unit is Ctl)` bewerking.
 
 Als een van de twee mogelijke resultaat expressies een functie of een bewerkings aanroep bevat, wordt die aanroep alleen uitgevoerd als dat resulteert in de waarde van de aanroep. In het geval bijvoorbeeld `a==b ? C(qs) | D(qs)` als `a==b` is waar, wordt de `C` bewerking aangeroepen en als deze ONWAAR is, wordt alleen de `D` bewerking aangeroepen. Deze benadering is vergelijkbaar met *kort circuits* in andere talen.
 
@@ -472,17 +470,17 @@ De type specificatie is vereist omdat `Op3` en `Op1` andere typen hebben, waardo
 
 * Tussen haakjes voor Operation-en functie aanroep moet u ook een operator binden, maar na het indexeren van matrices en functors.
 
-Q#Opera tors in volg orde van prioriteit, van hoog naar laag:
+Q# Opera tors in volg orde van prioriteit, van hoog naar laag:
 
 Operator | Ariteit | Beschrijving | Typen operand
 ---------|----------|---------|---------------
- Volg`!` | Unair | Uitpakken | Een door de gebruiker gedefinieerd type
- `-`, `~~~`, `not` | Unair | Numerieke, negatieve, bitsgewijze complement, logische negatie | `Int`, `BigInt` of voor, `Double` of voor `-` `Int` `BigInt` `~~~` , `Bool` voor`not`
- `^` | Binair | Geheel getal energie | `Int`of `BigInt` voor de basis `Int` voor de exponent
- `/`, `*`, `%` | Binair | Deling, vermenigvuldiging, integer modulus | `Int`, `BigInt` of `Double` voor `/` en `*` , `Int` of `BigInt` voor`%`
- `+`, `-` | Binair | Toevoeging of teken reeks-en matrix samenvoeging, aftrekken | `Int`, `BigInt` of `Double` , ook `String` of een matrix type voor`+`
+ Volg `!` | Unair | Unwrap | Een door de gebruiker gedefinieerd type
+ `-`, `~~~`, `not` | Unair | Numerieke, negatieve, bitsgewijze complement, logische negatie | `Int`, `BigInt` of voor, `Double` of voor `-` `Int` `BigInt` `~~~` , `Bool` voor `not`
+ `^` | Binair | Geheel getal energie | `Int` of `BigInt` voor de basis `Int` voor de exponent
+ `/`, `*`, `%` | Binair | Deling, vermenigvuldiging, integer modulus | `Int`, `BigInt` of `Double` voor `/` en `*` , `Int` of `BigInt` voor `%`
+ `+`, `-` | Binair | Toevoeging of teken reeks-en matrix samenvoeging, aftrekken | `Int`, `BigInt` of `Double` , ook `String` of een matrix type voor `+`
  `<<<`, `>>>` | Binair | Shift-links, Shift-rechts | `Int` of `BigInt`
- `<`, `<=`, `>`, `>=` | Binair | Kleiner dan, kleiner dan of gelijk aan, groter dan, groter dan-of-gelijk aan vergelijkingen | `Int`, `BigInt` of`Double`
+ `<`, `<=`, `>`, `>=` | Binair | Kleiner dan, kleiner dan of gelijk aan, groter dan, groter dan-of-gelijk aan vergelijkingen | `Int`, `BigInt` of `Double`
  `==`, `!=` | Binair | gelijk, niet-gelijk-vergelijkingen | een primitief type
  `&&&` | Binair | Bitsgewijze AND | `Int` of `BigInt`
  `^^^` | Binair | Bitsgewijze XOR | `Int` of `BigInt`
@@ -490,7 +488,7 @@ Operator | Ariteit | Beschrijving | Typen operand
  `and` | Binair | Logische AND | `Bool`
  `or` | Binair | Logische OR | `Bool`
  `..` | Binair/Ternair | De operator Range | `Int`
- `?` `|` | Ternair | Voorwaardelijk | `Bool`voor de linkerkant
+ `?` `|` | Ternair | Voorwaardelijk | `Bool` voor de linkerkant
 `w/` `<-` | Ternair | Kopiëren en bijwerken | Zie [expressies voor kopiëren en bijwerken](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Volgende stappen

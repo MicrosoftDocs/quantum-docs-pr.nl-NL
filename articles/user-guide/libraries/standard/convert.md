@@ -3,21 +3,21 @@ title: Type conversies in de Q# standaard bibliotheken
 description: Meer informatie over de algemene en door de gebruiker gedefinieerde type conversie functies in de Q# standaard bibliotheken.
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868507"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835601"
 ---
 # <a name="type-conversions"></a>Type conversies #
 
-Q#is een **sterk getypeerde** taal.
+Q# is een **sterk getypeerde** taal.
 Met name Q# wordt niet impliciet gecast tussen verschillende typen. Bijvoorbeeld, `1 + 2.0` is geen geldige Q# expressie.
 Biedt in plaats daarvan Q# diverse typen conversie functies voor het samen stellen van nieuwe waarden van een bepaald type.
 

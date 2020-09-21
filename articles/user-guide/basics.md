@@ -1,22 +1,22 @@
 ---
-title: Q#Bewerkingen
-description: Basis concepten vanQ#
+title: Q# Bewerkingen
+description: Basis concepten van Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869644"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835516"
 ---
-# <a name="no-locq-basics"></a>Q#Bewerkingen
+# <a name="no-locq-basics"></a>Q# Bewerkingen
 
 Dit artikel bevat een korte inleiding tot de basis bouwstenen van Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Zie [werken met qubits](xref:microsoft.quantum.guide.qubits)voor meer informatie over het initialiseren van, of het *toewijzen*van qubits.
 
-## <a name="quantum-states-in-no-locq"></a>Quantum provincies inQ#
+## <a name="quantum-states-in-no-locq"></a>Quantum provincies in Q#
 
 Belang rijk: in het vorige programma wordt niet expliciet naar de status verwezen, Q# maar wordt beschreven hoe ons programma de status heeft *getransformeerd* .
 Met deze methode kunt u volledig neutraal over wat een Quantum status *heeft* , zelfs op elke doel computer, die verschillende interpretaties kan hebben, afhankelijk van de computer. 
@@ -53,7 +53,7 @@ Maar in de toekomst kijken we, wanneer de doel computer een echte quantum comput
 Een Q# programma recombineert deze bewerkingen, zoals gedefinieerd door een doel machine, om nieuwe bewerkingen op een hoger niveau te maken voor een snelle Quantum berekening.
 Op deze manier kunt u Q# eenvoudig de logische en hybride Quantum-algoritmen van de logica uitdrukken, maar ook algemeen met betrekking tot de structuur van een doel machine of Simulator.
 
-## <a name="no-locq-operations-and-functions"></a>Q#bewerkingen en functies
+## <a name="no-locq-operations-and-functions"></a>Q# bewerkingen en functies
 
 In concrete Q# zin bestaat een programma uit *bewerkingen*, *functies*en eventuele door de gebruiker gedefinieerde typen. 
 
@@ -65,13 +65,13 @@ In dit geval `Measure` is een *bewerking* waarmee de doel computer een meting ka
 Samen worden bewerkingen en functies ook wel *callables*genoemd. Hun onderliggende structuur en gedrag worden geïntroduceerd en beschreven in [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#syntaxis overzicht
+## <a name="no-locq-syntax-overview"></a>Q# syntaxis overzicht
 
 De syntaxis van een taal beschrijft de verschillende combi Naties van symbolen die een syntactisch corrigerend programma vormen.
 In Q# worden syntaxis elementen ingedeeld in drie verschillende groepen: typen, expressies en instructies.
 
 ### <a name="types"></a>Typen
-Q#is een sterk getypeerde taal, zodat het gebruik van typen zorgvuldig kan bijdragen aan de compiler, waardoor het mogelijk is dat er sterke garanties worden geboden over Q# Program ma's tijdens het compileren.
+Q# is een sterk getypeerde taal, zodat het gebruik van typen zorgvuldig kan bijdragen aan de compiler, waardoor het mogelijk is dat er sterke garanties worden geboden over Q# Program ma's tijdens het compileren.
 Naast de standaard en Quantum specifieke ingebouwde primitieve typen, bijvoorbeeld,, `Int` `Bool` `Qubit` en `Result` , Q# biedt ondersteuning voor door de gebruiker gedefinieerde typen.
 
 Q#Zie [typen in Q# ](xref:microsoft.quantum.guide.types)voor beschrijvingen van alle primitieve typen, Details voor matrix-en tuple-typen en stappen voor het definiëren van nieuwe typen in een bestand.

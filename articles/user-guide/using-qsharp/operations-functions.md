@@ -2,19 +2,19 @@
 title: Bewerkingen en functies in Q#
 description: Bewerkingen en functies definiëren en aanroepen, evenals de gecontroleerde en adjoint bewerkingen.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759421"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833474"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Bewerkingen en functies in Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Als een bewerking een unitary-trans formatie implementeert, zoals het geval is voor veel bewerkingen in Q# , is het mogelijk om te definiëren hoe de bewerking optreedt wanneer *adjointed* of *beheerd*wordt. Met een *adjoint* specialisatie van een bewerking wordt aangegeven hoe de ' inverse ' van de bewerking wordt uitgevoerd, terwijl een *beheerde* specialisatie aangeeft hoe een bewerking wordt uitgevoerd wanneer de toepassing wordt ingesteld op de status van een bepaalde Quantum register.
 
-Adjoints van Quantum bewerkingen zijn cruciaal voor veel aspecten van Quantum Computing. Q#Zie [Conjugations](#conjugations) in dit artikel voor een voor beeld van een dergelijke situatie die wordt besproken naast een handige programmeer techniek. 
-
-De gecontroleerde versie van een bewerking is een nieuwe bewerking waarbij de basis bewerking alleen effectief wordt toegepast als alle besturings elementen qubits een opgegeven status hebben.
+Adjoints van Quantum bewerkingen zijn cruciaal voor veel aspecten van Quantum Computing. Q#Zie [controle stroom: Conjugations](xref:microsoft.quantum.guide.controlflow#conjugations)voor een voor beeld van een dergelijke situatie die wordt besproken naast een handige programmeer techniek. De gecontroleerde versie van een bewerking is een nieuwe bewerking waarbij de basis bewerking alleen effectief wordt toegepast als alle besturings elementen qubits een opgegeven status hebben.
 Als het besturings element qubits zich in de superpositie bevindt, wordt de basis bewerking samenhangend toegepast op het juiste deel van de superpositie.
 Daarom worden beheerde bewerkingen vaak gebruikt voor het genereren van Entanglement.
 
@@ -364,46 +362,6 @@ U kunt
 
 Door de gebruiker gedefinieerde typen worden behandeld als een ingepakte versie van het onderliggende type, in plaats van als subtype.
 Dit betekent dat een waarde van een door de gebruiker gedefinieerd type niet kan worden gebruikt, waarbij u een waarde van het onderliggende type verwacht.
-
-
-### <a name="conjugations"></a>Conjugations
-
-In tegens telling tot klassieke bits is het vrijgeven van Quantum geheugen iets resterend omdat het blind opnieuw instellen van qubits mogelijk ongewenste gevolgen heeft voor de resterende berekening als de qubits nog steeds Entangled zijn. Deze effecten kunnen worden vermeden door de uitgevoerde berekeningen op de juiste manier uit te voeren voordat het geheugen wordt vrijgegeven. Een gemeen schappelijk patroon in de Quantum Computing is daarom het volgende: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-Vanaf onze 0,9-release Q# ondersteunt een conjugation-instructie waarmee de voor gaande trans formatie wordt geïmplementeerd. Met deze instructie kan de bewerking `ApplyWith` op de volgende manier worden geïmplementeerd:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Een dergelijke conjugatione instructie is veel handiger als de buiten-en interne trans formaties niet direct beschikbaar zijn als bewerkingen, maar in plaats daarvan handiger zijn om te beschrijven door een blok bestaande uit verschillende instructies. 
-
-De inverse trans formatie voor de instructies die in het binnen-blok zijn gedefinieerd, wordt automatisch gegenereerd door de compiler en uitgevoerd nadat de Apply-Block is voltooid.
-Omdat alle onveranderlijke variabelen die als onderdeel van de binnen-blok kering worden gebruikt, niet in het apply-blok kunnen worden gebonden, is de gegenereerde trans formatie gegarandeerd de adjoint van de berekening in het binnen-blok. 
 
 
 ## <a name="defining-new-functions"></a>Nieuwe functies definiëren

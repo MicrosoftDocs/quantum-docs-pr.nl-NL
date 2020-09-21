@@ -3,18 +3,18 @@ title: Gegevens structuren in de Q# standaard bibliotheken
 description: Meer informatie over gegevens structuren, Oracle en dynamische generatoren in de micro soft- Q# standaard bibliotheken.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868512"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835584"
 ---
 # <a name="data-structures-and-modeling"></a>Gegevens structuren en model lering #
 
@@ -160,8 +160,8 @@ Deze unitary wordt standaard beschreven door een van de twee typen Oracle.
 
 > [!TIP]
 > Beide Oracle-typen die hieronder worden beschreven, zijn opgenomen in de voor beelden.
-> Zie het [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)-voor beeld voor meer informatie over continue query Oracle.
-> Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)-voor beeld voor meer informatie over discrete query-Oracle.
+> Zie het [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)-voor beeld voor meer informatie over continue query Oracle.
+> Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor meer informatie over discrete query-Oracle.
 
 Het eerste type Oracle, waarmee we een discrete query Oracle aanroepen en met het door de gebruiker gedefinieerde type vertegenwoordigen <xref:microsoft.quantum.oracles.discreteoracle> , bestaat uit een unitary matrix.
 Als $U $ de unitary is waarvan de eigenvalues een schatting wil maken, is de Oracle voor $U $ gewoon een standaard voor een subroutine waarmee $U $ wordt geïmplementeerd.
@@ -211,8 +211,8 @@ waarbij het gehele getal $r > $0 de aanpassings fout bepaalt.
 De model bibliotheek voor dynamische Generator biedt een framework voor het systematisch coderen van gecompliceerde generators in termen van eenvoudigere Generators. Een dergelijke beschrijving kan vervolgens worden door gegeven aan de simulatie bibliotheek voor het implementeren van tijd evolutie door een simulatie algoritme van keuze, waarbij veel details automatisch worden verwerkt.
 
 > [!TIP]
-> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)-voor beeld.
-> Voor een voor beeld op basis van moleculaire water stof raadpleegt u de voor beelden van [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) en [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
+> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)-voor beeld.
+> Voor een voor beeld op basis van moleculaire water stof raadpleegt u de voor beelden van [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) en [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Volledige beschrijving van een generator ###
 

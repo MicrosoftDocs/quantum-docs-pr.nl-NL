@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van geavanceerde matrix concepten: meer informatie over eigenvectors, eigenvalues en matrix exponentiëles, de belangrijkste hulpprogram ma's voor het beschrijven en simuleren van Quantum algoritmen.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. matrix-Geavanceerd MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. matrix-Geavanceerd MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ We gaan nu onze manipulatie van matrices uitbreiden naar [*eigenvalues, Eigenvec
 
 U $ kunt $ een vier Kante matrix maken en $ v $ een vector zijn die niet de Nulls vector is (dat wil zeggen, de vector met alle vermeldingen die gelijk zijn aan $ 0 $ ).
 
-We zeggen $ $ dat v een [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) is van $ M als de waarde van $ $ MV = $ voor een bepaalde $ c $ . We zeggen $ $ dat c de [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) is die overeenkomt met de eigenvector $ v $ . In het algemeen een matrix $ M $ kan een vector omzetten in een andere vector, maar een eigenvector is een speciale waarde omdat deze ongewijzigd blijft, behalve als vermenigvuldigd met een getal. Houd er rekening mee dat als $ v $ een eigenvector is met eigenvalue $ c $ , $ AV $ ook een eigenvector (voor elke niet $ -nul a $ ) met dezelfde eigenvalue.
+We zeggen $ $ dat v een [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) is van  $ M als de waarde van $ $ MV = $ voor een bepaalde $ c $ . We zeggen $ $ dat c de [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) is die overeenkomt met de eigenvector $ v $ . In het algemeen een matrix $ M $ kan een vector omzetten in een andere vector, maar een eigenvector is een speciale waarde omdat deze ongewijzigd blijft, behalve als vermenigvuldigd met een getal. Houd er rekening mee dat als $ v $ een eigenvector is met eigenvalue $ c $ , $ AV $ ook een eigenvector (voor elke niet $ -nul a $ ) met dezelfde eigenvalue.
 
 Voor de ID-matrix is bijvoorbeeld elke vector $ v $ een eigenvector met eigenvalue $ 1 $ .
 
@@ -108,7 +108,7 @@ De vectoren
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} en \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-zijn eigenvectors van deze matrix met $ respectievelijk eigenvalues d_1 $ , $ d_2 $ en $ D_3 $ . Als $ d_1 $ , $ d_2 $ en $ D_3 $ afzonderlijke getallen zijn, zijn deze vectoren (en hun veelvouden) de enige eigenvectors van de matrix $ d $ . Over het algemeen kunt u voor een diagonale matrix eenvoudig de eigenvalues en eigenvectors lezen. De eigenvalues zijn alle getallen die worden weer gegeven op de diagonaal en hun respectieve eigenvectors zijn de eenheids vectoren met één vermelding die gelijk is aan $ 1 $ en de resterende vermeldingen gelijk zijn aan $ 0 $ .
+zijn eigenvectors van deze matrix met  $ respectievelijk eigenvalues d_1 $ , $ d_2 $ en $ D_3 $ . Als $ d_1 $ , $ d_2 $ en $ D_3 $ afzonderlijke getallen zijn, zijn deze vectoren (en hun veelvouden) de enige eigenvectors van de matrix $ d $ . Over het algemeen kunt u voor een diagonale matrix eenvoudig de eigenvalues en eigenvectors lezen. De eigenvalues zijn alle getallen die worden weer gegeven op de diagonaal en hun respectieve eigenvectors zijn de eenheids vectoren met één vermelding die gelijk is aan $ 1 $ en de resterende vermeldingen gelijk zijn aan $ 0 $ .
 
 In het bovenstaande voor beeld ziet u dat de eigenvectors van $ D $ een basis vormt voor driedimensionale $ $ vectoren. Een basis is een set vectoren waarmee elke vector als een lineaire combi natie ervan kan worden geschreven. Meer expliciet, $ v_1 $ , $ v_2 $ en $ v_3 $ vormen een basis als een vector $ v $ kan worden geschreven als $ v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ voor sommige cijfers $ a_1 $ , a_2 en $ $ $ a_3 $ .
 

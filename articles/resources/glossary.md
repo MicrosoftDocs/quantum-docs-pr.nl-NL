@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van de Quantum Computing-woorden lijst: een woorden lijst met algemene termen, acties en objecten die worden gebruikt in Quantum Computing.
-Auteur: QuantumWriter MS. Author: Alan.Geller@microsoft.com MS. date: 12/11/2017 MS. onderwerp: artikel-UID: micro soft. Quantum. verklarende woorden lijst no-loc:
+Auteur: bradben MS. Author: v-benbra MS. date: 9/1/2020 MS. topic: artikel UID: micro soft. Quantum. Glossary no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Een van de vier specifieke maximally [Entangled](xref:microsoft.quantum.glossary
 
 ## <a name="bloch-sphere"></a>Bloch-bol
 
-Een grafische weer gave van een [Quantum status](xref:microsoft.quantum.glossary#quantum-state) met één[Qubit](xref:microsoft.quantum.glossary#qubit) als een punt in een drie-dimensionale eenheid. Zie [qubits en trans formaties visualiseren met behulp van de Bloch-bol](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)voor meer informatie.
+Een grafische weer gave van een [Quantum status](xref:microsoft.quantum.glossary#quantum-state) met één[Qubit](xref:microsoft.quantum.glossary#qubit) als een punt in een drie-dimensionale eenheid. Zie  [qubits en trans formaties visualiseren met behulp van de Bloch-bol](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)voor meer informatie.
 
 ## <a name="callable"></a>Aanroep bare
 
@@ -170,7 +170,7 @@ Een label voor een verzameling verwante namen (bijvoorbeeld [bewerkingen](xref:m
 
 ## <a name="operation"></a>Bewerking
 
-De basis eenheid voor het uitvoeren van Quantum in Q# . Het is ongeveer gelijk aan een functie in C, C++ of python, of een statische methode in C# of Java. Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
+De basis eenheid van de Quantum berekening in Q# . Het is ongeveer gelijk aan een functie in C, C++ of python, of een statische methode in C# of Java. Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
 
 ## <a name="operator-application"></a>Operator toepassing
 

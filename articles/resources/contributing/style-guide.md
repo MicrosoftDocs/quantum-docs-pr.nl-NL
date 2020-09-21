@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867586"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834190"
 ---
-# <a name="no-locq-style-guide"></a>Q#Stijl gids #
+# <a name="no-locq-style-guide"></a>Q# Stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
 
 De conventies die in deze hand leiding worden beschreven, zijn bedoeld om Program ma's en bibliotheken te helpen maken die Q# gemakkelijker te lezen en te begrijpen zijn.
@@ -96,7 +96,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+| &nbsp;  | Naam | Beschrijving |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Het gebruik van een term (' reflectie ') wissen om het effect van de bewerking aan te geven. |
 | ☒ | <s>`operation XRotation`</s> | Het gebruik van de woord groep frase suggesties voor de functie, in plaats van de bewerking. |
@@ -115,7 +115,7 @@ Suggesties voor:
 
 Wanneer u een ingangs punt in een Q# programma definieert, Q# herkent de compiler het [ `@EntryPoint()` kenmerk](xref:microsoft.quantum.core.entrypoint) , in plaats van dat toegangs punten een bepaalde naam hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
 Vanuit het perspectief van een Q# ontwikkelaar zijn ingangs punten normale bewerkingen die aantekeningen maken bij `@EntryPoint()` .
-Daarnaast Q# kunnen ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld in Q# zelfstandige uitvoer bare bestanden), of kan een interface tussen een Q# programma en het hostprogramma voor een toepassing zijn (bijvoorbeeld: bij gebruik Q# van python of .net), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q# toegangs punt.
+Daarnaast Q# kunnen ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld in Q# zelfstandige uitvoer bare Program ma's), of kan een interface tussen een Q# programma en het hostprogramma voor een toepassing zijn (dat wil zeggen: bij gebruik Q# van python of .net), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q# toegangs punt.
 
 We raden aan gebruik te maken van naamgevings punten om het gebruik van het kenmerk weer te geven met `@EntryPoint()` behulp van het algemene advies voor naamgevings bewerkingen die hierboven worden vermeld.
 
@@ -129,7 +129,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+| &nbsp;  | Naam | Beschrijving |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Het doel van het ingangs punt wordt duidelijk gecommuniceerd via de bewerkings naam. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Het gebruik van `Main` heeft geen duidelijk communicatie doel van het begin punt en is redundant met het `@EntryPoint()` kenmerk. |
@@ -171,7 +171,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+| &nbsp;   | Naam | Beschrijving |
 |---|------|-------------|
 | ☑ | `X` | Goed te begrijpen steno voor ' een $X $ Transformation ' toep assen ' |
 | ☑ | `CNOT` | Goed te begrijpen steno voor "Controlled-NOT" |
@@ -228,7 +228,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+| &nbsp;   | Naam | Beschrijving |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | De voor positie ' to ' resulteert in een verbale woord groep, wat een bewerking aangeeft en niet een functie. |
 | ☒ | <s>`AsDouble`</s> | Het invoer type is niet duidelijk uit de functie naam. |
@@ -251,7 +251,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Naam | Beschrijving |
+| &nbsp;  | Naam | Beschrijving |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Gebruik geen onderstrepings teken `_` om aan te geven dat deze bewerking alleen voor intern gebruik is. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Het `internal` sleutel woord aan het begin geeft duidelijk aan dat deze bewerking alleen voor intern gebruik is. |
@@ -264,12 +264,12 @@ Deze groepen kunnen worden onderscheiden met dezelfde hoofd naam, gevolgd door e
 
 | Achtervoegsel | Betekenis |
 |--------|---------|
-| `A` | Verwachte invoer wordt ondersteund`Adjoint` |
-| `C` | Verwachte invoer wordt ondersteund`Controlled` |
-| `CA` | Verwachte invoer voor ondersteuning `Controlled` en`Adjoint` |
-| `I` | Invoer-of invoer waarden zijn van het type`Int` |
-| `D` | Invoer-of invoer waarden zijn van het type`Double` |
-| `L` | Invoer-of invoer waarden zijn van het type`BigInt` |
+| `A` | Verwachte invoer wordt ondersteund `Adjoint` |
+| `C` | Verwachte invoer wordt ondersteund `Controlled` |
+| `CA` | Verwachte invoer voor ondersteuning `Controlled` en `Adjoint` |
+| `I` | Invoer-of invoer waarden zijn van het type `Int` |
+| `D` | Invoer-of invoer waarden zijn van het type `Double` |
+| `L` | Invoer-of invoer waarden zijn van het type `BigInt` |
 
 # <a name="guidance"></a>[Hulp](#tab/guidance)
 
@@ -323,7 +323,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Codefragment | Beschrijving |
+| &nbsp;  | Codefragment | Beschrijving |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | De naam `Apply` is een `CamelCase` verbale woord groep waarmee wordt voorgesteld dat het benoemd item een bewerking is. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benoemde items moeten beginnen met een eerste hoofd letter. |
@@ -401,7 +401,7 @@ Suggesties voor:
 - Elke open bare functie, bewerking en door de gebruiker gedefinieerd type moeten onmiddellijk worden voorafgegaan door een documentatie opmerking.
 - Elke documentatie opmerking moet mini maal de volgende secties bevatten:
     - Samenvatting
-    - Input
+    - Invoer
     - Uitvoer (indien van toepassing)
 - Zorg ervoor dat alle samen vattingen twee zinnen of minder zijn. Als er meer ruimte nodig is, geeft u een `# Description` sectie op die direct volgt `# Summary` met de volledige informatie.
 - Als dat niet het geval is, kunt u geen wiskundige formules in samen vattingen gebruiken, omdat niet alle clients TeX-notatie in samen vattingen ondersteunen. Houd er rekening mee dat bij het schrijven van Prose-documenten (bijvoorbeeld TeX of prijs verlaging) het voor keur is dat er langere lijn lengten worden gebruikt.
@@ -479,7 +479,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-|   | Codefragment | Beschrijving |
+| &nbsp; | Codefragment | Beschrijving |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Gebruik spaties om binaire Opera tors. |
 | ☒ | <s>`target:Qubit`</s> | Gebruik spaties rondom type aantekening. |

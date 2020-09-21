@@ -3,18 +3,18 @@ title: Fout correctie in de Q# standaard bibliotheken
 description: Meer informatie over het gebruik van fout correctie codes in uw Q# Program ma's terwijl u de status van de qubits beveiligt.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868488"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835550"
 ---
 # <a name="error-correction"></a>Fout correctie #
 
@@ -78,7 +78,7 @@ In deze sectie beschrijven we dit kader en de toepassing ervan tot een paar eenv
 > Een volledige inleiding tot de stabilisatie formaliteit valt buiten het bereik van deze sectie.
 > We verwijzen naar lezers die meer willen weten over [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Duidt op fouten corrigerende codes inQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Duidt op fouten corrigerende codes in Q# ##
 
 Om u te helpen bij het opgeven van fout codes voor het corrigeren van fouten, Q# biedt Canon verschillende afzonderlijke door de gebruiker gedefinieerde typen:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
+We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).
 
 Naast de code voor het spie gelen van bits, Q# wordt de Canon voorzien van implementaties van de [Qubit perfecte code](https://arxiv.org/abs/quant-ph/9602019)en de [zeven Qubit-code](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige, single-Qubit fout kan corrigeren.

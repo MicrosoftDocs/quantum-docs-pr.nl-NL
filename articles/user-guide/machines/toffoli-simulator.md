@@ -2,19 +2,19 @@
 title: Quantum Toffoli Simulator-Quantum Development Kit
 description: Meer informatie over de micro soft QDK Toffoli Simulator, een speciale Quantum Simulator die kan worden gebruikt met miljoenen qubits.
 author: alan-geller
-ms.author: ageller@microsoft.com
+ms.author: ageller
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992205"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835907"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli Simulator
 
@@ -84,7 +84,7 @@ Bijvoorbeeld:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - [Quantum bronnen estimator](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

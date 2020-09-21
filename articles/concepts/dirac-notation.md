@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van de Dirac-notatie: meer informatie over het gebruik van de Dirac-notatie om Quantum-waarden weer te geven en om Quantum bewerkingen te simuleren.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Dirac MS. Author: nawiebe@microsoft.com MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Dirac MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Dit concept van het weer geven van de status als een matrix, in plaats van een v
 Algemene Quantum status operatoren, in plaats van vectoren, zijn alomtegenwoordige in bepaalde gebieden van Quantum Computing, maar zijn niet nodig om de basis beginselen van het veld te begrijpen.
 Voor de belanghebbende lezer raden we u aan een van de referentie boeken te lezen die zijn opgenomen in [voor meer informatie](xref:microsoft.quantum.more-information).
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#poort reeksen die gelijk zijn aan Quantum statussen
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# poort reeksen die gelijk zijn aan Quantum statussen
 Een eind punt voor het verhogen van de Quantum-notatie en de Q# programmeer taal: bij het begin van dit document hebben we vermeld dat de Quantum status het fundamenteel object van informatie in quantum computing is.  Het kan dan als een verrassing zijn dat Q# er geen sprake is van een Quantum status.  In plaats daarvan worden alle statussen alleen beschreven door de bewerkingen die worden gebruikt om ze voor te bereiden.  Het vorige voor beeld is dit een uitstekende illustratie.  In plaats van een uniforme superpositie te geven voor elke Quantum-bits teken reeks in een REGI ster, kunnen we het resultaat als $ H ^ { \otimes n } \ket { 0 vertegenwoordigen } $ .  Deze exponentiële korte beschrijving van de status heeft niet alleen het voor deel dat we er in de klassieke reden voor kunnen hebben, maar ook een beknopt overzicht van de bewerkingen die nodig zijn om door de software stack te worden door gegeven om de algoritme te implementeren.  Daarom Q# is het ontworpen om poort reeksen te verzenden in plaats van Quantum Staten, maar op theoretisch niveau zijn de twee perspectieven gelijkwaardig.

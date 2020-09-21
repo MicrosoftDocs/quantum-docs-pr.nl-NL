@@ -1,20 +1,20 @@
 ---
 title: Tweede Kwantisatiefouten
 description: Meer informatie over de tweede Kwantisatiefouten-benadering voor het model leren van elektronische structuren in kwantum programmering.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869457"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835805"
 ---
 # <a name="second-quantization"></a>Tweede Kwantisatiefouten
 
@@ -77,7 +77,7 @@ De quantum chemie-bibliotheek kan gebruikmaken van deze conventies en de spin-ba
 ```
 
 Voor fermionic-systemen wordt voor komen dat er meer dan één elektro uren aanwezig zijn in een spin-Orbital tegelijk.
-Dit betekent dat we de twee juridische Staten kunnen schrijven voor $ \ psi_1 $ als \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket {0} _1 & \Text{if $ \ psi_1 $ niet bezet is,}\\\
+Dit betekent dat we de twee juridische Staten kunnen schrijven voor $ \ psi_1 $ als \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket {0} _1 & \Text{if $ \ psi_1 $ niet bezet is,} \\\
 \ket {1} _1 & \Text{if $ \ psi_1 $ is bezet.} \end{cases} \end{Equation} deze code ring is ideaal voor quantum computers, omdat het elektronische beroep als één Quantum bit kan worden opgeslagen.
 
 De beroeps statussen voor de $2N $ spin-banen kunnen op dezelfde manier worden opgeslagen in $2N $ qubits.

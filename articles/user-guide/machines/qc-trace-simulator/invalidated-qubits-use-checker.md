@@ -2,19 +2,19 @@
 title: Ongeldig qubits use Checker-Quantum Development Kit
 description: Meer informatie over de micro soft QDK qubits use Checker, die gebruikmaakt van de Quantum Trace Simulator om uw code te controleren op Q# potentieel ongeldige qubits.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868284"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835992"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Quantum Trace Simulator: ongeldig qubits use Checker
 

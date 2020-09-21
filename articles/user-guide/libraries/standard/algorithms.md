@@ -1,20 +1,20 @@
 ---
-title: Quantum algoritmen inQ#
+title: Quantum algoritmen in Q#
 description: Meer informatie over de belangrijkste Quantum Computing-algoritmen, waaronder amplitude versterking, Fourier Transform, Draper en Beauregard adders, en fase schatting.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868811"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835669"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmen #
 
@@ -30,7 +30,7 @@ De logica achter de amplitude versterking volgt rechtstreeks van de eigen van $Q
 
 Een andere nuttige eigenschap die er uit komt, is dat de eigenvalue $ \theta $ direct gerelateerd is aan de waarschijnlijkheid dat de oorspronkelijke status zou worden gemarkeerd (in het geval waar $P _0 $ een projector is op alleen de begin toestand).  Omdat de eigenphases van $Q $ $2 \ theta = 2 \ Sin ^ {-1} (\sqrt{\Pr (geslaagd)}) is, volgt $ het. als we de fase-schatting Toep assen op $Q $, kunnen we de kans op succes voor een unitary Quantum-procedure ontdekken.  Dit is handig omdat u quadratically minder toepassingen van de Quantum procedure nodig hebt om de kans op succes te ontdekken dan anders zou zijn.
 
-Q#introduceert de amplitude versterking als een specialisatie van obliviouse amplitude versterking.  De Oblivious-amplitude versterking heeft deze moniker, omdat de projector op de eerste eigenspace geen projector hoeft te zijn op de oorspronkelijke staat.  In deze zin is het protocol Oblivious in de oorspronkelijke staat.  De belangrijkste toepassing van de Oblivious-amplitude versterking is in bepaalde *lineaire combi Naties van simulatie methoden van unitary* Hamiltonian, waarbij de oorspronkelijke status onbekend is, maar wordt Entangled met een ancilla-REGI ster in het simulatie protocol.  Als dit ancilla-REGI ster zou moeten worden gewaardeerd als een vaste waarde, zegt $0 $, dan passen die simulatie methoden de gewenste unitary-trans formatie toe op de resterende qubits (het systeem register genoemd).  Alle andere meet resultaten leiden echter tot storingen.  Met de versterking van Oblivious-amplitude kan de kans op succes van deze meting worden verhoogd tot $100 \\ % $ met behulp van de bovenstaande reden.  Daarnaast komt de normale amplitude versterking overeen met de gevallen waarin het systeem register leeg is.  Daarom Q# gebruikt Oblivious amplitude versterking als de belangrijkste amplitude versterking subroutine.
+Q# introduceert de amplitude versterking als een specialisatie van obliviouse amplitude versterking.  De Oblivious-amplitude versterking heeft deze moniker, omdat de projector op de eerste eigenspace geen projector hoeft te zijn op de oorspronkelijke staat.  In deze zin is het protocol Oblivious in de oorspronkelijke staat.  De belangrijkste toepassing van de Oblivious-amplitude versterking is in bepaalde *lineaire combi Naties van simulatie methoden van unitary* Hamiltonian, waarbij de oorspronkelijke status onbekend is, maar wordt Entangled met een ancilla-REGI ster in het simulatie protocol.  Als dit ancilla-REGI ster zou moeten worden gewaardeerd als een vaste waarde, zegt $0 $, dan passen die simulatie methoden de gewenste unitary-trans formatie toe op de resterende qubits (het systeem register genoemd).  Alle andere meet resultaten leiden echter tot storingen.  Met de versterking van Oblivious-amplitude kan de kans op succes van deze meting worden verhoogd tot $100 \\ % $ met behulp van de bovenstaande reden.  Daarnaast komt de normale amplitude versterking overeen met de gevallen waarin het systeem register leeg is.  Daarom Q# gebruikt Oblivious amplitude versterking als de belangrijkste amplitude versterking subroutine.
 
 De algemene routine ( `AmpAmpObliviousByReflectionPhases` ) heeft twee registers die we aanroepen `ancillaRegister` en `systemRegister` . Daarnaast worden er twee Oracle-waarden geaccepteerd voor de nood zakelijke reflecties. De `ReflectionOracle` handelingen worden alleen uitgevoerd op het `ancillaRegister` moment dat de `ObliviousOracle` acties gezamenlijk op beide kassa's worden uitgevoerd. De invoer voor `ancillaRegister` moet worden geïnitialiseerd op een-1-eigenstate van de eerste reflectie operator $ \boldone-2P_1 $.
 

@@ -2,18 +2,18 @@
 title: Voor beeld van een NWChem Quantum-programma
 description: Door een NWChem-invoer deck te gebruiken, loopt u een voor beeld van het ophalen van poort aantallen voor de simulatie van de quantum chemie.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759712"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835754"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-end met NWChem #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> Standaard wordt voor komen dat scripts of modules worden uitgevoerd als beveiligings maatregel.
-> Als u modules wilt toestaan die `Invoke-NWChem.psm1` worden uitgevoerd in Windows, moet u het uitvoerings beleid mogelijk wijzigen.
+> Windows voor komt standaard dat er scripts of modules worden uitgevoerd als beveiligings maatregel.
+> Als u modules wilt toestaan die `Invoke-NWChem.psm1` worden uitgevoerd in Windows, moet u het beleid mogelijk wijzigen.
 > U doet dit door de opdracht uit te voeren `Set-ExecutionPolicy` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> Het uitvoerings beleid wordt dan teruggezet wanneer u Power shell afsluit.
-> Als u het uitvoerings beleid wilt opslaan, gebruikt u een andere waarde voor `-Scope` :
+> Het beleid wordt hersteld wanneer u Power shell afsluit.
+> Als u het beleid wilt opslaan, gebruikt u een andere waarde voor `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```
