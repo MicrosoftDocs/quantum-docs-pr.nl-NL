@@ -2,19 +2,19 @@ expanded: true
 items:
   - name: Aan de slag met de QDK
     href: get-started.md
-  - name: De QDK installeren
+  - name: De QDK instellen
+    href: index.md
+  - name: Voorbeelden om aan de slag te gaan
     items:
-      - name: Overzicht van de installatie
-        href: index.md
       - name: Q#-toepassingen
         href: install-command-line.md
-      - name: Q# Jupyter Notebooks
+      - name: Q# met Jupyter Notebooks
         href: install-jupyter.md
-      - name: Q# met andere talen
-        items:
-          - name: Q# met Python
-            href: install-python.md
-          - name: Q# met .NET
-            href: install-cs.md
+      - name: Q# met Binder
+        href: install-binder.md
+      - name: Q# met Python
+        href: install-python.md
+      - name: Q# met .NET
+        href: install-cs.md
   - name: De QDK bijwerken
     href: update.md

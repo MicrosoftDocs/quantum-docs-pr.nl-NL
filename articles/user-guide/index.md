@@ -2,19 +2,19 @@
 title: Q#-gebruikershandleiding
 description: Overzicht van het doel en de inhoud van de gebruikershandleiding
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869627"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834751"
 ---
 # <a name="the-no-locq-user-guide"></a>Q#-gebruikershandleiding
 
@@ -46,7 +46,7 @@ In de verschillende delen van deze handleiding worden de belangrijkste concepten
 
 - [Werken met qubits](xref:microsoft.quantum.guide.qubits): beschrijven de functies van Q# die u kunt gebruiken om te werken met afzonderlijke qubits en systemen van qubits, met name het toewijzen ervan, het uitvoeren van bewerkingen en het meten ervan. 
 
-- [Controlestroom](xref:microsoft.quantum.guide.controlflow): beschrijft uitgebreid de programmeerstroompatronen die beschikbaar zijn in Q#. Deze omvatten veel standaardtechnieken (zoals voorwaardelijke uitvoering, voor lussen en tijdens lussen) en het patroon voor de kwantumspecifieke herhalingsbewerking.
+- [Controlestroom](xref:microsoft.quantum.guide.controlflow): Beschrijft uitgebreid de programmeerstroompatronen die beschikbaar zijn in Q#. Deze omvatten veel standaardtechnieken (zoals voorwaardelijke verwerking, *voor* lussen en *tijdens* lussen) en het patroon voor de kwantumspecifieke *herhalingsbewerking*.
 
 - [Testen en foutopsporing](xref:microsoft.quantum.guide.testingdebugging): hierin wordt een aantal technieken uitgelegd om ervoor te zorgen dat uw code doet wat die moet doen. 
     Als gevolg van de algemene matheid van kwantuminformatie, kunnen er voor het opsporen van fouten in een kwantumprogramma gespecialiseerde technieken nodig zijn. 
@@ -55,13 +55,13 @@ In de verschillende delen van deze handleiding worden de belangrijkste concepten
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Kwantumsimulators en resourceschattingen
 
-- [Kwantumsimulatoren en hosttoepassingen](xref:microsoft.quantum.machines): een overzicht van de verschillende beschikbare simulators, evenals het algemene uitvoeringsmodel tussen de hostprogramma's en de doelmachines.
+- [Kwantumsimulatoren en hosttoepassingen](xref:microsoft.quantum.machines): Een overzicht van de verschillende beschikbare simulators, evenals het algemene uitvoeringsmodel tussen de hostprogramma's en de doelmachines.
 
 - [Volledige statussimulator](xref:microsoft.quantum.machines.full-state-simulator): de doelcomputer die de volledige kwantumstatus simuleert. Handig voor het volledig uitvoeren of debuggen van kleinere programma's (minder dan een paar dozijn qubits)
 
 - [Resoureschattingen](xref:microsoft.quantum.machines.resources-estimator): maakt een schatting van het aantal benodigde resources om een bepaald exemplaar uit te voeren van een Q#-bewerking in een kwantumcomputer.
 
-- [Traceersimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): voert een kwantumprogramma uit zonder de toestand van een kwantumcomputer daadwerkelijk te simuleren en kan daarom kwantumprogramma's simuleren die duizenden qubits gebruiken. Handig om klassieke code binnen een kwantumprogramma te debuggen en om in te schatten hoeveel resources zijn vereist.
+- [Traceersimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Voert een kwantumprogramma uit zonder de toestand van een kwantumcomputer daadwerkelijk te simuleren en kan daarom kwantumprogramma's simuleren die duizenden qubits gebruiken. Handig om klassieke code binnen een kwantumprogramma te debuggen en om in te schatten hoeveel resources zijn vereist.
 
 - [Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator): een kwantumsimulator voor speciale doeleinden die kan worden gebruikt met miljoenen qubits, maar alleen voor programma's met een beperkte set kwantumbewerkingen (X, CNOT en multi-controlled X).
 
