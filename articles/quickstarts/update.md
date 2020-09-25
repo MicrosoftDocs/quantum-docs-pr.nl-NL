@@ -2,7 +2,7 @@
 title: De Quantum Development Kit (QDK) bijwerken
 description: Hierin wordt beschreven hoe u uw Q#-projecten en de Microsoft Quantum Development Kit naar de actuele versie kunt bijwerken.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863648"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834918"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>De Microsoft Quantum Development Kit (QDK) bijwerken
 
@@ -41,7 +41,7 @@ U dient deze instructies te volgen om uw Q#-projecten bij te werken, ongeacht of
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Q#-projecten in Visual Studio bijwerken
  
-1. Voer een update uit naar de meest recente versie van Visual Studio 2019. Instructies hiervoor vindt u [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019).
+1. Voer een update uit naar de meest recente versie van Visual Studio 2019. Instructies hiervoor vindt u [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio).
 2. Open uw oplossing in Visual Studio.
 3. Selecteer in het menu de opties **Bouwen** -> **Oplossing opschonen**.
 4. Werk in elk van uw .csproj-bestanden het doelframework bij naar `netcoreapp3.1` (of naar `netstandard2.1` als het een bibliotheekproject is).
