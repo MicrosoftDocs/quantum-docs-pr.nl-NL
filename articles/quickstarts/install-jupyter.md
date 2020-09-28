@@ -1,29 +1,27 @@
 ---
 title: Ontwikkelen met Q# Jupyter-notebooks
+description: Meer informatie over hoe u een Q#-toepassing maakt met Jupyter Notebooks.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866805"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834309"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Ontwikkelen met Q# Jupyter-notebooks
 
 Installeer de QDK voor het ontwikkelen van Q#-bewerkingen op Q# Jupyter Notebooks.
 
-Met Jupyter Notebooks kunt u in-place codes uitvoeren naast instructies, notities en andere inhoud. Deze omgeving is ideaal voor het schrijven van Q#-code met ingesloten uitleg of interactieve zelfstudies over kwantumcomputing. Hier leest u wat u moet doen om uw eigen Q#-notebooks te maken.
-
-> [!NOTE]
-> * In Q# Jupyter Notebooks kunt u alleen Q#-code uitvoeren en de bewerkingen kunnen niet worden aangeroepen vanuit externe hostprogramma's (zoals Python of C#-bestanden). Deze omgeving is niet geschikt als u een extern, klassiek hostprogramma wilt combineren met het kwantumprogramma.
+Met Jupyter Notebooks kunt u in-place codes berekenen naast instructies, notities en andere inhoud. Deze omgeving is ideaal voor het schrijven van Q#-code met ingesloten uitleg of interactieve zelfstudies over kwantumcomputing. Hier leest u wat u moet doen om uw eigen Q#-notebooks te maken.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>De IQ# Jupyter-kernel installeren
 
@@ -62,14 +60,14 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Als er tijdens de `dotnet iqsharp install`-stap een fout optreedt, moet u een nieuw terminalvenster openen en het nogmaals proberen.
-    > Als het daarna nog steeds niet werkt, zoekt u het geïnstalleerde `dotnet-iqsharp`-hulpprogramma (in Windows, `dotnet-iqsharp.exe`) en voert u dit uit:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > waarbij `/path/to/dotnet-iqsharp` moet worden vervangen door het absolute pad naar het `dotnet-iqsharp`-hulpprogramma in uw bestandssysteem.
-    > Dit is meestal bij `.dotnet/tools` in de map van uw gebruikersprofiel.
+> [!NOTE]
+> Als er tijdens de `dotnet iqsharp install`-stap een fout optreedt, moet u een nieuw terminalvenster openen en het nogmaals proberen.
+> Als het daarna nog steeds niet werkt, zoekt u het geïnstalleerde `dotnet-iqsharp`-hulpprogramma (in Windows, `dotnet-iqsharp.exe`) en voert u dit uit:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> waarbij `/path/to/dotnet-iqsharp` moet worden vervangen door het absolute pad naar het `dotnet-iqsharp`-hulpprogramma in uw bestandssysteem.
+> Dit is meestal bij `.dotnet/tools` in de map van uw gebruikersprofiel.
     
 ***
 
@@ -87,7 +85,7 @@ Nu bent u klaar om de installatie van uw Q# Jupyter Notebook te controleren door
 
     - Als Jupyter Notebook niet automatisch wordt geopend in de browser, kopieert en plakt u de URL die u van de opdrachtregel hebt ontvangen, in de browser.
 
-1. Kies Nieuw → Q# om een Jupyter Notebook met een Q#-kernel te maken, en voeg de volgende code toe aan de eerste notebook-cel:
+1. Kies **Nieuw → Q#** om een Jupyter Notebook met een Q#-kernel te maken, en voeg de volgende code toe aan de eerste notebook-cel:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

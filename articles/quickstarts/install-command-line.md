@@ -1,22 +1,25 @@
 ---
 title: Ontwikkelen met Q#-toepassingen
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Meer informatie over hoe u een Q#-toepassing maakt die wordt uitgevoerd vanuit de opdrachtprompt.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358255"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834411"
 ---
 # <a name="develop-with-no-locq-applications"></a>Ontwikkelen met Q#-toepassingen
+
+Volg de instructies op het tabblad dat hoort bij de omgeving.
 
 Q#-programma's kunnen zonder stuurprogramma zelfstandig worden uitgevoerd in een hosttaal als C#, F# of Python.
 
@@ -63,14 +66,14 @@ Ga als volgt te werk om een nieuw project te maken:
 2. Klik op **Zelfstandige consoletoepassing**.
 3. Ga naar de locatie waar het project moet worden opgeslagen en klik op **Project maken**.
 4. Klik rechtsonder op **Nieuw project openen...** als het project is gemaakt.
-        
+
 Controleer het project. Als het goed is, ziet u een bronbestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven.
 
 De toepassing uitvoeren:
+
 1. Klik op **Terminal** -> **Nieuwe terminal**.
 2. Voer bij de terminalprompt `dotnet run` in.
 3. Als het goed is, ziet u de volgende tekst in het uitvoervenster: `Hello quantum world!`
-
 
 > [!NOTE]
 > Werkruimten met meerdere hoofdmappen worden momenteel niet ondersteund door de VS Code Q#-extensie. Als u meerdere projecten in één VS Code-werkruimte hebt, moeten alle projecten zich in dezelfde hoofdmap bevinden.
@@ -80,6 +83,7 @@ De toepassing uitvoeren:
 Controleer uw Visual Studio-installatie door een Q# `Hello World`-toepassing te maken.
 
 Een nieuwe Q#-toepassing maken:
+
 1. Open Visual Studio en klik op **Bestand** -> **Nieuw** -> **Project**.
 2. Typ `Q#` in het zoekvak, selecteer **Q#-toepassing** en klik op **Volgende**.
 3. Geef een naam en een locatie op voor uw toepassing en klik op **Maken**.
@@ -88,6 +92,7 @@ Een nieuwe Q#-toepassing maken:
 Controleer het project. Als het goed is, ziet u een bronbestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven.
 
 De toepassing uitvoeren:
+
 1. Selecteer **Fouten opsporen** -> **Starten zonder foutopsporing**.
 2. Als het goed is, wordt de tekst `Hello quantum world!` afgedrukt naar een consolevenster.
 
@@ -105,11 +110,13 @@ Controleer de installatie door een Q# `Hello World`-toepassing te maken.
     ```
 
 1. Een nieuwe toepassing maken:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Navigeer naar de toepassingsmap:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Controleer de installatie door een Q# `Hello World`-toepassing te maken.
     De map bevat nu een bestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven. U kunt deze sjabloon wijzigen met een teksteditor en overschrijven met uw eigen kwantumtoepassingen. 
 
 1. Voer het programma uit:
+
     ```dotnetcli
     dotnet run
     ```

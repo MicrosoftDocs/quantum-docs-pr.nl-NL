@@ -2,23 +2,23 @@
 title: Kwantumcomputing begrijpen
 description: Wat zijn kwantumcomputers en hoe maken ze gebruik van de principes van kwantummechanica?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866958"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834989"
 ---
 # <a name="understanding-quantum-computing"></a>Kwantumcomputing begrijpen
 
-Bij kwantumcomputing worden de principes van kwantummechanica gebruikt voor het verwerken van informatie. Daarom vereist kwantumcomputing een andere benadering dan klassieke computing.  Een verschil, bijvoorbeeld, is de processor die in kwantumcomputers wordt gebruikt.  In klassieke computers worden welbekende siliciumchips gebruikt, terwijl in kwantumcomputers kwantummaterialen zoals atomen, ionen, fotonen of elektronen worden gebruikt.  
+Bij kwantumcomputing worden de principes van kwantummechanica gebruikt voor het verwerken van informatie. Daarom vereist kwantumcomputing een andere benadering dan klassieke computing. Een verschil, bijvoorbeeld, is de processor die in kwantumcomputers wordt gebruikt. In klassieke computers worden welbekende siliciumchips gebruikt, terwijl in kwantumcomputers kwantumsystemen zoals atomen, ionen, fotonen of elektronen worden gebruikt. Ze gebruiken hun kwantumeigenschappen om bits te vertegenwoordigen die kunnen worden voorbereid in andere kwantumsuperposities van 1 en 0.  
 
 Het kwantummateriaal gedraagt zich in overeenstemming met de wetten van kwantummechanica, met behulp van concepten zoals probabilistische computing, superpositie en verstrengeling. Deze concepten vormen de basis voor kwantumalgoritmen, die de kracht van kwantumcomputing benutten voor het oplossen van complexe problemen. In dit artikel worden enkele essentiële concepten van kwantummechanica beschreven waarop kwantumcomputing is gebaseerd.
 

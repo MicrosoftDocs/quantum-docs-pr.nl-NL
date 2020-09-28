@@ -2,23 +2,23 @@
 title: Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
 description: Meer informatie over de Microsoft Quantum Development Kit, de Q#-programmeertaal en hoe u kwantumprogramma's kunt maken.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863777"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834564"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Wat wordt verstaan onder de Q#-programmeertaal en de QDK?
 
-Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Deze maakt deel uit van de Quantum Development Kit (QDK), met onder meer [Q#-bibliotheken](xref:microsoft.quantum.libraries), [kwantumsimulators](xref:microsoft.quantum.machines), [extensies voor andere programmeeromgevingen](xref:microsoft.quantum.install) en [API-documentatie](xref:microsoft.quantum.standardlibsintro). Naast de Standard Q#-bibliotheek bevat de QDK ook scheikunde-, machine learning- en numerieke bibliotheken.
+Q# is de opensource-programmeertaal van Microsoft voor het ontwikkelen en uitvoeren van kwantumalgoritmen. Deze maakt deel uit van de Quantum Development Kit (QDK), met onder meer [Q#-bibliotheken](xref:microsoft.quantum.libraries), [kwantumsimulators](xref:microsoft.quantum.machines), [extensies voor andere programmeeromgevingen](xref:microsoft.quantum.install) en [API-documentatie](xref:microsoft.quantum.apiref-intro). Naast de Standard Q#-bibliotheek bevat de QDK ook scheikunde-, machine learning- en numerieke bibliotheken.
 
 Als programmeertaal bevat Q# bekende elementen uit Python, C# en F#, en ondersteunt het een eenvoudig proceduremodel voor het schrijven van programma's met lussen, if/then-instructies en veelvoorkomende gegevenstypen. De taal introduceert tevens nieuwe, kwantumspecifieke gegevensstructuren en bewerkingen.
 
@@ -54,7 +54,7 @@ Wanneer u het programma compileert en uitvoert, wordt er een exemplaar van de kw
 
 Het isoleren van de Q#-code in de simulator zorgt ervoor dat de algoritmen de wetten van kwantumfysica volgen en op de juiste wijze op kwantumcomputers kunnen worden uitgevoerd.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp-codestroom](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>Hoe kan ik de QDK gebruiken?
 
