@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.transposed
+name: Transposed
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Retourneert de getransponeerde matrix die wordt weer gegeven als een matrix met matrices.
+
+
+  Invoer als $r \times c $ matrix met $r $ rows en $c $ columns.  De matrix is gebaseerd op rijen, dat wil zeggen, `matrix[i][j]` het element op rij $i $ en kolom $j $.
+
+
+  Deze functie retourneert de $c \times r $ matrix die de getransponeerde van de invoer matrix is.
+examples: >-
+  ```Q#
+
+  // same as [[1, 4], [2, 5], [3, 6]]
+
+  let transposed = Transposed([[1, 2, 3], [4, 5, 6]]);
+
+  ```
+syntax: "function Transposed (matrix : 'T[][]) : 'T[][]"
+input:
+  content: "(matrix : 'T[][])"
+  types:
+  - name: matrix
+    summary: Op rijen gebaseerd $r \times c $ matrix
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: $C \times r $ matrix getransponeerd
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het type van elk element van `matrix` .
+metadata:
+  ms.openlocfilehash: 3d9b199a15cf412f99e10d9fffc628306c4ea9d9
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493711"

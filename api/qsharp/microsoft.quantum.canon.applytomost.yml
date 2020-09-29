@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytomost
+name: ApplyToMost
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  Hiermee wordt een bewerking toegepast op alle, behalve het laatste element van een matrix.
+
+
+  Als er een bewerking `op` en een matrix met doelen `targets` worden opgegeven, geldt `op(Most(targets))` .
+examples: >-
+  De volgende Q #-fragmenten zijn gelijk:
+
+
+  ```Q#
+
+  ApplyToMost(ApplyCNOTChain, register);
+
+  ApplyCNOTChain(Most(register));
+
+  ```
+syntax: "operation ApplyToMost (op : ('T[] => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: Een bewerking die moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die moet worden toegepast.
+seeAlso:
+- microsoft.quantum.canon.applytomosta
+- microsoft.quantum.canon.applytomostc
+- microsoft.quantum.canon.applytomostca
+metadata:
+  ms.openlocfilehash: e2b6ed4171425496c7da84ba522d56532028ce75
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493645"

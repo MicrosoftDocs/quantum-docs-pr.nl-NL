@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.unzipped
+name: Unzipped
+type: function
+namespace: microsoft.quantum.arrays
+summary: Op basis van een matrix van 2-Tuples retourneert een tuple van twee matrices, elk met de elementen van de Tuples van de invoer matrix.
+examples: >-
+  ```Q#
+
+  // split is same as ([6, 5, 5, 3, 2, 1], [true, false, false, false, true, false])
+
+  let split = Unzipped([(6, true), (5, false), (5, false), (3, false), (2, true), (1, false)]);
+
+  ```
+syntax: "function Unzipped (arr : ('T, 'U)[]) : ('T[], 'U[])"
+input:
+  content: "(arr : ('T, 'U)[])"
+  types:
+  - name: arr
+    summary: Een matrix met 2-Tuples
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+output:
+  content: ('T[], 'U[])
+  types:
+  - summary: Twee matrices, de eerste die alle eerste elementen van de ingevoerde Tuples bevat, de tweede matrix met alle tweede elementen van de ingevoerde Tuples.
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+    - isArray: true
+      uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het type van het eerste element in elke tupel
+- uid: "'U"
+  summary: Het type van het tweede element in elke tupel
+seeAlso:
+- microsoft.quantum.arrays.zipped
+metadata:
+  ms.openlocfilehash: 2bde9351719a662008abf0db507aca9fee289b6b
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493705"
