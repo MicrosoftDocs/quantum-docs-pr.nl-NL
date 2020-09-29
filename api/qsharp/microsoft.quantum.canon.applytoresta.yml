@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoresta
+name: ApplyToRestA
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  Hiermee wordt een bewerking toegepast op alle, behalve het eerste element van een matrix.
+
+
+  Als er een bewerking `op` en een matrix met doelen `targets` worden opgegeven, geldt `op(Rest(targets))` .
+syntax: "operation ApplyToRestA (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit is Adj), targets : 'T[])"
+  types:
+  - name: op
+    summary: Een bewerking die moet worden toegepast.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Het invoer type van de bewerking die moet worden toegepast.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytorestc
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: c4cd4dd70123740270dddb159bd9ad733e6047e0
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493618"

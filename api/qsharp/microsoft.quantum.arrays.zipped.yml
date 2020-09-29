@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zipped
+name: Zipped
+type: function
+namespace: microsoft.quantum.arrays
+summary: Als er twee matrices worden opgegeven, wordt er een nieuwe matrix van paren geretourneerd, zodat elk paar een element uit elke oorspronkelijke matrix bevat.
+examples: >-
+  ```qsharp
+
+  let left = [1, 3, 71];
+
+  let right = [false, true];
+
+  let pairs = Zipped(left, right); // [(1, false), (3, true)]
+
+  ```
+syntax: "function Zipped (left : 'T[], right : 'U[]) : ('T, 'U)[]"
+input:
+  content: "(left : 'T[], right : 'U[])"
+  types:
+  - name: left
+    summary: Een matrix met waarden voor het eerste element van elke tuple.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: right
+    summary: Een matrix met waarden voor het tweede element van elke tupel.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+output:
+  content: ('T, 'U)[]
+  types:
+  - summary: Een matrix die de paren van het formulier bevat `(left[idx], right[idx])` `idx` . Als de twee matrices een lengte hebben die niet even groot is, is de uitvoer zo lang als de kortste van de invoer.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Het type van de elementen van de linker matrix.
+- uid: "'U"
+  summary: Het type van de rechter matrix elementen.
+seeAlso:
+- microsoft.quantum.arrays.zipped3
+- microsoft.quantum.arrays.zipped4
+- microsoft.quantum.arrays.unzipped
+metadata:
+  ms.openlocfilehash: 933bf0d7f80436f0e942f84ad89b05ccd5c91620
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493690"
