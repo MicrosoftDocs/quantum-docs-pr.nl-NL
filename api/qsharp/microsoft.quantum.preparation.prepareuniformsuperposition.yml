@@ -4,12 +4,13 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: >-
-  Hiermee maakt u een uniforme superpositie op status die 0 t/m-codeert `nIndices` .
+  Hiermee maakt u een uniforme superpositie op status die 0 t/m-codeert `nIndices - 1` .
 
 
   Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
+remarks: De bewerking is adjointable, maar vereist dat `indexRegister` zich in een uniforme superpositie bevindt `nIndices` in de eerste basis status in dat geval.
 examples: >-
   In het volgende voor beeld wordt de status $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ op $3 $ qubits voor bereid.
 
@@ -20,6 +21,7 @@ examples: >-
 
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
 
   ```
@@ -46,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: ff1e1e50992b209865c4e3b1c82e9faec9199d58
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331327"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485393"
