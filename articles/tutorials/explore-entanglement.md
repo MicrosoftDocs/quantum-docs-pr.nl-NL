@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834020"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492333"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
@@ -83,7 +83,7 @@ Ons doel is om twee qubits in een specifieke Quantum staat voor te bereiden en t
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit initialiseren met meting
 
-In de eerste code hieronder laten we u zien hoe u met qubits kunt werken in Q# .  We voeren twee bewerkingen uit [`M`](xref:microsoft.quantum.intrinsic.m) en zorgen [`X`](xref:microsoft.quantum.intrinsic.x) dat de status van een Qubit wordt getransformeerd. In dit codefragment wordt een bewerking `SetQubitState` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `SetQubitState` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q# retourneert een Qubit-meting altijd `Zero` of `One` .  Als de meting een waarde retourneert die niet gelijk is aan de gewenste waarde, `SetQubitState` ' spiegelt ' de Qubit; dat wil zeggen, wordt een bewerking uitgevoerd. `X` Hiermee wordt de Qubit-status gewijzigd in een nieuwe status waarin de waarschijnlijkheid van een meting `Zero` wordt geretourneerd en `One` omgekeerd. Op deze manier `SetQubitState` plaatst de doel-Qubit altijd de gewenste status.
+In het eerste code fragment hieronder ziet u hoe u met qubits kunt werken in Q# .  We voeren twee bewerkingen uit [`M`](xref:microsoft.quantum.intrinsic.m) en zorgen [`X`](xref:microsoft.quantum.intrinsic.x) dat de status van een Qubit wordt getransformeerd. In dit codefragment wordt een bewerking `SetQubitState` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `SetQubitState` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q# retourneert een Qubit-meting altijd `Zero` of `One` .  Als de meting een waarde retourneert die niet gelijk is aan de gewenste waarde, `SetQubitState` ' spiegelt ' de Qubit; dat wil zeggen, wordt een bewerking uitgevoerd. `X` Hiermee wordt de Qubit-status gewijzigd in een nieuwe status waarin de waarschijnlijkheid van een meting `Zero` wordt geretourneerd en `One` omgekeerd. Op deze manier `SetQubitState` plaatst de doel-Qubit altijd de gewenste status.
 
 Vervang de inhoud van `Program.qs` door de volgende code:
 
@@ -112,7 +112,7 @@ Een Q# bewerking is een Quantum subroutine. Dat wil zeggen dat het een aanroep b
 
 De argumenten voor een bewerking worden tussen haakjes opgegeven als een tupel.
 
-Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de bewerking `SetQubitState` geen retourwaarde, zodat deze is gemarkeerd als retourzending `Unit`. Dit is het Q# equivalent van `unit` in F #, wat ongeveer hetzelfde is als `void` in C# en een lege tuple in python ( `()` , vertegenwoordigd door de type hint `Tuple[()]` ).
+Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geval heeft de `SetQubitState` bewerking geen retour type, zodat deze als retour waarde wordt gemarkeerd `Unit` . Dit is het Q# equivalent van `unit` in F #, wat ongeveer hetzelfde is als `void` in C# en een lege tuple in python ( `()` , vertegenwoordigd door de type hint `Tuple[()]` ).
 
 U hebt twee Quantum bewerkingen gebruikt in uw eerste Q# bewerking:
 
@@ -159,7 +159,7 @@ Deze bewerking (`TestBellState`) wordt gedurende `count` iteraties als een lus u
 
 Variabelen in Q# zijn standaard onveranderbaar; hun waarde kan niet worden gewijzigd nadat ze zijn gebonden. Het sleutelwoord `let` wordt gebruikt om de binding van een onveranderlijke variabele aan te geven. Bewerkingsargumenten zijn altijd onveranderbaar.
 
-Als u een variabele nodig hebt waarvan de waarde kan worden gewijzigd, zoals `numOnes` in het voorbeeld, kunt u de variabele declareren met het sleutelwoord `mutable`. De waarde van een veranderlijke variabele kan worden gewijzigd met behulp van een `setQubitState`-instructie.
+Als u een variabele nodig hebt waarvan de waarde kan worden gewijzigd, zoals `numOnes` in het voorbeeld, kunt u de variabele declareren met het sleutelwoord `mutable`. De waarde van een veranderlijke variabele kan worden gewijzigd met behulp van een `set`-instructie.
 
 In beide gevallen wordt het type variabele door de compiler afgeleid. Q# geen type annotaties voor variabelen vereist.
 
@@ -169,7 +169,7 @@ De `using` instructie is ook speciaal voor Q# . Deze wordt gebruikt om qubits to
 
 ## <a name="run-the-code-from-the-command-prompt"></a>De code uitvoeren vanaf de opdracht prompt
 
-Als u de code wilt uitvoeren, moet u de compiler opgeven *die* kan worden uitgevoerd wanneer de opdracht wordt opgegeven `dotnet run` . Dit wordt gedaan met een eenvoudige wijziging in het Q# bestand door een regel toe te voegen die de `@EntryPoint()` aanroepable direct voorafgaat: de `TestBellState` bewerking in dit geval. De volledige code moet zijn:
+Als u de code wilt uitvoeren, moet u aangeven *welke* compiler kan worden uitgevoerd wanneer de opdracht wordt aangeboden `dotnet run` . Dit wordt gedaan met een eenvoudige wijziging in het Q# bestand door een regel toe te voegen die de `@EntryPoint()` aanroepable direct voorafgaat: de `TestBellState` bewerking in dit geval. De volledige code moet zijn:
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Laten we nu eens kijken hoe Q# u qubits in superpositie plaatst.  Zoals eerder g
 
 ### <a name="x-flips-qubit-state"></a>`X` Hiermee wordt de status van Qubit gespiegeld
 
-Eerst proberen we de qubit te spiegelen (als de qubit zich in de toestand `Zero` bevindt, wordt deze gespiegeld naar `One` en omgekeerd). Dit wordt bereikt door een bewerking `X` uit te voeren voordat we de qubit meten in `TestBellState`:
+Eerst proberen we de Qubit te spie gelen (als de Qubit de status heeft, `Zero` wordt deze gespiegeld `One` en omgekeerd). Dit wordt bereikt door een bewerking `X` uit te voeren voordat we de qubit meten in `TestBellState`:
 
 ```qsharp
 X(qubit);

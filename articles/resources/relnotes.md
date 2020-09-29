@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834139"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492350"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -23,6 +23,24 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-01220092803"></a>Versie 0.12.20092803
+
+*Release datum: 29 september, 2020*
+
+Deze release omvat het volgende:
+
+- Aankondiging en ontwerp specificatie van [Quantum Intermediate vertegenwoordiging (QIR)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) die is bedoeld als een gemeen schappelijke indeling in verschillende front-en back-ends. Zie ook ons [blog bericht](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) op QIR.
+- Lance ring van onze nieuwe [ Q# taal opslag plaats](https://github.com/microsoft/qsharp-language) met ook de volledige [ Q# documentatie](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language).
+- Prestatie verbeteringen voor QuantumSimulator voor Program ma's met een groot aantal qubits: betere toepassing van Gate Fusion-beslissingen; verbeterd parallel Lise ring in Linux-systeem; Intelligent schema voor het uitvoeren van Gate is toegevoegd. oplossingen voor fouten.
+- IntelliSense-functies worden nu ondersteund voor Q# bestanden in Visual Studio en Visual Studio code, zelfs zonder een project bestand.
+- Diverse Q# verbeteringen in/python-interoperabiliteit en oplossingen voor problemen, inclusief betere ondersteuning voor numpy-gegevens typen.
+- Verbeteringen in de naam ruimte micro soft. Quantum. arrays (Zie [micro soft/QuantumLibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)).
+- Er is een nieuw [herhalings-tot-resultaat-voor beeld](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) toegevoegd dat slechts twee qubits gebruikt.
+
+Sinds de laatste release is de naam van de standaard vertakking in elk van de open source-opslag plaatsen gewijzigd in `main` .
+
+Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24).
 
 ## <a name="version-01220082513"></a>Versie 0.12.20082513
 
