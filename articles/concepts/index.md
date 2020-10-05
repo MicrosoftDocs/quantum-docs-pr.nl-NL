@@ -9,18 +9,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834547"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91478933"
 ---
 # <a name="quantum-computing-history-and-background"></a>Geschiedenis en achtergrond van kwantumcomputing
 
 De afgelopen jaren zijn er talloze nieuwe computertechnologieën ontwikkeld en daarvan vereist kwantumcomputing misschien wel de grootste paradigmaverschuiving van ontwikkelaars.  Kwantumcomputers werden in de jaren '80 voorgesteld door [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) en [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  De idee achter kwantumcomputing is afgeleid van wat vaak werd gezien als een van de grootste belemmeringen in de natuurkunde: opmerkelijke wetenschappelijke vooruitgang die stuit op het onvermogen om zelfs eenvoudige systemen te modelleren. Kwantummechanica is namelijk al ontwikkeld tussen 1900 en 1925 en is nog steeds de hoeksteen waarop scheikunde, fysica van de gecondenseerde materie en technologieën variërend van computerchips tot LED-verlichting rusten.  Ondanks deze successen leken zelfs sommige van de eenvoudigste systemen niet meer door de mens te kunnen worden gemodelleerd met kwantummechanica.  Dit komt doordat zelfs voor het simuleren van systemen met maar enkele tientallen deeltjes die op elkaar reageren, meer rekenkracht nodig is dan een conventionele computer in duizenden jaren kan leveren.
 
-Er zijn veel redenen waarom kwantummechanica zo moeilijk te simuleren is.  De eenvoudigste manier om kwantumtheorie te begrijpen, is misschien wel te zeggen dat materie, op kwantumniveau, kan bestaan in allerlei verschillende mogelijke configuraties (ook wel bekend als *toestanden*) tegelijk.  In tegenstelling tot klassieke waarschijnlijkheidsrekening, kunnen de vele configuraties van de kwantumtoestand, die potentieel waargenomen kunnen worden, met elkaar interfereren zoals golven in een getijdenpoel.  Door deze interferentie is het niet mogelijk de configuraties van kwantumtoestanden te verkrijgen met statistische steekproeven.  In plaats daarvan moeten we *elke mogelijke* configuratie berekenen waarin een kwantumsysteem zich kan bevinden, als we de kwantumevolutie willen begrijpen.  
+Er zijn veel redenen waarom kwantummechanica zo moeilijk te simuleren is.  De eenvoudigste manier om kwantumtheorie te begrijpen, is misschien wel te zeggen dat materie, op kwantumniveau, zich in allerlei verschillende mogelijke configuraties (ook wel bekend als *toestanden*) tegelijk bevindt.  In tegenstelling tot klassieke waarschijnlijkheidsrekening, kunnen de vele configuraties van de kwantumtoestand, die potentieel waargenomen kunnen worden, met elkaar interfereren zoals golven in een getijdenpoel.  Door deze interferentie is het niet mogelijk de configuraties van kwantumtoestanden te verkrijgen met statistische steekproeven.  In plaats daarvan moeten we *elke mogelijke* configuratie berekenen waarin een kwantumsysteem zich kan bevinden, als we de kwantumevolutie willen begrijpen.  
 
 Stel u zich een systeem van elektronen voor waarbij elektronen zich in ongeveer $40$ posities kunnen bevinden.  Het aantal mogelijke configuraties voor de elektronen is dan $2^{40}$ (omdat zich op elke positie al dan niet een elektron kan bevinden). Om de kwantumtoestand van de elektronen op te slaan in een conventioneel computergeheugen, is maar liefst $130$ GB aan geheugen nodig.  Dat is behoorlijk veel, maar nog wel mogelijk met sommige computers.  Als we uitgaan van $41$ mogelijke posities voor de deeltjes, zijn er twee keer zoveel mogelijke configuraties bij $2^{41}$ en is er meer dan $260$ GB aan geheugen nodig om de kwantumtoestand op te slaan. We kunnen dit spelletje met een steeds toenemend aantal posities niet oneindig volhouden als we de toestand conventioneel willen opslaan, omdat we dan al snel de geheugencapaciteit van 's werelds krachtigste computers overschrijden.  Bij een paar honderd elektronen is de benodigde hoeveelheid geheugen om het systeem te kunnen opslaan groter dan het aantal deeltjes in het universum. We hoeven dus geen enkele hoop te koesteren dat we dergelijke kwantumdynamiek ooit kunnen simuleren met conventionele computers. Toch ontwikkelen dergelijke systemen zich in de loop der tijd in de natuur volgens de wetten van de kwantummechanica, zich totaal onbewust van ons onvermogen om hun evolutie met conventionele rekenkracht in kaart te brengen of te simuleren.
 
