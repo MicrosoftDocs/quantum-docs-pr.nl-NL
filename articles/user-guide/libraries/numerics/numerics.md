@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868794"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764122"
 ---
 # <a name="using-the-numerics-library"></a>De numerieke bibliotheek gebruiken
 
@@ -37,7 +37,7 @@ De numerieke bibliotheek ondersteunt de volgende typen
 
 1. **`LittleEndian`**: Een Qubit-matrix `qArr : Qubit[]` die een geheel getal vertegenwoordigt waarbij `qArr[0]` de minst significante bit wordt aangeduid.
 1. **`SignedLittleEndian`**: Zelfde als `LittleEndian` , behalve dat dit staat voor een geheel getal met teken dat is opgeslagen in twee aanvullingen.
-1. **`FixedPoint`**: Dit is een reëel getal dat bestaat uit een Qubit `qArr2 : Qubit[]` -matrix en een binaire punt positie `pos` , waarmee het aantal binaire cijfers links van het binaire punt wordt geteld. `qArr2`wordt op dezelfde manier opgeslagen als `SignedLittleEndian` .
+1. **`FixedPoint`**: Dit is een reëel getal dat bestaat uit een Qubit `qArr2 : Qubit[]` -matrix en een binaire punt positie `pos` , waarmee het aantal binaire cijfers links van het binaire punt wordt geteld. `qArr2` wordt op dezelfde manier opgeslagen als `SignedLittleEndian` .
 
 ## <a name="operations"></a>Bewerkingen
 
@@ -46,7 +46,7 @@ Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaa
 1. **`LittleEndian`**
     - Optellen
     - Vergelijking
-    - Vermenigvuldiging
+    - Vermenigvuldigen
     - Squaring
     - Deling (met rest)
 
@@ -54,14 +54,14 @@ Voor elk van de volgende drie typen zijn er verschillende bewerkingen beschikbaa
     - Optellen
     - Vergelijking
     - Aanvulling van inversie modulo 2
-    - Vermenigvuldiging
+    - Vermenigvuldigen
     - Squaring
 
 1. **`FixedPoint`**
     - Voor bereiding/initialisatie naar een klassieke waarde
     - Toevoeging (klassieke constante of andere Quantum vaste komma)
     - Vergelijking
-    - Vermenigvuldiging
+    - Vermenigvuldigen
     - Squaring
     - Polynoom-evaluatie met specialisatie voor even en oneven functies
     - Reciproque (1/x)
@@ -120,7 +120,7 @@ Als u aan de slag wilt gaan, kloont u de opslag plaats en opent u de `Numerics` 
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 Ga vervolgens `cd` naar een van de voorbeeld mappen en voer het voor beeld uit via
