@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492350"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771331"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-01220100504"></a>Versie 0.12.20100504
+
+*Release datum: 5 oktober, 2020*
+
+Deze release corrigeert een fout die van invloed is op het laden van Q# notitie blokken (Zie [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>Versie 0.12.20092803
 
@@ -66,7 +72,7 @@ Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.c
 
 Deze release omvat het volgende:
 
-- Open bare naam ruimten in Q# notitie blokken zijn nu beschikbaar voor alle toekomstige berekeningen van de cellen. Zo kunt u bijvoorbeeld een naam ruimte openen in een cel boven aan het notitie blok, in plaats van dat u relevante naam ruimten in elke code-cel hoeft te openen. Met een nieuwe `%lsopen` Magic-opdracht wordt de lijst met momenteel geopende naam ruimten weer gegeven.
+- Open bare naam ruimten in Q# notitie blokken zijn nu beschikbaar wanneer alle toekomstige cellen worden uitgevoerd. Zo kunt u bijvoorbeeld een naam ruimte openen in een cel boven aan het notitie blok, in plaats van dat u relevante naam ruimten in elke code-cel hoeft te openen. Met een nieuwe `%lsopen` Magic-opdracht wordt de lijst met momenteel geopende naam ruimten weer gegeven.
 
 Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compileren](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), voor [beelden](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) en [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 

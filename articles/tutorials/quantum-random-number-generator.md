@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834037"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771272"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Zelfstudie: Een kwantumgenerator voor willekeurige getallen implementeren in Q\#
 
@@ -33,7 +33,7 @@ Een eenvoudig voor beeld van een genoteerd Quantum algoritme Q# is een Quantum r
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Zoals vermeld in het artikel [Inzicht in kwantumcomputing](xref:microsoft.quantum.overview.understanding) is een qubit een eenheid van kwantuminformatie die in superpositie kan zijn. Bij meting kan een qubit alleen 0 of 1 zijn. Als er echter een bewerking wordt uitgevoerd, vertegenwoordigt de status van de Qubit de kans op het lezen van een 0 of een 1 met een meting. Deze waarschijnlijkheidstoestand staat bekend als superpositie. We kunnen deze waarschijnlijkheid gebruiken voor het genereren van willekeurige getallen.
+Zoals vermeld in het artikel [Inzicht in kwantumcomputing](xref:microsoft.quantum.overview.understanding) is een qubit een eenheid van kwantuminformatie die in superpositie kan zijn. Bij meting kan een qubit alleen 0 of 1 zijn. Vóór de meting vertegenwoordigt de status van de Qubit echter de kans dat een 0 of een 1 met een meting wordt gelezen. Deze waarschijnlijkheidstoestand staat bekend als superpositie. We kunnen deze waarschijnlijkheid gebruiken voor het genereren van willekeurige getallen.
 
 In onze Q# bewerking introduceren we het `Qubit` Data type, systeem eigen naar Q# . We kunnen een `Qubit` alleen toewijzen met een `using`-instructie. Wanneer een qubit wordt toegewezen, bevindt deze zich altijd in de toestand `Zero`. 
 

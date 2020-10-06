@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833569"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771340"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# Magic-opdrachten
 
@@ -34,7 +34,7 @@ ms.locfileid: "90833569"
 ### <a name="azure-quantum-integration"></a>Integratie van Azure Quantum
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Hiermee maakt u verbinding met een Azure Quantum-werk ruimte of wordt de huidige verbindings status weer gegeven.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Voert een taak uit in een Azure Quantum-werk ruimte.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Hiermee wordt een taak naar een Azure Quantum-werk ruimte verzonden en wordt gewacht op voltooiing.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Hiermee wordt een lijst met taken weer gegeven in de huidige Azure Quantum-werk ruimte.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Hiermee worden de resultaten weer gegeven voor een taak in de huidige Azure Quantum-werk ruimte.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Hiermee wordt de status van een taak in de huidige Azure Quantum-werk ruimte weer gegeven.
