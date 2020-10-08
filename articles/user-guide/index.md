@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834751"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771382"
 ---
 # <a name="the-no-locq-user-guide"></a>Q#-gebruikershandleiding
 
@@ -55,7 +55,7 @@ In de verschillende delen van deze handleiding worden de belangrijkste concepten
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Kwantumsimulators en resourceschattingen
 
-- [Kwantumsimulatoren en hosttoepassingen](xref:microsoft.quantum.machines): Een overzicht van de verschillende beschikbare simulators, evenals het algemene uitvoeringsmodel tussen de hostprogramma's en de doelmachines.
+- [Kwantumsimulatoren en hosttoepassingen](xref:microsoft.quantum.machines): Een overzicht van de verschillende beschikbare simulatoren, evenals hoe hostprogramma's en doelmachines samenwerken om Q#-programma's uit te voeren.
 
 - [Volledige statussimulator](xref:microsoft.quantum.machines.full-state-simulator): de doelcomputer die de volledige kwantumstatus simuleert. Handig voor het volledig uitvoeren of debuggen van kleinere programma's (minder dan een paar dozijn qubits)
 

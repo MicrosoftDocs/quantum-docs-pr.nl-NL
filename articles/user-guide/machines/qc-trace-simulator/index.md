@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833357"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771292"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK)-kwantumtraceersimulator
 
@@ -86,7 +86,7 @@ De QDK bevat vijf hulpprogramma's die u met de kwantumtraceersimulator kunt gebr
 |-----| -----|
 |[Controle op verschillende invoer](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Controleert op mogelijke conflicten met gedeelde qubits |
 |[Controle op het gebruik van ongeldige qubits](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Hiermee wordt gecontroleerd of een bewerking wordt toegepast op een qubit die al is vrijgegeven |
-|[Teller primitieve bewerkingen](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Telt het aantal primitieve verwerkingen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een kwantumprogramma  |
+|[Teller primitieve bewerkingen](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Telt het aantal primitieve bewerkingen dat wordt gebruikt door elke bewerking die wordt aangeroepen in een kwantumprogramma  |
 |[Diepteteller](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Verzamelt aantallen die de ondergrens vertegenwoordigen van elke bewerking die wordt aangeroepen in een kwantumprogramma   |
 |[Breedteteller](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Telt het aantal qubits dat wordt toegewezen en uitgeleend door elke bewerking in een kwantumprogramma |
 

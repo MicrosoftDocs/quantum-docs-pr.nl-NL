@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833433"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771306"
 ---
 # <a name="quantum-simulators"></a>Kwantumsimulators
 
@@ -24,7 +24,7 @@ Kwantumsimulators zijn softwareprogramma's die worden uitgevoerd op klassieke co
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>De Quantum Development Kit (QDK)-kwantumsimulators
 
-De kwantumsimulator is verantwoordelijk voor het leveren van de implementaties van kwantumprimitieven voor een algoritme. Dit omvat primitieve bewerkingen, zoals `H`, `CNOT` en `Measure`, plus qubitbeheer en -tracering. De QDK bevat verschillende klassen van kwantumsimulators die verschillende uitvoeringsmodellen voor hetzelfde kwantumalgoritme vertegenwoordigen. 
+De kwantumsimulator is verantwoordelijk voor het leveren van de implementaties van kwantumprimitieven voor een algoritme. Dit omvat primitieve bewerkingen, zoals `H`, `CNOT` en `Measure`, plus qubitbeheer en -tracering. De QDK bevat verschillende klassen van kwantumsimulators die verschillende simulatiemanieren voor hetzelfde kwantumalgoritme vertegenwoordigen. 
 
 
 Op elk type kwantumsimulator kunnen verschillende implementaties van deze primitieven worden geïnstalleerd. Bijvoorbeeld: de [simulator voor volledige toestand](xref:microsoft.quantum.machines.full-state-simulator) voert het kwantumalgoritme uit door de [kwantumstatusvector](xref:microsoft.quantum.glossary#quantum-state) volledig te simuleren, terwijl de [trajectsimulator kwantumcomputer](xref:microsoft.quantum.machines.qc-trace-simulator.intro) geen rekening houdt met de daadwerkelijke kwantumstatus. In plaats daarvan worden het gebruik van gates, qubits en andere resources bijgehouden voor het algoritme.
