@@ -4,17 +4,17 @@ title: Aan de slag met de Quantum Development Kit (QDK)
 description: Lees meer over het programmeren van kwantumprojecten in Q# met de Microsoft Quantum Development Kit.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/10/2020
+ms.date: 9/29/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834496"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771215"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Aan de slag met de Quantum Development Kit (QDK)
 
@@ -34,13 +34,11 @@ Bekijk een van onze zelfstudies als u de kracht van kwanta wilt gebruiken:
 
 * [Kwantumgenerator voor willekeurige nummers](xref:microsoft.quantum.quickstarts.qrng): begin met een Q#-toepassing in 'Hallo wereld'-stijl. Hiermee maakt u kennis met kwamtumconcepten en leert u binnen enkele minuten een kwantumtoepassing te bouwen en uit te voeren.
 * [Kennismaken met verstrengeling met Q#](xref:microsoft.quantum.write-program): in deze zelfstudie wordt u begeleid bij het schrijven van een Q#-programma waarin enkele fundamentele concepten van het kwantumprogrammeren worden gedemonstreerd. Als u nog niet zo ver bent om code te gaan schrijven, kunt u de zelfstudie volgen zonder de QDK te installeren om een beeld te krijgen van de Q#-programmeertaal en de basisconcepten van kwantumcomputing.
-* [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search): bekijk dit voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt.
-    In deze zelfstudie wordt u begeleid bij het ontwikkelen van het programma als een opdrachtprompttoepassing in Q#, met behulp van Visual Studio of Visual Studio Code.
+* [Zoekalgoritme van Grover](xref:microsoft.quantum.quickstarts.search): bekijk dit voorbeeld van een Q#-programma om een idee te krijgen van de kracht van Q# voor het uitdrukken van een kwantumalgoritme op een manier waardoor de kwantumbewerkingen op laag niveau abstract worden gemaakt. In deze zelfstudie wordt u begeleid bij het ontwikkelen van het programma als een opdrachtprompttoepassing in Q#, met behulp van Visual Studio of Visual Studio Code.
 
-### <a name="learning-further"></a>Verder leren
-* Met de [Microsoft Learn-modules voor kwantumcomputing](https://docs.microsoft.com/learn/browse/?term=quantum) leert u de basisconcepten in uw eigen tempo kennen. De basisbeginselen voor het maken van kwantumprogramma's met de QDK leert u in de [eerste module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
-* Als u meer wilt weten over programmeren in Q#, raadpleegt u de [Quantum Katas](https://github.com/Microsoft/QuantumKatas): een verzameling oefeningen waarmee u op uw eigen tempo kennismaakt met kwantumcomputing aan de hand van programmeeroefeningen in Q#.
-    Veel van deze kata's zijn ook beschikbaar als Q#-notebooks. 
+## <a name="learning-further"></a>Verder leren
+* Microsoft Learn biedt gratis onlinetraining voor quantumcomputing. Het leertraject [Basisbeginselen van quantumcomputing](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/) introduceert de basisconcepten van quantumcomputing en kwantumalgoritmen en helpt u op weg kwantumprogramma's te bouwen met Q#.
+* Als u meer wilt weten over programmeren in Q#, raadpleegt u de [Quantum Katas](https://github.com/Microsoft/QuantumKatas): een verzameling oefeningen waarmee u op uw eigen tempo kennismaakt met kwantumcomputing aan de hand van programmeeroefeningen in Q#. Veel van deze kata's zijn ook beschikbaar als Q#-notebooks. 
 * Onze [opslagplaats met voorbeelden](https://github.com/Microsoft/Quantum) laat meerdere voorbeelden zien van hoe u kwantumprogramma's kunt schrijven met behulp van Q#. De meeste van deze voorbeelden zijn geschreven met behulp van onze opensource-[kwantumbibliotheken](https://github.com/Microsoft/QuantumLibraries), waaronder onze [standaard](xref:microsoft.quantum.libraries.standard.intro)- en [chemie](xref:microsoft.quantum.chemistry.concepts.intro)bibliotheken (lees meer hieronder).
 
 ## <a name="key-concepts-for-quantum-computing"></a>Belangrijkste concepten voor kwantumcomputing
