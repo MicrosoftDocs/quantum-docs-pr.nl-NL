@@ -26,6 +26,8 @@
   name: Magic-opdracht %chemistry.inputstate.load
 - href: config.md
   name: Magic-opdracht %config
+- href: debug.md
+  name: Magic-opdracht %debug
 - href: estimate.md
   name: Magic-opdracht %estimate
 - href: kata.md

@@ -1,0 +1,71 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Ontleedt een permutatie op een variabele
+  uid: Microsoft.Quantum.Synthesis.DecomposedOn
+- summary: Een waarheids tabel coderen in {1,-1} code ring
+  uid: Microsoft.Quantum.Synthesis.Encoded
+- summary: Breidt een spectrum uit door omgedraaide coëfficiënten
+  uid: Microsoft.Quantum.Synthesis.Extended
+- summary: Hiermee wordt de Hadamard-trans formatie van een Boole-functie in {-1,1} code ring berekend met behulp van de methode van Yates
+  uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Hiermee wordt een MCMTMask-type als Singleton-matrix gemaakt als doelen niet 0 zijn, anders retourneert een lege matrix.
+  uid: Microsoft.Quantum.Synthesis.GateMask
+- summary: Hiermee worden Maxi maal twee MCMT-maskers berekend om y te transformeren naar x.
+  uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment
+- summary: Retourneert alle posities waarin bits van een geheel getal zijn ingesteld.
+  uid: Microsoft.Quantum.Synthesis.IntegerBits
+- summary: Transformatie masker van besturings-en doel-bits naar een paar besturings element qubits en doel-qubits
+  uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair
+- summary: '{-1,1} code ring van een waarheids waarde voor Booleaanse waarden'
+  uid: Microsoft.Quantum.Synthesis.RMEncoding
+- summary: Hiermee past u een waarheids tabel aan van een matrix met Boole-waarden op basis van het aantal variabelen, wordt een nieuwe matrix geretourneerd met een lengte `2^numVars` , mogelijk dat `table` de grootte van de `false` gegevens moet worden uitgebreid of afgekapt tot `2^numVars` elementen.
+  uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Reken Gate-maskers voor het samen stellen van permutaties.
+  uid: Microsoft.Quantum.Synthesis.TBSMain
+- summary: Hiermee worden Gate-maskers berekend om de macht [x] te transformeren naar x en wordt de huidige permutatie bijgewerkt.
+  uid: Microsoft.Quantum.Synthesis.TBSStep
+- summary: Alle functies voor beheerde poorten verzamelen door alle variabelen indexen te vouwen
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
+- summary: Ontledings logica voor één variabele-index
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
+- summary: Een uitvoer patroon bijwerken volgens het poort masker.
+  uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
+- summary: Update permutaties op basis van het poort masker.
+  uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
+- summary: Een 0-bit invoegen in een geheel getal
+  uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+name: Microsoft.Quantum.Synthesis
+newtypes:
+- summary: Status tijdens het desamen stellen op basis van variabelen indexen
+  uid: Microsoft.Quantum.Synthesis.DecompositionState
+- summary: >-
+    Een type dat een meerdere beheerde Toffoli-Gate met meerdere doelen vertegenwoordigt.
+
+    De eerste integer is een bitmasker voor regels voor besturings elementen.  Bits-indexen die zijn ingesteld, komen overeen met beheer regel indexen.
+
+    De tweede integer is een bitmasker voor doel lijnen.  Bits-indexen die zijn ingesteld, komen overeen met doel regel indexen.
+
+    De bits-indexen van beide gehele getallen moeten niet-aaneengesloten zijn.
+  uid: Microsoft.Quantum.Synthesis.MCMTMask
+operations:
+- summary: Permutaties de amplitudes in een Quantum status op basis van een permutatie met behulp van op ontleding gebaseerde synthese.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
+- summary: Permutaties de amplitudes in een Quantum status op basis van een permutatie met behulp van op ontleding gebaseerde synthese.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
+- summary: Permutaties de amplitudes in een Quantum status op basis van op trans formatie gebaseerde synthese.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: De bewerking wordt toegepast @"microsoft.quantum.intrinsic.x" op `target` als de Boole-functie `func` resulteert in waar voor de klassieke toewijzing in `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
+- summary: De bewerking wordt toegepast @"microsoft.quantum.intrinsic.x" op `target` als de Boole-functie `func` resulteert in waar voor de klassieke toewijzing in `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
+summary: Deze naam ruimte bevat functies en bewerkingen voor het synthesizeren van Quantum bewerkingen op basis van permutaties en Booleaanse functies.
+uid: Microsoft.Quantum.Synthesis
+metadata:
+  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92709390"
