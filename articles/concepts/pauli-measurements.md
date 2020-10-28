@@ -87,7 +87,7 @@ Auteur: bradben UID: micro soft. Quantum. concepten. Pauli MS. Author: v-benbra 
 
 In de vorige discussies hebben we gestreefd naar reken kundige basis metingen.
 Er zijn ook andere algemene metingen die zich voordoen bij Quantum Computing en die, vanuit een notatie perspectief, handig zijn om te worden uitgedrukt in termen van reken kundige basis metingen.
-Als u werkt met Q# , worden de meest voorkomende maat eenheden die u kunt uitvoeren waarschijnlijk *Paulie metingen*, waarmee reken kundige basis metingen kunnen worden gebruikt voor metingen in andere bases en van pariteit tussen verschillende qubits.
+Als u werkt met Q# , worden de meest voorkomende maat eenheden die u kunt uitvoeren waarschijnlijk *Paulie metingen* , waarmee reken kundige basis metingen kunnen worden gebruikt voor metingen in andere bases en van pariteit tussen verschillende qubits.
 In dergelijke gevallen is het gebruikelijk om de meting van een Pauli-operator te bespreken, in het algemeen een operator zoals $ X, Y, z $ of $ z \otimes z, x \otimes x, x \otimes Y enzovoort $ .
 
 > [!TIP]
@@ -128,7 +128,7 @@ Deze metingen worden hieronder vermeld voor het gemak.
 |$ $ X | $H               $                    |
 |$ $ Y | $HS ^               {\dagger}$         |
 
-Dat wil zeggen, ' meting $ Y $ ' is gelijk aan het Toep assen van $ HS ^ \dagger $ en het meten van de reken kracht, waarbij [`S`](xref:microsoft.quantum.intrinsic.s) een intrinsieke Quantum bewerking ook wel ' fase Gate ' wordt genoemd en kan worden gesimuleerd door de unitary-matrix
+Dat wil zeggen, ' meting $ Y $ ' is gelijk aan het Toep assen van $ HS ^ \dagger $ en het meten van de reken kracht, waarbij [`S`](xref:Microsoft.Quantum.Intrinsic.S) een intrinsieke Quantum bewerking ook wel ' fase Gate ' wordt genoemd en kan worden gesimuleerd door de unitary-matrix
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Net als bij de één-qubite-case kunnen alle twee Qubit Pauli-metingen worden ge
 >0 & 1 & 0 &\\\\
 >matrix van 0 & 0 0 & & 1 > \end { } \right ) >     \end{align}
 > $$
-> wordt gebruikt om de intrinsieke bewerking te simuleren [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> wordt gebruikt om de intrinsieke bewerking te simuleren [`SWAP`](xref:Microsoft.Quantum.Intrinsic) .
 
 |Pauli meting     | unitary-trans formatie  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Net als bij de één-qubite-case kunnen alle twee Qubit Pauli-metingen worden ge
 |$X \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (H \otimes HS ^ \dagger ) $|
 |$Y \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (HS ^ \dagger \otimes HS ^ \dagger ) $|
 
-Hier wordt de [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) bewerking weer gegeven om de volgende reden.
+Hier wordt de [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) bewerking weer gegeven om de volgende reden.
 Elke Pauli-meting die niet de matrix bevat, $ \boldone $ komt overeen met een unitary naar $ z \otimes z $ van de bovenstaande reden.
 De eigenvalues van $ z \otimes z $ is alleen afhankelijk van de pariteit van de qubits die bestaan uit elke reken kundige basis vector, en de beheerde-not-bewerkingen dienen om deze pariteit te berekenen en op te slaan in de eerste bit.
 Zodra de eerste bit wordt gemeten, kunnen we de identiteit van de resulterende halve ruimte herstellen, die overeenkomt met het meten van de Pauli-operator.
@@ -240,16 +240,16 @@ In Q# retourneert deze metingen $ j $ als de meting resulteert in een resultaat 
 Het hebben van Pauli-metingen als ingebouwde functie in Q# is nuttig omdat het meten van dergelijke Opera tors lange ketens van besturings-en basis transformaties vereist om de diagonalizing $ U te beschrijven $ die nodig is om de bewerking uit te geven als een tensor product van $ Z $ en $ \id $ .
 Doordat u kunt opgeven dat u een van deze vooraf gedefinieerde metingen wilt uitvoeren, hoeft u zich geen zorgen te maken over het transformeren van de basis, zodat een reken kundige basis meting de benodigde informatie bevat.
 Q# Hiermee worden alle nood zakelijke trans formaties voor u automatisch verwerkt.
-Zie de en-bewerkingen voor meer informatie [`Measure`](xref:microsoft.quantum.intrinsic.measure) [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) .
+Zie de en-bewerkingen voor meer informatie [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) .
 
-## <a name="the-no-cloning-theorem"></a>De theorema zonder klonen
+## <a name="the-no-cloning-theorem"></a>De No-Cloning theorema
 
 De quantum informatie is krachtig.
 Hierdoor kunnen we fantastische dingen doen, zoals factor nummers exponentieel sneller dan de best bekende klassieke algoritmen, of op efficiënte wijze simuleren van gecorreleerde elektroden systemen die klassieke kosten in de praktijk nodig hebben om nauw keurig te simuleren.
 Er zijn echter beperkingen ten aanzien van de kracht van Quantum Computing.
-Een dergelijke beperking wordt gegeven door de *theorema die niet klonen*.
+Een dergelijke beperking wordt gegeven door de *theorema die niet klonen* .
 
-De theorema zonder klonen is aptly met de naam.
+De No-Cloning theorema is aptly met de naam.
 Het klonen van generieke Quantum Staten door een quantum computer wordt niet toegestaan.
 Het bewijs van de theorema is onduidelijker.
 Hoewel een volledig bewijs van het no-klonen van theorema iets te technisch is voor onze bespreking, is de proef in het geval van geen extra hulp qubits binnen onze Scope (hulp qubits worden qubits gebruikt voor Scratch ruimte tijdens een berekening en worden ze eenvoudig gebruikt en beheerd in Q# , Zie [geleed qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Dit voorziet in de fundamentele Intuition achter het no-klonen theorema: elk apparaat dat een onbekende Quantum status kopieert, moet fouten veroorzaken op ten minste een van de statussen die worden gekopieerd.
+Dit biedt de fundamentele Intuition achter de No-Cloning theorema: elk apparaat dat een onbekende Quantum status kopieert, moet fouten veroorzaken op ten minste een van de statussen die worden gekopieerd.
 Hoewel de sleutel veronderstelling dat de kloon van de gegevens in de invoer status lineair is, kan dit worden geschonden door de toevoeging en meting van de hulp qubits. dergelijke interacties lekken ook bij het verwerken van informatie over het systeem door middel van de meting statistieken en voor komen dat dergelijke gevallen precies worden gekloond.
-Zie [voor meer informatie](xref:microsoft.quantum.more-information)over de theorema die u niet klonen.
+Zie theorema [voor meer informatie](xref:microsoft.quantum.more-information)over het controleren van de No-Cloning.
 
-Het niet-klonen van theorema is belang rijk voor de kwalitatieve kennis van Quantum Computing omdat als u de Quantum toestanden in de buurt zou kunnen klonen, dan krijgt u een Magical-mogelijkheid om te leren van Quantum Staten.
+De No-Cloning theorema is belang rijk voor de kwalitatieve kennis van Quantum Computing, omdat als u de Quantum status ingrijpend kunt klonen, u een bijna magicale mogelijkheid hebt om te leren van Quantum Staten.
 Het is ook mogelijk dat u het Heisenberg van vaunted onzekerheid schendt.
 U kunt ook een optimale kloon gebruiken om één voor beeld van een complexe Quantum distributie te maken en alles te leren over die distributie, van slechts één voor beeld.
 Dit is een manier om een munten te spie gelen en op de hoogte te houden en vervolgens een vriend te vertellen over het resultaat van de reactie "Ah de verdeling van die munten moet worden gebernoulli met $ p = 0.512643 \ ldots $ !"  Een dergelijke instructie zou niet-sensical zijn, omdat een stukje informatie (het resultaat van de kop) simpelweg de vele informatie die nodig is om de distributie te coderen zonder belang rijke eerdere informatie, niet kan leveren.
 Op dezelfde manier kunnen we zonder voorafgaande informatie niet perfect een Quantum status klonen, net zoals we geen ensemble van deze munten kunnen voorbereiden zonder dat ze daar weten $ $ .
 
 Informatie is niet gratis in Quantum Computing.
-Elk Qubit dat wordt gemeten, geeft één stukje informatie en het theorema zonder klonen laat zien dat er geen beschik over is die kunnen worden misbruikt om de fundamentele berekenings verhouding te verkrijgen tussen informatie over het systeem en de verstoringen die erop worden opgeroepen.
+Elk Qubit dat wordt gemeten, geeft één stukje informatie en de No-Cloning theorema laat zien dat er geen onvoorziene pogingen zijn die kunnen worden misbruikt om te zorgen voor een belang rijk verschil tussen informatie over het systeem en de verstoringen die erop worden opgeroepen.
