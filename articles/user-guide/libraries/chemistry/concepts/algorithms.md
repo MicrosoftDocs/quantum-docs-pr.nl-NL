@@ -1,6 +1,6 @@
 ---
 title: Hamiltonian Dynamics simuleren
-description: Meer informatie over het gebruik van Trotter-Suzuki-formules en qubitization voor het werken met Hamiltonian-simulaties.
+description: Leer hoe u Trotter-Suzuki formules en qubitization kunt gebruiken om te werken met Hamiltonian-simulaties.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834003"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691892"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics simuleren
 
@@ -28,13 +28,13 @@ Het idee achter Trotter – Suzuki formules is eenvoudig: de Hamiltonian als som
 U kunt met name $H = \ sum_ {j = 1} ^ m H_j $ de Hamiltonian zijn.
 Then $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $. dat wil zeggen dat, als $t \ll $1, de fout in deze benadering verwaarloosbaar is.
 Als $e ^ {-i H t} $ een normale exponentiële waarde was, zou de fout in deze benadering niet worden $O (m ^ 2 t ^ 2) $: de waarde is nul.
-Deze fout treedt op omdat $e ^ {-iHt} $ een operator exponentiële is. als gevolg hiervan is er een fout opgetreden bij het gebruik van deze formule als gevolg van het feit dat de $H _j $-voor waarden niet werken (*dat wil zeggen*$H _J H_k \ne H_k H_j $ in het algemeen).
+Deze fout treedt op omdat $e ^ {-iHt} $ een operator exponentiële is. als gevolg hiervan is er een fout opgetreden bij het gebruik van deze formule als gevolg van het feit dat de $H _j $-voor waarden niet werken ( *dat wil zeggen* $H _J H_k \ne H_k H_j $ in het algemeen).
 
 Als $t $ groot is, kunnen er nog steeds Trotter-Suzuki formules worden gebruikt om de dynamiek nauw keurig te simuleren door deze op te splitsen in een reeks korte fases.
 Laat $r $ het aantal stappen dat is uitgevoerd in de tijd evolutie, dus elke keer dat de stap wordt uitgevoerd voor tijd $t/r $. Vervolgens hebben we dat $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ wat impliceert dat als $r $ wordt geschaald als $m ^ 2 t ^ 2/\ Epsilon $, de fout kan worden gemaakt Maxi maal $ \epsilon $ voor $ \epsilon>$0.
 
 Nauw keurigere benaderingen kunnen worden gemaakt door een reeks operator exponentiëlen te maken, zodat de fout voorwaarden worden geannuleerd.
-De eenvoudigste formule, de tweede order Trotter-Suzuki-formule, neemt de notatie $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ de fout die kan worden gemaakt van minder dan $ \epsilon $ voor $ \epsilon>$0 door het kiezen van $r $ te schalen als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
+De eenvoudigste formule, de tweede volg orde Trotter-Suzuki formule, neemt de notatie $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ de fout die kan worden gemaakt van minder dan $ \epsilon $ voor $ \epsilon>$0 door het kiezen van $r $ te schalen als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
 
 Zelfs hogere formules, met name ($ 2.000 $) volg orde voor $k>$0, kunnen recursief worden samengesteld: $ $ U_ {2.000} (t) = [U_ {t-2} (s_ka \~ )] ^ 2 U_ {t-2} ([1-4s_k] t) [U_ {2-2} (s_k \~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2.000 + 1}/r ^ {2.000}), $ $ waar $s _k = (4-4 ^ {1/(2-1)}) ^ {-1} $.
 
@@ -52,7 +52,7 @@ Bijvoorbeeld: $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\ot
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Hier $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ en $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $, die rechtstreeks kan worden gezien als gevolg van het feit dat de pariteit van $0 $ $0 $ is, terwijl de pariteit van de bit teken reeks $1 $ $1 $ is.
 
-Exponentiële waarde van Pauli-Opera tors kunnen rechtstreeks worden geïmplementeerd in Q# met behulp van de <xref:microsoft.quantum.intrinsic.exp> bewerking:
+Exponentiële waarde van Pauli-Opera tors kunnen rechtstreeks worden geïmplementeerd in Q# met behulp van de <xref:Microsoft.Quantum.Intrinsic.Exp> bewerking:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ Exponentiële waarde van Pauli-Opera tors kunnen rechtstreeks worden geïmplemen
 
 Voor Fermionic Hamiltonians wijst de [Jordanië – Wigner](xref:microsoft.quantum.chemistry.concepts.jordanwigner) de Hamiltonian handig toe aan een som van Pauli-Opera tors.
 Dit betekent dat de bovenstaande aanpak eenvoudig kan worden aangepast aan het simuleren van de schei kunde.
-In plaats van hand matig te herhalen over alle Pauli-voor waarden in de Wigner-vertegenwoordiging, hieronder volgt een eenvoudig voor beeld van hoe een dergelijke simulatie binnen de schei kunde zou worden uitgevoerd.
+In plaats van hand matig te herhalen over alle Pauli-voor waarden in de Jordan-Wigner vertegenwoordiging, hieronder vindt u een eenvoudig voor beeld van hoe een dergelijke simulatie binnen de schei kunde zou worden uitgevoerd.
 Ons begin punt is een [Jordanië – Wigner-code ring](xref:microsoft.quantum.chemistry.concepts.jordanwigner) van de Fermionic Hamiltonian, uitgedrukt in code als een exemplaar van de `JordanWignerEncoding` klasse.
 
 ```csharp
@@ -156,7 +156,7 @@ De Walk-operator $W $ kan worden uitgedrukt in termen van $ \operatorname{Select
 
 Deze subroutines zijn eenvoudig in te stellen in Q# .
 Denk bijvoorbeeld aan de eenvoudige Qubit-transversale Ising Hamiltonian waarbij $H = X_1 + X_2 + Z_1 Z_2 $.
-In dit geval Q# wordt de code waarmee de $ \operatorname{Select} $-bewerking zou worden geïmplementeerd, aangeroepen door <xref:microsoft.quantum.canon.multiplexoperations> , terwijl de $ \operatorname{Prepare} $-bewerking kan worden geïmplementeerd met <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+In dit geval Q# wordt de code waarmee de $ \operatorname{Select} $-bewerking zou worden geïmplementeerd, aangeroepen door <xref:Microsoft.Quantum.Canon.MultiplexOperations> , terwijl de $ \operatorname{Prepare} $-bewerking kan worden geïmplementeerd met <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .
 Een voor beeld van het simuleren van het Hubbard model kan worden gevonden als een voor [ Q# beeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 Het hand matig opgeven van deze stappen voor wille keurige schei problemen zou veel moeite vergen, wat wordt voor komen met behulp van de Library chemie.
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-Belang rijk: de implementatie <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> is van toepassing op een wille keurige Hamiltonians die is opgegeven als een lineaire combi natie van Pauli-teken reeksen.
-Er wordt een versie die is geoptimaliseerd voor chemie simulaties aangeroepen met <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> .
+Belang rijk: de implementatie <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> is van toepassing op een wille keurige Hamiltonians die is opgegeven als een lineaire combi natie van Pauli-teken reeksen.
+Er wordt een versie die is geoptimaliseerd voor chemie simulaties aangeroepen met <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> .
 Deze versie is geoptimaliseerd om het aantal T-poorten te minimaliseren met behulp van technieken die worden beschreven in de [code ring van elektronische spectra in Quantum circuits met lineaire-T-complexiteit](https://arxiv.org/abs/1805.03662).

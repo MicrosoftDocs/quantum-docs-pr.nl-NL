@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833474"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692131"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Bewerkingen en functies in Q#
 
@@ -32,7 +32,7 @@ Een bewerkings declaratie bestaat uit het tref woord `operation` , gevolgd door 
 
 Elke bewerking neemt een invoer, produceert een uitvoer en geeft de implementatie aan voor een of meer bewerkings-specials.
 De mogelijke specials en hoe u deze kunt definiëren en aanroepen, worden beschreven in de verschillende gedeelten van dit artikel.
-Bekijk nu de volgende bewerking, waarmee alleen een standaard hoofd tekst wordt gedefinieerd en waarbij één Qubit als invoer wordt gebruikt. vervolgens wordt de ingebouwde <xref:microsoft.quantum.intrinsic.x> bewerking voor die invoer aangeroepen:
+Bekijk nu de volgende bewerking, waarmee alleen een standaard hoofd tekst wordt gedefinieerd en waarbij één Qubit als invoer wordt gebruikt. vervolgens wordt de ingebouwde <xref:Microsoft.Quantum.Intrinsic.X> bewerking voor die invoer aangeroepen:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ Hiermee wordt ten slotte `Unit` gedefinieerd dat de uitvoer van de bewerking lee
 `Unit` wordt op dezelfde manier gebruikt als `void` in C# en andere dwingende talen en is gelijk aan `unit` in F # en andere functionele talen.
 
 Bewerkingen kunnen ook interessante typen retour neren dan `Unit` .
-De <xref:microsoft.quantum.intrinsic.m> bewerking retourneert bijvoorbeeld een uitvoer van het type `Result` , die aangeeft dat een meting is uitgevoerd.  U kunt de bewerking door geven aan een andere bewerking of deze gebruiken met het `let` sleutel woord om een nieuwe variabele te definiëren.
+De <xref:Microsoft.Quantum.Intrinsic.m> bewerking retourneert bijvoorbeeld een uitvoer van het type `Result` , die aangeeft dat een meting is uitgevoerd.  U kunt de bewerking door geven aan een andere bewerking of deze gebruiken met het `let` sleutel woord om een nieuwe variabele te definiëren.
 
 Deze aanpak maakt het mogelijk om klassieke berekeningen te geven die met Quantum bewerkingen op een laag niveau reageren, zoals in de [code ring van de superdichte](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)snelheid:
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > Elke bewerking in Q# heeft precies één invoer en retourneert precies één uitvoer.
-> Meerdere invoer en uitvoer worden weer gegeven met behulp van *Tuples*, waarmee meerdere waarden worden verzameld in één waarde.
+> Meerdere invoer en uitvoer worden weer gegeven met behulp van *Tuples* , waarmee meerdere waarden worden verzameld in één waarde.
 > In dit opzicht Q# is de taal ' tuple-in-tuple '.
 > In dit concept moet een reeks lege haakjes `()` worden gelezen als de ' lege ' tuple, die het type heeft `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Gecontroleerde en adjoint bewerkingen
 
-Als een bewerking een unitary-trans formatie implementeert, zoals het geval is voor veel bewerkingen in Q# , is het mogelijk om te definiëren hoe de bewerking optreedt wanneer *adjointed* of *beheerd*wordt. Met een *adjoint* specialisatie van een bewerking wordt aangegeven hoe de ' inverse ' van de bewerking wordt uitgevoerd, terwijl een *beheerde* specialisatie aangeeft hoe een bewerking wordt uitgevoerd wanneer de toepassing wordt ingesteld op de status van een bepaalde Quantum register.
+Als een bewerking een unitary-trans formatie implementeert, zoals het geval is voor veel bewerkingen in Q# , is het mogelijk om te definiëren hoe de bewerking optreedt wanneer *adjointed* of *beheerd* wordt. Met een *adjoint* specialisatie van een bewerking wordt aangegeven hoe de ' inverse ' van de bewerking wordt uitgevoerd, terwijl een *beheerde* specialisatie aangeeft hoe een bewerking wordt uitgevoerd wanneer de toepassing wordt ingesteld op de status van een bepaalde Quantum register.
 
 Adjoints van Quantum bewerkingen zijn cruciaal voor veel aspecten van Quantum Computing. Q#Zie [controle stroom: Conjugations](xref:microsoft.quantum.guide.controlflow#conjugations)voor een voor beeld van een dergelijke situatie die wordt besproken naast een handige programmeer techniek. De gecontroleerde versie van een bewerking is een nieuwe bewerking waarbij de basis bewerking alleen effectief wordt toegepast als alle besturings elementen qubits een opgegeven status hebben.
 Als het besturings element qubits zich in de superpositie bevindt, wordt de basis bewerking samenhangend toegepast op het juiste deel van de superpositie.
@@ -139,7 +139,7 @@ Het `Controlled` en `Adjoint` functors werk, dus er is geen verschil tussen het 
 
 In de eerste declaratie van de bewerking in de vorige voor beelden `BitFlip` zijn de bewerkingen en `DecodeSuperdense` zijn gedefinieerd met hand tekeningen `(Qubit => Unit)` en `((Qubit, Qubit) => (Result, Result))` respectievelijk.
 Net als bij `DecodeSuperdense` metingen, is het geen unitary-bewerking en zijn er geen beheerde niet-adjointe specials mogelijk (roep de gerelateerde vereiste in die een dergelijke bewerking retourneert `Unit` ).
-Als `BitFlip` simpelweg de unitary <xref:microsoft.quantum.intrinsic.x> -bewerking uitvoert, kunt u deze echter ook met beide specials hebben gedefinieerd.
+Als `BitFlip` simpelweg de unitary <xref:Microsoft.Quantum.Intrinsic.X> -bewerking uitvoert, kunt u deze echter ook met beide specials hebben gedefinieerd.
 
 In deze sectie wordt beschreven hoe u het bestaan van specials in uw Q# bewerkings declaraties opneemt, waardoor u de mogelijkheid hebt om in combi natie met de of functors te worden aangeroepen `Adjoint` `Controlled` .
 Zie voor meer informatie over een aantal situaties waarin het geldig is of niet geldig is voor het declareren van bepaalde specialies, de [omstandigheden voor het op geldige wijze definiëren van specials](#circumstances-for-validly-defining-specializations) in dit artikel.
@@ -368,7 +368,7 @@ Dit betekent dat een waarde van een door de gebruiker gedefinieerd type niet kan
 
 Functions zijn louter deterministische, klassieke routines in Q# , die verschillen van bewerkingen in dat ze geen effect mogen hebben op de berekening van een uitvoer waarde.
 Met name functies kunnen geen bewerkingen aanroepen; actie ondernemen, toewijzen of lenen qubits; voor beelden van wille keurige getallen; of op andere wijze, afhankelijk van de invoer waarde voor een functie.
-Als gevolg hiervan Q# zijn functies *puur*, in die tijd dat ze altijd dezelfde invoer waarden toewijzen aan dezelfde uitvoer waarden.
+Als gevolg hiervan Q# zijn functies *puur* , in die tijd dat ze altijd dezelfde invoer waarden toewijzen aan dezelfde uitvoer waarden.
 Dit gedrag zorgt ervoor Q# dat de compiler veilig kan ordenen hoe en wanneer functies moeten worden aangeroepen bij het genereren van bewerkings-specials.
 
 Elk Q# bron bestand kan elk wille keurig aantal functies definiëren.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>Klassieke logica in functions = = goed
 
-Wanneer het mogelijk is om dit te doen, is het handig om klassieke logica te schrijven in termen van functies in plaats van bewerkingen, zodat u deze eenvoudig kunt gebruiken met bewerkingen. Als u bijvoorbeeld de eerdere `Square` declaratie als een *bewerking*had geschreven, zou de compiler niet kunnen garanderen dat het aanroepen van deze met dezelfde invoer dezelfde uitvoer zou produceren.
+Wanneer het mogelijk is om dit te doen, is het handig om klassieke logica te schrijven in termen van functies in plaats van bewerkingen, zodat u deze eenvoudig kunt gebruiken met bewerkingen. Als u bijvoorbeeld de eerdere `Square` declaratie als een *bewerking* had geschreven, zou de compiler niet kunnen garanderen dat het aanroepen van deze met dezelfde invoer dezelfde uitvoer zou produceren.
 
 Als u het verschil tussen functies en bewerkingen wilt onderstrepen, moet u rekening houden met het probleem bij het klassiek bemonsteren van een wille keurig getal in een Q# bewerking:
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 Elke keer dat `U` deze wordt aangeroepen, heeft een andere actie op `target` .
 Met name kan de compiler niet garanderen dat als u een `adjoint auto` specialisatie declaratie toevoegt aan `U` , vervolgens `U(target); Adjoint U(target);` fungeert als identiteit (dat wil zeggen, als niet-op).
-Dit schendt de definitie van de adjoint die is gedefinieerd in [vectoren en matrices](xref:microsoft.quantum.concepts.vectors), waardoor de compiler automatisch een adjoint-specialisatie kan genereren in een bewerking waarbij u de bewerking aanroept <xref:microsoft.quantum.math.randomreal> , de door de compiler verstrekte garanties zou verstoren; <xref:microsoft.quantum.math.randomreal> is een bewerking waarvoor geen adjoint of gecontroleerde versie bestaat.
+Dit schendt de definitie van de adjoint die is gedefinieerd in [vectoren en matrices](xref:microsoft.quantum.concepts.vectors), waardoor de compiler automatisch een adjoint-specialisatie kan genereren in een bewerking waarbij u de bewerking aanroept <xref:Microsoft.Quantum.Math.RandomReal> , de door de compiler verstrekte garanties zou verstoren; <xref:Microsoft.Quantum.Math.RandomReal> is een bewerking waarvoor geen adjoint of gecontroleerde versie bestaat.
 
 Aan de andere kant, zodat functie aanroepen zoals `Square` veilig zijn, en de compiler garandeert dat de invoer alleen moet worden behouden om de `Square` uitvoer stabiel te houden.
 Door zo veel mogelijk klassieke logica in functies te isoleren, is het eenvoudig om die logica in andere functies en bewerkingen hetzelfde te hergebruiken.
@@ -467,7 +467,7 @@ Hoewel dit kan worden beperkt door een klein aantal functies, kunt u, wanneer u 
 Veel van deze problemen kunnen er echter toe leiden dat u de compiler niet hebt gezien de informatie die nodig is om te bepalen hoe de verschillende versies van `Map` zijn gerelateerd.
 Effectief wilt dat de compiler `Map` als een soort wiskundige functie van Q# *typen* naar functions wordt behandeld Q# .
 
-Q# formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters*te hebben, evenals de normale tuple-para meters.
+Q# formalizes dit begrip door het toestaan van functies en bewerkingen om *type parameters* te hebben, evenals de normale tuple-para meters.
 In de vorige voor beelden wilt u nadenken `Map` als having-para meters `Int, Pauli` in het eerste geval en `Double, String` in het tweede geval.
 Voor het grootste deel gebruikt u deze type parameters alsof het normale typen zijn. Gebruik waarden van het type para meters om matrices en Tuples te maken, functies en bewerkingen aan te roepen en toe te wijzen aan gewone of onveranderlijke variabelen.
 
@@ -536,9 +536,9 @@ De Q# standaard bibliotheken bieden een reeks dergelijke bewerkingen en functies
 Deze worden verder besproken in de [ Q# hand leiding standaard bibliotheek](xref:microsoft.quantum.libraries.standard.intro).
 
 
-## <a name="callables-as-first-class-values"></a>Callables als waarden voor de eerste klasse
+## <a name="callables-as-first-class-values"></a>Callables als First-Class waarden
 
-Een van de essentiële technieken voor het nemen van de controle stroom en klassieke logica met behulp van functies in plaats van bewerkingen is het gebruik van deze bewerkingen en functies in Q# *eerste klasse*.
+Een van de essentiële technieken voor het nemen van de controle stroom en klassieke logica met behulp van functies in plaats van bewerkingen is het gebruik van deze bewerkingen en functies in Q# *eerste klasse* .
 Dat wil zeggen dat ze elke waarde in de taal in hun eigen recht zijn.
 Het volgende is bijvoorbeeld een zeer geldige Q# code, als een beetje indirect:
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-De waarde van de variabele `ourH` in het vorige code fragment is dan de bewerking <xref:microsoft.quantum.intrinsic.h> , zodat u die waarde als elke andere bewerking kunt aanroepen.
+De waarde van de variabele `ourH` in het vorige code fragment is dan de bewerking <xref:Microsoft.Quantum.Intrinsic.H> , zodat u die waarde als elke andere bewerking kunt aanroepen.
 Met deze mogelijkheid kunt u bewerkingen schrijven waarmee bewerkingen worden uitgevoerd als onderdeel van de invoer en de concepten van de controle stroom met hogere volg orde vormen.
 U kunt bijvoorbeeld Voorst Ellen om te ' Square ' een bewerking uit te laten lopen door deze twee keer op dezelfde doel-Qubit toe te passen.
 
@@ -589,7 +589,7 @@ Dat wil zeggen dat de klassieke logica binnen een functie is geïsoleerd, zodat 
 
 ## <a name="partial-application"></a>Gedeeltelijke toepassing
 
-U kunt aanzienlijk meer doen met functies die bewerkingen retour neren met behulp van *gedeeltelijke toepassing*, waarin u een of meer delen van de invoer voor een functie of bewerking kunt opgeven zonder dat u deze daad werkelijk aanroept. In het vorige `ApplyTwice` voor beeld kunt u aangeven dat u niet wilt opgeven, direct op welke Qubit de invoer bewerking moet worden toegepast:
+U kunt aanzienlijk meer doen met functies die bewerkingen retour neren met behulp van *gedeeltelijke toepassing* , waarin u een of meer delen van de invoer voor een functie of bewerking kunt opgeven zonder dat u deze daad werkelijk aanroept. In het vorige `ApplyTwice` voor beeld kunt u aangeven dat u niet wilt opgeven, direct op welke Qubit de invoer bewerking moet worden toegepast:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

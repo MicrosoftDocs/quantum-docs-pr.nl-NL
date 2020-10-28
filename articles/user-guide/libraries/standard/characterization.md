@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835635"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692146"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -39,7 +39,7 @@ Dit heeft het voor deel dat er slechts één extra Qubit is vereist voor het uit
 Elk van de hieronder voorgestelde methoden gebruikt een andere strategie voor het ontwerpen van experimenten en verschillende methoden voor gegevens verwerking om de fase te leren.  Ze hebben allemaal een uniek voor deel, variërend van het gebruik van strikte fout grenzen, de mogelijkheden voor het opnemen van eerdere informatie, het verdragen van fouten of het uitvoeren van geheugen limitted klassieke computers.
 
 In het bespreken van iteratieve fase-schattingen wordt een unitary-$U $ gegeven als een Black-Box-bewerking.
-Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), Q# modellen Canon dergelijke bewerkingen door het door de <xref:microsoft.quantum.oracles.discreteoracle> gebruiker gedefinieerde type, gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Zoals beschreven in de sectie over Oracle in [gegevens structuren](xref:microsoft.quantum.libraries.data-structures), Q# modellen Canon dergelijke bewerkingen door het door de <xref:Microsoft.Quantum.Oracles.DiscreteOracle> gebruiker gedefinieerde type, gedefinieerd door het type tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Als `U : DiscreteOracle` en vervolgens `U(m)` $U ^ m $ wordt geïmplementeerd voor `m : Int` .
 
 Bij deze definitie wordt elke stap van een iteratieve fase schatting uitgevoerd door een hulp Qubit in de $ \ket{+} $-status voor te bereiden, samen met de aanvankelijke status $ \ket{\phi} $, wordt ervan uitgegaan dat er een [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) van $U is (m) $, dat wil zeggen $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
@@ -99,7 +99,7 @@ De exacte Bayesiaanse-deinterferentie is in de praktijk onbepaald.
 Om dit voor stel te zien, willen we een $n $-bit-variabele $x $ leren.
 De vorige distributie $ \Pr (x) $ heeft ondersteuning voor meer dan $2 ^ n $ hypothetische waarden van $x $.
 Dit betekent dat als er een zeer nauw keurige schatting van $x $, de schatting van de Bayesiaanse-fase mogelijk een verboden geheugen en verwerkings tijd nodig heeft.
-Hoewel voor sommige toepassingen, zoals Quantum simulatie, de nauw keurigheid van de limitted niet van toepassing is op andere toepassingen, zoals het algoritme van Shor, kunt u geen gebruik maken van de exacte Bayesiaanse-afleiding binnen de fase-schattings stap.  Daarom bieden we ook implementaties voor het benaderen van Bayesiaanse-methoden, zoals een [wille keurige Walkie fase schatting (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) en ook niet-Bayesiaanse benaderingen zoals een [robuuste fase schatting](xref:microsoft.quantum.characterization.robustphaseestimation).
+Hoewel voor sommige toepassingen, zoals Quantum simulatie, de nauw keurigheid van de limitted niet van toepassing is op andere toepassingen, zoals het algoritme van Shor, kunt u geen gebruik maken van de exacte Bayesiaanse-afleiding binnen de fase-schattings stap.  Daarom bieden we ook implementaties voor het benaderen van Bayesiaanse-methoden, zoals een [wille keurige Walkie fase schatting (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) en ook niet-Bayesiaanse benaderingen zoals een [robuuste fase schatting](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### <a name="robust-phase-estimation"></a>Robuuste fase schatting ###
 
@@ -112,14 +112,14 @@ De belangrijkste functie van een robuuste fase schatting, die wordt gedeeld met 
 Andere relevante gegevens zijn onder meer de geringe overhead van $1 $ ancilla Qubit, of de procedure is niet-adaptief, wat inhoudt dat de vereiste reeks Quantum experimenten onafhankelijk is van de tussenliggende meet resultaten. In deze en komende voor beelden, waarbij de keuze van het algoritme voor fase schatting belang rijk is, moet één van beide verwijzen naar de documentatie, zoals @"microsoft.quantum.characterization.robustphaseestimation" en de publicaties waarnaar wordt verwezen, voor meer informatie en voor de implementatie ervan.
 
 > [!TIP]
-> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
+> Er zijn veel voor beelden van het gebruik van robuuste fase schatting. Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), het [ **SimpleIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)-voor beeld en het [ **Hubbard model**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)-voor beeld, voor een schatting van de fase bij het extra heren van de grond energie van het verschillende fysieke systeem.
 
 
 ### <a name="continuous-oracles"></a>Continue Oracle ###
 
-We kunnen ook generaliseren vanuit het Oracle-model dat hierboven wordt gebruikt om te zorgen voor continue time-Oracle, gemodelleerd door het type Canon <xref:microsoft.quantum.oracles.continuousoracle> .
+We kunnen ook generaliseren vanuit het Oracle-model dat hierboven wordt gebruikt om te zorgen voor continue time-Oracle, gemodelleerd door het type Canon <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Houd er rekening mee dat in plaats van één unitary-operator $U $ een familie van unitary-Opera tors $U (t) $ voor $t \in \mathbb{R} $, $U (t) U (s) $ = $U (t + s) $.
-Dit is een zwakkere instructie dan in de afzonderlijke situatie, omdat we een kunnen maken <xref:microsoft.quantum.oracles.discreteoracle> door $t = m \, \delta t $ te beperken voor sommige vaste $ \delta t $.
+Dit is een zwakkere instructie dan in de afzonderlijke situatie, omdat we een kunnen maken <xref:Microsoft.Quantum.Oracles.DiscreteOracle> door $t = m \, \delta t $ te beperken voor sommige vaste $ \delta t $.
 De [theorema van stenen](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ voor een bepaalde operator $H $, waarbij $ \exp $ de matrix exponentiële is, zoals beschreven in [Geavanceerde matrices](xref:microsoft.quantum.concepts.matrix-advanced).
 Een eigenstate $ \ket{\phi} $ van $H $ zodanig dat $H \ket{\phi} = \phi \ket{\phi} $ is dan ook een eigenstate van $U (t) $ voor alle $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
@@ -146,14 +146,14 @@ Met de mogelijkheid om achterwaarts op te stappen, kan de algoritme ook worden a
 
 Elke fase-schattings bewerking die Q# is opgegeven met Canon, neemt een andere set invoer parameterizing de kwaliteit op die we nodig hebben voor de laatste schatting $ \hat{\phi} $.
 Deze verschillende invoer, maar alle gemeen schappelijke invoer delen, zoals een gedeeltelijke toepassing die de kwaliteits parameters overschrijdt, resulteert in een algemene hand tekening.
-De <xref:microsoft.quantum.characterization.robustphaseestimation> bewerking die in de volgende sectie wordt besproken, heeft bijvoorbeeld de volgende hand tekening:
+De <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> bewerking die in de volgende sectie wordt besproken, heeft bijvoorbeeld de volgende hand tekening:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 De `bitsPrecision` invoer is uniek voor `RobustPhaseEstimation` , maar `oracle` is `eigenstate` gebruikelijk.
-Zo kan een bewerking, zoals gezien in **H2Sample**, een iteratieve fase schattings algoritme accepteren met een invoer van het formulier `(DiscreteOracle, Qubit[]) => Unit` zodat een gebruiker wille keurige fase schattings algoritmen kan opgeven:
+Zo kan een bewerking, zoals gezien in **H2Sample** , een iteratieve fase schattings algoritme accepteren met een invoer van het formulier `(DiscreteOracle, Qubit[]) => Unit` zodat een gebruiker wille keurige fase schattings algoritmen kan opgeven:
 
 ```qsharp
 operation H2EstimateEnergy(
