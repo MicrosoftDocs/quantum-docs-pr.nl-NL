@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835584"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692241"
 ---
 # <a name="data-structures-and-modeling"></a>Gegevens structuren en model lering #
 
 ## <a name="classical-data-structures"></a>Klassieke gegevens structuren ##
 
 Naast door de gebruiker gedefinieerde typen voor het weer geven van Quantum concepten, biedt Canon ook bewerkingen, functies en typen voor het werken met klassieke gegevens die worden gebruikt in het beheer van Quantum systemen.
-De <xref:microsoft.quantum.arrays.reversed> functie neemt bijvoorbeeld een matrix als invoer en retourneert dezelfde matrix in omgekeerde volg orde.
+De <xref:Microsoft.Quantum.Arrays.Reversed> functie neemt bijvoorbeeld een matrix als invoer en retourneert dezelfde matrix in omgekeerde volg orde.
 Dit kan vervolgens worden gebruikt voor een matrix van het type `Qubit[]` om te voor komen dat overbodige $ \operatorname{swap} $ Gates worden toegepast bij de conversie tussen Quantum representaties van gehele getallen.
-We hebben in de vorige sectie gezien dat typen van het formulier `(Int, Int -> T)` handig kunnen zijn voor het weer geven van wille keurige toegangs verzamelingen <xref:microsoft.quantum.arrays.lookupfunction> . de functie biedt daarom een handige manier om dergelijke typen van matrix typen samen te stellen.
+We hebben in de vorige sectie gezien dat typen van het formulier `(Int, Int -> T)` handig kunnen zijn voor het weer geven van wille keurige toegangs verzamelingen <xref:Microsoft.Quantum.Arrays.LookupFunction> . de functie biedt daarom een handige manier om dergelijke typen van matrix typen samen te stellen.
 
 ### <a name="pairs"></a>Paarsgewijs ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 De Canon biedt verschillende functies voor het bewerken van matrices.
 Deze functies zijn van het type para meters en kunnen dus worden gebruikt met matrices van elk Q# type.
-De <xref:microsoft.quantum.arrays.reversed> functie retourneert bijvoorbeeld een nieuwe matrix waarvan de elementen in omgekeerde volg orde van de invoer worden weer gegeven.
+De <xref:Microsoft.Quantum.Arrays.Reversed> functie retourneert bijvoorbeeld een nieuwe matrix waarvan de elementen in omgekeerde volg orde van de invoer worden weer gegeven.
 Dit kan worden gebruikt om te wijzigen hoe een Quantum register wordt weer gegeven bij het aanroepen van bewerkingen:
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-De <xref:microsoft.quantum.arrays.subarray> functie kan ook worden gebruikt om de volg orde van de elementen van een matrix te wijzigen of er subsets van te maken:
+De <xref:Microsoft.Quantum.Arrays.Subarray> functie kan ook worden gebruikt om de volg orde van de elementen van een matrix te wijzigen of er subsets van te maken:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-In combi natie met Datatransport besturing kunnen matrix manipulatie functies, zoals, <xref:microsoft.quantum.arrays.zip> een krachtige manier bieden om Quantum Program ma's uit te voeren:
+In combi natie met Datatransport besturing kunnen matrix manipulatie functies, zoals, <xref:Microsoft.Quantum.Arrays.Zipped> een krachtige manier bieden om Quantum Program ma's uit te voeren:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Deze Oracle is vervolgens een speciaal geval van de <xref:microsoft.quantum.canon.rall1> bewerking, waardoor het mogelijk is om te roteren met een wille keurige fase in plaats van de reflectie Case $ \phi = \pi $.
-In dit geval `RAll1` is de <xref:microsoft.quantum.intrinsic.r1> prelude-bewerking vergelijkbaar met het draaien van $ \ket{11\cdots1} $ in plaats van de single-Qubit status $ \ket {1} $.
+Deze Oracle is vervolgens een speciaal geval van de <xref:Microsoft.Quantum.Canon.RAll1> bewerking, waardoor het mogelijk is om te roteren met een wille keurige fase in plaats van de reflectie Case $ \phi = \pi $.
+In dit geval `RAll1` is de <xref:Microsoft.Quantum.Intrinsic.R1> prelude-bewerking vergelijkbaar met het draaien van $ \ket{11\cdots1} $ in plaats van de single-Qubit status $ \ket {1} $.
 
 De Oracle die de eerste subruimte markeert, kan op dezelfde manier worden samengesteld.
 In pseudocode:
@@ -139,7 +139,7 @@ In pseudocode:
 4. $X $ Gates op elke qubit Toep assen.
 5. $H $ Gates op elke qubit Toep assen.
 
-Deze keer worden ook gedemonstreerd met <xref:microsoft.quantum.canon.applywith> de <xref:microsoft.quantum.canon.rall1> bewerking die hierboven wordt beschreven:
+Deze keer worden ook gedemonstreerd met <xref:Microsoft.Quantum.Canon.ApplyWith> de <xref:Microsoft.Quantum.Canon.RAll1> bewerking die hierboven wordt beschreven:
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ Deze unitary wordt standaard beschreven door een van de twee typen Oracle.
 
 > [!TIP]
 > Beide Oracle-typen die hieronder worden beschreven, zijn opgenomen in de voor beelden.
-> Zie het [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)-voor beeld voor meer informatie over continue query Oracle.
-> Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor meer informatie over discrete query-Oracle.
+> Zie het [ **PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)-voor beeld voor meer informatie over continue query Oracle.
+> Zie het [ **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor meer informatie over discrete query-Oracle.
 
-Het eerste type Oracle, waarmee we een discrete query Oracle aanroepen en met het door de gebruiker gedefinieerde type vertegenwoordigen <xref:microsoft.quantum.oracles.discreteoracle> , bestaat uit een unitary matrix.
+Het eerste type Oracle, waarmee we een discrete query Oracle aanroepen en met het door de gebruiker gedefinieerde type vertegenwoordigen <xref:Microsoft.Quantum.Oracles.DiscreteOracle> , bestaat uit een unitary matrix.
 Als $U $ de unitary is waarvan de eigenvalues een schatting wil maken, is de Oracle voor $U $ gewoon een standaard voor een subroutine waarmee $U $ wordt geïmplementeerd.
 Een voor beeld: het kan $U $ nemen als de hierboven gedefinieerde Oracle-$Q $ voor de schatting van de amplitude.
 De eigenvalues van deze matrix kan worden gebruikt om de overlap ping te ramen tussen de eerste en de doel status, $ \sin ^ 2 (\theta) $, met behulp van quadratically minder steek proeven dan het enige wat zou nodig zouden zijn.
@@ -173,7 +173,7 @@ Met andere woorden, we willen $ \theta $ schatten voor een onbekende rotatie poo
 In dergelijke gevallen zou de subroutine waarmee we werken om deze vaste waarde van $ \theta $ voor de poort te leren kennen, $ $ \begin{align} U & = R_z (\theta) \\ \\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \ theta/2} \end{bmatrix}.
 \end{align} $ $
 
-Het tweede type Oracle dat in fase schatting wordt gebruikt, is de continue query Oracle, vertegenwoordigd door het <xref:microsoft.quantum.oracles.continuousoracle> type.
+Het tweede type Oracle dat in fase schatting wordt gebruikt, is de continue query Oracle, vertegenwoordigd door het <xref:Microsoft.Quantum.Oracles.ContinuousOracle> type.
 Een continue query in Oracle voor fase schatting neemt de vorm $U (t) $ waarbij $t $ een klassiek bekend reëel getal is.
 Als we $U $ een vast unitary hebben, neemt de doorlopende query Oracle het formulier $U (t) = U ^ t $.
 Hierdoor kunnen we matrixen opvragen, zoals $ \sqrt{U} $, die niet rechtstreeks in het discrete query model kunnen worden geïmplementeerd.
@@ -211,7 +211,7 @@ waarbij het gehele getal $r > $0 de aanpassings fout bepaalt.
 De model bibliotheek voor dynamische Generator biedt een framework voor het systematisch coderen van gecompliceerde generators in termen van eenvoudigere Generators. Een dergelijke beschrijving kan vervolgens worden door gegeven aan de simulatie bibliotheek voor het implementeren van tijd evolutie door een simulatie algoritme van keuze, waarbij veel details automatisch worden verwerkt.
 
 > [!TIP]
-> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)-voor beeld.
+> De dynamische Generator bibliotheek die hieronder wordt beschreven, is opgenomen in de voor beelden. Voor een voor beeld op basis van het Ising-model raadpleegt u het [ **IsingGenerators**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)-voor beeld.
 > Voor een voor beeld op basis van moleculaire water stof raadpleegt u de voor beelden van [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) en [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Volledige beschrijving van een generator ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 De eerste para meter vertegenwoordigt een tijd duur, die wordt vermenigvuldigd met de coëfficiënt in de `GeneratorIndex` , van unitary-evolutie. De tweede para meter is het Qubit registreren van de unitary. 
 
-### <a name="time-dependent-generators"></a>Tijd afhankelijke generatoren ###
+### <a name="time-dependent-generators"></a>Time-Dependent-Generators ###
 
 In veel gevallen zijn we ook geïnteresseerd in het model leren van tijd afhankelijke generatoren, zoals kan optreden in de Schrödinger-vergelijking $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = \hat H (t) \ket{\psi (t)}, \end{align} $ $, waarbij de generator $ \hat H (t) $ nu tijd afhankelijk is. De uitbrei ding van de tijd onafhankelijke genera tors hierboven is eenvoudig. In plaats van een probleem `GeneratorSystem` te hebben met het Hamiltonian voor alle keren $t $, hebben we het type dat door de `GeneratorSystemTimeDependent` gebruiker is gedefinieerd.
 
