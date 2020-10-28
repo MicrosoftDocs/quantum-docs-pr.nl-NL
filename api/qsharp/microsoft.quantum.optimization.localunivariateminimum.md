@@ -1,0 +1,52 @@
+---
+uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
+title: De functie LocalUnivariateMinimum
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Optimization
+qsharp.name: LocalUnivariateMinimum
+qsharp.summary: Returns the local minimum for a univariate function over a bounded interval, using a golden interval search.
+ms.openlocfilehash: 3b09af88bbed20a392768d005e5e9567b3bb7022
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92701918"
+---
+# <a name="localunivariateminimum-function"></a>De functie LocalUnivariateMinimum
+
+Naam ruimte: [micro soft. Quantum. Optimization](xref:Microsoft.Quantum.Optimization)
+
+Pakket [](https://nuget.org/packages/)
+
+
+Retourneert het lokale minimum voor een univariate-functie gedurende een beperkt interval, met behulp van een gouden interval zoekactie.
+
+```qsharp
+function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+```
+
+
+## <a name="input"></a>Invoer
+
+### <a name="fn--double---double"></a>FN: [dubbele](xref:microsoft.quantum.lang-ref.double) -> [dubbele precisie](xref:microsoft.quantum.lang-ref.double)
+
+De functie univariate die moet worden geminimaliseerd.
+
+
+### <a name="bounds--doubledouble"></a>grenzen: ([dubbel](xref:microsoft.quantum.lang-ref.double),[dubbel](xref:microsoft.quantum.lang-ref.double))
+
+Het interval waarin het lokale minimum moet worden gevonden.
+
+
+### <a name="tolerance--double"></a>tolerantie: [dubbel](xref:microsoft.quantum.lang-ref.double)
+
+De nauw keurigheid van de functie-invoer die moet worden toegestaan.
+De zoek actie naar lokale Optima by wordt voortgezet totdat het interval kleiner is dan deze tolerantie.
+
+
+
+## <a name="output--univariateoptimizationresult"></a>Uitvoer: [UnivariateOptimizationResult](xref:Microsoft.Quantum.Optimization.UnivariateOptimizationResult)
+
+Een lokale optimais van de opgegeven functie, die zich binnen de opgegeven grenzen bevindt.

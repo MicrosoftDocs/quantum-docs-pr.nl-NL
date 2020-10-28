@@ -1,0 +1,162 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms` naar een `GeneratorSystem` uitgedrukt in termen van de Pauli, geconverteerd `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerBlockEncodingGeneratorSystem
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorEvolutionSet
+- summary: Hiermee wordt een Hamiltonian die wordt beschreven door omgezet `JWOptimizedHTerms` `GeneratorSystem` in een uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorGeneratorSystem
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionEvolutionSet
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
+- summary: Hiermee wordt een Hamiltonian die wordt beschreven door omgezet `JWOptimizedHTerms` `GeneratorSystem` in een uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerGeneratorSystem
+- summary: Hiermee wordt een Hamiltonian die wordt beschreven door `JWOptimizedHTerms` naar een `GeneratorSystem` uitgedrukt in termen van de Pauli, geconverteerd `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBlockEncodingGeneratorSystem
+- summary: Retourneert een geoptimaliseerde T-Qubitization bewerking en de para meters die nodig zijn om deze uit te voeren.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle
+- summary: Retourneert de Qubitization-bewerking en de para meters die nodig zijn om deze uit te voeren.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle
+- summary: Retourneert Trotter-stap bewerking en de para meters die nodig zijn om deze uit te voeren.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
+- summary: Berekent Z-onderdeel van Jordanië – Wigner teken reeks tussen fermion indices in een fermionic-operator met een even aantal aanmaak/Annihilation-Opera tors.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliZString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._GetOptimizedBETermIndexCoeff_
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorFunction
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorSystemImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorPQRSTermSigns
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncoding_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedQuantumWalkByQubitization_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEGeneratorSystemCoeff_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedQubitizationOracleSeperatedRegisters_
+- summary: Hiermee wordt een GeneratorIndex die een PQ-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliGenIdx_
+- summary: Hiermee wordt een GeneratorIndex die een PQ-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliMajIdx_
+- summary: Hiermee wordt een GeneratorIndex waarmee een PQ of PQQR-term wordt beschreven, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliGenIdx_
+- summary: Hiermee wordt een GeneratorIndex waarmee een PQ of PQQR-term wordt beschreven, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliMajIdx_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._QubitizationOracleSeperatedRegisters
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases_
+- summary: Hiermee wordt een GeneratorIndex die een PQRS-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
+- summary: Hiermee wordt een GeneratorIndex die een PQRS-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliMajIdx_
+- summary: Hiermee wordt een GeneratorIndex waarmee een Z-term wordt beschreven, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliGenIdx
+- summary: Hiermee wordt een GeneratorIndex waarmee een Z-term wordt beschreven, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliMajIdx_
+- summary: Hiermee wordt een GeneratorIndex die een ZZ-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliGenIdx
+- summary: Hiermee wordt een GeneratorIndex die een ZZ-term beschrijft, geconverteerd naar een expressie ' GeneratorIndex [] ' in termen van PAULIS.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliMajIdx_
+name: Microsoft.Quantum.Chemistry.JordanWigner
+newtypes:
+- summary: 'De indeling van gegevens die zijn door gegeven van C# naar Q # om de voor waarden van de Hamiltonian weer te geven. De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms
+- summary: 'Indeling van gegevens die zijn door gegeven van C# naar Q # om alle informatie voor Hamiltonian simulatie weer te geven. De betekenis van de gegevens die worden weer gegeven, is afhankelijk van de algoritme die deze ontvangt.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData
+- summary: 'Indeling van gegevens die zijn door gegeven van C# naar Q # voor de voor bereiding van de begin toestand, de betekenis van de gegevens die worden weer gegeven, is afhankelijk van het algoritme dat deze ontvangt.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState
+- summary: Functie die `OptimizedBETermIndex` gegevens retourneert voor `n` een term met een geheel getal `n` , samen met het aantal voor waarden in de eerste `Int` en de som van absolute waarden van alle termen coëfficiënten in de `Double` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
+- summary: Term gegevens in het geoptimaliseerde blok-coderings algoritme.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex
+operations:
+- summary: >-
+    Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+
+    Zie [model lering van dynamische Generator](../libraries/data-structures#dynamical-generator-modeling) voor meer informatie.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
+- summary: Een unitary $U $ die de teken reeks Pauli toepast op $ (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}... Z_0 $ op qubits $0.. p $ op index $z \in \{ 0, 1 \} $ en $p $. Dat wil zeggen, $ $ \begin{align} U\ket {z} \ Ket {p} \ Ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEXY
+- summary: Eenvoudige status voorbereiding van de evaluatie status door spin-banen te nemen
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: Sparse status van de proef versie van de evaluatie periode voor meerdere configuraties door aanstellingen toe te voegen aan de status van de eerste proef versie.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSparseMultiConfigurationalState
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareTrialState
+- summary: Unitary gekoppeld-cluster status voor bereiding van de proef status
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareUnitaryCoupledClusterState
+- summary: Een unitary $U $ waarmee de Pauli $Z $-Gate wordt toegepast op een qubits $p $, voorwaarded op een index status $ \ket{p} $. Dat wil zeggen, $ $ \begin{align} U\ket {p} \ Ket {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
+- summary: Past tijd-evolutie toe met een PQRS-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWigner0123Term_
+- summary: Past tijd-evolutie toe door een cluster operator PQRS term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQRSTerm
+- summary: Past tijd-evolutie toe door een cluster operator PQ term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQTerm
+- summary: Past tijd-evolutie toe met een PQ-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQTerm_
+- summary: Past tijd-evolutie toe met een PQ-of PQQR-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQandPQQRTerm_
+- summary: Past tijd-evolutie toe met een Z-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZTerm_
+- summary: Past tijd-evolutie toe op basis van een ZZ-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZZTerm_
+- summary: >-
+    Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
+
+    Zie [model lering van dynamische Generator](../libraries/data-structures#dynamical-generator-modeling) voor meer informatie.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._MergeTwoRegisters_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner
+metadata:
+  ms.openlocfilehash: 909133bb6f75aa814c17ac1e54667c3599e47bf6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92703232"
