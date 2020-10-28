@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835958"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691703"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Manieren om een programma uit te voeren Q#
 
@@ -26,7 +26,7 @@ Een primair onderscheid is dat Q# kan worden uitgevoerd:
 - als zelfstandige toepassing, waarbij de Q# enige taal betrokken is en het programma rechtstreeks wordt aangeroepen. In deze categorie vallen twee methoden daad werkelijk:
   - de opdracht regel interface
   - Q# Jupyter-notebooks
-- met een extra *hostprogramma*, geschreven in Python of een .net-taal (bijvoorbeeld C# of F #), die vervolgens het programma aanroept en de geretourneerde resultaten verder kan verwerken.
+- met een extra *hostprogramma* , geschreven in Python of een .net-taal (bijvoorbeeld C# of F #), die vervolgens het programma aanroept en de geretourneerde resultaten verder kan verwerken.
 
 Voor een beter begrip van deze processen en hun verschillen, kunt u een eenvoudig Q# programma overwegen en de manieren vergelijken waarop het kan worden uitgevoerd.
 
@@ -56,16 +56,16 @@ Hiervoor moet de hoofd tekst van een [bewerking](xref:microsoft.quantum.guide.ba
 ```
 U hebt een bewerking gedefinieerd, `MeasureSuperposition` die geen invoer heeft en een waarde van het type [resultaat](xref:microsoft.quantum.guide.types)retourneert.
 
-Hoewel de voor beelden op deze pagina alleen bestaan uit Q# *bewerkingen*, zijn alle concepten die we bespreken gelijk aan de Q# *functies*en daarom verwijzen ze gezamenlijk naar hun *callables*. Hun verschillen worden besproken op basis van het [ Q# volgende: bewerkingen en functies](xref:microsoft.quantum.guide.basics#q-operations-and-functions), en meer informatie over het definiëren van ze vindt u op [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions).
+Hoewel de voor beelden op deze pagina alleen bestaan uit Q# *bewerkingen* , zijn alle concepten die we bespreken gelijk aan de Q# *functies* en daarom verwijzen ze gezamenlijk naar hun *callables* . Hun verschillen worden besproken op basis van het [ Q# volgende: bewerkingen en functies](xref:microsoft.quantum.guide.basics#q-operations-and-functions), en meer informatie over het definiëren van ze vindt u op [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions).
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Aanroepable gedefinieerd in een Q# bestand
 
 De aanroep zou precies worden aangeroepen en worden uitgevoerd door Q# .
 Er zijn echter enkele extra toevoegingen vereist om een volledig bestand te vormen `*.qs` Q# .
 
-Alle Q# typen en callables (zowel die u hebt gedefinieerd als de ingebouwde taal) worden gedefinieerd in *naam ruimten*, die elke volledige naam geven waarnaar vervolgens kan worden verwezen.
+Alle Q# typen en callables (zowel die u hebt gedefinieerd als de ingebouwde taal) worden gedefinieerd in *naam ruimten* , die elke volledige naam geven waarnaar vervolgens kan worden verwezen.
 
-De [`H`](xref:microsoft.quantum.intrinsic.h) bewerkingen en zijn bijvoorbeeld te [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) vinden in de [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) naam ruimten en (onderdeel van de [ Q# standaard bibliotheken](xref:microsoft.quantum.qsharplibintro)).
+De [`H`](xref:Microsoft.Quantum.Intrinsic.H) bewerkingen en zijn bijvoorbeeld te [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) vinden in de [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) naam ruimten en (onderdeel van de [ Q# standaard bibliotheken](xref:microsoft.quantum.qsharplibintro)).
 Zo kunnen ze altijd worden aangeroepen via hun *volledige* naam `Microsoft.Quantum.Intrinsic.H(<qubit>)` en `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` , maar dit wordt altijd wel tot zeer ruime code.
 
 In plaats daarvan `open` kunnen met behulp van de instructies callables worden gerefereerd aan een beknoptere steno, zoals in de bovenstaande hoofd tekst is uitgevoerd.
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > We kunnen bijvoorbeeld in plaats daarvan `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` hierboven gebruiken en vervolgens aanroepen `H` via `NamespaceWithH.H(<qubit>)` .
 
 > [!NOTE]
-> Een uitzonde ring op dit is de [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) naam ruimte, die altijd automatisch wordt geopend.
-> Daarom kan callables bijvoorbeeld [`Length`](xref:microsoft.quantum.core.length) altijd rechtstreeks worden gebruikt.
+> Een uitzonde ring op dit is de [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) naam ruimte, die altijd automatisch wordt geopend.
+> Daarom kan callables bijvoorbeeld [`Length`](xref:Microsoft.Quantum.Core.Length) altijd rechtstreeks worden gebruikt.
 
 ### <a name="running-on-target-machines"></a>Uitvoeren op doel computers
 
@@ -103,7 +103,7 @@ Het algemene model voor het uitvoeren van een Q# programma wordt nu duidelijk.
 De specifieke aanroepable die moet worden uitgevoerd, heeft eerst toegang tot alle andere callables en typen die in dezelfde naam ruimte zijn gedefinieerd.
 U kunt ook toegang krijgen tot die van een van de [ Q# bibliotheken](xref:microsoft.quantum.libraries), maar deze moeten worden gerefereerd via de volledige naam of door middel van het gebruik van de `open` hierboven beschreven instructies.
 
-De aanroepable zelf wordt vervolgens uitgevoerd op een *[doel computer](xref:microsoft.quantum.machines)*.
+De aanroepable zelf wordt vervolgens uitgevoerd op een *[doel computer](xref:microsoft.quantum.machines)* .
 Dergelijke doel computers kunnen echte Quantum hardware zijn of de meerdere simulatoren die beschikbaar zijn als onderdeel van de QDK.
 Voor onze doel einden is de meest nuttige doel computer een exemplaar van de [Full-State Simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` waarmee het gedrag van het programma wordt berekend alsof het wordt uitgevoerd op een quantum computer zonder ruis.
 
@@ -121,7 +121,7 @@ Eerst bespreken we hoe dit wordt gedaan met de Q# zelfstandige toepassing vanaf 
 We behouden de zelfstandige toepassing van Q# Jupyter-notebooks voor het laatst aan, omdat de primaire functionaliteit in tegens telling tot de eerste drie niet is gecentreerd rond een lokaal Q# bestand.
 
 > [!NOTE]
-> Hoewel we dit niet in deze voor beelden illustreren, is een gemeen schappelijke methode tussen de run-methoden dat alle berichten die vanuit het programma worden afgedrukt Q# (via [`Message`](xref:microsoft.quantum.intrinsic.message) of [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) bijvoorbeeld), doorgaans altijd worden afgedrukt op de respectieve console.
+> Hoewel we dit niet in deze voor beelden illustreren, is een gemeen schappelijke methode tussen de run-methoden dat alle berichten die vanuit het programma worden afgedrukt Q# (via [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) of [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) bijvoorbeeld), doorgaans altijd worden afgedrukt op de respectieve console.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# vanaf de opdracht prompt
 Een van de eenvoudigste manieren om aan de slag te gaan met het schrijven Q# van Program ma's is om te voor komen dat u zich zorgen maakt over afzonderlijke bestanden en een tweede taal.
@@ -180,7 +180,7 @@ Een dergelijke bewerking kan worden geschreven als
     }
 ```
 waarbij de geretourneerde waarde een matrix is van de meet resultaten.
-Houd er rekening mee dat [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) en [`ForEach`](xref:microsoft.quantum.arrays.foreach) zich in de en de naam ruimte bevindt [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) . hiervoor [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) moeten aanvullende instructies worden vereist `open` .
+Houd er rekening mee dat [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) en [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) zich in de en de naam ruimte bevindt [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) . hiervoor [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) moeten aanvullende instructies worden vereist `open` .
 
 Als we het `@EntryPoint()` kenmerk voorafgaand aan deze nieuwe bewerking verplaatsen (Houd er dan rekening mee dat er slechts één regel in een bestand kan worden uitgevoerd). er wordt geprobeerd deze uit te voeren met alleen `dotnet run` resultaten in een fout bericht dat aangeeft welke extra opdracht regel opties vereist zijn en hoe u deze kunt uitdrukken.
 
@@ -593,7 +593,7 @@ Daarom kunnen we toegang tot callables van de [ Q# standaard bibliotheken](xref:
 Bij het uitvoeren van een cel met een dergelijke instructie zijn de definities van deze naam ruimten beschikbaar in de hele werk ruimte.
 
 > [!NOTE]
-> Callables van [micro soft. Quantum. intrinsieke](xref:microsoft.quantum.intrinsic) en [micro soft. Quantum. Canon](xref:microsoft.quantum.canon) (bijvoorbeeld [`H`](xref:microsoft.quantum.intrinsic.h) en [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) zijn automatisch beschikbaar voor bewerkingen die zijn gedefinieerd in cellen in Q# Jupyter-notebooks.
+> Callables van [micro soft. Quantum. intrinsieke](xref:Microsoft.Quantum.Intrinsic) en [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon) (bijvoorbeeld [`H`](xref:Microsoft.Quantum.Intrinsic.H) en [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) ) zijn automatisch beschikbaar voor bewerkingen die zijn gedefinieerd in cellen in Q# Jupyter-notebooks.
 > Dit geldt echter niet voor code die wordt binnengebracht in vanuit externe Q# bron bestanden (een proces dat wordt weer gegeven bij [Inleiding tot Q# en Jupyter-notebooks](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 

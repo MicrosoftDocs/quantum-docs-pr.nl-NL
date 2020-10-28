@@ -89,7 +89,7 @@ Deze poort reeks is van fundamenteel belang voor Quantum Computing omdat hiermee
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Bewerkingen met deze of meer complexiteit zijn alomtegenwoordige in Quantum-algoritmen en Quantum fout correctie, zodat het een uitstekende goed keuring vormt voor de visualisatie die een *Quantum diagram*wordt genoemd.
+Bewerkingen met deze of meer complexiteit zijn alomtegenwoordige in Quantum-algoritmen en Quantum fout correctie, zodat het een uitstekende goed keuring vormt voor de visualisatie die een *Quantum diagram* wordt genoemd.
 Het circuit diagram voor het voorbereiden van de Quantum status van deze maximally Entangled is:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Bijvoorbeeld het symbool
 <!--Kan geen manier vinden om dit eenvoudig te centreren... Er is waarschijnlijk een uitbrei ding nodig:-->
 ![Symbool voor een Hadamard-bewerking die fungeert als een single-Qubit-REGI ster](~/media/2.svg)
 
-is een [Hadamard](xref:microsoft.quantum.intrinsic.h) -bewerking die fungeert als een single-Qubit-REGI ster.
+is een [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) -bewerking die fungeert als een single-Qubit-REGI ster.
 
 Quantum-Gates worden in chronologische volg orde gerangschikt met de meest linkse poort als de poort die voor het eerst op de qubits is toegepast.
 Met andere woorden, als u de draden bijhoudt als het gaat om de Quantum status, halen de draden de Quantum status door elk van de poorten in het diagram van links naar rechts.
@@ -150,7 +150,7 @@ Over het algemeen beschrijven we dergelijke beheerde bewerkingen in circuit diag
 ![Circuit diagram van een poort die afzonderlijk wordt gecontroleerd](~/media/5.svg)
 
 Hier geeft de zwarte cirkel de Quantum bit aan waarop de poort wordt gecontroleerd en een verticale bedrading de unitary die wordt toegepast wanneer het besturings element Qubit de waarde $ 1 heeft $ .
-Voor de speciale gevallen waarbij $ g = X $ en $ G = Z $ de volgende notatie hebben om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [ $ CNOT- $ poort](xref:microsoft.quantum.intrinsic.cnot)is):
+Voor de speciale gevallen waarbij $ g = X $ en $ G = Z $ de volgende notatie hebben om de bewaakte versie van de poorten te beschrijven (Houd er rekening mee dat de Controlled-X-Gate de [ $ CNOT- $ poort](xref:Microsoft.Quantum.Intrinsic.CNOT)is):
 
 <!--- ![](.\media\6.svg) --->
 <!--Kan geen manier vinden om dit eenvoudig te centreren... Er is waarschijnlijk een uitbrei ding nodig:-->
@@ -175,7 +175,7 @@ Met name een dergelijk subcircuit ziet er als volgt uit:
 <!--Kan geen manier vinden om dit eenvoudig te centreren... Er is waarschijnlijk een uitbrei ding nodig:-->
 ![Symbool dat een meting bewerking vertegenwoordigt](~/media/7.svg)
 
-Q# Hiermee implementeert u een [meet operator](xref:microsoft.quantum.intrinsic.measure) voor dit doel.
+Q# Hiermee implementeert u een [meet operator](xref:Microsoft.Quantum.Intrinsic.Measure) voor dit doel.
 Zie de [sectie over metingen](xref:microsoft.quantum.libraries.standard.prelude#measurements) voor meer informatie.
 
 Op dezelfde manier wordt het subcircuit

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835907"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690786"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli Simulator
 
@@ -67,7 +67,7 @@ Gebruik de Q# opdracht I Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-
 De Toffoli Simulator ondersteunt:
 
 * Rotaties en exponentiated Paulis, zoals `R` en `Exp` , wanneer de resulterende bewerking gelijk is aan `X` of de identiteits matrix.
-* Metings-en [bevestigings](xref:microsoft.quantum.diagnostics.assertmeasurement) bewerkingen, maar alleen op basis van de Pauli `Z` . Houd er rekening mee dat de kans op een meting bewerking altijd **0** of **1**is; Er is geen wille keurige Toffoli Simulator.
+* Metings-en [bevestigings](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) bewerkingen, maar alleen op basis van de Pauli `Z` . Houd er rekening mee dat de kans op een meting bewerking altijd **0** of **1** is; Er is geen wille keurige Toffoli Simulator.
 * `DumpMachine` en- `DumpRegister` functies.
 Beide functies voeren de huidige `Z` status van elke qubit, één Qubit per regel.
 
@@ -84,7 +84,7 @@ Bijvoorbeeld:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Quantum bronnen estimator](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

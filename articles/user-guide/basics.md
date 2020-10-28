@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835516"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691638"
 ---
 # <a name="no-locq-basics"></a>Q# Bewerkingen
 
@@ -28,7 +28,7 @@ Vanuit een technisch perspectief is een Quantum programma een bepaalde set klass
 Een belang rijk gevolg van deze weer gave is dat een Q# programma qubits zelf niet rechtstreeks modelt, maar in plaats daarvan wordt beschreven hoe een klassieke, beheerde computer communiceert met die qubits.
 Standaard worden door het ontwerp Q# geen Quantum Staten of andere eigenschappen van Quantum mechanismen gedefinieerd.
 Bekijk bijvoorbeeld de status $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ die wordt besproken in de hand leiding over de [quantum computing-concepten](xref:microsoft.quantum.concepts.intro) .
-Als u deze status wilt voorbereiden in Q# , begint u met de feiten die de qubits hebben geïnitialiseerd in de $ \ket {0} $-status en die $ \ket{+} = H\ket {0} $, waarbij $H $ de [Hadamard-trans formatie](xref:microsoft.quantum.glossary#hadamard)is, geïmplementeerd door de [ `H` bewerking](xref:microsoft.quantum.intrinsic.h). De Basic Q# -code voor het initialiseren en transformeren van een Qubit. dit ziet er als volgt uit:
+Als u deze status wilt voorbereiden in Q# , begint u met de feiten die de qubits hebben geïnitialiseerd in de $ \ket {0} $-status en die $ \ket{+} = H\ket {0} $, waarbij $H $ de [Hadamard-trans formatie](xref:microsoft.quantum.glossary#hadamard)is, geïmplementeerd door de [ `H` bewerking](xref:Microsoft.Quantum.Intrinsic.H). De Basic Q# -code voor het initialiseren en transformeren van een Qubit. dit ziet er als volgt uit:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-Zie [werken met qubits](xref:microsoft.quantum.guide.qubits)voor meer informatie over het initialiseren van, of het *toewijzen*van qubits.
+Zie [werken met qubits](xref:microsoft.quantum.guide.qubits)voor meer informatie over het initialiseren van, of het *toewijzen* van qubits.
 
 ## <a name="quantum-states-in-no-locq"></a>Quantum provincies in Q#
 
@@ -45,7 +45,7 @@ Belang rijk: in het vorige programma wordt niet expliciet naar de status verweze
 Met deze methode kunt u volledig neutraal over wat een Quantum status *heeft* , zelfs op elke doel computer, die verschillende interpretaties kan hebben, afhankelijk van de computer. 
 
 Een Q# programma kan niet introspect in de status van een Qubit.
-Een programma kan in plaats daarvan bewerkingen aanroepen zoals [`Measure`](xref:microsoft.quantum.intrinsic.measure) om informatie van een Qubit te leren en om bewerkingen zoals [`X`](xref:microsoft.quantum.intrinsic.x) en [`H`](xref:microsoft.quantum.intrinsic.h) te kunnen aanroepen om te reageren op de status van een Qubit.
+Een programma kan in plaats daarvan bewerkingen aanroepen zoals [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) om informatie van een Qubit te leren en om bewerkingen zoals [`X`](xref:Microsoft.Quantum.Intrinsic.X) en [`H`](xref:Microsoft.Quantum.Intrinsic.H) te kunnen aanroepen om te reageren op de status van een Qubit.
 Wat deze bewerkingen eigenlijk *doen* , worden alleen concreet gemaakt door de doel computer die wordt gebruikt om het desbetreffende programma uit te voeren Q# .
 Als bijvoorbeeld het programma wordt uitgevoerd op onze [volle Simulator](xref:microsoft.quantum.machines.full-state-simulator), voert de Simulator de bijbehorende wiskundige bewerkingen uit op het gesimuleerde Quantum systeem.
 Maar in de toekomst kijken we, wanneer de doel computer een echte quantum computer is, dergelijke bewerkingen aanroepen in Q# de quantum computer om de overeenkomstige *real* -bewerkingen uit te voeren op het *echte* Quantum systeem, bijvoorbeeld nauw keurig verlopen Laser pulsen).
@@ -55,14 +55,14 @@ Op deze manier kunt u Q# eenvoudig de logische en hybride Quantum-algoritmen van
 
 ## <a name="no-locq-operations-and-functions"></a>Q# bewerkingen en functies
 
-In concrete Q# zin bestaat een programma uit *bewerkingen*, *functies*en eventuele door de gebruiker gedefinieerde typen. 
+In concrete Q# zin bestaat een programma uit *bewerkingen* , *functies* en eventuele door de gebruiker gedefinieerde typen. 
 
 Bewerkingen worden gebruikt om de trans formaties van Quantum systemen te beschrijven en zijn de meest fundamentele bouw stenen voor Q# Program ma's. Elke bewerking die is gedefinieerd in Q# kan vervolgens een wille keurig aantal andere bewerkingen aanroepen.
 
 In tegens telling tot bewerkingen worden functies gebruikt om louter *deterministisch* klassiek gedrag te beschrijven en geen effect te hebben naast het uitvoeren van klassieke waarden. Stel bijvoorbeeld dat u de qubits aan het einde van een programma wilt meten en de meet resultaten wilt toevoegen aan een matrix.
 In dit geval `Measure` is een *bewerking* waarmee de doel computer een meting kan uitvoeren op de (reële of gesimuleerde) qubits. Terzelfder tijd verwerken *functies* het klassieke proces van het toevoegen van de geretourneerde resultaten aan een matrix.
 
-Samen worden bewerkingen en functies ook wel *callables*genoemd. Hun onderliggende structuur en gedrag worden geïntroduceerd en beschreven in [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions).
+Samen worden bewerkingen en functies ook wel *callables* genoemd. Hun onderliggende structuur en gedrag worden geïntroduceerd en beschreven in [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# syntaxis overzicht
@@ -94,7 +94,7 @@ Een eenvoudig voor beeld van een instructie in Q# is het toewijzen van een symbo
 let count = 5;
 ```
 
-Een interessantere voor beeld is de `for` instructie die iteratie ondersteunt en een *instructie blok*bevat.
+Een interessantere voor beeld is de `for` instructie die iteratie ondersteunt en een *instructie blok* bevat.
 Stel dat `qubits` het symbool is gebonden aan een REGI ster van qubits (technisch type `Qubit[]` of een matrix van `Qubit` typen). Kies
 ```qsharp
 for (qubit in qubits) {

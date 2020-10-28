@@ -8,12 +8,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835567"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690844"
 ---
 # <a name="diagnostics"></a>Diagnostiek #
 
@@ -23,9 +23,9 @@ In het algemeen is deze ondersteuning beschikbaar in de vorm van functies en bew
 
 ## <a name="machine-diagnostics"></a>Machine diagnostiek ##
 
-Diagnostische gegevens over klassieke waarden kunnen worden verkregen met behulp van de <xref:microsoft.quantum.intrinsic.message> functie om een bericht op een computer afhankelijke manier te registreren.
+Diagnostische gegevens over klassieke waarden kunnen worden verkregen met behulp van de <xref:Microsoft.Quantum.Intrinsic.Message> functie om een bericht op een computer afhankelijke manier te registreren.
 Standaard schrijft de teken reeks naar de-console.
-Wordt gebruikt in combi natie met geïnterpoleerde teken reeksen en <xref:microsoft.quantum.intrinsic.message> maakt het eenvoudig om diagnostische gegevens over klassieke waarden te rapporteren:
+Wordt gebruikt in combi natie met geïnterpoleerde teken reeksen en <xref:Microsoft.Quantum.Intrinsic.Message> maakt het eenvoudig om diagnostische gegevens over klassieke waarden te rapporteren:
 
 ```Q#
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
@@ -35,7 +35,7 @@ Message($"About to rotate by an angle of {angle}...");
 > [!NOTE]
 > `Message` een hand tekening heeft `(String -> Unit)` die opnieuw aangeeft dat een logboek bestand voor fout opsporing niet in acht kan worden genomen Q# .
 
-De <xref:microsoft.quantum.diagnostics.dumpmachine> en <xref:microsoft.quantum.diagnostics.dumpregister> callables instrueren doel machines om diagnostische gegevens te verstrekken over alle momenteel toegewezen qubits of over een specifiek REGI ster van qubits.
+De <xref:Microsoft.Quantum.Diagnostics.DumpMachine> en <xref:Microsoft.Quantum.Diagnostics.DumpRegister> callables instrueren doel machines om diagnostische gegevens te verstrekken over alle momenteel toegewezen qubits of over een specifiek REGI ster van qubits.
 Elke doel computer is afhankelijk van de diagnostische gegevens die worden verstrekt in reactie op een dump instructie.
 De [Fully](xref:microsoft.quantum.machines.full-state-simulator) machine-doel computer, bijvoorbeeld, levert het hostprogramma met de status vector die intern wordt gebruikt om een REGI ster van qubits te vertegenwoordigen.
 Ter vergelijking: de doel computer van de [Toffoli Simulator](xref:microsoft.quantum.machines.toffoli-simulator) biedt één klassieke bit voor elke qubit.
@@ -45,34 +45,34 @@ Ter vergelijking: de doel computer van de [Toffoli Simulator](xref:microsoft.qua
 
 ## <a name="facts-and-assertions"></a>Feiten en verklaringen ##
 
-Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging), een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit` respectievelijk kan worden gemarkeerd als een *eenheids test*.
+Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging), een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit` respectievelijk kan worden gemarkeerd als een *eenheids test* .
 Elke eenheids test bestaat doorgaans uit een klein Quantum programma, samen met een of meer voor waarden die de juistheid van het programma controleren.
-Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_, die de waarden van hun invoer (of _beweringen_) controleren, die de statussen controleren van een of meer qubits die worden door gegeven als invoer.
+Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_ , die de waarden van hun invoer (of _beweringen_ ) controleren, die de statussen controleren van een of meer qubits die worden door gegeven als invoer.
 
 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")`Geeft bijvoorbeeld het mathematische feit weer dat $1 + 1 = $2, terwijl `AssertQubit(One, qubit)` de voor waarde vertegenwoordigt die het meten `qubit` `One` van een met zekerheid retourneert.
 In het eerste geval kunnen we controleren of de voor waarde juist is gegeven, maar in de laatste gevallen moeten we iets weten over de status van de Qubit om de bewering te kunnen evalueren.
 
 De Q# standaard bibliotheken bieden verschillende functies voor het weer geven van feiten, waaronder:
 
-- <xref:microsoft.quantum.diagnostics.fact>
-- <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
-- <xref:microsoft.quantum.diagnostics.nearequalityfactc>
-- <xref:microsoft.quantum.diagnostics.equalityfacti>
+- <xref:Microsoft.Quantum.Diagnostics.Fact>
+- <xref:Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact>
+- <xref:Microsoft.Quantum.Diagnostics.NearEqualityFactC>
+- <xref:Microsoft.Quantum.Diagnostics.EqualityFactI>
 
 
 ### <a name="testing-qubit-states"></a>Qubit-statussen testen ###
 
 In de praktijk zijn de beweringen afhankelijk van het feit dat klassieke simulaties van Quantum-garages de [theorema zonder klonen](https://arxiv.org/abs/quant-ph/9607018)niet hoeven te volgen, zodat we fysieke metingen en beweringen kunnen maken wanneer ze een simulator voor onze doel computer gebruiken.
 Daarom kunnen we afzonderlijke bewerkingen op een klassieke Simulator testen voordat ze op hardware worden geïmplementeerd.
-Op doel computers die geen bevestigingen kunnen evalueren, kunnen aanroepen naar <xref:microsoft.quantum.diagnostics.assertmeasurement> veilig worden genegeerd.
+Op doel computers die geen bevestigingen kunnen evalueren, kunnen aanroepen naar <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> veilig worden genegeerd.
 
-Meer in het algemeen is de <xref:microsoft.quantum.diagnostics.assertmeasurement> bewerkings verklaring dat de opgegeven qubits in de gegeven Pauli gebaseerd altijd het gegeven resultaat heeft.
+Meer in het algemeen is de <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> bewerkings verklaring dat de opgegeven qubits in de gegeven Pauli gebaseerd altijd het gegeven resultaat heeft.
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
 `AssertMeasurement` heeft hand tekening `((Pauli[], Qubit[], Result, String) -> ())` .
 Omdat `AssertMeasurement` een functie met een lege tuple als uitvoer type is, kan geen effect van het aangeroepen `AssertMeasurement` worden gezien in een Q# programma.
 
-De <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
+De <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> bewerkings functie beweringen die het opgegeven qubits in de gegeven Pauli-basis meten, hebben het gegeven resultaat met de opgegeven kans, binnen enkele tolerantie.
 Tolerantie is additief (bijvoorbeeld `abs(expected-actual) < tol` ).
 Als de verklaring mislukt, wordt de uitvoering beëindigd door aan te roepen `fail` met het opgegeven bericht.
 Deze bewerking is standaard niet geïmplementeerd. Simulatoren die IT kunnen ondersteunen, moeten een implementatie bieden die runtime-controle uitvoert.
@@ -88,7 +88,7 @@ Dat wil zeggen, \begin{align} \ket{\psi} = \ket{\psi '} \Text{als en alleen if} 
 \end{align} met behulp van de primitieve bewerkingen die zijn gedefinieerd in de prelude, kunnen we rechtstreeks een meting uitvoeren die wordt geretourneerd `Zero` als $ \ket{\psi} $ een eigenstate is van een van de Pauli-Opera tors.
 
 
-De bewerking <xref:microsoft.quantum.diagnostics.assertqubit> biedt een bijzonder nuttige steno om dit te doen in het geval dat we de bewering $ \ket{\psi} = \ket $ willen testen {0} .
+De bewerking <xref:Microsoft.Quantum.Diagnostics.AssertQubit> biedt een bijzonder nuttige steno om dit te doen in het geval dat we de bewering $ \ket{\psi} = \ket $ willen testen {0} .
 Dit is bijvoorbeeld gebruikelijk wanneer we niet zijn berekend om ancilla qubits te retour neren naar $ \ket {0} $ voordat ze worden vrijgegeven.
 Het bevestigen van $ \ket {0} $ is ook handig wanneer u wilt voor komen dat twee status voorbereidingen `P` en `Q` -bewerkingen dezelfde status voor bereid hebben en wanneer deze worden `Q` ondersteund `Adjoint` .
 Met name
@@ -103,7 +103,7 @@ using (register = Qubit()) {
 ```
 
 Meer in het algemeen is er echter geen toegang tot beweringen over staten die niet samen vallen met eigenstates van Pauli-Opera tors.
-Bijvoorbeeld: $ \ket{\psi} = (\ket {0} + e ^ {\pi/8} \ket {1} )/\sqrt {2} $ is geen Eigenstate van een Pauli-operator, zodat we niet kunnen gebruiken om te <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bepalen of een status $ \ket{\psi '} $ gelijk is aan $ \ket{\psi} $.
+Bijvoorbeeld: $ \ket{\psi} = (\ket {0} + e ^ {\pi/8} \ket {1} )/\sqrt {2} $ is geen Eigenstate van een Pauli-operator, zodat we niet kunnen gebruiken om te <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> bepalen of een status $ \ket{\psi '} $ gelijk is aan $ \ket{\psi} $.
 In plaats daarvan moeten we de Assertion $ \ket{\psi} = \ket{\psi} $ afbreken in veronderstellingen die rechtstreeks kunnen worden getest met behulp van de primitieven die door onze Simulator worden ondersteund.
 Als u dit wilt doen, laat u $ \ket{\psi} = \alpha \ket {0} + \beta \ket {1} $ voor complexe getallen $ \alpha = a \_ r + a \_ i $ en $ \beta $.
 Houd er rekening mee dat deze expressie vier echte cijfers $ \{ a \_ r, a \_ i, b \_ r, b \_ i $ vereist om op te \} geven, aangezien elk complex getal kan worden uitgedrukt als de som van een reëel en imaginair deel.
@@ -115,7 +115,7 @@ Laat $x $, $y $ en $z $ waarden hebben `Result` voor Pauli $X $, $Y $ en respect
 Vervolgens gebruikt u de functie kans voor Quantum metingen, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a \_ r b \_ r + a \_ i b \_ i \\ \\ \Pr (y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a \_ r b \_ i-a \_ i b \_ r \\ \\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a \_ r ^ 2 + \_ \_ b \_ i ^ 2 \right).
 \end{align}
 
-<xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>Met de bewerking worden deze verklaringen geïmplementeerd met de opgegeven representaties van $ \alpha $ en $ \beta $ als waarden van het type <xref:microsoft.quantum.math.complex> .
+<xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance>Met de bewerking worden deze verklaringen geïmplementeerd met de opgegeven representaties van $ \alpha $ en $ \beta $ als waarden van het type <xref:Microsoft.Quantum.Math.Complex> .
 Dit is handig wanneer de verwachte status wiskundig kan worden berekend.
 
 ### <a name="asserting-equality-of-quantum-operations"></a>Gelijkheid van Quantum bewerkingen bevestigen ###
@@ -128,28 +128,28 @@ We zijn mogelijk geïnteresseerd in het bevestigen dat $U ^ \dagger (t) = U (-t)
 Breed gepaard gesp roken zijn er twee verschillende strategieën die we kunnen volgen bij het maken van de bevestiging dat twee bewerkingen `U` en op `V` identieke wijze handelen.
 Eerst kunnen we controleren dat `U(target); (Adjoint V)(target);` elke provincie in een bepaalde basis blijft behouden.
 Ten tweede kunnen we controleren of `U(target); (Adjoint V)(target);` op de helft van een Entangled-status het entanglement wordt behouden.
-Deze strategieën worden geïmplementeerd door de Canon <xref:microsoft.quantum.diagnostics.assertoperationsequalinplace> -bewerkingen en <xref:microsoft.quantum.diagnostics.assertoperationsequalreferenced> , respectievelijk.
+Deze strategieën worden geïmplementeerd door de Canon <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> -bewerkingen en <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> , respectievelijk.
 
 > [!NOTE]
 > De benaderende bevestigingen die hierboven worden beschreven, zijn gebaseerd op de [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), een wiskundig Framework waarmee de bewerkingen op $n $ qubits worden gekoppeld aan Entangled Staten op $2n $ qubits.
 > Met name de identiteits bewerking op $n $ qubits wordt vertegenwoordigd door $n $ copies van de Entangled-status $ \ket{\ beta_ {00} } \mathrel{: =} (\ket {00} + \ket {11} )/\sqrt {2} $.
-> Met <xref:microsoft.quantum.preparation.preparechoistate> deze bewerking wordt deze isomorphism geïmplementeerd, waarbij een status wordt voor bereid die een bepaalde bewerking vertegenwoordigt.
+> Met <xref:Microsoft.Quantum.Preparation.PrepareChoiState> deze bewerking wordt deze isomorphism geïmplementeerd, waarbij een status wordt voor bereid die een bepaalde bewerking vertegenwoordigt.
 
 Deze strategieën worden ongeveer onderscheiden door een tijd-spatie balans.
 Door elke invoer status te herhalen, neemt extra tijd in beslag, terwijl entanglement wordt gebruikt als referentie voor het opslaan van extra qubits.
-In gevallen waarin een bewerking een omkeerbaar klassieke bewerking implementeert, zodat we alleen geïnteresseerd zijn in het gedrag van reken kundige statussen, <xref:microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis> testen de gelijkheid op deze beperkte set invoer.
+In gevallen waarin een bewerking een omkeerbaar klassieke bewerking implementeert, zodat we alleen geïnteresseerd zijn in het gedrag van reken kundige statussen, <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> testen de gelijkheid op deze beperkte set invoer.
 
 > [!TIP]
-> De iteratie over de invoer status wordt verwerkt door de inventarisatie bewerkingen <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> en <xref:microsoft.quantum.canon.iteratethroughcartesianpower> .
+> De iteratie over de invoer status wordt verwerkt door de inventarisatie bewerkingen <xref:Microsoft.Quantum.Canon.IterateThroughCartesianProduct> en <xref:Microsoft.Quantum.Canon.IterateThroughCartesianPower> .
 > Deze bewerkingen zijn in het algemeen nuttiger voor het Toep assen van een bewerking op elk element van het Cartesisch product tussen twee of meer sets.
 
 Het is belang rijker dat de twee benaderingen echter verschillende eigenschappen testen van de bewerkingen die worden onderzocht.
 Omdat de in-place bewering elke bewerking meerdere keren aanroept, kunnen wille keurige keuzes en meet resultaten worden gewijzigd tussen aanroepen, één keer per invoer status.
-Daarentegen wordt elke bewerking exact één keer aangeroepen, zodat er wordt gecontroleerd of de bewerkingen *in één opname*gelijk zijn.
+Daarentegen wordt elke bewerking exact één keer aangeroepen, zodat er wordt gecontroleerd of de bewerkingen *in één opname* gelijk zijn.
 Beide tests zijn handig om de juistheid van Quantum Program ma's te garanderen.
 
 
-## <a name="further-reading"></a>Meer lezen ##
+## <a name="further-reading"></a>Meer informatie ##
 
 - <xref:microsoft.quantum.guide.testingdebugging>
-- <xref:microsoft.quantum.diagnostics>
+- <xref:Microsoft.Quantum.Diagnostics>

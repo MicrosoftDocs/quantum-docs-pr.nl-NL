@@ -107,7 +107,7 @@ Een [bewerking](xref:microsoft.quantum.glossary#operation) of [functie](xref:mic
 
 ## <a name="clifford-group"></a>Clifford-groep
 
-De set bewerkingen die de octants van de Bloch- [bol](xref:microsoft.quantum.glossary#bloch-sphere) in beslag nemen en permutaties van de [Pauli-Opera tors](xref:microsoft.quantum.glossary#pauli-operators). Dit zijn onder andere de bewerkingen [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) en [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
+De set bewerkingen die de octants van de Bloch- [bol](xref:microsoft.quantum.glossary#bloch-sphere) in beslag nemen en permutaties van de [Pauli-Opera tors](xref:microsoft.quantum.glossary#pauli-operators). Dit zijn onder andere de bewerkingen [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) en [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## <a name="controlled"></a>Gelijkrichter
 
@@ -150,7 +150,7 @@ Wanneer twee [statussen](xref:microsoft.quantum.glossary#quantum-state) gelijk z
 
 ## <a name="hadamard"></a>Hadamard
 
-De Hadamard-bewerking (ook wel de Hadamard-Gate of Transform genoemd) werkt op één [Qubit](xref:microsoft.quantum.glossary#qubit) en plaatst deze in een even super [positie](xref:microsoft.quantum.glossary#superposition) van $ \ket { 0 } $ of $ \ket { 1 } $ als de Qubit in eerste instantie de $ \ket { status 0 heeft } $ . In Q# wordt deze bewerking toegepast door de vooraf gedefinieerde [`H`](xref:microsoft.quantum.intrinsic.h) bewerking.
+De Hadamard-bewerking (ook wel de Hadamard-Gate of Transform genoemd) werkt op één [Qubit](xref:microsoft.quantum.glossary#qubit) en plaatst deze in een even super [positie](xref:microsoft.quantum.glossary#superposition) van $ \ket { 0 } $ of $ \ket { 1 } $ als de Qubit in eerste instantie de $ \ket { status 0 heeft } $ . In Q# wordt deze bewerking toegepast door de vooraf gedefinieerde [`H`](xref:Microsoft.Quantum.Intrinsic.H) bewerking.
 
 ## <a name="immutable"></a>Onveranderbare
 
@@ -182,11 +182,11 @@ Een subroutine die gegevens afhankelijke informatie levert aan een Quantum algor
 
 ## <a name="partial-application"></a>Gedeeltelijke toepassing
 
-Het aanroepen van een [functie](xref:microsoft.quantum.glossary#function) of [bewerking](xref:microsoft.quantum.glossary#operation) zonder de vereiste invoer. Hiermee wordt een nieuwe [aanroep](xref:microsoft.quantum.glossary#callable) geretourneerd waarvoor alleen de ontbrekende para meters (aangegeven door een onderstrepings teken) moeten worden opgegeven tijdens een toekomstige toepassing. Als u bijvoorbeeld de functie hebt opgegeven, `MyFunc(x : int, y : int) : int {return x + y;}` kunt u deze gedeeltelijk Toep assen op een nieuwe functie `let NewFunc = MyFunc(_, 3)` . U kunt de nieuwe functie vervolgens op een later tijdstip aanroepen met de ontbrekende para meter, `NewFunc(2)` waarmee de waarde *5*wordt geretourneerd.  Zie voor meer informatie [gedeeltelijke toepassing](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Het aanroepen van een [functie](xref:microsoft.quantum.glossary#function) of [bewerking](xref:microsoft.quantum.glossary#operation) zonder de vereiste invoer. Hiermee wordt een nieuwe [aanroep](xref:microsoft.quantum.glossary#callable) geretourneerd waarvoor alleen de ontbrekende para meters (aangegeven door een onderstrepings teken) moeten worden opgegeven tijdens een toekomstige toepassing. Als u bijvoorbeeld de functie hebt opgegeven, `MyFunc(x : int, y : int) : int {return x + y;}` kunt u deze gedeeltelijk Toep assen op een nieuwe functie `let NewFunc = MyFunc(_, 3)` . U kunt de nieuwe functie vervolgens op een later tijdstip aanroepen met de ontbrekende para meter, `NewFunc(2)` waarmee de waarde *5* wordt geretourneerd.  Zie voor meer informatie [gedeeltelijke toepassing](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Pauli-Opera tors
 
-Een set van drie unitary matrices met een matrix die de en de `X` Quantum-bewerkingen wordt genoemd `Y` `Z` . De ID-matrix, $ I $ , wordt vaak ook opgenomen in de set.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ & -1 \end{bmatrix} $ .   Zie [Single-Qubit Operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)(Engelstalig) voor meer informatie.
+Een set van 3 2 x 2 unitary-matrices, ook wel bekend als de `X` , `Y` en `Z` Quantum bewerkingen. De ID-matrix, $ I $ , wordt vaak ook opgenomen in de set.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ & -1 \end{bmatrix} $ .   Zie [Single-Qubit Operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)(Engelstalig) voor meer informatie.
 
 ## <a name="quantum-circuit-diagram"></a>Quantum circuit diagram
 

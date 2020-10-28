@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833508"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691082"
 ---
 # <a name="control-flow-in-no-locq"></a>Controle stroom in Q#
 
@@ -38,10 +38,10 @@ Het bestaat uit het sleutel woord `if` , een Boole-expressie tussen haakjes en e
 U kunt eventueel elk wille keurig aantal else-if-componenten volgen, elk met het sleutel woord `elif` , een Boole-expressie tussen haakjes en een instructie blok (het _else-if-_ blok).
 Ten slotte kan de instructie eventueel eindigen met een else-component, die bestaat uit het tref woord `else` gevolgd door een ander instructie blok (het _else_ -blok).
 
-De `if` voor waarde wordt geëvalueerd en als deze *waar*is, wordt *then* de blok kering uitgevoerd.
-Als de voor waarde *Onwaar*is, wordt de eerste else-if-voor waarde geëvalueerd; Als dat het geval is, wordt de *else-if-* blok kering uitgevoerd.
+De `if` voor waarde wordt geëvalueerd en als deze *waar* is, wordt *then* de blok kering uitgevoerd.
+Als de voor waarde *Onwaar* is, wordt de eerste else-if-voor waarde geëvalueerd; Als dat het geval is, wordt de *else-if-* blok kering uitgevoerd.
 Als dat niet het geval is, wordt het tweede else-if-blok geëvalueerd en vervolgens de derde, enzovoort, totdat een component met de voor waarde True wordt aangetroffen of omdat er geen else-if-componenten zijn.
-*Als de voor waarde origineel* en alle else-if-componenten resulteren in *Onwaar*, wordt het *else* -blok uitgevoerd, indien opgegeven.
+*Als de voor waarde origineel* en alle else-if-componenten resulteren in *Onwaar* , wordt het *else* -blok uitgevoerd, indien opgegeven.
 
 Houd er rekening mee dat elk blok wordt uitgevoerd binnen een eigen bereik.
 Bindingen die zijn gemaakt in een `if` , `elif` of `else` blok zijn niet zichtbaar nadat de blok kering is beëindigd.
@@ -129,7 +129,7 @@ waar `expression` is een geldige expressie die resulteert in een waarde van het 
 De hoofd tekst van de lus wordt uitgevoerd en vervolgens wordt de voor waarde geëvalueerd.
 Als de voor waarde waar is, wordt de instructie voltooid. anders wordt de reparatie uitgevoerd en wordt de instructie opnieuw uitgevoerd, te beginnen met de hoofd tekst van de lus.
 
-Alle drie delen van een RUS-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling*, waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in zowel de test als de reparatie.
+Alle drie delen van een RUS-lus (de hoofd tekst, de test en de reparatie) worden beschouwd als één bereik *voor elke herhaling* , waardoor symbolen die in de hoofd tekst zijn gebonden, beschikbaar zijn in zowel de test als de reparatie.
 Het volt ooien van de uitvoering van de reparatie beëindigt echter het bereik voor de instructie, zodat symbool bindingen die zijn gemaakt in de hoofd tekst of de reparatie, niet beschikbaar zijn in volgende herhalingen.
 
 Verder is de `fixup` instructie vaak handig, maar niet altijd nodig.
@@ -324,7 +324,7 @@ Belang rijke programmeer functies die in deze bewerking worden weer gegeven, zij
 * Een complexere `fixup` deel van de lus, waarbij Quantum bewerkingen betrokken zijn. 
 * Het gebruik van `AssertMeasurementProbability` instructies om de kans te bepalen dat de Quantum status op bepaalde opgegeven punten in het programma wordt gemeten.
 
-[`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) Zie [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging)voor meer informatie over de-en-bewerkingen.
+[`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) Zie [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging)voor meer informatie over de-en-bewerkingen.
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

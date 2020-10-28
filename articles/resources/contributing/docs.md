@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759676"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691792"
 ---
 # <a name="improving-documentation"></a>Documentatie verbeteren
 
@@ -46,7 +46,7 @@ Hieronder vindt u meer informatie over pull-aanvragen. er is nu een paar dingen 
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Verwijzen naar voorbeeld code van conceptuele artikelen
 
-Als u code wilt toevoegen uit de [opslag plaats voor beelden](https://github.com/Microsoft/Quantum), kunt u dit doen met behulp van een speciale DocFX-opdracht voor korting:
+Als u code wilt toevoegen uit de [opslag plaats voor beelden](https://github.com/Microsoft/Quantum), kunt u dit doen met behulp van een speciale DocFX-Flavored-prijs categorie:
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ Voor het voor beeld van kunnen `ControlledOnBitString` we een van de volgende za
  }
 ```
 
-U ziet de gerenderde versie van de bovenstaande code in de [API-documentatie voor de `ControlledOnBitString` functie](xref:microsoft.quantum.canon.controlledonbitstring).
+U ziet de gerenderde versie van de bovenstaande code in de [API-documentatie voor de `ControlledOnBitString` functie](xref:Microsoft.Quantum.Canon.ControlledOnBitString).
 
 Naast de algemene procedures voor het schrijven van documentatie, in het schrijven van API-documentatie opmerkingen, is het handig om een aantal zaken in acht te nemen:
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834190"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691731"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
@@ -68,7 +68,7 @@ Andere woorden kunnen ook nuttig zijn in dit geval, zoals in `IterateThroughCart
 | Toepassen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
 | Assert | Een hypo these over het resultaat van een mogelijke quantum meting wordt gecontroleerd door een simulator |
 | Schatting | Er wordt een klassieke waarde geretourneerd die een schatting vertegenwoordigt die uit een of meer metingen is getrokken |
-| Measure | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
+| Maateenheid | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
 | Voorbereiden | Een bepaald REGI ster van qubits wordt geïnitialiseerd in een bepaalde status |
 | Voorbeeld | Er wordt een klassieke waarde geretourneerd op wille keurige wijze van distributie |
 
@@ -113,7 +113,7 @@ Suggesties voor:
 
 ### <a name="entry-points"></a>Invoerpunten
 
-Wanneer u een ingangs punt in een Q# programma definieert, Q# herkent de compiler het [ `@EntryPoint()` kenmerk](xref:microsoft.quantum.core.entrypoint) , in plaats van dat toegangs punten een bepaalde naam hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
+Wanneer u een ingangs punt in een Q# programma definieert, Q# herkent de compiler het [ `@EntryPoint()` kenmerk](xref:Microsoft.Quantum.Core.EntryPoint) , in plaats van dat toegangs punten een bepaalde naam hebben (bijvoorbeeld: `main` , `Main` , of `__main__` ).
 Vanuit het perspectief van een Q# ontwikkelaar zijn ingangs punten normale bewerkingen die aantekeningen maken bij `@EntryPoint()` .
 Daarnaast Q# kunnen ingangs punten toegangs punten zijn voor een hele toepassing (bijvoorbeeld in Q# zelfstandige uitvoer bare Program ma's), of kan een interface tussen een Q# programma en het hostprogramma voor een toepassing zijn (dat wil zeggen: bij gebruik Q# van python of .net), zodat de naam ' Main ' mogelijk misleidend is wanneer deze wordt toegepast op een Q# toegangs punt.
 
@@ -134,7 +134,7 @@ Suggesties voor:
 | ☑ | `@EntryPoint() operation RunSimulation` | Het doel van het ingangs punt wordt duidelijk gecommuniceerd via de bewerkings naam. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Het gebruik van `Main` heeft geen duidelijk communicatie doel van het begin punt en is redundant met het `@EntryPoint()` kenmerk. |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Steno en afkortingen ###
 
@@ -181,7 +181,7 @@ Suggesties voor:
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Juiste naam woorden in namen ###
@@ -208,14 +208,14 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Type conversies ###
 
 Omdat een Q# sterk en statisch getypte taal is, kan een waarde van één type alleen worden gebruikt als een waarde van een ander type met behulp van een expliciete aanroep van een type conversie functie.
 Dit is in tegens telling tot talen waarmee waarden typen impliciet kunnen worden gewijzigd (bijvoorbeeld: type promotie) of via casting.
 Als gevolg hiervan spelen functies van het type conversie een belang rijke rol bij het Q# ontwikkelen van tape wisselaars en vormen ze een van de vaak voorkomende beslissingen over naamgeving.
-Maar omdat type conversies altijd _deterministisch_zijn, kunnen ze worden geschreven als functies en dus onder de bovenstaande aanbeveling vallen.
+Maar omdat type conversies altijd _deterministisch_ zijn, kunnen ze worden geschreven als functies en dus onder de bovenstaande aanbeveling vallen.
 In het bijzonder raden we aan dat type conversie functies nooit moeten worden benoemd als woorden (bijvoorbeeld:) of voor voor keuren voor bewerkings `ConvertToX` parameters ( `ToX` ), maar moeten worden benoemd als voor zetsels van bijvoeglijke woord groepen die de bron-en doel typen ( `XAsY` ) aangeven.
 Bij het weer geven van matrix typen in functie namen van type conversie, wordt de steno aangeraden `Arr` .
 Als buitengewone omstandigheden worden geblokkeerd, raden we aan dat alle type conversie functies worden benoemd met `As` zodat ze snel kunnen worden geïdentificeerd.
@@ -235,7 +235,7 @@ Suggesties voor:
 | ☒ | <s>`PauliArrFromBoolArr`</s> | De invoer-en uitvoer typen worden in de verkeerde volg orde weer gegeven. |
 | ☑ | `ResultArrAsBoolArr` | Zowel de invoer typen als de uitvoer typen zijn duidelijk. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Privé-of interne namen ###
 
@@ -256,7 +256,7 @@ Suggesties voor:
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Gebruik geen onderstrepings teken `_` om aan te geven dat deze bewerking alleen voor intern gebruik is. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Het `internal` sleutel woord aan het begin geeft duidelijk aan dat deze bewerking alleen voor intern gebruik is. |
 
-***
+_*_
 ### <a name="variants"></a>Qua ###
 
 Hoewel deze beperking mogelijk niet in toekomstige versies van van Q# toepassing is, is het al het geval dat er vaak groepen van gerelateerde bewerkingen of functies zijn die worden onderscheiden door welke functors hun invoer ondersteunen, of door het concrete type van de argumenten.
@@ -280,7 +280,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Argumenten en variabelen ###
 
@@ -305,9 +305,9 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Door de gebruiker gedefinieerd type met de naam items ###
+### <a name="user-defined-type-named-items"></a>User-Defined Typ benoemde items ###
 
 Benoemde items in door de gebruiker gedefinieerde typen moeten worden aangeduid als `CamelCase` , zelfs bij invoer naar UDT-constructors.
 Dit helpt om de benoemde items duidelijk te scheiden van verwijzingen naar variabelen met een lokaal bereik wanneer u een accessor-notatie (bijvoorbeeld: `callable::Apply` ) of Copy-and-update notatie ( `set arr w/= Data <- newData` ) gebruikt.
@@ -329,7 +329,7 @@ Suggesties voor:
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benoemde items moeten beginnen met een eerste hoofd letter. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | Benoemde items die worden omgezet in-functies, moeten worden benoemd als woord groepen, niet als verbale woord groepen. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Invoer conventies ##
 
@@ -379,7 +379,7 @@ Suggesties voor:
 
 # <a name="examples"></a>[Voorbeelden](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Documentatie conventies ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Opmaak conventies ##
 
@@ -486,4 +486,4 @@ Suggesties voor:
 | ☑ | `Example(a, b, c)` | De items in de invoer-tuple zijn op de juiste wijze voor de Lees baarheid. |
 | ☒ | <s>`Example (a, b, c)`</s> | Spaties moeten worden onderdrukt na functie-, bewerking-of UDT-namen. |
 
-***
+_**

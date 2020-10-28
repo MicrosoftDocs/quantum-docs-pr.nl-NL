@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833905"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691516"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Woorden lijst Quantum Machine Learning
 
@@ -30,7 +30,7 @@ Op basis van een para meter voor de kandidaten en een classifier-afwijking wordt
 
 ## <a name="hyperparameters"></a>Hyper parameters
 
-Het model trainings proces is onderworpen aan bepaalde vooraf ingestelde waarden met de naam *Hyper parameters*:
+Het model trainings proces is onderworpen aan bepaalde vooraf ingestelde waarden met de naam *Hyper parameters* :
 
 ### <a name="learning-rate"></a>Leersnelheid
 
@@ -56,9 +56,10 @@ De waarschijnlijke functie die het trainings hulpprogramma voor de classificatie
 
 #### <a name="how-to-modify-the-hyperparameters"></a>De Hyper parameters wijzigen
 
-De QML-bibliotheek is de beste manier om de Hyper parameters te wijzigen door de standaard waarden van de UDT te vervangen [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . Daarom noemen we het met de functie [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) en past u de operator `w/` toe om de standaard waarden te overschrijven. Als u bijvoorbeeld 100.000-metingen en een leer tempo van 0,01 wilt gebruiken:
- ```qsharp
+De QML-bibliotheek is de beste manier om de Hyper parameters te wijzigen door de standaard waarden van de UDT te vervangen [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . Daarom noemen we het met de functie [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) en past u de operator `w/` toe om de standaard waarden te overschrijven. Als u bijvoorbeeld 100.000-metingen en een leer tempo van 0,01 wilt gebruiken:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

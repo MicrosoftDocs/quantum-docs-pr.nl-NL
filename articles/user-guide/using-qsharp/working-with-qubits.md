@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835856"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691584"
 ---
 # <a name="working-with-qubits"></a>Werken met qubits
 
@@ -29,14 +29,14 @@ In dit artikel wordt beschreven hoe u met qubits in een programma kunt werken Q#
 
 Omdat fysieke qubits een kostbaar middel zijn in een quantum computer, moet u een deel van de taak van de compiler controleren om ervoor te zorgen dat ze zo efficiënt mogelijk worden gebruikt.
 Als zodanig moet u aangeven dat u Q# qubits wilt *toewijzen* voor gebruik binnen een bepaald instructie blok.
-U kunt qubits toewijzen als één Qubit, of als een matrix van qubits, ook wel een *REGI ster*genoemd. 
+U kunt qubits toewijzen als één Qubit, of als een matrix van qubits, ook wel een *REGI ster* genoemd. 
 
 ### <a name="clean-qubits"></a>Qubits opschonen
 
 Gebruik de `using` instructie om nieuwe qubits toe te wijzen voor gebruik tijdens een instructie blok.
 
 De instructie bestaat uit het tref woord `using` , gevolgd door een binding tussen haakjes `( )` en het instructie blok waarbinnen de qubits beschikbaar zijn.
-De binding volgt hetzelfde patroon als `let` instructies: een enkel symbool of een tuple van symbolen, gevolgd door een gelijkteken `=` en een enkele waarde of een overeenkomende tuple van *initializers*.
+De binding volgt hetzelfde patroon als `let` instructies: een enkel symbool of een tuple van symbolen, gevolgd door een gelijkteken `=` en een enkele waarde of een overeenkomende tuple van *initializers* .
 
 Initialisatie functies zijn beschikbaar voor één Qubit, aangeduid als `Qubit()` , of een matrix van qubits, `Qubit[n]` , waarbij `n` een `Int` expressie is.
 Bijvoorbeeld:
@@ -95,7 +95,7 @@ In sommige zin is dit alles wat een Q# programma kan doen met een Qubit, omdat d
 In dit artikel worden enkele nuttige Q# bewerkingen besproken die u kunt gebruiken om te communiceren met qubits.
 Zie [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude)voor meer informatie over deze en andere. 
 
-Eerst worden de Pauli-Opera tors (single-Qubit) $X $, $Y $ en $Z $ weer gegeven in Q# de intrinsieke bewerkingen [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) en [`Z`](xref:microsoft.quantum.intrinsic.z) die elk type hebben `(Qubit => Unit is Adj + Ctl)` .
+Eerst worden de Pauli-Opera tors (single-Qubit) $X $, $Y $ en $Z $ weer gegeven in Q# de intrinsieke bewerkingen [`X`](xref:Microsoft.Quantum.Intrinsic.X) , [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) en [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) die elk type hebben `(Qubit => Unit is Adj + Ctl)` .
 
 Zoals beschreven in [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude), beschouw $X $ en dus `X` als een bits-Flip-bewerking of niet-poort.
 U kunt de `X` bewerking voor het voorbereiden van statussen van de vorm $ \ket{s_0 s_1 \dots s_n} $ voor een klassieke-bits teken reeks $s $:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Later ziet u een compactere manier om deze bewerking te schrijven waarvoor geen hand matige controle stroom is vereist.
 
-U kunt ook statussen voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ met behulp van de Hadamard Transform $H $, die wordt vertegenwoordigd Q# door de intrinsieke bewerking [`H`](xref:microsoft.quantum.intrinsic.h) (ook type (Qubit => eenheid is ADJ en CTL)):
+U kunt ook statussen voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ met behulp van de Hadamard Transform $H $, die wordt vertegenwoordigd Q# door de intrinsieke bewerking [`H`](xref:Microsoft.Quantum.Intrinsic.H) (ook type (Qubit => eenheid is ADJ en CTL)):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ De *reken kundige basis* verwijst naar de `PauliZ` basis en is de meest voorkome
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Eén Qubit meten op `PauliZ` basis
 
-Gebruik de [`M`](xref:microsoft.quantum.intrinsic.m) bewerking, een ingebouwde, intrinsieke, niet-unitary bewerking, om één Qubit te meten op `PauliZ` basis en een klassieke waarde aan het resultaat toe te wijzen.
+Gebruik de [`M`](xref:Microsoft.Quantum.Intrinsic.M) bewerking, een ingebouwde, intrinsieke, niet-unitary bewerking, om één Qubit te meten op `PauliZ` basis en een klassieke waarde aan het resultaat toe te wijzen.
 `M` heeft een gereserveerd retour type, `Result` dat alleen waarden kan overnemen `Zero` of `One` overeenkomt met de gemeten statussen $ \ket {0} $ of $ \ket {1} $-geeft aan dat het resultaat geen Quantum status meer is.
 
 Een eenvoudig voor beeld is de volgende bewerking, die één Qubit toewijst in de $ \ket {0} $-status, vervolgens een Hadamard-bewerking toepast `H` op de waarde en het resultaat op basis daarvan meet `PauliZ` .
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Een of meer qubits meten in specifieke bases
 
-U kunt de bewerking gebruiken om een matrix van een of meer qubits in een specifieke Base te meten [`Measure`](xref:microsoft.quantum.intrinsic.measure) .
+U kunt de bewerking gebruiken om een matrix van een of meer qubits in een specifieke Base te meten [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) .
 
 De invoer voor `Measure` is een matrix van `Pauli` typen (bijvoorbeeld `[PauliX, PauliZ, PauliZ]` ) en een matrix van qubits.
 

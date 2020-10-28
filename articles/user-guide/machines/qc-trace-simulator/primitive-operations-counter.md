@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835975"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690955"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitieve bewerkingen teller
 
 Het teller primitieve bewerking maakt deel uit van de Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Hiermee wordt het aantal primitieve processen geteld dat wordt gebruikt door elke bewerking die wordt aangeroepen in een Quantum programma. 
 
-Alle <xref:microsoft.quantum.intrinsic> bewerkingen worden uitgedrukt in termen van Qubit draaiingen, T-bewerkingen, single-Qubit Clifford-bewerkingen, CNOT bewerkingen en metingen van multi-Qubit Pauli observables. Met het teller primitieve bewerkingen worden statistieken geaggregeerd en verzameld over alle randen van de [aanroep grafiek](https://en.wikipedia.org/wiki/Call_graph)van de bewerking.
+Alle <xref:Microsoft.Quantum.Intrinsic> bewerkingen worden uitgedrukt in termen van Qubit draaiingen, T-bewerkingen, single-Qubit Clifford-bewerkingen, CNOT bewerkingen en metingen van multi-Qubit Pauli observables. Met het teller primitieve bewerkingen worden statistieken geaggregeerd en verzameld over alle randen van de [aanroep grafiek](https://en.wikipedia.org/wiki/Call_graph)van de bewerking.
 
 ## <a name="invoking-the-primitive-operation-counter"></a>Het item primitieve bewerking aanroepen
 
-Als u de Quantum Trace Simulator wilt uitvoeren met het teller primitieve bewerking, moet u een <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplaar maken, de `UsePrimitiveOperationsCounter` eigenschap instellen op **waar**en vervolgens een nieuw <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> exemplaar maken met de `QCTraceSimulatorConfiguration` as-para meter.
+Als u de Quantum Trace Simulator wilt uitvoeren met het teller primitieve bewerking, moet u een <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplaar maken, de `UsePrimitiveOperationsCounter` eigenschap instellen op **waar** en vervolgens een nieuw <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> exemplaar maken met de `QCTraceSimulatorConfiguration` as-para meter.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Het teller primitieve bewerking in een C#-hostprogramma gebruiken
 
-Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:microsoft.quantum.intrinsic.t> bewerkingen dat nodig is voor het implementeren van de <xref:microsoft.quantum.intrinsic.ccnot> bewerking, op basis van de volgende Q# voorbeeld code:
+Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:Microsoft.Quantum.Intrinsic.T> bewerkingen dat nodig is voor het implementeren van de <xref:Microsoft.Quantum.Intrinsic.ccnot> bewerking, op basis van de volgende Q# voorbeeld code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -75,7 +75,7 @@ Ten slotte kunt u alle statistieken die door het item primitieve bewerkingen zij
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - Het Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Overview (Engelstalig).
 - De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-verwijzing.

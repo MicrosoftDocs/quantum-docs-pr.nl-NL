@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759729"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691527"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Schattingen van energieniveaus maken
 Het schatten van de waarden van energie niveaus is een van de belangrijkste toepassingen van quantum chemie. In dit artikel wordt beschreven hoe u dit kunt doen voor het canonieke voor beeld van moleculaire water stof. Het voor beeld waarnaar in deze sectie wordt verwezen, bevindt zich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) in de opslag plaats voor schei steek proeven. Een meer visueel voor beeld van het uitzetten van de uitvoer is de [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demo.
@@ -44,7 +44,7 @@ De eerste stap bestaat uit het samen stellen van de Hamiltonian die moleculaire 
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Voor het simuleren van de Hamiltonian moet u de fermion-Opera tors converteren naar Qubit-Opera tors. Deze conversie wordt als volgt uitgevoerd via de Wigner-code ring van Jordanië:
+Voor het simuleren van de Hamiltonian moet u de fermion-Opera tors converteren naar Qubit-Opera tors. Deze conversie wordt als volgt uitgevoerd via de Jordan-Wigner Encoding:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Op dit moment kunt u de [fase schattings algoritmen](xref:microsoft.quantum.libraries.characterization) van de standaard bibliotheek gebruiken om de status van de grond energie te lezen met behulp van de vorige simulatie. Hiervoor moet een goede benadering van de Quantum status worden voor bereid. Suggesties voor dergelijke benaderingen zijn opgenomen in het [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema. Als deze suggesties echter niet aanwezig zijn, voegt de standaard benadering een aantal `hamiltonian.NElectrons` electrons toe aan greedily om de diagonale termijn van één of meer Energies te minimaliseren. De fase schattings functies en-bewerkingen zijn te vinden in de DocFX-notatie in de [micro soft. Quantum. kenmerkt](xref:microsoft.quantum.characterization) -naam ruimte.
+Op dit moment kunt u de [fase schattings algoritmen](xref:microsoft.quantum.libraries.characterization) van de standaard bibliotheek gebruiken om de status van de grond energie te lezen met behulp van de vorige simulatie. Hiervoor moet een goede benadering van de Quantum status worden voor bereid. Suggesties voor dergelijke benaderingen zijn opgenomen in het [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema. Als deze suggesties echter niet aanwezig zijn, voegt de standaard benadering een aantal `hamiltonian.NElectrons` electrons toe aan greedily om de diagonale termijn van één of meer Energies te minimaliseren. De fase schattings functies en-bewerkingen zijn te vinden in de DocFX-notatie in de [micro soft. Quantum. kenmerkt](xref:Microsoft.Quantum.Characterization) -naam ruimte.
 
 Het volgende code fragment laat zien hoe de real-time ontwikkelings uitvoer van de werk bibliotheek voor schei kunde kan worden geïntegreerd met de Quantum-fase schatting.
 

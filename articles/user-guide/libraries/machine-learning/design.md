@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835703"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691153"
 ---
 # <a name="design-your-own-classifier"></a>Uw eigen classificatie ontwerpen
 
@@ -28,7 +28,7 @@ Net als bij klassiek diep leren is er geen algemene regel voor het kiezen van ee
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Een classificatie bouwen met Q\#
 
-Voor het bouwen van een classificatie gaan we parametrized beheerde rotaties in ons circuit model samen voegen. Hiervoor kunnen we het type gebruiken dat is [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) gedefinieerd in de Quantum machine learning-bibliotheek. Dit type accepteert vier argumenten die bepalen: de index van de doel-Qubit, de matrix van de indexen van het besturings element qubits, de rotatieas en de index van de bijbehorende para meter in de matrix met para meters waarmee het model wordt gedefinieerd.
+Voor het bouwen van een classificatie gaan we parametrized beheerde rotaties in ons circuit model samen voegen. Hiervoor kunnen we het type gebruiken dat is [`ControlledRotation`](xref:Microsoft.Quantum.MachineLearning.ControlledRotation) gedefinieerd in de Quantum machine learning-bibliotheek. Dit type accepteert vier argumenten die bepalen: de index van de doel-Qubit, de matrix van de indexen van het besturings element qubits, de rotatieas en de index van de bijbehorende para meter in de matrix met para meters waarmee het model wordt gedefinieerd.
 
 Laten we een voor beeld zien van een classificatie. In het voor [beeld van halve maan](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)kunnen we de volgende classificatie vinden die in het bestand is gedefinieerd `Training.qs` .
 
@@ -47,7 +47,7 @@ Laten we een voor beeld zien van een classificatie. In het voor [beeld van halve
     }
  ```
 
-Wat we hier definiëren, is een functie die een matrix van `ControlledRotation` elementen retourneert, samen met een matrix met para meters en een bias definieert onze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Dit type is fundamenteel in de Quantum Machine Learning-bibliotheek en definieert de classificatie. Het circuit dat is gedefinieerd in de bovenstaande functie maakt deel uit van een classificatie waarin elk voor beeld van de gegevensset twee functies bevat. Daarom hebben we slechts twee qubits nodig. De grafische weer gave van het circuit is:
+Wat we hier definiëren, is een functie die een matrix van `ControlledRotation` elementen retourneert, samen met een matrix met para meters en een bias definieert onze [`SequentialModel`](xref:Microsoft.Quantum.MachineLearning.SequentialModel) . Dit type is fundamenteel in de Quantum Machine Learning-bibliotheek en definieert de classificatie. Het circuit dat is gedefinieerd in de bovenstaande functie maakt deel uit van een classificatie waarin elk voor beeld van de gegevensset twee functies bevat. Daarom hebben we slechts twee qubits nodig. De grafische weer gave van het circuit is:
 
  ![Voor beeld van circuit model](~/media/circuit_model_1.PNG)
 
@@ -55,11 +55,11 @@ Houd er rekening mee dat de bewerkingen van de Quantum Machine Learning biblioth
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>De functies van de bibliotheek gebruiken om lagen van poorten te schrijven
 
-Stel dat er een gegevensset met 784-functies per exemplaar is, zoals installatie kopieën van 28 × 28 pixels, zoals de MNIST-gegevensset. In dit geval wordt de breedte van het circuit groot genoeg zodat elke afzonderlijke Gate een mogelijke, maar niet-praktische taak wordt. Daarom biedt de Quantum Machine Learning bibliotheek een set hulpprogram ma's waarmee automatisch lagen van parametrized-rotaties kunnen worden gegenereerd. De functie [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) retourneert bijvoorbeeld een matrix met onbeheerde rotaties met één Qubit langs een bepaalde as, met één rotatie voor elke qubit in de kassa, elk parametrized met een andere model parameter. `LocalRotationsLayer(4, X)`Retourneert bijvoorbeeld de volgende set Gates:
+Stel dat er een gegevensset met 784-functies per exemplaar is, zoals installatie kopieën van 28 × 28 pixels, zoals de MNIST-gegevensset. In dit geval wordt de breedte van het circuit groot genoeg zodat elke afzonderlijke Gate een mogelijke, maar niet-praktische taak wordt. Daarom biedt de Quantum Machine Learning bibliotheek een set hulpprogram ma's waarmee automatisch lagen van parametrized-rotaties kunnen worden gegenereerd. De functie [`LocalRotationsLayer`](xref:Microsoft.Quantum.MachineLearning.LocalRotationsLayer) retourneert bijvoorbeeld een matrix met onbeheerde rotaties met één Qubit langs een bepaalde as, met één rotatie voor elke qubit in de kassa, elk parametrized met een andere model parameter. `LocalRotationsLayer(4, X)`Retourneert bijvoorbeeld de volgende set Gates:
 
  ![Laag lokale draaiingen](~/media/local_rotations_layer.PNG)
 
-We raden u aan de [API-verwijzing van de Quantum machine learning Library](xref:microsoft.quantum.machinelearning) te verkennen om alle hulpprogram ma's te ontdekken die beschikbaar zijn om het circuit ontwerp te stroom lijnen.
+We raden u aan de [API-verwijzing van de Quantum machine learning Library](xref:Microsoft.Quantum.MachineLearning) te verkennen om alle hulpprogram ma's te ontdekken die beschikbaar zijn om het circuit ontwerp te stroom lijnen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

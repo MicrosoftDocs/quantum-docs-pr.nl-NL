@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835924"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691878"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK-resources (Quantum Development Kit) estimator
 
@@ -130,15 +130,42 @@ De resources Estimator traceert de volgende metrische gegevens:
 |__Measure__    |Het aantal uitvoeringen van een wille keurige meting.  |
 |__R__    |Het aantal uitvoeringen van een Qubit draaiing, met uitzonde ring van `T` Clifford-en Pauli-bewerkingen.  |
 |__T__    |Het aantal uitvoeringen van `T` bewerkingen en hun conjugaat, waaronder de `T` bewerkingen, T_x = h. t. h en T_y = hy. t. hy.  |
-|__Diepga__|De ondergrens voor de diepte van het Quantum circuit dat door de bewerking wordt uitgevoerd Q# . Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
-|__Breedte__    |De ondergrens voor het maximum aantal toegewezen qubits tijdens het uitvoeren van de Q# bewerking. Het is misschien niet mogelijk om tegelijkertijd zowel de __diepte__ als de __breedte__ van de ondergrenzen te verminderen.  |
+|__Diepga__|Diepte van het Quantum circuit dat door de Q# bewerking wordt uitgevoerd (Zie [hieronder](#depth-width-and-qubitcount)). Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
+|__Breedte__|De breedte van het Quantum circuit dat door de bewerking wordt uitgevoerd Q# (Zie [hieronder](#depth-width-and-qubitcount)). Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
+|__QubitCount__    |De ondergrens voor het maximum aantal toegewezen qubits tijdens het uitvoeren van de Q# bewerking. Deze metrische gegevens zijn mogelijk niet compatibel met de __diepte__ (zie hieronder).  |
 |__BorrowedWidth__    |Het maximale aantal qubits dat in de bewerking is geleend Q# .  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Diepte, breedte en QubitCount
+
+De gerapporteerde diepte-en breedte schattingen zijn compatibel met elkaar.
+(Voorheen zijn beide nummers haalbaar, maar er zijn verschillende circuits vereist voor diepte en breedte.) Momenteel kunnen beide metrische gegevens in dit paar tegelijk worden bereikt door hetzelfde circuit.
+
+De volgende metrische gegevens worden gerapporteerd:
+
+__Diepte:__ Voor het uitvoeren van de bewerking-tijd die nodig is om het uit te voeren, wordt uitgegaan van specifieke Gate-tijden.
+Voor bewerkingen die worden aangeroepen of een volgend verwerkings tijd verschil tussen de meest recente Qubit-beschikbaarheids tijd aan het begin en het einde van de bewerking.
+
+__Breedte:__ Voor het hoofd bewerking-aantal qubits dat daad werkelijk wordt gebruikt om het uit te voeren (en de bewerking te starten).
+Voor bewerkingen die of volgende bewerkingen worden uitgevoerd, is het aantal meer qubits gebruikt naast de qubits die al aan het begin van de bewerking worden gebruikt.
+
+Houd er rekening mee dat de hergebruikte qubits geen bijdrage levert aan dit aantal.
+Dat wil zeggen dat een aantal qubits is vrijgegeven voordat een start werd uitgevoerd en dat alle Qubit die door deze bewerking zijn gevraagd A (en de bewerkingen van A) zijn voldaan door eerdere release-qubits opnieuw te gebruiken, de breedte van bewerking A wordt gerapporteerd als 0. Qubits is een bijdrage leveren aan de breedte.
+
+__QubitCount:__ Voor de hoofd bewerking-minimum aantal qubits dat voldoende is om deze bewerking uit te voeren (en de bewerkingen zijn aangeroepen).
+Voor bewerkingen met de naam of de volgende bewerkingen-minimum aantal qubits dat voldoende is om deze bewerking afzonderlijk uit te voeren. Dit nummer bevat geen invoer qubits. Dit omvat gelede qubits.
+
+Twee bewerkings modi worden ondersteund. De modus wordt geselecteerd door QCTraceSimulatorConfiguration. OptimizeDepth in te stellen.
+
+__OptimizeDepth = True:__ QubitManager wordt ontmoedigd bij het opnieuw gebruiken van Qubit en wijst nieuwe Qubit toe elke keer dat deze wordt gevraagd voor een Qubit. De __diepte__ van de hoofd bewerking wordt de minimale diepte (ondergrens). Er wordt voor deze diepte een compatibele __breedte__ gerapporteerd (beide kunnen tegelijkertijd worden bereikt). Houd er rekening mee dat deze breedte waarschijnlijk niet optimaal is op basis van deze diepte. __QubitCount__ kan kleiner zijn dan de breedte voor de hoofd bewerking, omdat het opnieuw wordt aangenomen.
+
+__OptimizeDepth = False:__ QubitManager wordt aangemoedigd om qubits opnieuw te gebruiken en om vrijgegeven qubits te hergebruiken voordat nieuwe objecten worden toegewezen. De __breedte__ van de hoofd bewerking wordt de minimale breedte (ondergrens). Er wordt een compatibele __diepte__ gerapporteerd waarop het kan worden bereikt. __QubitCount__ is hetzelfde als de __breedte__ voor de hoofd bewerking, uitgaande van geen leningen.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metingsresultaten opgeven
 
-U kunt <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> uit de <xref:microsoft.quantum.diagnostics> naam ruimte gebruiken om informatie te geven over de verwachte waarschijnlijkheid van een meting bewerking. Zie [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) voor meer informatie.
+U kunt <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> uit de <xref:Microsoft.Quantum.Diagnostics> naam ruimte gebruiken om informatie te geven over de verwachte waarschijnlijkheid van een meting bewerking. Zie [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) voor meer informatie.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Kwantum Toffoli-simulator](xref:microsoft.quantum.machines.toffoli-simulator)

@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835873"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690935"
 ---
 # <a name="variables-in-no-locq"></a>Variabelen in Q#
 
-Q# maakt onderscheid tussen onveranderlijke en onveranderlijke symbolen, of *variabelen*, die gebonden zijn/toegewezen aan expressies.
+Q# maakt onderscheid tussen onveranderlijke en onveranderlijke symbolen, of *variabelen* , die gebonden zijn/toegewezen aan expressies.
 In het algemeen wordt het gebruik van onveranderbare symbolen aanbevolen omdat de compiler meer optimalisaties kan uitvoeren.
 
 De linkerkant van een binding bestaat uit een symbool-tuple en de rechter kant van een expressie.
@@ -40,7 +40,7 @@ Hiermee wijst u een bepaalde matrix van Pauli-Opera tors toe aan de naam van de 
 > [!NOTE]
 > In het vorige voor beeld is het niet nodig expliciet het type van de nieuwe variabele op te geven, omdat de expressie aan de rechter kant van de `let` instructie ondubbelzinnig is en de compiler het juiste type afleidt. 
 
-Variabelen die zijn gedefinieerd met kunnen `let` *onveranderbaar*zijn, wat inhoudt dat u deze niet meer kunt wijzigen wanneer u deze hebt gedefinieerd.
+Variabelen die zijn gedefinieerd met kunnen `let` *onveranderbaar* zijn, wat inhoudt dat u deze niet meer kunt wijzigen wanneer u deze hebt gedefinieerd.
 Dit maakt een aantal gunstige optimalisaties mogelijk, waaronder de optimalisatie van de klassieke logica die op variabelen wordt toegepast voor het Toep assen `Adjoint` van de variant van een bewerking.
 
 ## <a name="mutable-variables"></a>Onveranderlijke variabelen
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Instructies bijwerken en opnieuw toewijzen
 
 Er bestaat een soort gelijke samen voeging voor de [expressies voor kopiëren en bijwerken](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) aan de rechter kant.
-Daarnaast bestaan er instructies voor *bijwerken en opnieuw toewijzen* voor *benoemde items* in door de gebruiker gedefinieerde typen en voor *matrix items*.  
+Daarnaast bestaan er instructies voor *bijwerken en opnieuw toewijzen* voor *benoemde items* in door de gebruiker gedefinieerde typen en voor *matrix items* .  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-In het geval van matrices [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) beschikt u in de Q# Standard-bibliotheek over de benodigde hulpprogram ma's voor veel algemene matrix initialisatie en bewerkings behoeften. zo voor komt u dat u de matrix items in de eerste plaats hoeft bij te werken. 
+In het geval van matrices [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) beschikt u in de Q# Standard-bibliotheek over de benodigde hulpprogram ma's voor veel algemene matrix initialisatie en bewerkings behoeften. zo voor komt u dat u de matrix items in de eerste plaats hoeft bij te werken. 
 
 Instructies update-en-reassign bieden een alternatief als dat nodig is:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Met de bibliotheek hulpprogramma's voor matrices die zijn opgegeven in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) , kunt u bijvoorbeeld eenvoudig een functie definiëren die een matrix van `Pauli` typen retourneert waarbij het element op index `i` een gegeven `Pauli` waarde krijgt en alle andere vermeldingen de identiteit () zijn `PauliI` .
+Met de bibliotheek hulpprogramma's voor matrices die zijn opgegeven in [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) , kunt u bijvoorbeeld eenvoudig een functie definiëren die een matrix van `Pauli` typen retourneert waarbij het element op index `i` een gegeven `Pauli` waarde krijgt en alle andere vermeldingen de identiteit () zijn `PauliI` .
 
 Hier vindt u twee definities van een dergelijke functie, met het tweede gebruik van de hulpprogram ma's voor onze afstoting.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-In plaats van elke index in de matrix te herhalen en deze voorwaardelijk in te stellen op `PauliI` of de opgegeven `pauli` , kunt u in plaats daarvan `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) een matrix van `PauliI` typen maken en vervolgens gewoon een kopie-en-update-expressie retour neren waarin u de specifieke waarde op index hebt gewijzigd `location` :
+In plaats van elke index in de matrix te herhalen en deze voorwaardelijk in te stellen op `PauliI` of de opgegeven `pauli` , kunt u in plaats daarvan `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) een matrix van `PauliI` typen maken en vervolgens gewoon een kopie-en-update-expressie retour neren waarin u de specifieke waarde op index hebt gewijzigd `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

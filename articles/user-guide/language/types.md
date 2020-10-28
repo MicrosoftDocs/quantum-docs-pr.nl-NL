@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835822"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691621"
 ---
 # <a name="types-in-no-locq"></a>Typen in Q#
 
@@ -22,7 +22,7 @@ In dit artikel worden het Q# type model en de syntaxis voor het opgeven en werke
 
 Q#Het is een *sterk getypeerde* taal, zodat het gebruik van deze typen zorgvuldig kan helpen de compiler om sterke garanties te bieden voor Q# Program ma's tijdens het compileren.
 Om de krach tigste garanties te bieden, moeten conversies tussen typen in Q# expliciet worden aangeroepen met behulp van aanroepen naar functions die deze converteren. 
-Q# biedt diverse functies als onderdeel van de <xref:microsoft.quantum.convert> naam ruimte.
+Q# biedt diverse functies als onderdeel van de <xref:Microsoft.Quantum.Convert> naam ruimte.
 Een upcast naar compatibele typen, anderzijds gebeurt impliciet. 
 
 Q# biedt zowel primitieve typen, die rechtstreeks worden gebruikt, als verschillende manieren om nieuwe typen van andere typen te maken.
@@ -30,7 +30,7 @@ We beschrijven elk in de rest van dit artikel.
 
 ## <a name="primitive-types"></a>Primitieve typen
 
-De Q# taal biedt de volgende *primitieve typen*, die allemaal rechtstreeks in Program ma's kunnen worden gebruikt Q# . U kunt deze primitieve typen ook gebruiken om nieuwe typen te maken.
+De Q# taal biedt de volgende *primitieve typen* , die allemaal rechtstreeks in Program ma's kunnen worden gebruikt Q# . U kunt deze primitieve typen ook gebruiken om nieuwe typen te maken.
 
 - Het `Int` type vertegenwoordigt een 64-bits geheel getal met teken, bijvoorbeeld,, `2` `107` , `-5` .
 - Het `BigInt` type vertegenwoordigt een ondertekende integer met een wille keurige grootte, bijvoorbeeld,, `2L` `107L` `-5L` .
@@ -126,10 +126,10 @@ Op basis van een expressie is dezelfde expressie die tussen haakjes staat, een e
 
 Dit betekent met name dat u een bewerking of functie kunt bekijken waarvan het type tuple of uitvoer tuple één veld heeft om één argument te maken of een enkele waarde te retour neren.
 
-We verwijzen naar deze eigenschap als _Singleton-tuple-equivalentie_.
+We verwijzen naar deze eigenschap als _Singleton-tuple-equivalentie_ .
 
 
-## <a name="user-defined-types"></a>Door de gebruiker gedefinieerde typen
+## <a name="user-defined-types"></a>User-Defined typen
 
 Een door de gebruiker gedefinieerde type declaratie bestaat uit het tref woord `newtype` , gevolgd door de naam van het door de gebruiker gedefinieerde type, een `=` , een geldige type specificatie en een afsluitende punt komma.
 
@@ -259,8 +259,8 @@ Meer in het algemeen zijn door de gebruiker gedefinieerde typen mogelijk geen cy
 
 Op basis van de typen `'Tinput` en `'Tresult` :
 
-* `('Tinput => 'Tresult)` is het basis type voor een wille keurige *bewerking*, bijvoorbeeld `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)` is het basis type voor een *functie*, bijvoorbeeld `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` is het basis type voor een wille keurige *bewerking* , bijvoorbeeld `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` is het basis type voor een *functie* , bijvoorbeeld `(Int -> Int)` . 
 
 Deze worden de *hand tekening* van de aanroepable genoemd.
 
@@ -282,13 +282,13 @@ Als de uitvoering van de bewerking bijvoorbeeld afhankelijk is van de status van
 Om ondersteuning voor de `Controlled` and/of `Adjoint` functor in een bewerkings type te vereisen, moet u een aantekening toevoegen die de bijbehorende kenmerken aangeeft.
 De aantekening `is Ctl` (bijvoorbeeld `(Qubit => Unit is Ctl)` ) geeft aan dat de bewerking kan worden bestuurd. Dat wil zeggen dat de uitvoering afhankelijk is van de status van een andere Qubit of qubits. Op dezelfde manier wordt met de aantekening `is Adj` aangegeven dat de bewerking een adjoint heeft, dat wil zeggen, dat wil zeggen ' omgekeerd ', waardoor een bewerking herhaaldelijk wordt toegepast en de adjoint op een status de status ongewijzigd laat. 
 
-Als u wilt vereisen dat een bewerking van dat Type zowel de als de `Adjoint` `Controlled` functor ondersteunt, kunt u dit als volgt uitdrukken `(Qubit => Unit is Adj + Ctl)` . De ingebouwde bewerking Pauli is bijvoorbeeld van het <xref:microsoft.quantum.intrinsic.x> type `(Qubit => Unit is Adj + Ctl)` . 
+Als u wilt vereisen dat een bewerking van dat Type zowel de als de `Adjoint` `Controlled` functor ondersteunt, kunt u dit als volgt uitdrukken `(Qubit => Unit is Adj + Ctl)` . De ingebouwde bewerking Pauli is bijvoorbeeld van het <xref:Microsoft.Quantum.Intrinsic.X> type `(Qubit => Unit is Adj + Ctl)` . 
 
 Een bewerkings type dat geen functors ondersteunt, wordt opgegeven door het invoer-en uitvoer type alleen, zonder extra aantekening.
 
-### <a name="type-parameterized-functions-and-operations"></a>Functies en bewerkingen van het type para meters
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized functies en bewerkingen
 
-Aanroep bare typen kunnen *type parameters*bevatten.
+Aanroep bare typen kunnen *type parameters* bevatten.
 Gebruik een symbool dat wordt voorafgegaan door één aanhalings teken om een type parameter te vermelden. `'A` is bijvoorbeeld een geldige type parameter.
 Zie [bewerkingen en functies in Q# ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)voor meer informatie en informatie over het definiëren van type parameters callables.
 

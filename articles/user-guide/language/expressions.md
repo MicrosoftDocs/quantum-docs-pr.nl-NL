@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835839"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691594"
 ---
 # <a name="expressions-in-no-locq"></a>Expressies in Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Ze kunnen worden geschreven met of zonder een decimaal teken, `.` of een exponentieel onderdeel dat is aangegeven met e of e (waarna alleen een mogelijk minteken en decimaal tekens geldig zijn).
 Hier volgen geldige `Double` letterlijke waarden: `0.0` , `1.2e5` , `1e-5` .
 
-Op basis van een matrix expressie van elk element type kunt u een `Int` expressie maken met behulp van de [`Length`](xref:microsoft.quantum.core.length) ingebouwde functie, waarbij de matrix expressie tussen haakjes staat.
+Op basis van een matrix expressie van elk element type kunt u een `Int` expressie maken met behulp van de [`Length`](xref:Microsoft.Quantum.Core.Length) ingebouwde functie, waarbij de matrix expressie tussen haakjes staat.
 Als bijvoorbeeld `a` is gebonden aan een matrix, `Length(a)` is dit een expressie met gehele getallen.
 Als `b` is een matrix met matrices van gehele getallen, `Int[][]` `Length(b)` is dit het aantal submatrixen in `b` en `Length(b[1])` is het aantal gehele getallen in de tweede submatrix in `b` .
 
@@ -111,7 +111,7 @@ Aan de hand van een booleaanse expressie `not` kan de unaire operator worden geb
 
 ## <a name="string-expressions"></a>Tekenreeksexpressies
 
-Q# Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (beschreven in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:microsoft.quantum.intrinsic.message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q# programma.
+Q# Hiermee kunnen teken reeksen worden gebruikt in de `fail` instructie (beschreven in de [controle stroom](xref:microsoft.quantum.guide.controlflow#fail-statement)) en in de [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standaard functie. Het specifieke gedrag van de laatste is afhankelijk van de gebruikte simulator, maar schrijft meestal een bericht naar de host-console wanneer het wordt aangeroepen tijdens een Q# programma.
 
 Teken reeksen in Q# zijn letterlijke waarden of geïnterpoleerde teken reeksen.
 
@@ -128,7 +128,7 @@ De Q# syntaxis voor de teken reeks interpolatie is een subset van de C#-syntaxis
 
 * Als u een letterlijke teken reeks als een geïnterpoleerde teken reeks wilt identificeren, laten voorafgaan door u deze met het `$` symbool. Er mag geen witruimte tussen de `$` en de `"` letterlijke teken reeks worden gestart.
 
-* Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:microsoft.quantum.intrinsic.message) om het resultaat van een meting te schrijven naar de-console, naast andere Q# expressies.
+* Hier volgt een voor beeld van een basis voorbeeld waarin de functie wordt gebruikt [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) om het resultaat van een meting te schrijven naar de-console, naast andere Q# expressies.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Een tuple letterlijke waarde is een reeks element expressies van het juiste type
 
 Met uitzonde ring van letterlijke waarden, de enige tuple-expressies zijn symbolen die zijn gebonden aan tuplewaarde, matrix elementen van tuple-matrices en aanroep bare aanroepen die Tuples retour neren.
 
-## <a name="user-defined-type-expressions"></a>Door de gebruiker gedefinieerde type expressies
+## <a name="user-defined-type-expressions"></a>Type expressies van User-Defined
 
 Een letterlijke waarde van een door de gebruiker gedefinieerd type bestaat uit de type naam gevolgd door een tuple letterlijke waarde van het type basis-tuple.
 Als bijvoorbeeld een door `IntPair` de gebruiker gedefinieerd type is op basis van `(Int, Int)` , `IntPair(2, 3)` is dit een geldige letterlijke waarde van dat type.
@@ -237,7 +237,7 @@ In de meeste gevallen is dit een variatie van nul.
 
 Voor qubits en callables, die verwijzingen naar entiteiten zijn, is er geen redelijke standaard waarde.
 Voor deze typen is de standaard waarde een ongeldige verwijzing die u niet kunt gebruiken zonder dat er een runtime-fout wordt veroorzaakt, vergelijkbaar met een null-verwijzing in talen als C# of Java.
-Matrices met qubits of callables moeten worden geïnitialiseerd met niet-standaard waarden voordat u de elementen ervan veilig kunt gebruiken. Zie voor de juiste initialisatie routines <xref:microsoft.quantum.arrays> .
+Matrices met qubits of callables moeten worden geïnitialiseerd met niet-standaard waarden voordat u de elementen ervan veilig kunt gebruiken. Zie voor de juiste initialisatie routines <xref:Microsoft.Quantum.Arrays> .
 
 De standaard waarden voor elk type zijn:
 

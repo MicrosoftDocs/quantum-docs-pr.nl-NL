@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492333"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691664"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Zelfstudie: kennismaken met verstrengeling met Q#\#
 
@@ -56,9 +56,9 @@ Het eerste wat u moet doen, is het maken van een nieuw Q# project. In deze zelf 
 
 In VS code kunt u een nieuw project maken: 
 
-1. Klik op **Weergave** -> **Opdrachtpallet** en selecteer **Q#: Nieuw project maken**.
-2. Klik op **Zelfstandige consoletoepassing**.
-3. Ga naar de locatie waar het project moet worden opgeslagen en klik op **Project maken**.
+1. Klik op **Weergave** -> **Opdrachtpallet** en selecteer **Q#: Nieuw project maken** .
+2. Klik op **Zelfstandige consoletoepassing** .
+3. Ga naar de locatie waar het project moet worden opgeslagen en klik op **Project maken** .
 4. Klik rechtsonder op **Nieuw project openen...** als het project is gemaakt.
 
 In dit geval wordt het project genoemd `Bell` . Hiermee worden twee bestanden gegenereerd: `Bell.csproj` , het project bestand en `Program.qs` een sjabloon van een Q# toepassing die we gaan gebruiken om onze toepassing te schrijven. De inhoud van `Program.qs` moet het volgende zijn:
@@ -83,7 +83,7 @@ Ons doel is om twee qubits in een specifieke Quantum staat voor te bereiden en t
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit initialiseren met meting
 
-In het eerste code fragment hieronder ziet u hoe u met qubits kunt werken in Q# .  We voeren twee bewerkingen uit [`M`](xref:microsoft.quantum.intrinsic.m) en zorgen [`X`](xref:microsoft.quantum.intrinsic.x) dat de status van een Qubit wordt getransformeerd. In dit codefragment wordt een bewerking `SetQubitState` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `SetQubitState` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q# retourneert een Qubit-meting altijd `Zero` of `One` .  Als de meting een waarde retourneert die niet gelijk is aan de gewenste waarde, `SetQubitState` ' spiegelt ' de Qubit; dat wil zeggen, wordt een bewerking uitgevoerd. `X` Hiermee wordt de Qubit-status gewijzigd in een nieuwe status waarin de waarschijnlijkheid van een meting `Zero` wordt geretourneerd en `One` omgekeerd. Op deze manier `SetQubitState` plaatst de doel-Qubit altijd de gewenste status.
+In het eerste code fragment hieronder ziet u hoe u met qubits kunt werken in Q# .  We voeren twee bewerkingen uit [`M`](xref:Microsoft.Quantum.Intrinsic.m) en zorgen [`X`](xref:Microsoft.Quantum.Intrinsic.X) dat de status van een Qubit wordt getransformeerd. In dit codefragment wordt een bewerking `SetQubitState` gedefinieerd die een qubit als parameter accepteert, evenals een andere parameter, `desired`, die de gewenste toestand van de qubit aangeeft.  Met de bewerking `SetQubitState` wordt een meting uitgevoerd op de qubit met behulp van de bewerking `M`.  In Q# retourneert een Qubit-meting altijd `Zero` of `One` .  Als de meting een waarde retourneert die niet gelijk is aan de gewenste waarde, `SetQubitState` ' spiegelt ' de Qubit; dat wil zeggen, wordt een bewerking uitgevoerd. `X` Hiermee wordt de Qubit-status gewijzigd in een nieuwe status waarin de waarschijnlijkheid van een meting `Zero` wordt geretourneerd en `One` omgekeerd. Op deze manier `SetQubitState` plaatst de doel-Qubit altijd de gewenste status.
 
 Vervang de inhoud van `Program.qs` door de volgende code:
 
@@ -116,8 +116,8 @@ Het retourtype van de bewerking wordt na een dubbele punt opgegeven. In dit geva
 
 U hebt twee Quantum bewerkingen gebruikt in uw eerste Q# bewerking:
 
-* De [`M`](xref:microsoft.quantum.intrinsic.m) bewerking, waarmee de status van de Qubit wordt gemeten
-* De [`X`](xref:microsoft.quantum.intrinsic.x) bewerking, die de status van een Qubit spiegelt
+* De [`M`](xref:Microsoft.Quantum.Intrinsic.m) bewerking, waarmee de status van de Qubit wordt gemeten
+* De [`X`](xref:Microsoft.Quantum.Intrinsic.X) bewerking, die de status van een Qubit spiegelt
 
 Een kwantumbewerking transformeert de toestand van een qubit. Soms worden kwantumbewerkingen ook wel kwantumpoorten genoemd, analoog aan klassieke logische poorten. Dit vindt zijn oorsprong in het begintijdperk van de kwantumcomputing, toen algoritmen niets meer waren dan een theoretische constructie en werden gevisualiseerd als schema's, vergelijkbaar met circuitschema's in klassieke computing.
 
@@ -300,7 +300,7 @@ Dit staat bekend als **superpositie** en geeft ons de eerste echte blik op een k
 ## <a name="prepare-entanglement"></a>Verstrengeling voorbereiden
 
 Laten we nu eens kijken hoe Q# u entangle qubits.
-Eerst stellen we de eerste qubit in op de begintoestand en gebruiken we vervolgens de bewerking `H` om deze in superpositie te brengen.  Voordat we de eerste Qubit meten, gebruiken we vervolgens een nieuwe bewerking ( `CNOT` ), die staat voor *beheerd*.  Het resultaat van het uitvoeren van deze bewerking op twee qubits is het spie gelen van de tweede Qubit als de eerste Qubit is `One` .  Nu zijn de twee qubits verstrengeld.  Onze statistieken voor de eerste qubit zijn niet gewijzigd (kans van 50% op een `Zero` of `One` na meting), maar wanneer we nu de tweede qubit meten, krijgen we __altijd__ de uitkomst die voor de eerste qubit is gemeten. Onze `CNOT`-poort heeft de twee qubits verstrengeld, zodat wat er met de ene gebeurt, ook met de andere gebeurt. Als u de metingen omkeert (de tweede qubit vóór de eerste), zou zich hetzelfde voordoen. De eerste meting zal willekeurig zijn, waarna de tweede zich houdt aan wat voor de eerste is gedetecteerd.
+Eerst stellen we de eerste qubit in op de begintoestand en gebruiken we vervolgens de bewerking `H` om deze in superpositie te brengen.  Voordat we de eerste Qubit meten, gebruiken we vervolgens een nieuwe bewerking ( `CNOT` ), die staat voor *beheerd* .  Het resultaat van het uitvoeren van deze bewerking op twee qubits is het spie gelen van de tweede Qubit als de eerste Qubit is `One` .  Nu zijn de twee qubits verstrengeld.  Onze statistieken voor de eerste qubit zijn niet gewijzigd (kans van 50% op een `Zero` of `One` na meting), maar wanneer we nu de tweede qubit meten, krijgen we __altijd__ de uitkomst die voor de eerste qubit is gemeten. Onze `CNOT`-poort heeft de twee qubits verstrengeld, zodat wat er met de ene gebeurt, ook met de andere gebeurt. Als u de metingen omkeert (de tweede qubit vóór de eerste), zou zich hetzelfde voordoen. De eerste meting zal willekeurig zijn, waarna de tweede zich houdt aan wat voor de eerste is gedetecteerd.
 
 Het eerste wat u moet doen, is twee qubits toewijzen in plaats van één in `TestBellState` :
 

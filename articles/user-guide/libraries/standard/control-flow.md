@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835618"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690862"
 ---
-# <a name="higher-order-control-flow"></a>Controle stroom met hogere volg orde #
+# <a name="higher-order-control-flow"></a>Controle stroom Higher-Order #
 
 Een van de primaire rollen van de standaard bibliotheek is om het eenvoudiger te maken om zeer belang rijke ideeën in te stellen als [Quantum Program ma's](https://en.wikipedia.org/wiki/Quantum_programming).
 Daarom Q# biedt Canon diverse verschillende constructies voor datatransport besturing, die allemaal zijn geïmplementeerd met behulp van gedeeltelijke toepassing van functies en bewerkingen.
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Uitgedrukt in termen van <xref:microsoft.quantum.canon.applytoeachca> -en array-manipulatie functies <xref:microsoft.quantum.arrays.zip> , zoals, is dit echter veel korter en eenvoudiger te lezen:
+Uitgedrukt in termen van <xref:Microsoft.Quantum.Canon.ApplyToEachCA> -en array-manipulatie functies <xref:Microsoft.Quantum.Arrays.Zipped> , zoals, is dit echter veel korter en eenvoudiger te lezen:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ In de rest van deze sectie bieden we een aantal voor beelden van het gebruik van
 
 Een van de primaire abstracties van de Canon is die van iteratie.
 Denk bijvoorbeeld aan een unitary van het formulier $U \otimes U \otimes \cdots \otimes U $ voor een single-Qubit unitary $U $.
-In kunnen Q# we gebruiken <xref:microsoft.quantum.arrays.indexrange> om dit als een `for` lus voor een REGI ster te vertegenwoordigen:
+In kunnen Q# we gebruiken <xref:Microsoft.Quantum.Arrays.IndexRange> om dit als een `for` lus voor een REGI ster te vertegenwoordigen:
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 Dit betekent met name dat aanroepen naar `ApplyToEachCA` kunnen worden weer gegeven in bewerkingen waarvoor een adjoint-specialisatie automatisch wordt gegenereerd.
-<xref:microsoft.quantum.canon.applytoeachindex>Het is ook nuttig om patronen van het formulier weer `U(0, targets[0]); U(1, targets[1]); ...` te geven en biedt versies voor elke combi natie van functors die wordt ondersteund door de invoer.
+<xref:Microsoft.Quantum.Canon.ApplyToEachIndex>Het is ook nuttig om patronen van het formulier weer `U(0, targets[0]); U(1, targets[1]); ...` te geven en biedt versies voor elke combi natie van functors die wordt ondersteund door de invoer.
 
 > [!TIP]
 > `ApplyToEach` is type-para meters, zodat deze kan worden gebruikt met bewerkingen die andere invoer hebben dan `Qubit` .
-> Stel bijvoorbeeld dat `codeBlocks` een matrix met <xref:microsoft.quantum.errorcorrection.logicalregister> waarden is die moeten worden hersteld.
+> Stel bijvoorbeeld dat `codeBlocks` een matrix met <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> waarden is die moeten worden hersteld.
 > Vervolgens `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` worden de fout correctie code `code` en de herstel functie `recoveryFn` op elk afzonderlijk blok toegepast.
 > Dit geldt ook voor klassieke invoer: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` past een rotatie toe van $ \pi/$2 over $X $, gevolgd door een rotatie van $Pi/$3 over $Y $.
 
 De Q# Canon biedt ook ondersteuning voor klassieke inventarisatie patronen die bekend zijn met functionele programmering.
-Bijvoorbeeld: <xref:microsoft.quantum.arrays.fold> implementeert het patroon $f (f (f (s \_ {\Text{Initial}}, x \_ 0), x \_ 1), \dots) $ voor het verkleinen van een functie over een lijst.
+Bijvoorbeeld: <xref:Microsoft.Quantum.Arrays.Fold> implementeert het patroon $f (f (f (s \_ {\Text{Initial}}, x \_ 0), x \_ 1), \dots) $ voor het verkleinen van een functie over een lijst.
 Dit patroon kan worden gebruikt voor het implementeren van sommen, producten, minima, maxima en andere dergelijke functies:
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Op dezelfde manier werken functies zoals <xref:microsoft.quantum.arrays.mapped> en <xref:microsoft.quantum.arrays.mappedbyindex> kunnen worden gebruikt voor het uitdrukken van functionele Programmeer concepten in Q# .
+Op dezelfde manier werken functies zoals <xref:Microsoft.Quantum.Arrays.Mapped> en <xref:Microsoft.Quantum.Arrays.MappedByIndex> kunnen worden gebruikt voor het uitdrukken van functionele Programmeer concepten in Q# .
 
 ## <a name="composing-operations-and-functions"></a>Bewerkingen en functies samen stellen ##
 
 De constructies van de besturings stroom die door de Canon worden aangeboden, nemen activiteiten en functies als invoer, zodat het handig is om verschillende bewerkingen of functies in te stellen in één aanroepable.
-Het patroon $UVU ^ {\dagger} $ is bijvoorbeeld zeer gebruikelijk in Quantum Program ma's, zodat de Canon de bewerking <xref:microsoft.quantum.canon.applywith> als een abstractie van dit patroon biedt.
+Het patroon $UVU ^ {\dagger} $ is bijvoorbeeld zeer gebruikelijk in Quantum Program ma's, zodat de Canon de bewerking <xref:Microsoft.Quantum.Canon.ApplyWith> als een abstractie van dit patroon biedt.
 Deze abstractie biedt ook een efficiëntere naleving van circuits, zoals het uitvoeren `Controlled` van de reeks `U(qubit); V(qubit); Adjoint U(qubit);` hoeft niet op elke handeling te reageren `U` .
 Als u dit wilt zien, laat u $c (U) $ de unitary vertegenwoordigen `Controlled U([control], target)` en laat $c (V) $ op dezelfde manier worden gedefinieerd.
 Klik vervolgens voor een wille keurige status $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \OTIMES (UVU ^ {\dagger} \ket{\psi}) \\ \\ & = (\boldone \otimes u) (c (V)) (\boldone \otimes u ^ \dagger) \ket {1} \otimes \ket{\psi}.
@@ -126,7 +126,7 @@ Omdat het beheren van bewerkingen duur in het algemeen is, `WithC` `WithCA` kunt
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Op dezelfde manier worden <xref:microsoft.quantum.canon.bound> er bewerkingen uitgevoerd waarbij een reeks andere bewerkingen op zijn beurt wordt toegepast.
+Op dezelfde manier worden <xref:Microsoft.Quantum.Canon.Bound> er bewerkingen uitgevoerd waarbij een reeks andere bewerkingen op zijn beurt wordt toegepast.
 Het volgende is bijvoorbeeld gelijkwaardig:
 
 ```qsharp
@@ -141,7 +141,7 @@ Combi neren met iteratie patronen kan dit met name nuttig maken:
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>Samen stelling met time-bestelling ###
+### <a name="time-ordered-composition"></a>Time-Ordered compositie ###
 
 We kunnen nog steeds verder gaan met de Datatransport besturing in termen van gedeeltelijke toepassing en klassieke functies, en kunnen zelfs redelijk geraffineerde Quantum concepten model leren in termen van klassiek stroom beheer.
 Deze analoge bepaling wordt nauw keurig gemaakt door de erkenning dat unitary-Opera tors precies overeenkomen met de neven effecten van aanroepende activiteiten, zodat een degelijkheid van unitary-Opera tors in termen van andere unitary-Opera tors overeenkomt met het bouwen van een bepaalde aanroep volgorde voor klassieke subroutines die instructies verzenden om te fungeren als bepaalde unitary-Opera tors.
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Op dit moment kunnen we nu de oorzaak van de Trotter – Suzuki-uitbrei ding *zonder verwijzing naar Quantum monteurs*.
+Op dit moment kunnen we nu de oorzaak van de Trotter – Suzuki-uitbrei ding *zonder verwijzing naar Quantum monteurs* .
 De uitbrei ding is in feite een zeer specifiek herhalings patroon dat wordt gemotiveerd door $ \eqref{EQ: Trotter-Suzuki-0} $.
-Dit herhalings patroon wordt geïmplementeerd door <xref:microsoft.quantum.canon.decomposeintotimestepsca> :
+Dit herhalings patroon wordt geïmplementeerd door <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ De hand tekening van `DecomposeIntoTimeStepsCA` volgt een gemeen schappelijk pat
 Ten slotte bouwt de Canon op het `Controlled` functor door extra manieren te bieden voor het afwegen van Quantum bewerkingen.
 Het is gebruikelijk, met name bij Quantum wiskundige bewerkingen, tot voor waarden voor de berekening van andere berekenings statussen dan $ \ket{0\cdots 0} $.
 Met behulp van de besturings elementen en functies die hierboven worden geïntroduceerd, kunnen we meer algemene Quantum voorwaarden in één instructie hebben.
-We gaan naar hoe <xref:microsoft.quantum.canon.controlledonbitstring> werkt het (type para meters voor san's), waarna de onderdelen één voor één worden opgesplitst.
+We gaan naar hoe <xref:Microsoft.Quantum.Canon.ControlledOnBitString> werkt het (type para meters voor san's), waarna de onderdelen één voor één worden opgesplitst.
 Het eerste wat u moet doen, is het definiëren van een bewerking die werkelijk het zware werk van het beheer op basis van een wille keurige reken status heeft.
 Deze bewerking wordt echter niet rechtstreeks aangeroepen, maar daarom voegen we toe `_` aan het begin van de naam om aan te geven dat het een implementatie van een andere construct elders is.
 
@@ -212,8 +212,8 @@ Deze constructie is nauw keurig `ApplyWith` , dus we schrijven de hoofd tekst va
 }
 ```
 
-Hier zijn we gebruikt <xref:microsoft.quantum.canon.applypaulifrombitstring> om $P $ toe te passen, die gedeeltelijk van toepassing zijn op het doel voor gebruik met `ApplyWith` .
-Houd er echter rekening mee dat het *controle* register moet worden getransformeerd naar het gewenste formulier, dus we passen de binnenste bewerking `(Controlled oracle)` op het *doel*gedeeltelijk toe.
+Hier zijn we gebruikt <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> om $P $ toe te passen, die gedeeltelijk van toepassing zijn op het doel voor gebruik met `ApplyWith` .
+Houd er echter rekening mee dat het *controle* register moet worden getransformeerd naar het gewenste formulier, dus we passen de binnenste bewerking `(Controlled oracle)` op het *doel* gedeeltelijk toe.
 Dit `ApplyWith` houdt in dat u het controle register met $P $ kunt sluiten, precies zoals gewenst.
 
 Op dit moment kunnen we worden uitgevoerd, maar het lijkt erop dat onze nieuwe bewerking niet lijkt, zoals het Toep assen van de `Controlled` functor.
