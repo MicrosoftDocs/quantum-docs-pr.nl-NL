@@ -1,0 +1,57 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JWOptimized basis.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction
+- summary: Hiermee wordt een Hamiltonian die wordt beschreven door omgezet `JWOptimizedHTerms` `GeneratorSystem` in een uitgedrukt in termen van de `GeneratorIndex` Conventie die in dit bestand is gedefinieerd.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedGeneratorSystem
+- summary: Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de Pauli basis.
+  uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
+- summary: Retourneert een geoptimaliseerde Trotter-stap bewerking en de para meters die nodig zijn om deze uit te voeren.
+  uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
+- summary: Klassieke verwerkings stap van `ApplyDeltaParity` . Hiermee wordt een lijst met besturings element qubits voor het evalueren van het pariteits verschil tussen twee PQRS... voor waarden van even lengte.
+  uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
+name: Microsoft.Quantum.Research.Chemistry
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange
+- summary: Berekent het verschil in pariteit tussen een vorige PQRS... voor waarden en de volgende PQRS... mandaat. Dit verschil wordt berekend op een hulp Qubit.
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
+- summary: Eenvoudige status voorbereiding van de evaluatie status door spin-banen te nemen
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation
+- summary: Wordt gebruikt om de basis van een Z-operator te wijzigen in een Y-operator. conjugation.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToX
+- summary: Wordt gebruikt om de basis van een Z-operator te wijzigen in een Y-operator door conjugation.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToY
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep
+- summary: Past tijd-evolutie toe met een PQRS-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term
+- summary: Implementatie stap van `JWOptimized0123Term_` ;
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
+- summary: >-
+    Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JWOptimized basis.
+
+    Zie [model lering van dynamische Generator](../libraries/data-structures#dynamical-generator-modeling) voor meer informatie.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
+- summary: Past tijd-evolutie toe met een PQ-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTerm
+- summary: Implementatie stap van `JWOptimizedHpqTerm_` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
+- summary: Past tijd-evolutie toe met een PQ-of PQQR-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedPQandPQQRTerm
+- summary: Past een RZ-draaiing toe, met een C-niet tot dubbele fase in de fase schatting.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
+- summary: Past tijd-evolutie toe met een Z-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZTerm
+- summary: Past tijd-evolutie toe op basis van een ZZ-term die wordt beschreven door een `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZZTerm
+summary: Deze naam ruimte biedt geavanceerde onderzoek methoden voor het simuleren van quantum chemie.
+uid: Microsoft.Quantum.Research.Chemistry
+metadata:
+  ms.openlocfilehash: 22850f044e31507f72d5ac505ece67112fbdccb9
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92702045"
