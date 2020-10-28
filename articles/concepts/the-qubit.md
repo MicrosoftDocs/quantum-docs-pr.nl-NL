@@ -96,7 +96,7 @@ Een tweedimensionale kolom vector van reële of complexe getallen met norm $ 1 $
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2, } } \\\\ \frac { } { \sqrt { 2, 1 2, 1 } } \end{bmatrix} \begin{bmatrix} \frac { } { \sqrt { } } \\\\ \frac { } { \sqrt { } } \end{bmatrix} \text { en } \begin{bmatrix} \frac { 1 2, } { \sqrt { } } \\\\ \frac { } { \sqrt { 2 } } \end{bmatrix} .      $$
 
-De Quantum-status vectoren $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ en $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ nemen een speciale rol. Deze twee vectoren vormen een basis voor de vector ruimte die de status van de Qubit beschrijft. Dit betekent dat elke Quantum status vector kan worden geschreven als een som van deze basis vectoren. Met name de vector $ \begin{bmatrix} x \\\\ y \end{bmatrix} $ kan worden geschreven als $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Hoewel elke draaiing van deze vectoren als een volledig geldige basis voor de Qubit fungeert, kiezen we de bevoegdheid om dit te doen door de *berekening*uit te voeren.
+De Quantum-status vectoren $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ en $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ nemen een speciale rol. Deze twee vectoren vormen een basis voor de vector ruimte die de status van de Qubit beschrijft. Dit betekent dat elke Quantum status vector kan worden geschreven als een som van deze basis vectoren. Met name de vector $ \begin{bmatrix} x \\\\ y \end{bmatrix} $ kan worden geschreven als $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Hoewel elke draaiing van deze vectoren als een volledig geldige basis voor de Qubit fungeert, kiezen we de bevoegdheid om dit te doen door de *berekening* uit te voeren.
 
 We nemen deze twee Quantum Staten in overeenstemming met de twee staten van een klassieke bit, namelijk $ 0 $ en $ 1 $ . De standaard Conventie is om te kiezen
 
@@ -137,7 +137,7 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Hoewel dit een gelastig voor beeld is (zoals de < bewerking XREF: micro soft. Quantum. intrinsiek. h > is self-adjoint), kunt u zien hoe dit inwaardevol wordt voor complexere Qubit bewerkingen.
+Hoewel dit een gelastig voor beeld is (zoals de < bewerking XREF: micro soft. Quantum. intrinsiek. H > is self-adjoint), kunt u zien hoe dit inwaardevol wordt voor complexere Qubit bewerkingen.
 Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
 
 Er zijn slechts vier functies die één bit aan één bit op een klassieke computer toewijzen. Daarentegen is er een oneindig aantal unitary-trans formaties op één Qubit op een quantum computer. Daarom kan een beperkte set primitieve Quantum bewerkingen, die [*Gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate)worden genoemd, de oneindige set unitary-trans formaties die zijn toegestaan in de Quantum Computing, exact repliceren. Dit betekent dat, in tegens telling tot klassieke computing, het onmogelijk is dat een quantum computer elk mogelijk Quantum programma implementeert, precies met een eindige hoeveelheid poorten. Daarom kunnen quantum computers niet universeel zijn in dezelfde zin van klassieke computers. Als we er rekening mee houden dat een reeks poorten *universeel* is voor Quantum Computing, hebben we eigenlijk iets zwakkerer dan voor klassiek computing.
@@ -176,7 +176,7 @@ Hoewel het vorige de meest populaire primitieve poorten vormt voor het beschrijv
 
 De eenvoudigste manier om een dergelijke primitieve te zijn, is de enkele Qubit. Er worden meestal drie draaiingen met één Qubit beschouwd: $ R_x $ , $ R_y $ en $ R_z $ . Als u de actie van de draai $ R_x (\theta) wilt visualiseren, kunt u bijvoorbeeld het beste de $ richting van de $ x $ -as van de Bloch-bol naar rechts wijzen en de vector met uw hand in een hoek van $ \ theta/2 $ radialen draaien. Deze verwarrende factor $ 2 $ ontstaat uit het feit dat orthogonale vectoren $ 180 ^ \circ zijn $ bij het uitzetten van de Bloch-bol, maar in feite $ 90 ^ \circ $ graden van geometrisch zijn. De bijbehorende unitary-matrices zijn:
 
-\begin{align* } 
+\begin{align *} 
  & R_z (\theta) = e ^ { -i\theta z/2 } = \begin{bmatrix} e ^ { -i \ theta/2 } & 0 \\\\ 0 & e ^ { i \ theta/2 } \end{bmatrix} , \\\\ 
  & R_x (\theta) = e ^ { -i\theta x/2 } = HR_z (\theta) H = \begin{bmatrix} \cos (\ theta/2) & -i\sin (\ theta/2) \\\\ -i\sin (\ theta/2) & \cos (\ theta/2) \end{bmatrix} , \\\\ 
  & R_y (\theta) = e ^ { -i\theta y/2 } = SHR_z (\theta) HS ^ \dagger = \begin{bmatrix} \cos (\ theta/2) & -\sin (\ theta/2) \\\\ \sin (\ theta/2) & \cos (\ theta/2) \end{bmatrix} . \end { uitlijnen*}

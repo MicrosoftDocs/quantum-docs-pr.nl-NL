@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835652"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692165"
 ---
 # <a name="applications"></a>Toepassingen #
 
@@ -48,13 +48,13 @@ In de meeste praktische toepassingen die op een quantum computer moeten worden g
 
 Een Quantum simulatie algoritme zet een opgegeven beschrijving van een Hamiltonian om in een reeks primitieve Quantum-poorten die als geheel een tijdige evolutie van Hamiltonian.
 
-In het speciale geval waarbij de Hamiltonian wordt ontsteld in een som van Hermitian-onderdelen, is de Trotter-Suzuki-ontleding een bijzonder eenvoudig en intuïtief algoritme voor het simuleren van Hamiltonians die een som van Hermitian onderdelen afbreken. Een first-order integrator van deze familie heeft bijvoorbeeld ongeveer $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-IH \_ 1 t/r} \cdots e ^ {-IH \_ {d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ met behulp van een product van $r d $-voor waarden. 
+In het speciale geval waarbij de Hamiltonian wordt ontsteld in een som van Hermitian-onderdelen, is de Trotter-Suzuki ontleding een bijzonder eenvoudig en intuïtief algoritme voor het simuleren van Hamiltonians die een som van Hermitian onderdelen afbreken. Een first-order integrator van deze familie heeft bijvoorbeeld ongeveer $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-IH \_ 1 t/r} \cdots e ^ {-IH \_ {d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ met behulp van een product van $r d $-voor waarden. 
 
 > [!TIP]
-> Toepassingen van het simulatie algoritme Trotter-Suzuki worden in de voor beelden besproken.
-> Zie het [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)-voor beeld voor het Ising-model met alleen de intrinsieke bewerkingen van elke doel computer.
-> Raadpleeg het [ **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)-voor beeld voor het Ising-model met behulp van de Trotter-Suzuki.
-> Zie het [ **simulatie** voorbeeld](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)van de Trotter-Suzuki voor moleculaire water stof met behulp van de beheer structuur van de bibliotheek.
+> Toepassingen van het simulatie algoritme Trotter-Suzuki worden behandeld in de voor beelden.
+> Zie het [ **SimpleIsing**](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)-voor beeld voor het Ising-model met alleen de intrinsieke bewerkingen van elke doel computer.
+> Zie het [ **IsingTrotter**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)-voor beeld voor het Ising-model met behulp van de beheer structuur van de Trotter-Suzuki bibliotheek.
+> Voor moleculaire water stof met behulp van de beheer structuur van de Trotter-Suzuki bibliotheek raadpleegt u het [ **simulatie** voorbeeld van H2](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 In veel gevallen willen we het simulatie algoritme implementeren, maar zijn ze niet geïnteresseerd in de details van de implementatie. Bijvoorbeeld, de tweede order integrator komt met $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2R} e ^ {-IH \_ 1 t/2R} \cdots e ^ {-IH \_ {d-1} t/2R} e ^ {-IH \_ {d-1} t/2R} \cdots e ^ {-IH \_ 1 t/2R} e ^ {-IH \_ 0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ met een product van $2rd $-voor waarden. Grotere orders hebben zelfs nog meer voor waarden en geoptimaliseerde varianten kunnen een zeer niet-oplopende volg orde van de exponentiëlen vereisen. Andere geavanceerde algoritmen kunnen ook het gebruik van ancilla qubits in tussenliggende stappen omvatten. Daarom kunnen simulatie algoritmen in de Canon worden gepakketd als het door de gebruiker gedefinieerde type
 
@@ -68,7 +68,7 @@ De eerste para meter `Double` is de tijd van simulatie, de tweede para meter, di
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-Zo kan de ontleding van de Trotter-Suzuki worden aangeroepen met behulp van de volgende Canon-functies, met para meters die `trotterStepSize` de duur van simulatie in elke exponentiële waarde wijzigen en `trotterOrder` voor de volg orde van de gewenste integrator.
+Een voor beeld: de Trotter-Suzuki ontleding kan worden aangeroepen met de volgende Canon-functies, met para meters `trotterStepSize` voor het wijzigen van de duur van simulatie in elke exponentiële waarde en `trotterOrder` voor de volg orde van de gewenste integrator.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> Toepassingen van de simulatie bibliotheek worden in de voor beelden besproken. `SimulationAlgorithm`Zie het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor een fase-schatting in het Ising-model met.
-> `TimeDependentSimulationAlgorithm`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor de voor bereiding van de Adiabatic-status in het Ising-model.
+> Toepassingen van de simulatie bibliotheek worden in de voor beelden besproken. `SimulationAlgorithm`Zie het [ **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor een fase-schatting in het Ising-model met.
+> `TimeDependentSimulationAlgorithm`Raadpleeg het [ **AdiabaticIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor de voor bereiding van de Adiabatic-status in het Ising-model.
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Schatting van Adiabatic-status voorbereiding & fase ###
@@ -132,15 +132,15 @@ operation EstimateAdiabaticStateEnergy(
 `nQubits` is het aantal qubits dat wordt gebruikt om de initiële Quantum status te coderen. `statePrepUnitary` bereidt de start status voor op basis van de berekening $ \ket{0\cdots 0} $. `adiabaticUnitary` is de unitary-bewerking die de voor bereiding van Adiabatic-status implementeert, zoals geproduceerd door de  `InterpolatedEvolution` functie. `qpeUnitary` is de bewerking unitary die wordt gebruikt voor het uitvoeren van een fase schatting voor de resulterende Quantum status. `phaseEstAlgorithm` is ons keuze-algoritme voor fase schatting.
 
 > [!TIP]
-> Toepassingen van de Adiabatic-status voorbereiding worden behandeld in de voor beelden. `AdiabaticEvolution`Raadpleeg het [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor het Ising-model met behulp van een hand matige implementatie van Adiabatic-status voorbereiding versus het gebruik van de functie.
-> Raadpleeg het [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor fase schatting en Adiabatic-status voorbereiding in het Ising-model.
+> Toepassingen van de Adiabatic-status voorbereiding worden behandeld in de voor beelden. `AdiabaticEvolution`Raadpleeg het [ **AdiabaticIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)-voor beeld voor het Ising-model met behulp van een hand matige implementatie van Adiabatic-status voorbereiding versus het gebruik van de functie.
+> Raadpleeg het [ **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)-voor beeld voor fase schatting en Adiabatic-status voorbereiding in het Ising-model.
 
 > [!TIP]
-> De [simulatie van moleculaire water stof](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) is een interessant en beknopt voor beeld. De model-en experimentele resultaten die in [O'Malley et. al](https://arxiv.org/abs/1512.06860) zijn gerapporteerd. vereist alleen Pauli-matrices en heeft de vorm $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {Z \_ 0} {z \_ 1} + g \_ 4 {y 0} {Y 1} \_ \_ + g \_ 5 {X \_ 0} {X \_ 1} $. Dit is een effectief Hamiltonian waarvoor slechts 2 qubits nodig is, waarbij de constanten $g $ worden berekend op basis van de afstand $R $ tussen de twee water stof atomen. Met Canon functions worden de Paul-functies geconverteerd naar unitaries en vervolgens over korte Peri Oden gegroeid met behulp van de Trotter-Suzuki-ontleding. Een goede benadering van $H de _2 $ aarde kan worden gemaakt zonder gebruik te maken van Adiabatic-status voorbereiding, waardoor de grond staats energie direct kan worden gevonden door de fase-schatting van de Canon te gebruiken.
+> De [simulatie van moleculaire water stof](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) is een interessant en beknopt voor beeld. De model-en experimentele resultaten die in [O'Malley et. al](https://arxiv.org/abs/1512.06860) zijn gerapporteerd. vereist alleen Pauli-matrices en heeft de vorm $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {Z \_ 0} {z \_ 1} + g \_ 4 {y 0} {Y 1} \_ \_ + g \_ 5 {X \_ 0} {X \_ 1} $. Dit is een effectief Hamiltonian waarvoor slechts 2 qubits nodig is, waarbij de constanten $g $ worden berekend op basis van de afstand $R $ tussen de twee water stof atomen. Met Canon functions worden de Paul-functies geconverteerd naar unitaries en vervolgens over korte Peri Oden gegroeid met behulp van de Trotter-Suzuki ontleding. Een goede benadering van $H de _2 $ aarde kan worden gemaakt zonder gebruik te maken van Adiabatic-status voorbereiding, waardoor de grond staats energie direct kan worden gevonden door de fase-schatting van de Canon te gebruiken.
 
 ## <a name="shors-algorithm"></a>Algoritme van Shor ##
 Het Shor-algoritme is een van de belangrijkste ontwikkelingen in de Quantum Computing, omdat blijkt dat quantum computers kunnen worden gebruikt voor het oplossen van belang rijke, op dit moment klassieke problemen.
-Het Shor-algoritme biedt een snelle manier om grote getallen te vermenigvuldigen met behulp van een quantum computer, een probleem met de naam *factoring*.
+Het Shor-algoritme biedt een snelle manier om grote getallen te vermenigvuldigen met behulp van een quantum computer, een probleem met de naam *factoring* .
 De beveiliging van veel aanwezige dagen cryptosystems is gebaseerd op de veronderstelling dat er geen snelle algoritme bestaat voor factories.
 Het algoritme van Shor heeft een progevonden effect gehad op hoe we de beveiliging in een post-Quantum wereld denken.
 
@@ -151,7 +151,7 @@ Deze twee stappen worden hieronder besproken.
 
 ### <a name="period-finding"></a>Periode zoeken ###
 
-Gezien hoe de Quantum Fourier-trans formatie en fase schatting werken (Zie [Quantum algoritmen](xref:microsoft.quantum.libraries.standard.algorithms)), kunnen we deze hulpprogram ma's gebruiken om een klassiek probleem op te lossen dat de *periode bevindt*.  In de volgende sectie wordt beschreven hoe u de periode voor het zoeken kunt Toep assen op factor.
+Gezien hoe de Quantum Fourier-trans formatie en fase schatting werken (Zie [Quantum algoritmen](xref:microsoft.quantum.libraries.standard.algorithms)), kunnen we deze hulpprogram ma's gebruiken om een klassiek probleem op te lossen dat de *periode bevindt* .  In de volgende sectie wordt beschreven hoe u de periode voor het zoeken kunt Toep assen op factor.
 
 Als er twee gehele getallen zijn $a $ en $N $, waarbij $a<N $, het doel van het vinden van de periode, ook wel het vinden van orders genoemd, het vinden van de _volg orde_ $r $ van $a $ modulo $N $, waarbij $r $ is gedefinieerd als het minst positieve gehele getal zodat $a ^ r \equiv 1 \Text{mod} N $.  
 
@@ -178,8 +178,8 @@ De Controlled-$U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \Text{mod} N} $ als h
 Om $ (a ^ NX) \Text{mod} N $ toe te passen, kunnen we een beheerde $U _ {a ^ N} $ Toep assen, waar we $a ^ N \Text{mod} N $ op klassieke wijze berekenen om in het Quantum circuit aan te sluiten.  
 De circuits om dergelijke modulaire reken kundige berekeningen te realiseren, zijn beschreven in de [kwantum wiskundige documentatie](./algorithms.md#arithmetic), met name dat er een modulair exponent circuit is vereist voor het implementeren van de beheerde $U \_ {a ^ i} $ bewerkingen.
 
-Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:microsoft.quantum.characterization.quantumphaseestimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. karakte Rise ring. Een voor beeld van een [Robust Phase-schatting](xref:microsoft.quantum.characterization.robustphaseestimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
- 
+Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. karakte Rise ring. Een voor beeld van een [Robust Phase-schatting](xref:microsoft.quantum.characterization.robustphaseestimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
+
 ### <a name="factoring"></a>Waarbij ###
 Het doel van factoren is het bepalen van de twee Prime factoren van het gehele getal $N $, waarbij $N $ een $n $-bit-nummer is.  
 Factoring bestaat uit de stappen die hieronder worden beschreven. De stappen zijn onderverdeeld in drie delen: een klassieke preverwerkings routine (1-4); een quantum computing-routine om de volg orde van $a \Text{mod} te vinden, N $ (5); en een klassieke postprocessing-routine voor het afleiden van de Prime factoren uit de bestelling (6-9).
