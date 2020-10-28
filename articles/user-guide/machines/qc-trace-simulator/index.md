@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771292"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690841"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK)-kwantumtraceersimulator
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 Omdat de kwantumtraceersimulator de werkelijke kwantumstatus niet simuleert, kan de kans op het meten van resultaten binnen een bewerking niet worden berekend. 
 
-Als een bewerking metingen bevat, moet u deze kansen daarom expliciet opgeven met behulp van de bewerking <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> uit de naamruimte <xref:microsoft.quantum.diagnostics>. Het volgende voorbeeld illustreert dit:
+Als een bewerking metingen bevat, moet u deze kansen daarom expliciet opgeven met behulp van de bewerking <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> uit de naamruimte <xref:Microsoft.Quantum.Diagnostics>. Het volgende voorbeeld illustreert dit:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Wanneer de kwantumtraceersimulator de `AssertMeasurementProbability` tegenkomt, wordt vastgelegd dat aan meting `PauliZ` op `source` en `q` een resultaat van `Zero` met een waarschijnlijkheid van **0,5** moet worden toegekend. Wanneer de bewerking `M` later wordt uitgevoerd, worden de vastgelegde waarden van de resultaatkansen gevonden en retourneert `M` `Zero` of `One`, met een waarschijnlijkheid van **0,5**. Wanneer dezelfde code wordt uitgevoerd in een simulator die de kwantumtoestand bijhoudt, wordt in die simulator gecontroleerd of de in `AssertMeasurementProbability` opgegeven waarschijnlijkheden juist zijn.
+Wanneer de kwantumtraceersimulator de `AssertMeasurementProbability` tegenkomt, wordt vastgelegd dat aan meting `PauliZ` op `source` en `q` een resultaat van `Zero` met een waarschijnlijkheid van **0,5** moet worden toegekend. Wanneer de bewerking `M` later wordt uitgevoerd, worden de vastgelegde waarden van de resultaatkansen gevonden en retourneert `M` `Zero` of `One`, met een waarschijnlijkheid van **0,5** . Wanneer dezelfde code wordt uitgevoerd in een simulator die de kwantumtoestand bijhoudt, wordt in die simulator gecontroleerd of de in `AssertMeasurementProbability` opgegeven waarschijnlijkheden juist zijn.
 
 Als een of meer meetbewerkingen niet zijn geannoteerd met behulp van `AssertMeasurementProbability`, wordt door de simulator een [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception) geactiveerd.
 
