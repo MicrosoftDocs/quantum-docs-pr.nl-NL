@@ -1,0 +1,56 @@
+---
+uid: Microsoft.Quantum.AmplitudeAmplification
+title: Micro soft. Quantum. AmplitudeAmplification-naam ruimte
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: namespace
+qsharp.name: Microsoft.Quantum.AmplitudeAmplification
+qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
+ms.openlocfilehash: 09c29bd9d0648bb8652051ad97ceca6ef6557df3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92707728"
+---
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="40a31-102">Micro soft. Quantum. AmplitudeAmplification-naam ruimte</span><span class="sxs-lookup"><span data-stu-id="40a31-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+
+<span data-ttu-id="40a31-103">Deze naam ruimte bevat functies en bewerkingen voor het uitvoeren van amplitude versterking.</span><span class="sxs-lookup"><span data-stu-id="40a31-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+
+
+
+## <a name="description"></a><span data-ttu-id="40a31-104">Beschrijving</span><span class="sxs-lookup"><span data-stu-id="40a31-104">Description</span></span>
+
+<span data-ttu-id="40a31-105">Obliviouse amplitude versterking met gedeeltelijke reflecties is de meest algemene vorm van amplitude versterking die hier wordt geïmplementeerd.</span><span class="sxs-lookup"><span data-stu-id="40a31-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+
+<span data-ttu-id="40a31-106">Dit wordt aangeroepen via de bewerking AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="40a31-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+
+<span data-ttu-id="40a31-107">Dit heeft twee registers: `ancillaRegister` en `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="40a31-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+
+<span data-ttu-id="40a31-108">Dit accepteert twee Oracle voor deze reflecties van het type `ReflectionOracle` dat alleen op de kassa kan worden toegepast `ancillaRegister` .</span><span class="sxs-lookup"><span data-stu-id="40a31-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+
+<span data-ttu-id="40a31-109">Dit aanvaardt een specifiek Oracle-obliviouse amplitude versterking van het type `ObliviousOracle` dat gezamenlijk op beide registraties reageert.</span><span class="sxs-lookup"><span data-stu-id="40a31-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+
+<span data-ttu-id="40a31-110">De invoer status `ancillaRegister` wordt aangenomen dat het unieke $-$1-eigenstate van de eerste reflectie operator $I-2 \ Ket {s} \ Bra {s} $ is.</span><span class="sxs-lookup"><span data-stu-id="40a31-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+
+<span data-ttu-id="40a31-111">Reflecties over een doel Quantum status worden vaak geïmplementeerd door de toegang tot een Oracle die de status voorbereidt op basis van de reken kracht $ \ket{0\cdots 0} $.</span><span class="sxs-lookup"><span data-stu-id="40a31-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+
+<span data-ttu-id="40a31-112">Voor onze conventies voor deze Oracle zijn twee kassa's vereist: een single-Qubit `flagQubit` registratie en een REGI ster voor alle andere zaken op het ancillaRegister-REGI ster.</span><span class="sxs-lookup"><span data-stu-id="40a31-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+
+<span data-ttu-id="40a31-113">Het Oracle van het type `StateOracle` oefent gezamenlijk uit op beide kassa's om de doel status te maken die door $ \ket {1} $ in het `flagQubit` REGI ster is gemarkeerd met een echte amplitude.</span><span class="sxs-lookup"><span data-stu-id="40a31-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+
+<span data-ttu-id="40a31-114">De reflectie `ReflectionOracle` over de status van deze vlag wordt gegenereerd door de bewerking `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="40a31-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+
+<span data-ttu-id="40a31-115">De reflectie `ReflectionOracle` over de invoer status naar `ancillaRegister` wordt gegenereerd door het omkeren van StateOracle en vervolgens weer spie gelen over $ \ket{0\cdots 0} $ met ReflectionStart ().</span><span class="sxs-lookup"><span data-stu-id="40a31-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+
+<span data-ttu-id="40a31-116">Het Oracle van `DeterministicStateOracle` het type reageert op de `qubitState` kassa's om de doel status precies zonder vlag te maken.</span><span class="sxs-lookup"><span data-stu-id="40a31-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+
+<span data-ttu-id="40a31-117">`AmpAmpObliviousByOraclePhases` is een versie van de Oblivious-amplitude versterking waarmee Oracle `StateOracle` en `ObliviousOracle` in plaats van reflecties worden geaccepteerd.</span><span class="sxs-lookup"><span data-stu-id="40a31-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+
+<span data-ttu-id="40a31-118">Houd er rekening mee dat de versterking van de amplitude een speciaal geval is voor een obliviouse amplitude versterking waarbij `ObliviousOracle` de identiteits operator is en er geen systeem-qubits `systemRegister` is.</span><span class="sxs-lookup"><span data-stu-id="40a31-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+
+<span data-ttu-id="40a31-119">Dit wordt aangeroepen door de bewerking `AmpAmByReflectionPhases` en `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="40a31-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+
+<span data-ttu-id="40a31-120">De fasen voor gedeeltelijke reflecties in het standaard geval van een Grover-zoek opdracht worden gegeven door de functie AmpAmpPhasesStandard.</span><span class="sxs-lookup"><span data-stu-id="40a31-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+
+<span data-ttu-id="40a31-121">We hebben bijvoorbeeld de volgende afhankelijkheden: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="40a31-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
