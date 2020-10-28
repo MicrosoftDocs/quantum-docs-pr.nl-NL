@@ -1,0 +1,68 @@
+---
+uid: Microsoft.Quantum.Canon.ApplyIfA
+title: Bewerking ApplyIfA
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: ApplyIfA
+qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
+ms.openlocfilehash: 279a069176ee24ed83406f72170462bf58c790d9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92705364"
+---
+# <a name="applyifa-operation"></a>Bewerking ApplyIfA
+
+Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
+
+Pakket [](https://nuget.org/packages/)
+
+
+Hiermee wordt een adjointable bewerking toegepast die is voor bereid op een klassieke bit.
+
+```qsharp
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+```
+
+
+## <a name="description"></a>Beschrijving
+
+Gezien een bewerking `op` en een bitlengte `bit` , geldt `op` voor de `target` if `bit` `true` -waarde. Als `false` , gebeurt er niets met `target` .
+Het achtervoegsel `A` geeft aan dat de bewerking die moet worden toegepast, adjointable is.
+
+## <a name="input"></a>Invoer
+
+### <a name="op--t--unit-adj"></a>op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+
+Een bewerking die voorwaardelijk moet worden toegepast.
+
+
+### <a name="bit--bool"></a>bit: [BOOL](xref:microsoft.quantum.lang-ref.bool)
+
+een Booleaanse waarde die bepaalt of op wordt toegepast of niet.
+
+
+### <a name="target--t"></a>doel: 'T
+
+De invoer waarop de bewerking wordt toegepast.
+
+
+
+## <a name="output--unit"></a>Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)
+
+
+
+## <a name="type-parameters"></a>Type parameters
+
+### <a name="t"></a>T
+
+Het invoer type van de bewerking die voorwaardelijk moet worden toegepast.
+
+## <a name="see-also"></a>Zie ook
+
+- [Micro soft. Quantum. Canon. ApplyIfC](xref:Microsoft.Quantum.Canon.ApplyIfC)
+- [Micro soft. Quantum. Canon. ApplyIfA](xref:Microsoft.Quantum.Canon.ApplyIfA)
+- [Micro soft. Quantum. Canon. ApplyIfCA](xref:Microsoft.Quantum.Canon.ApplyIfCA)
