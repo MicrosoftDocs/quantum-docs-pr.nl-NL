@@ -1,0 +1,107 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >-
+    Berekent de Bloch Sphere-coördinaten voor een status met één Qubit.
+
+    Met twee complexe getallen $a 0, a1 $ die de status Qubit vertegenwoordigen, worden de coördinaten van de Bloch-bol berekend, zodat $a 0 \ket {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ theta/2)} \ket {0} + e ^ {i \phi/2}\sin{(\ theta/2)} \ket {1} ) $.
+  uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
+- summary: >-
+    Maakt gebruik van de Quantum ROM-techniek om een opgegeven dichtheids matrix weer te geven.
+
+    Op basis van een lijst met $N $ coëfficiënten $ \ alpha_j $ wordt een unitary $U $ geretourneerd die gebruikmaakt van de Quantum-ROM-techniek voor het voorbereiden van een benadering $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ van de zuivering van de dichtheids matrix $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{ {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. In deze benadering is de fout $ \epsilon $ zo dat $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ en $ \| \tilde\rho-\rho \| \le \epsilon $. Met andere woorden, $ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ Ket {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _J}. \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.QuantumROM
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
+- summary: Retourneert het totale aantal qubits dat moet worden toegewezen aan de bewerking die wordt geretourneerd door `QuantumROM` .
+  uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RangeLength
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: >-
+    Retourneert een bewerking die een specifieke Quantum status voorbereidt.
+
+    De geretourneerde bewerking $U $ een wille keurige Quantum status $ \ket{\psi} $ voorbereidt met complexe coëfficiënten $r _j e ^ {i t_j} $ van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+
+    De actie van U op een nieuw toegewezen REGI ster wordt gegeven door $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}. \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
+- summary: >-
+    Retourneert een bewerking die de opgegeven Quantum status voorbereidt.
+
+    De geretourneerde bewerking $U $ een wille keurige Quantum status $ \ket{\psi} $ voorbereidt met positieve coëfficiënten $ \ alpha_j \ge $0 van de $n $-Qubit reken kundige status $ \ket{0...0} $.
+
+    De actie van U op een nieuw toegewezen REGI ster wordt gegeven door $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}. \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
+- summary: Implementatie stap van de procedure voor het voorbereiden van een wille keurige status.
+  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
+- summary: Implementatie stap van de procedure voor het voorbereiden van een wille keurige status.
+  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
+name: Microsoft.Quantum.Preparation
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
+- summary: Hiermee wordt een bewerking toegepast op de onderliggende qubits die een little-endian-registratie maakt. Deze bewerking is gemarkeerd als intern, omdat een registratie van een little-endian is bedoeld als ' dekkend ', zodat dit alleen een implementatie detail is.
+  uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
+- summary: Op basis van een set coëfficiënten en een versleuteld Quantum REGI ster van little endian, wordt een staat voor het REGI ster die is beschreven door de gegeven coëfficiënten, voor een bepaalde aanpassings tolerantie voor bereid.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
+- summary: Op basis van een set coëfficiënten en een versleuteld Quantum REGI ster van little endian, wordt een staat voor het REGI ster die wordt beschreven door de gegeven coëfficiënten voor bereid.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
+- summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voor de opgegeven referentie-en doel registers voor bereid.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiState
+- summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voor een adjoint-variant voor de opgegeven referentie-en doel registers voor bereid.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
+- summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking gereedgemaakt met een gecontroleerde variant op de opgegeven referentie-en doel registers.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
+- summary: Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking voorbereidt met zowel beheerde als adjoint varianten op gegeven referentie-en doel registers.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
+- summary: >-
+    Pairwise entangles twee Qubit-registers.
+
+    Op basis van twee registers wordt de maximally Entangled-status $ \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right) $ tussen elk paar qubits op de respectieve kassa's voor bereid, ervan uitgaande dat elke kassa begint met de status $ \ket{0\cdots 0} $.
+  uid: Microsoft.Quantum.Preparation.PrepareEntangledState
+- summary: >-
+    Op basis van een REGI ster, bereidt dat registratie voor op de gemengde status maximally.
+
+    De kassa wordt voor bereid in de status $ \boldone/2 ^ N $ door het volledige depolarizing-kanaal toe te passen op elke qubit, waarbij $N $ de lengte van het REGI ster is.
+  uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
+- summary: >-
+    Bereidt een Qubit voor in de + 1 ( `Zero` ) eigenstate van de gegeven Pauli-operator. Als de identiteits operator wordt opgegeven, wordt de Qubit voor bereid in de gemengde status maximally.
+
+    Als de Qubit in eerste instantie de $ \ket {0} $-status had, bereidt deze bewerking de Qubit voor in de $ + $1-eigenstate van een bepaalde Pauli-operator of, `PauliI` in plaats daarvan, in de gemengde status maximally (Zie <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
+
+    Als de Qubit een andere status heeft dan $ \ket {0} $, geldt deze bewerking voor de volgende poorten: $H $ voor `PauliX` , $HS $ voor `PauliY` , $I $ voor `PauliZ` en <xref:microsoft.quantum.preparation.preparesinglequbitidentity> voor `PauliI` .
+  uid: Microsoft.Quantum.Preparation.PrepareQubit
+- summary: >-
+    Bereidt een Qubit voor in de gemengde status maximally.
+
+    De opgegeven Qubit wordt voor bereid in de status $ \boldone/$2 door het depolarizing-kanaal $ $ \begin{align} \Omega (\rho) \mathrel{toe te passen: =} \frac {1} {4} \ sum_ {\mu \in \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{align} $ $ waarbij $ \sigma \_ i $ de $i $ de Pauli-operator is en waarbij $ \rho $ een dichtheids operator is die een gemengde staat vertegenwoordigt.
+  uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity
+- summary: >-
+    Hiermee maakt u een uniforme superpositie op status die 0 t/m-codeert `nIndices - 1` .
+
+    Dat wil zeggen dat deze unitary $U $ een uniforme superpositie maakt boven alle nummer Staten $0 $ tot $M-$1, op basis van een invoer status $ \ket{0\cdots 0} $. Met andere woorden, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}. \end{align} $ $.
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
+- summary: Implementatie stap van <xref:microsoft.quantum.canon.prepareuniformsuperposition>
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+summary: Deze naam ruimte bevat functies en bewerkingen voor het voorbereiden van qubits in wille keurige begin waarden.
+uid: Microsoft.Quantum.Preparation
+metadata:
+  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92708371"

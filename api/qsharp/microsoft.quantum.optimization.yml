@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retourneert het lokale minimum voor een univariate-functie gedurende een beperkt interval, met behulp van een gouden interval zoekactie.
+  uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
+- summary: Retourneert het middel punt voor een interval.
+  uid: Microsoft.Quantum.Optimization.Midpoint
+- summary: Op basis van een interval retourneert een test interval dat het opgegeven interval op basis van een factor van de gouden verhouding afgeeft.
+  uid: Microsoft.Quantum.Optimization.Probe
+- summary: Retourneert de breedte van een interval.
+  uid: Microsoft.Quantum.Optimization.Width
+name: Microsoft.Quantum.Optimization
+newtypes:
+- summary: Hiermee wordt het resultaat van het optimaliseren van een univariate-functie aangeduid.
+  uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+operations: []
+summary: Bevat functies en optimalisaties voor het zoeken van minima.
+uid: Microsoft.Quantum.Optimization
+metadata:
+  ms.openlocfilehash: 0271a658d625f9781b12a9659c80495200a9ba54
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92708389"

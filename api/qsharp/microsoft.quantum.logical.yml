@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retourneert de Booleaanse combi natie van twee waarden.
+  uid: Microsoft.Quantum.Logical.And
+- summary: Retourneert een van twee waarden, afhankelijk van de waarde van een Booleaanse voor waarde.
+  uid: Microsoft.Quantum.Logical.Conditioned
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualB
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualC
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualCP
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualD
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualI
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualL
+- summary: Retourneert waar als en alleen als twee invoer waarden gelijk zijn.
+  uid: Microsoft.Quantum.Logical.EqualR
+- summary: Retourneert waar als en alleen als een getal groter is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanD
+- summary: Retourneert waar als en alleen als een getal groter is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanI
+- summary: Retourneert waar als en alleen als een getal groter is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanL
+- summary: Retourneert waar als en alleen als een getal groter is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualD
+- summary: Retourneert waar als en alleen als een getal groter is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualI
+- summary: Retourneert waar als en alleen als een getal groter is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualL
+- summary: Retourneert waar als en alleen als een getal kleiner is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanD
+- summary: Retourneert waar als en alleen als een getal kleiner is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanI
+- summary: Retourneert waar als en alleen als een getal kleiner is dan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanL
+- summary: Wordt geïmplementeerd `LexographicComparison` .
+  uid: Microsoft.Quantum.Logical.LessThanLexographic
+- summary: Retourneert waar als en alleen als een getal kleiner is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualD
+- summary: Retourneert waar als en alleen als een getal kleiner is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualI
+- summary: Retourneert waar als en alleen als een getal kleiner is dan of gelijk is aan een ander getal.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualL
+- summary: Op basis van een vergelijkings functie retourneert een nieuwe functie die lexographically twee matrices vergelijkt.
+  uid: Microsoft.Quantum.Logical.LexographicComparison
+- summary: Retourneert waar als en alleen als twee invoer bijna gelijk is (dat wil zeggen, binnen een tolerantie van 1e-12).
+  uid: Microsoft.Quantum.Logical.NearlyEqualD
+- summary: Retourneert de Boole-ontkenning van een waarde.
+  uid: Microsoft.Quantum.Logical.Not
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualB
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualC
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualCP
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualD
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualI
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualL
+- summary: Retourneert waar als en alleen als twee invoer waarden niet gelijk zijn.
+  uid: Microsoft.Quantum.Logical.NotEqualR
+- summary: Retourneert waar als twee invoer waarden niet bijna gelijk zijn (dat wil zeggen, niet binnen een tolerantie van 1e-12).
+  uid: Microsoft.Quantum.Logical.NotNearlyEqualD
+- summary: Retourneert de Booleaanse schei ding van twee waarden.
+  uid: Microsoft.Quantum.Logical.Or
+- summary: Retourneert de enige Booleaanse schei ding van twee waarden.
+  uid: Microsoft.Quantum.Logical.Xor
+name: Microsoft.Quantum.Logical
+newtypes: []
+operations: []
+summary: Bevat functies voor het werken met logische expressies en Booleaanse logica.
+uid: Microsoft.Quantum.Logical
+metadata:
+  ms.openlocfilehash: 7ee678bc83ab0273142fd8c0a7a66388b3a4034a
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92708754"
