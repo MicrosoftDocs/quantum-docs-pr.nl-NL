@@ -1,22 +1,23 @@
 ---
 title: IQ# Magic-opdrachten
+description: Hiermee worden de Magic-opdrachten vermeld die beschikbaar zijn in de IQ# Jupyter-kernel.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464671"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691148"
 ---
 # <a name="iq-magic-commands"></a>IQ# Magic-opdrachten
 | Magic-opdracht | Samenvatting |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Hiermee maakt u verbinding met een Azure Quantum-werkruimte of wordt de huidige verbindingsstatus weergegeven. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Hiermee wordt een taak uitgevoerd in een Azure Quantum-werkruimte. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Hiermee wordt een taak verzonden naar een Azure Quantum-werkruimte en op voltooiing gewacht. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Hiermee wordt een lijst met taken weergegeven in de huidige Azure Quantum-werkruimte. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Hiermee worden de resultaten voor een taak weergegeven in de huidige Azure Quantum-werkruimte. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Hiermee worde de status voor een taak weergegeven in de huidige Azure Quantum-werkruimte. |
@@ -29,6 +30,7 @@ ms.locfileid: "91464671"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Hiermee wordt de fermion-Hamiltonian voor een probleem met een elektronische structuur geladen. Het probleem wordt geladen vanuit een bestand of doorgevoerd als argument. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Laadt een Broombridge-probleem met een elektronische structuur en retourneert de geselecteerde invoerstatus. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Laat instellingen of query’s van configuratieopties toe. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Hier ziet u de stappen van uitvoering van een bepaalde Q#-bewerking of -functie. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Voert een bepaalde functie of bewerking op de doelcomputer van de ResourcesEstimator uit. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Voert één test uit. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Retourneert van alle Magic-opdrachten die nu beschikbaar zijn. |
