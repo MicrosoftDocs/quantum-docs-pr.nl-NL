@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835125"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692254"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineaire algebra voor kwantumcomputing
 
 Lineaire algebra is de taal van kwantumcomputing. Hoewel u deze niet hoeft te kennen om kwantumprogramma's te implementeren of schrijven, wordt deze taal veel gebruikt voor het beschrijven van qubittoestanden, kwantumbewerkingen en voor het voorspellen van het gedrag van een kwantumcomputer in reactie op een reeks instructies.
 
-Net zoals u kwantumcomputing beter kunt begrijpen als u bekend bent met de [basisconcepten van kwantumfysica](xref:microsoft.quantum.overview.understanding), kunt u beter begrijpen hoe kwantumalgoritmen werken als u enige basiskennis hebt van lineaire algebra. U dient op zijn minst bekend te zijn met **vectoren** en **matrixvermenigvuldiging**. U kunt uw kennis van deze algebraconcepten zo nodig opfrissen met de volgende zelfstudies over de basisbeginselen:
+Net zoals u kwantumcomputing beter kunt begrijpen als u bekend bent met de [basisconcepten van kwantumfysica](xref:microsoft.quantum.overview.understanding), kunt u beter begrijpen hoe kwantumalgoritmen werken als u enige basiskennis hebt van lineaire algebra. U dient op zijn minst bekend te zijn met **vectoren** en **matrixvermenigvuldiging** . U kunt uw kennis van deze algebraconcepten zo nodig opfrissen met de volgende zelfstudies over de basisbeginselen:
 
 - [Zelfstudie over een Jupyter-notebook over lineaire algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [Zelfstudie over een Jupyter-notebook over complexe rekenkunde](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -30,7 +30,7 @@ Net zoals u kwantumcomputing beter kunt begrijpen als u bekend bent met de [basi
 
 ## <a name="vectors-and-matrices-in-quantum-computing"></a>Vectoren en matrices in kwantumcomputing
 
-In het onderwerp over [kwantumcomputing](xref:microsoft.quantum.overview.understanding) zag u dat een qubit een toestand van 1 of 0 of een superpositie of beide kan hebben. In lineaire algebra wordt de toestand van een qubit beschreven als een vector en uitgedrukt als één kolom-**matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. Deze wordt ook wel een **kwantumtoestandvector** genoemd en moet voldoen aan de vereiste dat $|a|^2 + |b|^2 = 1$.  
+In het onderwerp over [kwantumcomputing](xref:microsoft.quantum.overview.understanding) zag u dat een qubit een toestand van 1 of 0 of een superpositie of beide kan hebben. In lineaire algebra wordt de toestand van een qubit beschreven als een vector en uitgedrukt als één kolom- **matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. Deze wordt ook wel een **kwantumtoestandvector** genoemd en moet voldoen aan de vereiste dat $|a|^2 + |b|^2 = 1$.  
 
 Met de elementen van de matrix wordt de kans uitgedrukt dat de qubit op de ene of de andere manier ineenstort. Hierbij is $|a|^2$ de kans op ineenstorting tot nul en $|b|^2$ de kans op ineenstorting tot één. De volgende matrices zijn allemaal voorbeelden van geldige kwantumtoestandvectoren:
 
@@ -41,7 +41,7 @@ In [Kwantumcomputers en kwantumsimulators](xref:microsoft.quantum.overview.simul
 Hier volgen twee veelvoorkomende kwantumbewerkingen die worden uitgedrukt via een matrixvermenigvuldiging.
 
 
-De [bewerking `X`](xref:microsoft.quantum.intrinsic.x) staat voor de Pauli-matrix $X$,
+De [bewerking `X`](xref:Microsoft.Quantum.Intrinsic.X) staat voor de Pauli-matrix $X$,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ en wordt gebruikt om de toestand van een qubit te wijzigen van 0 in 1 (of omgeke
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-De [bewerking 'H'](xref:microsoft.quantum.intrinsic.h) staat voor de Hadamard-transformatie $H$,
+De [bewerking 'H'](xref:Microsoft.Quantum.Intrinsic.H) staat voor de Hadamard-transformatie $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -63,7 +63,7 @@ Een matrix die een kwantumbewerking vertegenwoordigt, moet voldoen aan één ver
 
 In de bovenstaande voorbeelden is de toestand van een qubit beschreven als één kolommatrix $\begin{bmatrix} a \\\\  b \end{bmatrix}$, en is het toepassen van een bewerking erop beschreven als een vermenigvuldiging van de twee matrices. In kwantumcomputers worden echter meerdere qubits gebruikt, dus hoe wordt dan de gecombineerde toestand van twee qubits beschreven? 
 
-Elke qubit is immers een vectorruimte, dus u kunt ze niet gewoon vermenigvuldigen. In plaats daarvan gebruikt u een **tensorproduct**. Dat is een gerelateerde bewerking waarmee een nieuwe vectorruimte wordt gemaakt op basis van afzonderlijke vectorruimten. Deze wordt uitgedrukt als $\otimes$. Het tensorproduct van de twee qubittoestanden $\begin{bmatrix} a \\\\  b \end{bmatrix}$ en $\begin{bmatrix} c \\\\  d \end{bmatrix}$ wordt als volgt berekend:
+Elke qubit is immers een vectorruimte, dus u kunt ze niet gewoon vermenigvuldigen. In plaats daarvan gebruikt u een **tensorproduct** . Dat is een gerelateerde bewerking waarmee een nieuwe vectorruimte wordt gemaakt op basis van afzonderlijke vectorruimten. Deze wordt uitgedrukt als $\otimes$. Het tensorproduct van de twee qubittoestanden $\begin{bmatrix} a \\\\  b \end{bmatrix}$ en $\begin{bmatrix} c \\\\  d \end{bmatrix}$ wordt als volgt berekend:
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
