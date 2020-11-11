@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691689"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448341"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-01320111004"></a>Versie 0.13.20111004
+
+*Release datum: 10 november 2020*
+
+Met deze release worden IntelliSense-functies voor Q# bestanden in Visual Studio en Visual Studio code uitgeschakeld wanneer een project bestand niet aanwezig is. Hiermee wordt een probleem opgelost waarbij IntelliSense-functies niet meer werken nadat een nieuw Q# bestand is toegevoegd aan een project (Zie [qsharp-compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>Versie 0.13.20102604
 
@@ -526,7 +532,7 @@ Deze update omvat belangrijke prestatieverbeteringen voor simulaties van grote e
 Deze update voegt nieuw functionaliteit voor foutopsporing toe:
 * Twee nieuwe bewerkingen toegevoegd, @"microsoft.quantum.extensions.diagnostics.dumpmachine" en @"microsoft.quantum.extensions.diagnostics.dumpregister", die op een bepaald moment wave-informatie uitvoeren over de doelkwantummachine.  
 * In Visual Studio wordt de kans op het meten van een $\ket{1}$ in een enkele qubit nu automatisch weergegeven in het foutopsporingsvenster voor de QuantumSimulator-doelmachine.
-* In Visual Studio is de weergave verbeterd van variabele eigenschappen in de foutopsporingsvensters **Autos** en **Locals** . 
+* In Visual Studio is de weergave verbeterd van variabele eigenschappen in de foutopsporingsvensters **Autos** en **Locals**. 
 
 Meer informatie over [testen en foutopsporing](xref:microsoft.quantum.guide.testingdebugging).
 
