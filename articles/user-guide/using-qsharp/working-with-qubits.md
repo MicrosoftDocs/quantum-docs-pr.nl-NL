@@ -1,14 +1,14 @@
 ---
 title: Werken met qubits
-description: 'Meer informatie over het werken met qubits in :::no-loc(Q#):::'
+description: 'Meer informatie over het werken met qubits in Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -20,7 +20,7 @@ ms.locfileid: "92691584"
 
 <span data-ttu-id="6b9e9-104">Qubits zijn het fundamenteel object van informatie in Quantum Computing.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-104">Qubits are the fundamental object of information in quantum computing.</span></span> <span data-ttu-id="6b9e9-105">Zie [de Qubit](xref:microsoft.quantum.concepts.qubit)voor een algemene inleiding tot qubits [over Quantum Computing](xref:microsoft.quantum.overview.understanding), en voor meer informatie over de wiskundige weer gave ervan.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-105">For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span> 
 
-<span data-ttu-id="6b9e9-106">In dit artikel wordt beschreven hoe u met qubits in een programma kunt werken :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-106">This article explores how to use and work with qubits in a :::no-loc(Q#)::: program.</span></span> 
+<span data-ttu-id="6b9e9-106">In dit artikel wordt beschreven hoe u met qubits in een programma kunt werken Q# .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-106">This article explores how to use and work with qubits in a Q# program.</span></span> 
 
 > [!IMPORTANT]
 ><span data-ttu-id="6b9e9-107">Geen van de instructies die in dit artikel worden besproken, is geldig in de hoofd tekst van een functie.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-107">None of the statements discussed in this article are valid within the body of a function.</span></span> <span data-ttu-id="6b9e9-108">Ze zijn alleen geldig in-bewerkingen.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-108">They are only valid within operations.</span></span>
@@ -28,7 +28,7 @@ ms.locfileid: "92691584"
 ## <a name="allocating-qubits"></a><span data-ttu-id="6b9e9-109">Qubits toewijzen</span><span class="sxs-lookup"><span data-stu-id="6b9e9-109">Allocating Qubits</span></span>
 
 <span data-ttu-id="6b9e9-110">Omdat fysieke qubits een kostbaar middel zijn in een quantum computer, moet u een deel van de taak van de compiler controleren om ervoor te zorgen dat ze zo efficiënt mogelijk worden gebruikt.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-110">Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.</span></span>
-<span data-ttu-id="6b9e9-111">Als zodanig moet u aangeven dat u :::no-loc(Q#)::: qubits wilt *toewijzen* voor gebruik binnen een bepaald instructie blok.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-111">As such, you need to tell :::no-loc(Q#)::: to *allocate* qubits for use within a particular statement block.</span></span>
+<span data-ttu-id="6b9e9-111">Als zodanig moet u aangeven dat u Q# qubits wilt *toewijzen* voor gebruik binnen een bepaald instructie blok.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-111">As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.</span></span>
 <span data-ttu-id="6b9e9-112">U kunt qubits toewijzen als één Qubit, of als een matrix van qubits, ook wel een *REGI ster* genoemd.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-112">You can allocate qubits as a single qubit, or as an array of qubits, known as a *register* .</span></span> 
 
 ### <a name="clean-qubits"></a><span data-ttu-id="6b9e9-113">Qubits opschonen</span><span class="sxs-lookup"><span data-stu-id="6b9e9-113">Clean qubits</span></span>
@@ -85,17 +85,17 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 <span data-ttu-id="6b9e9-138">Als er onvoldoende qubits zijn, wijst deze nieuwe qubits toe om de aanvraag te volt ooien.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-138">If there aren't enough such qubits, then it allocates new qubits to complete the request.</span></span>
 
 <span data-ttu-id="6b9e9-139">In het geval van bekende qubits zijn implementaties van meerdere beheerde CNOT-Gates die slechts enkele weinig qubits en implementatie van versnelers vereisen.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-139">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
-<span data-ttu-id="6b9e9-140">Zie voor een voor beeld van het gebruik in :::no-loc(Q#)::: het [lenen van qubits-voor beeld](#borrowing-qubits-example) in dit artikel of het papier [*confactoring met 2n + 2 qubits met op Toffoli gebaseerde modulaire vermenigvuldiging*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een algoritme die gebruikmaakt van geleed qubits.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-140">For an example of their use in :::no-loc(Q#):::, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
+<span data-ttu-id="6b9e9-140">Zie voor een voor beeld van het gebruik in Q# het [lenen van qubits-voor beeld](#borrowing-qubits-example) in dit artikel of het papier [*confactoring met 2n + 2 qubits met op Toffoli gebaseerde modulaire vermenigvuldiging*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler en Svore 2017) voor een algoritme die gebruikmaakt van geleed qubits.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-140">For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
 
 ## <a name="intrinsic-operations"></a><span data-ttu-id="6b9e9-141">Intrinsieke bewerkingen</span><span class="sxs-lookup"><span data-stu-id="6b9e9-141">Intrinsic Operations</span></span>
 
 <span data-ttu-id="6b9e9-142">Zodra de toewijzing is toegewezen, kunt u een Qubit door geven aan functies en bewerkingen.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-142">Once allocated, you can pass a qubit to functions and operations.</span></span>
-<span data-ttu-id="6b9e9-143">In sommige zin is dit alles wat een :::no-loc(Q#)::: programma kan doen met een Qubit, omdat de acties die kunnen worden uitgevoerd, allemaal als bewerkingen worden gedefinieerd.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-143">In some sense, this is all that a :::no-loc(Q#)::: program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
+<span data-ttu-id="6b9e9-143">In sommige zin is dit alles wat een Q# programma kan doen met een Qubit, omdat de acties die kunnen worden uitgevoerd, allemaal als bewerkingen worden gedefinieerd.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-143">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
 
-<span data-ttu-id="6b9e9-144">In dit artikel worden enkele nuttige :::no-loc(Q#)::: bewerkingen besproken die u kunt gebruiken om te communiceren met qubits.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-144">This article discusses a few useful :::no-loc(Q#)::: operations that you can use to interact with qubits.</span></span>
+<span data-ttu-id="6b9e9-144">In dit artikel worden enkele nuttige Q# bewerkingen besproken die u kunt gebruiken om te communiceren met qubits.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-144">This article discusses a few useful Q# operations that you can use to interact with qubits.</span></span>
 <span data-ttu-id="6b9e9-145">Zie [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude)voor meer informatie over deze en andere.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-145">For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).</span></span> 
 
-<span data-ttu-id="6b9e9-146">Eerst worden de Pauli-Opera tors (single-Qubit) $X $, $Y $ en $Z $ weer gegeven in :::no-loc(Q#)::: de intrinsieke bewerkingen [`X`](xref:Microsoft.Quantum.Intrinsic.X) , [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) en [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) die elk type hebben `(Qubit => Unit is Adj + Ctl)` .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in :::no-loc(Q#)::: by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
+<span data-ttu-id="6b9e9-146">Eerst worden de Pauli-Opera tors (single-Qubit) $X $, $Y $ en $Z $ weer gegeven in Q# de intrinsieke bewerkingen [`X`](xref:Microsoft.Quantum.Intrinsic.X) , [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) en [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) die elk type hebben `(Qubit => Unit is Adj + Ctl)` .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
 
 <span data-ttu-id="6b9e9-147">Zoals beschreven in [intrinsieke bewerkingen en functies](xref:microsoft.quantum.libraries.standard.prelude), beschouw $X $ en dus `X` als een bits-Flip-bewerking of niet-poort.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-147">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
 <span data-ttu-id="6b9e9-148">U kunt de `X` bewerking voor het voorbereiden van statussen van de vorm $ \ket{s_0 s_1 \dots s_n} $ voor een klassieke-bits teken reeks $s $:</span><span class="sxs-lookup"><span data-stu-id="6b9e9-148">You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > <span data-ttu-id="6b9e9-149">Later ziet u een compactere manier om deze bewerking te schrijven waarvoor geen hand matige controle stroom is vereist.</span><span class="sxs-lookup"><span data-stu-id="6b9e9-149">Later, you will see more compact ways of writing this operation that do not require manual control flow.</span></span>
 
-<span data-ttu-id="6b9e9-150">U kunt ook statussen voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ met behulp van de Hadamard Transform $H $, die wordt vertegenwoordigd :::no-loc(Q#)::: door de intrinsieke bewerking [`H`](xref:Microsoft.Quantum.Intrinsic.H) (ook type (Qubit => eenheid is ADJ en CTL)):</span><span class="sxs-lookup"><span data-stu-id="6b9e9-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in :::no-loc(Q#)::: by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
+<span data-ttu-id="6b9e9-150">U kunt ook statussen voorbereiden zoals $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ en $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ met behulp van de Hadamard Transform $H $, die wordt vertegenwoordigd Q# door de intrinsieke bewerking [`H`](xref:Microsoft.Quantum.Intrinsic.H) (ook type (Qubit => eenheid is ADJ en CTL)):</span><span class="sxs-lookup"><span data-stu-id="6b9e9-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -245,4 +245,4 @@ is Adj + Ctl {
 
 ## <a name="next-steps"></a><span data-ttu-id="6b9e9-171">Volgende stappen</span><span class="sxs-lookup"><span data-stu-id="6b9e9-171">Next steps</span></span>
 
-<span data-ttu-id="6b9e9-172">Meer informatie over [controle stroom](xref:microsoft.quantum.guide.controlflow) in :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="6b9e9-172">Meer informatie over [controle stroom](xref:microsoft.quantum.guide.controlflow) in Q# .</span><span class="sxs-lookup"><span data-stu-id="6b9e9-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>

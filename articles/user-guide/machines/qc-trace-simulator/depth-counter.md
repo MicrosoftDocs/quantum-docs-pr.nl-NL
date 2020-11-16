@@ -1,14 +1,14 @@
 ---
 title: Diepte teller-Quantum Development Kit
-description: 'Meer informatie over het micro soft QDK depth Counter, dat gebruikmaakt van de Quantum Trace Simulator om aantallen te verzamelen van de diepte van elke bewerking die wordt aangeroepen in een :::no-loc(Q#)::: programma.'
+description: 'Meer informatie over het micro soft QDK depth Counter, dat gebruikmaakt van de Quantum Trace Simulator om aantallen te verzamelen van de diepte van elke bewerking die wordt aangeroepen in een Q# programma.'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -39,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="c6fd7-114">Het item depth gebruiken in een C#-hostprogramma</span><span class="sxs-lookup"><span data-stu-id="c6fd7-114">Using the depth counter in a C# host program</span></span>
 
-<span data-ttu-id="c6fd7-115">In het C#-voor beeld dat volgt in deze sectie `T` wordt de diepte van de `CCNOT` bewerking berekend op basis van de volgende :::no-loc(Q#)::: voorbeeld code:</span><span class="sxs-lookup"><span data-stu-id="c6fd7-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="c6fd7-115">In het C#-voor beeld dat volgt in deze sectie `T` wordt de diepte van de `CCNOT` bewerking berekend op basis van de volgende Q# voorbeeld code:</span><span class="sxs-lookup"><span data-stu-id="c6fd7-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

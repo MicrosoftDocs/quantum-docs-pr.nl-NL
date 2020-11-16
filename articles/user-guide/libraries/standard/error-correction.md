@@ -1,14 +1,14 @@
 ---
-title: 'Fout correctie in de :::no-loc(Q#)::: standaard bibliotheken'
-description: "Meer informatie over het gebruik van fout correctie codes in uw :::no-loc(Q#)::: Program ma's terwijl u de status van de qubits beveiligt."
+title: 'Fout correctie in de Q# standaard bibliotheken'
+description: "Meer informatie over het gebruik van fout correctie codes in uw Q# Program ma's terwijl u de status van de qubits beveiligt."
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -51,7 +51,7 @@ ms.locfileid: "92692039"
 <span data-ttu-id="4faff-139">Daarentegen $Z _0 Z_1 \ket {100} =-\ket {100} $ en $Z _0 Z_1 \ket {011} =-\ket {011} $, zodat het resultaat van het meten van $Z _0 Z_1 $ nuttige informatie over welke fout is opgetreden.</span><span class="sxs-lookup"><span data-stu-id="4faff-139">On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occurred.</span></span>
 
 <span data-ttu-id="4faff-140">Als u dit wilt benadrukken, herhaalt u de bovenstaande tabel, maar voegt u de resultaten van meting $Z _0 Z_1 $ en $Z _1 Z_2 $ toe aan elke rij.</span><span class="sxs-lookup"><span data-stu-id="4faff-140">To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row.</span></span>
-<span data-ttu-id="4faff-141">De resultaten van elke meting worden aangegeven door het teken van de eigenvalue die wordt waargenomen, ofwel $ + $ of $-$, die overeenkomt met de :::no-loc(Q#)::: `Result` waarden van `Zero` en `One` .</span><span class="sxs-lookup"><span data-stu-id="4faff-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the :::no-loc(Q#)::: `Result` values of `Zero` and `One`, respectively.</span></span>
+<span data-ttu-id="4faff-141">De resultaten van elke meting worden aangegeven door het teken van de eigenvalue die wordt waargenomen, ofwel $ + $ of $-$, die overeenkomt met de Q# `Result` waarden van `Zero` en `One` .</span><span class="sxs-lookup"><span data-stu-id="4faff-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the Q# `Result` values of `Zero` and `One`, respectively.</span></span>
 
 | <span data-ttu-id="4faff-142">Fout $E $</span><span class="sxs-lookup"><span data-stu-id="4faff-142">Error $E$</span></span> | <span data-ttu-id="4faff-143">$E \ket{\overline {0} } $</span><span class="sxs-lookup"><span data-stu-id="4faff-143">$E\ket{\overline{0}}$</span></span> | <span data-ttu-id="4faff-144">$E \ket{\overline {1} } $</span><span class="sxs-lookup"><span data-stu-id="4faff-144">$E\ket{\overline{1}}$</span></span> | <span data-ttu-id="4faff-145">Resultaat van $Z _0 Z_1 $</span><span class="sxs-lookup"><span data-stu-id="4faff-145">Result of $Z_0 Z_1$</span></span> | <span data-ttu-id="4faff-146">Resultaat van $Z _1 Z_2 $</span><span class="sxs-lookup"><span data-stu-id="4faff-146">Result of $Z_1 Z_2$</span></span> |
 | --- | --- | --- | --- | --- |
@@ -71,16 +71,16 @@ ms.locfileid: "92692039"
 > <span data-ttu-id="4faff-165">Meer in het algemeen kunnen codes worden gemaakt voor het verwerken van een groter aantal fouten en voor het afhandelen van $Z $-fouten, evenals $X $-fouten.</span><span class="sxs-lookup"><span data-stu-id="4faff-165">More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.</span></span>
 
 <span data-ttu-id="4faff-166">Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de essentie van de *stabilisatie formaliteit* .</span><span class="sxs-lookup"><span data-stu-id="4faff-166">The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essence of the *stabilizer formalism* .</span></span>
-<span data-ttu-id="4faff-167">De :::no-loc(Q#)::: Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisatoren codes en voor het beschrijven van het herstel van fouten.</span><span class="sxs-lookup"><span data-stu-id="4faff-167">The :::no-loc(Q#)::: canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
+<span data-ttu-id="4faff-167">De Q# Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisatoren codes en voor het beschrijven van het herstel van fouten.</span><span class="sxs-lookup"><span data-stu-id="4faff-167">The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
 <span data-ttu-id="4faff-168">In deze sectie beschrijven we dit kader en de toepassing ervan tot een paar eenvoudige Quantum fout codes.</span><span class="sxs-lookup"><span data-stu-id="4faff-168">In this section, we describe this framework and its application to a few simple quantum error-correcting codes.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="4faff-169">Een volledige inleiding tot de stabilisatie formaliteit valt buiten het bereik van deze sectie.</span><span class="sxs-lookup"><span data-stu-id="4faff-169">A full introduction to the stabilizer formalism is beyond the scope of this section.</span></span>
 > <span data-ttu-id="4faff-170">We verwijzen naar lezers die meer willen weten over [Gottesman 2009](https://arxiv.org/abs/0904.2557).</span><span class="sxs-lookup"><span data-stu-id="4faff-170">We refer readers interested in learning more to [Gottesman 2009](https://arxiv.org/abs/0904.2557).</span></span>
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="4faff-171">Duidt op fouten corrigerende codes in :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="4faff-171">Representing Error Correcting Codes in :::no-loc(Q#):::</span></span> ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="4faff-171">Duidt op fouten corrigerende codes in Q#</span><span class="sxs-lookup"><span data-stu-id="4faff-171">Representing Error Correcting Codes in Q#</span></span> ##
 
-<span data-ttu-id="4faff-172">Om u te helpen bij het opgeven van fout codes voor het corrigeren van fouten, :::no-loc(Q#)::: biedt Canon verschillende afzonderlijke door de gebruiker gedefinieerde typen:</span><span class="sxs-lookup"><span data-stu-id="4faff-172">To help specify error correcting codes, the :::no-loc(Q#)::: canon provides several distinct user-defined types:</span></span>
+<span data-ttu-id="4faff-172">Om u te helpen bij het opgeven van fout codes voor het corrigeren van fouten, Q# biedt Canon verschillende afzonderlijke door de gebruiker gedefinieerde typen:</span><span class="sxs-lookup"><span data-stu-id="4faff-172">To help specify error correcting codes, the Q# canon provides several distinct user-defined types:</span></span>
 
 - <span data-ttu-id="4faff-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Hiermee wordt aangegeven dat een REGI ster van qubits moet worden geïnterpreteerd als het code blok van een fout code.</span><span class="sxs-lookup"><span data-stu-id="4faff-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.</span></span>
 - <span data-ttu-id="4faff-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Hiermee wordt aangegeven dat een matrix met meet resultaten moet worden geïnterpreteerd als de Syndrome die op een code blok wordt gemeten.</span><span class="sxs-lookup"><span data-stu-id="4faff-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.</span></span>
@@ -122,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 <span data-ttu-id="4faff-185">We verkennen dit gedetailleerder in het bits-voor beeld voor het [spie gelen van code](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).</span><span class="sxs-lookup"><span data-stu-id="4faff-185">We explore this in more detail in the [bit flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).</span></span>
 
-<span data-ttu-id="4faff-186">Naast de code voor het spie gelen van bits, :::no-loc(Q#)::: wordt de Canon voorzien van implementaties van de [Qubit perfecte code](https://arxiv.org/abs/quant-ph/9602019)en de [zeven Qubit-code](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige, single-Qubit fout kan corrigeren.</span><span class="sxs-lookup"><span data-stu-id="4faff-186">Aside from the bit-flip code, the :::no-loc(Q#)::: canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>
+<span data-ttu-id="4faff-186">Naast de code voor het spie gelen van bits, Q# wordt de Canon voorzien van implementaties van de [Qubit perfecte code](https://arxiv.org/abs/quant-ph/9602019)en de [zeven Qubit-code](https://arxiv.org/abs/quant-ph/9705052), die beide een wille keurige, single-Qubit fout kan corrigeren.</span><span class="sxs-lookup"><span data-stu-id="4faff-186">Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>
