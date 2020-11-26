@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
 title: Bewerking KnillDistill
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: KnillDistill
 qsharp.summary: Implements the Knill magic state distillation algorithm.
-ms.openlocfilehash: 1135db83cf750918347df10c6f1301b636aaee0c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df00c7572d909a67ec658bc8dccaf0e338afe5c5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200744"
 ---
 # <a name="knilldistill-operation"></a>Bewerking KnillDistill
 
 Naam ruimte: [micro soft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementeert het distillatie algoritme Knill Magic State.
@@ -50,6 +50,6 @@ We volgen het algoritme van Knill.
 De huidige implementatie is echter veel van optimaal, omdat er te veel qubits worden gebruikt.
 De magische statussen worden in deze routine geïnjecteerd, in welk geval er betere protocollen zijn.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 - [Knill](https://arxiv.org/abs/quant-ph/0402171)

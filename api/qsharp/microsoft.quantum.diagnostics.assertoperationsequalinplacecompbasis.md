@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
 title: Bewerking AssertOperationsEqualInPlaceCompBasis
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertOperationsEqualInPlaceCompBasis
 qsharp.summary: Checks if the operation `givenU` is equal to the operation `expectedU` on the given input size  by checking the action of the operations only on the vectors from the computational basis. This is a necessary, but not sufficient, condition for the equality of two unitaries.
-ms.openlocfilehash: 3275680f86ca2a178c7f044b97d226fe41c3186c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 826369bdf3544fb257c2bb202466426c1ca1e113
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202342"
 ---
 # <a name="assertoperationsequalinplacecompbasis-operation"></a>Bewerking AssertOperationsEqualInPlaceCompBasis
 
 Naam ruimte: [micro soft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Hiermee wordt gecontroleerd of de bewerking `givenU` gelijk is aan de bewerking `expectedU` op de opgegeven invoer grootte door de actie van de bewerkingen alleen op de vectoren te controleren op basis van de berekening.
@@ -41,7 +41,7 @@ Het aantal qubits-$n $ waarop de bewerkingen `givenU` zijn `expectedU` toegepast
 Bewerking op $n $ qubits moet worden gecontroleerd.
 
 
-### <a name="expectedu--qubit--unit-adj"></a>expectedU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="expectedu--qubit--unit--is-adj"></a>expectedU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 Verwijzings bewerking op $n $ qubits die moet `givenU` worden vergeleken.
 

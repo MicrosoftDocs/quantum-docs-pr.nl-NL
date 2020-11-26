@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpRegister
 title: De functie DumpRegister
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpRegister
 qsharp.summary: Dumps the current target machine's status associated with the given qubits.
-ms.openlocfilehash: a6d29dbf0525077fd804563f85f189740fdc0429
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9623d6d881f1f0ec048c3a951fe259bdfac84766
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702698"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202019"
 ---
 # <a name="dumpregister-function"></a>De functie DumpRegister
 
 Naam ruimte: [micro soft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 De huidige status van de doel computer die aan de opgegeven qubits is gekoppeld, wordt gedumpt.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode
 title: De functie BitFlipCode
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: BitFlipCode
 qsharp.summary: Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and decoder with in-place syndrome measurement.
-ms.openlocfilehash: 8d4498647682026e9dec3fa96cfb69ba1e3214b6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2d0b50bd2467fc01caacbbcb22f98c59a2d13922
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201220"
 ---
 # <a name="bitflipcode-function"></a>De functie BitFlipCode
 
 Naam ruimte: [micro soft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourneert een QECC-waarde voor de ⟦ 3, 1, 1 ⟧ bits code encoder en de decoder met de in-place Syndrome meting.

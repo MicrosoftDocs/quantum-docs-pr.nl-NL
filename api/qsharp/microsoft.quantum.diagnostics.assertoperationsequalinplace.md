@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
 title: Bewerking AssertOperationsEqualInPlace
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,18 +12,18 @@ qsharp.summary: >-
   This assertion is implemented by checking the action of the operations on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
 
   This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
-ms.openlocfilehash: 407a139da816281346eb06849f81e91b83202653
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9b17bac9d95baf5a542604892c64130bf35d7f69
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202427"
 ---
 # <a name="assertoperationsequalinplace-operation"></a>Bewerking AssertOperationsEqualInPlace
 
 Naam ruimte: [micro soft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Als er twee bewerkingen worden uitgevoerd, worden er voor alle invoer statussen aangenomen dat ze identiek zijn.
@@ -49,7 +49,7 @@ Het aantal qubits-$n $ waarop de bewerkingen `givenU` zijn `expectedU` toegepast
 Bewerking op $n $ qubits moet worden gecontroleerd.
 
 
-### <a name="expectedu--qubit--unit-adj"></a>expectedU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="expectedu--qubit--unit--is-adj"></a>expectedU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 Verwijzings bewerking op $n $ qubits die moet `givenU` worden vergeleken.
 
@@ -59,7 +59,7 @@ Verwijzings bewerking op $n $ qubits die moet `givenU` worden vergeleken.
 
 
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 De basis van de Staten $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ en $ \ket{i} $ is de Chuang-Nielsen basis, zoals beschreven in [ *i. L. Chuang, M. A. Nielsen*](https://arxiv.org/abs/quant-ph/9610001).
 

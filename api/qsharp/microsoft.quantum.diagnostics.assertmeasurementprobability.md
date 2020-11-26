@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: Bewerking AssertMeasurementProbability
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertMeasurementProbability
 qsharp.summary: Asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.
-ms.openlocfilehash: ff0419706d825442492f82e564f1cce86f1b112f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 032b9224ad728f0637596668c2928a889deeba55
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702758"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202359"
 ---
 # <a name="assertmeasurementprobability-operation"></a>Bewerking AssertMeasurementProbability
 
 Naam ruimte: [micro soft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Bevestigingen die de opgegeven qubits in het gegeven Pauli meten, hebben het gegeven resultaat met de opgegeven kans, binnen een bepaalde tolerantie.
 
 ```qsharp
-operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 
