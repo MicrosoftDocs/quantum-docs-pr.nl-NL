@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
 title: De functie RotationPhasesAsReflectionPhases
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: RotationPhasesAsReflectionPhases
 qsharp.summary: Converts phases specified as single-qubit rotations to phases specified as partial reflections.
-ms.openlocfilehash: d62a7584324c9467ccc759e4bed81acbceee719c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e601cfd867b449d628da7cd60dfacd465e48860
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707687"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191190"
 ---
 # <a name="rotationphasesasreflectionphases-function"></a>De functie RotationPhasesAsReflectionPhases
 
 Naam ruimte: [micro soft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee worden fasen die zijn opgegeven als Qubit rotaties geconverteerd naar fasen die zijn opgegeven als gedeeltelijke reflecties.
@@ -40,7 +40,7 @@ Matrix van rotaties met één Qubit die moeten worden geconverteerd naar gedeelt
 
 Een bewerking waarmee fasen worden geïmplementeerd die zijn opgegeven als gedeeltelijke reflecties.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 We gebruiken de Conventie in
 

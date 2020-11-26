@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithm
 title: De functie TrotterSimulationAlgorithm
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterSimulationAlgorithm
 qsharp.summary: '`SimulationAlgorithm` function that uses a Trotter–Suzuki decomposition to approximate the time-evolution operator _exp(-iHt)_.'
-ms.openlocfilehash: c52acf293e69c78e7a82b0cf5d94de52d0f5a293
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa8338ab359441765db72a12f84a3a51e5bee3ce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706437"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192533"
 ---
 # <a name="trottersimulationalgorithm-function"></a>De functie TrotterSimulationAlgorithm
 
 Naam ruimte: [micro soft. Quantum. simulatie](xref:Microsoft.Quantum.Simulation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 `SimulationAlgorithm` functie waarbij gebruik wordt gemaakt van een Trotter-Suzuki-ontleding om de time-evolutie operator _exp (-iHt)_ te benaderen.
