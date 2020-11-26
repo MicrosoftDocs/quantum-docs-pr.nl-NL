@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: Bewerking RobustPhaseEstimation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: d04ee578c0e6f916e9a4da451075b79e0630c70a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703598"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216078"
 ---
 # <a name="robustphaseestimation-operation"></a>Bewerking RobustPhaseEstimation
 
 Naam ruimte: [micro soft. Quantum. karakte Rise](xref:Microsoft.Quantum.Characterization) ring
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Voert het robuuste algoritme voor het schatten van de niet-iteratieve Quantum fase voor een bepaalde Oracle `U` -en eigenstate en biedt een enkele geschatte schatting van de fase met variantie schaaling bij de Heisenberg-limiet.
@@ -54,6 +54,6 @@ Een Quantum registratie waarmee $ wordt $U. Als er een eigenstate $ \ket{\phi} $
 
 In de limiet van een groot aantal query's Cramer-Rao lagere grenzen voor de standaard afwijking van de schatting van $ \phi $ voldoen aan $ \sigma \ge 2 \pi/\Text{# van query's} $.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 - Robuuste kalibratie van een universele Single-Qubit Gate-Set via een robuuste fase schatting Shelby Kimmel, Guang Hao low, Theodore J. Yoder https://arxiv.org/abs/1502.02677
