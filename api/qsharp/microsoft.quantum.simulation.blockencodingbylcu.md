@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
 title: De functie BlockEncodingByLCU
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Encodes an operator of interest into a `BlockEncoding`.
 
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of unitaries. Typically, $P$ is a state preparation unitary such that $P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$, and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-ms.openlocfilehash: 04738aa54ce8b719b05954824e3553388a995df0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 254ace01750f94e6c871de9b62f1342000bc84ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709019"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229542"
 ---
 # <a name="blockencodingbylcu-function"></a>De functie BlockEncodingByLCU
 
 Naam ruimte: [micro soft. Quantum. simulatie](xref:Microsoft.Quantum.Simulation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Codeert een operator van belang in een `BlockEncoding` .
@@ -35,18 +35,18 @@ function BlockEncodingByLCU<'T, 'S> (statePreparation : ('T => Unit is Adj + Ctl
 
 ## <a name="input"></a>Invoer
 
-### <a name="statepreparation--t--unit-adj--ctl"></a>statePreparation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="statepreparation--t--unit--is-adj--ctl"></a>statePreparation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een unitary $P $ die een bepaalde doel status voorbereidt.
 
 
-### <a name="selector--ts--unit-adj--ctl"></a>kiezer: ('T) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="selector--ts--unit--is-adj--ctl"></a>kiezer: ('T) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een unitary $V $ waarmee het onderdeel unitaries van $H $ wordt gecodeerd.
 
 
 
-## <a name="output--ts--unit-adj--ctl"></a>Output: ('T) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+## <a name="output--ts--unit--is-adj--ctl"></a>Output: ('T) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een unitary $U $ communiceert gezamenlijk aan registers `a` en `s` die blok-coderingen $H $, en voldoet aan $U ^ \Dagger = U $.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.IntsToPaulis
 title: De functie IntsToPaulis
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: IntsToPaulis
 qsharp.summary: Converts an array of integers to an array of single-qubit Pauli operators.
-ms.openlocfilehash: 605257aa7ca39e457127e3c3459b5891145b1863
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2333dcbd2988480e2b2b9b217b26705f3578de00
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230528"
 ---
 # <a name="intstopaulis-function"></a>De functie IntsToPaulis
 
 Naam ruimte: [micro soft. Quantum. simulatie](xref:Microsoft.Quantum.Simulation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Converteert een matrix met gehele getallen naar een matrix van Pauli-Opera tors met één Qubit.

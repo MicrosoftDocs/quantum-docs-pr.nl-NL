@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.MultiplyGeneratorIndex
 title: De functie MultiplyGeneratorIndex
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: MultiplyGeneratorIndex
 qsharp.summary: Multiplies the coefficient in a `GeneratorIndex`.
-ms.openlocfilehash: 9ee0568073b65b027cc98eb56934e9286b59c27f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dc2bd02c40b53eca726f70578e3c5918add8f1bb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708862"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230443"
 ---
 # <a name="multiplygeneratorindex-function"></a>De functie MultiplyGeneratorIndex
 
 Naam ruimte: [micro soft. Quantum. simulatie](xref:Microsoft.Quantum.Simulation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Vermenigvuldigt de coëfficiënt in een `GeneratorIndex` .

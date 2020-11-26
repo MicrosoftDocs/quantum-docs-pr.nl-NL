@@ -87,8 +87,8 @@ Auteur: bradben UID: micro soft. Quantum. concepten. Pauli MS. Author: v-benbra 
 
 In de vorige discussies hebben we gestreefd naar reken kundige basis metingen.
 Er zijn ook andere algemene metingen die zich voordoen bij Quantum Computing en die, vanuit een notatie perspectief, handig zijn om te worden uitgedrukt in termen van reken kundige basis metingen.
-Als u werkt met Q# , worden de meest voorkomende maat eenheden die u kunt uitvoeren waarschijnlijk *Paulie metingen* , waarmee reken kundige basis metingen kunnen worden gebruikt voor metingen in andere bases en van pariteit tussen verschillende qubits.
-In dergelijke gevallen is het gebruikelijk om de meting van een Pauli-operator te bespreken, in het algemeen een operator zoals $ X, Y, z $ of $ z \otimes z, x \otimes x, x \otimes Y enzovoort $ .
+Als u werkt met Q# , worden de meest voorkomende maat eenheden die u kunt uitvoeren waarschijnlijk *Paulie metingen*, waarmee reken kundige basis metingen kunnen worden gebruikt voor metingen in andere bases en van pariteit tussen verschillende qubits.
+In dergelijke gevallen is het gebruikelijk om de meting van een Pauli-operator te bespreken, in het algemeen een operator zoals $ X, Y, z $ of $ z \otimes z, x \otimes x, x \otimes Y enzovoort $ . 
 
 > [!TIP]
 > In Q# worden Qubit-Opera tors van meerdere gebruikers doorgaans vertegenwoordigd door matrices van het type `Pauli[]` .
@@ -247,12 +247,12 @@ Zie de en-bewerkingen voor meer informatie [`Measure`](xref:Microsoft.Quantum.In
 De quantum informatie is krachtig.
 Hierdoor kunnen we fantastische dingen doen, zoals factor nummers exponentieel sneller dan de best bekende klassieke algoritmen, of op efficiënte wijze simuleren van gecorreleerde elektroden systemen die klassieke kosten in de praktijk nodig hebben om nauw keurig te simuleren.
 Er zijn echter beperkingen ten aanzien van de kracht van Quantum Computing.
-Een dergelijke beperking wordt gegeven door de *theorema die niet klonen* .
+Een dergelijke beperking wordt gegeven door de *theorema die niet klonen*.
 
 De No-Cloning theorema is aptly met de naam.
 Het klonen van generieke Quantum Staten door een quantum computer wordt niet toegestaan.
 Het bewijs van de theorema is onduidelijker.
-Hoewel een volledig bewijs van het no-klonen van theorema iets te technisch is voor onze bespreking, is de proef in het geval van geen extra hulp qubits binnen onze Scope (hulp qubits worden qubits gebruikt voor Scratch ruimte tijdens een berekening en worden ze eenvoudig gebruikt en beheerd in Q# , Zie [geleed qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Hoewel een volledig bewijs van het no-klonen van theorema iets te technisch is voor onze discussie, is de proef in het geval van geen extra hulp qubits binnen onze Scope.
 
 Voor een dergelijke quantum computer moet de kloon bewerking worden beschreven in een unitary-matrix.
 De meting is niet toegestaan omdat de Quantum status die we proberen te klonen, is beschadigd.
