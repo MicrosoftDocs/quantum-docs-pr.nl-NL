@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ModPowL
 title: De functie ModPowL
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModPowL
 qsharp.summary: Performs modular division on a number raised to the power of another number.
-ms.openlocfilehash: 7d3e1de8c7d0eb5f35392bec373e7f16b152ca3c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e7ee8466bb83bda2b68209f5780f2006c9fde422
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194964"
 ---
 # <a name="modpowl-function"></a>De functie ModPowL
 
 Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Voert een modulaire deling uit op een getal verheven tot de macht van een ander getal.
