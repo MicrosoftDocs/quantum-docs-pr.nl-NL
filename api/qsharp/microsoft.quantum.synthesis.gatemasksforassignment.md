@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment
 title: De functie GateMasksForAssignment
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: GateMasksForAssignment
 qsharp.summary: Computes up to two MCMT masks to transform y to x.
-ms.openlocfilehash: f4c4a5c385de9f456442d6b2654b59174e0cca28
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f2e174be8f126ce9d1ff817b3494b69fb9a6797e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203039"
 ---
 # <a name="gatemasksforassignment-function"></a>De functie GateMasksForAssignment
 
 Naam ruimte: [micro soft. Quantum. synthese](xref:Microsoft.Quantum.Synthesis)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee worden Maxi maal twee MCMT-maskers berekend om y te transformeren naar x.

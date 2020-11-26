@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates
 title: Bewerking EstimateOverlapBetweenStates
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the squared overlap between the states prepared by each operation.
-ms.openlocfilehash: 58a367c7ff7d13ac5c1eb1588fb8dac66414776c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 07693ccf4b8e7bbde189674d9e6b2bf7f92222f6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703622"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204297"
 ---
 # <a name="estimateoverlapbetweenstates-operation"></a>Bewerking EstimateOverlapBetweenStates
 
 Naam ruimte: [micro soft. Quantum. karakte Rise](xref:Microsoft.Quantum.Characterization) ring
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Op basis van twee bewerkingen waarbij elke bewerking een kopie van een staat voorbereidt, wordt een schatting gemaakt van de gekwadrateerde overlap ping tussen de staten die zijn voor bereid.
@@ -30,12 +30,12 @@ operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj),
 
 ## <a name="input"></a>Invoer
 
-### <a name="preparation1--qubit--unit-adj"></a>preparation1: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="preparation1--qubit--unit--is-adj"></a>preparation1: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De eerste van de twee status voorbereidings bewerkingen die moeten worden vergeleken.
 
 
-### <a name="preparation2--qubit--unit-adj"></a>preparation2: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="preparation2--qubit--unit--is-adj"></a>preparation2: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De tweede van de twee status voorbereidings bewerkingen die moeten worden vergeleken.
 
