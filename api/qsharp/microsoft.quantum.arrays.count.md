@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Count
 title: Functie Count
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Count
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, returns the number of elements an array that consists of those elements that satisfy the predicate.
-ms.openlocfilehash: 408a4a42dda6a4827db6d5865e2b4b8a8df5b37a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 48b75cc6d6584f899223a0803f31fd174836f303
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221552"
 ---
 # <a name="count-function"></a>Functie Count
 
 Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Op basis van een matrix en een predikaat die is gedefinieerd voor de elementen van de matrix, retourneert het aantal elementen een matrix die bestaat uit die elementen die voldoen aan het predicaat.
