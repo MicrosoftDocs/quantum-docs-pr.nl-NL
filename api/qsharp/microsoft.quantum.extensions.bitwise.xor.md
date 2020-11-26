@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Xor
 title: Functie XOR
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.xor".
-ms.openlocfilehash: 67b7cdbd14d38a8b7a47fba7f3de8e9e68f2635e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6f2083458a8dc65255df71fbad9193a77265c233
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702315"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200132"
 ---
-# <a name="xor-function"></a><span data-ttu-id="d579c-102">Functie XOR</span><span class="sxs-lookup"><span data-stu-id="d579c-102">Xor function</span></span>
+# <a name="xor-function"></a><span data-ttu-id="e2377-102">Functie XOR</span><span class="sxs-lookup"><span data-stu-id="e2377-102">Xor function</span></span>
 
-<span data-ttu-id="d579c-103">Naam ruimte: [micro soft. Quantum. Extensions. bitsgewijze](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="d579c-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
+<span data-ttu-id="e2377-103">Naam ruimte: [micro soft. Quantum. Extensions. bitsgewijze](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="e2377-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
 
-<span data-ttu-id="d579c-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="d579c-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="e2377-104">Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="e2377-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="d579c-105">XOR is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="d579c-105">Xor has been deprecated.</span></span> <span data-ttu-id="d579c-106">Gebruik <xref:Microsoft.Quantum.Bitwise.Xor> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="d579c-106">Please use <xref:Microsoft.Quantum.Bitwise.Xor> instead.</span></span>
+> <span data-ttu-id="e2377-105">XOR is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="e2377-105">Xor has been deprecated.</span></span> <span data-ttu-id="e2377-106">Gebruik <xref:Microsoft.Quantum.Bitwise.Xor> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="e2377-106">Please use <xref:Microsoft.Quantum.Bitwise.Xor> instead.</span></span>
 >
-> <span data-ttu-id="d579c-107">Gebruik @"microsoft.quantum.bitwise.xor".</span><span class="sxs-lookup"><span data-stu-id="d579c-107">Please use @"microsoft.quantum.bitwise.xor".</span></span>
+> <span data-ttu-id="e2377-107">Gebruik @"microsoft.quantum.bitwise.xor".</span><span class="sxs-lookup"><span data-stu-id="e2377-107">Please use @"microsoft.quantum.bitwise.xor".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function Xor (a : Int, b : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="d579c-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="d579c-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="e2377-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="e2377-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="d579c-109">a: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d579c-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="b--int"></a><span data-ttu-id="d579c-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d579c-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="a--int"></a><span data-ttu-id="e2377-109">a: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="e2377-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="b--int"></a><span data-ttu-id="e2377-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="e2377-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--int"></a><span data-ttu-id="d579c-111">Uitvoer: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d579c-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+## <a name="output--int"></a><span data-ttu-id="e2377-111">Uitvoer: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="e2377-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 

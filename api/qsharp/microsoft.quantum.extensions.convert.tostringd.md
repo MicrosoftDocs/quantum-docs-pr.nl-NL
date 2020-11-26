@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToStringD
 title: De functie ToStringD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.doubleasstring".
-ms.openlocfilehash: 0ffd94c56084abfc59393ad32c42352dab50291c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 58725eceb6cee8414099b8677818ee7ca2427273
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199945"
 ---
-# <a name="tostringd-function"></a><span data-ttu-id="f510d-102">De functie ToStringD</span><span class="sxs-lookup"><span data-stu-id="f510d-102">ToStringD function</span></span>
+# <a name="tostringd-function"></a><span data-ttu-id="5e5a6-102">De functie ToStringD</span><span class="sxs-lookup"><span data-stu-id="5e5a6-102">ToStringD function</span></span>
 
-<span data-ttu-id="f510d-103">Naam ruimte: [micro soft. Quantum. Extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="f510d-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
+<span data-ttu-id="5e5a6-103">Naam ruimte: [micro soft. Quantum. Extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="5e5a6-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
 
-<span data-ttu-id="f510d-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="f510d-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="5e5a6-104">Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="5e5a6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="f510d-105">ToStringD is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="f510d-105">ToStringD has been deprecated.</span></span> <span data-ttu-id="f510d-106">Gebruik <xref:Microsoft.Quantum.Convert.DoubleAsString> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="f510d-106">Please use <xref:Microsoft.Quantum.Convert.DoubleAsString> instead.</span></span>
+> <span data-ttu-id="5e5a6-105">ToStringD is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="5e5a6-105">ToStringD has been deprecated.</span></span> <span data-ttu-id="5e5a6-106">Gebruik <xref:Microsoft.Quantum.Convert.DoubleAsString> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="5e5a6-106">Please use <xref:Microsoft.Quantum.Convert.DoubleAsString> instead.</span></span>
 >
-> <span data-ttu-id="f510d-107">Gebruik @"microsoft.quantum.convert.doubleasstring".</span><span class="sxs-lookup"><span data-stu-id="f510d-107">Please use @"microsoft.quantum.convert.doubleasstring".</span></span>
+> <span data-ttu-id="5e5a6-107">Gebruik @"microsoft.quantum.convert.doubleasstring".</span><span class="sxs-lookup"><span data-stu-id="5e5a6-107">Please use @"microsoft.quantum.convert.doubleasstring".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function ToStringD (a : Double) : String
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f510d-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="f510d-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="5e5a6-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="5e5a6-108">Input</span></span>
 
-### <a name="a--double"></a><span data-ttu-id="f510d-109">a: [dubbel](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="f510d-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
+### <a name="a--double"></a><span data-ttu-id="5e5a6-109">a: [dubbel](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="5e5a6-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
-## <a name="output--string"></a><span data-ttu-id="f510d-110">Uitvoer: [teken reeks](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="f510d-110">Output : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
+
+
+## <a name="output--string"></a><span data-ttu-id="5e5a6-110">Uitvoer: [teken reeks](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="5e5a6-110">Output : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
 
