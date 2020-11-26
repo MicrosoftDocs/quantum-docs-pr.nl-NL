@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.SetToBasisState
 title: Bewerking SetToBasisState
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: SetToBasisState
 qsharp.summary: Sets a qubit to a given computational basis state by measuring the qubit and applying a bit flip if needed.
-ms.openlocfilehash: bb40ddcf6518a30f5d88eec21cf8e2c2d6e0bbaf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2612bfe488c830abd835be89b2f8ea6795abf675
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708940"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194148"
 ---
 # <a name="settobasisstate-operation"></a>Bewerking SetToBasisState
 
 Naam ruimte: [micro soft. Quantum. meet](xref:Microsoft.Quantum.Measurement)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Hiermee wordt een Qubit ingesteld op basis van de status van de berekening door de Qubit te meten en zo nodig een bit te spie gelen.

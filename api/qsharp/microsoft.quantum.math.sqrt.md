@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Sqrt
 title: SQRT-functie
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Sqrt
 qsharp.summary: Returns the square root of a specified number.
-ms.openlocfilehash: d1fcd510df12ae908c47824db91000dafcb9de39
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c2f49017350b9126353efaef83a70e43a6d344a2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707902"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194437"
 ---
 # <a name="sqrt-function"></a>SQRT-functie
 
 Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourneert de vierkantswortel van een opgegeven getal.

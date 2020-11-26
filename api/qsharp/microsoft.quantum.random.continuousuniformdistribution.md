@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
 title: De functie ContinuousUniformDistribution
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ContinuousUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive interval.
-ms.openlocfilehash: 74300efb10ba7b5aa006f0b1b6aafde0da840f00
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a3911fe9962ce18daa239de0272c53d83344134a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193077"
 ---
 # <a name="continuousuniformdistribution-function"></a>De functie ContinuousUniformDistribution
 
 Naam ruimte: [micro soft. Quantum. wille keurig](xref:Microsoft.Quantum.Random)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourneert een uniforme distributie over een opgegeven inclusief interval.
