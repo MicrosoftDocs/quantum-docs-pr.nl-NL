@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder
 title: Bewerking ApplyBitFlipEncoder
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -10,52 +10,52 @@ qsharp.summary: >-
   Private operation used to implement both the bit flip encoder and decoder.
 
   Note that this encoder can make use of in-place coherent recovery, in which case it will "cause" the error described by the initial state of `auxQubits`. In particular, if `auxQubits` are initially in the state $\ket{10}$, this will cause an $X_1$ error on the encoded qubit.
-ms.openlocfilehash: 4d78cbb5892aabc600321185641bbf217bd4d745
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e56e84effa001f104bbd5e28e7181dbd39a4cf5e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201288"
 ---
-# <a name="applybitflipencoder-operation"></a><span data-ttu-id="d6732-102">Bewerking ApplyBitFlipEncoder</span><span class="sxs-lookup"><span data-stu-id="d6732-102">ApplyBitFlipEncoder operation</span></span>
+# <a name="applybitflipencoder-operation"></a><span data-ttu-id="98fe8-102">Bewerking ApplyBitFlipEncoder</span><span class="sxs-lookup"><span data-stu-id="98fe8-102">ApplyBitFlipEncoder operation</span></span>
 
-<span data-ttu-id="d6732-103">Naam ruimte: [micro soft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="d6732-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
+<span data-ttu-id="98fe8-103">Naam ruimte: [micro soft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="98fe8-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
 
-<span data-ttu-id="d6732-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="d6732-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="98fe8-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="98fe8-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="d6732-105">Een persoonlijke bewerking die wordt gebruikt voor het implementeren van de bit Flip encoder en de decoder.</span><span class="sxs-lookup"><span data-stu-id="d6732-105">Private operation used to implement both the bit flip encoder and decoder.</span></span>
+<span data-ttu-id="98fe8-105">Een persoonlijke bewerking die wordt gebruikt voor het implementeren van de bit Flip encoder en de decoder.</span><span class="sxs-lookup"><span data-stu-id="98fe8-105">Private operation used to implement both the bit flip encoder and decoder.</span></span>
 
-<span data-ttu-id="d6732-106">Houd er rekening mee dat dit coderings programma gebruik kan maken van in-place samenhangende herstel bewerking. in dat geval wordt de fout ' Oorzaak ' die wordt beschreven door de begin status van `auxQubits` .</span><span class="sxs-lookup"><span data-stu-id="d6732-106">Note that this encoder can make use of in-place coherent recovery, in which case it will "cause" the error described by the initial state of `auxQubits`.</span></span>
-<span data-ttu-id="d6732-107">Met name als u in `auxQubits` eerste instantie de status $ \ket {10} $ hebt, leidt dit tot een $X _1 $-fout op de gecodeerde Qubit.</span><span class="sxs-lookup"><span data-stu-id="d6732-107">In particular, if `auxQubits` are initially in the state $\ket{10}$, this will cause an $X_1$ error on the encoded qubit.</span></span>
+<span data-ttu-id="98fe8-106">Houd er rekening mee dat dit coderings programma gebruik kan maken van in-place samenhangende herstel bewerking. in dat geval wordt de fout ' Oorzaak ' die wordt beschreven door de begin status van `auxQubits` .</span><span class="sxs-lookup"><span data-stu-id="98fe8-106">Note that this encoder can make use of in-place coherent recovery, in which case it will "cause" the error described by the initial state of `auxQubits`.</span></span>
+<span data-ttu-id="98fe8-107">Met name als u in `auxQubits` eerste instantie de status $ \ket {10} $ hebt, leidt dit tot een $X _1 $-fout op de gecodeerde Qubit.</span><span class="sxs-lookup"><span data-stu-id="98fe8-107">In particular, if `auxQubits` are initially in the state $\ket{10}$, this will cause an $X_1$ error on the encoded qubit.</span></span>
 
 ```qsharp
-operation ApplyBitFlipEncoder (coherentRecovery : Bool, data : Qubit[], scratch : Qubit[]) : Unit
+operation ApplyBitFlipEncoder (coherentRecovery : Bool, data : Qubit[], scratch : Qubit[]) : Unit is Adj
 ```
 
 
-## <a name="input"></a><span data-ttu-id="d6732-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="d6732-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="98fe8-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="98fe8-108">Input</span></span>
 
-### <a name="coherentrecovery--bool"></a><span data-ttu-id="d6732-109">coherentRecovery: [BOOL](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="d6732-109">coherentRecovery : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
-
-
-
-
-### <a name="data--qubit"></a><span data-ttu-id="d6732-110">gegevens: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="d6732-110">data : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="coherentrecovery--bool"></a><span data-ttu-id="98fe8-109">coherentRecovery: [BOOL](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="98fe8-109">coherentRecovery : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
 
 
 
-### <a name="scratch--qubit"></a><span data-ttu-id="d6732-111">kras: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="d6732-111">scratch : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="data--qubit"></a><span data-ttu-id="98fe8-110">gegevens: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="98fe8-110">data : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+
+
+
+
+### <a name="scratch--qubit"></a><span data-ttu-id="98fe8-111">kras: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="98fe8-111">scratch : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="d6732-112">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="d6732-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="98fe8-112">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="98fe8-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="references"></a><span data-ttu-id="d6732-113">Naslaginformatie</span><span class="sxs-lookup"><span data-stu-id="d6732-113">References</span></span>
+## <a name="references"></a><span data-ttu-id="98fe8-113">Referenties</span><span class="sxs-lookup"><span data-stu-id="98fe8-113">References</span></span>
 
-- <span data-ttu-id="d6732-114">doi:10.1103/PhysRevA.85.044302</span><span class="sxs-lookup"><span data-stu-id="d6732-114">doi:10.1103/PhysRevA.85.044302</span></span>
+- <span data-ttu-id="98fe8-114">doi:10.1103/PhysRevA.85.044302</span><span class="sxs-lookup"><span data-stu-id="98fe8-114">doi:10.1103/PhysRevA.85.044302</span></span>
