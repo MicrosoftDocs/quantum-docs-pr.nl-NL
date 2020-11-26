@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianA
 title: Bewerking ApplyReversedOpLittleEndianA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,44 +14,44 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
-ms.openlocfilehash: 44b013e3a40095accd7e1ac66ef8fa88b30ce712
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8b7ad19e9834f461687f1b13bafed89baf466240
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208972"
 ---
-# <a name="applyreversedoplittleendiana-operation"></a><span data-ttu-id="dd635-102">Bewerking ApplyReversedOpLittleEndianA</span><span class="sxs-lookup"><span data-stu-id="dd635-102">ApplyReversedOpLittleEndianA operation</span></span>
+# <a name="applyreversedoplittleendiana-operation"></a><span data-ttu-id="a707a-102">Bewerking ApplyReversedOpLittleEndianA</span><span class="sxs-lookup"><span data-stu-id="a707a-102">ApplyReversedOpLittleEndianA operation</span></span>
 
-<span data-ttu-id="dd635-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="dd635-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="a707a-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="a707a-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="dd635-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="dd635-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="a707a-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="a707a-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="dd635-105">ApplyReversedOpLittleEndianA is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="dd635-105">ApplyReversedOpLittleEndianA has been deprecated.</span></span> <span data-ttu-id="dd635-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="dd635-106">Please use <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> instead.</span></span>
+> <span data-ttu-id="a707a-105">ApplyReversedOpLittleEndianA is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="a707a-105">ApplyReversedOpLittleEndianA has been deprecated.</span></span> <span data-ttu-id="a707a-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="a707a-106">Please use <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> instead.</span></span>
 >
-> <span data-ttu-id="dd635-107">Gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".</span><span class="sxs-lookup"><span data-stu-id="dd635-107">Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".</span></span>
+> <span data-ttu-id="a707a-107">Gebruik @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".</span><span class="sxs-lookup"><span data-stu-id="a707a-107">Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".</span></span>
 
 
 
 ```qsharp
-operation ApplyReversedOpLittleEndianA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApplyReversedOpLittleEndianA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj
 ```
 
 
-## <a name="input"></a><span data-ttu-id="dd635-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="dd635-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="a707a-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="a707a-108">Input</span></span>
 
-### <a name="op--littleendian--unit-adj"></a><span data-ttu-id="dd635-109">op: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ</span><span class="sxs-lookup"><span data-stu-id="dd635-109">op : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj</span></span>
-
-
-
-
-### <a name="register--bigendian"></a><span data-ttu-id="dd635-110">registreren: [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian)</span><span class="sxs-lookup"><span data-stu-id="dd635-110">register : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian)</span></span>
+### <a name="op--littleendian--unit--is-adj"></a><span data-ttu-id="a707a-109">op: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is ADJ</span><span class="sxs-lookup"><span data-stu-id="a707a-109">op : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj</span></span>
 
 
 
 
+### <a name="register--bigendian"></a><span data-ttu-id="a707a-110">registreren: [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian)</span><span class="sxs-lookup"><span data-stu-id="a707a-110">register : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="dd635-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="dd635-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="a707a-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="a707a-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
