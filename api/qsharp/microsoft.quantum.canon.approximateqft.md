@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: Bewerking ApproximateQFT
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: ffa3a3737a43fbe6acc57700ae122a13586482e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207697"
 ---
 # <a name="approximateqft-operation"></a>Bewerking ApproximateQFT
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 De benadering van de Quantum Fourier-trans formatie (AQFT) Toep assen op een Quantum register.
 
 ```qsharp
-operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,7 +53,7 @@ AQFT vereist Z-rotatie poorten van de vorm 2π/2.000 en Hadamard-Gates.
 
 Er wordt van uitgegaan dat de invoer en uitvoer worden gecodeerd in big endian-code ring.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
-- [*M. Roetteler, th. Beth* , Vereffeningsnr. algebra eng. commun. Comput. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+- [*M. Roetteler, th. Beth*, Vereffeningsnr. algebra eng. commun. Comput. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. Coppersmith* arXiv: Quant-pH/0201067v1](https://arxiv.org/abs/quant-ph/0201067)

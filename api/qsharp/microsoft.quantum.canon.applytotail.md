@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTail
 title: Bewerking ApplyToTail
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTail
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 72b55ec7161d5f6af5e4cb512c648078516c3b4e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6754d41e63ea0357487fa2f62bd9209843a93347
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207969"
 ---
 # <a name="applytotail-operation"></a>Bewerking ApplyToTail
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een bewerking toegepast op het laatste element van een matrix.

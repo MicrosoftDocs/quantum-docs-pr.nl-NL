@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByA
 title: De functie ConjugatedByA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: bcaab28e99d3d61f4a36da866321d28f3dc4bd53
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa104039b857f0469ddc0aaba97698eca20860d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704340"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207340"
 ---
 # <a name="conjugatedbya-function"></a>De functie ConjugatedByA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
@@ -30,18 +30,18 @@ function ConjugatedByA<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>Invoer
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De bewerking $U $ die moet worden gebruikt voor geconjugeerde $V $. Houd er rekening mee dat de buitenste bewerking $U $ moet worden adjointable, maar niet hoeft te worden bestuurd.
 
 
-### <a name="inneroperation--t--unit-adj"></a>innerOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="inneroperation--t--unit--is-adj"></a>innerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De bewerking $V $ wordt geconjugeerd.
 
 
 
-## <a name="output--t--unit-adj"></a>Output: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+## <a name="output--t--unit--is-adj"></a>Output: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is correctie
 
 Een nieuwe bewerking waarvan de actie wordt vertegenwoordigd door de unitary $U ^ {\dagger} V U $.
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithA
 title: Bewerking ApplyWithA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: f1ff31da53952931426d358cbedad44a50d87f5e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8847d4b3ddb88031ef360f183b86f6483706cc6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704604"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207867"
 ---
 # <a name="applywitha-operation"></a>Bewerking ApplyWithA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Als er twee bewerkingen worden uitgevoerd, geldt er een als conjugaat met de andere.
 
 ```qsharp
-operation ApplyWithA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit
+operation ApplyWithA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit is Adj
 ```
 
 
@@ -34,12 +34,12 @@ Als er twee bewerkingen worden uitgevoerd, die respectievelijk worden beschreven
 
 ## <a name="input"></a>Invoer
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De bewerking $U $ die moet worden gebruikt voor geconjugeerde $V $. Houd er rekening mee dat de buitenste bewerking $U $ moet worden adjointable, maar niet hoeft te worden bestuurd.
 
 
-### <a name="inneroperation--t--unit-adj"></a>innerOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="inneroperation--t--unit--is-adj"></a>innerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De bewerking $V $ wordt geconjugeerd.
 
