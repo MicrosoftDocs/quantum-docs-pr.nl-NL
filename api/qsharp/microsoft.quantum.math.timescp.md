@@ -1,46 +1,46 @@
 ---
 uid: Microsoft.Quantum.Math.TimesCP
 title: De functie TimesCP
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: TimesCP
 qsharp.summary: Returns the product of two inputs.
-ms.openlocfilehash: 35ea8975871caea0a144fb19b009976880de7d65
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: be8b6a444dcb504185e4b0610f419c2e49d9ac89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708796"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227230"
 ---
-# <a name="timescp-function"></a><span data-ttu-id="cbf37-102">De functie TimesCP</span><span class="sxs-lookup"><span data-stu-id="cbf37-102">TimesCP function</span></span>
+# <a name="timescp-function"></a><span data-ttu-id="09643-102">De functie TimesCP</span><span class="sxs-lookup"><span data-stu-id="09643-102">TimesCP function</span></span>
 
-<span data-ttu-id="cbf37-103">Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="cbf37-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
+<span data-ttu-id="09643-103">Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="09643-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
 
-<span data-ttu-id="cbf37-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="cbf37-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="09643-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="09643-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="cbf37-105">Retourneert het product van twee invoer waarden.</span><span class="sxs-lookup"><span data-stu-id="cbf37-105">Returns the product of two inputs.</span></span>
+<span data-ttu-id="09643-105">Retourneert het product van twee invoer waarden.</span><span class="sxs-lookup"><span data-stu-id="09643-105">Returns the product of two inputs.</span></span>
 
 ```qsharp
 function TimesCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar
 ```
 
 
-## <a name="input"></a><span data-ttu-id="cbf37-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="cbf37-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="09643-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="09643-106">Input</span></span>
 
-### <a name="a--complexpolar"></a><span data-ttu-id="cbf37-107">a: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="cbf37-107">a : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
+### <a name="a--complexpolar"></a><span data-ttu-id="09643-107">a: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="09643-107">a : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
 
-<span data-ttu-id="cbf37-108">De eerste invoer $a $ die moet worden vermenigvuldigd.</span><span class="sxs-lookup"><span data-stu-id="cbf37-108">The first input $a$ to be multiplied.</span></span>
-
-
-### <a name="b--complexpolar"></a><span data-ttu-id="cbf37-109">b: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="cbf37-109">b : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
-
-<span data-ttu-id="cbf37-110">De tweede invoer $b $ om te worden vermenigvuldigd.</span><span class="sxs-lookup"><span data-stu-id="cbf37-110">The second input $b$ to be multiplied.</span></span>
+<span data-ttu-id="09643-108">De eerste invoer $a $ die moet worden vermenigvuldigd.</span><span class="sxs-lookup"><span data-stu-id="09643-108">The first input $a$ to be multiplied.</span></span>
 
 
+### <a name="b--complexpolar"></a><span data-ttu-id="09643-109">b: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="09643-109">b : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
 
-## <a name="output--complexpolar"></a><span data-ttu-id="cbf37-111">Uitvoer: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="cbf37-111">Output : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
+<span data-ttu-id="09643-110">De tweede invoer $b $ om te worden vermenigvuldigd.</span><span class="sxs-lookup"><span data-stu-id="09643-110">The second input $b$ to be multiplied.</span></span>
 
-<span data-ttu-id="cbf37-112">Het product $a \times b $.</span><span class="sxs-lookup"><span data-stu-id="cbf37-112">The product $a \times b$.</span></span>
+
+
+## <a name="output--complexpolar"></a><span data-ttu-id="09643-111">Uitvoer: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span><span class="sxs-lookup"><span data-stu-id="09643-111">Output : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)</span></span>
+
+<span data-ttu-id="09643-112">Het product $a \times b $.</span><span class="sxs-lookup"><span data-stu-id="09643-112">The product $a \times b$.</span></span>
