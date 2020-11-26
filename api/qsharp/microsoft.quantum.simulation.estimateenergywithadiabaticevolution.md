@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
 title: Bewerking EstimateEnergyWithAdiabaticEvolution
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: EstimateEnergyWithAdiabaticEvolution
 qsharp.summary: Performs state preparation by applying a `statePrepUnitary` on an automatically allocated input state, followed by adiabatic state preparation using a `adiabaticUnitary`, and finally phase estimation with respect to `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-ms.openlocfilehash: 3fdbdd83b784cdc560e3160151fdf4ba4e7115e6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b279d35418b8f013ad0d72e9a980c9bf6ce0689a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225326"
 ---
 # <a name="estimateenergywithadiabaticevolution-operation"></a>Bewerking EstimateEnergyWithAdiabaticEvolution
 
 Naam ruimte: [micro soft. Quantum. simulatie](xref:Microsoft.Quantum.Simulation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Voert de voor bereiding van de status uit door een ' `statePrepUnitary` automatisch toegewezen invoer status ' toe te passen, gevolgd door de Adiabatic-status voorbereiding met behulp van een `adiabaticUnitary` -en de laatste fase schatting met betrekking tot `qpeUnitary` de resulterende status met behulp van een `phaseEstAlgorithm` .
@@ -45,7 +45,7 @@ Een Oracle-voor bereiding van de status voor de eerste dynamische generator.
 Een Oracle die het Adiabatic-ontwikkelings algoritme vertegenwoordigt dat moet worden gebruikt voor het implementeren van de sweeps in de eind toestand van het algoritme.
 
 
-### <a name="qpeunitary--qubit--unit-adj--ctl"></a>qpeUnitary: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="qpeunitary--qubit--unit--is-adj--ctl"></a>qpeUnitary: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een Oracle vertegenwoordigt een unitary-operator $U $ die de ontwikkeling voor tijd $ \delta t $ weergeeft onder een dynamische generator met de grond staat $ \ket{\phi} $ en de grond status energie $E = \phi \\ , \delta t $.
 

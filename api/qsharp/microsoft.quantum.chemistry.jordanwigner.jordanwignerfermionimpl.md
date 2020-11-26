@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
 title: Bewerking JordanWignerFermionImpl
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
 
   See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) for more details.
-ms.openlocfilehash: 616174d4d7f5ac8f4cea9454098d819468076648
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e0e0afe0f0998acb9791ceb25975fe8005771ed0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703197"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224935"
 ---
 # <a name="jordanwignerfermionimpl-operation"></a>Bewerking JordanWignerFermionImpl
 
 Naam ruimte: [micro soft. Quantum. chemie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gates en een uitbrei ding in de JordanWigner basis.
@@ -29,7 +29,7 @@ Dit object vertegenwoordigt een dynamische generator als een set simulatieve Gat
 Zie [model lering van dynamische Generator](../libraries/data-structures#dynamical-generator-modeling) voor meer informatie.
 
 ```qsharp
-operation JordanWignerFermionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit
+operation JordanWignerFermionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

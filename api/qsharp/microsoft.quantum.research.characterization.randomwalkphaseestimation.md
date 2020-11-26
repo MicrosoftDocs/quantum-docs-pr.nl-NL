@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: Bewerking RandomWalkPhaseEstimation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226159"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>Bewerking RandomWalkPhaseEstimation
 
 Naam ruimte: [micro soft. Quantum. Research. karakte Rise](xref:Microsoft.Quantum.Research.Characterization) ring
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Research. karakte Rise](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization) ring
 
 
 Voert een iteratieve fase schatting uit met behulp van een wille keurige Walk om Bayesiaanse te benaderen bij de klassieke meet resultaten van een bepaalde Oracle-en eigenstate.
@@ -89,8 +89,8 @@ Met deze bewerking wordt gebruikgemaakt van de optimale Estimator voor de fase $
 
 Zie de schatting van de [Bayesiaanse-fase](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) voor meer informatie over de statistieken van iteratieve fase schatting.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 - Ferrie *et al.* 2011 [DOI: 10/TFX](https://doi.org/10.1007/s11128-012-0407-6), [arXiv: 1110.3067](https://arxiv.org/abs/1110.3067).
 - Wiebe *et al.* 2013 [DOI: 10/TF3](https://doi.org/10.1103/PhysRevLett.112.190501), [arXiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe en Granade 2018 *(in voor bereiding)* .
+- Wiebe en Granade 2018 *(in voor bereiding)*.
