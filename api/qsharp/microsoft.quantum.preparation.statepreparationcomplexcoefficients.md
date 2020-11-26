@@ -1,30 +1,38 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 title: De functie StatePreparationComplexCoefficients
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: StatePreparationComplexCoefficients
 qsharp.summary: >-
+  > [!WARNING]
+
+  > StatePreparationComplexCoefficients has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.
+
+
   Returns an operation that prepares a specific quantum state.
 
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}. \end{align} $$
-ms.openlocfilehash: 02e3d2fcf21b5bb4ed1bf7aa931597f918a1d369
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1d0efa7b83d2e8e75c4b293866f3929f357ec44b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708184"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210366"
 ---
 # <a name="statepreparationcomplexcoefficients-function"></a>De functie StatePreparationComplexCoefficients
 
 Naam ruimte: [micro soft. Quantum. prepare](xref:Microsoft.Quantum.Preparation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> StatePreparationComplexCoefficients is afgeschaft. Gebruik <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> in plaats daarvan.
 
 Retourneert een bewerking die een specifieke Quantum status voorbereidt.
 
@@ -46,7 +54,7 @@ Matrix van Maxi maal $2 ^ n $ complexe coëfficiënten die worden weer gegeven d
 
 
 
-## <a name="output--littleendian--unit-adj--ctl"></a>Output: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+## <a name="output--littleendian--unit--is-adj--ctl"></a>Uitvoer: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een status-Prepare unitary-bewerking $U $.
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneC
 title: Bewerking ApplyIfOneC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneC
 qsharp.summary: Applies a controllable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 9a2e020c596b02d9cb38309d02ca02056c1dec75
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 24a00d83c1bbe6b07adb27c58fc70bc76af0a910
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705268"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209414"
 ---
 # <a name="applyifonec-operation"></a>Bewerking ApplyIfOneC
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een instelbaar bewerking toegepast die is ingesteld op een klassieke resultaat waarde die één.
 
 ```qsharp
-operation ApplyIfOneC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit
+operation ApplyIfOneC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit is Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Het achtervoegsel `C` geeft aan dat de bewerking die moet worden toegepast, kan 
 Een meet resultaat dat bepaalt of op wordt toegepast of niet.
 
 
-### <a name="op--t--unit-ctl"></a>op: 'T => CTL- [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 Een bewerking die voorwaardelijk moet worden toegepast.
 

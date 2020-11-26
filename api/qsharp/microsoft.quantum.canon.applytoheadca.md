@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadCA
 title: Bewerking ApplyToHeadCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadCA
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 5bb016373040b1b66984405ea2bda0b8cb0c5102
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f28cff599e06090145fac860dbaf8274c966f80a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704780"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208547"
 ---
 # <a name="applytoheadca-operation"></a>Bewerking ApplyToHeadCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een bewerking toegepast op het eerste element van een matrix.
 
 ```qsharp
-operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit
+operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Als er een bewerking `op` en een matrix met doelen `targets` worden opgegeven, g
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--t--unit-adj--ctl"></a>op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een bewerking die moet worden toegepast.
 

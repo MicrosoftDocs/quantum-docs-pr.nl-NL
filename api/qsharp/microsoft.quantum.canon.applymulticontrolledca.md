@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
 title: Bewerking ApplyMultiControlledCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledCA
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `CA` indicates that the single-qubit operation is controllable and adjointable.
-ms.openlocfilehash: 5662efe0dc6f665206b8773596bf885ce631413c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28797583c23e21eb4bcae996a34c70ee06c6dbe8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209278"
 ---
 # <a name="applymulticontrolledca-operation"></a>Bewerking ApplyMultiControlledCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Past een door vermenigvuldigde versie van een gecontroleerde bewerking toe.
 De aanpassings functie `CA` geeft aan dat de bewerking met één qubit kan worden bestuurd en adjointable.
 
 ```qsharp
-operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Invoer
 
-### <a name="singlycontrolledop--qubit--unit-adj"></a>singlyControlledOp: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="singlycontrolledop--qubit--unit--is-adj"></a>singlyControlledOp: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 Een bewerking die wordt beheerd op één Qubit.
 Voor de eerste Qubit in het argument van de bewerking wordt aangenomen dat het om een besturings element gaat en wordt aangenomen dat de rest qubits is.
@@ -65,9 +65,9 @@ Deze bewerking maakt alleen gebruik van schone ancilla qubits.
 
 Zie afbeelding 4,10, sectie 4,3 in Nielsen & Chuang voor uitleg en circuit diagram.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
-- [*Michael A. Nielsen, Isaac L. Chuang* , Quantum Computation en Quantum Information](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael A. Nielsen, Isaac L. Chuang*, Quantum Computation en Quantum Information](http://doi.org/10.1017/CBO9780511976667)
 
 ## <a name="see-also"></a>Zie ook
 

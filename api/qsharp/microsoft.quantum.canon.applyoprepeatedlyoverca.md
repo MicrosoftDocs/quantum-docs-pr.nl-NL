@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA
 title: Bewerking ApplyOpRepeatedlyOverCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyOpRepeatedlyOverCA
 qsharp.summary: Applies the same op over a qubit register multiple times.
-ms.openlocfilehash: 970acfbc63bc95542827988c5c81387e8812f289
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b7d401f323d7affc27697744bb659c687e252682
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705116"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209105"
 ---
 # <a name="applyoprepeatedlyoverca-operation"></a>Bewerking ApplyOpRepeatedlyOverCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Past hetzelfde op een Qubit-REGI ster meerdere keren toe.
 
 ```qsharp
-operation ApplyOpRepeatedlyOverCA (op : (Qubit[] => Unit is Adj + Ctl), targets : Int[][], register : Qubit[]) : Unit
+operation ApplyOpRepeatedlyOverCA (op : (Qubit[] => Unit is Adj + Ctl), targets : Int[][], register : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--qubit--unit-adj--ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--qubit--unit--is-adj--ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een bewerking die meerdere keren wordt toegepast op het Qubit-REGI ster
 

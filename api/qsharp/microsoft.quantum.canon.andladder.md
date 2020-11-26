@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: Bewerking AndLadder
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 05a0e8110539742501883fea75ac368d9946164d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209720"
 ---
 # <a name="andladder-operation"></a>Bewerking AndLadder
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een beheerde "en ladder" uitgevoerd op een REGI ster van doel-qubits.
 
 ```qsharp
-operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj
 ```
 
 
@@ -61,6 +61,6 @@ De lengte `targets` moet mini maal 1 zijn en gelijk zijn aan de lengte van `cont
 - Wordt gebruikt als onderdeel van <xref:microsoft.quantum.canon.applymulticontrolledc> en <xref:microsoft.quantum.canon.applymulticontrolledca> .
 - Zie afbeelding 4,10, sectie 4,3 in Nielsen & Chuang voor uitleg en circuit diagram.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
-- [*Michael A. Nielsen, Isaac L. Chuang* , Quantum Computation en Quantum Information](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael A. Nielsen, Isaac L. Chuang*, Quantum Computation en Quantum Information](http://doi.org/10.1017/CBO9780511976667)

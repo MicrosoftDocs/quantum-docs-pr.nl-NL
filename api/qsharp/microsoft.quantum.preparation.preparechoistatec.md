@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
 title: Bewerking PrepareChoiStateC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiStateC
-qsharp.summary: Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference and target registers.
-ms.openlocfilehash: b23b22fa4bf21ca48076ccda0db62b313f887aa9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation with a controlled variant onto given reference and target registers.
+ms.openlocfilehash: 7d9e53b1dd8ec08c0d0b200cc51562ca6330b06e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709036"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210536"
 ---
 # <a name="preparechoistatec-operation"></a>Bewerking PrepareChoiStateC
 
 Naam ruimte: [micro soft. Quantum. prepare](xref:Microsoft.Quantum.Preparation)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Hiermee wordt de status van de Choi-Jamiłkowski voor een bepaalde bewerking gereedgemaakt met een gecontroleerde variant op de opgegeven referentie-en doel registers.
+Hiermee wordt de status van de Choi-Jamiołkowski voor een bepaalde bewerking gereedgemaakt met een gecontroleerde variant op de opgegeven referentie-en doel registers.
 
 ```qsharp
-operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit
+operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--qubit--unit-ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = Ctl van>- [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--qubit--unit--is-ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 
 
