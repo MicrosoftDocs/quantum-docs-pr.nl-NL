@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedQubitizationOracleSeperatedRegisters_
 title: De functie _OptimizedQubitizationOracleSeperatedRegisters_
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _OptimizedQubitizationOracleSeperatedRegisters_
 qsharp.summary: ''
-ms.openlocfilehash: ab951fcf0f4b3811ad228943dabe6f66a52b4143
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 80f34923fd360fbed0e6126bfb08af8dfa09c91d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215466"
 ---
 # <a name="_optimizedqubitizationoracleseperatedregisters_-function"></a>De functie _OptimizedQubitizationOracleSeperatedRegisters_
 
 Naam ruimte: [micro soft. Quantum. chemie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
@@ -41,5 +41,5 @@ function _OptimizedQubitizationOracleSeperatedRegisters_ (qSharpData : Microsoft
 
 
 
-## <a name="output--intintdoublequbitqubit--unit-adj--ctl"></a>Output: (([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int)), ([Double](xref:microsoft.quantum.lang-ref.double), ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL))
+## <a name="output--intintdoublequbitqubit--unit--is-adj--ctl"></a>Output: (([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int)), ([Double](xref:microsoft.quantum.lang-ref.double), ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL))
 

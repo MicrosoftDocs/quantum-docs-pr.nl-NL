@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.Call
 title: Aanroep bewerking
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: Call
 qsharp.summary: Calls a function with a given input.
-ms.openlocfilehash: 8630f846b4b9823ce1c1dfd61dc8ca81e468517d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 92c159cef878fb587b0ed514fd6660dd19527cab
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702993"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214208"
 ---
 # <a name="call-operation"></a>Aanroep bewerking
 
 Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Roept een functie aan met een opgegeven invoer.

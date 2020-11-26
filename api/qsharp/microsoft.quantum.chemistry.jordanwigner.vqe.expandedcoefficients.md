@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.ExpandedCoefficients
 title: De functie ExpandedCoefficients
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 qsharp.name: ExpandedCoefficients
 qsharp.summary: Expands the compact representation of the Jordan-Wigner coefficients in order to obtain a one-to-one mapping between these and Pauli terms.
-ms.openlocfilehash: 8f5a2319b5839d0d9e47972389330dc16dffcaf0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 92d7deb7010791e7de3d22ad4616b20110d5e84e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703071"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214378"
 ---
 # <a name="expandedcoefficients-function"></a>De functie ExpandedCoefficients
 
 Naam ruimte: [micro soft. Quantum. chemie. JordanWigner. VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Breidt de compacte weer gave van de Jordan-Wigner coëfficiënten uit om een een-op-een-toewijzing te verkrijgen tussen deze en Pauli-voor waarden.
