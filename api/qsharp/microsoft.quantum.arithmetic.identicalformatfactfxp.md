@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
 title: De functie IdenticalFormatFactFxP
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IdenticalFormatFactFxP
 qsharp.summary: Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.
-ms.openlocfilehash: 8fdaf52455dd9ac061a4c084dcff89685efbd5f3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d19e29d4786a728c2105dc55673c49b2885176f8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707284"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223031"
 ---
 # <a name="identicalformatfactfxp-function"></a>De functie IdenticalFormatFactFxP
 
 Naam ruimte: [micro soft. Quantum. aritmetische](xref:Microsoft.Quantum.Arithmetic)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Assert dat alle vaste-komma getallen in de gegeven matrix identieke punt posities en Qubit-nummers hebben.

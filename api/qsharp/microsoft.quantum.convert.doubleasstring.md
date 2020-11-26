@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.DoubleAsString
 title: De functie DoubleAsString
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: DoubleAsString
 qsharp.summary: Converts a given double-precision floating-point number to an equivalent string representation.
-ms.openlocfilehash: ae2b13659e48c25d7aed2dde081d1e48fb8c2ee4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a9ff22619a4cbb20884a8640f991a9edad0f31c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702992"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224408"
 ---
 # <a name="doubleasstring-function"></a>De functie DoubleAsString
 
 Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Converteert een gegeven drijvende-komma getal met dubbele precisie naar een equivalente teken reeks weergave.

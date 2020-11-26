@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.FunctionAsOperation
 title: De functie FunctionAsOperation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: FunctionAsOperation
 qsharp.summary: Converts functions to operations.
-ms.openlocfilehash: 90e9f0c922a77fbb6d6faf8945d4f5d1c8ff33b7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 10703818242cf6b3853f08a45bfb9094f397f6c2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224374"
 ---
 # <a name="functionasoperation-function"></a>De functie FunctionAsOperation
 
 Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee worden functies geconverteerd naar bewerkingen.

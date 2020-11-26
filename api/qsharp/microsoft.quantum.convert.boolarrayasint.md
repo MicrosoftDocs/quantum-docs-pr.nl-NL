@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 title: De functie BoolArrayAsInt
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BoolArrayAsInt
 qsharp.summary: Produces a positive integer from a string of bits in little endian format.
-ms.openlocfilehash: 0a9e0d694ef4235400c162d68ff55362b710daa8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2fbe4492bef5f61d20e33c8500e841413d511d78
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224510"
 ---
 # <a name="boolarrayasint-function"></a>De functie BoolArrayAsInt
 
 Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Produceert een positief geheel getal uit een reeks bits in little endian-indeling.

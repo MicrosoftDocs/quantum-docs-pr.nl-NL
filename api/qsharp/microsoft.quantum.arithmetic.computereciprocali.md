@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ComputeReciprocalI
 title: Bewerking ComputeReciprocalI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ComputeReciprocalI
 qsharp.summary: Computes the reciprocal 1/x for an unsigned integer x using integer division. The result, interpreted as an integer, will be `floor(2^(2*n-1) / x)`.
-ms.openlocfilehash: b99e816ed69af6e6d1758442d6f95c5ab0e5c07a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9024da4a457265c65a41ef681cfbb99ebd4989a5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707348"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223354"
 ---
 # <a name="computereciprocali-operation"></a>Bewerking ComputeReciprocalI
 
 Naam ruimte: [micro soft. Quantum. aritmetische](xref:Microsoft.Quantum.Arithmetic)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Hiermee wordt de reciproque waarde van 1/x voor een niet-ondertekende integer x berekend op basis van de deling van een geheel getal. Het resultaat, geïnterpreteerd als een geheel getal, is `floor(2^(2*n-1) / x)` .
 
 ```qsharp
-operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
