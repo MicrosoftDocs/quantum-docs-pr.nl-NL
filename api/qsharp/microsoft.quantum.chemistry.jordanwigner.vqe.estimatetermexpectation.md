@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
 title: Bewerking EstimateTermExpectation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 qsharp.name: EstimateTermExpectation
 qsharp.summary: Computes the energy associated to a given Jordan-Wigner Hamiltonian term
-ms.openlocfilehash: ef689c55f966e63a2ab8bcdccf99d9cb5e6d3a4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3f0ff5037b1424abb6fb318bd49ffd89f545822d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703077"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224646"
 ---
 # <a name="estimatetermexpectation-operation"></a>Bewerking EstimateTermExpectation
 
 Naam ruimte: [micro soft. Quantum. chemie. JordanWigner. VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Hiermee wordt de energie berekend die is gekoppeld aan een bepaalde Jordan-Wigner Hamiltonian-term
@@ -35,7 +35,7 @@ De resultaten worden geaggregeerd in een variabele die de energie van de Jordan-
 
 ## <a name="input"></a>Invoer
 
-### <a name="inputstateunitary--qubit--unit-adj"></a>inputStateUnitary: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="inputstateunitary--qubit--unit--is-adj"></a>inputStateUnitary: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De unitary die wordt gebruikt voor het voorbereiden van de status.
 
