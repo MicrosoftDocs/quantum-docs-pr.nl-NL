@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231652"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
@@ -68,7 +68,7 @@ Andere woorden kunnen ook nuttig zijn in dit geval, zoals in `IterateThroughCart
 | Toepassen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
 | Assert | Een hypo these over het resultaat van een mogelijke quantum meting wordt gecontroleerd door een simulator |
 | Schatting | Er wordt een klassieke waarde geretourneerd die een schatting vertegenwoordigt die uit een of meer metingen is getrokken |
-| Maateenheid | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
+| Measure | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
 | Voorbereiden | Een bepaald REGI ster van qubits wordt geïnitialiseerd in een bepaalde status |
 | Voorbeeld | Er wordt een klassieke waarde geretourneerd op wille keurige wijze van distributie |
 
@@ -390,7 +390,7 @@ Op dezelfde manier gebruikt de taal server van de Quantum Development Kit deze o
 Het gebruik van documentatie opmerkingen kan gebruikers helpen om code te maken met behulp van een nuttige referentie voor informatie die niet eenvoudig kan worden weer gegeven met de andere conventies in dit document.
 
 > [!div class="nextstepaction"]
-> [Naslag informatie over de syntaxis van documentatie](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Naslag informatie over de syntaxis van documentatie](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Als u deze functionaliteit effectief wilt gebruiken om gebruikers te helpen, raden we u aan om een aantal zaken te houden wanneer u documentatie opmerkingen schrijft.
 

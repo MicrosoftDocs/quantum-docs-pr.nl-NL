@@ -87,7 +87,7 @@ Auteur: bradben MS. Author: v-benbra MS. date: 9/1/2020 MS. topic: artikel UID: 
 
 ## <a name="adjoint"></a>Adjoint
 
-De complex geconjugeerde omzetting van een [bewerking](xref:microsoft.quantum.glossary#operation). Voor bewerkingen waarbij een [unitary](xref:microsoft.quantum.glossary#unitary-operator) -operator wordt geïmplementeerd, is de adjoint de inverse van de bewerking en wordt aangegeven door een Dagger-symbool. Als de bewerking bijvoorbeeld `U` de unitary-operator u vertegenwoordigt $ $ , `Adjoint U` vertegenwoordigt $ u ^ \dagger $ . Zie [adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)voor meer informatie.
+De complex geconjugeerde omzetting van een [bewerking](xref:microsoft.quantum.glossary#operation). Voor bewerkingen waarbij een [unitary](xref:microsoft.quantum.glossary#unitary-operator) -operator wordt geïmplementeerd, is de adjoint de inverse van de bewerking en wordt aangegeven door een Dagger-symbool. Als de bewerking bijvoorbeeld `U` de unitary-operator u vertegenwoordigt $ $ , `Adjoint U` vertegenwoordigt $ u ^ \dagger $ . Zie [functor Application](xref:microsoft.quantum.qsharp.functorapplication#functor-application)(Engelstalig) voor meer informatie.
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +103,8 @@ Een grafische weer gave van een [Quantum status](xref:microsoft.quantum.glossary
 
 ## <a name="callable"></a>Aanroep bare
 
-Een [bewerking](xref:microsoft.quantum.glossary#operation) of [functie](xref:microsoft.quantum.glossary#function) in de Q# taal. Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
+Een [bewerking](xref:microsoft.quantum.glossary#operation) of [functie](xref:microsoft.quantum.glossary#function) in de [ Q# taal](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language).
+Zie [ Q# Program ma's](xref:microsoft.quantum.guide.programs) voor meer informatie.
 
 ## <a name="clifford-group"></a>Clifford-groep
 
@@ -111,7 +112,7 @@ De set bewerkingen die de octants van de Bloch- [bol](xref:microsoft.quantum.glo
 
 ## <a name="controlled"></a>Gelijkrichter
 
-Een Quantum [bewerking](xref:microsoft.quantum.glossary#operation) waarbij een of meer [qubits](xref:microsoft.quantum.glossary#qubit) als enablers voor de doel bewerking worden gebruikt. Zie [Controlled and adjoint Operations](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)(Engelstalig) voor meer informatie.
+Een Quantum [bewerking](xref:microsoft.quantum.glossary#operation) waarbij een of meer [qubits](xref:microsoft.quantum.glossary#qubit) als enablers voor de doel bewerking worden gebruikt. Zie [functor Application](xref:microsoft.quantum.qsharp.functorapplication#functor-application)(Engelstalig) voor meer informatie.
 
 ## <a name="dirac-notation"></a>Dirac-notatie
 
@@ -138,11 +139,11 @@ Een van de vier specifieke maximally Entangled [Quantum-statussen](xref:microsof
 Hoe een [Quantum status](xref:microsoft.quantum.glossary#quantum-state) in de loop van de tijd verandert. Zie [matrix exponentiëlen](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)voor meer informatie.
 
 ## <a name="function"></a>Functie
-Een type subroutine in de Q# taal die louter klassiek (niet-Quantum) is. Terwijl functies worden gebruikt binnen Quantum algoritmen, kunnen ze niet reageren op [qubits](xref:microsoft.quantum.glossary#qubit) of aanroep [bewerkingen](xref:microsoft.quantum.glossary#operation). Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
+Een type subroutine in de Q# taal die louter deterministisch is. Terwijl functies worden gebruikt binnen Quantum algoritmen, kunnen ze niet reageren op [qubits](xref:microsoft.quantum.glossary#qubit) of aanroep [bewerkingen](xref:microsoft.quantum.glossary#operation). Zie [ Q# Program ma's](xref:microsoft.quantum.guide.programs) voor meer informatie.
 
 ## <a name="gate"></a>Poort
 
-Een verouderde term voor een Quantum [bewerking](xref:microsoft.quantum.glossary#operation), gebaseerd op het concept van klassieke logische poorten. Een [Quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is een netwerk van Gates (of bewerkingen), op basis van het vergelijk bare concept van klassieke logica-circuits.
+Een verouderde term voor bepaalde ingebouwde Quantum [bewerkingen](xref:microsoft.quantum.glossary#operation), op basis van het concept van klassieke logische poorten. Een [Quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is een netwerk van Gates, op basis van het vergelijk bare concept van klassieke logica-circuits.
 
 ## <a name="global-phase"></a>Globale fase
 
@@ -166,15 +167,11 @@ Een variabele waarvan de waarde kan worden gewijzigd nadat deze is gemaakt. Een 
 
 ## <a name="namespace"></a>Naamruimte
 
-Een label voor een verzameling verwante namen (bijvoorbeeld [bewerkingen](xref:microsoft.quantum.glossary#operation), [functies](xref:microsoft.quantum.glossary#function)en door de [gebruiker gedefinieerde typen](xref:microsoft.quantum.glossary#user-defined-type)). Voor de naam ruimte [micro soft. Quantum. prepare](xref:microsoft.quantum.preparation) etiketten worden alle symbolen in de standaard bibliotheek beschreven die u helpen bij het voorbereiden van initiële statussen.
+Een label voor een verzameling verwante namen (bijvoorbeeld [bewerkingen](xref:microsoft.quantum.glossary#operation), [functies](xref:microsoft.quantum.glossary#function)en door de [gebruiker gedefinieerde typen](xref:microsoft.quantum.glossary#user-defined-type)). Voor de naam ruimte [micro soft. Quantum. prepare](xref:Microsoft.Quantum.Preparation) etiketten worden alle symbolen in de standaard bibliotheek beschreven die u helpen bij het voorbereiden van initiële statussen.
 
 ## <a name="operation"></a>Bewerking
 
-De basis eenheid van de Quantum berekening in Q# . Het is ongeveer gelijk aan een functie in C, C++ of python, of een statische methode in C# of Java. Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
-
-## <a name="operator-application"></a>Operator toepassing
-
-Een Quantum bewerking wordt uitgevoerd. Dit past doorgaans een unitary-matrix toe op de huidige Quantum-status vector.
+De basis eenheid van de Quantum berekening in Q# . Het is ongeveer gelijk aan een functie in C, C++ of python, of een statische methode in C# of Java. Zie [ Q# Program ma's](xref:microsoft.quantum.guide.programs)voor meer informatie.
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Een subroutine die gegevens afhankelijke informatie levert aan een Quantum algor
 
 ## <a name="partial-application"></a>Gedeeltelijke toepassing
 
-Het aanroepen van een [functie](xref:microsoft.quantum.glossary#function) of [bewerking](xref:microsoft.quantum.glossary#operation) zonder de vereiste invoer. Hiermee wordt een nieuwe [aanroep](xref:microsoft.quantum.glossary#callable) geretourneerd waarvoor alleen de ontbrekende para meters (aangegeven door een onderstrepings teken) moeten worden opgegeven tijdens een toekomstige toepassing. Als u bijvoorbeeld de functie hebt opgegeven, `MyFunc(x : int, y : int) : int {return x + y;}` kunt u deze gedeeltelijk Toep assen op een nieuwe functie `let NewFunc = MyFunc(_, 3)` . U kunt de nieuwe functie vervolgens op een later tijdstip aanroepen met de ontbrekende para meter, `NewFunc(2)` waarmee de waarde *5* wordt geretourneerd.  Zie voor meer informatie [gedeeltelijke toepassing](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Het aanroepen van een [functie](xref:microsoft.quantum.glossary#function) of [bewerking](xref:microsoft.quantum.glossary#operation) zonder de vereiste invoer. Hiermee wordt een nieuwe [aanroep](xref:microsoft.quantum.glossary#callable) geretourneerd waarvoor alleen de ontbrekende para meters (aangegeven door een onderstrepings teken) moeten worden opgegeven tijdens een toekomstige toepassing. Zie voor meer informatie [gedeeltelijke toepassing](xref:microsoft.quantum.qsharp.partialapplication).
 
 ## <a name="pauli-operators"></a>Pauli-Opera tors
 
@@ -190,7 +187,7 @@ Een set van 3 2 x 2 unitary-matrices, ook wel bekend als de `X` , `Y` en `Z` Qua
 
 ## <a name="quantum-circuit-diagram"></a>Quantum circuit diagram
 
-Een methode voor het grafisch weer geven van de volg orde van de [bewerkingen](xref:microsoft.quantum.glossary#operation) (of [poorten](xref:microsoft.quantum.glossary#gate)) voor eenvoudige Quantum-Program ma's, bijvoorbeeld 
+Een methode voor het grafisch weer geven van de reeks [poorten](xref:microsoft.quantum.glossary#gate) voor eenvoudige Quantum-Program ma's, bijvoorbeeld 
 
 ![Voorbeeld diagram van circuit](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ Een eenvoudige eenheid van quantum informatie, vergelijkbaar met een *bit* in kl
 
 ## <a name="repeat-until-success"></a>Herhalen-tot-geslaagd
 
-Een Quantum algoritme dat probabilistically slaagt. Als de routine is mislukt, wordt het opnieuw geprobeerd tot geslaagd (of is er een limiet bereikt). Zie [herhalen tot geslaagd (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) voor meer informatie
+Een concept dat vaak wordt gebruikt in Quantum algoritmen die bestaan uit het herhaaldelijk Toep assen van een berekening tot aan een bepaalde voor waarde is voldaan. Als er niet aan de voor waarde is voldaan, is er vaak een reparatie vereist voordat het opnieuw wordt geprobeerd door de volgende iteratie in te voeren. Zie de [ Q# Gebruikers handleiding](xref:microsoft.quantum.guide) voor meer informatie
 
 ## <a name="standard-libraries"></a>Standaardbibliotheken
 
@@ -230,7 +227,7 @@ Een methode voor het opnieuw genereren van gegevens, of de [Quantum status](xref
 
 ## <a name="tuple"></a>Kaart
 
-Een verzameling door komma's gescheiden waarden die fungeert als een enkele waarde. Het *type* van een tuple wordt gedefinieerd door de typen waarden die deze bevat. In Q# zijn Tuples [onveranderbaar](xref:microsoft.quantum.glossary#immutable) en kunnen worden genest, matrices bevatten of worden gebruikt in een matrix. Zie voor meer informatie [tuple types](xref:microsoft.quantum.guide.types#tuple-types).
+Een verzameling door komma's gescheiden waarden die fungeert als een enkele waarde. Het *type* van een tuple wordt gedefinieerd door de typen waarden die deze bevat. In Q# zijn Tuples [onveranderbaar](xref:microsoft.quantum.glossary#immutable) en kunnen worden genest, matrices bevatten of worden gebruikt in een matrix. Zie [Tuples](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals)voor meer informatie.
 
 ## <a name="unitary-operator"></a>Unitary-operator
 
@@ -238,4 +235,4 @@ Een operator waarvan de inverse is gelijk aan de [adjoint](xref:microsoft.quantu
 
 ## <a name="user-defined-type"></a>Door de gebruiker gedefinieerd type
 
-Een verzameling van ingebouwde of eerder gedefinieerde typen die als één eenheid kunnen worden aangeduid. Zie door de [gebruiker gedefinieerde typen](xref:microsoft.quantum.guide.types#user-defined-types)voor meer informatie.
+Een aangepast type dat een of meer benoemde of anonieme items kan bevatten. Zie [type declaraties] micro soft. Quantum. qsharp. typedeclarations # type-declaraties voor meer informatie.

@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691824"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231771"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Ontwerp principes van API
 
@@ -215,7 +215,7 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
   *Voorbeelden:*
   - Kies voor keur voor ' amplitude versterking ' naar ' Grover iteratie '.
 
-- ✅**Kies bewerkingen** en functie namen waarmee duidelijk het beoogde effect van een aanroepbaar en niet de implementatie wordt gecommuniceerd. Houd er rekening mee dat de implementatie kan en moet worden beschreven in [API-documentatie opmerkingen](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+- ✅**Kies bewerkingen** en functie namen waarmee duidelijk het beoogde effect van een aanroepbaar en niet de implementatie wordt gecommuniceerd. Houd er rekening mee dat de implementatie kan en moet worden beschreven in [API-documentatie opmerkingen](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
   *Voorbeelden:*
   - De voor keur ' schatting overlappen ' op ' Hadamard test ', aangezien de laatste wordt gecommuniceerd hoe de voormalige wordt geïmplementeerd.
@@ -224,32 +224,32 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 
   - **Termen**
 
-    - **Assert** : Controleer of een veronderstelling over de status van een doel computer en de qubits-bewaringen mogelijk is door gebruik te maken van niet-fysieke resources. Bewerkingen die gebruikmaken van deze term moeten altijd veilig kunnen worden verwijderd zonder dat dit van invloed is op de functionaliteit van bibliotheken en uitvoer bare Program ma's. In tegens telling tot feiten kunnen verklaringen in het algemeen afhankelijk zijn van externe status, zoals de status van een Qubit-REGI ster, de uitvoerings omgeving of dergelijke. Als afhankelijkheid van de externe status is een soort neven effect, moeten beweringen worden weer gegeven als bewerkingen in plaats van functions.
+    - **Assert**: Controleer of een veronderstelling over de status van een doel computer en de qubits-bewaringen mogelijk is door gebruik te maken van niet-fysieke resources. Bewerkingen die gebruikmaken van deze term moeten altijd veilig kunnen worden verwijderd zonder dat dit van invloed is op de functionaliteit van bibliotheken en uitvoer bare Program ma's. In tegens telling tot feiten kunnen verklaringen in het algemeen afhankelijk zijn van externe status, zoals de status van een Qubit-REGI ster, de uitvoerings omgeving of dergelijke. Als afhankelijkheid van de externe status is een soort neven effect, moeten beweringen worden weer gegeven als bewerkingen in plaats van functions.
 
-    - **Schatting** : als u een of meer mogelijk herhaalde metingen gebruikt, moet u een klassiek aantal van meet resultaten schatten.
+    - **Schatting**: als u een of meer mogelijk herhaalde metingen gebruikt, moet u een klassiek aantal van meet resultaten schatten.
 
       *Voorbeelden:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Voorbereiden** : een Quantum bewerking of volg orde van bewerkingen Toep assen op een of meer qubits, aangenomen dat deze wordt gestart met een bepaalde begin status (doorgaans $ \ket{00\cdots 0} $), waardoor de status van die qubits naar een gewenste eind status kan worden gegroeid. Over het algemeen **kan** het optreden op andere statussen dan de opgegeven start status leiden tot een niet-gedefinieerde unitary-trans formatie, maar **moet** nog steeds zorgen dat een bewerking en de adjoint ' annuleren ' worden bewaard en er geen op worden toegepast.
+    - **Voorbereiden**: een Quantum bewerking of volg orde van bewerkingen Toep assen op een of meer qubits, aangenomen dat deze wordt gestart met een bepaalde begin status (doorgaans $ \ket{00\cdots 0} $), waardoor de status van die qubits naar een gewenste eind status kan worden gegroeid. Over het algemeen **kan** het optreden op andere statussen dan de opgegeven start status leiden tot een niet-gedefinieerde unitary-trans formatie, maar **moet** nog steeds zorgen dat een bewerking en de adjoint ' annuleren ' worden bewaard en er geen op worden toegepast.
 
       *Voorbeelden:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Meting** : een Quantum bewerking of een reeks bewerkingen Toep assen op een of meer qubits. er wordt een back-up van klassieke gegevens weer gegeven.
+    - **Meting**: een Quantum bewerking of een reeks bewerkingen Toep assen op een of meer qubits. er wordt een back-up van klassieke gegevens weer gegeven.
 
       *Voorbeelden:*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Toep assen** : een Quantum bewerking of reeks bewerkingen Toep assen op een of meer qubits, waardoor de status van die qubits op een samenhangende manier kan worden gewijzigd. Dit woord is de meest algemene term in Q \# -nomenclatuur en **mag niet worden** gebruikt wanneer een meer specifieke term direct relevant is.
+    - **Toep assen**: een Quantum bewerking of reeks bewerkingen Toep assen op een of meer qubits, waardoor de status van die qubits op een samenhangende manier kan worden gewijzigd. Dit woord is de meest algemene term in Q \# -nomenclatuur en **mag niet worden** gebruikt wanneer een meer specifieke term direct relevant is.
 
-  - **Zelfstandige naam woorden** :
+  - **Zelfstandige naam woorden**:
 
-    - **Fact** : een Booleaanse voor waarde die alleen afhankelijk is van de invoer en niet van de status van een doel computer, de omgeving of de status van de qubits van de machine. In tegens telling tot een bevestiging is een feit alleen gevoelig voor de *waarden* die aan dat feit worden gegeven. Bijvoorbeeld:
+    - **Fact**: een Booleaanse voor waarde die alleen afhankelijk is van de invoer en niet van de status van een doel computer, de omgeving of de status van de qubits van de machine. In tegens telling tot een bevestiging is een feit alleen gevoelig voor de *waarden* die aan dat feit worden gegeven. Bijvoorbeeld:
 
       *Voorbeelden:*
       - @"microsoft.quantum.diagnostics.equalityfacti": vertegenwoordigt een gelijkheids feit over twee integer-invoer; de gehele getallen die als invoer worden opgegeven, zijn gelijk aan elkaar of ze zijn niet onafhankelijk van een andere programma status.
@@ -259,9 +259,9 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
       *Voorbeelden:*
       - De @"microsoft.quantum.machinelearning.trainingoptions" UDT bevat benoemde items voor Learning rate, minibatch-grootte en andere Configureer bare para meters voor ml-training.
 
-  - **Bijvoegingen** :
+  - **Bijvoegingen**:
 
-    - ⛔️ **Nieuw** : deze bijvoeger **mag niet** worden gebruikt, om Verwar ring met het gebruik als een werk woord te voor komen in veel programmeer talen (bijvoorbeeld: C++, C#, Java, type script, Power shell).
+    - ⛔️ **Nieuw**: deze bijvoeger **mag niet** worden gebruikt, om Verwar ring met het gebruik als een werk woord te voor komen in veel programmeer talen (bijvoorbeeld: C++, C#, Java, type script, Power shell).
 
   - Voor **zetsels:** In sommige gevallen kunnen preposities worden gebruikt om de rollen van zelfstandige naam woorden en termen in functie-en bewerkings namen verder te dubbel zinnigheid of te verduidelijken. Zorg ervoor dat dit echter spaarzaam en consistent is.
 

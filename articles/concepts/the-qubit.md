@@ -128,17 +128,6 @@ Quantum computers verwerken gegevens door een universele set Quantum-Gates toe t
 Dit voor stel van universality is Akin naar het principe van de universele kracht voor traditionele (klassieke) computing waarbij een poortset als universeel wordt beschouwd als elke trans formatie van de invoer bits kan worden uitgevoerd met behulp van een circuit met een eindige lengte.
 In Quantum Computing zijn de geldige trans formaties die we mogen uitvoeren op een Qubit, unitary trans formaties en meting.
 De *adjoint-bewerking* of de complex geconjugeerde getransponeerde is van cruciaal belang voor Quantum Computing, omdat het nodig is om Quantum trans formaties te omkeren.
-Q# Dit weerspiegelt door methoden te bieden voor het automatisch compileren van poort reeksen aan hun adjoint, waardoor de programmeur in veel gevallen de code van de hand heeft adjoints. Hieronder ziet u een voor beeld van dit:
-
-```qsharp
-operation PrepareSuperposition(qubit : Qubit) : Unit
-is Adj { // Auto-generate the adjoint of the operation
-    H(qubit);
-}
-```
-
-Hoewel dit een gelastig voor beeld is (zoals de < bewerking XREF: micro soft. Quantum. intrinsiek. H > is self-adjoint), kunt u zien hoe dit inwaardevol wordt voor complexere Qubit bewerkingen.
-Zie [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions)voor meer informatie.
 
 Er zijn slechts vier functies die één bit aan één bit op een klassieke computer toewijzen. Daarentegen is er een oneindig aantal unitary-trans formaties op één Qubit op een quantum computer. Daarom kan een beperkte set primitieve Quantum bewerkingen, die [*Gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate)worden genoemd, de oneindige set unitary-trans formaties die zijn toegestaan in de Quantum Computing, exact repliceren. Dit betekent dat, in tegens telling tot klassieke computing, het onmogelijk is dat een quantum computer elk mogelijk Quantum programma implementeert, precies met een eindige hoeveelheid poorten. Daarom kunnen quantum computers niet universeel zijn in dezelfde zin van klassieke computers. Als we er rekening mee houden dat een reeks poorten *universeel* is voor Quantum Computing, hebben we eigenlijk iets zwakkerer dan voor klassiek computing.
 Voor universality is het vereist dat een quantum computer alleen elke unitary-matrix binnen een eindige fout *benadert* met behulp van een poort reeks met een eind lengte.

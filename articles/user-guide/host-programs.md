@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691703"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231686"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Manieren om een programma uit te voeren Q#
 
@@ -26,7 +26,7 @@ Een primair onderscheid is dat Q# kan worden uitgevoerd:
 - als zelfstandige toepassing, waarbij de Q# enige taal betrokken is en het programma rechtstreeks wordt aangeroepen. In deze categorie vallen twee methoden daad werkelijk:
   - de opdracht regel interface
   - Q# Jupyter-notebooks
-- met een extra *hostprogramma* , geschreven in Python of een .net-taal (bijvoorbeeld C# of F #), die vervolgens het programma aanroept en de geretourneerde resultaten verder kan verwerken.
+- met een extra *hostprogramma*, geschreven in Python of een .net-taal (bijvoorbeeld C# of F #), die vervolgens het programma aanroept en de geretourneerde resultaten verder kan verwerken.
 
 Voor een beter begrip van deze processen en hun verschillen, kunt u een eenvoudig Q# programma overwegen en de manieren vergelijken waarop het kan worden uitgevoerd.
 
@@ -45,7 +45,7 @@ In Q# wordt dit uitgevoerd met de volgende code:
 ```
 
 Deze code kan echter alleen worden uitgevoerd door Q# .
-Hiervoor moet de hoofd tekst van een [bewerking](xref:microsoft.quantum.guide.basics#q-operations-and-functions)worden ingesteld, die vervolgens wordt uitgevoerd wanneer---rechtstreeks of door een andere bewerking wordt genoemd. Daarom kunt u een bewerking van het volgende formulier schrijven:
+Hiervoor moet de hoofd tekst van een [bewerking](xref:microsoft.quantum.qsharp.operationsandfunctions)worden ingesteld, die vervolgens wordt uitgevoerd wanneer---rechtstreeks of door een andere bewerking wordt genoemd. Daarom kunt u een bewerking van het volgende formulier schrijven:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,18 +54,18 @@ Hiervoor moet de hoofd tekst van een [bewerking](xref:microsoft.quantum.guide.ba
         }
     }
 ```
-U hebt een bewerking gedefinieerd, `MeasureSuperposition` die geen invoer heeft en een waarde van het type [resultaat](xref:microsoft.quantum.guide.types)retourneert.
+U hebt een bewerking gedefinieerd, `MeasureSuperposition` die geen invoer heeft en een waarde van het type [resultaat](xref:microsoft.quantum.qsharp.typesystem-index#available-types)retourneert.
 
-Hoewel de voor beelden op deze pagina alleen bestaan uit Q# *bewerkingen* , zijn alle concepten die we bespreken gelijk aan de Q# *functies* en daarom verwijzen ze gezamenlijk naar hun *callables* . Hun verschillen worden besproken op basis van het [ Q# volgende: bewerkingen en functies](xref:microsoft.quantum.guide.basics#q-operations-and-functions), en meer informatie over het definiëren van ze vindt u op [bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions).
+Naast bewerkingen Q# kan ook deterministische berekeningen in functies worden ingekapseld. Afgezien van de determinism-garantie dat impliceert dat berekeningen die op qubits handelen, moeten worden ingekapseld in bewerkingen in plaats van functies, is er weinig verschil tussen bewerkingen en functie. We verwijzen ernaar gezamenlijk als *callables*.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Aanroepable gedefinieerd in een Q# bestand
 
 De aanroep zou precies worden aangeroepen en worden uitgevoerd door Q# .
 Er zijn echter enkele extra toevoegingen vereist om een volledig bestand te vormen `*.qs` Q# .
 
-Alle Q# typen en callables (zowel die u hebt gedefinieerd als de ingebouwde taal) worden gedefinieerd in *naam ruimten* , die elke volledige naam geven waarnaar vervolgens kan worden verwezen.
+Alle Q# typen en callables (zowel die u hebt gedefinieerd als de ingebouwde taal) worden gedefinieerd in *naam ruimten*, die elke volledige naam geven waarnaar vervolgens kan worden verwezen.
 
-De [`H`](xref:Microsoft.Quantum.Intrinsic.H) bewerkingen en zijn bijvoorbeeld te [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) vinden in de [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) naam ruimten en (onderdeel van de [ Q# standaard bibliotheken](xref:microsoft.quantum.qsharplibintro)).
+De [`H`](xref:Microsoft.Quantum.Intrinsic.H) bewerkingen en zijn bijvoorbeeld te [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) vinden in de [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) naam ruimten en (onderdeel van de [ Q# standaard bibliotheken](xref:microsoft.quantum.libraries.standard.intro)).
 Zo kunnen ze altijd worden aangeroepen via hun *volledige* naam `Microsoft.Quantum.Intrinsic.H(<qubit>)` en `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` , maar dit wordt altijd wel tot zeer ruime code.
 
 In plaats daarvan `open` kunnen met behulp van de instructies callables worden gerefereerd aan een beknoptere steno, zoals in de bovenstaande hoofd tekst is uitgevoerd.
@@ -103,7 +103,7 @@ Het algemene model voor het uitvoeren van een Q# programma wordt nu duidelijk.
 De specifieke aanroepable die moet worden uitgevoerd, heeft eerst toegang tot alle andere callables en typen die in dezelfde naam ruimte zijn gedefinieerd.
 U kunt ook toegang krijgen tot die van een van de [ Q# bibliotheken](xref:microsoft.quantum.libraries), maar deze moeten worden gerefereerd via de volledige naam of door middel van het gebruik van de `open` hierboven beschreven instructies.
 
-De aanroepable zelf wordt vervolgens uitgevoerd op een *[doel computer](xref:microsoft.quantum.machines)* .
+De aanroepable zelf wordt vervolgens uitgevoerd op een *[doel computer](xref:microsoft.quantum.machines)*.
 Dergelijke doel computers kunnen echte Quantum hardware zijn of de meerdere simulatoren die beschikbaar zijn als onderdeel van de QDK.
 Voor onze doel einden is de meest nuttige doel computer een exemplaar van de [Full-State Simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` waarmee het gedrag van het programma wordt berekend alsof het wordt uitgevoerd op een quantum computer zonder ruis.
 
@@ -164,7 +164,7 @@ Nu wordt een aanroep van `dotnet run` vanaf de opdracht prompt om te `MeasureSup
 Daarom ziet u ofwel `One` of `Zero` afgedrukt. 
 
 Houd er rekening mee dat het niet van belang is dat er meer callables worden gedefinieerd, maar alleen `MeasureSuperposition` worden uitgevoerd.
-Daarnaast is het geen probleem als uw aanroep mogelijk [documentatie commentaar](xref:microsoft.quantum.guide.filestructure#documentation-comments) bevat vóór de declaratie van het `@EntryPoint()` kenmerk, maar dit kan eenvoudigweg worden geplaatst.
+Daarnaast is het geen probleem als uw aanroep mogelijk [documentatie commentaar](xref:microsoft.quantum.qsharp.comments#documentation-comments) bevat vóór de declaratie van het `@EntryPoint()` kenmerk, maar dit kan eenvoudigweg worden geplaatst.
 
 ### <a name="callable-arguments"></a>Aanroep bare argumenten
 
@@ -589,7 +589,7 @@ Hier wordt beschreven hoe u de Q# hierboven gedefinieerde bewerkingen uitvoert, 
 
 In een Q# Jupyter notebook voert u code in op Q# dezelfde manier als in de naam ruimte van een Q# bestand.
 
-Daarom kunnen we toegang tot callables van de [ Q# standaard bibliotheken](xref:microsoft.quantum.qsharplibintro) inschakelen met `open` instructies voor hun respectieve naam ruimten.
+Daarom kunnen we toegang tot callables van de [ Q# standaard bibliotheken](xref:microsoft.quantum.libraries.standard.intro) inschakelen met `open` instructies voor hun respectieve naam ruimten.
 Bij het uitvoeren van een cel met een dergelijke instructie zijn de definities van deze naam ruimten beschikbaar in de hele werk ruimte.
 
 > [!NOTE]
