@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByC
 title: De functie ConjugatedByC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByC
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: c4c381e40c5a941487bcf78ebe5339574aedb45d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1aa471a0f9039151d130bd52a026f4c1a0765e32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704333"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216673"
 ---
 # <a name="conjugatedbyc-function"></a>De functie ConjugatedByC
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Als er buiten-en binnenste bewerkingen worden uitgevoerd, retourneert een nieuwe bewerking die de binnenste bewerking aan de buitenste bewerking heeft toegezien.
@@ -30,18 +30,18 @@ function ConjugatedByC<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>Invoer
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ
 
 De bewerking $U $ die moet worden gebruikt voor geconjugeerde $V $. Houd er rekening mee dat de buitenste bewerking $U $ moet worden adjointable, maar niet hoeft te worden bestuurd.
 
 
-### <a name="inneroperation--t--unit-ctl"></a>innerOperation: 'T = CTL van>- [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="inneroperation--t--unit--is-ctl"></a>innerOperation: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 De bewerking $V $ wordt geconjugeerd.
 
 
 
-## <a name="output--t--unit-ctl"></a>Output: 'T => CTL- [eenheid](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--t--unit--is-ctl"></a>Uitvoer: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 Een nieuwe bewerking waarvan de actie wordt vertegenwoordigd door de unitary $U ^ {\dagger} V U $.
 

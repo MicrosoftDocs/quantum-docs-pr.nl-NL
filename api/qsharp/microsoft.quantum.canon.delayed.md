@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delayed
 title: Vertraagde functie
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delayed
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 820a38c2b4de2e0151d55bd88fb4f69567182f6b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 863c63d0c1a50339e9d5b9fbe4729932b2706f32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216452"
 ---
 # <a name="delayed-function"></a>Vertraagde functie
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourneert een bewerking die een opgegeven bewerking toepast op het opgegeven argument.

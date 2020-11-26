@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpCA
 title: De functie UncurriedOpCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpCA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `CA` indicates that the operations are controllable and adjointable.
-ms.openlocfilehash: 6a0f2e1b345d0ba3ac5c779c5dc2bfffaf659a0b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 45526c0202e417213aab3fe7819827588e794e23
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216384"
 ---
 # <a name="uncurriedopca-function"></a>De functie UncurriedOpCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Op basis van een functie die bewerkingen retourneert, retourneert een nieuwe bewerking waarbij beide invoer als een tuple worden gebruikt.
@@ -31,13 +31,13 @@ function UncurriedOpCA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl + Adj))) :
 
 ## <a name="input"></a>Invoer
 
-### <a name="curriedop--t---u--unit-ctl--adj"></a>curriedOp: 'T-> ' U => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+### <a name="curriedop--t---u--unit--is-adj--ctl"></a>curriedOp: 'T-> ' U => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een functie waarmee bewerkingen worden geretourneerd.
 
 
 
-## <a name="output--tu--unit-ctl--adj"></a>Output: ('T, ' U) => van CTL- [eenheid](xref:microsoft.quantum.lang-ref.unit) en correctie
+## <a name="output--tu--unit--is-adj--ctl"></a>Output: ('T, ' U) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ + CTL
 
 Een nieuwe bewerking `op` , die `op(t, u)` gelijk is aan `(curriedOp(t))(u)` .
 

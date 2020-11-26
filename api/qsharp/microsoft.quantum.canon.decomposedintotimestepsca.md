@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: De functie DecomposedIntoTimeStepsCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: cfd563c1c6350255364de1e227442624acc98c22
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704268"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216537"
 ---
 # <a name="decomposedintotimestepsca-function"></a>De functie DecomposedIntoTimeStepsCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourneert een bewerking die de Trotter – Suzuki integrator implementeert voor een bepaalde bewerking.
@@ -35,7 +35,7 @@ function DecomposedIntoTimeStepsCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) =
 Het aantal bewerkingen dat moet worden uitgesplitst in tijd stappen.
 
 
-### <a name="op--intdoublet--unit-adj--ctl"></a>op: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), 't) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--intdoublet--unit--is-adj--ctl"></a>op: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), 't) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een bewerking die een index-invoer (type `Int` ) en een tijd invoer (type `Double` ) voor de ontleding accepteert.
 
@@ -47,7 +47,7 @@ Order 1 en zelfs orders 2, 4, 6,... worden momenteel ondersteund.
 
 
 
-## <a name="output--doublet--unit-adj--ctl"></a>Output: ([Double](xref:microsoft.quantum.lang-ref.double), 't) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+## <a name="output--doublet--unit--is-adj--ctl"></a>Output: ([Double](xref:microsoft.quantum.lang-ref.double), 't) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Retourneert een unitary-implementatie van de Trotter – Suzuki integrator, waarbij de eerste para meter `Double` de grootte van de integratie stap is en de tweede para meter is gericht op het doel.
 
@@ -66,6 +66,6 @@ Op dezelfde manier `order` retourneert een van `2` de tweede volg orde symmetris
 
 Hogere even waarden van `order` worden geïmplementeerd met de recursieve constructie van [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139).
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 - [*D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)
