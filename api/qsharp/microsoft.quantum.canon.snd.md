@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Snd
 title: De functie snd
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Snd
 qsharp.summary: Given a pair, returns its second element.
-ms.openlocfilehash: c05053b45d24c3398526d1269b90bb40d1e0ef27
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c935a2bc9e3f5ab32669feae2bfc0f2ebf57e744
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205317"
 ---
 # <a name="snd-function"></a>De functie snd
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourneert het tweede element aan de hand van een paar.

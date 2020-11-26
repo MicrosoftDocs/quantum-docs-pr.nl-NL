@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowA
 title: De functie OperationPowA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Raises an operation to a power. The modifier `A` indicates that the operation is adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation $U^m$ for a power $m$.
-ms.openlocfilehash: 66df354c6de7e48624712276882759043b78466c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35dc76a06fd4e8c819b785fd4c588f108c918326
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703929"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205776"
 ---
 # <a name="operationpowa-function"></a>De functie OperationPowA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een bewerking naar een stroom gegenereerd.
@@ -36,7 +36,7 @@ function OperationPowA<'T> (op : ('T => Unit is Adj), power : Int) : ('T => Unit
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--t--unit-adj"></a>op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is correctie
 
 Een bewerking $U $ die aangeeft dat de poort moet worden herhaald.
 
@@ -47,7 +47,7 @@ Het aantal keren dat $U $ moet worden herhaald.
 
 
 
-## <a name="output--t--unit-adj"></a>Output: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+## <a name="output--t--unit--is-adj"></a>Output: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is correctie
 
 Een nieuwe bewerking die $U ^ m $ vertegenwoordigt, waarbij $m = \texttt{Power} $.
 

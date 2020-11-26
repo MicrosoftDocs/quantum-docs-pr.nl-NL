@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowCA
 title: De functie OperationPowCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Raises an operation to a power. The modifier `A` indicates that the operation is controllable and adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation $U^m$ for a power $m$.
-ms.openlocfilehash: 753063452616747309e3e228ce8a702f4378c61f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 32de77cbd54cc8eeb8c4a967fd046dca709cd9ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703911"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205640"
 ---
 # <a name="operationpowca-function"></a>De functie OperationPowCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een bewerking naar een stroom gegenereerd.
@@ -36,7 +36,7 @@ function OperationPowCA<'T> (op : ('T => Unit is Ctl + Adj), power : Int) : ('T 
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--t--unit-ctl--adj"></a>op: 'T => CTL- [eenheid](xref:microsoft.quantum.lang-ref.unit) + correctie
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een bewerking $U $ die aangeeft dat de poort moet worden herhaald.
 
@@ -47,7 +47,7 @@ Het aantal keren dat $U $ moet worden herhaald.
 
 
 
-## <a name="output--t--unit-ctl--adj"></a>Output: 'T [=> CTL](xref:microsoft.quantum.lang-ref.unit) en correctie
+## <a name="output--t--unit--is-adj--ctl"></a>Output: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een nieuwe bewerking die $U ^ m $ vertegenwoordigt, waarbij $m = \texttt{Power} $.
 
