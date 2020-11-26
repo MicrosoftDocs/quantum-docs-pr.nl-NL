@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._PrepareClassification
 title: _PrepareClassification bewerking
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _PrepareClassification
 qsharp.summary: ''
-ms.openlocfilehash: d4bc61413c7aff44131d70a02560a9f0a59ae81c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: be7dd4266ceb67e130998e1c3592a7ec22c1791d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708023"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212168"
 ---
 # <a name="_prepareclassification-operation"></a>_PrepareClassification bewerking
 
 Naam ruimte: [micro soft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
 
 ```qsharp
-operation _PrepareClassification (encoder : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), model : Microsoft.Quantum.MachineLearning.SequentialModel, target : Qubit[]) : Unit
+operation _PrepareClassification (encoder : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), model : Microsoft.Quantum.MachineLearning.SequentialModel, target : Qubit[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Invoer
 
-### <a name="encoder--littleendian--unit-adj--ctl"></a>Encoder: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="encoder--littleendian--unit--is-adj--ctl"></a>Encoder: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 
 

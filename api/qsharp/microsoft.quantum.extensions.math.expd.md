@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.ExpD
 title: De functie ExpD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.expd".
-ms.openlocfilehash: fb8811ecf544255ea384923ef2c3741015fff3c1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 788a25eeccd7ff3341a1138f5a871d2305899f56
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213018"
 ---
 # <a name="expd-function"></a>De functie ExpD
 
 Naam ruimte: [micro soft. Quantum. Extensions. math](xref:Microsoft.Quantum.Extensions.Math)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
