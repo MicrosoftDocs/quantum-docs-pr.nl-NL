@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
 title: Bewerking ApplyIfElseRCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical result.
-ms.openlocfilehash: c48d75323f036ebce1a316382a05cd2578db47a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dfd1c16a25a2da507024813a380386c8f4e49d30
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218747"
 ---
 # <a name="applyifelserca-operation"></a>Bewerking ApplyIfElseRCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Past een van de twee unitary-bewerkingen toe, afhankelijk van de waarde van een klassiek resultaat.
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Als er een resultaat `result` is gegeven, wordt de bewerking `zeroOp` met `zeroI
 Het meet resultaat dat wordt gebruikt om te bepalen `zeroOp` of het `oneOp` wordt toegepast.
 
 
-### <a name="zeroop--t--unit-adj--ctl"></a>zeroOp: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="zeroop--t--unit--is-adj--ctl"></a>zeroOp: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 De unitary-bewerking die moet worden toegepast wanneer `result == Zero` .
 
@@ -49,7 +49,7 @@ De unitary-bewerking die moet worden toegepast wanneer `result == Zero` .
 De invoer die moet worden opgegeven `zeroOp` als `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj--ctl"></a>oneOp: ' U => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ en CTL
+### <a name="oneop--u--unit--is-adj--ctl"></a>oneOp: ' U => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 De unitary-bewerking die moet worden toegepast wanneer `result == One` .
 

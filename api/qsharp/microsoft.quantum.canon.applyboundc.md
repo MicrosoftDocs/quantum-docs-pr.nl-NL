@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyBoundC
 title: Bewerking ApplyBoundC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyBoundC
 qsharp.summary: ''
-ms.openlocfilehash: 21a7cfb222ee43631807a83d09724bcd22d83126
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e53a42ad4c1b3187ae51f78fbf555a273286c03d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219230"
 ---
 # <a name="applyboundc-operation"></a>Bewerking ApplyBoundC
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyBoundC<'T> (operations : ('T => Unit is Ctl)[], target : 'T) : Unit
+operation ApplyBoundC<'T> (operations : ('T => Unit is Ctl)[], target : 'T) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Invoer
 
-### <a name="operations--t--unit-ctl"></a>bewerkingen: 'T = CTL van>- [eenheid](xref:microsoft.quantum.lang-ref.unit) []
+### <a name="operations--t--unit--is-ctl"></a>bewerkingen: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL []
 
 
 

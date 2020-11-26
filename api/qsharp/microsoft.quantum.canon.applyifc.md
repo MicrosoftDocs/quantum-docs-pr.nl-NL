@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfC
 title: Bewerking ApplyIfC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfC
 qsharp.summary: Applies a controllable operation conditioned on a classical bit.
-ms.openlocfilehash: e16254154909eb844164538acb7b82fedc11f86a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35430cb7cf491965b7b69ace6d3f41599dbadd51
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705356"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218713"
 ---
 # <a name="applyifc-operation"></a>Bewerking ApplyIfC
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een te bewerkte bewerking op een klassieke bit toegepast.
 
 ```qsharp
-operation ApplyIfC<'T> (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit
+operation ApplyIfC<'T> (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit is Ctl
 ```
 
 
@@ -35,7 +35,7 @@ Het achtervoegsel `C` geeft aan dat de bewerking die moet worden toegepast, kan 
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--t--unit-ctl"></a>op: 'T => CTL- [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 Een bewerking die voorwaardelijk moet worden toegepast.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped3
 title: De functie Zipped3
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Zipped3
 qsharp.summary: Given three arrays, returns a new array of 3-tuples such that each 3-tuple contains an element from each original array.
-ms.openlocfilehash: c0535ca4d6e0de13bf809a21e69d100dcb798d1f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 37fda4082a46870270414649f807659fa561962b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219682"
 ---
 # <a name="zipped3-function"></a>De functie Zipped3
 
 Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Als er drie matrices zijn opgegeven, wordt een nieuwe matrix van 3-Tuples geretourneerd, zodat elke 3-tuple een element uit elke oorspronkelijke matrix bevat.

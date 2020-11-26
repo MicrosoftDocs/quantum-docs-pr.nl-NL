@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: Bewerking ApplyIfA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfA
 qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
-ms.openlocfilehash: 279a069176ee24ed83406f72170462bf58c790d9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d2880bbb95ebaf621ef9e5885051b94f32a3f1cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218764"
 ---
 # <a name="applyifa-operation"></a>Bewerking ApplyIfA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een adjointable bewerking toegepast die is voor bereid op een klassieke bit.
 
 ```qsharp
-operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ Het achtervoegsel `A` geeft aan dat de bewerking die moet worden toegepast, adjo
 
 ## <a name="input"></a>Invoer
 
-### <a name="op--t--unit-adj"></a>op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is correctie
 
 Een bewerking die voorwaardelijk moet worden toegepast.
 

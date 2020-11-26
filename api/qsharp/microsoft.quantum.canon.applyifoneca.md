@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneCA
 title: Bewerking ApplyIfOneCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being one.
-ms.openlocfilehash: 973dd3c5f9f3e9ad03c0626a38779f499b7ce657
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 29801ed0bec08d0ab818f237feb17c2a2a7af1e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218577"
 ---
 # <a name="applyifoneca-operation"></a>Bewerking ApplyIfOneCA
 
 Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een unitary-bewerking toegepast op een klassieke resultaat waarde die één.
 
 ```qsharp
-operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Het achtervoegsel `CA` geeft aan dat de bewerking die moet worden toegepast, uni
 Een meet resultaat dat bepaalt of op wordt toegepast of niet.
 
 
-### <a name="op--t--unit-adj--ctl"></a>op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL
 
 Een bewerking die voorwaardelijk moet worden toegepast.
 
