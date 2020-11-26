@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._Unnegate
 title: Functie _Unnegate
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _Unnegate
 qsharp.summary: ''
-ms.openlocfilehash: c435db25e5302c180fb478c4810d25dbd9006454
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1a2aef7db67df9890d1dfa4b6b0e370c51db4941
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706909"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212032"
 ---
-# <a name="_unnegate-function"></a><span data-ttu-id="7244e-102">Functie _Unnegate</span><span class="sxs-lookup"><span data-stu-id="7244e-102">_Unnegate function</span></span>
+# <a name="_unnegate-function"></a><span data-ttu-id="b75aa-102">Functie _Unnegate</span><span class="sxs-lookup"><span data-stu-id="b75aa-102">_Unnegate function</span></span>
 
-<span data-ttu-id="7244e-103">Naam ruimte: [micro soft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="7244e-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="b75aa-103">Naam ruimte: [micro soft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="b75aa-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="7244e-104">Pakket [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="7244e-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="b75aa-104">Pakket: [micro soft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="b75aa-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function _Unnegate (negLocs : Int[], coefficients : Microsoft.Quantum.Math.Compl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="7244e-105">Invoer</span><span class="sxs-lookup"><span data-stu-id="7244e-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="b75aa-105">Invoer</span><span class="sxs-lookup"><span data-stu-id="b75aa-105">Input</span></span>
 
-### <a name="neglocs--int"></a><span data-ttu-id="7244e-106">negLocs: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="7244e-106">negLocs : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
-
-
-
-
-### <a name="coefficients--complexpolar"></a><span data-ttu-id="7244e-107">coëfficiënten: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="7244e-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
+### <a name="neglocs--int"></a><span data-ttu-id="b75aa-106">negLocs: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="b75aa-106">negLocs : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
 
 
 
+### <a name="coefficients--complexpolar"></a><span data-ttu-id="b75aa-107">coëfficiënten: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="b75aa-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
-## <a name="output--complexpolar"></a><span data-ttu-id="7244e-108">Uitvoer: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="7244e-108">Output : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
+
+
+
+
+## <a name="output--complexpolar"></a><span data-ttu-id="b75aa-108">Uitvoer: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="b75aa-108">Output : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
