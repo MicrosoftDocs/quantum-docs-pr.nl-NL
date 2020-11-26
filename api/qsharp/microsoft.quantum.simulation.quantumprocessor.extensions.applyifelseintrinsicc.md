@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicC
 title: Bewerking ApplyIfElseIntrinsicC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicC
 qsharp.summary: ''
-ms.openlocfilehash: 178d4b704d84090f1f8592b857c3da659e5c50bb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9cd58f2fd103237213ef386fc6af1451e48b7cec
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228879"
 ---
 # <a name="applyifelseintrinsicc-operation"></a>Bewerking ApplyIfElseIntrinsicC
 
 Naam ruimte: [micro soft. Quantum. simulatie. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit
+operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit is Ctl
 ```
 
 
@@ -35,12 +35,12 @@ operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (U
 
 
 
-### <a name="onresultzeroop--unit--unit-ctl"></a>onResultZeroOp: CTL [eenheids](xref:microsoft.quantum.lang-ref.unit) => [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="onresultzeroop--unit--unit--is-ctl"></a>onResultZeroOp: [eenheids](xref:microsoft.quantum.lang-ref.unit) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 
 
 
-### <a name="onresultoneop--unit--unit-ctl"></a>onResultOneOp: CTL [eenheids](xref:microsoft.quantum.lang-ref.unit) => [eenheid](xref:microsoft.quantum.lang-ref.unit)
+### <a name="onresultoneop--unit--unit--is-ctl"></a>onResultOneOp: [eenheids](xref:microsoft.quantum.lang-ref.unit) => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is CTL
 
 
 
