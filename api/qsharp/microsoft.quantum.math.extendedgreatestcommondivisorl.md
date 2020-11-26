@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
 title: De functie ExtendedGreatestCommonDivisorL
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ExtendedGreatestCommonDivisorL
 qsharp.summary: Computes a tuple $(u,v)$ such that $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, where $\operatorname{GCD}$ is $a$ greatest common divisor of $a$ and $b$. The GCD is always positive.
-ms.openlocfilehash: e671405045d6d2587a8c6ccbac4ae3402f92f722
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: abbbd367859952180f181a245ca0754646529b18
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210706"
 ---
 # <a name="extendedgreatestcommondivisorl-function"></a>De functie ExtendedGreatestCommonDivisorL
 
 Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hiermee wordt een tuple $ (u, v) $ zodanig berekend dat $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, waarbij $ \operatorname{GCD} $ $a $ grootste gemene deler van $a $ en $b $ is. De GCD is altijd positief.
@@ -45,6 +45,6 @@ het tweede getal waarvan de uitgebreide grootste algemene deler wordt berekend
 
 Tuple $ (u, v) $ met de eigenschap $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $.
 
-## <a name="references"></a>Naslaginformatie
+## <a name="references"></a>Referenties
 
 - Deze implementatie is gebaseerd op https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm

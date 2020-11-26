@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Cosh
 title: Functie cosh
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Cosh
 qsharp.summary: Returns the hyperbolic cosine of the specified angle.
-ms.openlocfilehash: d2ff475f475c416a190f1653a7137046d07b18ea
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cbf549dcfb5ae500428a6f3a0cbd4f1329d83068
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708569"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210910"
 ---
 # <a name="cosh-function"></a>Functie cosh
 
 Naam ruimte: [micro soft. Quantum. math](xref:Microsoft.Quantum.Math)
 
-Pakket [](https://nuget.org/packages/)
+Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourneert de hyperbolische cosinus van de opgegeven hoek.
