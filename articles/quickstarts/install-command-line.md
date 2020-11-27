@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376419"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228726"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Ontwikkelen met Q#-toepassingen in een IDE
 
@@ -63,7 +63,7 @@ Ga als volgt te werk om een nieuw project te maken:
 
 1. Klik op **Weergave** -> **Opdrachtpallet** en selecteer **Q#: Nieuw project maken**.
 2. Klik op **Zelfstandige consoletoepassing**.
-3. Ga naar de locatie waar het project moet worden opgeslagen en klik op **Project maken**.
+3. Navigeer naar de locatie om het project op te slaan. Voer de projectnaam in en klik op **Project maken**.
 4. Klik rechtsonder op **Nieuw project openen...** als het project is gemaakt.
 
 Controleer het project. Als het goed is, ziet u een bronbestand met de naam `Program.qs`. Dit is een Q#-programma dat een eenvoudige bewerking definieert waarmee een bericht in de console wordt weergegeven.
