@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691878"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318487"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK-resources (Quantum Development Kit) estimator
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 De resources Estimator traceert de volgende metrische gegevens:
 
-|Gegevens|Beschrijving|
+|Metrisch|Beschrijving|
 |----|----|
 |__CNOT__    |Het aantal uitgevoerde `CNOT` bewerkingen (ook wel beheerde Pauli X-bewerkingen genoemd).|
 |__QubitClifford__ |Het aantal uitvoeringen van een afzonderlijke Qubit-Clifford-en Pauli-bewerking.|
@@ -131,7 +131,7 @@ De resources Estimator traceert de volgende metrische gegevens:
 |__R__    |Het aantal uitvoeringen van een Qubit draaiing, met uitzonde ring van `T` Clifford-en Pauli-bewerkingen.  |
 |__T__    |Het aantal uitvoeringen van `T` bewerkingen en hun conjugaat, waaronder de `T` bewerkingen, T_x = h. t. h en T_y = hy. t. hy.  |
 |__Diepga__|Diepte van het Quantum circuit dat door de Q# bewerking wordt uitgevoerd (Zie [hieronder](#depth-width-and-qubitcount)). Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
-|__Breedte__|De breedte van het Quantum circuit dat door de bewerking wordt uitgevoerd Q# (Zie [hieronder](#depth-width-and-qubitcount)). Standaard telt alleen Gates over de diepte waarde `T` . Zie [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)voor meer informatie.   |
+|__Breedte__|De breedte van het Quantum circuit dat door de bewerking wordt uitgevoerd Q# (Zie [hieronder](#depth-width-and-qubitcount)). Standaard telt alleen Gates over de diepte waarde `T` . Zie [width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)(Engelstalig) voor meer informatie.   |
 |__QubitCount__    |De ondergrens voor het maximum aantal toegewezen qubits tijdens het uitvoeren van de Q# bewerking. Deze metrische gegevens zijn mogelijk niet compatibel met de __diepte__ (zie hieronder).  |
 |__BorrowedWidth__    |Het maximale aantal qubits dat in de bewerking is geleend Q# .  |
 
