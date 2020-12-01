@@ -1,0 +1,20 @@
+- name: Instructies in Q#
+  href: index.md
+- name: Bindingsbereiken
+  href: bindingscopes.md
+- name: Aanroep-instructies
+  href: callstatements.md
+- name: Retourneren en beëindigen
+  href: returnsandtermination.md
+- name: Variabeledeclaratie en hertoewijzing
+  href: variabledeclarationsandreassignments.md
+- name: Iteraties
+  href: iterations.md
+- name: Voorwaardelijke lussen
+  href: conditionalloops.md
+- name: Voorwaardelijke vertakking
+  href: conditionalbranching.md
+- name: Vervoegingen
+  href: conjugations.md
+- name: Kwantumgeheugenbeheer
+  href: quantummemorymanagement.md
