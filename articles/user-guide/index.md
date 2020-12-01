@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771382"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231754"
 ---
 # <a name="the-no-locq-user-guide"></a>Q#-gebruikershandleiding
 
 Welkom bij de Q#-gebruikershandleiding. 
 
-In de verschillende delen van deze handleiding worden de belangrijkste concepten van de Q#-taal beschreven en vindt u alle informatie die u nodig hebt om kwantumprogramma's te schrijven.
+In de verschillende onderwerpen van deze handleiding introduceren we een aantal basisbeginselen voor het ontwikkelen van kwantumprogramma's met Q#.
+
+We verwijzen naar de [Q#-taalhandleiding](xref:microsoft.quantum.qsharp.index) voor een volledige specificatie en documentatie van de Q#-kwantumcomputertaal. 
 
 ## <a name="user-guide-contents"></a>Inhoud van de gebruikershandleiding
 
-- [Basisprincipes van Q#](xref:microsoft.quantum.guide.basics): een inleidend overzicht van het doel en de functionaliteit van de Q#-programmeertaal. 
+- [Q#-programma's](xref:microsoft.quantum.guide.programs): Een korte inleiding tot kwantumprogramma's in Q#. 
 
 - [Manieren om een Q#-programma uit te voeren](xref:microsoft.quantum.guide.host-programs): beschrijft hoe een Q#-programma wordt uitgevoerd, en biedt een overzicht van de verschillende manieren waarop u het programma kunt aanroepen: vanuit de opdrachtregel, in Q# Jupyter Notebooks, of vanuit een klassiek hostprogramma dat in Python of een .NET-taal is geschreven.
-
-### <a name="no-locq-language"></a>Q#-taal
-
-- [Typen in Q#](xref:microsoft.quantum.guide.types): hierin wordt het Q#-typemodel gegeven en een beschrijving van de syntaxis om de typen op te geven en ermee te werken.
-
-- [Type-expressies](xref:microsoft.quantum.guide.expressions): details over hoe u waarden opgeeft, ernaar verwijst, combineert en ermee werkt voor elk type in Q#. 
-
-### <a name="using-no-locq"></a>Q# gebruiken
-
-- [Q#-bestandsstructuur](xref:microsoft.quantum.guide.filestructure): hierin worden de structuur en syntaxis van een `*.qs` Q#-bestand beschreven.
-
-- [Bewerkingen en functies](xref:microsoft.quantum.guide.operationsfunctions): beschrijft de twee aanroepbare typen Q#-taal: *bewerkingen*, waaronder acties op qubit-registers en *functies*, die alleen werken met klassieke informatie. 
-    Hier ziet u hoe ze worden gedefinieerd en aangeroepen, inclusief de beheerde versies van kwantumbewerkingen.
-
-- [Variabelen](xref:microsoft.quantum.guide.variables): beschrijven de rol van variabelen binnen Q#-programma's en hoe u er effectief gebruik van maakt. 
-    U kunt bijvoorbeeld informatie vinden over bindingsbereiken, evenals de verschillen tussen onveranderlijke en veranderlijke variabelen en hoe u deze toewijst of opnieuw toewijst.
-
-- [Werken met qubits](xref:microsoft.quantum.guide.qubits): beschrijven de functies van Q# die u kunt gebruiken om te werken met afzonderlijke qubits en systemen van qubits, met name het toewijzen ervan, het uitvoeren van bewerkingen en het meten ervan. 
-
-- [Controlestroom](xref:microsoft.quantum.guide.controlflow): Beschrijft uitgebreid de programmeerstroompatronen die beschikbaar zijn in Q#. Deze omvatten veel standaardtechnieken (zoals voorwaardelijke verwerking, *voor* lussen en *tijdens* lussen) en het patroon voor de kwantumspecifieke *herhalingsbewerking*.
 
 - [Testen en foutopsporing](xref:microsoft.quantum.guide.testingdebugging): hierin wordt een aantal technieken uitgelegd om ervoor te zorgen dat uw code doet wat die moet doen. 
     Als gevolg van de algemene matheid van kwantuminformatie, kunnen er voor het opsporen van fouten in een kwantumprogramma gespecialiseerde technieken nodig zijn. 

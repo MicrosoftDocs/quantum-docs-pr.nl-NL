@@ -1,0 +1,32 @@
+- name: Expressies in Q#
+  href: index.md
+- name: Voorrang en associativiteit
+  href: precedenceandassociativity.md
+- name: Operators
+  items:
+    - name: Expressies voor kopiëren en bijwerken
+      href: copyandupdateexpressions.md
+    - name: Voorwaardelijke expressies
+      href: conditionalexpressions.md
+    - name: Vergelijkende expresssies
+      href: comparativeexpressions.md
+    - name: Logische expressies
+      href: logicalexpressions.md
+    - name: 'Bitwise-expressies:'
+      href: bitwiseexpressions.md
+    - name: Rekenkundige expressies
+      href: arithmeticexpressions.md
+    - name: Samenvoegingen
+      href: concatenation.md
+- name: Modificators en combinators
+  items:
+    - name: Gedeeltelijke toepassing
+      href: partialapplication.md
+    - name: Functor-toepassing
+      href: functorapplication.md
+    - name: Expressies voor itemtoegang
+      href: itemaccessexpressions.md
+- name: Contextuele expressies
+  href: contextualexpressions.md
+- name: Letterlijke waarden en standaardwaarden
+  href: valueliterals.md

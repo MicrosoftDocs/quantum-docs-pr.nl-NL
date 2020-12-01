@@ -1,13 +1,13 @@
 - name: Overzicht/inhoud
   href: index.md
-- name: Q#-basis
-  href: basics.md
+- name: Q#-programma's
+  href: programs.md
 - name: Manieren om een Q#-programma uit te voeren
   href: host-programs.md
-- name: Q#-taal
+- name: Testen en foutopsporing
+  href: testing-debugging.md
+- name: Q#-taalhandleiding
   href: language/toc.yml
-- name: Q# gebruiken
-  href: using-qsharp/toc.yml
 - name: Simulators en resourceschattingen
   href: machines/toc.yml
 - name: Q#-bibliotheken
