@@ -1,3 +1,5 @@
+- href: index.md
+  name: IQ# Magic-opdrachten
 - href: azure.connect.md
   name: Magic-opdracht %azure.connect
 - href: azure.execute.md
