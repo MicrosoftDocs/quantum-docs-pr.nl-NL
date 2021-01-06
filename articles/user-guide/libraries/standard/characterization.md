@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692146"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940883"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum karakte Rise ring en statistieken #
 
@@ -56,7 +56,7 @@ We benadrukken dit door een korte beschrijving te geven van de iteratieve fase s
 
 Als er een invoer status wordt opgegeven die geen eigenstate is, dat wil zeggen dat als $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $, het proces voor fase schatting niet-deterministisch de Quantum status naar een enkele energie-eigenstate omleidt.  De eigenstate waarmee deze uiteindelijk wordt geconvergeerd, is de eigenstate die het meest waarschijnlijk is om de waargenomen te produceren `Result` .
 
-In het bijzonder voert één stap van PE de volgende niet-unitary-trans formatie uit voor een status \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ SQRT {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \_ \_ }}.
+In het bijzonder voert één stap van PE de volgende niet-unitary-trans formatie uit voor een status \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ SQRT {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j)} \_ \_ }.
 \end{align} omdat dit proces wordt herhaald over meerdere `Result` waarden, wordt eigenstates die geen maximale waarden hebben van $ \ prod_k \pr (\Text{result} \_ k | \phi \_ j) $ exponentieel onderdrukt.
 Als gevolg hiervan wordt het debehandelings proces meestal geconvergeerd aan statussen met één eigenvalue als de experimenten goed worden gekozen.
 
@@ -153,7 +153,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 De `bitsPrecision` invoer is uniek voor `RobustPhaseEstimation` , maar `oracle` is `eigenstate` gebruikelijk.
-Zo kan een bewerking, zoals gezien in **H2Sample** , een iteratieve fase schattings algoritme accepteren met een invoer van het formulier `(DiscreteOracle, Qubit[]) => Unit` zodat een gebruiker wille keurige fase schattings algoritmen kan opgeven:
+Zo kan een bewerking, zoals gezien in **H2Sample**, een iteratieve fase schattings algoritme accepteren met een invoer van het formulier `(DiscreteOracle, Qubit[]) => Unit` zodat een gebruiker wille keurige fase schattings algoritmen kan opgeven:
 
 ```qsharp
 operation H2EstimateEnergy(
