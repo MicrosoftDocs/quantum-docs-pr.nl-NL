@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692241"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858336"
 ---
 # <a name="data-structures-and-modeling"></a>Gegevens structuren en model lering #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracle ##
 
 In de [fase schatting](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) en [amplitude versterking](https://en.wikipedia.org/wiki/Amplitude_amplification) wordt het concept van een Oracle regel matig weer gegeven.
-Hier verwijst de term Oracle naar een blackbox-Quantum-subroutine die wordt toegepast op een set qubits en die het antwoord als een fase retourneert.
+Hier verwijst de term Oracle naar een Quantum subroutine die op een set qubits reageert en het antwoord als een fase retourneert.
 Deze subroutine kan vaak worden beschouwd als een invoer voor een Quantum algoritme die de Oracle accepteert, naast enkele andere para meters, en past een reeks Quantum bewerkingen toe en behandelt een aanroep naar deze Quantum subroutine alsof het een fundamenteel poort is.
 Uiteraard moet, om het grotere algoritme te implementeren, een concreet ontbinding van de Oracle in fundamentele Gates worden gegeven, maar een dergelijke ontbinding is niet nodig om inzicht te krijgen in het algoritme dat de Oracle aanroept.
 In Q# wordt deze abstractie vertegenwoordigd door gebruik te maken van die bewerkingen waarden voor de eerste klasse, zodat de bewerkingen kunnen worden door gegeven aan implementaties van Quantum algoritmen in een Black Box-vorm.

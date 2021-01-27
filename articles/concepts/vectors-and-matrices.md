@@ -1,6 +1,6 @@
 ---
 Titel: vectoren en matrices in Quantum Computing Description: Leer de basis beginselen van het werken met vectoren en matrices.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ Auteur: QuantumWriter UID: micro soft. Quantum. concepten. vectoren MS. Author: 
 
 # <a name="vectors-and-matrices"></a>Vectoren en matrices
 
-Enige kennis met vectoren en matrices is essentieel voor het begrijpen van Quantum Computing. Hieronder vindt u een korte inleiding en geïnteresseerde lezers worden aanbevolen om een standaard referentie te lezen op lineaire algebra zoals *Strang, G. (1993). Inleiding tot lineaire algebra (vol. 3). Wellesley, MA: Wellesley-Cambridge Press* of een online verwijzing zoals [lineair algebra](http://joshua.smcvt.edu/linearalgebra/).
+Enige kennis met vectoren en matrices is essentieel voor het begrijpen van Quantum Computing. Hieronder vindt u een korte inleiding en geïnteresseerde lezers worden aanbevolen om een standaard referentie te lezen op lineaire algebra zoals *Strang, G. (1993). Inleiding tot lineaire algebra (vol. 3). Wellesley, MA: Wellesley-Cambridge Press* of een online verwijzing zoals [lineaire algebra](http://joshua.smcvt.edu/linearalgebra/).
 
 Een kolom vector (of alleen [*Vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ van dimensie (of grootte) $ n $ is een verzameling van $ n $ complexe getallen $ (v_1, v_2, \ldots, v_n), $ gerangschikt als een kolom:
 

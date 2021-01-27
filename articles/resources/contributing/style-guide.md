@@ -4,17 +4,17 @@ description: Meer informatie over de naamgeving, invoer, documentatie en opmaak 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231652"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852748"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stijl gids #
 ## <a name="general-conventions"></a>Algemene conventies ##
@@ -68,7 +68,7 @@ Andere woorden kunnen ook nuttig zijn in dit geval, zoals in `IterateThroughCart
 | Toepassen | Een bewerking die is opgegeven als invoer, wordt aangeroepen |
 | Assert | Een hypo these over het resultaat van een mogelijke quantum meting wordt gecontroleerd door een simulator |
 | Schatting | Er wordt een klassieke waarde geretourneerd die een schatting vertegenwoordigt die uit een of meer metingen is getrokken |
-| Measure | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
+| Meting | Er wordt een quantum meting uitgevoerd en het resultaat wordt geretourneerd aan de gebruiker |
 | Voorbereiden | Een bepaald REGI ster van qubits wordt geïnitialiseerd in een bepaalde status |
 | Voorbeeld | Er wordt een klassieke waarde geretourneerd op wille keurige wijze van distributie |
 
