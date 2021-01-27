@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: Bewerking RobustPhaseEstimation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4b37c8275a5b2aee8534bacc5831281aa498b57d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216078"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851804"
 ---
 # <a name="robustphaseestimation-operation"></a>Bewerking RobustPhaseEstimation
 
@@ -54,6 +54,6 @@ Een Quantum registratie waarmee $ wordt $U. Als er een eigenstate $ \ket{\phi} $
 
 In de limiet van een groot aantal query's Cramer-Rao lagere grenzen voor de standaard afwijking van de schatting van $ \phi $ voldoen aan $ \sigma \ge 2 \pi/\Text{# van query's} $.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - Robuuste kalibratie van een universele Single-Qubit Gate-Set via een robuuste fase schatting Shelby Kimmel, Guang Hao low, Theodore J. Yoder https://arxiv.org/abs/1502.02677
