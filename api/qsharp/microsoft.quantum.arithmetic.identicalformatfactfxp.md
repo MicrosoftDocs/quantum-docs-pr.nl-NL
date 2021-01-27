@@ -1,40 +1,40 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
 title: De functie IdenticalFormatFactFxP
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IdenticalFormatFactFxP
 qsharp.summary: Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.
-ms.openlocfilehash: d19e29d4786a728c2105dc55673c49b2885176f8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e9fed13348583c8f403b733dea787b42856816c1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223031"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843177"
 ---
-# <a name="identicalformatfactfxp-function"></a><span data-ttu-id="f1253-102">De functie IdenticalFormatFactFxP</span><span class="sxs-lookup"><span data-stu-id="f1253-102">IdenticalFormatFactFxP function</span></span>
+# <a name="identicalformatfactfxp-function"></a><span data-ttu-id="928ce-102">De functie IdenticalFormatFactFxP</span><span class="sxs-lookup"><span data-stu-id="928ce-102">IdenticalFormatFactFxP function</span></span>
 
-<span data-ttu-id="f1253-103">Naam ruimte: [micro soft. Quantum. aritmetische](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="f1253-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
+<span data-ttu-id="928ce-103">Naam ruimte: [micro soft. Quantum. aritmetische](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="928ce-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
 
-<span data-ttu-id="f1253-104">Pakket: [micro soft. Quantum. numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span><span class="sxs-lookup"><span data-stu-id="f1253-104">Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span></span>
+<span data-ttu-id="928ce-104">Pakket: [micro soft. Quantum. numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span><span class="sxs-lookup"><span data-stu-id="928ce-104">Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span></span>
 
 
-<span data-ttu-id="f1253-105">Assert dat alle vaste-komma getallen in de gegeven matrix identieke punt posities en Qubit-nummers hebben.</span><span class="sxs-lookup"><span data-stu-id="f1253-105">Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.</span></span>
+<span data-ttu-id="928ce-105">Assert dat alle vaste-komma getallen in de gegeven matrix identieke punt posities en Qubit-nummers hebben.</span><span class="sxs-lookup"><span data-stu-id="928ce-105">Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.</span></span>
 
 ```qsharp
 function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f1253-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="f1253-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="928ce-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="928ce-106">Input</span></span>
 
-### <a name="fixedpoints--fixedpoint"></a><span data-ttu-id="f1253-107">fixedPoints: [FixedPoint](xref:Microsoft.Quantum.Arithmetic.FixedPoint)[]</span><span class="sxs-lookup"><span data-stu-id="f1253-107">fixedPoints : [FixedPoint](xref:Microsoft.Quantum.Arithmetic.FixedPoint)[]</span></span>
+### <a name="fixedpoints--fixedpoint"></a><span data-ttu-id="928ce-107">fixedPoints: [FixedPoint](xref:Microsoft.Quantum.Arithmetic.FixedPoint)[]</span><span class="sxs-lookup"><span data-stu-id="928ce-107">fixedPoints : [FixedPoint](xref:Microsoft.Quantum.Arithmetic.FixedPoint)[]</span></span>
 
-<span data-ttu-id="f1253-108">Matrix van Quantum vaste-komma getallen die worden gecontroleerd op compatibiliteit (met behulp van beweringen).</span><span class="sxs-lookup"><span data-stu-id="f1253-108">Array of quantum fixed-point numbers that will be checked for compatibility (using assertions).</span></span>
+<span data-ttu-id="928ce-108">Matrix van Quantum vaste-komma getallen die worden gecontroleerd op compatibiliteit (met behulp van beweringen).</span><span class="sxs-lookup"><span data-stu-id="928ce-108">Array of quantum fixed-point numbers that will be checked for compatibility (using assertions).</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="f1253-109">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f1253-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="928ce-109">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="928ce-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
