@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zip4
 title: De functie Zip4
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,73 +13,73 @@ qsharp.summary: >-
 
 
   Given four arrays, returns a new array of 4-tuples such that each 4-tuple contains an element from each original array.
-ms.openlocfilehash: c9dd07ddc63f1d75952d3841997eed0f78e054b9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 534721e6544a31f6f5d27db0c077e9d8c574aecd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219784"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850885"
 ---
-# <a name="zip4-function"></a><span data-ttu-id="f148f-102">De functie Zip4</span><span class="sxs-lookup"><span data-stu-id="f148f-102">Zip4 function</span></span>
+# <a name="zip4-function"></a><span data-ttu-id="7f5de-102">De functie Zip4</span><span class="sxs-lookup"><span data-stu-id="7f5de-102">Zip4 function</span></span>
 
-<span data-ttu-id="f148f-103">Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="f148f-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="7f5de-103">Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="7f5de-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="f148f-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="f148f-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="7f5de-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="7f5de-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="f148f-105">Zip4 is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="f148f-105">Zip4 has been deprecated.</span></span> <span data-ttu-id="f148f-106">Gebruik <xref:Microsoft.Quantum.Arrays.Zipped4> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="f148f-106">Please use <xref:Microsoft.Quantum.Arrays.Zipped4> instead.</span></span>
+> <span data-ttu-id="7f5de-105">Zip4 is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="7f5de-105">Zip4 has been deprecated.</span></span> <span data-ttu-id="7f5de-106">Gebruik <xref:Microsoft.Quantum.Arrays.Zipped4> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="7f5de-106">Please use <xref:Microsoft.Quantum.Arrays.Zipped4> instead.</span></span>
 
-<span data-ttu-id="f148f-107">Gegeven vier matrices retourneert een nieuwe matrix van 4 Tuples, zodat elke 4-tuple een element uit elke oorspronkelijke matrix bevat.</span><span class="sxs-lookup"><span data-stu-id="f148f-107">Given four arrays, returns a new array of 4-tuples such that each 4-tuple contains an element from each original array.</span></span>
+<span data-ttu-id="7f5de-107">Gegeven vier matrices retourneert een nieuwe matrix van 4 Tuples, zodat elke 4-tuple een element uit elke oorspronkelijke matrix bevat.</span><span class="sxs-lookup"><span data-stu-id="7f5de-107">Given four arrays, returns a new array of 4-tuples such that each 4-tuple contains an element from each original array.</span></span>
 
 ```qsharp
 function Zip4<'T1, 'T2, 'T3, 'T4> (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f148f-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="f148f-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7f5de-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="7f5de-108">Input</span></span>
 
-### <a name="first--t1"></a><span data-ttu-id="f148f-109">eerst: 'T 1 []</span><span class="sxs-lookup"><span data-stu-id="f148f-109">first : 'T1[]</span></span>
+### <a name="first--t1"></a><span data-ttu-id="7f5de-109">eerst: 'T 1 []</span><span class="sxs-lookup"><span data-stu-id="7f5de-109">first : 'T1[]</span></span>
 
-<span data-ttu-id="f148f-110">Een matrix met waarden voor het eerste element van elke tuple.</span><span class="sxs-lookup"><span data-stu-id="f148f-110">An array containing values for the first element of each tuple.</span></span>
-
-
-### <a name="second--t2"></a><span data-ttu-id="f148f-111">seconde: 'T 2 []</span><span class="sxs-lookup"><span data-stu-id="f148f-111">second : 'T2[]</span></span>
-
-<span data-ttu-id="f148f-112">Een matrix met waarden voor het tweede element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="f148f-112">An array containing values for the second element of each tuple.</span></span>
+<span data-ttu-id="7f5de-110">Een matrix met waarden voor het eerste element van elke tuple.</span><span class="sxs-lookup"><span data-stu-id="7f5de-110">An array containing values for the first element of each tuple.</span></span>
 
 
-### <a name="third--t3"></a><span data-ttu-id="f148f-113">derde: 'T 3 []</span><span class="sxs-lookup"><span data-stu-id="f148f-113">third : 'T3[]</span></span>
+### <a name="second--t2"></a><span data-ttu-id="7f5de-111">seconde: 'T 2 []</span><span class="sxs-lookup"><span data-stu-id="7f5de-111">second : 'T2[]</span></span>
 
-<span data-ttu-id="f148f-114">Een matrix met waarden voor het derde element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="f148f-114">An array containing values for the third element of each tuple.</span></span>
-
-
-### <a name="fourth--t4"></a><span data-ttu-id="f148f-115">vierde: 'T 4 []</span><span class="sxs-lookup"><span data-stu-id="f148f-115">fourth : 'T4[]</span></span>
-
-<span data-ttu-id="f148f-116">Een matrix met waarden voor het vierde element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="f148f-116">An array containing values for the fourth element of each tuple.</span></span>
+<span data-ttu-id="7f5de-112">Een matrix met waarden voor het tweede element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="7f5de-112">An array containing values for the second element of each tuple.</span></span>
 
 
+### <a name="third--t3"></a><span data-ttu-id="7f5de-113">derde: 'T 3 []</span><span class="sxs-lookup"><span data-stu-id="7f5de-113">third : 'T3[]</span></span>
 
-## <a name="output--t1t2t3t4"></a><span data-ttu-id="f148f-117">Uitvoer: (niet 1, 'T 2, niet 3, niet 4) []</span><span class="sxs-lookup"><span data-stu-id="f148f-117">Output : ('T1,'T2,'T3,'T4)[]</span></span>
+<span data-ttu-id="7f5de-114">Een matrix met waarden voor het derde element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="7f5de-114">An array containing values for the third element of each tuple.</span></span>
 
-<span data-ttu-id="f148f-118">Een matrix met vier Tuples van het formulier `(first[idx], second[idx], third[idx], fourth[idx])` voor elke `idx` .</span><span class="sxs-lookup"><span data-stu-id="f148f-118">An array containing 4-tuples of the form `(first[idx], second[idx], third[idx], fourth[idx])` for each `idx`.</span></span> <span data-ttu-id="f148f-119">Als de vier matrices een lengte hebben die niet even groot is, is de uitvoer zo lang als de kortste van de invoer.</span><span class="sxs-lookup"><span data-stu-id="f148f-119">If the four arrays are not of equal length, the output will be as long as the shorter of the inputs.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="f148f-120">Type parameters</span><span class="sxs-lookup"><span data-stu-id="f148f-120">Type Parameters</span></span>
+### <a name="fourth--t4"></a><span data-ttu-id="7f5de-115">vierde: 'T 4 []</span><span class="sxs-lookup"><span data-stu-id="7f5de-115">fourth : 'T4[]</span></span>
 
-### <a name="t1"></a><span data-ttu-id="f148f-121">Niet 1</span><span class="sxs-lookup"><span data-stu-id="f148f-121">'T1</span></span>
+<span data-ttu-id="7f5de-116">Een matrix met waarden voor het vierde element van elke tupel.</span><span class="sxs-lookup"><span data-stu-id="7f5de-116">An array containing values for the fourth element of each tuple.</span></span>
 
-<span data-ttu-id="f148f-122">Het type van de eerste matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="f148f-122">The type of the first array elements.</span></span>
-### <a name="t2"></a><span data-ttu-id="f148f-123">Niet 2</span><span class="sxs-lookup"><span data-stu-id="f148f-123">'T2</span></span>
 
-<span data-ttu-id="f148f-124">Het type van de tweede matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="f148f-124">The type of the second array elements.</span></span>
-### <a name="t3"></a><span data-ttu-id="f148f-125">Niet 3</span><span class="sxs-lookup"><span data-stu-id="f148f-125">'T3</span></span>
 
-<span data-ttu-id="f148f-126">Het type van de derde matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="f148f-126">The type of the third array elements.</span></span>
-### <a name="t4"></a><span data-ttu-id="f148f-127">Niet 4</span><span class="sxs-lookup"><span data-stu-id="f148f-127">'T4</span></span>
+## <a name="output--t1t2t3t4"></a><span data-ttu-id="7f5de-117">Uitvoer: (niet 1, 'T 2, niet 3, niet 4) []</span><span class="sxs-lookup"><span data-stu-id="7f5de-117">Output : ('T1,'T2,'T3,'T4)[]</span></span>
 
-<span data-ttu-id="f148f-128">Het type van de vierde matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="f148f-128">The type of the fourth array elements.</span></span>
+<span data-ttu-id="7f5de-118">Een matrix met vier Tuples van het formulier `(first[idx], second[idx], third[idx], fourth[idx])` voor elke `idx` .</span><span class="sxs-lookup"><span data-stu-id="7f5de-118">An array containing 4-tuples of the form `(first[idx], second[idx], third[idx], fourth[idx])` for each `idx`.</span></span> <span data-ttu-id="7f5de-119">Als de vier matrices een lengte hebben die niet even groot is, is de uitvoer zo lang als de kortste van de invoer.</span><span class="sxs-lookup"><span data-stu-id="7f5de-119">If the four arrays are not of equal length, the output will be as long as the shorter of the inputs.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f148f-129">Zie ook</span><span class="sxs-lookup"><span data-stu-id="f148f-129">See Also</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="7f5de-120">Type parameters</span><span class="sxs-lookup"><span data-stu-id="7f5de-120">Type Parameters</span></span>
 
-- [<span data-ttu-id="f148f-130">Microsoft.Quantum.Arrays.Zip</span><span class="sxs-lookup"><span data-stu-id="f148f-130">Microsoft.Quantum.Arrays.Zip</span></span>](xref:Microsoft.Quantum.Arrays.Zip)
-- [<span data-ttu-id="f148f-131">Microsoft.Quantum.Arrays.Zip3</span><span class="sxs-lookup"><span data-stu-id="f148f-131">Microsoft.Quantum.Arrays.Zip3</span></span>](xref:Microsoft.Quantum.Arrays.Zip3)
+### <a name="t1"></a><span data-ttu-id="7f5de-121">Niet 1</span><span class="sxs-lookup"><span data-stu-id="7f5de-121">'T1</span></span>
+
+<span data-ttu-id="7f5de-122">Het type van de eerste matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="7f5de-122">The type of the first array elements.</span></span>
+### <a name="t2"></a><span data-ttu-id="7f5de-123">Niet 2</span><span class="sxs-lookup"><span data-stu-id="7f5de-123">'T2</span></span>
+
+<span data-ttu-id="7f5de-124">Het type van de tweede matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="7f5de-124">The type of the second array elements.</span></span>
+### <a name="t3"></a><span data-ttu-id="7f5de-125">Niet 3</span><span class="sxs-lookup"><span data-stu-id="7f5de-125">'T3</span></span>
+
+<span data-ttu-id="7f5de-126">Het type van de derde matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="7f5de-126">The type of the third array elements.</span></span>
+### <a name="t4"></a><span data-ttu-id="7f5de-127">Niet 4</span><span class="sxs-lookup"><span data-stu-id="7f5de-127">'T4</span></span>
+
+<span data-ttu-id="7f5de-128">Het type van de vierde matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="7f5de-128">The type of the fourth array elements.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7f5de-129">Zie ook</span><span class="sxs-lookup"><span data-stu-id="7f5de-129">See Also</span></span>
+
+- [<span data-ttu-id="7f5de-130">Microsoft.Quantum.Arrays.Zip</span><span class="sxs-lookup"><span data-stu-id="7f5de-130">Microsoft.Quantum.Arrays.Zip</span></span>](xref:Microsoft.Quantum.Arrays.Zip)
+- [<span data-ttu-id="7f5de-131">Microsoft.Quantum.Arrays.Zip3</span><span class="sxs-lookup"><span data-stu-id="7f5de-131">Microsoft.Quantum.Arrays.Zip3</span></span>](xref:Microsoft.Quantum.Arrays.Zip3)
