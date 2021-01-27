@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.DecodeFromSteaneCode
 title: Bewerking DecodeFromSteaneCode
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: DecodeFromSteaneCode
 qsharp.summary: An inverse encoding operation that maps an unencoded quantum register to an encoded quantum register under the ⟦7, 1, 3⟧ Steane quantum code.
-ms.openlocfilehash: 50fc6fb22e8b65ce10aba41e18362ad96236a907
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 54e47b65ed7a89c8ff9026126a9542d3d7ba15cc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96201135"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98827392"
 ---
 # <a name="decodefromsteanecode-operation"></a>Bewerking DecodeFromSteaneCode
 
@@ -44,7 +44,7 @@ Een Qubit-matrix van lengte 1 die de niet-versleutelde status in de eerste para 
 
 De gekozen decoder maakt gebruik van de CSS-code-eigenschap van de ⟦-code van de 7, 1, 3 ⟧ Steane, dat wil zeggen, het corrigeert X fouten en Z-fouten afzonderlijk. Een eigenschap van de code is dat de locatie van de X, respectievelijk de Z-correctie die moet worden toegepast, de 3-bits code ring van de X, respectievelijk Z Syndrome is als een geheel getal.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - D. Gottesman, "stabilisators codes en Quantum fout correctie," Ph.D. thesis, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052
 
