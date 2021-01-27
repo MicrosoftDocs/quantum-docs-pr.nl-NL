@@ -1,6 +1,6 @@
 ---
 Titel: Quantum circuit beschrijving: informatie over het visueel weer geven van eenvoudige en complexe Quantum bewerkingen met Quantum circuit diagrammen.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. circuits MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. circuits MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"

@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834989"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855095"
 ---
 # <a name="understanding-quantum-computing"></a>Kwantumcomputing begrijpen
 
-Bij kwantumcomputing worden de principes van kwantummechanica gebruikt voor het verwerken van informatie. Daarom vereist kwantumcomputing een andere benadering dan klassieke computing. Een verschil, bijvoorbeeld, is de processor die in kwantumcomputers wordt gebruikt. In klassieke computers worden welbekende siliciumchips gebruikt, terwijl in kwantumcomputers kwantumsystemen zoals atomen, ionen, fotonen of elektronen worden gebruikt. Ze gebruiken hun kwantumeigenschappen om bits te vertegenwoordigen die kunnen worden voorbereid in andere kwantumsuperposities van 1 en 0.  
+Bij kwantumcomputing worden de principes van kwantummechanica gebruikt voor het verwerken van informatie. Daarom vereist kwantumcomputing een andere benadering dan klassieke computing. Een verschil, bijvoorbeeld, is de processor die in kwantumcomputers wordt gebruikt. Wanneer klassieke computers vertrouwde chips op basis van Silicon gebruiken, gebruiken quantum computers Quantum systemen (systemen waarin we de unieke eigenschappen en het gedrag van Quantum mechanismen kunnen beheren), zoals atomen, ionen, Photons of electrons. Klassieke computers maken gebruik van op binaire logica gebaseerde hoge en laagste dagkoers, d.w.z. 1 en 0, gebruiken quantum computers hun Quantum eigenschappen om aan te geven welke bits kunnen worden voor bereid in verschillende Quantum-Super posities van 1 en 0.  
 
 Het kwantummateriaal gedraagt zich in overeenstemming met de wetten van kwantummechanica, met behulp van concepten zoals probabilistische computing, superpositie en verstrengeling. Deze concepten vormen de basis voor kwantumalgoritmen, die de kracht van kwantumcomputing benutten voor het oplossen van complexe problemen. In dit artikel worden enkele essentiële concepten van kwantummechanica beschreven waarop kwantumcomputing is gebaseerd.
 
@@ -52,7 +52,7 @@ Naast deze onderlinge afhankelijkheid kan deze verbinding tussen deeltjes behoud
 
 ### <a name="qubits-and-probability"></a>Qubits en waarschijnlijkheid
 
-Op klassieke computers wordt informatie verwerkt en opgeslagen in bits, die een toestand van 1 of 0 kunnen hebben, maar nooit beide. Het equivalent van een bit in kwantumcomputing is de **qubit**. Qubits geven de toestand van een kwantumdeeltje aan. Vanwege superpositie kan de toestand van qubits 1 of 0 zijn, of iets er tussenin. Afhankelijk van de configuratie van een qubit, heeft deze een bepaalde *kans* ineen te storten tot 1 of 0. De kans dat de qubit ineenstort tot een 1 of 0 wordt bepaald door **kwantuminterferentie**. 
+Op klassieke computers wordt informatie verwerkt en opgeslagen in bits, die een toestand van 1 of 0 kunnen hebben, maar nooit beide. Het equivalent van een bit in kwantumcomputing is de **qubit**. Qubits geven de toestand van een kwantumdeeltje aan. Vanwege superpositie kan de toestand van qubits 1 of 0 zijn, of iets er tussenin. Afhankelijk van de configuratie van een qubit, heeft deze een bepaalde *kans* ineen te storten tot 1 of 0. De kans dat de qubit ineenstort tot een 1 of 0 wordt bepaald door **kwantuminterferentie**.
 
 Weet u nog van die vriend(in) die een foto van u nam? Stel dat er een speciaal filter op de camera zat, en wel een *interferentiefilter*. Als we het filter *70/30* selecteren en vervolgens foto's nemen, kijkt u in 70% van de foto's naar links en in 30% van de foto's naar rechts. Het filter heeft de normale toestand van de camera beïnvloed om de kans op het gedrag ervan te beïnvloeden.
 

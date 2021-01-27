@@ -4,17 +4,17 @@ description: Meer informatie over hoe machine learning wordt gebruikt op Quantum
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833795"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854020"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Inleiding tot Quantum Machine Learning
 
@@ -41,7 +41,7 @@ De oplossing is dus een Quantum analoog van een Support Vector machine met een p
 
 Een eenvoudig Quantum classificatie ontwerp kan worden vergeleken met een traditionele SVM-oplossing (Support Vector machine). De deinterferentie voor een gegevens voorbeeld $x $ in het geval van SVM wordt uitgevoerd met behulp van een optimale kernel-vorm $ \sum \ alpha_j k (x_j, x) $, waarbij $k $ een bepaalde kernel-functie is.
 
-Een Quantum classificatie maakt daarentegen gebruik van de Voorspellings $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, die vergelijkbaar is in geest, maar technisch heel verschillend is. Als er een directe amplitude-code ring wordt gebruikt, is $p (y │ x, U (\theta)) $ een kwadratisch formulier in de amplitudes van $x $, maar worden de coëfficiënten van dit formulier niet meer afzonderlijk geleerd. ze worden in plaats daarvan geaggregeerd op basis van de matrix elementen van het circuit $U (\theta) $, dat doorgaans aanzienlijk minder meer informatie heeft dan de dimensie van de vector $x $. De polynomiale mate van $p (y │ x, U (\theta)) $ in de oorspronkelijke functies kan worden verhoogd tot $2 ^ l $ door gebruik te maken van een Quantum product codering op $l $-exemplaren van $x $.
+Een Quantum classificatie gebruikt daarentegen de voorspellende $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, wat vergelijkbaar is met de geest, maar technisch heel anders. Als er een directe amplitude-code ring wordt gebruikt, is $p (y │ x, U (\theta)) $ een kwadratisch formulier in de amplitudes van $x $, maar worden de coëfficiënten van dit formulier niet meer afzonderlijk geleerd. ze worden in plaats daarvan geaggregeerd op basis van de matrix elementen van het circuit $U (\theta) $, dat doorgaans aanzienlijk minder meer informatie heeft dan de dimensie van de vector $x $. De polynomiale mate van $p (y │ x, U (\theta)) $ in de oorspronkelijke functies kan worden verhoogd tot $2 ^ l $ door gebruik te maken van een Quantum product codering op $l $-exemplaren van $x $.
 
 Onze architectuur verkent relatief recente circuits, die daarom snel moeten worden *entangling* om alle correlaties tussen de gegevens functies in alle bereiken vast te leggen. Hieronder ziet u een voor beeld van het handigste snelle entangling-circuit onderdeel. Hoewel een circuit met deze geometrie uit slechts $3 n + 1 $ Gates bestaat, zorgt de unitary-matrix van het gewicht dat deze reken kundige invloed heeft op een aanzienlijke Kruis communicatie tussen $2 ^ n $-functies.
 

@@ -4,17 +4,17 @@ description: Details van de specificaties voor de Broombridge quantum chemie sch
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833769"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854067"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge-specificatie v 0,2 #
 
@@ -171,7 +171,7 @@ Elk probleem beschrijvings object moet een eigenschap hebben `coulomb_repulsion`
 Elk probleem beschrijvings object moet een eigenschap hebben `energy_offet` waarvan de waarde een eenvoudig hoeveelheids object is.
 > ERAAN Met de waarden van `coulomb_repulsion` en worden `energy_offet` deze samen voegen de id-term van de Hamiltonian vastgelegd.
 
-##### <a name="one-electron-integrals-object"></a>Object met één elektron integraal #####
+##### <a name="one-electron-integrals-object"></a>One-Electron integraal object #####
 
 Deze sectie is normatieve.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge maakt gebruik van op 1 gebaseerde indexering.
 
 
-##### <a name="two-electron-integrals-object"></a>Twee-elektroden integraal object #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron integraal object #####
 
 Deze sectie is normatieve.
 

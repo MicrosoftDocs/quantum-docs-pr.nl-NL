@@ -4,17 +4,17 @@ description: Meer informatie over de micro soft QDK DISTINCT inputs-controle, di
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8076a705b1960ae8e23be4cea87e613329a24f77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833461"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858649"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum Trace Simulator: DISTINCT-invoer controleprogramma
 
@@ -50,11 +50,11 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Houd er rekening mee dat `op1` `op2` beide zijn verkregen met behulp van gedeeltelijke toepassing en een Qubit delen. Wanneer u `ApplyBoth` dit voor beeld aanroept, is het resultaat van de bewerking afhankelijk van de volg orde van `op1` en `op2` binnen `ApplyBoth` -niet wat u verwacht te doen. Wanneer u de afzonderlijke invoer controle inschakelt, worden dergelijke situaties gedetecteerd en wordt er een gegenereerd `DistinctInputsCheckerException` . Zie <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in de API-bibliotheek voor meer informatie Q# .
+Houd er rekening mee dat `op1` `op2` beide zijn verkregen met behulp van gedeeltelijke toepassing en een Qubit delen. Wanneer u `ApplyBoth` dit voor beeld aanroept, is het resultaat van de bewerking afhankelijk van de volg orde van `op1` en `op2` binnen `ApplyBoth` -niet wat u verwacht te doen. Wanneer u de afzonderlijke invoer controle inschakelt, worden dergelijke situaties gedetecteerd en wordt er een gegenereerd `DistinctInputsCheckerException` . Zie <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> in de API-bibliotheek voor meer informatie Q# .
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>De afzonderlijke invoer controle aanroepen
 
-Als u de Quantum Trace Simulator wilt uitvoeren met de afzonderlijke invoer controle, moet u een <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instantie maken, de `UseDistinctInputsChecker` eigenschap instellen op **True**en vervolgens een nieuw <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> exemplaar maken met `QCTraceSimulatorConfiguration` als de para meter. 
+Als u de Quantum Trace Simulator wilt uitvoeren met de afzonderlijke invoer controle, moet u een <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instantie maken, de `UseDistinctInputsChecker` eigenschap instellen op **True** en vervolgens een nieuw <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> exemplaar maken met `QCTraceSimulatorConfiguration` als de para meter. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -88,9 +88,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - Het Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Overview (Engelstalig).
 - De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-verwijzing.
 - De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-verwijzing.
-- De <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API-verwijzing.
+- De <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> API-verwijzing.

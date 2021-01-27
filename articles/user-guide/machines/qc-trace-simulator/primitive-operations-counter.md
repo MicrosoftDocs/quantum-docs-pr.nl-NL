@@ -4,17 +4,17 @@ description: Meer informatie over het micro soft QDK primitieve bewerkings item,
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19ea3c1f5a91c00de4d3e435318bf4cf8cdd83be
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690955"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858607"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitieve bewerkingen teller
 
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Het teller primitieve bewerking in een C#-hostprogramma gebruiken
 
-Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:Microsoft.Quantum.Intrinsic.T> bewerkingen dat nodig is voor het implementeren van de <xref:Microsoft.Quantum.Intrinsic.ccnot> bewerking, op basis van de volgende Q# voorbeeld code:
+Het C#-voor beeld dat volgt in deze sectie telt het aantal <xref:Microsoft.Quantum.Intrinsic.T> bewerkingen dat nodig is voor het implementeren van de <xref:Microsoft.Quantum.Intrinsic.CCNOT> bewerking, op basis van de volgende Q# voorbeeld code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

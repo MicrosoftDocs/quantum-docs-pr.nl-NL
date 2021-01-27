@@ -4,17 +4,17 @@ description: Meer informatie over de Hartree – Fock theorie, een eenvoudige ma
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835346"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854096"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock theorie
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 De meest Ophalende functie over Hartree – Fock theorie is dat deze een Quantum status levert die geen entanglement tussen de electrons heeft.
 Dit betekent dat het vaak een geschikte kwalitatieve beschrijving van de eigenschappen van moleculaire systemen bevat. 
 
-De status van de Hartree-Fock kan ook worden gereconstrueerd van een `FermionHamiltonian`  als volgt.
+De Hartree-Fock status kan ook van een `FermionHamiltonian`  als volgt worden samengesteld.
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

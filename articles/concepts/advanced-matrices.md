@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van geavanceerde matrix concepten: meer informatie over eigenvectors, eigenvalues en matrix exponentiëles, de belangrijkste hulpprogram ma's voor het beschrijven en simuleren van Quantum algoritmen.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. matrix-Geavanceerd MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. matrix-Geavanceerd MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"

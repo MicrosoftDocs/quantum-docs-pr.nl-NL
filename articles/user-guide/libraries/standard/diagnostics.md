@@ -4,16 +4,16 @@ description: Meer informatie over de diagnostische functies en bewerkingen in de
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690844"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858682"
 ---
 # <a name="diagnostics"></a>Diagnostiek #
 
@@ -27,7 +27,7 @@ Diagnostische gegevens over klassieke waarden kunnen worden verkregen met behulp
 Standaard schrijft de teken reeks naar de-console.
 Wordt gebruikt in combi natie met geïnterpoleerde teken reeksen en <xref:Microsoft.Quantum.Intrinsic.Message> maakt het eenvoudig om diagnostische gegevens over klassieke waarden te rapporteren:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -40,14 +40,14 @@ Elke doel computer is afhankelijk van de diagnostische gegevens die worden verst
 De [Fully](xref:microsoft.quantum.machines.full-state-simulator) machine-doel computer, bijvoorbeeld, levert het hostprogramma met de status vector die intern wordt gebruikt om een REGI ster van qubits te vertegenwoordigen.
 Ter vergelijking: de doel computer van de [Toffoli Simulator](xref:microsoft.quantum.machines.toffoli-simulator) biedt één klassieke bit voor elke qubit.
 
- [full state simulator's](xref:microsoft.quantum.machines.full-state-simulator) `DumpMachine` Zie de sectie dump functies van het [artikel testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging#dump-functions)voor meer informatie over de volledige uitvoer van de status van de Simulator.
+ [](xref:microsoft.quantum.machines.full-state-simulator) `DumpMachine` Zie de sectie dump functies van het [artikel testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging#dump-functions)voor meer informatie over de volledige uitvoer van de status van de Simulator.
 
 
 ## <a name="facts-and-assertions"></a>Feiten en verklaringen ##
 
-Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging), een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit` respectievelijk kan worden gemarkeerd als een *eenheids test* .
+Zoals beschreven in [testen en fout opsporing](xref:microsoft.quantum.guide.testingdebugging), een functie of bewerking met hand tekening `Unit -> Unit` of `Unit => Unit` respectievelijk kan worden gemarkeerd als een *eenheids test*.
 Elke eenheids test bestaat doorgaans uit een klein Quantum programma, samen met een of meer voor waarden die de juistheid van het programma controleren.
-Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_ , die de waarden van hun invoer (of _beweringen_ ) controleren, die de statussen controleren van een of meer qubits die worden door gegeven als invoer.
+Deze voor waarden kunnen worden opgenomen in de vorm van _feiten_, die de waarden van hun invoer (of _beweringen_) controleren, die de statussen controleren van een of meer qubits die worden door gegeven als invoer.
 
 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")`Geeft bijvoorbeeld het mathematische feit weer dat $1 + 1 = $2, terwijl `AssertQubit(One, qubit)` de voor waarde vertegenwoordigt die het meten `qubit` `One` van een met zekerheid retourneert.
 In het eerste geval kunnen we controleren of de voor waarde juist is gegeven, maar in de laatste gevallen moeten we iets weten over de status van de Qubit om de bewering te kunnen evalueren.
