@@ -1,55 +1,55 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
 title: _JWOptimized0123TermImpl bewerking
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimized0123TermImpl
 qsharp.summary: Implementation step of `JWOptimized0123Term_`;
-ms.openlocfilehash: dcf6578eeaac6630bd9fdb970a47828ad33e63e4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f6f07434547fed28a5ea5f565ee3def45d270762
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226040"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842304"
 ---
-# <a name="_jwoptimized0123termimpl-operation"></a><span data-ttu-id="8c3d6-102">_JWOptimized0123TermImpl bewerking</span><span class="sxs-lookup"><span data-stu-id="8c3d6-102">_JWOptimized0123TermImpl operation</span></span>
+# <a name="_jwoptimized0123termimpl-operation"></a><span data-ttu-id="3401c-102">_JWOptimized0123TermImpl bewerking</span><span class="sxs-lookup"><span data-stu-id="3401c-102">_JWOptimized0123TermImpl operation</span></span>
 
-<span data-ttu-id="8c3d6-103">Naam ruimte: [micro soft. Quantum. Research. chemie](xref:Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-103">Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)</span></span>
+<span data-ttu-id="3401c-103">Naam ruimte: [micro soft. Quantum. Research. chemie](xref:Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="3401c-103">Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)</span></span>
 
-<span data-ttu-id="8c3d6-104">Pakket: [micro soft. Quantum. Research. chemie](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-104">Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span></span>
+<span data-ttu-id="3401c-104">Pakket: [micro soft. Quantum. Research. chemie](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="3401c-104">Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span></span>
 
 
-<span data-ttu-id="8c3d6-105">Implementatie stap van `JWOptimized0123Term_` ;</span><span class="sxs-lookup"><span data-stu-id="8c3d6-105">Implementation step of `JWOptimized0123Term_`;</span></span>
+<span data-ttu-id="3401c-105">Implementatie stap van `JWOptimized0123Term_` ;</span><span class="sxs-lookup"><span data-stu-id="3401c-105">Implementation step of `JWOptimized0123Term_`;</span></span>
 
 ```qsharp
 operation _JWOptimized0123TermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="8c3d6-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="8c3d6-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="3401c-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="3401c-106">Input</span></span>
 
-### <a name="term--generatorindex"></a><span data-ttu-id="8c3d6-107">term: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
-
-
-
-
-### <a name="stepsize--double"></a><span data-ttu-id="8c3d6-108">stepSize: [dubbel](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-108">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="term--generatorindex"></a><span data-ttu-id="3401c-107">term: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="3401c-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
 
 
 
-### <a name="parityqubit--qubit"></a><span data-ttu-id="8c3d6-109">parityQubit: [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-109">parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="stepsize--double"></a><span data-ttu-id="3401c-108">stepSize: [dubbel](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="3401c-108">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="qubits--qubit"></a><span data-ttu-id="8c3d6-110">qubits: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="8c3d6-110">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="parityqubit--qubit"></a><span data-ttu-id="3401c-109">parityQubit: [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="3401c-109">parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+
+
+
+
+### <a name="qubits--qubit"></a><span data-ttu-id="3401c-110">qubits: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="3401c-110">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="8c3d6-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="8c3d6-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="3401c-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="3401c-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
