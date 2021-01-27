@@ -4,17 +4,17 @@ description: Meer informatie over de intrinsieke bewerkingen en functies in de Q
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692111"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857192"
 ---
 # <a name="the-prelude"></a>De prelude #
 
@@ -109,13 +109,13 @@ We beginnen met het opnieuw aanroepen van een bewerking met één Qubit met de $
 De $T $ Gate wordt geïmplementeerd door de <xref:Microsoft.Quantum.Intrinsic.T> bewerking en heeft hand tekening `(Qubit => Unit is Adj + Ctl)` , wat aangeeft dat het een unitary-bewerking is op een enkele Qubit.
 
 Hoewel dit in principe voldoende is om een wille keurige bewerking met één Qubit te beschrijven, hebben verschillende doel machines mogelijk een efficiëntere weer gave voor rotaties over Pauli-Opera Tors, zodat de prelude een aantal manieren bevat om dergelijke draaiingen te convienentlyen.
-De meest algemene van deze is de <xref:Microsoft.Quantum.Intrinsic.r> bewerking, die een rotatie rond een opgegeven Pauli-as implementeert, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} waarbij $ \sigma $ een Pauli-operator is, $ \phi $ is een hoek en waarbij $ \exp $ de matrix exponentiële aangeeft.
+De meest algemene van deze is de <xref:Microsoft.Quantum.Intrinsic.R> bewerking, die een rotatie rond een opgegeven Pauli-as implementeert, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} waarbij $ \sigma $ een Pauli-operator is, $ \phi $ is een hoek en waarbij $ \exp $ de matrix exponentiële aangeeft.
 Het heeft hand tekening `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , waarbij de eerste twee delen van de invoer de klassieke argumenten $ \sigma $ en $ \phi $ bevatten die nodig zijn om de unitary-operator op te geven $R (\sigma, \phi) $.
 We kunnen $ \sigma $ en $ \phi $ deels Toep assen om een bewerking te verkrijgen waarvan het type van een single-Qubit unitary is.
 Bijvoorbeeld, is van het `R(PauliZ, PI() / 4, _)` type `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> De <xref:Microsoft.Quantum.Intrinsic.r> bewerking deelt de invoer hoek met 2 en vermenigvuldigt deze met-1.
+> De <xref:Microsoft.Quantum.Intrinsic.R> bewerking deelt de invoer hoek met 2 en vermenigvuldigt deze met-1.
 > Voor $Z $ rotations betekent dit dat $ \ket {0} $ eigenstate wordt geroteerd door $-\phi/$2 en dat $ \ket {1} $ eigenstate wordt geroteerd door $ \phi/$2, zodat $ \ket {1} $ eigenstate wordt geroteerd door $ \phi $ ten opzichte van $ \ket {0} $ eigenstate.
 >
 > Dit betekent met name dat `T` en `R(PauliZ, PI() / 8, _)` anders alleen door een irrelevante [globale fase](xref:microsoft.quantum.glossary#global-phase).
@@ -217,7 +217,7 @@ Ten eerste, omdat het uitvoeren van metingen met één Qubit heel gebruikelijk i
 De <xref:Microsoft.Quantum.Intrinsic.M> bewerking meet de Pauli $Z $-operator op één Qubit en heeft hand tekening `(Qubit => Result)` .
 `M(q)` is het equivalent van `Measure([PauliZ], [q])`.
 
-De <xref:microsoft.quantum.measurement.MultiM> meet de Pauli $Z $-operator *afzonderlijk* op elk van een matrix van qubits en retourneert de *matrix* met waarden die zijn `Result` verkregen voor elke qubit.
+De <xref:Microsoft.Quantum.Measurement.MultiM> meet de Pauli $Z $-operator *afzonderlijk* op elk van een matrix van qubits en retourneert de *matrix* met waarden die zijn `Result` verkregen voor elke qubit.
 In sommige gevallen kan dit worden geoptimaliseerd. Deze heeft hand tekening ( `Qubit[] => Result[])` .
 `MultiM(qs)` is gelijk aan:
 

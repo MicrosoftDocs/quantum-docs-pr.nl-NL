@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692039"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857215"
 ---
 # <a name="error-correction"></a>Fout correctie #
 
@@ -70,7 +70,7 @@ In het bijzonder benadrukken we dat herstel een *klassieke* methode voor het afw
 > Op dezelfde manier wordt met het Toep assen van een fase Flip `Z` -bewerking $ \ket{\overline {1} } $ aan $-\ket{\overline {1} } $ toegewezen en wordt dus $ \ket{\overline{+}} $ toegewezen aan $ \ket{\overline {-} } $.
 > Meer in het algemeen kunnen codes worden gemaakt voor het verwerken van een groter aantal fouten en voor het afhandelen van $Z $-fouten, evenals $X $-fouten.
 
-Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de essentie van de *stabilisatie formaliteit* .
+Het inzicht dat we meten in een Quantum fout correctie die op dezelfde manier op alle code Staten reageert, is de essentie van de *stabilisatie formaliteit*.
 De Q# Canon biedt een framework voor het beschrijven van code ring en het decoderen van stabilisatoren codes en voor het beschrijven van het herstel van fouten.
 In deze sectie beschrijven we dit kader en de toepassing ervan tot een paar eenvoudige Quantum fout codes.
 
