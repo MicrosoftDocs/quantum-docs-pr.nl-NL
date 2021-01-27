@@ -4,17 +4,17 @@ description: Meer informatie over het bijdragen van conceptuele of API-inhoud aa
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691792"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857364"
 ---
 # <a name="improving-documentation"></a>Documentatie verbeteren
 
@@ -42,7 +42,7 @@ Hieronder vindt u meer informatie over pull-aanvragen. er is nu een paar dingen 
 - Sommige lezers vinden de meest nuttige samen vattingen en definities, terwijl andere lezers het meest geschikt zijn voor het extrapoleren van concrete voor beelden. Door zowel het algemene als het specifieke voor beeld te bieden, kunnen beide lezers optimaal profiteren van Quantum programmering.
 - Met name als u de code die wordt gedocumenteerd ook hebt geschreven, zijn de dingen mogelijk duidelijk voor uw lezers. Er is geen unieke beste manier om Program ma's aan te bieden, dus het is niet mogelijk om te zien welke ontwerp patronen u hebt gevonden en wat u het nuttigst vindt om uw ideeën in code uit te drukken. Het is duidelijk om te zien hoe een lezer het gebruik van uw code kan verwachten door deze context te gebruiken.
 - Veel leden van de Quantum-programmeer Community zijn academische onderzoekers en worden voornamelijk door middel van citaten voor hun bijdragen aan de Community herkend. U kunt niet alleen lezers helpen om aanvullende materialen te vinden, maar ook om academische uitvoer, zoals papers, besprekingen, blog berichten en software tools te vermelden, kunnen academische mede werkers helpen om de beste werkzaamheden te blijven uitvoeren om de community te verbeteren.
-- De Quantum-programmeer Community is een brede en veelzijdige community. Het gebruik van geslachte promaakte in voor beelden van derden (bijvoorbeeld: "als een gebruiker..., hij...) kan worden gebruikt om uit te sluiten in plaats van op te nemen. Het Cognizant van de namen van mensen in citaten en koppelingen, en van de juiste insluiting van niet-ASCII-tekens, kan de diversiteit van de Community opleveren door de leden van de Gemeenschap te laten zien. Evenzo worden veel woorden in de Engelse taal vaak op een hatefule manier gebruikt, zodat het gebruik ervan in technische documentatie kan leiden tot beschadiging van zowel individuele lezers als de community.
+- De Quantum-programmeer Community is een brede en veelzijdige community. Het gebruik van geslachte promaakte in voor beelden van derden (bijvoorbeeld: ' als een gebruiker...) kan worden gebruikt om uit te sluiten in plaats van opnemen. Het Cognizant van de namen van mensen in citaten en koppelingen, en van de juiste insluiting van niet-ASCII-tekens, kan de diversiteit van de Community opleveren door de leden van de Gemeenschap te laten zien. Evenzo worden veel woorden in de Engelse taal vaak op een hatefule manier gebruikt, zodat het gebruik ervan in technische documentatie kan leiden tot beschadiging van zowel individuele lezers als de community.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Verwijzen naar voorbeeld code van conceptuele artikelen
 
@@ -54,6 +54,19 @@ Als u code wilt toevoegen uit de [opslag plaats voor beelden](https://github.com
 
 Met deze opdracht worden de regels 4 tot en met 8 van het [ `Game.qs` bestand uit het voor `chsh-game` beeld](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)geïmporteerd en gemarkeerd als Q# code voor het markeren van syntaxis.
 Met deze opdracht kunt u voor komen dat code wordt gedupliceerd tussen conceptuele artikelen en de opslag plaats voor beelden, zodat voorbeeld code in de documentatie altijd zo actueel mogelijk is.
+
+### <a name="contributing-image-files"></a>Afbeeldings bestanden bijdraagt
+
+**Belang rijk**: om ervoor te zorgen dat de afbeeldingen goed worden weer gegeven in de donkere modus, moet u transparanten vermijden.
+
+- Voor JPG-bestanden. u hoeft niets te doen omdat de jpg-indeling geen transparante elementen ondersteunt.
+- Voor. PNG-bestanden moet u een witte achtergrond toevoegen of de waarde van het Alfa kanaal wijzigen in **100**. De eenvoudigste manier om dit te doen in Windows is door het bestand te openen in **Paint** en dit op te slaan, het oorspronkelijke bestand te overschrijven.
+- Voor SVG-bestanden moet u een witte rechthoek toevoegen aan de laagste laag. U kunt dit doen met **Inkscape**:
+  1. Open het SVG-bestand.
+  1. Selecteer het gereedschap vier Kante maker en teken een witte rechthoek boven op de oorspronkelijke afbeelding.
+  1. Selecteer het hulp programma **objecten selecteren en transformeren** door te klikken op de donkere pijl of door op **F1** te drukken.
+  1. Terwijl de rechthoek is geselecteerd, klikt u op het werkbalk element **onderste selectie naar onder (End)**.
+  1. Pas de rechthoek aan met de muis of de pijl toetsen.
 
 ## <a name="contributing-to-the-api-references"></a>Bijdragen aan de API-verwijzingen
 

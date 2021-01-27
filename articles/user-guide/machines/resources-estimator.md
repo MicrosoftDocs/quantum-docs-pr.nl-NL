@@ -1,20 +1,20 @@
 ---
 title: Quantum bronnen Estimator-Quantum Development Kit
 description: Meer informatie over de micro soft QDK resources Estimator, waarmee de resources die nodig zijn voor het uitvoeren van een bepaald exemplaar van een Q# bewerking op een quantum computer, worden geschat.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604640"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847466"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK-resources (Quantum Development Kit) estimator
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 De resources Estimator traceert de volgende metrische gegevens:
 
-|Gegevens|Beschrijving|
+|Metrisch|Beschrijving|
 |----|----|
 |__CNOT__    |Het aantal uitgevoerde `CNOT` bewerkingen (ook wel beheerde Pauli X-bewerkingen genoemd).|
 |__QubitClifford__ |Het aantal uitvoeringen van een afzonderlijke Qubit-Clifford-en Pauli-bewerking.|
@@ -143,8 +143,8 @@ De gerapporteerde diepte-en breedte schattingen zijn compatibel met elkaar.
 
 De volgende metrische gegevens worden gerapporteerd:
 
-__Diepte:__ Voor het uitvoeren van de bewerking-tijd die nodig is om het uit te voeren, wordt uitgegaan van specifieke Gate-tijden.
-Voor bewerkingen die worden aangeroepen of een volgend verwerkings tijd verschil tussen de meest recente Qubit-beschikbaarheids tijd aan het begin en het einde van de bewerking.
+__Diepte:__ Voor het uitvoeren van de bewerking-tijd die nodig is om het uit te voeren, wordt ervan uitgegaan dat geconfigureerde Gate-tijden
+Voor bewerkingen die worden aangeroepen of een volgend verwerkings tijd verschil tussen de laatste Qubit beschikbaarheids tijd aan het begin en het einde van de bewerking.
 
 __Breedte:__ Voor het hoofd bewerking-aantal qubits dat daad werkelijk wordt gebruikt om het uit te voeren (en de bewerking te starten).
 Voor bewerkingen die of volgende bewerkingen worden uitgevoerd, is het aantal meer qubits gebruikt naast de qubits die al aan het begin van de bewerking worden gebruikt.
@@ -157,9 +157,9 @@ Voor bewerkingen met de naam of de volgende bewerkingen-minimum aantal qubits da
 
 Twee bewerkings modi worden ondersteund. De modus wordt geselecteerd door QCTraceSimulatorConfiguration. OptimizeDepth in te stellen.
 
-__OptimizeDepth = True:__ QubitManager wordt ontmoedigd bij het opnieuw gebruiken van Qubit en wijst nieuwe Qubit toe elke keer dat deze wordt gevraagd voor een Qubit. De __diepte__ van de hoofd bewerking wordt de minimale diepte (ondergrens). Er wordt voor deze diepte een compatibele __breedte__ gerapporteerd (beide kunnen tegelijkertijd worden bereikt). Houd er rekening mee dat deze breedte waarschijnlijk niet optimaal is op basis van deze diepte. __QubitCount__ kan kleiner zijn dan de breedte voor de hoofd bewerking, omdat het opnieuw wordt aangenomen.
+__OptimizeDepth = False:__ Dit is de standaard modus. QubitManager wordt aangemoedigd om qubits opnieuw te gebruiken en om vrijgegeven qubits te hergebruiken voordat nieuwe objecten worden toegewezen. De __breedte__ van de hoofd bewerking wordt de minimale breedte (ondergrens). Er wordt een compatibele __diepte__ gerapporteerd waarop het kan worden bereikt. __QubitCount__ is hetzelfde als de __breedte__ voor de hoofd bewerking, uitgaande van geen leningen.
 
-__OptimizeDepth = False:__ QubitManager wordt aangemoedigd om qubits opnieuw te gebruiken en om vrijgegeven qubits te hergebruiken voordat nieuwe objecten worden toegewezen. De __breedte__ van de hoofd bewerking wordt de minimale breedte (ondergrens). Er wordt een compatibele __diepte__ gerapporteerd waarop het kan worden bereikt. __QubitCount__ is hetzelfde als de __breedte__ voor de hoofd bewerking, uitgaande van geen leningen.
+__OptimizeDepth = True:__ QubitManager wordt ontmoedigd bij het hergebruik van Qubit en op heuristisch gebaseerde optimalisatie voor Qubit hergebruik wordt uitgevoerd tijdens en na de uitvoering. De __diepte__ van de hoofd bewerking wordt de minimale diepte (ondergrens). Er wordt voor deze diepte een compatibele __breedte__ gerapporteerd (beide kunnen tegelijkertijd worden bereikt). Als u de breedte wilt optimaliseren, kunnen de poorten die later in het programma worden aangetroffen, worden gepland voordat de poorten eerder in het programma werden aangetroffen, maar qubits zijn zodanig gepland dat deze op een zodanige manier worden gebruikt dat de diepte mini maal blijft. Als qubits worden hergebruikt op basis van tijd waarden, wordt aanbevolen dat de poort tijden zijn geconfigureerd voor gehele waarden. De __breedte__ is niet gegarandeerd optimaal. Meer informatie vindt u in de White paper [breedte en-diepte in de tracering](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>De waarschijnlijkheid van metingsresultaten opgeven
 

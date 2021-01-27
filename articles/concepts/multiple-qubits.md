@@ -1,6 +1,6 @@
 ---
 Titel: meerdere qubits beschrijving: meer informatie over het uitvoeren van bewerkingen op twee of meer qubits.
-Auteur: bradben UID: micro soft. Quantum. concepten. Multiple-qubits MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: bradben UID: micro soft. Quantum. concepten. Multiple-qubits MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Dit komt doordat de reken kundige basis voor twee Qubit Staten wordt gevormd doo
 Het is eenvoudig om te zien dat de Quantum status van n qubits in de meeste gevallen $ $ wordt vertegenwoordigd door een eenheids vector van dimensie $ 2 ^ n $ met behulp van deze constructie.  De vector
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-Dit object vertegenwoordigt een Quantum status op twee qubits als $ | \alpha _ { 00 } | ^ | \alpha 2 +_ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ | \alpha 2 +_ { 11 } | ^ 2 = 1 $ . Net als bij één qubits bevat de Quantum status vector van meerdere qubits alle informatie die nodig is om het gedrag van het systeem te beschrijven.
+Dit object vertegenwoordigt een Quantum status op twee qubits als $ | \alpha _{ 00 } | ^ | \alpha 2 +_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ | \alpha 2 +_ { 11 } | ^ 2 = 1 $ . Net als bij één qubits bevat de Quantum status vector van meerdere qubits alle informatie die nodig is om het gedrag van het systeem te beschrijven.
 
 Als we twee afzonderlijke qubits ontvangen, een in de staat $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ en een tweede Qubit in de staat $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , wordt de bijbehorende status van twee Qubit    
 
@@ -124,22 +124,22 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ / \sqrt { 
 
 Een dergelijke status van twee Qubit, die niet kan worden geschreven als het tensor-product van single-Qubit statussen, wordt ' Entangled State ' genoemd. de twee qubits zijn gezegd als [*Entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement).  Zonder enige spraak, omdat de Quantum status niet kan worden beschouwd als een tensor product van één Qubit-status, wordt de informatie die de status heeft, niet naar een van de qubits afzonderlijk beperkt.  In plaats daarvan wordt de informatie niet lokaal opgeslagen in de correlaties tussen de twee staten.  Deze niet-localiteit van informatie is een van de belangrijkste onderscheidings functies van Quantum Computing ten opzichte van klassiek computing en is essentieel voor een aantal Quantum protocollen, waaronder [Quantum-teleportie](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) en [Quantum fout correctie](xref:microsoft.quantum.libraries.error-correction).
 
-## <a name="measuring-two-qubit-states"></a>Meting van twee Qubit Staten ##
+## <a name="measuring-two-qubit-states"></a>Meting van Two-Qubit statussen ##
 Het meten van twee Qubit Staten lijkt veel op de metingen met één Qubit. De status meten
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-resulteert $ in 00 $ met kans $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ met $ kans | \alpha _ { 01 } | ^ 2 $ , $ 10 $ met kans $ | \alpha _ { 10 } | ^ 2 $ en $ 11 $ met kans $ 11 ^ 2. | \alpha _ { } | $ De variabelen $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ en $ 11 hebben een opzettelijke naam om deze verbinding duidelijk te maken \alpha _ { } $ . Als de uitkomst na de meting 00 is $ , $ is de Quantum status van het systeem met twee Qubit samengevouwen en nu
+resulteert $ in 00 $ met kans $ | \alpha _{ 00 } | ^ 2 $ , $ 01 $ met $ kans | \alpha_ { 01 } | ^ 2 $ , $ 10 $ met kans $ | \alpha _{ 10 } | ^ 2 $ en $ 11 $ met kans $ 11 ^ 2. | \alpha_ { } | $ De variabelen $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ en $ 11 hebben een opzettelijke naam om deze verbinding duidelijk te maken \alpha_ { } $ . Als de uitkomst na de meting 00 is $ , $ is de Quantum status van het systeem met twee Qubit samengevouwen en nu
 
 $$
     00:00 \equiv
     \begin{bmatrix}
-        i \\\\ 
+        1 \\\\ 
         0,3 \\\\ 
         0,3 \\\\ 
         0 \end{bmatrix} .
@@ -193,7 +193,7 @@ $$
 
 opnieuw in overeenstemming met onze intuition.
 
-## <a name="two-qubit-operations"></a>Twee Qubit bewerkingen
+## <a name="two-qubit-operations"></a>Two-Qubit bewerkingen
 Net als bij een single-Qubit-trans formatie is elke unitary-Transform een geldige bewerking op qubits. Over het algemeen is een unitary-trans formatie op $ n $ qubits een matrix $ U $ met een grootte van $ 2 ^ n \times 2 ^ n $ (zodat deze wordt toegepast op vectoren met een grootte van $ 2 ^ n $ ), zodat $ u ^ { -1 } = U ^ \dagger $ .
 De poort CNOT (Controlled-NOT) is bijvoorbeeld een gang bare twee Qubit-poort en wordt vertegenwoordigd door de volgende unitary-matrix:
 
@@ -240,7 +240,7 @@ Poorten kunnen ook worden beheerd met behulp van klassieke informatie.  Een klas
 Net als bij de single-qubite-case is een Qubit-poort set Universal als een wille keurige $ 4 \times 4 $ unitary matrix kan worden benaderd door een product van poorten van deze set tot een wille keurige precisie.
 Een voor beeld van een universele Gate set is de Hadamard-poort, de T-poort en de CNOT-poort. Door producten van deze Gates te nemen, kunnen we een wille keurige unitary-matrix op twee qubits benaderen.
 
-## <a name="many-qubit-systems"></a>Veel Qubit systemen
+## <a name="many-qubit-systems"></a>Many-Qubit systemen
 We volgen precies dezelfde patronen in de tweequbite Case voor het bouwen van veel Qubit Quantum-statussen van kleinere systemen.  Dergelijke statussen zijn gebouwd door tensor producten van kleinere staten te maken.  U kunt bijvoorbeeld de bits teken reeks $ 1011001 $ in een quantum computer coderen.  We kunnen dit coderen als
 
 $$

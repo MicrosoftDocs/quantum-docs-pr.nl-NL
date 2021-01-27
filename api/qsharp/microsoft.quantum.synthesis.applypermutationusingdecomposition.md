@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: Bewerking ApplyPermutationUsingDecomposition
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 765b6d301363021f5b57a22f90e2ada38c9c09ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192125"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857397"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>Bewerking ApplyPermutationUsingDecomposition
 
@@ -57,7 +57,17 @@ Een lijst met $n $ qubits waarop de permutatie wordt toegepast.
 
 
 
-## <a name="references"></a>Referenties
+## <a name="example"></a>Voorbeeld
+
+Een `SWAP` bewerking verwerken:
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>Verwijzingen
 
 - [*Alexis de Vos*, *Yvan van Rentergem*, adv. in math. van comm. 2 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
 - [*Mathias soeken*, *Laura Tague*, *Gerhard W. Dueck*, *Rolf Drechsler*, Journal of symbolische berekening 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)

@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van de Dirac-notatie: meer informatie over het gebruik van de Dirac-notatie om Quantum-waarden weer te geven en om Quantum bewerkingen te simuleren.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Dirac MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Dirac MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -120,7 +120,8 @@ $$
 $$
 
 ### <a name="computational-basis-vectors"></a>Reken kundige basis vectoren
-Dit laat zien waarom deze staten vaak een *berekening*worden genoemd: elke Quantum status kan altijd worden uitgedrukt als som van de reken kundige basis vectoren en dergelijke sommen kunnen eenvoudig worden weer gegeven met behulp van de Dirac-notatie.  De omgekeerde is ook waar de Staten $ \ket { + } $ en $ \ket { - } $ vormen ook een basis voor Quantum Staten.  U kunt dit zien uit het feit dat
+
+Dit laat zien waarom deze staten vaak een *berekening* worden genoemd: elke Quantum status kan altijd worden uitgedrukt als som van de reken kundige basis vectoren en dergelijke sommen kunnen eenvoudig worden weer gegeven met behulp van de Dirac-notatie.  De omgekeerde is ook waar de Staten $ \ket { + } $ en $ \ket { - } $ vormen ook een basis voor Quantum Staten.  U kunt dit zien uit het feit dat
 
 $$
 \ket{0 } = \frac { 1 } { \sqrt { 2 } } ( \ket { + }  +  \ket { - } ), \qquad \ket { 1 } = \frac { 1 } { \sqrt { 2 } } ( \ket { + }  -  \ket { - } ).
@@ -128,14 +129,20 @@ $$
 
 Als voor beeld van een Dirac-notatie moet u de rem $ \braket { 0 | 1 overwegen } $ . Dit is het binnenste product tussen $ 0 $ en $ 1 $ .  Het kan worden geschreven als 
 
-$$\braket{0 | 1 } = \begin{bmatrix} 1 & 0 0 \end{bmatrix} \begin{bmatrix} \\\\ 1 \end{bmatrix} = 0.$$
+$$
+\braket{0 | 1 } = \begin{bmatrix} 1 & 0 0 \end{bmatrix} \begin{bmatrix} \\\\ 1 \end{bmatrix} = 0.
+$$
 
-Dit betekent dat $ \ket { 0 } $ en $ \ket { 1 een } $ orthogonale vector zijn, wat inhoudt dat $ \braket { 0 | 1 } = \braket { 1 | 0 } = $ 0 is.  Ook per definitie $ \braket { 0 | 0 } = \braket { 1 | 1 } = $ , wat betekent dat de twee reken kundige basis vectoren ook *orthonormal*kunnen worden genoemd.
-Deze orthonormal-eigenschappen zijn handig in het volgende voor beeld. Als we $ \ket { \psi } = { \frac { de status 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 hebben } $ , omdat $ \braket { 1 | 0 } = 0 $ de kans van meting $ 1 $ is  
+Dit betekent dat $ \ket { 0 } $ en $ \ket { 1 een } $ orthogonale vector zijn, wat inhoudt dat $ \braket { 0 | 1 } = \braket { 1 | 0 } = $ 0 is.  Ook per definitie $ \braket { 0 | 0 } = \braket { 1 | 1 } = $ , wat betekent dat de twee reken kundige basis vectoren ook *orthonormal* kunnen worden genoemd.
 
-$$\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .$$ 
+Deze orthonormal-eigenschappen zijn handig in het volgende voor beeld. Als we $ \ket { \psi } = { \frac { de status 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 hebben } $ , omdat $ \braket { 1 | 0 } = 0 $ de kans van meting $ 1 $ is 
+
+$$
+\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .
+$$
 
 ### <a name="tensor-product-notation"></a>Tensor-product notatie
+
 De notatie Dirac bevat ook een impliciete tensor-product structuur.  Dit is belang rijk omdat in de quantum computing de status vector die wordt beschreven door twee niet-gecorreleerde Quantum registers, de tensor-producten van de twee status vectoren zijn.  Een beknoptere beschrijving van de tensor-product structuur of het ontbreken daarvan is essentieel als u een Quantum berekening wilt uitleggen.  De tensor-product structuur impliceert dat we kunnen schrijven $ \psi \otimes \phi $ voor twee Quantum status vectoren $ \phi $ en $ \psi $ als $ \ket { \psi } \ket { \phi } $ , soms expliciet geschreven als $ \ket { \psi } \otimes \ket { \phi } $ , maar door $ \otimes $ het schrijven tussen de vectoren is niet nodig.  De status waarbij bijvoorbeeld twee qubits is geïnitialiseerd op de status nul, wordt gegeven door
 
 $$
@@ -155,6 +162,7 @@ $$
 $$
 
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Voor beeld: de superpositie beschrijven met de Dirac-notatie
+
 Als een ander voor beeld van hoe u Dirac-notatie kunt gebruiken om een Quantum status te beschrijven, moet u rekening houden met de volgende gelijkwaardige manieren om een Quantum status te schrijven die een gelijke superpositie is boven elke mogelijke bit-reeks van lengte $ n$
 
 $$
@@ -165,6 +173,7 @@ U vraagt zich misschien af waarom de som van $ 0 $ tot $ 2 ^ { n } -1 $ voor $ n
 In dit voor beeld hebben we geen gebruik gemaakt van $ \ket { + } ^ { \otimes n } = \ket { + } $ ten opzichte van $ \ket { 0 } ^ { \otimes n } = \ket { 0, } $ omdat deze notatie Conventie doorgaans is gereserveerd voor de status van de reken kundige basis waarbij elke qubit is geïnitialiseerd op nul.  Hoewel een dergelijke Conventie in dit geval verstandig is, wordt deze niet in de Quantum Computing-documentatie gebruikt.
 
 ### <a name="expressing-linearity-with-dirac-notation"></a>Lineair uitdrukken met Dirac-notatie
+
 Een andere leuke functie van de Dirac-notatie is het feit dat deze lineair is.  Als we willen schrijven voor een van de vier Quantum status vectoren, 
 
 $$( \alpha \ket { \psi }  + \beta \ket { \phi } ) \otimes ( \gamma \ket { \chi }  +  \delta \ket { \omega } ) = \alpha \gamma \ket { \psi } \ket { \chi }  +  \alpha \delta \ket { \psi } \ket { \omega } + \beta \gamma \ket { \phi } \ket { \chi } + \beta \delta \ket { \phi } \ket { \omega } .$$
@@ -180,6 +189,7 @@ $$|\braket{- |\psi}| ^ 2 = \left | \frac { 1 } { \sqrt { 2 } } ( \bra { 0 }  -  
 Het feit dat het negatieve teken in de berekening van de kans wordt weer gegeven, is een manifest van Quantum interferentie, een van de mechanismen waarmee quantum computing voor delen ten opzichte van het klassieke computer gebruik verkrijgt.
 
 ## <a name="ketbra-or-outer-product"></a>ketbra of buiten product
+
 De uiteindelijke waarde voor het bespreken van de Dirac-notatie is de *ketbra* of het buitenste product.  Het buitenste product wordt weer gegeven in Dirac-notaties als $ \ket { \psi } \bra { \phi } $ en wordt ook wel ketbras genoemd, omdat de Bras en Kets in de tegenovergestelde volg orde als brakets optreden.  Het buitenste product wordt gedefinieerd via matrix vermenigvuldiging als $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ voor Quantum status vectoren $ \psi $ en $ \phi $ .  Het eenvoudigste en weliswaar meest voorkomende voor beeld van deze notatie is
 
 $$
@@ -224,11 +234,12 @@ die overeenkomt met de multi-Qubit-meting discussie.  De generalisatie van dit r
 
 ## <a name="density-operators"></a>Dichtheids operatoren
 
-Een andere handige operator voor het gebruik van de Dirac-notatie is een *dichtheids operator*, soms ook wel een *status operator*genoemd.
+Een andere handige operator voor het gebruik van de Dirac-notatie is een *dichtheids operator*, soms ook wel een *status operator* genoemd.
 Een dichtheids operator voor een Quantum status vector maakt het formulier $ \rho = \ket { \psi } \bra { \psi } $ .
 Dit concept van het weer geven van de status als een matrix, in plaats van een vector, is vaak handig omdat het een handige manier is om de kans berekeningen te representeren, en kan er ook voor zorgen dat zowel statistische onzekerheid als de Quantum onzekerheid binnen dezelfde formele instelling worden beschreven.
 Algemene Quantum status operatoren, in plaats van vectoren, zijn alomtegenwoordige in bepaalde gebieden van Quantum Computing, maar zijn niet nodig om de basis beginselen van het veld te begrijpen.
 Voor de belanghebbende lezer raden we u aan een van de referentie boeken te lezen die zijn opgenomen in [voor meer informatie](xref:microsoft.quantum.more-information).
 
 ## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# poort reeksen die gelijk zijn aan Quantum statussen
+
 Een eind punt voor het verhogen van de Quantum-notatie en de Q# programmeer taal: bij het begin van dit document hebben we vermeld dat de Quantum status het fundamenteel object van informatie in quantum computing is.  Het kan dan als een verrassing zijn dat Q# er geen sprake is van een Quantum status.  In plaats daarvan worden alle statussen alleen beschreven door de bewerkingen die worden gebruikt om ze voor te bereiden.  Het vorige voor beeld is dit een uitstekende illustratie.  In plaats van een uniforme superpositie te geven voor elke Quantum-bits teken reeks in een REGI ster, kunnen we het resultaat als $ H ^ { \otimes n } \ket { 0 vertegenwoordigen } $ .  Deze exponentiële korte beschrijving van de status heeft niet alleen het voor deel dat we er in de klassieke reden voor kunnen hebben, maar ook een beknopt overzicht van de bewerkingen die nodig zijn om door de software stack te worden door gegeven om de algoritme te implementeren.  Daarom Q# is het ontworpen om poort reeksen te verzenden in plaats van Quantum Staten, maar op theoretisch niveau zijn de twee perspectieven gelijkwaardig.

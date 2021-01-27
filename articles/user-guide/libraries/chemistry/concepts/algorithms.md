@@ -4,17 +4,17 @@ description: Leer hoe u Trotter-Suzuki formules en qubitization kunt gebruiken o
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691892"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857598"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics simuleren
 
@@ -28,7 +28,7 @@ Het idee achter Trotter – Suzuki formules is eenvoudig: de Hamiltonian als som
 U kunt met name $H = \ sum_ {j = 1} ^ m H_j $ de Hamiltonian zijn.
 Then $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $. dat wil zeggen dat, als $t \ll $1, de fout in deze benadering verwaarloosbaar is.
 Als $e ^ {-i H t} $ een normale exponentiële waarde was, zou de fout in deze benadering niet worden $O (m ^ 2 t ^ 2) $: de waarde is nul.
-Deze fout treedt op omdat $e ^ {-iHt} $ een operator exponentiële is. als gevolg hiervan is er een fout opgetreden bij het gebruik van deze formule als gevolg van het feit dat de $H _j $-voor waarden niet werken ( *dat wil zeggen* $H _J H_k \ne H_k H_j $ in het algemeen).
+Deze fout treedt op omdat $e ^ {-iHt} $ een operator exponentiële is. als gevolg hiervan is er een fout opgetreden bij het gebruik van deze formule als gevolg van het feit dat de $H _j $-voor waarden niet werken (*dat wil zeggen*$H _J H_k \ne H_k H_j $ in het algemeen).
 
 Als $t $ groot is, kunnen er nog steeds Trotter-Suzuki formules worden gebruikt om de dynamiek nauw keurig te simuleren door deze op te splitsen in een reeks korte fases.
 Laat $r $ het aantal stappen dat is uitgevoerd in de tijd evolutie, dus elke keer dat de stap wordt uitgevoerd voor tijd $t/r $. Vervolgens hebben we dat $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ wat impliceert dat als $r $ wordt geschaald als $m ^ 2 t ^ 2/\ Epsilon $, de fout kan worden gemaakt Maxi maal $ \epsilon $ voor $ \epsilon>$0.

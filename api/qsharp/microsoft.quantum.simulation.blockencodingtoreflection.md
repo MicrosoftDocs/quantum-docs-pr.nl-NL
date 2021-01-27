@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
 title: De functie BlockEncodingToReflection
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 
   That is, given a `BlockEncoding` unitary $U$ that encodes some operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that encodes the same operator, but also satisfies $U'^\dagger = U'$. This increases the size of the auxiliary register of $U$ by one qubit.
-ms.openlocfilehash: 742d4f5623c7c26810998f6c96e2c7b05cc452d3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bada0dcc54d2a8d67cf7383d7153c7f46a4a8415
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96225343"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847261"
 ---
 # <a name="blockencodingtoreflection-function"></a>De functie BlockEncodingToReflection
 
@@ -50,7 +50,7 @@ Een unitary-$U ' $ communiceert gezamenlijk aan registers `a` en `s` die blok-co
 
 Dit verhoogt de grootte van het hulp register van $U $ door één Qubit.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - Hamiltonian simulatie door Qubitization Guang Hao laag, Isaac L. Chuang https://arxiv.org/abs/1610.06546
 
