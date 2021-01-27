@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692165"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857243"
 ---
 # <a name="applications"></a>Toepassingen #
 
@@ -62,7 +62,7 @@ In veel gevallen willen we het simulatie algoritme implementeren, maar zijn ze n
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-De eerste para meter `Double` is de tijd van simulatie, de tweede para meter, die wordt `EvolutionGenerator` beschreven in de sectie voor [data-structures](xref:microsoft.quantum.libraries.data-structures)het weer geven van dynamische generator, is een klassieke beschrijving van een tijdgebonden Hamiltonian die is verpakt met instructies over hoe elke term in de Hamiltonian kan worden gesimuleerd met een Quantum circuit. De typen van dit formulier benaderen de unitary-bewerking $e ^ {-iHt} $ op de derde para meter `Qubit[]` , de kassa de Quantum status van het gesimuleerde systeem opslaat. Net als de tijds afhankelijke case definiëren we een door de gebruiker gedefinieerd type met een `EvolutionSchedule` type, dat een klassieke beschrijving is van een tijdgebonden Hamiltonian.
+De eerste para meter `Double` is de tijd van simulatie, de tweede para meter, die wordt `EvolutionGenerator` beschreven in de sectie voor [](xref:microsoft.quantum.libraries.data-structures)het weer geven van dynamische generator, is een klassieke beschrijving van een tijdgebonden Hamiltonian die is verpakt met instructies over hoe elke term in de Hamiltonian kan worden gesimuleerd met een Quantum circuit. De typen van dit formulier benaderen de unitary-bewerking $e ^ {-iHt} $ op de derde para meter `Qubit[]` , de kassa de Quantum status van het gesimuleerde systeem opslaat. Net als de tijds afhankelijke case definiëren we een door de gebruiker gedefinieerd type met een `EvolutionSchedule` type, dat een klassieke beschrijving is van een tijdgebonden Hamiltonian.
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algoritme van Shor ##
 Het Shor-algoritme is een van de belangrijkste ontwikkelingen in de Quantum Computing, omdat blijkt dat quantum computers kunnen worden gebruikt voor het oplossen van belang rijke, op dit moment klassieke problemen.
-Het Shor-algoritme biedt een snelle manier om grote getallen te vermenigvuldigen met behulp van een quantum computer, een probleem met de naam *factoring* .
+Het Shor-algoritme biedt een snelle manier om grote getallen te vermenigvuldigen met behulp van een quantum computer, een probleem met de naam *factoring*.
 De beveiliging van veel aanwezige dagen cryptosystems is gebaseerd op de veronderstelling dat er geen snelle algoritme bestaat voor factories.
 Het algoritme van Shor heeft een progevonden effect gehad op hoe we de beveiliging in een post-Quantum wereld denken.
 
@@ -151,7 +151,7 @@ Deze twee stappen worden hieronder besproken.
 
 ### <a name="period-finding"></a>Periode zoeken ###
 
-Gezien hoe de Quantum Fourier-trans formatie en fase schatting werken (Zie [Quantum algoritmen](xref:microsoft.quantum.libraries.standard.algorithms)), kunnen we deze hulpprogram ma's gebruiken om een klassiek probleem op te lossen dat de *periode bevindt* .  In de volgende sectie wordt beschreven hoe u de periode voor het zoeken kunt Toep assen op factor.
+Gezien hoe de Quantum Fourier-trans formatie en fase schatting werken (Zie [Quantum algoritmen](xref:microsoft.quantum.libraries.standard.algorithms)), kunnen we deze hulpprogram ma's gebruiken om een klassiek probleem op te lossen dat de *periode bevindt*.  In de volgende sectie wordt beschreven hoe u de periode voor het zoeken kunt Toep assen op factor.
 
 Als er twee gehele getallen zijn $a $ en $N $, waarbij $a<N $, het doel van het vinden van de periode, ook wel het vinden van orders genoemd, het vinden van de _volg orde_ $r $ van $a $ modulo $N $, waarbij $r $ is gedefinieerd als het minst positieve gehele getal zodat $a ^ r \equiv 1 \Text{mod} N $.  
 
@@ -178,7 +178,7 @@ De Controlled-$U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \Text{mod} N} $ als h
 Om $ (a ^ NX) \Text{mod} N $ toe te passen, kunnen we een beheerde $U _ {a ^ N} $ Toep assen, waar we $a ^ N \Text{mod} N $ op klassieke wijze berekenen om in het Quantum circuit aan te sluiten.  
 De circuits om dergelijke modulaire reken kundige berekeningen te realiseren, zijn beschreven in de [kwantum wiskundige documentatie](./algorithms.md#arithmetic), met name dat er een modulair exponent circuit is vereist voor het implementeren van de beheerde $U \_ {a ^ i} $ bewerkingen.
 
-Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. karakte Rise ring. Een voor beeld van een [Robust Phase-schatting](xref:microsoft.quantum.characterization.robustphaseestimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
+Hoewel het circuit hierboven overeenkomt met de [Quantum fase-schatting](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) en expliciet het zoeken van bestellingen mogelijk maakt, kunnen we het aantal qubits beperken dat nodig is. We kunnen de Beauregard-methode voor het vinden van orders volgen, zoals beschreven [op pagina 8 van arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), of een van de fase-schattings routines gebruiken die beschikbaar zijn in micro soft. Quantum. karakte Rise ring. Een voor beeld van een [Robust Phase-schatting](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) maakt bijvoorbeeld ook gebruik van één extra Qubit.
 
 ### <a name="factoring"></a>Waarbij ###
 Het doel van factoren is het bepalen van de twee Prime factoren van het gehele getal $N $, waarbij $N $ een $n $-bit-nummer is.  
