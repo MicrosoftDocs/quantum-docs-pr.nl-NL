@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van Pauli-metingen: meer informatie over het werken met bewerkingen met een Pauli-meting met één en meerdere Qubit.
-Auteur: bradben UID: micro soft. Quantum. concepten. Pauli MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: bradben UID: micro soft. Quantum. concepten. Pauli MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 Het is ook gelijk aan het Toep assen van $ HS ^ \dagger $ op de Quantum status vector en vervolgens $ Z $ , zodat de volgende bewerking overeenkomt met `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

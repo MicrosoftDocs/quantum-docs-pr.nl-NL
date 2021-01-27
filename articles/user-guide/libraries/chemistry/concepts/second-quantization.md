@@ -4,17 +4,17 @@ description: Meer informatie over de tweede Kwantisatiefouten-benadering voor he
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835805"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858839"
 ---
 # <a name="second-quantization"></a>Tweede Kwantisatiefouten
 
@@ -84,7 +84,7 @@ De beroeps statussen voor de $2N $ spin-banen kunnen op dezelfde manier worden o
 Als $N bijvoorbeeld = $2, is de status $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 komt overeen met de kring velden $1 $ en $2 $ die worden ingen Omen met de rest lege.
-Op dezelfde manier is de status $ $ \ket {0} \equiv \ket {0} _ {0} {0} \cdots \ket_{N-1}, $ $
+Op dezelfde manier is de status $ $ \ket {0} \equiv \ket {0} _{0} {0} \cdots \ket_{N-1}, $ $
 
 heeft geen electrons en wordt aangeduid als ' vacuüm status '.
 
@@ -211,12 +211,12 @@ Elk `FermionTerm` wordt automatisch als volgt in canonieke volg orde geplaatst.
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>Fermionic Hamiltonian met de tweede gequanteerde
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamiltonian
 
 Het is misschien unsurprising dat de Hamiltonian in [Quantum modellen voor elektronische systemen](xref:microsoft.quantum.chemistry.concepts.quantummodels) kan worden geschreven in termen van maken en Annihilation-Opera tors.
 Met name als $ \psi \_ j $ de kring banen zijn die de basis vormen, dan
 
-\begin{Equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm NUC}, \label{EQ: totalHam} \end{Equation}, waarbij $h \_ {\textrm NUC} $ de kern energie is (een constante onder de door aankomende Oppenheimer benadering) en
+\begin{Equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm NUC}, \label{EQ: totalHam} \end{Equation}, waarbij $h \_ {\textrm NUC} $ de kern energie is (een constante onder de Born-Oppenheimer benadering) en
 
 \begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x \_ 1) \mathrm{d} ^ 3x \_ 1, \end{align}
 

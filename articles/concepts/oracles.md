@@ -1,6 +1,6 @@
 ---
 Titel: Quantum Oracle description Beschrijving: informatie over het werken met en het definiëren van Quantum Oracle, Black Box-bewerkingen die worden gebruikt als invoer voor een ander algoritme.
-Auteur: cgranade UID: micro soft. Quantum. concepten. Oracle MS. Author: chgranad MS. date: 07/11/2018 MS. topic: artikel no-loc:
+Auteur: cgranade UID: micro soft. Quantum. concepten. Oracle MS. Author: chgranad MS. date: 07/11/2018 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ waarbij $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C 
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Kies $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Houd er rekening mee dat $ z ^ { -1 } = Z ^ { \dagger } = Z $ en dus $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } .$
 
 In het algemeen kunnen beide weer gaven van Oracle worden uitgebreid met klassieke functies die echte aantallen retour neren in plaats van slechts één bit.
 
