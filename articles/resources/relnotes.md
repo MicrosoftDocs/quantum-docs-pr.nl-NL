@@ -4,17 +4,17 @@ description: Meer informatie over de meest recente updates voor de preview-versi
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231788"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856668"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -24,6 +24,16 @@ Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instr
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
 
+## <a name="version-0152101125897"></a>Versie 0.15.2101125897
+
+*Release datum: 26 januari, 2021*
+
+- Vereenvoudigde Qubit-toewijzing, met meer handige syntaxis voor het toewijzen van qubits, [raadpleegt u details in de Q# taal opslagplaats](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Er is QDK-Python opslag plaats gemaakt met `azure-quantum` de python-client voor het indienen van Quantum-congebaseerde optimalisatie taken aan de Azure-Quantum service, evenals, `qdk` met inbegrip van `qdk.chemistry` een op python gebaseerde laag voor de schei ding van de bewerkings Q# bibliotheek met moleculaire visualisatie en functionaliteit voor het genereren van invoer bestanden voor verschillende chemie-pakketten, zoals NWChem, Psi4 en OpenMolcas.
+- Haakjes zijn nu optioneel voor bewerking-en functie typen en `if` , `elif` , en- `while` `until` instructies. Haakjes voor `for` `use` en `borrow` instructies zijn afgeschaft.
+- Verbeterde breedte schattingen voor een optimale diepte vindt u in [Details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- Pas een unitary-bewerking toe die is geleverd als expliciete matrix met `ApplyUnitary` ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), externe bijdrage door Dmytro Fedoriaka)
+- Opgelost https://github.com/microsoft/iqsharp/issues/387 door de invloed op de prestaties bij het starten van de kernel te beperken Q# .
 ## <a name="version-0142011120240"></a>Versie 0.14.2011120240
 
 *Release datum: november 25e, 2020*
@@ -153,7 +163,7 @@ Bekijk de volledige lijst met gesloten pull voor [bibliotheken](https://github.c
 
 Deze release omvat het volgende:
 
-- Nieuwe ondersteuning voor Q# toepassingen waarvoor geen C#-of python-hostbestand meer nodig is. Zie hier voor meer informatie over het aan de slag Q# gaan met toepassingen. [here](xref:microsoft.quantum.install.standalone)
+- Nieuwe ondersteuning voor Q# toepassingen waarvoor geen C#-of python-hostbestand meer nodig is. Zie hier voor meer informatie over het aan de slag Q# gaan met toepassingen. [](xref:microsoft.quantum.install.standalone)
 - De quickstart voor de kwantumgenerator voor willekeurige nummers is bijgewerkt. Er is nu geen C# of Python-hostbestand meer nodig. Bekijk de bijgewerkte [quickstart](xref:microsoft.quantum.quickstarts.qrng)
 - Prestatie verbeteringen voor I Q# docker-installatie kopieën
 
@@ -211,7 +221,7 @@ Bekijk de volledige lijst met gesloten pull-aanvragen voor [bibliotheken](https:
 
 Deze release omvat het volgende:
 
-- Nieuw test kenmerk voor Q# eenheids tests, zie bijgewerkte API-documentatie [hier](xref:Microsoft.Quantum.Diagnostics.Test) en de bijgewerkte hand [here](xref:microsoft.quantum.guide.testingdebugging) leiding voor het testen & de fout opsporing
+- Nieuw test kenmerk voor Q# eenheids tests, zie bijgewerkte API-documentatie [hier](xref:Microsoft.Quantum.Diagnostics.Test) en de bijgewerkte hand [](xref:microsoft.quantum.guide.testingdebugging) leiding voor het testen & de fout opsporing
 - Stack tracering toegevoegd bij een fout van een Q# programma-uitvoering
 - Ondersteuning voor onderbrekingspunten in Visual Studio Code door een update in de [OmniSharp C# Visual Studio Code-extensie](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -486,14 +496,7 @@ Meer informatie over de [Quantum Development Kit-chemiebibliotheek](xref:microso
 
 Met de nieuwe chemiebibliotheek plaatsen we de bibliotheken in een nieuwe GitHub-opslagplaats, [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries).  De voorbeelden bevinden zich in de opslagplaats [Microsoft/Quantum](https://github.com/Microsoft/Quantum).  Bijdragen aan beide zijn welkom.
 
-Deze release omvat foutoplossingen en functies voor problemen die door de community zijn gemeld:
-
-* IntelliSense voor Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
-* .qs-bestanden ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
-* Foutbericht verbeterd wanneer accolades worden afgekort in de if-instructie ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
-* Ondersteuning voor tuple-ontsleuteling bij onveranderlijke (her)binding ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
-* Fout bij de uitvoering van opgegeven BitFlipCode ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-* H2SimulationGUI geeft soms grote pieken weer ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+Deze release bevat oplossingen voor fouten en functies voor problemen die door de community worden gerapporteerd.
 
 ### <a name="community-contributions"></a>Bijdragen van de community
 
@@ -509,15 +512,7 @@ We bedanken ook Rohit Gupta ([@guptarohit](https://github.com/guptarohit),[PR #9
 
 *Releasedatum: 10 september 2018*
 
-Deze release omvat foutoplossingen voor problemen die door de community zijn gemeld. Waaronder:
-
-* Kan de shift-operator niet gebruiken ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* `DumpMachine` / `DumpRegister` mislukt in `QCTraceSimulator` wanneer wordt geprint naar de console ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* Toewijzen van 0 qubits toegestaan ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* `AssertQubitState` vereist expliciete aanroep Complex() ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* De bewerking `Measure` retourneert altijd `One` in macOS ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Bedankt! 
+Deze release omvat foutoplossingen voor problemen die door de community zijn gemeld.
 
 ## <a name="version-0218063001"></a>Versie 0.2.1806.3001
 

@@ -4,24 +4,24 @@ description: Meer informatie over hoe moleculaire elektronische systemen worden 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833918"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856226"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Quantum modellen voor elektronische systemen
 
 Om elektronische systemen te simuleren, moeten we eerst de Hamiltonian opgeven, die kan worden gevonden door de canonieke kwantisatiefouten-procedure die hierboven wordt beschreven.
 In het bijzonder, voor $N _e $ electrons met Momenta $p _i $ (in drie dimensies) en massa $m _e $ en positie vectoren $x _i $, samen met de kernen met kosten $Z _k e $ op posities $y _k $, de operator Hamiltonian leest \begin{Equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2 min. \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k} \frac{Z \_ kz \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}. \label{EQ: \end{Equation}} de Momenta-Opera tors $ \hat{p} \_ i ^ 2 $ kunnen worden weer gegeven in echte ruimte als Laplacian-Opera Tors, dat wil zeggen $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial \_ {y \_ i} ^ 2-\partial \_ {z \_ i} ^ 2 $.
 Hier hebben we de veronderstelling gemaakt dat de nuclei in rust zijn voor het molecuul.
-Dit staat bekend als de Oppenheimer benadering en is doorgaans geldig voor het energie spectrum met een laag energie niveau van $ \hat{H} $, aangezien de massa van het elektroeen ongeveer $1/1836 $ de massa van een proton.
+Dit staat bekend als de Born-Oppenheimer benadering en is doorgaans geldig voor het energie spectrum met een laag energie niveau van $ \hat{H} $, aangezien de massa van het elektroeen ongeveer $1/1836 $ de massa van een proton is.
 Deze Hamiltonian-operator kan eenvoudig worden gevonden door de energie te schrijven voor een systeem van $N \_ e $ electrons en het canonieke kwantisatiefouten-proces toe te passen dat wordt beschreven in [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
 
 Als u de unitary matrix representatie voor $e ^ {-i\hat {H} t} wilt maken, moet u de operator $ \hat{H} $ als matrix vertegenwoordigen.
@@ -36,7 +36,7 @@ Daarom is het kiezen van een basis waarmee het probleem beknopt kan worden aange
 
 Er zijn veel geschikte bases die kunnen worden gebruikt en de keuze van een goede basis om het probleem aan te passen, is veel van de grafische schei kunde.
 Misschien zijn de eenvoudigste, dergelijke basis sets Slater (WAARSCHUWINGSD) die zijn (gevormde) oplossingen voor de Schrödinger-vergelijking (dus eigenfunctions van $ \hat{H} $) voor waterstof achtige atomen.
-Andere basis sets, zoals een vlieg tuig of een laag ruimte niveau, kunnen worden gebruikt en voor meer informatie hebben we de nieuws lezer naar de standaard tekst [' moleculaire elektronische-structuur theorie '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) door Helgaker.
+Andere basis sets, zoals vlieg tuigen of ruimten met een vaste ruimte, kunnen worden gebruikt en voor meer details verwijzen we naar de standaard tekst [' moleculaire Electronic-Structure theorie '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) door Helgaker.
 
 Hoewel de staten die in het bovenstaande model worden gebruikt, een wille keurige vorm kunnen hebben, plaatsen Quantum monteurs beperkingen op de statussen die in de natuur kunnen worden gevonden.
 Met name moeten alle geldige elektronische Quantum Staten antisymmetrisch zijn onder uitwisseling van elektronen labels.

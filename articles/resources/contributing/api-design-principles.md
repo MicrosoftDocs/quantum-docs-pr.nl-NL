@@ -4,17 +4,17 @@ description: Q# Ontwerp principes van API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452b32141dc660acbe8ef28530f1430e5acff9aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231771"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856689"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Ontwerp principes van API
 
@@ -60,7 +60,7 @@ Dit artikel bevat een overzicht van deze principes en biedt voor beelden om te l
 
 **Sleutel principe:** Ontwerp Api's stabiel en om voorwaartse compatibiliteit te bieden.
 
-- ✅**DO** Verouderde api's op de juiste wijze af als er wijzigingen zijn vereist.
+- ✅ Verouderde api's op de juiste wijze af als er wijzigingen zijn vereist.
 
 - ✅**Geef bewerkingen** en functies op waarmee de bestaande gebruikers code op de juiste wijze kan worden uitgevoerd tijdens de afschaffing.
 

@@ -1,6 +1,6 @@
 ---
 Titel: beschrijving van de Quantum Computing-woorden lijst: een woorden lijst met algemene termen, acties en objecten die worden gebruikt in Quantum Computing.
-Auteur: bradben MS. Author: v-benbra MS. date: 9/1/2020 MS. topic: artikel UID: micro soft. Quantum. Glossary no-loc:
+Auteur: bradben MS. Author: v-benbra MS. date: 9/1/2020 MS. topic: Reference UID: micro soft. Quantum. Glossary no-loc:
 - "Q#"
 - "$$v"
 - "$$"
