@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CascadeCNOT
 title: Bewerking CascadeCNOT
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.canon.applycnotchain".
-ms.openlocfilehash: a29b3221189fa654e69e46990a055684943bad98
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 5e41d25cf549c51431cb7f6903513d274451f57c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216928"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844516"
 ---
-# <a name="cascadecnot-operation"></a><span data-ttu-id="9fc4c-102">Bewerking CascadeCNOT</span><span class="sxs-lookup"><span data-stu-id="9fc4c-102">CascadeCNOT operation</span></span>
+# <a name="cascadecnot-operation"></a><span data-ttu-id="69bb4-102">Bewerking CascadeCNOT</span><span class="sxs-lookup"><span data-stu-id="69bb4-102">CascadeCNOT operation</span></span>
 
-<span data-ttu-id="9fc4c-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="9fc4c-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="69bb4-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="69bb4-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="9fc4c-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="9fc4c-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="69bb4-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="69bb4-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="9fc4c-105">CascadeCNOT is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="9fc4c-105">CascadeCNOT has been deprecated.</span></span> <span data-ttu-id="9fc4c-106">Gebruik <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="9fc4c-106">Please use <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> instead.</span></span>
+> <span data-ttu-id="69bb4-105">CascadeCNOT is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="69bb4-105">CascadeCNOT has been deprecated.</span></span> <span data-ttu-id="69bb4-106">Gebruik <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="69bb4-106">Please use <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> instead.</span></span>
 >
-> <span data-ttu-id="9fc4c-107">Gebruik @"microsoft.quantum.canon.applycnotchain".</span><span class="sxs-lookup"><span data-stu-id="9fc4c-107">Please use @"microsoft.quantum.canon.applycnotchain".</span></span>
+> <span data-ttu-id="69bb4-107">Gebruik @"microsoft.quantum.canon.applycnotchain".</span><span class="sxs-lookup"><span data-stu-id="69bb4-107">Please use @"microsoft.quantum.canon.applycnotchain".</span></span>
 
 
 
@@ -40,13 +40,13 @@ operation CascadeCNOT (register : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9fc4c-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="9fc4c-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="69bb4-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="69bb4-108">Input</span></span>
 
-### <a name="register--qubit"></a><span data-ttu-id="9fc4c-109">registreren: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="9fc4c-109">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
-
-
+### <a name="register--qubit"></a><span data-ttu-id="69bb4-109">registreren: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="69bb4-109">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="9fc4c-110">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="9fc4c-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+## <a name="output--unit"></a><span data-ttu-id="69bb4-110">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="69bb4-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
