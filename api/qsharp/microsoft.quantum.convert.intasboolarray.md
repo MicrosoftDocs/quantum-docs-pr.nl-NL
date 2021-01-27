@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: De functie IntAsBoolArray
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBoolArray
-qsharp.summary: Produces a binary representation of a positive integer, using the little-endian representation for the returned array.
-ms.openlocfilehash: f89cb3d7ca29d7deaaf49573b2670534166caded
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+qsharp.summary: Produces a binary representation of a non-negative integer, using the little-endian representation for the returned array.
+ms.openlocfilehash: 8b3d230605cc756a5da01e45e47f91c5b8e9f541
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224340"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98833307"
 ---
 # <a name="intasboolarray-function"></a>De functie IntAsBoolArray
 
@@ -21,7 +21,7 @@ Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Produceert een binaire weer gave van een positief geheel getal, met behulp van de weer gave van de little-endian voor de geretourneerde matrix.
+Produceert een binaire weer gave van een niet-negatief geheel getal, met behulp van de weer gave van de little-endian voor de geretourneerde matrix.
 
 ```qsharp
 function IntAsBoolArray (number : Int, bits : Int) : Bool[]
@@ -32,7 +32,7 @@ function IntAsBoolArray (number : Int, bits : Int) : Bool[]
 
 ### <a name="number--int"></a>getal: [int](xref:microsoft.quantum.lang-ref.int)
 
-Een positief geheel getal dat moet worden geconverteerd naar een matrix met Boole-waarden.
+Een niet-negatief geheel getal dat moet worden geconverteerd naar een matrix met Boole-waarden.
 
 
 ### <a name="bits--int"></a>bits: [int](xref:microsoft.quantum.lang-ref.int)
