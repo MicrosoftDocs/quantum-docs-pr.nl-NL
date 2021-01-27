@@ -4,18 +4,17 @@ description: Meer informatie over hoe u een Q#-toepassing maakt met Jupyter Note
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771389"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844281"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Ontwikkelen met Q# Jupyter-notebooks
 
@@ -69,7 +68,7 @@ IQ# (spreek uit als 'i-q-sharp') is een extensie voor de .NET Core SDK die hoofd
 > waarbij `/path/to/dotnet-iqsharp` moet worden vervangen door het absolute pad naar het `dotnet-iqsharp`-hulpprogramma in uw bestandssysteem.
 > Dit is meestal bij `.dotnet/tools` in de map van uw gebruikersprofiel.
     
-***
+**_
 
 Dat is alles. U beschikt nu over de IQ#-kernel voor Jupyter, die de kernfunctionaliteit biedt voor het compileren en uitvoeren van Q#-bewerkingen vanuit Q# Jupyter Notebooks.
 
@@ -85,7 +84,7 @@ Nu bent u klaar om de installatie van uw Q# Jupyter Notebook te controleren door
 
     - Als Jupyter Notebook niet automatisch wordt geopend in de browser, kopieert en plakt u de URL die u van de opdrachtregel hebt ontvangen, in de browser.
 
-1. Kies **Nieuw → Q#** om een Jupyter Notebook met een Q#-kernel te maken, en voeg de volgende code toe aan de eerste notebook-cel:
+1. Kies _ *nieuw → Q#** om een Jupyter notebook te maken met een Q# kernel en voeg de volgende code toe aan de eerste notebook-cel:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

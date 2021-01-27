@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: Bewerking AssertProbInt
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 85ff04bbad9dc2ed0f803db65508fdfbb0d22c56
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223694"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843409"
 ---
 # <a name="assertprobint-operation"></a>Bewerking AssertProbInt
 
@@ -57,3 +57,14 @@ Absolute tolerantie voor het verschil tussen werkelijk en verwacht.
 
 ## <a name="output--unit"></a>Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>Voorbeeld
+
+Stel dat het `qubits` REGI ster een 3-Qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ Ket {0} + \ SQRT {7/8} \ Ket {6} $ in de indeling little endian codeert.
+Dit betekent dat het aantal statussen $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ en $ \ket \equiv\ket \ket \ket {6} {0} {1} {1} $. Daarna slagen de volgende verklaringen:
+
+```qsharp
+AssertProbInt(0, 0.125, qubits, 10e-10);
+AssertProbInt(6, 0.875, qubits, 10e-10);
+```

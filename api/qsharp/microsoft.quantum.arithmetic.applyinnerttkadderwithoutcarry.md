@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry
 title: Bewerking ApplyInnerTTKAdderWithoutCarry
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyInnerTTKAdderWithoutCarry
 qsharp.summary: Implements the inner addition function for the operation RippleCarryAdderNoCarryTTK. This is the inner operation that is conjugated with the outer operation to construct the full adder.
-ms.openlocfilehash: 656dc947ab88a7e7f1e8e8722c5262470307f7dc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0c1626c788215181b5ed45dc98bed928b5e4848a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190952"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843813"
 ---
 # <a name="applyinnerttkadderwithoutcarry-operation"></a>Bewerking ApplyInnerTTKAdderWithoutCarry
 
@@ -49,7 +49,7 @@ LittleEndian Qubit registreert de tweede integer summand-invoer op RippleCarryAd
 
 De opgegeven bewaakte bewerking maakt gebruik van symmetrie en wederzijdse annulering van bewerkingen voor het verbeteren van de standaard implementatie waarmee een besturings element wordt toegevoegd aan elke bewerking.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - Yasuhiro Takahashi, seiichiro Tani, Noboru Kunihiro: "Quantum extra-circuits en niet-gebonden ventilatoren", quantum informatie en berekening, vol. 10, 2010.
   https://arxiv.org/abs/0910.2530

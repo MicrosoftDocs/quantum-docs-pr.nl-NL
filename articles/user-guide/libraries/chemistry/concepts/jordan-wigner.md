@@ -1,30 +1,30 @@
 ---
-title: Jordanië-Wignere representatie
-description: Meer informatie over de Wigner-vertegenwoordiging van Jordanië, waarmee Hamiltonian-Opera tors worden toegewezen aan unitary-matrices die eenvoudiger kunnen worden geïmplementeerd op een quantum computer.
+title: Jordan-Wigner weer geven
+description: Meer informatie over de Jordan-Wigner vertegenwoordiging, waarmee Hamiltonian-Opera tors worden toegewezen aan unitary-matrices die eenvoudiger op een quantum computer kunnen worden geïmplementeerd.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833852"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844141"
 ---
-# <a name="jordan-wigner-representation"></a>Jordanië-Wignere representatie
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner weer geven
 
 Hoewel het tweede aantal geHamiltonianseerde taken handig is weer gegeven in termen van $a ^ \dagger $ (maken) en $a $ (Annihilation), zijn deze bewerkingen geen fundamentele bewerkingen op quantum computers.
 Als u deze wilt implementeren op een quantum computer, moeten de Opera tors worden toegewezen aan unitary-matrices die op een quantum computer kunnen worden geïmplementeerd.
 De Wigner-weer gave van Jordanië bevat een dergelijke kaart.
 Andere, zoals de Bravyi – Kitaev-vertegenwoordiging bestaan echter ook en hebben hun eigen relatieve voor delen en nadelen.
-Het belangrijkste voor deel van de Wignere weer gave van Jordanië is de eenvoud.
+Het belangrijkste voor deel van de Jordan-Wigner vertegenwoordiging is de eenvoud.
 
-De Wigner-representatie van Jordanië is direct voorwaarts om te kunnen afleiden.
+De Jordan-Wigner vertegenwoordiging kan direct worden afgeleid.
 Een status $ \ket {0} _J $ impliceert dat orbital $j $ leeg is en $ \ket {1} _J $ impliceert dat deze bezet is.
 Dit betekent dat qubits natuurlijk het beroep van een bepaalde spin Orbital kan opslaan.
 We hebben dat $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ en $a ^ \ dagger_j \ket {1} _J = $0.
@@ -51,14 +51,14 @@ De volledige constructie is als volgt:
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ een ^ \ dagger_2 &= Z\otimes\left (\frac{X-iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ een ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-iy} {2} \right) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-iy} {2} \right). \label{eq:JW} \end{align}
 
 Het is ook handig om de nummer operators, $n _j $, in termen van Pauli-Opera tors uit te drukken.
-Gelukkig, de teken reeksen van $Z $-Opera tors (ook wel Jordanië-Wigner teken reeksen genoemd), worden geannuleerd nadat deze vervanging is uitgevoerd.
+Gelukkig, de teken reeksen van $Z $-Opera tors (ook wel Jordan-Wigner teken reeksen genoemd), worden geannuleerd nadat deze vervanging is uitgevoerd.
 Nadat u dit hebt uitgevoerd (en terugroept dat $X _jY_j = iZ_j $), hebben we \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Hamiltonians maken in Jordanië-Wigner-vertegenwoordiging
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Hamiltonians maken in Jordan-Wigner vertegenwoordiging
 
-Zodra we de Wigner-weer gave van Jordanië hebben aangeroepen om de Hamiltonian te vertalen naar een som van Pauli Opera Tors, is dit recht vooruit.
+Zodra we de Jordan-Wigner-vertegenwoordiging hebben aangeroepen, wordt de Hamiltonian naar een som van Pauli-Opera tors direct vooruit omgezet.
 Een van de twee $a ^ \dagger $ en $a $-Opera tors in de Fermionic-Hamiltonian worden vervangen door de teken reeksen van Pauli-Opera tors die hierboven staan vermeld.
 Wanneer een van deze vervangingen wordt uitgevoerd, zijn er slechts vijf soorten termen binnen de Hamiltonian.
 Deze vijf klassen komen overeen met de verschillende manieren waarop we de $p, q $ en $p, q, r, s $ in de Hamiltonian en de voor waarden van twee hoofd tekst in de-hoofd tekst kunnen kiezen.

@@ -4,17 +4,17 @@ description: Meer informatie over het automatisch genereren van een grote Hamilt
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869236"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844120"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Hamiltoniaan uit een bestand laden
 Voorheen hebben we Hamiltonians gemaakt door afzonderlijke voor waarden toe te voegen. Hoewel dit een kleine voor beeld is, is voor Quantum-schei kunde op schaal Hamiltonians met miljoenen of miljarden voor waarden vereist. Dergelijke Hamiltonians, die zijn gegenereerd door chemie pakketten zoals NWChem, zijn te groot om met de hand te worden geïmporteerd. In dit voor beeld laten we zien hoe een `FermionHamiltonian` exemplaar automatisch kan worden gegenereerd op basis van een molecuul dat wordt vertegenwoordigd door het [Broombridge-schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Ter referentie kan één het gegeven voor `LithiumHydrideGUI` beeld of het voor `RunSimulation` beeld controleren. Beperkte ondersteuning is ook beschikbaar voor importeren vanuit de indeling die wordt gebruikt door [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).

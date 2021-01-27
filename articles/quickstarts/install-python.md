@@ -4,18 +4,17 @@ description: Meer informatie over hoe u een Q#-toepassing maakt met Python.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834156"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844274"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Ontwikkelen met Q# en Python
 
@@ -72,7 +71,7 @@ Installeer de QDK om Python-hostprogramma's te ontwikkelen waarmee Q#-bewerkinge
     > waarbij `/path/to/dotnet-iqsharp` moet worden vervangen door het absolute pad naar het `dotnet-iqsharp`-hulpprogramma in uw bestandssysteem.
     > Dit is meestal bij `.dotnet/tools` in de map van uw gebruikersprofiel.
     
-***
+**_
 
 Dat is alles. U beschikt nu over het Python-pakket met `qsharp` en de IQ#-kernel voor Jupyter, die de kernfunctionaliteit biedt voor het compileren en uitvoeren van Q#-bewerkingen vanuit Python, en u in staat stelt Q# Jupyter Notebooks te gebruiken.
 
@@ -113,7 +112,7 @@ Nu bent u klaar om de installatie van het Python-pakket voor `qsharp` te control
 1. U ziet nu het resultaat van de bewerking die u hebt aangeroepen. In dit geval ziet u `0` of `1` op het scherm, omdat met de bewerking een willekeurig resultaat is gegenereerd. Als u het programma herhaaldelijk uitvoert, ziet u elk resultaat ongeveer de helft van de tijd.
 
 > [!NOTE]
-> * De Python-code is een regulier Python-programma. U kunt een willekeurige Python-omgeving gebruiken, inclusief Jupyter Notebooks op basis van Python, om het Python-programma te schrijven en Q#-bewerkingen aan te roepen. Met het Python-programma kunnen Q#-bewerkingen worden geïmporteerd uit elk .qs-bestand dat zich in dezelfde map bevindt als de Python-code.
+> _ De python-code is gewoon een normaal python-programma. U kunt een willekeurige Python-omgeving gebruiken, inclusief Jupyter Notebooks op basis van Python, om het Python-programma te schrijven en Q#-bewerkingen aan te roepen. Met het Python-programma kunnen Q#-bewerkingen worden geïmporteerd uit elk .qs-bestand dat zich in dezelfde map bevindt als de Python-code.
 
 ## <a name="next-steps"></a>Volgende stappen
 
