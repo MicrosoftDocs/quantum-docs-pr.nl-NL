@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: Hiermee wordt de Hadamard-trans formatie van een Boole-functie in {-1,1} code ring berekend met behulp van de methode van Yates
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Voor elke unitary op 2 niveaus wordt ' spiegel masker ' berekend, waarmee qubits wordt aangegeven die vóór en na het Toep assen van de bijbehorende 1-Qubit-poort moet worden omgekeerd. Voor het gemak voegt u het resultaat toe met 0.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: Hiermee wordt een MCMTMask-type als Singleton-matrix gemaakt als doelen niet 0 zijn, anders retourneert een lege matrix.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Hiermee worden Maxi maal twee MCMT-maskers berekend om y te transformeren naar x.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: Hiermee past u een waarheids tabel aan van een matrix met Boole-waarden op basis van het aantal variabelen, wordt een nieuwe matrix geretourneerd met een lengte `2^numVars` , mogelijk dat `table` de grootte van de `false` gegevens moet worden uitgebreid of afgekapt tot `2^numVars` elementen.
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Hiermee wordt gecontroleerd of de opgegeven matrix een vier Kante matrix vertegenwoordigt.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: Reken Gate-maskers voor het samen stellen van permutaties.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: Hiermee worden Gate-maskers berekend om de macht [x] te transformeren naar x en wordt de huidige permutatie bijgewerkt.
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: Een 0-bit invoegen in een geheel getal
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: Status tijdens het desamen stellen op basis van variabelen indexen
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: Permutaties de amplitudes in een Quantum status op basis van op trans formatie gebaseerde synthese.
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: Hiermee wordt een single-Qubit-Gate toegepast die door 2x2 unitary matrix is gedefinieerd.
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    Past Gate toe die is gedefinieerd door 2 ^ n x 2 ^ n unitary matrix.
+
+    Mislukt als de matrix niet unitary of een verkeerde grootte heeft.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: De bewerking wordt toegepast @"microsoft.quantum.intrinsic.x" op `target` als de Boole-functie `func` resulteert in waar voor de klassieke toewijzing in `controlRegister` .
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: De bewerking wordt toegepast @"microsoft.quantum.intrinsic.x" op `target` als de Boole-functie `func` resulteert in waar voor de klassieke toewijzing in `controlRegister` .
@@ -63,9 +76,9 @@ operations:
 summary: Deze naam ruimte bevat functies en bewerkingen voor het synthesizeren van Quantum bewerkingen op basis van permutaties en Booleaanse functies.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92709390"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855190"

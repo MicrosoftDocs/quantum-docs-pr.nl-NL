@@ -4,44 +4,44 @@ description: Meer informatie over het uitvoeren van een Quantum sequentiële cla
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4fe686a87fbdc610badc0bbcbc0bf7b065e0bce9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833721"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854049"
 ---
-# <a name="basic-classification-classify-data-with-the-qdk"></a><span data-ttu-id="16f07-103">Basis classificatie: gegevens classificeren met de QDK</span><span class="sxs-lookup"><span data-stu-id="16f07-103">Basic classification: Classify data with the QDK</span></span>
+# <a name="basic-classification-classify-data-with-the-qdk"></a><span data-ttu-id="f48d7-103">Basis classificatie: gegevens classificeren met de QDK</span><span class="sxs-lookup"><span data-stu-id="f48d7-103">Basic classification: Classify data with the QDK</span></span>
 
-<span data-ttu-id="16f07-104">In deze Quick Start leert u hoe u een Quantum sequentiële classificatie kunt uitvoeren die is geschreven in Q# met behulp van de quantum machine learning bibliotheek van de QDK.</span><span class="sxs-lookup"><span data-stu-id="16f07-104">In this Quickstart, you will learn how to run a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK.</span></span> 
+<span data-ttu-id="f48d7-104">In deze Quick Start leert u hoe u een Quantum sequentiële classificatie kunt uitvoeren die is geschreven in Q# met behulp van de quantum machine learning bibliotheek van de QDK.</span><span class="sxs-lookup"><span data-stu-id="f48d7-104">In this Quickstart, you will learn how to run a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK.</span></span> 
 
-<span data-ttu-id="16f07-105">In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behulp van een classificatie structuur die is gedefinieerd in Q# .</span><span class="sxs-lookup"><span data-stu-id="16f07-105">In this guide we will use the half-moon dataset, using a classifier structure defined in Q#.</span></span>
+<span data-ttu-id="f48d7-105">In deze hand leiding wordt gebruikgemaakt van de halve maan gegevensset met behulp van een classificatie structuur die is gedefinieerd in Q# .</span><span class="sxs-lookup"><span data-stu-id="f48d7-105">In this guide we will use the half-moon dataset, using a classifier structure defined in Q#.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="16f07-106">Vereisten</span><span class="sxs-lookup"><span data-stu-id="16f07-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f48d7-106">Vereisten</span><span class="sxs-lookup"><span data-stu-id="f48d7-106">Prerequisites</span></span>
 
-- <span data-ttu-id="16f07-107">De Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="16f07-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
-- <span data-ttu-id="16f07-108">Maak een Q# project voor een [python-hostprogramma](xref:microsoft.quantum.install.python) of een [C#-hostprogramma](xref:microsoft.quantum.install.cs).</span><span class="sxs-lookup"><span data-stu-id="16f07-108">Create a Q# project for either a [Python host program](xref:microsoft.quantum.install.python) or a [C# host program](xref:microsoft.quantum.install.cs).</span></span>
+- <span data-ttu-id="f48d7-107">De Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="f48d7-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
+- <span data-ttu-id="f48d7-108">Maak een Q# project voor een [python-hostprogramma](xref:microsoft.quantum.install.python) of een [C#-hostprogramma](xref:microsoft.quantum.install.cs).</span><span class="sxs-lookup"><span data-stu-id="f48d7-108">Create a Q# project for either a [Python host program](xref:microsoft.quantum.install.python) or a [C# host program](xref:microsoft.quantum.install.cs).</span></span>
 
-## <a name="host-program"></a><span data-ttu-id="16f07-109">Host-programma</span><span class="sxs-lookup"><span data-stu-id="16f07-109">Host program</span></span>
+## <a name="host-program"></a><span data-ttu-id="f48d7-109">Host-programma</span><span class="sxs-lookup"><span data-stu-id="f48d7-109">Host program</span></span>
 
-<span data-ttu-id="16f07-110">Uw hostprogramma bestaat uit drie delen:</span><span class="sxs-lookup"><span data-stu-id="16f07-110">Your host program consists of three parts:</span></span>
+<span data-ttu-id="f48d7-110">Uw hostprogramma bestaat uit drie delen:</span><span class="sxs-lookup"><span data-stu-id="f48d7-110">Your host program consists of three parts:</span></span>
 
-- <span data-ttu-id="16f07-111">Laad de gegevensset en kies een set start-para meters voor uw model.</span><span class="sxs-lookup"><span data-stu-id="16f07-111">Load the dataset and choose a set of starting parameters for your model.</span></span>
-- <span data-ttu-id="16f07-112">Voer training uit om de para meters en bias van het model te bepalen.</span><span class="sxs-lookup"><span data-stu-id="16f07-112">Run training to determine the parameters and bias of the model.</span></span>
-- <span data-ttu-id="16f07-113">Valideer het model om de nauw keurigheid te bepalen</span><span class="sxs-lookup"><span data-stu-id="16f07-113">Validate the model to determine its accuracy</span></span>
+- <span data-ttu-id="f48d7-111">Laad de gegevensset en kies een set start-para meters voor uw model.</span><span class="sxs-lookup"><span data-stu-id="f48d7-111">Load the dataset and choose a set of starting parameters for your model.</span></span>
+- <span data-ttu-id="f48d7-112">Voer training uit om de para meters en bias van het model te bepalen.</span><span class="sxs-lookup"><span data-stu-id="f48d7-112">Run training to determine the parameters and bias of the model.</span></span>
+- <span data-ttu-id="f48d7-113">Valideer het model om de nauw keurigheid te bepalen</span><span class="sxs-lookup"><span data-stu-id="f48d7-113">Validate the model to determine its accuracy</span></span>
 
-    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="16f07-114">Python met Visual Studio Code of de opdrachtregel</span><span class="sxs-lookup"><span data-stu-id="16f07-114">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="f48d7-114">Python met Visual Studio Code of de opdrachtregel</span><span class="sxs-lookup"><span data-stu-id="f48d7-114">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
 
-    <span data-ttu-id="16f07-115">Als u de Q# classificatie van python wilt uitvoeren, slaat u de volgende code op als `host.py` .</span><span class="sxs-lookup"><span data-stu-id="16f07-115">To run your the Q# classifier from Python, save the following code as `host.py`.</span></span> <span data-ttu-id="16f07-116">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="16f07-116">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
+    <span data-ttu-id="f48d7-115">Als u de Q# classificatie van python wilt uitvoeren, slaat u de volgende code op als `host.py` .</span><span class="sxs-lookup"><span data-stu-id="f48d7-115">To run your the Q# classifier from Python, save the following code as `host.py`.</span></span> <span data-ttu-id="f48d7-116">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="f48d7-116">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
-    <span data-ttu-id="16f07-117">U kunt vervolgens uw Python-hostprogramma uitvoeren vanaf de opdrachtregel:</span><span class="sxs-lookup"><span data-stu-id="16f07-117">You can then run your Python host program from the command line:</span></span>
+    <span data-ttu-id="f48d7-117">U kunt vervolgens uw Python-hostprogramma uitvoeren vanaf de opdrachtregel:</span><span class="sxs-lookup"><span data-stu-id="f48d7-117">You can then run your Python host program from the command line:</span></span>
 
     ```bash
     $ python host.py
@@ -50,13 +50,13 @@ ms.locfileid: "90833721"
     Observed X.XX% misclassifications.
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="16f07-118">C# met Visual Studio Code of de opdrachtregel</span><span class="sxs-lookup"><span data-stu-id="16f07-118">C# with Visual Studio Code or the Command Line</span></span>](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="f48d7-118">C# met Visual Studio Code of de opdrachtregel</span><span class="sxs-lookup"><span data-stu-id="f48d7-118">C# with Visual Studio Code or the Command Line</span></span>](#tab/tabid-csharp)
 
-    <span data-ttu-id="16f07-119">Als u de Q# classificatie van C# wilt uitvoeren, slaat u de volgende code op als `Host.cs` .</span><span class="sxs-lookup"><span data-stu-id="16f07-119">To run your the Q# classifier from C#, save the following code as `Host.cs`.</span></span> <span data-ttu-id="16f07-120">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="16f07-120">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
+    <span data-ttu-id="f48d7-119">Als u de Q# classificatie van C# wilt uitvoeren, slaat u de volgende code op als `Host.cs` .</span><span class="sxs-lookup"><span data-stu-id="f48d7-119">To run your the Q# classifier from C#, save the following code as `Host.cs`.</span></span> <span data-ttu-id="f48d7-120">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="f48d7-120">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    <span data-ttu-id="16f07-121">U kunt vervolgens uw C#-hostprogramma uitvoeren vanaf de opdrachtregel:</span><span class="sxs-lookup"><span data-stu-id="16f07-121">You can then run your C# host program from the command line:</span></span>
+    <span data-ttu-id="f48d7-121">U kunt vervolgens uw C#-hostprogramma uitvoeren vanaf de opdrachtregel:</span><span class="sxs-lookup"><span data-stu-id="f48d7-121">You can then run your C# host program from the command line:</span></span>
 
     ```bash
     $ dotnet run
@@ -64,13 +64,13 @@ ms.locfileid: "90833721"
     Observed X.XX% misclassifications.
     ```
 
-    ### <a name="c-with-visual-studio-2019"></a>[<span data-ttu-id="16f07-122">C# met Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="16f07-122">C# with Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[<span data-ttu-id="f48d7-122">C# met Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="f48d7-122">C# with Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-    <span data-ttu-id="16f07-123">Als u uw nieuwe Q# programma wilt uitvoeren vanuit C# in Visual Studio, wijzigt `Host.cs` u de volgende C#-code.</span><span class="sxs-lookup"><span data-stu-id="16f07-123">To run your new Q# program from C# in Visual Studio, modify `Host.cs` to include the following C# code.</span></span> <span data-ttu-id="16f07-124">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="16f07-124">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
+    <span data-ttu-id="f48d7-123">Als u uw nieuwe Q# programma wilt uitvoeren vanuit C# in Visual Studio, wijzigt `Host.cs` u de volgende C#-code.</span><span class="sxs-lookup"><span data-stu-id="f48d7-123">To run your new Q# program from C# in Visual Studio, modify `Host.cs` to include the following C# code.</span></span> <span data-ttu-id="f48d7-124">Houd er rekening mee dat u ook het bestand nodig hebt Q# `Training.qs` dat verderop in deze zelf studie wordt beschreven.</span><span class="sxs-lookup"><span data-stu-id="f48d7-124">Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.</span></span>
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    <span data-ttu-id="16f07-125">Druk op F5 om het programma te starten.</span><span class="sxs-lookup"><span data-stu-id="16f07-125">Press F5, and the program will start to run.</span></span> <span data-ttu-id="16f07-126">In een nieuw venster worden de volgende resultaten weer gegeven:</span><span class="sxs-lookup"><span data-stu-id="16f07-126">A new window will display the following results:</span></span> 
+    <span data-ttu-id="f48d7-125">Druk op F5 om het programma te starten.</span><span class="sxs-lookup"><span data-stu-id="f48d7-125">Press F5, and the program will start to run.</span></span> <span data-ttu-id="f48d7-126">In een nieuw venster worden de volgende resultaten weer gegeven:</span><span class="sxs-lookup"><span data-stu-id="f48d7-126">A new window will display the following results:</span></span> 
 
     ```bash
     $ dotnet run
@@ -79,19 +79,19 @@ ms.locfileid: "90833721"
     ```
     ***
 
-## <a name="q-classifier-code"></a><span data-ttu-id="16f07-127">Q- \# classificeerder code</span><span class="sxs-lookup"><span data-stu-id="16f07-127">Q\# classifier code</span></span>
+## <a name="q-classifier-code"></a><span data-ttu-id="f48d7-127">Q- \# classificeerder code</span><span class="sxs-lookup"><span data-stu-id="f48d7-127">Q\# classifier code</span></span>
 
-<span data-ttu-id="16f07-128">Laten we nu zien hoe de bewerkingen die door het hostprogramma worden aangeroepen, worden gedefinieerd in Q# .</span><span class="sxs-lookup"><span data-stu-id="16f07-128">Now let's see how the operations invoked by the host program are defined in Q#.</span></span>
-<span data-ttu-id="16f07-129">We slaan de volgende code op in een bestand met de naam `Training.qs` .</span><span class="sxs-lookup"><span data-stu-id="16f07-129">We save the following code in a file named `Training.qs`.</span></span>
+<span data-ttu-id="f48d7-128">Laten we nu zien hoe de bewerkingen die door het hostprogramma worden aangeroepen, worden gedefinieerd in Q# .</span><span class="sxs-lookup"><span data-stu-id="f48d7-128">Now let's see how the operations invoked by the host program are defined in Q#.</span></span>
+<span data-ttu-id="f48d7-129">We slaan de volgende code op in een bestand met de naam `Training.qs` .</span><span class="sxs-lookup"><span data-stu-id="f48d7-129">We save the following code in a file named `Training.qs`.</span></span>
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
-<span data-ttu-id="16f07-130">De belangrijkste functies en bewerkingen die zijn gedefinieerd in de bovenstaande code zijn:</span><span class="sxs-lookup"><span data-stu-id="16f07-130">The most important functions and operations defined in the code above are:</span></span>
+<span data-ttu-id="f48d7-130">De belangrijkste functies en bewerkingen die zijn gedefinieerd in de bovenstaande code zijn:</span><span class="sxs-lookup"><span data-stu-id="f48d7-130">The most important functions and operations defined in the code above are:</span></span>
 
-- <span data-ttu-id="16f07-131">`ClassifierStructure() : ControlledRotation[]` : in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen.</span><span class="sxs-lookup"><span data-stu-id="16f07-131">`ClassifierStructure() : ControlledRotation[]` : in this function we set the structure of our circuit model by adding the layers of the controlled gates we consider.</span></span> <span data-ttu-id="16f07-132">Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.</span><span class="sxs-lookup"><span data-stu-id="16f07-132">This step is analogous to the declaration of layers of neurons in a sequential deep learning model.</span></span>
-- <span data-ttu-id="16f07-133">`TrainHalfMoonModel() : (Double[], Double)` : deze bewerking is het belangrijkste deel van de code en definieert de training.</span><span class="sxs-lookup"><span data-stu-id="16f07-133">`TrainHalfMoonModel() : (Double[], Double)` : this operation is the core part of the code and defines the training.</span></span> <span data-ttu-id="16f07-134">Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen.</span><span class="sxs-lookup"><span data-stu-id="16f07-134">Here we load the samples from the dataset included in the library, we set the hyper parameters and the initial parameters for the training and we start the training by calling the operation `TrainSequentialClassifier` included in the library.</span></span> <span data-ttu-id="16f07-135">De para meters en de bias die de classificatie bepalen, worden uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="16f07-135">It outputs the parameters and the bias that determine the classifier.</span></span>
-- <span data-ttu-id="16f07-136">`ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren.</span><span class="sxs-lookup"><span data-stu-id="16f07-136">`ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : this operation defines the validation process to evaluate the model.</span></span> <span data-ttu-id="16f07-137">Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie.</span><span class="sxs-lookup"><span data-stu-id="16f07-137">Here we load the samples for validation, the number of measurements per sample and the tolerance.</span></span> <span data-ttu-id="16f07-138">Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="16f07-138">It outputs the number of misclassifications on the chosen batch of samples for validation.</span></span>
+- <span data-ttu-id="f48d7-131">`ClassifierStructure() : ControlledRotation[]` : in deze functie hebben we de structuur van ons circuit model ingesteld door de lagen van de beheerde poorten toe te voegen.</span><span class="sxs-lookup"><span data-stu-id="f48d7-131">`ClassifierStructure() : ControlledRotation[]` : in this function we set the structure of our circuit model by adding the layers of the controlled gates we consider.</span></span> <span data-ttu-id="f48d7-132">Deze stap is vergelijkbaar met het declareren van lagen van neurons in een sequentief diep leer model.</span><span class="sxs-lookup"><span data-stu-id="f48d7-132">This step is analogous to the declaration of layers of neurons in a sequential deep learning model.</span></span>
+- <span data-ttu-id="f48d7-133">`TrainHalfMoonModel() : (Double[], Double)` : deze bewerking is het belangrijkste deel van de code en definieert de training.</span><span class="sxs-lookup"><span data-stu-id="f48d7-133">`TrainHalfMoonModel() : (Double[], Double)` : this operation is the core part of the code and defines the training.</span></span> <span data-ttu-id="f48d7-134">Hier laden we de voor beelden uit de gegevensset die in de bibliotheek is opgenomen, stellen we de Hyper-para meters en de eerste para meters voor de training in en de training wordt gestart door de bewerking aan te roepen `TrainSequentialClassifier` die in de bibliotheek is opgenomen.</span><span class="sxs-lookup"><span data-stu-id="f48d7-134">Here we load the samples from the dataset included in the library, we set the hyper parameters and the initial parameters for the training and we start the training by calling the operation `TrainSequentialClassifier` included in the library.</span></span> <span data-ttu-id="f48d7-135">De para meters en de bias die de classificatie bepalen, worden uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="f48d7-135">It outputs the parameters and the bias that determine the classifier.</span></span>
+- <span data-ttu-id="f48d7-136">`ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : met deze bewerking wordt het validatie proces gedefinieerd om het model te evalueren.</span><span class="sxs-lookup"><span data-stu-id="f48d7-136">`ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : this operation defines the validation process to evaluate the model.</span></span> <span data-ttu-id="f48d7-137">Hier laden we de voor beelden voor validatie, het aantal metingen per steek proef en de tolerantie.</span><span class="sxs-lookup"><span data-stu-id="f48d7-137">Here we load the samples for validation, the number of measurements per sample and the tolerance.</span></span> <span data-ttu-id="f48d7-138">Hiermee wordt het aantal misclassificaties voor de gekozen batch van voor beelden voor validatie uitgevoerd.</span><span class="sxs-lookup"><span data-stu-id="f48d7-138">It outputs the number of misclassifications on the chosen batch of samples for validation.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="16f07-139">Volgende stappen</span><span class="sxs-lookup"><span data-stu-id="16f07-139">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f48d7-139">Volgende stappen</span><span class="sxs-lookup"><span data-stu-id="f48d7-139">Next steps</span></span>
 
-<span data-ttu-id="16f07-140">Eerst kunt u met de code spelen en een aantal para meters wijzigen om te zien hoe dit van invloed is op de training.</span><span class="sxs-lookup"><span data-stu-id="16f07-140">First, you can play with the code and try to change some parameters to see how it affects the training.</span></span> <span data-ttu-id="16f07-141">Vervolgens kunt u in de volgende zelf studie [uw eigen classificatie ontwerpen](xref:microsoft.quantum.libraries.machine-learning.design). u leert hoe u de structuur van de classificatie definieert.</span><span class="sxs-lookup"><span data-stu-id="16f07-141">Then, in the next tutorial, [Design your own classifier](xref:microsoft.quantum.libraries.machine-learning.design),  you will learn how to define the structure of the classifier.</span></span>
+<span data-ttu-id="f48d7-140">Eerst kunt u met de code spelen en een aantal para meters wijzigen om te zien hoe dit van invloed is op de training.</span><span class="sxs-lookup"><span data-stu-id="f48d7-140">First, you can play with the code and try to change some parameters to see how it affects the training.</span></span> <span data-ttu-id="f48d7-141">Vervolgens kunt u in de volgende zelf studie [uw eigen classificatie ontwerpen](xref:microsoft.quantum.libraries.machine-learning.design). u leert hoe u de structuur van de classificatie definieert.</span><span class="sxs-lookup"><span data-stu-id="f48d7-141">Then, in the next tutorial, [Design your own classifier](xref:microsoft.quantum.libraries.machine-learning.design),  you will learn how to define the structure of the classifier.</span></span>
