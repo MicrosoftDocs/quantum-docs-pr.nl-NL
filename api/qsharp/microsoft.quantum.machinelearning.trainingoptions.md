@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: Door de gebruiker gedefinieerd TrainingOptions-type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 762d6853910832c6d4cda522c0c5df706d1ed195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196120"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842771"
 ---
 # <a name="trainingoptions-user-defined-type"></a>Door de gebruiker gedefinieerd TrainingOptions-type
 
@@ -67,12 +67,12 @@ Deze UDT mag niet direct worden gemaakt, maar moet in plaats daarvan worden opge
 
 Als u bijvoorbeeld 100.000 metingen en Maxi maal 8 trainings-epochen wilt gebruiken:
 
-```Q#
+```qsharp
 let options = DefaultTrainingOptions()
               w/ NMeasurements <- 100000
               w/ MaxEpochs <- 8;
 ```
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)

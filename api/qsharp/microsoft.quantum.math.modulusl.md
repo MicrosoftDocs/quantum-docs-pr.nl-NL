@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusL
 title: De functie ModulusL
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusL
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: 5c9a8ceceac5d2cdac6b82f7f74a85e9443382a2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6be2edb052cf55f8e8465c76b5dcadeb61ff11ea
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96194930"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842746"
 ---
 # <a name="modulusl-function"></a>De functie ModulusL
 
@@ -47,4 +47,4 @@ Geheel getal $r $ tussen 0 en `modulus - 1` dat `value - r` deelbaar is door mod
 
 ## <a name="remarks"></a>Opmerkingen
 
-Deze functie werkt anders als de operator `%` zich gedraagt in C# en Q # als in het resultaat altijd een positief geheel getal tussen 0 en `modulus - 1` , zelfs als de waarde negatief is.
+Deze functie werkt anders als de operator `%` zich in C# en Q # bevindt, zoals in het resultaat altijd een niet-negatief geheel getal tussen 0 en `modulus - 1` , zelfs als de waarde negatief is.
