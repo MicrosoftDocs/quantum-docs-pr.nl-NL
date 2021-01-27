@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: Bewerking AndLadder
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d44c462c7a9fc9521bdecfe2ca7f607e90482baf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209720"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845224"
 ---
 # <a name="andladder-operation"></a>Bewerking AndLadder
 
@@ -61,6 +61,6 @@ De lengte `targets` moet mini maal 1 zijn en gelijk zijn aan de lengte van `cont
 - Wordt gebruikt als onderdeel van <xref:microsoft.quantum.canon.applymulticontrolledc> en <xref:microsoft.quantum.canon.applymulticontrolledca> .
 - Zie afbeelding 4,10, sectie 4,3 in Nielsen & Chuang voor uitleg en circuit diagram.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - [*Michael A. Nielsen, Isaac L. Chuang*, Quantum Computation en Quantum Information](http://doi.org/10.1017/CBO9780511976667)

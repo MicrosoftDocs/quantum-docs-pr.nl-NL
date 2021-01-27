@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
 title: De functie FixedPointReflectionPhases
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: FixedPointReflectionPhases
 qsharp.summary: Computes partial reflection phases for fixed-point amplitude amplification.
-ms.openlocfilehash: 8cc1073447f5fae87ece38db64dcc312f6208899
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2ded197801111c26d8a33f9c2363b46ca4b6c4b9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191445"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845845"
 ---
 # <a name="fixedpointreflectionphases-function"></a>De functie FixedPointReflectionPhases
 
@@ -45,7 +45,7 @@ Doel minimale succes volle kans.
 
 Matrix van fasen die kunnen worden gebruikt in de implementatie van een Quantum ring-algoritme met een vaste punt.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 We gebruiken de fasen in ' amplitude versterking met een optimaal aantal Query's '
 
