@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.AssertHighestBit
 title: Bewerking AssertHighestBit
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
-ms.openlocfilehash: b0fea4b244f36d310aa2d65937681f2d4b3fa481
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e90159920be652b614a9b42b8de5676c532c1af0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207680"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850311"
 ---
-# <a name="asserthighestbit-operation"></a><span data-ttu-id="bdf3e-102">Bewerking AssertHighestBit</span><span class="sxs-lookup"><span data-stu-id="bdf3e-102">AssertHighestBit operation</span></span>
+# <a name="asserthighestbit-operation"></a><span data-ttu-id="40e9b-102">Bewerking AssertHighestBit</span><span class="sxs-lookup"><span data-stu-id="40e9b-102">AssertHighestBit operation</span></span>
 
-<span data-ttu-id="bdf3e-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="bdf3e-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="40e9b-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="40e9b-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="bdf3e-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="bdf3e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="40e9b-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="40e9b-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="bdf3e-105">AssertHighestBit is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="bdf3e-105">AssertHighestBit has been deprecated.</span></span> <span data-ttu-id="bdf3e-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="bdf3e-106">Please use <xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> instead.</span></span>
+> <span data-ttu-id="40e9b-105">AssertHighestBit is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="40e9b-105">AssertHighestBit has been deprecated.</span></span> <span data-ttu-id="40e9b-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="40e9b-106">Please use <xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> instead.</span></span>
 >
-> <span data-ttu-id="bdf3e-107">Gebruik @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".</span><span class="sxs-lookup"><span data-stu-id="bdf3e-107">Please use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".</span></span>
+> <span data-ttu-id="40e9b-107">Gebruik @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".</span><span class="sxs-lookup"><span data-stu-id="40e9b-107">Please use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".</span></span>
 
 
 
@@ -40,18 +40,18 @@ operation AssertHighestBit (value : Result, number : Microsoft.Quantum.Arithmeti
 ```
 
 
-## <a name="input"></a><span data-ttu-id="bdf3e-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="bdf3e-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="40e9b-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="40e9b-108">Input</span></span>
 
-### <a name="value--__invalidresult__"></a><span data-ttu-id="bdf3e-109">waarde: __ongeldig <Result>__</span><span class="sxs-lookup"><span data-stu-id="bdf3e-109">value : __invalid<Result>__</span></span>
-
-
-
-
-### <a name="number--littleendian"></a><span data-ttu-id="bdf3e-110">nummer: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="bdf3e-110">number : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="value--__invalidresult__"></a><span data-ttu-id="40e9b-109">waarde: __ongeldig <Result>__</span><span class="sxs-lookup"><span data-stu-id="40e9b-109">value : __invalid<Result>__</span></span>
 
 
 
 
+### <a name="number--littleendian"></a><span data-ttu-id="40e9b-110">nummer: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="40e9b-110">number : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="bdf3e-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="bdf3e-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="40e9b-111">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="40e9b-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 

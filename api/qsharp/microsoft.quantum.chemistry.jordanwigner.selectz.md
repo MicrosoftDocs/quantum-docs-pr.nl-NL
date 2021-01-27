@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
 title: Bewerking SelectZ
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: SelectZ
 qsharp.summary: A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditioned on an index state $\ket{p}$. That is, $$ \begin{align} U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi} \end{align} $$
-ms.openlocfilehash: 08abe3f465432bf98f35090c59fb4d952c3b4882
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2b38be5c196d81635daa8b478f6e727fdf378c62
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224714"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850242"
 ---
-# <a name="selectz-operation"></a><span data-ttu-id="66d8a-102">Bewerking SelectZ</span><span class="sxs-lookup"><span data-stu-id="66d8a-102">SelectZ operation</span></span>
+# <a name="selectz-operation"></a><span data-ttu-id="ca750-102">Bewerking SelectZ</span><span class="sxs-lookup"><span data-stu-id="ca750-102">SelectZ operation</span></span>
 
-<span data-ttu-id="66d8a-103">Naam ruimte: [micro soft. Quantum. chemie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="66d8a-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="ca750-103">Naam ruimte: [micro soft. Quantum. chemie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="ca750-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="66d8a-104">Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="66d8a-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="ca750-104">Pakket: [micro soft. Quantum. chemie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="ca750-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="66d8a-105">Een unitary $U $ waarmee de Pauli $Z $-Gate wordt toegepast op een qubits $p $, voorwaarded op een index status $ \ket{p} $.</span><span class="sxs-lookup"><span data-stu-id="66d8a-105">A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditioned on an index state $\ket{p}$.</span></span> <span data-ttu-id="66d8a-106">Dat wil zeggen, $ $ \begin{align} U\ket {p} \ Ket {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="66d8a-106">That is, $$ \begin{align} U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi} \end{align} $$</span></span>
+<span data-ttu-id="ca750-105">Een unitary $U $ waarmee de Pauli $Z $-Gate wordt toegepast op een qubits $p $, voorwaarded op een index status $ \ket{p} $.</span><span class="sxs-lookup"><span data-stu-id="ca750-105">A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditioned on an index state $\ket{p}$.</span></span> <span data-ttu-id="ca750-106">Dat wil zeggen, $ $ \begin{align} U\ket {p} \ Ket {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="ca750-106">That is, $$ \begin{align} U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi} \end{align} $$</span></span>
 
 ```qsharp
 operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="66d8a-107">Invoer</span><span class="sxs-lookup"><span data-stu-id="66d8a-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ca750-107">Invoer</span><span class="sxs-lookup"><span data-stu-id="ca750-107">Input</span></span>
 
-### <a name="indexregister--littleendian"></a><span data-ttu-id="66d8a-108">indexRegister: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="66d8a-108">indexRegister : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="indexregister--littleendian"></a><span data-ttu-id="ca750-108">indexRegister: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="ca750-108">indexRegister : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-<span data-ttu-id="66d8a-109">De status $ \ket{p} $ van dit REGI ster bepaalt de Qubit waarop $Z $ wordt toegepast.</span><span class="sxs-lookup"><span data-stu-id="66d8a-109">The state $\ket{p}$ of this register determines the qubit on which $Z$ is applied.</span></span>
-
-
-### <a name="targetregister--qubit"></a><span data-ttu-id="66d8a-110">targetRegister: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="66d8a-110">targetRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
-
-<span data-ttu-id="66d8a-111">Het REGI ster van qubits waarop de Pauli-Opera tors worden toegepast.</span><span class="sxs-lookup"><span data-stu-id="66d8a-111">Register of qubits on which the Pauli operators are applied.</span></span>
+<span data-ttu-id="ca750-109">De status $ \ket{p} $ van dit REGI ster bepaalt de Qubit waarop $Z $ wordt toegepast.</span><span class="sxs-lookup"><span data-stu-id="ca750-109">The state $\ket{p}$ of this register determines the qubit on which $Z$ is applied.</span></span>
 
 
+### <a name="targetregister--qubit"></a><span data-ttu-id="ca750-110">targetRegister: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="ca750-110">targetRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="66d8a-112">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="66d8a-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="ca750-111">Het REGI ster van qubits waarop de Pauli-Opera tors worden toegepast.</span><span class="sxs-lookup"><span data-stu-id="ca750-111">Register of qubits on which the Pauli operators are applied.</span></span>
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="ca750-112">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ca750-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 

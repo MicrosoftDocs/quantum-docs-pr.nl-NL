@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Hiermee wordt een opgegeven matrix met Boole-waarden geconverteerd naar een equivalent Big-geheel getal. Het element 0 van de matrix is de minst significante bit van het grote geheel getal.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Produceert een positief geheel getal uit een reeks bits in little endian-indeling.
+- summary: Produceert een niet-negatief geheel getal uit een reeks bits in little endian-indeling.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Op basis van een bit string retourneert een multi-Qubit Pauli-operator die wordt weer gegeven als een matrix van Pauli-Opera tors met één Qubit.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Converteert een opgegeven geheel getal naar een equivalent Big-geheel getal.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Produceert een binaire weer gave van een positief geheel getal, met behulp van de weer gave van de little-endian voor de geretourneerde matrix.
+- summary: Produceert een binaire weer gave van een niet-negatief geheel getal, met behulp van de weer gave van de little-endian voor de geretourneerde matrix.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Converteert een opgegeven geheel getal naar een equivalent drijvende-komma getal met dubbele precisie.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Converteert een `Result[]` type naar een `Bool[]` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Produceert een positief geheel getal uit een teken reeks met resultaten in little endian indeling.
+- summary: Produceert een niet-negatief geheel getal uit een teken reeks met resultaten in little endian indeling.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Converteert een `Result` type naar een `Bool` type, waarbij `One` wordt toegewezen aan `true` en `Zero` wordt toegewezen aan `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'Deze naam ruimte bevat functies voor de conversie tussen verschillende Q #-gegevens typen.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92703118"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850072"

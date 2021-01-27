@@ -1,41 +1,48 @@
 ---
 uid: Microsoft.Quantum.Convert.RangeAsIntArray
 title: De functie RangeAsIntArray
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: RangeAsIntArray
 qsharp.summary: Creates an array `arr` of integers enumerated by start..step..end.
-ms.openlocfilehash: f756e42aef7dc600e1fc6943a02513ac791f2320
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8c6b83d78e3b22ea1a17a48de66592950bf905a3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96214004"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850104"
 ---
-# <a name="rangeasintarray-function"></a><span data-ttu-id="3bb76-102">De functie RangeAsIntArray</span><span class="sxs-lookup"><span data-stu-id="3bb76-102">RangeAsIntArray function</span></span>
+# <a name="rangeasintarray-function"></a><span data-ttu-id="57792-102">De functie RangeAsIntArray</span><span class="sxs-lookup"><span data-stu-id="57792-102">RangeAsIntArray function</span></span>
 
-<span data-ttu-id="3bb76-103">Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="3bb76-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
+<span data-ttu-id="57792-103">Naam ruimte: [micro soft. Quantum. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="57792-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
 
-<span data-ttu-id="3bb76-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="3bb76-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="57792-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="57792-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="3bb76-105">Maakt een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.</span><span class="sxs-lookup"><span data-stu-id="3bb76-105">Creates an array `arr` of integers enumerated by start..step..end.</span></span>
+<span data-ttu-id="57792-105">Maakt een matrix `arr` met gehele getallen die worden opgesomd door start.. stap.. endsystemen.</span><span class="sxs-lookup"><span data-stu-id="57792-105">Creates an array `arr` of integers enumerated by start..step..end.</span></span>
 
 ```qsharp
 function RangeAsIntArray (range : Range) : Int[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="3bb76-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="3bb76-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="57792-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="57792-106">Input</span></span>
 
-### <a name="range--range"></a><span data-ttu-id="3bb76-107">bereik: [bereik](xref:microsoft.quantum.lang-ref.range)</span><span class="sxs-lookup"><span data-stu-id="3bb76-107">range : [Range](xref:microsoft.quantum.lang-ref.range)</span></span>
+### <a name="range--range"></a><span data-ttu-id="57792-107">bereik: [bereik](xref:microsoft.quantum.lang-ref.range)</span><span class="sxs-lookup"><span data-stu-id="57792-107">range : [Range](xref:microsoft.quantum.lang-ref.range)</span></span>
 
-<span data-ttu-id="3bb76-108">Een `Range` van de waarden `start..step..end` die moeten worden geconverteerd naar een matrix.</span><span class="sxs-lookup"><span data-stu-id="3bb76-108">A `Range` of values `start..step..end` to be converted to an array.</span></span>
+<span data-ttu-id="57792-108">Een `Range` van de waarden `start..step..end` die moeten worden geconverteerd naar een matrix.</span><span class="sxs-lookup"><span data-stu-id="57792-108">A `Range` of values `start..step..end` to be converted to an array.</span></span>
 
 
 
-## <a name="output--int"></a><span data-ttu-id="3bb76-109">Output: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="3bb76-109">Output : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+## <a name="output--int"></a><span data-ttu-id="57792-109">Output: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="57792-109">Output : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
-<span data-ttu-id="3bb76-110">Een nieuwe matrix van gehele getallen die overeenkomen met waarden die worden herhaald door `range` .</span><span class="sxs-lookup"><span data-stu-id="3bb76-110">A new array of integers corresponding to values iterated over by `range`.</span></span>
+<span data-ttu-id="57792-110">Een nieuwe matrix van gehele getallen die overeenkomen met waarden die worden herhaald door `range` .</span><span class="sxs-lookup"><span data-stu-id="57792-110">A new array of integers corresponding to values iterated over by `range`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="57792-111">Voorbeeld</span><span class="sxs-lookup"><span data-stu-id="57792-111">Example</span></span>
+
+```qsharp
+// The following returns [1,3,5,7];
+let array = RangeAsIntArray(1..2..8);
+```
