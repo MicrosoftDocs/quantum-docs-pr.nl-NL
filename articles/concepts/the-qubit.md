@@ -1,6 +1,6 @@
 ---
 Titel: de Qubit in Quantum Computing Description: meer informatie over qubits, de basis eenheid van informatie in Quantum Computing.
-Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Qubit MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: artikel no-loc:
+Auteur: QuantumWriter UID: micro soft. Quantum. concepten. Qubit MS. Author: v-benbra MS. date: 12/11/2017 MS. topic: conceptuele no-loc:
 - "Q#"
 - "$$v"
 - "$$"

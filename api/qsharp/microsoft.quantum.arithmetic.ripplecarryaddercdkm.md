@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: Bewerking RippleCarryAdderCDKM
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: df9b62b649af532a4202aacc3e8dd4613eb8665d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222096"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846365"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>Bewerking RippleCarryAdderCDKM
 
@@ -58,7 +58,7 @@ Qubit, is xored met de meest significante bit van de som.
 
 Deze bewerking heeft dezelfde functionaliteit als RippleCarryAdderD, maar gebruikt slechts één hulp Qubit in plaats van $n $.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - Chris A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "een nieuwe Quantum rimpel-transport circuit", 2004.
   https://arxiv.org/abs/quant-ph/0410184v1
