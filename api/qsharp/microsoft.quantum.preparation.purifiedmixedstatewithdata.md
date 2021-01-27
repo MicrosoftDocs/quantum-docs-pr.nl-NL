@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData
 title: De functie PurifiedMixedStateWithData
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PurifiedMixedStateWithData
 qsharp.summary: "Returns an operation that prepares a a purification of a given mixed\rstate, entangled with a register representing a given collection of data.\rA \"purified mixed state with data\" refers to a state of the form Σᵢ √\U0001D45Dᵢ |\U0001D456⟩ |\U0001D465ᵢ⟩ |garbageᵢ⟩,\rwhere each \U0001D465ᵢ is a bitstring encoding additional data associated with the register |\U0001D456⟩.\r\rSee https://arxiv.org/pdf/1805.03662.pdf?page=15 for further discussion."
-ms.openlocfilehash: c89ee8f5df58e5d6b154b67d2b39db208bc8a215
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fc7bf8e6157af079ae4233ef45e67ce8ddfb8fe3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96229950"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854283"
 ---
 # <a name="purifiedmixedstatewithdata-function"></a>De functie PurifiedMixedStateWithData
 
@@ -61,7 +61,7 @@ Een bewerking waarbij $ \tilde \rho $ als zuivering wordt voor bereid op een gem
 
 De coëfficiënten die aan deze bewerking worden gegeven, worden genormaliseerd volgens de 1-norm, zodat de coëfficiënten altijd worden beschouwd als een geldige categorische-kans-distributie.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - Versleutelen van elektronische spectra in Quantum circuits met lineaire T complexiteit Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pastel, Austin Fowler, Hartmut neven https://arxiv.org/abs/1805.03662
 
