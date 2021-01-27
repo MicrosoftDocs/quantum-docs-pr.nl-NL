@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
 title: De functie SteaneCodeRecoveryX
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SteaneCodeRecoveryX
 qsharp.summary: Decoder for the X-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
-ms.openlocfilehash: 5fac832ef5b7d7be2d85675a32f45e66312f66c8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c90eac291ebe718d10377399184ad705bb51673e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200367"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98824706"
 ---
 # <a name="steanecoderecoveryx-function"></a>De functie SteaneCodeRecoveryX
 
@@ -44,7 +44,7 @@ Een matrix met Pauli-bewerkingen die, wanneer toegepast op het gecodeerde Quantu
 
 De gekozen decoder maakt gebruik van de CSS-code-eigenschap van de ⟦-code van de 7, 1, 3 ⟧ Steane, dat wil zeggen, het corrigeert X fouten en Z-fouten afzonderlijk. Een eigenschap van de code is dat de locatie van de X, respectievelijk de Z-correctie die moet worden toegepast, de 3-bits code ring van de X, respectievelijk Z Syndrome is als een geheel getal.
 
-## <a name="references"></a>Referenties
+## <a name="references"></a>Verwijzingen
 
 - D. Gottesman, "stabilisators codes en Quantum fout correctie," Ph.D. thesis, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052
 
