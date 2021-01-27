@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ModularAddProductLE
 title: Bewerking ModularAddProductLE
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
-ms.openlocfilehash: eaff6f19072a89adb9046adbcb56d00ff9a86e39
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2afd2af3c465523ae78f45699ab020fc6a9c9dbe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206337"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852648"
 ---
-# <a name="modularaddproductle-operation"></a><span data-ttu-id="d2384-102">Bewerking ModularAddProductLE</span><span class="sxs-lookup"><span data-stu-id="d2384-102">ModularAddProductLE operation</span></span>
+# <a name="modularaddproductle-operation"></a><span data-ttu-id="c3443-102">Bewerking ModularAddProductLE</span><span class="sxs-lookup"><span data-stu-id="c3443-102">ModularAddProductLE operation</span></span>
 
-<span data-ttu-id="d2384-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="d2384-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="c3443-103">Naam ruimte: [micro soft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="c3443-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="d2384-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="d2384-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="c3443-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="c3443-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="d2384-105">ModularAddProductLE is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="d2384-105">ModularAddProductLE has been deprecated.</span></span> <span data-ttu-id="d2384-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="d2384-106">Please use <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> instead.</span></span>
+> <span data-ttu-id="c3443-105">ModularAddProductLE is afgeschaft.</span><span class="sxs-lookup"><span data-stu-id="c3443-105">ModularAddProductLE has been deprecated.</span></span> <span data-ttu-id="c3443-106">Gebruik <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> in plaats daarvan.</span><span class="sxs-lookup"><span data-stu-id="c3443-106">Please use <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> instead.</span></span>
 >
-> <span data-ttu-id="d2384-107">Gebruik @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".</span><span class="sxs-lookup"><span data-stu-id="d2384-107">Please use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".</span></span>
+> <span data-ttu-id="c3443-107">Gebruik @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".</span><span class="sxs-lookup"><span data-stu-id="c3443-107">Please use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".</span></span>
 
 
 
@@ -40,28 +40,28 @@ operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier 
 ```
 
 
-## <a name="input"></a><span data-ttu-id="d2384-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="d2384-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="c3443-108">Invoer</span><span class="sxs-lookup"><span data-stu-id="c3443-108">Input</span></span>
 
-### <a name="constmultiplier--int"></a><span data-ttu-id="d2384-109">constMultiplier: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d2384-109">constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="modulus--int"></a><span data-ttu-id="d2384-110">modulus: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d2384-110">modulus : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="constmultiplier--int"></a><span data-ttu-id="c3443-109">constMultiplier: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="c3443-109">constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="multiplier--littleendian"></a><span data-ttu-id="d2384-111">vermenigvuldiger: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="d2384-111">multiplier : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="modulus--int"></a><span data-ttu-id="c3443-110">modulus: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="c3443-110">modulus : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="summand--littleendian"></a><span data-ttu-id="d2384-112">summand: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="d2384-112">summand : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="multiplier--littleendian"></a><span data-ttu-id="c3443-111">vermenigvuldiger: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="c3443-111">multiplier : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+
+
+
+
+### <a name="summand--littleendian"></a><span data-ttu-id="c3443-112">summand: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="c3443-112">summand : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="d2384-113">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="d2384-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="c3443-113">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="c3443-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 

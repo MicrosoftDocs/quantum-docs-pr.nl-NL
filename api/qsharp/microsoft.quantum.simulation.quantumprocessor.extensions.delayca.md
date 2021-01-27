@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.DelayCA
 title: Bewerking DelayCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: DelayCA
 qsharp.summary: ''
-ms.openlocfilehash: aacbf6fb595700cf0631263ddbc1925846f9ad9f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3b98cb25adc4e7b39a6139ce1631b1a4505a69bc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192584"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857854"
 ---
-# <a name="delayca-operation"></a><span data-ttu-id="f1f48-102">Bewerking DelayCA</span><span class="sxs-lookup"><span data-stu-id="f1f48-102">DelayCA operation</span></span>
+# <a name="delayca-operation"></a><span data-ttu-id="5b19a-102">Bewerking DelayCA</span><span class="sxs-lookup"><span data-stu-id="5b19a-102">DelayCA operation</span></span>
 
-<span data-ttu-id="f1f48-103">Naam ruimte: [micro soft. Quantum. simulatie. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="f1f48-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
+<span data-ttu-id="5b19a-103">Naam ruimte: [micro soft. Quantum. simulatie. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="5b19a-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
 
-<span data-ttu-id="f1f48-104">Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="f1f48-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="5b19a-104">Pakket: [micro soft. Quantum. QSharp. core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="5b19a-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
@@ -28,29 +28,29 @@ operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : U
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f1f48-105">Invoer</span><span class="sxs-lookup"><span data-stu-id="f1f48-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="5b19a-105">Invoer</span><span class="sxs-lookup"><span data-stu-id="5b19a-105">Input</span></span>
 
-### <a name="op--t--unit--is-adj--ctl"></a><span data-ttu-id="f1f48-106">op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL</span><span class="sxs-lookup"><span data-stu-id="f1f48-106">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
-
-
-
-
-### <a name="arg--t"></a><span data-ttu-id="f1f48-107">arg: 'T</span><span class="sxs-lookup"><span data-stu-id="f1f48-107">arg : 'T</span></span>
+### <a name="op--t--unit--is-adj--ctl"></a><span data-ttu-id="5b19a-106">op: 'T => [eenheid](xref:microsoft.quantum.lang-ref.unit)  is ADJ en CTL</span><span class="sxs-lookup"><span data-stu-id="5b19a-106">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
 
 
 
-### <a name="aux--unit"></a><span data-ttu-id="f1f48-108">AUX: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f1f48-108">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+### <a name="arg--t"></a><span data-ttu-id="5b19a-107">arg: 'T</span><span class="sxs-lookup"><span data-stu-id="5b19a-107">arg : 'T</span></span>
+
+
+
+
+### <a name="aux--unit"></a><span data-ttu-id="5b19a-108">AUX: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="5b19a-108">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="f1f48-109">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f1f48-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="5b19a-109">Output: [eenheid](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="5b19a-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="f1f48-110">Type parameters</span><span class="sxs-lookup"><span data-stu-id="f1f48-110">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="5b19a-110">Type parameters</span><span class="sxs-lookup"><span data-stu-id="5b19a-110">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="f1f48-111">T</span><span class="sxs-lookup"><span data-stu-id="f1f48-111">'T</span></span>
+### <a name="t"></a><span data-ttu-id="5b19a-111">T</span><span class="sxs-lookup"><span data-stu-id="5b19a-111">'T</span></span>
 

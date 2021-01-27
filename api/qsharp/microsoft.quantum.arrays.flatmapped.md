@@ -1,55 +1,63 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: De functie FlatMapped
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bee7002c5a1e80cee7907ff9cb4ebaaedf8e9923
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221246"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848644"
 ---
-# <a name="flatmapped-function"></a><span data-ttu-id="9b796-102">De functie FlatMapped</span><span class="sxs-lookup"><span data-stu-id="9b796-102">FlatMapped function</span></span>
+# <a name="flatmapped-function"></a><span data-ttu-id="2c96e-102">De functie FlatMapped</span><span class="sxs-lookup"><span data-stu-id="2c96e-102">FlatMapped function</span></span>
 
-<span data-ttu-id="9b796-103">Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="9b796-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="2c96e-103">Naam ruimte: [micro soft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="2c96e-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="9b796-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="9b796-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="2c96e-104">Pakket: [micro soft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="2c96e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="9b796-105">Op basis van een matrix en een functie waarmee een matrix element wordt toegewezen aan een bepaalde uitvoer matrix, worden de samengevoegde uitvoer matrices voor elk matrix element geretourneerd.</span><span class="sxs-lookup"><span data-stu-id="9b796-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
+<span data-ttu-id="2c96e-105">Op basis van een matrix en een functie waarmee een matrix element wordt toegewezen aan een bepaalde uitvoer matrix, worden de samengevoegde uitvoer matrices voor elk matrix element geretourneerd.</span><span class="sxs-lookup"><span data-stu-id="2c96e-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
 
 ```qsharp
 function FlatMapped<'TInput, 'TOutput> (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9b796-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="9b796-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="2c96e-106">Invoer</span><span class="sxs-lookup"><span data-stu-id="2c96e-106">Input</span></span>
 
-### <a name="mapper--tinput---toutput"></a><span data-ttu-id="9b796-107">Mapper: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="9b796-107">mapper : 'TInput -> 'TOutput[]</span></span>
+### <a name="mapper--tinput---toutput"></a><span data-ttu-id="2c96e-107">Mapper: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="2c96e-107">mapper : 'TInput -> 'TOutput[]</span></span>
 
-<span data-ttu-id="9b796-108">Een functie van `'TInput` naar `'TOutput[]` die wordt gebruikt voor het toewijzen van matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="9b796-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
-
-
-### <a name="array--tinput"></a><span data-ttu-id="9b796-109">matrix: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="9b796-109">array : 'TInput[]</span></span>
-
-<span data-ttu-id="9b796-110">Een matrix met elementen.</span><span class="sxs-lookup"><span data-stu-id="9b796-110">An array of elements.</span></span>
+<span data-ttu-id="2c96e-108">Een functie van `'TInput` naar `'TOutput[]` die wordt gebruikt voor het toewijzen van matrix elementen.</span><span class="sxs-lookup"><span data-stu-id="2c96e-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
 
 
+### <a name="array--tinput"></a><span data-ttu-id="2c96e-109">matrix: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="2c96e-109">array : 'TInput[]</span></span>
 
-## <a name="output--toutput"></a><span data-ttu-id="9b796-111">Uitvoer: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="9b796-111">Output : 'TOutput[]</span></span>
+<span data-ttu-id="2c96e-110">Een matrix met elementen.</span><span class="sxs-lookup"><span data-stu-id="2c96e-110">An array of elements.</span></span>
 
-<span data-ttu-id="9b796-112">Een matrix van `'TOutput[]` Dit is de samen voeging van alle matrices die worden gegenereerd door de toewijzings functie.</span><span class="sxs-lookup"><span data-stu-id="9b796-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="9b796-113">Type parameters</span><span class="sxs-lookup"><span data-stu-id="9b796-113">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="9b796-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="9b796-114">'TInput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="2c96e-111">Uitvoer: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="2c96e-111">Output : 'TOutput[]</span></span>
 
-<span data-ttu-id="9b796-115">Het type `array` elementen.</span><span class="sxs-lookup"><span data-stu-id="9b796-115">The type of `array` elements.</span></span>
-### <a name="toutput"></a><span data-ttu-id="9b796-116">'TOutput</span><span class="sxs-lookup"><span data-stu-id="9b796-116">'TOutput</span></span>
+<span data-ttu-id="2c96e-112">Een matrix van `'TOutput[]` Dit is de samen voeging van alle matrices die worden gegenereerd door de toewijzings functie.</span><span class="sxs-lookup"><span data-stu-id="2c96e-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-<span data-ttu-id="9b796-117">De `mapper` functie retourneert matrices van dit type.</span><span class="sxs-lookup"><span data-stu-id="9b796-117">The `mapper` function returns arrays of this type.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="2c96e-113">Type parameters</span><span class="sxs-lookup"><span data-stu-id="2c96e-113">Type Parameters</span></span>
+
+### <a name="tinput"></a><span data-ttu-id="2c96e-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="2c96e-114">'TInput</span></span>
+
+<span data-ttu-id="2c96e-115">Het type `array` elementen.</span><span class="sxs-lookup"><span data-stu-id="2c96e-115">The type of `array` elements.</span></span>
+### <a name="toutput"></a><span data-ttu-id="2c96e-116">'TOutput</span><span class="sxs-lookup"><span data-stu-id="2c96e-116">'TOutput</span></span>
+
+<span data-ttu-id="2c96e-117">De `mapper` functie retourneert matrices van dit type.</span><span class="sxs-lookup"><span data-stu-id="2c96e-117">The `mapper` function returns arrays of this type.</span></span>
+
+## <a name="example"></a><span data-ttu-id="2c96e-118">Voorbeeld</span><span class="sxs-lookup"><span data-stu-id="2c96e-118">Example</span></span>
+
+```qsharp
+let Numbers = SequenceI(1, _); // generates numbers starting from 1
+let values = FlatMapped(Numbers, [1, 2, 3]);
+// values = [1, 1, 2, 1, 2, 3]
+```
