@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101455"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Opmerkingen bij de release van de Microsoft Quantum Development Kit
 
@@ -23,6 +23,15 @@ Dit artikel bevat informatie over elke Quantum Development Kit-release.
 Raadpleeg de [installatiehandleiding](xref:microsoft.quantum.install) voor instructies bij de installatie.
 
 Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies bij updates.
+
+## <a name="version-0152101126807"></a>Versie 0.15.2101.126807
+
+*Release datum: 29 januari, 2021*
+
+- Er zijn project sjablonen toegevoegd aan de Q# compiler voor uitvoer bare bestanden die zijn gericht op IonQ-en Honeywell-providers
+- Update I Q# kernel-syntaxis markeren als u wijzigingen wilt opnemen in de syntaxis die is Q# geïntroduceerd in versie [0.15.2101125897](#version-0152101125897)
+- Zie issue #401 voor het door geven van matrices als invoer argumenten voor Q# Program ma's die zijn verzonden naar de Azure-Quantum via `%azure.execute` . [](https://github.com/microsoft/iqsharp/issues/401)
+- De fout ' toegang geweigerd ' is opgetreden tijdens het gebruik `az` van een `iqsharp-base` docker-installatie kopie, zie probleem [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>Versie 0.15.2101125897
 
@@ -34,6 +43,7 @@ Raadpleeg de [updatehandleiding](xref:microsoft.quantum.update) voor instructies
 - Verbeterde breedte schattingen voor een optimale diepte vindt u in [Details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - Pas een unitary-bewerking toe die is geleverd als expliciete matrix met `ApplyUnitary` ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), externe bijdrage door Dmytro Fedoriaka)
 - Opgelost https://github.com/microsoft/iqsharp/issues/387 door de invloed op de prestaties bij het starten van de kernel te beperken Q# .
+
 ## <a name="version-0142011120240"></a>Versie 0.14.2011120240
 
 *Release datum: november 25e, 2020*
